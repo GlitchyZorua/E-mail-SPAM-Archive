@@ -1,0 +1,122 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:1b13:b0:49b:3a60:d7b with SMTP id ie19csp2322579vqb;
+        Mon, 21 Oct 2024 01:57:36 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVZ9Cf6qS2HlNjBllfB8F+zjCGzfqZVTjCZPJ3H0AFlpaecxq7X0RJpd6ex+LiAXWmvb/UCfvZEgwBmOVebC1LySFsQCw==@gmail.com
+X-Received: by 2002:a05:6512:12cb:b0:539:ec1a:5873 with SMTP id 2adb3069b0e04-53a1522a90emr4966222e87.28.1729501056551;
+        Mon, 21 Oct 2024 01:57:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1729501056; cv=none;
+        d=google.com; s=arc-20240605;
+        b=dDsWzxKdU67YYySipzymxuZw+/NJ0NdNGIG5y4qUzTnHkSJ2l7rKmtBylfeH2sog/w
+         gQCPMlaeiM1r59hTkXJA7/Nlqpdo8YPWLNnCU2TMBmFiClA+sBJ3uPHyNZhLZ2YrGyvU
+         2QsF7CB2iy+630xOLj2RarBgyH6irFbZnG/kbtl7xOOwAaiaAGK34/rQWD7jWWUfhZJp
+         jiK8N7o3JK5c6V3rLNYHQzTn+IGROp0h/BLweK1S9Cfl1ykj/pjLyM8CC/BE1KaCfP8V
+         HyYgMFG27XIn9GKQlWmNlrT3QuZTjEXWPoc38yQFUTz0Ve4RwjoZIB7AD10uXt4FC5mD
+         eKeA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=CTovw8egtk8mdBw3z5ZWP3B7Nt+1xxB65rHIpNK6MU8=;
+        fh=TwpA6PhJm0jopmbKqnxCAHQcuqp04WP64TFBDOCXCXA=;
+        b=P6bdzQricyDFqEpfPSt9e0ltpo8FmtxCOf4Wul+3vHg1ltyEDtBBjZlJolSbyOKsVp
+         YYHcpEPK8zZu/wSnbDvTUfJeYFNs+cUYD+hdxZghF8szIQOeo0N4oqlKUc4pFSJPIoq2
+         XLWdw14/KK1pzOCG5WJySRVpWaR4w63/UI3iNBT6pam5r7ZmLocHDgaXT4cwtw0PdHLX
+         B1QSdSugp121tvx5TKQoBYJNNH+6j6GQJxS7T5jaI0K3R/h4Go6TlR0AgNZDzyKAtyCI
+         A6VP1Gw7Q1klD6m4ETzTeVUVn+a77Frg4Oc0laE+krl0ZR97w0cJhwVU47MQqTH5eZBG
+         j1kA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=TsQjUUeo;
+       spf=pass (google.com: domain of bensonwood22@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=bensonwood22@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <bensonwood22@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 2adb3069b0e04-53a223f6e4bsor451405e87.15.2024.10.21.01.57.36
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Mon, 21 Oct 2024 01:57:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bensonwood22@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=TsQjUUeo;
+       spf=pass (google.com: domain of bensonwood22@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=bensonwood22@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1729501056; x=1730105856; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=CTovw8egtk8mdBw3z5ZWP3B7Nt+1xxB65rHIpNK6MU8=;
+        b=TsQjUUeoFhINtrkuYZ+/FCaYTOjfrotOG2gWK5r11n0EAE7YsVQUwjmCtrYaabHkgM
+         wrmpwkODt4NTM6nbUXWxpT6xF6sHDzOvD9R+6JBM8PjsKJCE3lMCsBEq2ThsjOQIpttc
+         0Hg8EwxwJ5ujfSrFGlgUXtCAv2R1AkzGeVxJrC+En2QrChaPUSap/G57r0fMeli1NGo8
+         T5BXFW3+Pfz12A2HV+7QK2udXn4RXehhgWqu5VtiEbPNEHE9j0SvYb+QyV4RzXcVV9zE
+         B2DcGnnwz9s51IzqgxF66xnSLHWK+HvGi0Kq1uHdbrRimOiWvcRN9sEUHObNA88HbV/H
+         3GFw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1729501056; x=1730105856;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=CTovw8egtk8mdBw3z5ZWP3B7Nt+1xxB65rHIpNK6MU8=;
+        b=JukNE1AAGqR7Zn4IsjZKI9URXBrDItRmqUj+HfWSR3eWN1XBqi2t8cl/5kO5Px8gZe
+         k/kq9WWBVIDNSgtw/cupYGy5FfFqv4ubkUVLsIIuMY+GLpVzmf8T/8kQYDd36s1fVEWl
+         RbMoogtsC40Y6m5mqycaOV7E9DiHBpeIGsAjrsTb1HiMBeI4dQ222ntOzQcicU2iUm+U
+         ngLKcLcKyJ1yQn31xTTxJJGGUsH4KYoerNY1n2Mtj/lV71MVBJZVWS5mwDGiyQxbMgPm
+         Dfk8tob3ELbKJyLlmta+r6C19nZEHBB97eLGo5cbzQ3i57bLRcF3oLBUaKoOd+Uw2V1R
+         2S7g==
+X-Forwarded-Encrypted: i=1; AJvYcCUwIR4p7kdpjnOpCeQnQ82iHIPvfGerwHUKLffwkIVcw2WIJoGZ7wDtvim08uijLHkk0MqjcJQbukaYzAMYzbKEvMJlxw==@gmail.com
+X-Gm-Message-State: AOJu0YzedyKsgAtgYLozGZeLfZwIKoUHaorne8jsSeV290umUyBtdPZ4
+	rXdivHwX2Mfxn0UnMz6RYtMCLVpZxsHo4Bfn6L4ABCopxue0tYydd/LqYXuc5gzQx8Mp3iM5bzO
+	sDFgZIMqYI/2GrR0RGNn8k+tKmo4=
+X-Google-Smtp-Source: AGHT+IHHeX18+nhgVISYY3/qW2LJ1qqFJo2XOxvbIyRl9+e4/87npv5dv6lMsHIDwpJaxh2ieMb5WxO2H5nGeG9qnGc=
+X-Received: by 2002:a05:6512:1315:b0:52e:76d5:9504 with SMTP id
+ 2adb3069b0e04-53a1520bd38mr5813472e87.3.1729501055310; Mon, 21 Oct 2024
+ 01:57:35 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To: revjamesedwardd@gmail.com
+From: Ruben Jim <bensonwood22@gmail.com>
+Date: Mon, 21 Oct 2024 09:57:01 +0100
+Message-ID: <CAOPYYn72aXkEnCWH=ox5X4q6LjYz2eCRDRohcMA1vFB0ytHT5Q@mail.gmail.com>
+Subject: YOUR ATM CARD
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000000a654a0624f8d838"
+Bcc: mailmanthingwhatever@gmail.com
+
+--0000000000000a654a0624f8d838
+Content-Type: text/plain; charset="UTF-8"
+
+*Attn: DearThis is to inform you that your outstanding Inheritance fund
+valued at $18.900,000, 00. (Eighteen Million nine Hundred Thousand USA
+Dollars) Have been approved for immediate payment by the Director
+Telex/Foreign Operation Through ATM CARD Payment system which you will make
+a withdrawal of your fund in any ATM machine in your Country.Now, you are
+advice to contact the UBA Bank of Benin with the following information
+stated below, Contact immediate for your ATM card payment will be delivered
+to you.UBA Bank ATM Payment Department.Contact Person: Rev James
+EdwardEmail: revjamesedwardd@gmail.com <revjamesedwardd@gmail.com>Contact
+with your below information to proceed by delivering your ATM card through
+your postal address.Your full name..................Your home
+address.................Your telephone number............Your cope
+identification..........Your Country.................Regards,Ruben
+Jim.Director Telex/Foreign Operation. UBA*
+
+--0000000000000a654a0624f8d838
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><b>Attn: Dear<br><br>This is to inform you that your outst=
+anding Inheritance fund valued at $18.900,000, 00. (Eighteen Million nine H=
+undred Thousand USA Dollars) Have been approved for immediate payment by th=
+e Director Telex/Foreign Operation Through ATM CARD Payment system which yo=
+u will make a withdrawal of your fund in any ATM machine in your Country.<b=
+r><br>Now, you are advice to contact the UBA Bank of Benin with the followi=
+ng information stated below, Contact immediate for your ATM card payment wi=
+ll be delivered to you.<br><br>UBA Bank ATM Payment Department.<br>Contact =
+Person: Rev James Edward<br>Email: <a href=3D"mailto:revjamesedwardd@gmail.=
+com">revjamesedwardd@gmail.com</a><br><br>Contact with your below informati=
+on to proceed by delivering your ATM card through your postal address.<br><=
+br>Your full name..................<br>Your home address.................<b=
+r>Your telephone number............<br>Your cope identification..........<b=
+r>Your Country.................<br><br>Regards,<br>Ruben Jim.<br>Director T=
+elex/Foreign Operation. UBA<br><br></b><br></div>
+
+--0000000000000a654a0624f8d838--

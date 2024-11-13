@@ -1,0 +1,122 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:b7aa:0:b0:49b:3a60:d7b with SMTP id t10csp134694vqi;
+        Tue, 15 Oct 2024 07:41:47 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXv0FuRu5paYRcYzpgQ/bEwq48jk9bIHBV2LB7R//IxeUvoHGXXSi2BsWgd07mAzu0UFgiOt1sUNnvNjaUCtxGtOFOGqg==@gmail.com
+X-Received: by 2002:a05:600c:5110:b0:42b:a9d7:93 with SMTP id 5b1f17b1804b1-431398e284cmr39256735e9.28.1729003307330;
+        Tue, 15 Oct 2024 07:41:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1729003307; cv=none;
+        d=google.com; s=arc-20240605;
+        b=I/GAzIRgcb5+L7EuGLY/T3bn/pphEv5Q+dg1NQPHLuAORz00fLiIyLWJ+NG13+ip4A
+         ULMaWWmCWcgXwdnI5WYQ1gtlae6eV2z3WsIfktTVA52tI9i4AdAlgOIvaSVEUiBQ4oqe
+         kDAmvL6J8OZU7BhGe62quHk++rrQqDJHzZCiHDuk701Wc/B/+aI9yiD1SKB1ADVmkjJn
+         EmTWJ34M5s4TjWJ8WWYZupBCkg17ADyvjZRH96AlonimAMtIQ8cwDv+Ghmn8U2oswrqc
+         ssZGDf7+2VWGiwG/d68Adla5Ih1Ucu2tAOg3G/vgFPpPCMMqfSUvEBHXrGx+garxnJ1R
+         JGEw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=zJzpe6Ab5dQMrkKvqL4oe+VZtMverKcukQ4Pnr/BR6A=;
+        fh=LoJCjFQVONyO2WG5jVlVDhRIvZG5LDk2td1EttNCWPE=;
+        b=hORMUcn5LS0c47ImXtrIq0Oc9v5o/88c76tH/4WreteMNxBJmxwFoiHmcg8UnTsMMh
+         D72zAbXYkjzG8qREuncWt1/1YEQlBhTO2Gv09LNDURnk9ZCemM5VMJqy6e7o7BgYWrem
+         t9aZ6rzHtIyIubKk3PTdV5tXteLSlWE1B63seEtVJ7tW+lNvriIkl+7SIf5c0LRseAMQ
+         FgeHUgVJ7AdrXAFN0RCkC8g/1qbrMg6UOB+lV6wSYh7bMZ9on1Dk6gxWMaYJ5BAEiAmx
+         8JaaoWj3C3yey7EBxr7PP2AMN2+7EV0AwZJFS1BDDt+koMi9Eq1pl/wsd8YZeGyU0mlq
+         TfTg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pr.ac.th header.s=google header.b=t5z7OOWL;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of 33742@pr.ac.th) smtp.mailfrom=33742@pr.ac.th;
+       dara=pass header.i=@gmail.com
+Return-Path: <33742@pr.ac.th>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-4313f9b95d8sor5360655e9.13.2024.10.15.07.41.47
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Tue, 15 Oct 2024 07:41:47 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of 33742@pr.ac.th) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pr.ac.th header.s=google header.b=t5z7OOWL;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of 33742@pr.ac.th) smtp.mailfrom=33742@pr.ac.th;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=pr.ac.th; s=google; t=1729003307; x=1729608107; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=zJzpe6Ab5dQMrkKvqL4oe+VZtMverKcukQ4Pnr/BR6A=;
+        b=t5z7OOWL2JfEfT86C7ytXog+hn3nL7EayU6NI8Tdbth5v5Hebj1M8LbIc+ERGX3yuY
+         P6cWoetEFCr3PEoVYAklStI1rNPUGqbbXlH/8Rg5ADexiPAIvro3BW0E4nX8FvP0MVhg
+         sqZhwD5Y1nwFqcMgYXHhnTTIXAHkNx1/b0zHJ/tt0yj/j7Dtf2a87XUzyAnIEvccqyvH
+         8ZodeM/K+xwBtvTZtOFTBbcWpxEazT7n5K4KyMwEWA3In5gkJ7LhmYT1GMM4pNfgKlbO
+         qIGVqorL5wJgP3CZtVPZApnrTQdBud+tC3fPkoFmlZ919UN/ipWs9pz03wDkQGMAwb4A
+         h7ZA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1729003307; x=1729608107;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=zJzpe6Ab5dQMrkKvqL4oe+VZtMverKcukQ4Pnr/BR6A=;
+        b=Jq3g7duVVph74sSfs7zbBNfqwB58NMba0wfgZvH5LmauXYukm3Pu/EIi1BoXfhtLk/
+         ch9wGZjwyM8asMyTjJ0Vf8ZirurzTtOeCsx4smSoQdStzeUrENlE4WSdMWjundiXDQ40
+         1XNdy10kP/DvIxjtMFX+O/gO3SNhdxx1kTIjTa9r15dhTEB9ZBSkLNPg4KM5BaFBh7+z
+         VNIYkoV6AAqoFy8R50d8E5DDXQMN0HeIJs8MZtzsnXEprAaoKDl6uFAL/Bu9H+kApgXx
+         72Yc4wdo6lPfINXbJOXjndHKrIL+BVpKobglxWqKE/O7kJef1HNtyOiX7+OUxI0Vz1KI
+         qu/A==
+X-Forwarded-Encrypted: i=1; AJvYcCUowhvfuRxRJdXTLwxqm6Ezr1DG5E1Xx1fW3wCRLHoUlUydYfu9CzQOxAQo27xM08tzzuFTdulWcXloHHlm8J9VCKsJdw==@gmail.com
+X-Gm-Message-State: AOJu0YyT0caJkYf7rBC7WMGfcyv7TzDN+C5qyUf8dLV0N3dD81kyEY5s
+	x8EykaZoke8MpPTQLJBKYmk/TagcHsC5W2l6NgxXIhkaTGQSq0mt7zduxFm4mc8RuxlUA0CxTMO
+	RpcTbGN0Troe+Xqr20gYZy9bWdLaDDVLeCV1Cvg==
+X-Google-Smtp-Source: AGHT+IHSYr13nC1PZctlxkzXdTsT+hS2YZSlFxw7hweNDG+tcoqSlFKoy1Q88FdWK3mpa/FWLVFa4D0EZaTm2UI8Bsg=
+X-Received: by 2002:a05:600c:1c04:b0:42c:bbd5:af70 with SMTP id
+ 5b1f17b1804b1-4311df56126mr126510055e9.30.1729003305896; Tue, 15 Oct 2024
+ 07:41:45 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To: melindaeduardus@gmail.com
+From: =?UTF-8?Q?Se=C3=B1ora=2E_Melinda_Eduardus?= <33742@pr.ac.th>
+Date: Tue, 15 Oct 2024 15:41:28 +0100
+Message-ID: <CAA-z03JQ8_wmYQKmETMPmVjwi_VitWnbfHzVZitm0_hiMruMkw@mail.gmail.com>
+Subject: I WILL WAIT FOR YOUR RESPONSE
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000dd3fb1062484f325"
+Bcc: mailmanthingwhatever@gmail.com
+
+--000000000000dd3fb1062484f325
+Content-Type: text/plain; charset="UTF-8"
+
+DONATION FROM MRS MELINDA EDUARDUS
+
+HELLO ,
+I AM MRS. MELINDA EDUARDUS, AN AGING WIDOW SUFFERING FROM A LONG ILLNESS. I
+AM CURRENTLY ADMITTED TO A PRIVATE HOSPITAL, I HAVE FUNDS THAT I INHERITED
+FROM MY LATE HUSBAND MR. EDUARDUS NIKOLASZ, THE SUM OF ($1,700,000.00) ONE
+MILLION SEVEN HUNDRED THOUSAND DOLLARS ONLY, MY HUSBAND DEPOSITED IN BANK
+HERE IN CAMBODIA SOUTH EAST ASIAN AND I NEED A PERSON WHO CAN USE THESE
+FUNDS FOR HUMANITARIAN PURPOSES TO HELP POOR ORPHANS.
+
+I FOUND YOUR EMAIL ADDRESS ON THE INTERNET AND DECIDED TO CONTACT YOU
+PERSONALLY TO MANAGE THIS FUND FOR HUMANITARIAN AID ON MY BEHALF.
+
+PLEASE RESPOND TO ME AS SOON AS POSSIBLE FOR MORE INFORMATION TO RECEIVE
+THE FUND IN LESS THAN 10 DAYS AS INDICATED BY THE BANK DIRECTOR.
+
+I WILL WAIT FOR YOUR RESPONSE
+
+MRS. MELINDA EDUARDUS
+
+--000000000000dd3fb1062484f325
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">DONATION FROM MRS MELINDA EDUARDUS<br><br>HELLO ,<br>I AM =
+MRS. MELINDA EDUARDUS, AN AGING WIDOW SUFFERING FROM A LONG ILLNESS. I AM C=
+URRENTLY ADMITTED TO A PRIVATE HOSPITAL, I HAVE FUNDS THAT I INHERITED FROM=
+ MY LATE HUSBAND MR. EDUARDUS NIKOLASZ, THE SUM OF ($1,700,000.00) ONE MILL=
+ION SEVEN HUNDRED THOUSAND DOLLARS ONLY, MY HUSBAND DEPOSITED IN BANK HERE =
+IN CAMBODIA SOUTH EAST ASIAN AND I NEED A PERSON WHO CAN USE THESE FUNDS FO=
+R HUMANITARIAN PURPOSES TO HELP POOR ORPHANS.<br><br>I FOUND YOUR EMAIL ADD=
+RESS ON THE INTERNET AND DECIDED TO CONTACT YOU PERSONALLY TO MANAGE THIS F=
+UND FOR HUMANITARIAN AID ON MY BEHALF.<br><br>PLEASE RESPOND TO ME AS SOON =
+AS POSSIBLE FOR MORE INFORMATION TO RECEIVE THE FUND IN LESS THAN 10 DAYS A=
+S INDICATED BY THE BANK DIRECTOR.<br><br>I WILL WAIT FOR YOUR RESPONSE<br><=
+br>MRS. MELINDA EDUARDUS=C2=A0=C2=A0<br></div>
+
+--000000000000dd3fb1062484f325--
