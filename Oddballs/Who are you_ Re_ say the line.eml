@@ -1,0 +1,83 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:abe:ecc9:0:b0:387:f70d:4b7d with SMTP id k192csp1675193vlh;
+        Sun, 15 Oct 2023 17:26:16 -0700 (PDT)
+X-Received: by 2002:a05:6402:f2a:b0:53d:a3ff:4605 with SMTP id i42-20020a0564020f2a00b0053da3ff4605mr14347346eda.25.1697415976623;
+        Sun, 15 Oct 2023 17:26:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1697415976; cv=none;
+        d=google.com; s=arc-20160816;
+        b=z3UPvYE45XD7HChBKmpxTUWXuA5CyT/Y8mUIxystz78YeVW66lVg6LpSJxiuztoaCS
+         1mmQdevbUbBjwbJJt/P2WOrWM2JcVuCoQiE2wIZl2fhbdDUixQc/UzZt/Etzxmw24SKH
+         JUCeaD/xKW9MorkNlulx7VfF28iVq2sI5xoSqnEferrtCq8iJ6mwAt1cTHIocv4i09LA
+         HZIQuuniI+aMtzRjhrracQ2fu9ULMSbXOEEPr/AMZe+YoTKjAX1aKT5l9e3CsiAOf4zU
+         ipwwaF9JJ0WWBQPlyUI0AwGm9W6CrLHQtGtk2Ic+Z34Ma3to/kr5cd+XsyZmxTaD92XJ
+         a0/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=auto-submitted:precedence:content-disposition
+         :content-transfer-encoding:mime-version:subject:message-id:date:from
+         :to:dkim-signature;
+        bh=qq9sQDtQ3C3/l6auKDqkWX/7Tsh0W1mbXgy66HGiHBo=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=ICF7r52VtCU53nrT1YgFFFgsbLTxrOQsBT/pRkD5Y9NmyqEP0/k2zsXT5Df6pBJNOC
+         YjXq/bv1JePb2p+u2wwWTkaMUdJysy4OXsWdetE8ZbYkWRC00TipHZczegrJF3Sc4gVI
+         oP6SRr06qO23p1jitzrGIQpzxbuaQnzxhS+dmk3U1hEjOUENo4fTxgqp4i4FHGZ1snW4
+         Xg0WX5ipOjv78wFYhdi9kTEz6Pe8qx/PFq6WBpJ9AaWbNbACuZ5tbnToImUBIhKb2IFb
+         eONY9iZ4QDyK0RMCthHXCTJJ3AP4WJI5B2fE8Op3wiF2LdEAMdjoNXZpjICsV/Bgoxxd
+         KuPA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Vr9Yc2qA;
+       spf=pass (google.com: domain of mr.flymailer@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mr.flymailer@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <mr.flymailer@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id k5-20020a508ac5000000b00537febdd483sor7464214edk.8.2023.10.15.17.26.16
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Sun, 15 Oct 2023 17:26:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mr.flymailer@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Vr9Yc2qA;
+       spf=pass (google.com: domain of mr.flymailer@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mr.flymailer@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1697415976; x=1698020776; dara=google.com;
+        h=auto-submitted:precedence:content-disposition
+         :content-transfer-encoding:mime-version:subject:message-id:date:from
+         :to:from:to:cc:subject:date:message-id:reply-to;
+        bh=qq9sQDtQ3C3/l6auKDqkWX/7Tsh0W1mbXgy66HGiHBo=;
+        b=Vr9Yc2qAY2S4G9Ox88mBb7i5KnQnGK5iSKsjd3OzZoiotXrsOcG3XgEyTFnhllMM4e
+         Aoe3eAtU8ba643VvwHUvSdxXyva5zVLTdtOcZWAcYZJkzpuv/MMUGYA7uwdUZBwvBC7o
+         /PB4gAil4TSLQBDzOwTHk9lqDLER3O+XJxL/swgGcPoSy1Y/2Py9MHddHVryUDoYBa0c
+         sM9sqVjhcH03h1Ffv1pUnscqL7/8+l57Ot5DzGtts/i6amNpMKY1TyoCSXmtpcfSrcdQ
+         9OF7B/fYHImxj1lOROtOWPYnRXIxCqjWO/QmLOAhGEu+3+GsQKB/r8HgonYyO3a8mZxK
+         JXeg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1697415976; x=1698020776;
+        h=auto-submitted:precedence:content-disposition
+         :content-transfer-encoding:mime-version:subject:message-id:date:from
+         :to:x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=qq9sQDtQ3C3/l6auKDqkWX/7Tsh0W1mbXgy66HGiHBo=;
+        b=Ly1KcxFWDsJCvYMthWU9gJts9HMuxMko8WRc4AZLXEh8OKOJYYVJZ1ehan4PP7hR2R
+         9q9d0Dw4/Othzn5Zcer5Ai/Zi09D01S+sBs8r2lCTKFZ+acOS777vN1bF3Eb/urSlmlp
+         SUfR1gg3TWlQROyE4pEfFwgpHYPUiYzyQ4EiQ2uWCAGuSIKMcpEa1uAcz1tDgFUmkyCo
+         Kl3gZVXUhzPXcT1HqadRJY4qSPk7up222zR5w7XOezWg2um6B4kAuhPIvpfVnG4QtM6J
+         poyZKmYrKw1y+Es8JMVoyedR45i2aj2PCbUXSTuBjFABBo3PXSfenXQhoLwcagR1pYOt
+         uoQg==
+X-Gm-Message-State: AOJu0Yz4m5yLA0kcN+ydK9K3GUIZGfHJGD4WGf5WP/LN02+FkHE4Dlaa
+	YSaHR8MlmfYGwRWfwFz9zOkDlBuiTZuZCwooEdHw8j0n16/jEkeIoVkiC7rcJw==
+X-Google-Smtp-Source: AGHT+IEqJXVO1bUmRaHcSMlg+v4YFCTffGPsBmhfny79ZyMJmewL8HwiLVarrPEaZYtiHSbpkohExVqshKUcXrlmENBIzzM1urnwjn/Sc9rI
+X-Received: by 2002:aa7:d052:0:b0:532:c909:a06c with SMTP id n18-20020aa7d052000000b00532c909a06cmr29518487edo.18.1697415976282;
+        Sun, 15 Oct 2023 17:26:16 -0700 (PDT)
+To: mailmanthingwhatever@gmail.com
+From: "Mr Flymailer" <mr.flymailer@gmail.com>
+Date: Sun, 15 Oct 2023 17:26:16 -0700
+Message-ID: <CAA972F-KWaRfq1hpVCbDYoJsuu8vyab4daPDfsPv61jKHpQe2g@mail.gmail.com>
+Subject: Who are you? Re: say the line
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Precedence: bulk
+X-Autoreply: yes
+Auto-Submitted: auto-replied
+
+<div dir="ltr">How did you find my email address?<br></div>
