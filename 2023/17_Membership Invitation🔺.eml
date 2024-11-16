@@ -1,0 +1,104 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:bc05:0:b0:42b:92a8:c8f7 with SMTP id f5csp677626vqy;
+        Sun, 12 Nov 2023 04:29:36 -0800 (PST)
+X-Received: by 2002:a17:906:aad7:b0:9b2:be5e:7545 with SMTP id kt23-20020a170906aad700b009b2be5e7545mr2893095ejb.36.1699792175995;
+        Sun, 12 Nov 2023 04:29:35 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1699792175; cv=none;
+        d=google.com; s=arc-20160816;
+        b=bEUQgtBfTL2GMGniUbtFWrDThj/j05KChh2lIwPy+5Z4p8Qdd7mT/8V7u+9KjeO9b7
+         vEUbmS0U9WnuovNenpOCyv6o+gGEvcBvZ8RuSe1EdwM9+dAx+R1XurqzyOdAWegq55Ip
+         5r452+qX964dYndfYZZ3cli044NzMKSRRvEMFxij4htA/lZJktBNTKLfXFSfqbVWSj/G
+         114aJQ+CUUEERrQu8zOWVfizTSk+A/LnaHfBl48umTya23IpTCpYvjgFDNh2rN+2WSE0
+         SLoiFFljWccNbPUqBqhr1kdOkyg8MsngVsP5TzdcTJfaZ0gfliSXcJ3pjcj8wwODKuDh
+         lbZg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Kp+c/nvy1CsLBa6Qm3Q2+dKYI4dUvXIIrGFUl6H0Z4c=;
+        fh=69/GzDhLoy9YQnFHxXYsyFqNZS/M/P+0a6TQDu7Uv/E=;
+        b=YzLsMCt+676RtLFL7w8qNSsAADAk+kg3L3i60aZ7IwhJpjORW+xu7QuJXhvxjwOWXo
+         ATvNEDEFH7DB36wlryxUmyj7121S3YWV6ytwODzdB/N9x6AERmxzrvJQV38vnOTBh+sO
+         IXkGJpSE3mINPvfWQRh6ApsXV76+Aq9QnBucm2ma5wysMO3Yrdk58WIlDdLigxrteMqj
+         U60vzgiNApMc2Xx9SDBKWDD90rpZvjBKc4AGR2mTUtRkgtHXryyovHM8Bl1J8P5nPJN9
+         Y26UASlmPjEgikZOZCUFjenpFb+xgOVJolCVCWd3kptzmkzgPzwpNbEWl2lgGSUyO+jT
+         IfRg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=V8jNYDZN;
+       spf=pass (google.com: domain of juilliadleon5@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=juilliadleon5@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <juilliadleon5@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 6-20020a170906018600b009b9faf1c32esor574671ejb.11.2023.11.12.04.29.35
+        (Google Transport Security);
+        Sun, 12 Nov 2023 04:29:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of juilliadleon5@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=V8jNYDZN;
+       spf=pass (google.com: domain of juilliadleon5@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=juilliadleon5@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1699792175; x=1700396975; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=Kp+c/nvy1CsLBa6Qm3Q2+dKYI4dUvXIIrGFUl6H0Z4c=;
+        b=V8jNYDZNPBW4VU3tmMrMCX+tmSYwNZ3Zb+DP1CNRtsNnqQNNYoVaZTQ75/72ptT9uv
+         bbjUG0DDJgJZHszh+ePpND7VLXqCnab32edtHRtj1JcCDOEEtpYlgohIxTO2nIeYLe8b
+         Dy4nNULwN8t0wCNJI1fvt0mpTh+/566TkG8YxfJYjolS+BMb8puNXB8BRyxHbVovMMIV
+         qskETWQht0s+I5RYoPJX3BsOfxrPECeih3kBXVAKfyCLBZ4KY/vURB+6jg3M3MQs/Wid
+         YcOMzGWlyYG7IV/ToHMWWGRTlieOfHXWkQomA2WeC9ztxtASWZG0wftsLCYiZ/af/uf/
+         JlIw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1699792175; x=1700396975;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Kp+c/nvy1CsLBa6Qm3Q2+dKYI4dUvXIIrGFUl6H0Z4c=;
+        b=a8lLEYXbFLVwN2PTcUlTPnjMiCcYqcT0AWgeRWIFmaKk9+TNSRR3Jq6ty7O+6dgC5u
+         H0R4/jfzlhe9W4mAXaiqrbGFFVqnuNWa8Nl+RcHWTZgm4E99T83YHfbzyKggDzRsfprN
+         CSLU24+ATQHiUvdrNE9jPIPA8U0QU2h9QArIeQbvPVKNj4vMflYamHnQt1zn74bz16zq
+         Xfau455zSnX+iMuTGDargtT6FDZXJ5TlWGRlzNfM7zrvNWTiWARgvHSzC9zHwE213Wl7
+         98DBBx9stw2f3eR0p7XJgo1e+w/8u02G/4fcPdng74828kuj//7jlAdKeeM7e9eg54Hw
+         N6gQ==
+X-Gm-Message-State: AOJu0YwLa1d046uqytEYx491hVP2pcj0eyqd2hxLYogL3vGnJYJ0SgLq
+	GWQqCiMRV6sPX9HMlmPPMwtF7tGMhDyfBvp4YWI8Yw3FirLPhc8T
+X-Google-Smtp-Source: AGHT+IFv+zkxTO2EaWwTB3ki6CqRwFZRe/kih8mTf1Sr1zn0WId3smveQtFmvTUlhRswUrjm2nm4VwOtrhCvPVGtmBU=
+X-Received: by 2002:a17:906:d938:b0:9d0:4b8f:3d65 with SMTP id
+ rn24-20020a170906d93800b009d04b8f3d65mr2591698ejb.23.1699792174935; Sun, 12
+ Nov 2023 04:29:34 -0800 (PST)
+MIME-Version: 1.0
+From: Juilliad Leon <juilliadleon5@gmail.com>
+Date: Sun, 12 Nov 2023 13:29:24 +0100
+Message-ID: <CAK+U_XkEqdBufroWKRzWM61+wPOPY9Sey_QU3q64YRJJ+RSZOg@mail.gmail.com>
+Subject: =?UTF-8?Q?Membership_Invitation=F0=9F=94=BA?=
+To: austria179-g18@yahoo.com, johnwhite918371@gmail.com, 
+	mailmanthingwhatever@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000c771250609f3b403"
+
+--000000000000c771250609f3b403
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ILLUMINATI
+                  =F0=9F=A4=9F=F0=9F=8F=BB Are you a business man or woman,=
+ artist, politician,
+musician, student, doctor, football player, worker, pastor, want to be
+rich, famous, powerful, wealth, protection in life, join the biggest
+illuminati brotherhood today for your dreams to come true within three days
+of your initiation as a new member.  For you to make all your dreams come
+true, say YES if you are interested in joining and get in touch with the
+great master ?
+
+--000000000000c771250609f3b403
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto" style=3D"border-color:rgb(0,0,0);color:rgb(0,0,0)">ILLUMI=
+NATI=C2=A0</div><div dir=3D"auto" style=3D"border-color:rgb(0,0,0);color:rg=
+b(0,0,0)">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=F0=9F=A4=9F=F0=9F=8F=BB Are you a business man or woman, artist, politicia=
+n, musician, student, doctor, football player, worker, pastor, want to be r=
+ich, famous, powerful, wealth, protection in life, join the biggest illumin=
+ati brotherhood today for your dreams to come true within three days of you=
+r initiation as a new member.=C2=A0 For you to make all your dreams come tr=
+ue, say YES if you are interested in joining and get in touch with the grea=
+t master ?</div>
+
+--000000000000c771250609f3b403--
