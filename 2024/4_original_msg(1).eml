@@ -1,0 +1,89 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:b1a8:0:b0:44c:c215:8d87 with SMTP id j8csp1709667vqp;
+        Wed, 31 Jan 2024 15:51:53 -0800 (PST)
+X-Received: by 2002:a05:620a:10bc:b0:783:81f3:3a8d with SMTP id h28-20020a05620a10bc00b0078381f33a8dmr1062613qkk.44.1706745113704;
+        Wed, 31 Jan 2024 15:51:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706745113; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fV5oPycoppeyZyWBAkje+WmRG15Ek6bsnTJkoiUl3PCkQoetuo6KHQ4Xymio6SKB5E
+         NFs14iRwspVc4ffS+1gupSPAbFZxq19Vmj43aVPHCH+8YJxmTzdvKb6Em577ls9DqoJ/
+         FiKYfLg8JOrigGi+RgirtF8ffS0pbumiFYd8bf7D0v6BoVU26c8ynSGi2GlOmXeFQOyz
+         WfNSZmf6hClJedU7kNztIyECjaeyDVzpxYXYu831M69eHTfK/erup/5RUJmkeO13GcOk
+         gNAXpQabmQZgSS8q8aqnUX3lxo+gvUDG49x50pJMpi0bQsrDRGdkb4t5rkwBlOPqRv1K
+         kpSw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=UASTY6pkcsTA86pMQNvZdjdpBxTQcYT6WDFznBDB5+g=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=HY+9n/nlu7HcmCi8d8tKWGKW394scNvZglGPwmvdaBsuGxonC7EuITRYwHmq4SsshD
+         YwB29cEfhktFYD5zRCTU240JGLF+AUeqSGsdERJRYikPn0+sxnDn6amfdwOMdVubFNKm
+         fOzUZmi7zsRIRqmYxXAOGbGTBqPaBQVXgIKgc6pwCslhloqNGKgbDQJUNF1+GBNh+ILq
+         kk4vjgo7c0DQNchXAlyOjViYiY2LPHdu4RBwKA21046RYw5Q61XAzP9JfOFINUR3JxQa
+         FRNNb2EtT2FWxamPBrOomsS2Z4ofS8oHxs7nhNPIfLKBPh8fj0YXXFkFR1mM9vxuJZeD
+         9kkg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=c1i4eIYf;
+       spf=pass (google.com: domain of drandy5422@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=drandy5422@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <drandy5422@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id dc6-20020a05620a520600b00783148d33c7sor8911988qkb.18.2024.01.31.15.51.53
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Wed, 31 Jan 2024 15:51:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of drandy5422@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=c1i4eIYf;
+       spf=pass (google.com: domain of drandy5422@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=drandy5422@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706745113; x=1707349913; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=UASTY6pkcsTA86pMQNvZdjdpBxTQcYT6WDFznBDB5+g=;
+        b=c1i4eIYfGgUl8oeW7xa2kUV/xEB5gYhZ4xip/kuUK8/SeAvQPaDChK1e9hemU60afZ
+         5VWI3LB+cBGz4jqDJtmYhhgP7QqBiO+g2tHf6pj9PJs9jgk2XhP5JY23r69Z+35gbx6s
+         ohQFUaps+3eIUETaj0kd/OYIrfbc/KX7Uy9iaenZ8N0isuC3fc2qPwRhCdWTdOmp/+Gi
+         XeY7eKT9NYM3cGxrHH1R9iaAlzDAyywR8UglEALyUhXJYd/b9qxOgptck7mnrNsahnGY
+         UzkhYq3VyoNemodryri/8yTbLZbnYzIoM+yt7xDAkj3iqzBm8UdCnwRFCom8sr6Gb/vF
+         Vdyg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706745113; x=1707349913;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=UASTY6pkcsTA86pMQNvZdjdpBxTQcYT6WDFznBDB5+g=;
+        b=A+NRoi/Uozw+++Nl+NM37s4BlO+2Jl2Azjt5zRISpudGsBNc3ffhb81tFSrYPe0ZGU
+         QDvXrpVusAsg8yRBL2PPvTHi5KCP7blIHudz7MhWLf3XrswTazL1td8bPfF39HVyArAH
+         8WI7QVgNyoZeZ04ar5OA8xnYmBkmi6ilkh3cbDgl/HH3hh3hUMeyzCyXru0knB0K8iiU
+         733L2nKTWaZaIZSGxgXob+cU8OsglAI6j6p3NKPdOS3mHPAsn1ZWhfzjADM34c5VwYYr
+         Zm888zVfinmXDN5C1KguniK+t7l1i8I88ZSikAv5VUxPrPrFnaREuluuThmzQOtUJs0P
+         bS7A==
+X-Gm-Message-State: AOJu0Ywj0AeuRIuBTc6n+OMARVqC8CobP8DzTfot6tohsy/qQcYAltds
+	teS11lye2R627bd/EV44x7OVDaS0j5EPvZ9kUbh3YpAxJnuZAs1U2RLNnWSmOb/xYLKS5buBfs8
+	0K3EOI240rQ+0qYPj6a8Wq26gMcvpsmyasf0e/Q==
+X-Google-Smtp-Source: AGHT+IFeur41PHY5XA5S1FvBReV/H5gX+0h3PVGaOFf8/de3bm1LGMsMy9OOrX8GCk4iAuGlqzaXXOOTOeA68omFoMk=
+X-Received: by 2002:a05:622a:54e:b0:42a:60cd:ce41 with SMTP id
+ m14-20020a05622a054e00b0042a60cdce41mr4132295qtx.53.1706745113196; Wed, 31
+ Jan 2024 15:51:53 -0800 (PST)
+MIME-Version: 1.0
+From: Dr Andy <drandy5422@gmail.com>
+Date: Thu, 1 Feb 2024 00:51:38 +0100
+Message-ID: <CA+m-4xvC__pcomcjNbN8zz4+n8UkvgisJgMyr0cbnNOqUZ2=+Q@mail.gmail.com>
+Subject: 
+To: mailmanthingwhatever@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000031bc260610469066"
+
+--00000000000031bc260610469066
+Content-Type: text/plain; charset="UTF-8"
+
+I am Dr Andy
+I'm a Psychic and I have an important message for you
+Message me on WhatsApp with the number +2348141867175 before it's too late
+
+--00000000000031bc260610469066
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto">I am Dr Andy<div dir="auto">I&#39;m a Psychic and I have an important message for you</div><div dir="auto">Message me on WhatsApp with the number +2348141867175 before it&#39;s too late</div></div>
+
+--00000000000031bc260610469066--

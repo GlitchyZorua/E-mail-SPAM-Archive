@@ -1,0 +1,139 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:9b05:0:b0:42b:92a8:c8f7 with SMTP id l5csp421301vqr;
+        Mon, 18 Dec 2023 08:18:12 -0800 (PST)
+X-Received: by 2002:a05:6122:818:b0:4b6:cab0:3994 with SMTP id 24-20020a056122081800b004b6cab03994mr1299500vkj.3.1702916291892;
+        Mon, 18 Dec 2023 08:18:11 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1702916291; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vuLU4rhxT+AMJo1v89BqekOp/aWYBr4i0cBckZuJyvGDwx/a7geqg5/itduOWoRv9+
+         8zZA34jjlkY/olPN0zs/yk1wYkFITAaHM5YHdRna/pV7eivWfoIS9jzyVhUZTdfS8PyL
+         TPmSgbLzCBXDoXD+qhh17I5IabLS6/usQNjJ9zMsEA03ujQMHdeeR6P2H/0hisEX2HZN
+         TjapPIhK3XUlYlGfvk2CnNk4cPKAVFdGgbvhIkLDm2JWQA3aLxW+SEgNvK63ZSVnHcpB
+         JUF3HMjnv0pDDff7CTgdPW6gd8S9fSWXOrgXxgUkm+lWnEDXrnrSEFPk5HV/dr+J/3NY
+         2FAA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=ko/JrVoqB8ohRX2KDgHv6SEiQi8h0QHd7MaM/KjAw4c=;
+        fh=mYZ0gRy3D9IBhBEFIrfx+wWssKIbsn9rgRpDF7B0Sfw=;
+        b=0poU2W6s040QhCDB9+giRj43Rx8MhGP8YXCjnwFjQMKxnXEUH9GMq+6iKfPaFnWjDr
+         tLs0fWfpdwrmKm40ZK7Nx9odqvWT6zMtCLxFoqcM7hL+s/+fhoRP/WsgiX/P8t+mmYqG
+         Pc9e6GDU5ZqwXeFM/kQfreB4EKW6LcdlS1vxiM8n9+1B/nGA4/hOvzPS3OUkBHZOsQLu
+         1HkULesLkJ/srh4aU/SeItXpXuyJnENKUyci5zy0Emu2uZupwAJR/u7EKhyj8KpQ8Uvc
+         Eg0moiVAk2Z3V/7Efi40BvF0DqDs0aK2hPMz8G07mTL0tTekFyxv4gsgguK0y8P/rlyn
+         C4Lg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Edqst8rF;
+       spf=pass (google.com: domain of eduone2022a@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=eduone2022a@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <eduone2022a@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id v18-20020ab036b2000000b007cb879dd298sor4029253uat.3.2023.12.18.08.17.55
+        (Google Transport Security);
+        Mon, 18 Dec 2023 08:18:11 -0800 (PST)
+Received-SPF: pass (google.com: domain of eduone2022a@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Edqst8rF;
+       spf=pass (google.com: domain of eduone2022a@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=eduone2022a@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1702916275; x=1703521075; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=ko/JrVoqB8ohRX2KDgHv6SEiQi8h0QHd7MaM/KjAw4c=;
+        b=Edqst8rF8wFFohJdERc5Sz0knyX7qXM825vrBph7BI4v2kQShAoRfYkz4jnZvZ623P
+         3DvtQZvy/uFTAAf9anN/0EgXjc99SlQU3VccsRfbRn4aUpX4BVaEkAu6z+Acgrbha07w
+         XyUCvnYIKbkzduQkywo5+rCXgDz60AlIbwzOESUKue3L/3yZU53iPdQ+YbzjvqpLnsXW
+         aXuzxaMQdCzSNRuTYu2O97/K6Sdu2dRIZn6doVCDpQ6I6G1DU5s/4TGr75PI/yv26keM
+         +NDwJ1bJJUOg4ro4StmjCMnZhuHm9naLc1cM+iSht+2eBZlC23avyHYr0WCxBoTPfWM7
+         CL7A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1702916275; x=1703521075;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=ko/JrVoqB8ohRX2KDgHv6SEiQi8h0QHd7MaM/KjAw4c=;
+        b=MNAETTbSGUq8OQZpG9nDLXcn+sHnfGLBoCpGBkUs6iQ6QxDtDYsNZwi/PkqXayVTTX
+         KfLAgG/MAN31Cra9oIdLEVoifNH8i3j9r/EPM8LshopFRT/3m5OA1s3hYdU7CzzkGq33
+         +1VuuadioKajGdbGuCWy9Ntg8IlYgCgyHR98NxHhmG1wGtNq3vbb8nwrMKaXfPxw4ADE
+         msgbssSgObSBj3q6dK6k0Y9+SIJv+x0DQLK/hfWmjCOoSKGQTzHQclYlbTSCIqsmF4l1
+         ls+2rowAemoncBrtM0ol45wH3OP1s/cDxoj5wzzyiAloWcXHQe2uPMNogOqCgZTiUHW+
+         d/yQ==
+X-Gm-Message-State: AOJu0YwJF0s/Fb6t8Sy7q5lRxUXPTlf9P77NGbial1m88OqSwuL9nBOy
+	uE/jC739/UEJ5x6zIC/2agJM1rfvF7C9Nl/RM8g=
+X-Google-Smtp-Source: AGHT+IGsjdF4eDgMRWbjc23w3iOtEtOz3D8vAqC5c7vJ0GzJRi5cM+5xnLeGGDeeelp8VUtT+fhjZCAAynLbx/ydID8=
+X-Received: by 2002:a05:6122:1d4e:b0:4b6:d4a6:3981 with SMTP id
+ gd14-20020a0561221d4e00b004b6d4a63981mr1029143vkb.2.1702916274741; Mon, 18
+ Dec 2023 08:17:54 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: removed-for@privacy.reasons
+From: "From: BEST MARK-Network" <eduone2022a@gmail.com>
+Date: Mon, 18 Dec 2023 17:17:35 +0100
+Message-ID: <CAPmT0w9qap04qc=XQ2knvKNd1bfWCGh2_fjQ=9SzwuGAwgRnGw@mail.gmail.com>
+Subject: 
+To: removed-for@privacy.reasons
+Content-Type: multipart/alternative; boundary="000000000000a36b03060ccb17f8"
+
+--000000000000a36b03060ccb17f8
+Content-Type: text/plain; charset="UTF-8"
+
+CONGRATULATIONS ! CONGRATULATIONS ! ! CONGRATULATIONS ! ! !
+
+Sir/Ma'am,
+
+We are accepting applications from qualified individuals from all-over the
+world to become Secret-Shopper. There is no charge to become a shopper and
+you do not need previous experience.
+
+After you sign up, you will have access to training materials from us.
+Should you be interested, your wages would be US $450 per assignment. No
+commitment is made on this job and you would have flexible hours. At least
+2 evaluations a week will be assigned to you because this is a part-time
+job and we think this job suits you. We will provide you the money for all
+of your evaluations.
+
+You shall be paid via any of PayPal. Check or through bank transfer.
+Provide the following information if you are interested and we will get
+back shortly to you once we verify your identity, you shall be granted the
+Job Materials
+
+* Your Name (first/last):
+* Your Physical Address:
+* City, State, & Zip Code:
+* Phone Numbers(cell/home):
+* Age and Job Position):
+
+We are waiting for your good response, Thank you.
+
+(Candidates from USA & Canada are allowed to apply for this offer)
+
+Regards,
+ERICK JOHNSON
+Head of Recruitment
+BEST MARK-Network @2023
+From: BEST MARK-Network
+
+--000000000000a36b03060ccb17f8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div>CONGRATULATIONS ! CONGRATULATIONS !=
+ ! CONGRATULATIONS ! ! ! <br><br>Sir/Ma&#39;am,<br><br>We are accepting app=
+lications from qualified individuals from all-over the world to become Secr=
+et-Shopper. There is no charge to become a shopper and you do not need prev=
+ious experience.<br><br>After you sign up, you will have access to training=
+ materials from us. Should you be interested, your wages would be US $450 p=
+er assignment. No commitment is made on this job and you would have flexibl=
+e hours. At least 2 evaluations a week will be assigned to you because this=
+ is a part-time job and we think this job suits you. We will provide you th=
+e money for all of your evaluations.<br><br>You shall be paid via any of Pa=
+yPal. Check or through bank transfer. Provide the following information if =
+you are interested and we will get back shortly to you once we verify your =
+identity, you shall be granted the Job Materials<br><br>* Your Name (first/=
+last):<br>* Your Physical Address:<br>* City, State, &amp; Zip Code:<br>* P=
+hone Numbers(cell/home):<br>* Age and Job Position):<br><br>We are waiting =
+for your good response, Thank you.<br><br>(Candidates from USA &amp; Canada=
+ are allowed to apply for this offer)<br><br>Regards,<br>ERICK JOHNSON<br>H=
+ead of Recruitment<br>BEST MARK-Network @2023<br>From: BEST MARK-Network<br=
+></div></div>
+
+--000000000000a36b03060ccb17f8--

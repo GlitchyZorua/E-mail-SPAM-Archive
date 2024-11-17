@@ -1,0 +1,123 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:cde2:0:b0:42b:92a8:c8f7 with SMTP id b2csp4644698vqx;
+        Sun, 10 Dec 2023 01:29:44 -0800 (PST)
+X-Received: by 2002:a05:620a:22a6:b0:77e:fba3:81e0 with SMTP id p6-20020a05620a22a600b0077efba381e0mr3131438qkh.118.1702200584152;
+        Sun, 10 Dec 2023 01:29:44 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1702200584; cv=none;
+        d=google.com; s=arc-20160816;
+        b=NnJLZhX0grKpvqqtwSsxo31QVNIXKQuYLKVVYaCXHshoKqVJS2yIUxxkIEEHvIj5fA
+         BcnSKZc32bK3No+qwfFsW/ZNBCm7s9MCrq7fv8P8AiPt5IXQhFwaRUZLeju7U3IIyRFB
+         b6jzf+CPR/RPtE5kIhbqQXuwrCXteKxGr1BP3i4GuaRB41P8SiD3xDipSImFDg/5FmKL
+         3rIsML3vztDv/iHc6Wcjx58ptIPuOZI7/IhUlUH/ibRsLbkVz4jYyWRkNBIgtbTEzL/m
+         uMeZT52ZHMC1fyge/iEdqwB2GHMmJvlXdA3M540snFxYOkIvw5187MtTSL6MkyEF8sJZ
+         GcFA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=nWJibiXKazH9xoxwbhbHKYzxFN6LKKPRviNwfMQzECI=;
+        fh=Pr2plYkJn0ovdHybgHvE53243CPsqSX0NRPDPDnAMwQ=;
+        b=mUCz0WrSx9NtAKHXmFBo/Ku8SUt5vrO1Jy2TOopIUZGhgr9QUFfJAh8up7qPIf9pMz
+         v9PNEXwsgB4E3EtlRTaaBXy83ayQq9FguZXWHEibRnfmMcCpt5lP80Dv/6ZO+aVAvT2T
+         +msMwUDILHYl9oq6DoOYYM6/7ptR8xTg86kMjSR0hLROmekW7HVelHrK619XiFtz8Sn/
+         8UDwMoTROqAeGIP9njVz5T2TjPu9AJMXzqtoKozpCTWA4uSr5pHE8sZ7Bx7TI8VVG3l6
+         QOIpBBQhzGIGLeIDrrrGyyq5QuEi75HubOtHRGgmeG0xrl73Fx/gapgYckycaupCe1VX
+         8xfg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OI7NYCtj;
+       spf=pass (google.com: domain of ptmails019@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=ptmails019@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ptmails019@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id w3-20020a05620a148300b0077d78a57e70sor3407379qkj.18.2023.12.10.01.29.44
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Sun, 10 Dec 2023 01:29:44 -0800 (PST)
+Received-SPF: pass (google.com: domain of ptmails019@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OI7NYCtj;
+       spf=pass (google.com: domain of ptmails019@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=ptmails019@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1702200584; x=1702805384; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=nWJibiXKazH9xoxwbhbHKYzxFN6LKKPRviNwfMQzECI=;
+        b=OI7NYCtjda+w68eP6Xx/kWeQDQPvIs0CU6R4yixnfHFmCCCH5od8muFoXblWDK6KZ9
+         AeMBomq8tcBI/QBpS+PRt+UGkFqBKfYcFtRENrd4pB6b2Xxo/TJz2UP4lqS9/OYfECqs
+         QGqCYcYETJ7x8te3QJx0penu/gHHF6wyeV+XZZiUGZyid4OXZ1TrGoMAJ7Bo4vtI4KKh
+         81+REBOT25u77Z3+U1OZPjv6DC4TjL3wCBNtHf571COD2qYD1AMWY5jdQpvGWwwMzUZA
+         Nrezeo7nSuQyi59XlctjULHSEaQE3oe/rdmSr0m+jdNqo8bYa3vM+pMvFYkEO/tMFzAL
+         KKYA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1702200584; x=1702805384;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=nWJibiXKazH9xoxwbhbHKYzxFN6LKKPRviNwfMQzECI=;
+        b=sDu4lbcak2XQSyuGV9zykyipUASLRvIEzN/NazF3TEyKq8kFXeDJE/7qxx6vWzD3R0
+         UWItJLnooIGbfvKOTlN7WNztngHgaQYKVpUz0tIywzEBKXu2N/O7TMlNnNkOsLXl93PU
+         F1c81JFaBOyaUsuuPhY3Yh8uIMdv0TtYKBAmESe1GZaq1i8M53YltTm8Jfu0ZRt7zDiX
+         ezDZFydMe4mJnAOHsygtONTVVIZM13AOeytVU99JU+vJhXHyfSVEB+jPCAdloz8mK+3J
+         NfeEIj6/4bMn1VyyKeS0t2LULxoqmqdrjkb06C/0e4l+8RK3+DvlO7oHcbglg3nirESP
+         uKWg==
+X-Gm-Message-State: AOJu0YycCTlZiiiSNzu1MOfzm3guqDUlwTkiejW2BikwdMK55lzjiU/f
+	A3vaho8ZIjrVOGm7d9DStVBwyu6LOp3P7ISJfEM=
+X-Google-Smtp-Source: AGHT+IE9TbORChGZ2VVjie+MpfgxdQu3u6wlbTvWc+PWNKHPKSq7sR15RqdD5Z1FsgGozgAALLL4ncIdfSrmB3/yNzc=
+X-Received: by 2002:a05:622a:1352:b0:425:9bdd:e65c with SMTP id
+ w18-20020a05622a135200b004259bdde65cmr4190005qtk.36.1702200583501; Sun, 10
+ Dec 2023 01:29:43 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: removed-for@privacy.reasons
+From: Project Management Team <ptmails019@gmail.com>
+Date: Sun, 10 Dec 2023 10:29:00 +0100
+Message-ID: <CALjXZEjbFmogBS_ZjKjUGe5Dgcs9EvEhd3M08ED+7YgeV7Gb6w@mail.gmail.com>
+Subject: 
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000001dbd43060c247556"
+Bcc: mailmanthingwhatever@gmail.com
+
+--0000000000001dbd43060c247556
+Content-Type: text/plain; charset="UTF-8"
+
+Hello Dear,
+
+I am quite impressed with your profile and vast experience in operations
+and great achievements in the other
+
+sectors of expertise.
+
+I represent an Investment consortium and also high-net-worth individuals
+who are interested in giving funding /
+
+loans doing businesses with any individual who is trusted and capable in
+area of project/business set-up.
+
+Kindly let me know if we can execute huge projects in your country with a
+clients seeking for investment fund
+
+under legal ambient of law/government.
+
+Thank you for your cooperation.
+ Hope for a positive feedback
+
+Sincerely,
+
+Papadopoulos Christos
+Project Management Team
+
+--0000000000001dbd43060c247556
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:trebuche=
+t ms,sans-serif">Hello Dear,<br><br>I am quite impressed with your profile =
+and vast experience in operations and great achievements in the other <br><=
+br>sectors of expertise.<br><br>I represent an Investment consortium and al=
+so high-net-worth individuals who are interested in giving funding / <br><b=
+r>loans doing businesses with any individual who is trusted and capable in =
+area of project/business set-up.<br><br>Kindly let me know if we can execut=
+e huge projects in your country with a clients seeking for investment fund =
+<br><br>under legal ambient of law/government.<br><br>Thank you for your co=
+operation.<br>=C2=A0Hope for a positive feedback<br><br>Sincerely,<br><br>P=
+apadopoulos Christos<br>Project Management Team<br></div></div>
+
+--0000000000001dbd43060c247556--

@@ -1,0 +1,1046 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:552:0:b0:443:debf:37c3 with SMTP id 79csp372027vqf;
+        Thu, 18 Jan 2024 22:46:11 -0800 (PST)
+X-Received: by 2002:a5d:94c5:0:b0:7bf:5534:1525 with SMTP id y5-20020a5d94c5000000b007bf55341525mr2394407ior.24.1705646771267;
+        Thu, 18 Jan 2024 22:46:11 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1705646771; cv=none;
+        d=google.com; s=arc-20160816;
+        b=1IohnOQL3bzHQA0HOtWnvtBpngU5qkzoHLEncA8cZFyB7Tv5m8e3uibBJ12GKR1SKW
+         07OUsA0if1rd2RQlrN0AI8zWeJSHBNkzHvNdvTvqf2tBv3KYMUeDTVSNlmS2hSEeoB57
+         uVXfw8gi4NdTfo6mukIyAanhbSmEGmEP3DJ3uwzh8Zf1PdECJ0ftzRv3RfyfGVk1448c
+         oMjpAUAtJz2AZiB5sZh0eLt+/RN7fJWiCCIz4VBcUm2GjdkXJq+MCUCLpMl7jcPlSnO/
+         n/3iLXvOtx3syJuVC1khSZKuDj5VhjTDrESvpeFE55wk6bPDSOgNtYR0fjM1pFvQ1C/Z
+         jT8g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:date:message-id:sender:reply-to:mime-version
+         :dkim-signature:dkim-signature;
+        bh=1OTo6wJsC0WmWqrFRWWzMNppLP51EF5TK5f0X2d29rE=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=kALQc0Mo7fTATDjAnbQfoLeT7ZmbMCgMl2KokJsQvGp8I016QUIsEzavL8dNvCHZmz
+         2jPAmgK2nKsWDrnD9/8igH4RrZ+tT02xxPtW/Gq9yUBE/7vUMaF4PzNvmJ7EOUwmjlhL
+         dGtlAj1yJWF/aZaTK5oEWT+S7LquE0B3a00T40dxEioj0C/1fkG0NyWZotSv6Yvk5XBl
+         6+Jzt1GmMXCTEn/kx1HTAmsljo90tHUkweBoiq1YSHhFrvAQ5+zq/yhEahHctXVFKTiT
+         buBOgfm9QUUndWKZb9J1V7hryOII0Hf3+OexhQjambAUd1DZN3HVJpb/fbJYDY5brE+C
+         vb/Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=mwsHGThX;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=JJ6DvaqR;
+       spf=pass (google.com: domain of ikanagency@gmail.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=ikanagency@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ikanagency@gmail.com>
+Received: from mail-sor-f73.google.com (mail-sor-f73.google.com. [209.85.220.73])
+        by mx.google.com with SMTPS id d9-20020a6b6809000000b007bbfcc9b26fsor6328209ioc.4.2024.01.18.22.46.11
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Thu, 18 Jan 2024 22:46:11 -0800 (PST)
+Received-SPF: pass (google.com: domain of ikanagency@gmail.com designates 209.85.220.73 as permitted sender) client-ip=209.85.220.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=mwsHGThX;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=JJ6DvaqR;
+       spf=pass (google.com: domain of ikanagency@gmail.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=ikanagency@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1705646771; x=1706251571; dara=google.com;
+        h=to:from:subject:date:message-id:sender:reply-to:mime-version:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=1OTo6wJsC0WmWqrFRWWzMNppLP51EF5TK5f0X2d29rE=;
+        b=mwsHGThXEkz+3LNqAxfF9x/kcZsyl87Hr0mIuszQQz6CeN9oQqHCfhfrajOP7onyc/
+         VXpMSuDVpII1YRO6752/RYrScM3vfmQ3GC6Z59QSuXlJgZ7eHNVoFzVWuteOuWNXSjjz
+         41SO1euAxmHTWcreOcp85KSy9IAhnrNUyLy+Ie0nBw5SeU195EKUDXl1ksPFXz4xwbOd
+         K7wWB/QSkS4POws8H0kSnBnm1dir5Iy9GLAyei9mCf0WEwS6yMQDaJg/CvVaiyoan4sY
+         ReBJx4RzD8et54kTDGXidGfu//TCCpgU2uTR/b69gAiCYyoV3W/ljIs1h1AH4YJbXsoX
+         5E6w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1705646771; x=1706251571; dara=google.com;
+        h=to:from:subject:date:message-id:sender:reply-to:mime-version:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=1OTo6wJsC0WmWqrFRWWzMNppLP51EF5TK5f0X2d29rE=;
+        b=JJ6DvaqR1GebAXfcHjg6LXdyI5GWgogp/Z91Z06VtXf0uwqPR7YSFy/8CDOxiehcLb
+         MJRGNe7QmcThHMz1KRd6h3gB5uTK/HIYZgI6Z91+1O3vKfcXGndCI8bT2gT1MgXRKkYH
+         mWMoiV4/42fVMfvEcaustUKFBKKHAbK1qPKcdUHJrOzxjtvqOnx1qvJnKiAZbmv9Vuyt
+         eblHNeRAlDCFzoFz/XrrmRJceP43NJAgODkcSPZ9V8fQvd1gtV8Q86ACc5aKtrGK/bmV
+         tShqr9lloy0MKUYB0dgT25I0jSgo30JVMja8kOXi7Tggx4ijkT9QODBw6GV7VqRyKhjr
+         AKYQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1705646771; x=1706251571;
+        h=to:from:subject:date:message-id:sender:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=1OTo6wJsC0WmWqrFRWWzMNppLP51EF5TK5f0X2d29rE=;
+        b=dG1Us+vdBwSiowY8om46agMNut08cdWQRbxzTD5OzQBFAJPRGMJgWswPB0Llp5R24v
+         634qYLAPtncyUxHpZlJdIC8K/G2NTzzlg3HYE3yeUFEXwQ7CztixCE33cyOTBd2vCM/C
+         4+ehZSqHCZxTfPQh7nJhZH6uld7ba81QLDQ2X13+saFC8VSUuk1e8TaD4yVjaDintmHJ
+         HyKTE3WFGWeOZVk5VW/C52Drgj9VZKQONYSojfjX6nr2yVNaUzfN/NOiulY/7yxYXuIo
+         WihbdPa76TvY753F7M/p8LFUzG6C8xLkNXllrW8AxqleDF+EtkfWAE72q4Da4hqAW2vc
+         +aBg==
+X-Gm-Message-State: AOJu0YyHJmjPyCo+XfRx7tmk1NvJ5Tc0wBVas1jy46nI4w2JV4K8jPoq
+	zpMhFgo4FRRHQIBAGnwTHlt72O1OoZgKBazQsijoFsh6xJFTH/F4Jk09Q4yx7mbStntmADikcZY
+	rSxilx4o4OIunTcMzCiw6Jr+3fIY+AqsjkMbe
+X-Google-Smtp-Source: AGHT+IHSnPQQfCs+LaNThIfcP+QriaFsuHMziXzrj/uz5EAw9WNP4LYMtzMraI7+Kt9FI7BjFfbmrqHQ1w2MxBzsLOhv
+MIME-Version: 1.0
+X-Received: by 2002:a5e:cb4c:0:b0:7ba:d2dd:6431 with SMTP id
+ h12-20020a5ecb4c000000b007bad2dd6431mr2460085iok.13.1705646770944; Thu, 18
+ Jan 2024 22:46:10 -0800 (PST)
+Reply-To: removedfor@privacy.reasons
+Sender: Google Calendar <calendar-notification@google.com>
+Message-ID: <calendar-7ca5bf17-8932-4193-a3df-2b677db353eb@google.com>
+Date: Fri, 19 Jan 2024 06:46:10 +0000
+Subject: =?UTF-8?Q?Invitation_from_an_unknown_sender=3A_Lenn_Wood__y_Iker?=
+	=?UTF-8?Q?_Mengibar_Fern=C3=A1ndez_=40_Mon_Jan_22=2C_2024_2pm_=2D_2=3A30pm_=28UTC=29_=28?=
+	=?UTF-8?Q?mailmanthingwhatever=40gmail=2Ecom=29?=
+From: =?UTF-8?Q?Iker_Mengibar_Fern=C3=A1ndez?= <ikanagency@gmail.com>
+To: mailmanthingwhatever@gmail.com
+Content-Type: multipart/mixed; boundary="000000000000e50359060f46d56e"
+
+--000000000000e50359060f46d56e
+Content-Type: multipart/alternative; boundary="000000000000e50356060f46d56c"
+
+--000000000000e50356060f46d56c
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+VW5rbm93biBzZW5kZXINClRoaXMgZXZlbnQgZnJvbSBpa2FuYWdlbmN5QGdtYWlsLmNvbSB3b24n
+dCBhcHBlYXIgaW4geW91ciBjYWxlbmRhciB1bmxlc3MgIA0KeW91IHNheSB5b3Uga25vdyB0aGUg
+c2VuZGVyLg0KS25vdyB0aGlzIHNlbmRlcj8gIA0KaHR0cHM6Ly9jYWxlbmRhci5nb29nbGUuY29t
+L2NhbGVuZGFyL21hcmtzZW5kZXJhc2tub3duP21hcmtfc2VuZGVyX2FzX2tub3duPUNoNXRZV2xz
+YldGdWRHaHBibWQzYUdGMFpYWmxja0JuYldGcGJDNWpiMjBTUWs1SFJuUlpNMEV5WTIwMU1GcHRU
+bkJaYlhSNlRtcFZlRmt5YkhGTlZHeHZUVEp6WjJKWFJuQmlSekZvWW01U2IyRlhOVzVrTW1ob1pF
+ZFdNbHBZU2tGaVVSb1VhV3RoYm1GblpXNWplVUJuYldGcGJDNWpiMjAmbWFya19zZW5kZXJfYXNf
+a25vd25fc2lnPUFKcVVHdlF3UlFJaEFNQ0dtendINHVfcWo1SWVZcWRQeGZpbWpqelFkUzNZckM2
+ZWRtNHhubTgtQWlBa0t5dmZqaE1BcXJuQVhzdndzT3VkczZOMVc3ZFZlUmpyWWVuTHFReUZuZyZj
+dG9rPWJXRnBiRzFoYm5Sb2FXNW5kMmhoZEdWMlpYSkFaMjFoYVd3dVkyOXQmZXM9MQ0KDQpMZW5u
+IFdvb2QgIHkgSWtlciBNZW5naWJhciBGZXJuw6FuZGV6DQpNb25kYXkgSmFuIDIyLCAyMDI0IOKL
+hSAycG0g4oCTIDI6MzBwbQ0KQ29vcmRpbmF0ZWQgVW5pdmVyc2FsIFRpbWUNCg0KTG9jYXRpb24N
+Cmh0dHBzOi8vdXMwNndlYi56b29tLnVzL2ovODY3ODUyOTQ1MzkJDQpodHRwczovL3d3dy5nb29n
+bGUuY29tL3VybD9xPWh0dHBzJTNBJTJGJTJGdXMwNndlYi56b29tLnVzJTJGaiUyRjg2Nzg1Mjk0
+NTM5JnNhPUQmc291cmNlPWNhbGVuZGFyJnVzZD0yJnVzZz1BT3ZWYXcxTnVBdkEyTUpyOXNaQmx3
+Y3Q5UlljDQoNCg0KDQpOb21icmUgZGVsIGV2ZW50bzogUmV1bmnDs24gUGVyc29uYWxpemFkYSBk
+ZSAzMCBtaW51dG9zDQoNClF1aWVybyBzYWJlciBtw6FzIGRlIHRpLiBFeHBsw61jYW1lIGVuIGVz
+dGEgbGxhbWFkYSB0dSBzaXR1YWNpw7NuIHkgdGUgIA0KYWNvbnNlamFyw6kgc2kgbnVlc3RyYSBm
+b3JtYWNpw7NuIGVzIGFkZWN1YWRhIDEwMCUgcGFyYSB0aS4NCg0KDQpFc3RvcyBzb24gbG9zIHRl
+bWFzIHF1ZSB0cmF0YXJlbW9zIGVuIGxhIGxsYW1hZGE6DQoNCg0KMS4gVHVzIG9iamV0aXZvcyBw
+ZXJzb25hbGVzIHkgY29tbyBjdW1wbGlybG9zLg0KMi4gQ3XDoWwgZXMgbGEgbWVqb3IgbWV0b2Rv
+bG9nw61hIGRlIE1hcmtldGluZyBwYXJhIHR1IGNhc28uDQozLiBDdcOhbnRvIHBvZHLDrWFzIGZh
+Y3R1cmFyIGFsIG1lcyBzZWfDum4gbGFzIGhvcmFzIHF1ZSBsZSBxdWllcmFzIGRlZGljYXIuDQoN
+ClViaWNhY2nDs246IEVzdG8gZXMgdW5hIGNvbmZlcmVuY2lhIHdlYiBkZSBab29tLg0KDQpQdWVk
+ZSB1bmlyc2UgYSBsYSByZXVuacOzbiBkZXNkZSBlbCBvcmRlbmFkb3IsIHRhYmxldCBvIHNtYXJ0
+cGhvbmUuDQpodHRwczovL3VzMDZ3ZWIuem9vbS51cy9qLzg2Nzg1Mjk0NTM5DQoNCk3Ds3ZpbCBj
+b24gdW4gdG9xdWU6DQorMSAzMTIgNjI2IDY3OTksLDg2Nzg1Mjk0NTM5Iw0KKzEgNjQ2IDU1OCA4
+NjU2LCw4Njc4NTI5NDUzOSMNCg0KVGFtYmnDqW4gcHVlZGUgaGFjZXJsbyB1c2FuZG8gc3UgdGVs
+w6lmb25vLg0KVVM6ICsxIDMxMiA2MjYgNjc5OSwgKzEgNjQ2IDU1OCA4NjU2LCArMSA2NDYgOTMx
+IDM4NjAsICsxIDMwMSA3MTUgODU5MiwgKzEgIA0KMzA1IDIyNCAxOTY4LCArMSAzMDkgMjA1IDMz
+MjUsICsxIDM0NiAyNDggNzc5OSwgKzEgMzYwIDIwOSA1NjIzLCArMSAzODYgMzQ3ICANCjUwNTMs
+ICsxIDUwNyA0NzMgNDg0NywgKzEgNTY0IDIxNyAyMDAwLCArMSA2NjkgNDQ0IDkxNzEsICsxNjg5
+Mjc4MTAwMCwgKzEgIA0KNzE5IDM1OSA0NTgwLCArMSA3MjAgNzA3IDI2OTksICsxIDI1MyAyMDUg
+MDQ2OCwgKzEgMjUzIDIxNSA4NzgyDQpJRCBkZSBsYSByZXVuacOzbjogODY3LTg1Mi05NDUzOQ0K
+DQpFbmN1ZW50cmUgc3UgbsO6bWVybyBsb2NhbDogaHR0cHM6Ly91czA2d2ViLnpvb20udXMvdS9r
+ZGdPZ0xpYlhrDQoNClRlbMOpZm9ubyogwqFBdGVuY2nDs24hIEVzY3JpYmUgY29ycmVjdGFtZW50
+ZSB0dSB0ZWzDqWZvbm8geWEgcXVlIHRlIGxsYW1hcmVtb3MgIA0KcGFyYSBjb25maXJtYXIgbGEg
+UmV1bmnDs24gUGVyc29uYWxpemFkYS4gU2kgbm8gZXN0w6EgYmllbiBwdWVzdG8gdHUgIA0KdGVs
+w6lmb25vLCBjYW5jZWxhcmVtb3MgbGEgc2VzacOzbi4gOiArMSAyMDYtMzUxLTE5ODMNCg0Kwr9O
+ZWNlc2l0YXMgcmVhbGl6YXIgYWxnw7puIGNhbWJpbyBhIGVzdGUgZXZlbnRvPw0KQ2FuY2VsYXI6
+ICANCmh0dHBzOi8vY2FsZW5kbHkuY29tL2NhbmNlbGxhdGlvbnMvMDcyYmU3MjItNjAxNS00MjY2
+LTk3YTctMmZhYzEzYjFkNzg5DQpSZXByb2dyYW1hcjogIA0KaHR0cHM6Ly9jYWxlbmRseS5jb20v
+cmVzY2hlZHVsaW5ncy8wNzJiZTcyMi02MDE1LTQyNjYtOTdhNy0yZmFjMTNiMWQ3ODkNCg0KDQpP
+cmdhbml6ZXINCklrZXIgTWVuZ2liYXIgRmVybsOhbmRleg0KaWthbmFnZW5jeUBnbWFpbC5jb20N
+Cg0KR3Vlc3RzDQpJa2VyIE1lbmdpYmFyIEZlcm7DoW5kZXogLSBvcmdhbml6ZXINCm1haWxtYW50
+aGluZ3doYXRldmVyQGdtYWlsLmNvbQ0KVmlldyBhbGwgZ3Vlc3QgaW5mbyAgDQpodHRwczovL2Nh
+bGVuZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvZXZlbnQ/YWN0aW9uPVZJRVcmZWlkPU5HRnRZM0Ey
+Y201MFptTnBZbXR6TmpVeFkybHFNVGxvTTJzZ2JXRnBiRzFoYm5Sb2FXNW5kMmhoZEdWMlpYSkFi
+USZ0b2s9TWpBamFXdGhibUZuWlc1amVVQm5iV0ZwYkM1amIyMWhNV0l3TkRZek5XVXdNRGd3TURN
+eVl6WTBPVEV5T1dKbU1ETmtNV1kyWkRreU5qRmtZMkpsJmN0ej1VVEMmaGw9ZW4mZXM9MQ0KDQpS
+ZXBseSBmb3IgbWFpbG1hbnRoaW5nd2hhdGV2ZXJAZ21haWwuY29tIGFuZCB2aWV3IG1vcmUgZGV0
+YWlscyAgDQpodHRwczovL2NhbGVuZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvZXZlbnQ/YWN0aW9u
+PVZJRVcmZWlkPU5HRnRZM0EyY201MFptTnBZbXR6TmpVeFkybHFNVGxvTTJzZ2JXRnBiRzFoYm5S
+b2FXNW5kMmhoZEdWMlpYSkFiUSZ0b2s9TWpBamFXdGhibUZuWlc1amVVQm5iV0ZwYkM1amIyMWhN
+V0l3TkRZek5XVXdNRGd3TURNeVl6WTBPVEV5T1dKbU1ETmtNV1kyWkRreU5qRmtZMkpsJmN0ej1V
+VEMmaGw9ZW4mZXM9MQ0KWW91ciBhdHRlbmRhbmNlIGlzIG9wdGlvbmFsLg0KDQp+fi8vfn4NCklu
+dml0YXRpb24gZnJvbSBHb29nbGUgQ2FsZW5kYXI6IGh0dHBzOi8vY2FsZW5kYXIuZ29vZ2xlLmNv
+bS9jYWxlbmRhci8NCg0KWW91IGFyZSByZWNlaXZpbmcgdGhpcyBlbWFpbCBiZWNhdXNlIHlvdSBh
+cmUgc3Vic2NyaWJlZCB0byBjYWxlbmRhciAgDQpub3RpZmljYXRpb25zLiBUbyBzdG9wIHJlY2Vp
+dmluZyB0aGVzZSBlbWFpbHMsIGdvIHRvICANCmh0dHBzOi8vY2FsZW5kYXIuZ29vZ2xlLmNvbS9j
+YWxlbmRhci9yL3NldHRpbmdzLCBzZWxlY3QgdGhpcyBjYWxlbmRhciwgYW5kICANCmNoYW5nZSAi
+T3RoZXIgbm90aWZpY2F0aW9ucyIuDQoNCkZvcndhcmRpbmcgdGhpcyBpbnZpdGF0aW9uIGNvdWxk
+IGFsbG93IGFueSByZWNpcGllbnQgdG8gc2VuZCBhIHJlc3BvbnNlIHRvICANCnRoZSBvcmdhbml6
+ZXIsIGJlIGFkZGVkIHRvIHRoZSBndWVzdCBsaXN0LCBpbnZpdGUgb3RoZXJzIHJlZ2FyZGxlc3Mg
+b2YgIA0KdGhlaXIgb3duIGludml0YXRpb24gc3RhdHVzLCBvciBtb2RpZnkgeW91ciBSU1ZQLg0K
+DQpMZWFybiBtb3JlIGh0dHBzOi8vc3VwcG9ydC5nb29nbGUuY29tL2NhbGVuZGFyL2Fuc3dlci8z
+NzEzNSNmb3J3YXJkaW5nDQo=
+--000000000000e50356060f46d56c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce"><head><title></title><!--[if !mso]><meta http-equiv=3D"X-UA-Compatible"=
+ content=3D"IE=3Dedge"><![endif]--><meta http-equiv=3D"Content-Type" conten=
+t=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"width=
+=3Ddevice-width,initial-scale=3D1"><meta name=3D"color-scheme" content=3D"l=
+ight dark"><meta name=3D"supported-color-schemes" content=3D"light dark">
+    <style>
+      body, html {
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      #outlook a {
+        padding: 0;
+      }
+
+      .ReadMsgBody {
+        width: 100%;
+      }
+
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ExternalClass * {
+        line-height: 100%;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+
+      p {
+        display: block;
+        margin: 13px 0;
+      }
+    </style>
+    <!--[if !mso]><!-->
+    <style>
+      @media only screen and (max-width:580px) {
+        @-ms-viewport {
+          width: 320px;
+        }
+
+        @viewport {
+          width: 320px;
+        }
+      }
+    </style>
+    <!--<![endif]-->
+    <!--[if mso]>
+          <xml>
+          <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+          </xml>
+          <![endif]-->
+    <!--[if lte mso 11]>
+          <style>
+            .outlook-group-fix { width:100% !important; }
+          </style>
+    <![endif]-->
+
+    <!--[if !mso]><!-- -->
+  <style>body, html {font-family:Roboto,Helvetica,Arial,sans-serif;}@font-f=
+ace {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) forma=
+t('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) f=
+ormat('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) f=
+ormat('truetype');
+}
+@font-face {
+  font-family: 'Material Icons Extended';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/materialiconsextended/v149/kJEjBvgX7BgnkSr=
+UwT8UnLVc38YydejYY-oE_LvM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/googlematerialicons/v137/Gw6kwdfw6UnXLJCcm=
+afZyFRXb3BL9rvi0QZG3g.otf) format('opentype');
+}
+
+.google-material-icons {
+  font-family: 'Google Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
+@font-face {
+  font-family: 'Google Material Icons Filled';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/googlematerialiconsfilled/v113/WWXFlimHYg6=
+HKI3TavMkbKdhBmDvgach8TVpeGsuueSZJH4.otf) format('opentype');
+}
+
+.google-material-icons-filled {
+  font-family: 'Google Material Icons Filled';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owps=
+.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt=
+zCwM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLV154t=
+zCwM.ttf) format('truetype');
+}
+</style><!--<![endif]-->
+      <style>
+        .body-container {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      </style>
+ =20
+      <style>
+        u+.body .body-container,
+        body[data-outlook-cycle] .body-container,
+        #MessageViewBody .body-container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      </style>
+ =20
+    <style>
+      @media only screen and (min-width:580px) {
+        .column-per-37 {
+          width: 37% !important;
+          max-width: 37%;
+        }
+
+        .column-per-63 {
+          width: 63% !important;
+          max-width: 63%;
+        }
+      }
+    </style>
+ =20
+    <style>
+      .appointment-buttons th {
+        display: block;
+        clear: both;
+        float: left;
+        margin-top: 12px;
+      }
+
+      .appointment-buttons th a {
+        float: left;
+      }
+
+      #MessageViewBody .appointment-buttons th {
+       margin-top: 24px;
+      }
+    </style>
+ =20
+    <style>
+      @media only screen and (max-width:580px) {
+        table.full-width-mobile {
+          width: 100% !important;
+        }
+
+        td.full-width-mobile {
+          width: auto !important;
+        }
+      }
+    </style>
+    <style>
+      .main-container-inner,
+      .info-bar-inner {
+        padding: 12px 16px !important;
+      }
+
+      .main-column-table-ltr {
+        padding-right: 0 !important;
+      }
+
+      .main-column-table-rtl {
+        padding-left: 0 !important;
+      }
+
+      @media only screen and (min-width:580px) {
+        .main-container-inner {
+          padding: 24px 32px !important;
+        }
+
+        .info-bar-inner {
+          padding: 12px 32px !important;
+        }
+
+        .main-column-table-ltr {
+          padding-right: 32px !important;
+        }
+
+        .main-column-table-rtl {
+          padding-left: 32px !important;
+        }
+
+        .appointment-buttons th {
+          display: table-cell;
+          clear: none;
+        }
+      }
+
+      .primary-text {
+        color: #3c4043 !important;
+      }
+
+      .secondary-text,
+      .phone-number a {
+        color: #70757a !important;
+      }
+
+      .accent-text {
+        color: #1a73e8 !important;
+      }
+
+      .accent-text-dark {
+        color: #185abc !important;
+      }
+
+      .grey-button-text,
+      .attachment-chip a {
+        color: #5f6368 !important;
+      }
+
+      .primary-button {
+        background-color: #1a73e8 !important;
+      }
+
+      .primary-button-text {
+        color: #fff !important;
+      }
+
+      .underline-on-hover:hover {
+        text-decoration: underline !important;
+      }
+
+      .grey-infobar-text {
+        color: #202124 !important;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .primary-text:not([class^=3D"x_"]) {
+          color: #e8eaed !important;
+        }
+
+        .secondary-text:not([class^=3D"x_"]),
+        .phone-number:not([class^=3D"x_"]) a {
+          color: #9aa0a6 !important;
+        }
+
+        .grey-button-text:not([class^=3D"x_"]),
+        .attachment-chip:not([class^=3D"x_"]) a {
+          color: #bdc1c6 !important;
+        }
+
+        .accent-text:not([class^=3D"x_"]),
+        .hairline-button-text:not([class^=3D"x_"]) {
+          color: #8ab4f8 !important;
+        }
+
+        .primary-button:not([class^=3D"x_"]) {
+          background-color: #8ab4f8 !important;
+        }
+
+        .primary-button-text:not([class^=3D"x_"]) {
+          color: #202124 !important;
+        }
+      }
+    </style>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .cse-banner:not([class^=3D"x_"]) {
+          background-color: #3c4043 !important; /* Google Grey 800 */
+        }
+
+        .encryption-icon:not([class^=3D"x_"]) {
+          /* WARNING: This causes the whole style tag to get stripped in Gm=
+ail. */
+          background-image: url('https://fonts.gstatic.com/s/i/googlemateri=
+aliconsfilled/encrypted/v3/gm_grey200-24dp/2x/gm_filled_encrypted_gm_grey20=
+0_24dp.png') !important;
+        }
+      }
+    </style>
+    <!--[if !mso]><!-->
+    <style>
+      .prevent-link a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+    </style>
+    <!--<![endif]-->
+
+    <!--[if mso | IE]>
+      <style>
+        .main-container-inner {
+          padding: 24px 32px !important;
+        }
+
+        .info-bar-inner {
+          padding: 12px 32px !important;
+        }
+
+        .cse-banner .encryption-icon {
+          /* We use the IE workaround instead. */
+          background-image: none !important;
+        }
+
+        .cse-banner .encryption-icon .ms-fallback {
+          display: block !important;
+        }
+
+        /* NB: Some MS clients ignore dark-scheme styling and apply their o=
+wn, so there's nothing we can do to help there. */
+        @media (prefers-color-scheme: dark) {
+          .cse-banner:not([class^=3D"x_"]) .encryption-icon .ms-fallback {
+            display: none !important;
+          }
+
+          .cse-banner:not([class^=3D"x_"]) .encryption-icon .ms-fallback-da=
+rk {
+            display: block !important;
+          }
+        }
+      </style>
+    <![endif]-->
+  </head><body class=3D"body"><span itemscope itemtype=3D"http://schema.org=
+/InformAction"><span itemprop=3D"object" itemscope itemtype=3D"http://schem=
+a.org/Event"><meta itemprop=3D"eventStatus" content=3D"http://schema.org/Ev=
+entScheduled"/><span itemprop=3D"publisher" itemscope itemtype=3D"http://sc=
+hema.org/Organization"><meta itemprop=3D"name" content=3D"Google Calendar"/=
+></span><meta itemprop=3D"eventId/googleCalendar" content=3D"4amcp6rntfcibk=
+s651cij19h3k"/><span style=3D"display: none; font-size: 1px; color: #fff; l=
+ine-height: 1px; height: 0; max-height: 0; width: 0; max-width: 0; opacity:=
+ 0; overflow: hidden;" itemprop=3D"name">Lenn Wood  y Iker Mengibar Fern=C3=
+=A1ndez</span><meta itemprop=3D"url" content=3D"https://calendar.google.com=
+/calendar/event?action=3DVIEW&amp;eid=3DNGFtY3A2cm50ZmNpYmtzNjUxY2lqMTloM2s=
+gbWFpbG1hbnRoaW5nd2hhdGV2ZXJAbQ&amp;tok=3DMjAjaWthbmFnZW5jeUBnbWFpbC5jb21hM=
+WIwNDYzNWUwMDgwMDMyYzY0OTEyOWJmMDNkMWY2ZDkyNjFkY2Jl&amp;ctz=3DUTC&amp;hl=3D=
+en&amp;es=3D1"/><span aria-hidden=3D"true"><time itemprop=3D"startDate" dat=
+etime=3D"20240122T140000Z"></time><time itemprop=3D"endDate" datetime=3D"20=
+240122T143000Z"></time></span><table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"presentation" align=3D"center" style=3D"width:100%;" cla=
+ss=3D"body-container"><tbody><tr><td style=3D"" class=3D"" align=3D"left"><=
+!--[if mso | IE]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation"><tr><td height=3D"16" style=3D"height:16px;"><![endif]-=
+-><div style=3D"height:16px;" aria-hidden=3D"true"> &nbsp; </div><!--[if ms=
+o | IE]></td></tr></table><![endif]--><table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" align=3D"center" style=3D"width:10=
+0%;" class=3D""><tbody><tr><td style=3D"background-color: #e8eaed;;color: #=
+202124;padding: 12px 32px; border-radius: 8px;font-family: Roboto, sans-ser=
+if;font-size: 14px; line-height: 20px;text-align: left;" class=3D"info-bar-=
+inner"><span style=3D"font-weight: 700;">Unknown sender</span><br/><span st=
+yle=3D"font-family: Roboto, sans-serif;font-size: 14px; line-height: 20px;"=
+>This event from <a class=3D"grey-infobar-text underline-on-hover" style=3D=
+"display: inline-block;;color: #202123; text-decoration: none; display: ini=
+tial;" href=3D"mailto:ikanagency@gmail.com">ikanagency@gmail.com</a> won't =
+appear in your calendar unless you say you know the sender.</span><br/><a c=
+lass=3D"accent-text-dark underline-on-hover" style=3D"display: inline-block=
+;;color: #185abc; text-decoration: none;font-weight: 700;" href=3D"https://=
+calendar.google.com/calendar/marksenderasknown?mark_sender_as_known=3DCh5tY=
+WlsbWFudGhpbmd3aGF0ZXZlckBnbWFpbC5jb20SQk5HRnRZM0EyY201MFptTnBZbXR6TmpVeFky=
+bHFNVGxvTTJzZ2JXRnBiRzFoYm5Sb2FXNW5kMmhoZEdWMlpYSkFiURoUaWthbmFnZW5jeUBnbWF=
+pbC5jb20&amp;mark_sender_as_known_sig=3DAJqUGvQwRAIgG-IL400e0MUF3qTIeAAqLZp=
+XbuWDsSOvA2GNNCcLn7cCIA9ydSqNNf7AWrRsuP8iRodG0uxc61gwoAW6TV45KP2v&amp;ctok=
+=3DbWFpbG1hbnRoaW5nd2hhdGV2ZXJAZ21haWwuY29t&amp;es=3D1" target=3D"_blank">K=
+now this sender?</a></td></tr></tbody></table><!--[if mso | IE]><table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"><tr><td =
+height=3D"12" style=3D"height:12px;"><![endif]--><div style=3D"height:12px;=
+" aria-hidden=3D"true"> &nbsp; </div><!--[if mso | IE]></td></tr></table><!=
+[endif]--><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" align=3D"center" style=3D"width:100%;" class=3D""><tbody><tr><=
+td style=3D"border: solid 1px #dadce0; border-radius: 8px; direction: rtl; =
+font-size: 0; padding: 24px 32px; text-align: left; vertical-align: top;" c=
+lass=3D"main-container-inner"><!--[if mso | IE]><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" role=3D"presentation"><tr><![endif]--><div cla=
+ss=3D"" style=3D"font-size: 13px; text-align: left; direction: ltr; display=
+: inline-block; vertical-align: top; width: 100%;overflow: hidden; word-wra=
+p: break-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" width=3D"100%" class=3D"main-column-table-ltr" style=3D"=
+padding-right: 32px; padding-left: 0;;table-layout: fixed;"><tbody><tr><td =
+class=3D"main-column-td" style=3D"padding:0; vertical-align:top;"><table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+=3D"100%" style=3D"table-layout: fixed;"><tr><td style=3D"font-size: 0; pad=
+ding: 0; text-align: left; word-break: break-word;;padding-bottom:24px;"><d=
+iv style=3D"font-family: Roboto, sans-serif;font-style: normal; font-weight=
+: 400; font-size: 14px; line-height: 20px; letter-spacing: 0.2px;color: #3c=
+4043; text-decoration: none;" class=3D"primary-text" role=3D"presentation">=
+<span>Nombre del evento: Reuni=C3=B3n Personalizada de 30 minutos<p>Quiero =
+saber m=C3=A1s de ti. Expl=C3=ADcame en esta llamada tu situaci=C3=B3n y te=
+ aconsejar=C3=A9 si nuestra formaci=C3=B3n es adecuada 100% para ti.</p><p>=
+<br>Estos son los temas que trataremos en la llamada:</p><p><br>1. Tus obje=
+tivos personales y como cumplirlos.<br>2. Cu=C3=A1l es la mejor metodolog=
+=C3=ADa de Marketing para tu caso.<br>3. Cu=C3=A1nto podr=C3=ADas facturar =
+al mes seg=C3=BAn las horas que le quieras dedicar.</p><p>Ubicaci=C3=B3n: E=
+sto es una conferencia web de Zoom.</p><p>Puede unirse a la reuni=C3=B3n de=
+sde el ordenador, tablet o smartphone.<br><a href=3D"https://www.google.com=
+/url?q=3Dhttps%3A%2F%2Fus06web.zoom.us%2Fj%2F86785294539&amp;sa=3DD&amp;sou=
+rce=3Dcalendar&amp;usd=3D2&amp;usg=3DAOvVaw1NuAvA2MJr9sZBlwct9RYc" target=
+=3D"_blank">https://us06web.zoom.us/j/86785294539</a></p><p>M=C3=B3vil con =
+un toque:<br>+1 312 626 6799,,86785294539#<br>+1 646 558 8656,,86785294539#=
+</p><p>Tambi=C3=A9n puede hacerlo usando su tel=C3=A9fono.<br>US: +1 312 62=
+6 6799, +1 646 558 8656, +1 646 931 3860, +1 301 715 8592, +1 305 224 1968,=
+ +1 309 205 3325, +1 346 248 7799, +1 360 209 5623, +1 386 347 5053, +1 507=
+ 473 4847, +1 564 217 2000, +1 669 444 9171, +16892781000, +1 719 359 4580,=
+ +1 720 707 2699, +1 253 205 0468, +1 253 215 8782<br>ID de la reuni=C3=B3n=
+: 867-852-94539</p><p>Encuentre su n=C3=BAmero local: <a href=3D"https://ww=
+w.google.com/url?q=3Dhttps%3A%2F%2Fus06web.zoom.us%2Fu%2FkdgOgLibXk&amp;sa=
+=3DD&amp;source=3Dcalendar&amp;usd=3D2&amp;usg=3DAOvVaw2_aIkRk48VTLUuWox7F4=
+Co" target=3D"_blank">https://us06web.zoom.us/u/kdgOgLibXk</a></p><p>Tel=C3=
+=A9fono* =C2=A1Atenci=C3=B3n! Escribe correctamente tu tel=C3=A9fono ya que=
+ te llamaremos para confirmar la Reuni=C3=B3n Personalizada. Si no est=C3=
+=A1 bien puesto tu tel=C3=A9fono, cancelaremos la sesi=C3=B3n. : +1 206-351=
+-1983</p><p>=C2=BFNecesitas realizar alg=C3=BAn cambio a este evento?<br>Ca=
+ncelar: <a href=3D"https://www.google.com/url?q=3Dhttps%3A%2F%2Fcalendly.co=
+m%2Fcancellations%2F072be722-6015-4266-97a7-2fac13b1d789&amp;sa=3DD&amp;sou=
+rce=3Dcalendar&amp;usd=3D2&amp;usg=3DAOvVaw19aIF0OUDIP63l7TxMByRq" target=
+=3D"_blank">https://calendly.com/cancellations/072be722-6015-4266-97a7-2fac=
+13b1d789</a><br>Reprogramar: <a href=3D"https://www.google.com/url?q=3Dhttp=
+s%3A%2F%2Fcalendly.com%2Freschedulings%2F072be722-6015-4266-97a7-2fac13b1d7=
+89&amp;sa=3DD&amp;source=3Dcalendar&amp;usd=3D2&amp;usg=3DAOvVaw0RP9KqER4Xy=
+kYLALFQ_kvA" target=3D"_blank">https://calendly.com/reschedulings/072be722-=
+6015-4266-97a7-2fac13b1d789</a><br></p></span><meta itemprop=3D"description=
+" content=3D"Nombre del evento: Reuni=C3=B3n Personalizada de 30 minutos
+
+Quiero saber m=C3=A1s de ti. Expl=C3=ADcame en esta llamada tu situaci=C3=
+=B3n y te aconsejar=C3=A9 si nuestra formaci=C3=B3n es adecuada 100% para t=
+i.
+
+
+Estos son los temas que trataremos en la llamada:
+
+
+1. Tus objetivos personales y como cumplirlos.
+2. Cu=C3=A1l es la mejor metodolog=C3=ADa de Marketing para tu caso.
+3. Cu=C3=A1nto podr=C3=ADas facturar al mes seg=C3=BAn las horas que le qui=
+eras dedicar.
+
+Ubicaci=C3=B3n: Esto es una conferencia web de Zoom.
+
+Puede unirse a la reuni=C3=B3n desde el ordenador, tablet o smartphone.
+https://us06web.zoom.us/j/86785294539
+
+M=C3=B3vil con un toque:
++1 312 626 6799,,86785294539#
++1 646 558 8656,,86785294539#
+
+Tambi=C3=A9n puede hacerlo usando su tel=C3=A9fono.
+US: +1 312 626 6799, +1 646 558 8656, +1 646 931 3860, +1 301 715 8592, +1 =
+305 224 1968, +1 309 205 3325, +1 346 248 7799, +1 360 209 5623, +1 386 347=
+ 5053, +1 507 473 4847, +1 564 217 2000, +1 669 444 9171, +16892781000, +1 =
+719 359 4580, +1 720 707 2699, +1 253 205 0468, +1 253 215 8782
+ID de la reuni=C3=B3n: 867-852-94539
+
+Encuentre su n=C3=BAmero local: https://us06web.zoom.us/u/kdgOgLibXk
+
+Tel=C3=A9fono* =C2=A1Atenci=C3=B3n! Escribe correctamente tu tel=C3=A9fono =
+ya que te llamaremos para confirmar la Reuni=C3=B3n Personalizada. Si no es=
+t=C3=A1 bien puesto tu tel=C3=A9fono, cancelaremos la sesi=C3=B3n. : +1 206=
+-351-1983
+
+=C2=BFNecesitas realizar alg=C3=BAn cambio a este evento?
+Cancelar: https://calendly.com/cancellations/072be722-6015-4266-97a7-2fac13=
+b1d789
+Reprogramar: https://calendly.com/reschedulings/072be722-6015-4266-97a7-2fa=
+c13b1d789
+"/></div></td></tr><tr><td style=3D"font-size: 0; padding: 0; text-align: l=
+eft; word-break: break-word;;padding-bottom:24px;"><div style=3D"font-famil=
+y: Roboto, sans-serif;font-style: normal; font-weight: 400; font-size: 14px=
+; line-height: 20px; letter-spacing: 0.2px;color: #3c4043; text-decoration:=
+ none;" class=3D"primary-text" role=3D"presentation"><span aria-hidden=3D"t=
+rue"><time itemprop=3D"startDate" datetime=3D"20240122T140000Z"></time><tim=
+e itemprop=3D"endDate" datetime=3D"20240122T143000Z"></time></span><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"padding-bottom: 4px;"><tr><td><h2 class=3D"primary-text" style=3D"font-=
+size: 14px;color: #3c4043; text-decoration: none;font-weight: 700;-webkit-f=
+ont-smoothing: antialiased;margin: 0; padding: 0;">When</h2></td></tr></tab=
+le><span>Monday Jan 22, 2024 =E2=8B=85 2pm =E2=80=93 2:30pm (Coordinated Un=
+iversal Time)</span></div></td></tr><tr><td style=3D"font-size: 0; padding:=
+ 0; text-align: left; word-break: break-word;;padding-bottom:24px;"><div st=
+yle=3D"font-family: Roboto, sans-serif;font-style: normal; font-weight: 400=
+; font-size: 14px; line-height: 20px; letter-spacing: 0.2px;color: #3c4043;=
+ text-decoration: none;" class=3D"primary-text" role=3D"presentation"><tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" st=
+yle=3D"padding-bottom: 4px;"><tr><td><h2 class=3D"primary-text" style=3D"fo=
+nt-size: 14px;color: #3c4043; text-decoration: none;font-weight: 700;-webki=
+t-font-smoothing: antialiased;margin: 0; padding: 0;">Location</h2></td></t=
+r></table><span itemprop=3D"location" itemscope itemtype=3D"http://schema.o=
+rg/Place"><span itemprop=3D"name" class=3D"primary-text notranslate" style=
+=3D"font-family: Roboto, sans-serif;font-style: normal; font-weight: 400; f=
+ont-size: 14px; line-height: 20px; letter-spacing: 0.2px;color: #3c4043; te=
+xt-decoration: none;">https://us06web.zoom.us/j/86785294539</span><br/><a h=
+ref=3D"https://www.google.com/url?q=3Dhttps%3A%2F%2Fus06web.zoom.us%2Fj%2F8=
+6785294539&amp;sa=3DD&amp;source=3Dcalendar&amp;usd=3D2&amp;usg=3DAOvVaw1Nu=
+AvA2MJr9sZBlwct9RYc" class=3D"accent-text underline-on-hover" style=3D"disp=
+lay: inline-block;;color: #1a73e8; text-decoration: none;font-weight: 700;"=
+ target=3D"_blank" itemprop=3D"map">View map</a></span></div></td></tr><tr>=
+<td style=3D"font-size: 0; padding: 0; text-align: left; word-break: break-=
+word;;padding-bottom:24px;"><div style=3D"font-family: Roboto, sans-serif;f=
+ont-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; le=
+tter-spacing: 0.2px;color: #3c4043; text-decoration: none;" class=3D"primar=
+y-text" role=3D"presentation"><table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"presentation" style=3D"padding-bottom: 4px;"><tr><td><h2=
+ class=3D"primary-text" style=3D"font-size: 14px;color: #3c4043; text-decor=
+ation: none;font-weight: 700;-webkit-font-smoothing: antialiased;margin: 0;=
+ padding: 0;">Guests</h2></td></tr></table><div style=3D"padding-bottom: 4p=
+x; text-align: left;;color: #3c4042;"><div><span itemprop=3D"attendee" item=
+scope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=
+=3D"notranslate"><a class=3D"primary-text underline-on-hover" style=3D"disp=
+lay: inline-block;;color: #3c4043; text-decoration: none;" href=3D"mailto:i=
+kanagency@gmail.com">Iker Mengibar Fern=C3=A1ndez</a></span><meta itemprop=
+=3D"email" content=3D"ikanagency@gmail.com"/></span><span itemprop=3D"organ=
+izer" itemscope itemtype=3D"http://schema.org/Person"><meta itemprop=3D"nam=
+e" content=3D"Iker Mengibar Fern=C3=A1ndez"/><meta itemprop=3D"email" conte=
+nt=3D"ikanagency@gmail.com"/></span><span class=3D"secondary-text" style=3D=
+"color: #70757a; text-decoration: none;"> - organizer</span></div><div><spa=
+n itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><sp=
+an itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text underli=
+ne-on-hover" style=3D"display: inline-block;;color: #3c4043; text-decoratio=
+n: none;" href=3D"mailto:mailmanthingwhatever@gmail.com">mailmanthingwhatev=
+er@gmail.com</a></span><meta itemprop=3D"email" content=3D"mailmanthingwhat=
+ever@gmail.com"/></span><span class=3D"secondary-text" style=3D"color: #707=
+57a; text-decoration: none;"></span></div></div><a href=3D"https://calendar=
+.google.com/calendar/event?action=3DVIEW&amp;eid=3DNGFtY3A2cm50ZmNpYmtzNjUx=
+Y2lqMTloM2sgbWFpbG1hbnRoaW5nd2hhdGV2ZXJAbQ&amp;tok=3DMjAjaWthbmFnZW5jeUBnbW=
+FpbC5jb21hMWIwNDYzNWUwMDgwMDMyYzY0OTEyOWJmMDNkMWY2ZDkyNjFkY2Jl&amp;ctz=3DUT=
+C&amp;hl=3Den&amp;es=3D1" style=3D"display: inline-block;;color: #1a73e8; t=
+ext-decoration: none;font-weight: 700;" target=3D"_blank" class=3D"accent-t=
+ext underline-on-hover">View all guest info</a></div></td></tr><tr><td styl=
+e=3D"font-size: 0; padding: 0; text-align: left; word-break: break-word;;pa=
+dding-bottom:0px;"><div style=3D"color: #3c4043; text-decoration: none;;fon=
+t-family: Roboto, sans-serif;font-size: 14px; line-height: 20px; mso-line-h=
+eight-rule: exactly; text-align: left;" class=3D"primary-text"><div><span s=
+tyle=3D"font-weight: 700;-webkit-font-smoothing: antialiased;">Reply</span>=
+<span class=3D"secondary-text" style=3D"color: #70757a; text-decoration: no=
+ne;"> for <a class=3D"secondary-text underline-on-hover" style=3D"display: =
+inline-block;;color: #70757a; text-decoration: none;" href=3D"mailto:mailma=
+nthingwhatever@gmail.com">mailmanthingwhatever@gmail.com</a></span></div></=
+div></td></tr><tr><td style=3D"font-size: 0; padding: 0; text-align: left; =
+word-break: break-word;;padding-bottom:16px;"><div style=3D"font-family: Ro=
+boto, sans-serif;font-size: 14px; line-height: 20px; mso-line-height-rule: =
+exactly; text-align: left;"><table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"border-collapse: separate;"><tr><td=
+ style=3D"padding-top: 8px; padding-left: 0; padding-right: 12px;"><!-- RSV=
+P buttons --><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"border: solid 1px #dadce0; border-radius: 16px; =
+border-collapse: separate;font-family: &#39;Google Sans&#39;, Roboto, sans-=
+serif;;display: inline-block;;margin-right: 12px; margin-left: 0;"><tr><td =
+align=3D"center" vertical-align=3D"middle" role=3D"presentation"><span item=
+prop=3D"potentialaction" itemscope itemtype=3D"http://schema.org/RsvpAction=
+"><meta itemprop=3D"attendance" content=3D"http://schema.org/RsvpAttendance=
+/Yes"/><span itemprop=3D"handler" itemscope itemtype=3D"http://schema.org/H=
+ttpActionHandler"><link itemprop=3D"method" href=3D"http://schema.org/HttpR=
+equestMethod/GET"/><span style=3D"color: #5f6367;"><a href=3D"https://calen=
+dar.google.com/calendar/event?action=3DRESPOND&amp;eid=3DNGFtY3A2cm50ZmNpYm=
+tzNjUxY2lqMTloM2sgbWFpbG1hbnRoaW5nd2hhdGV2ZXJAbQ&amp;rst=3D1&amp;tok=3DMjAj=
+aWthbmFnZW5jeUBnbWFpbC5jb21hMWIwNDYzNWUwMDgwMDMyYzY0OTEyOWJmMDNkMWY2ZDkyNjF=
+kY2Jl&amp;ctz=3DUTC&amp;hl=3Den&amp;es=3D1" style=3D"font-weight: 400;font-=
+family: &#39;Google Sans&#39;, Roboto, sans-serif;color: #5f6368; font-size=
+: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-d=
+ecoration: none; text-transform: none;" class=3D"grey-button-text" itemprop=
+=3D"url" target=3D"_blank"><table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation"><tr><td align=3D"center" role=3D"presentation=
+" valign=3D"middle" style=3D"padding: 6px 0; padding-left: 16px; padding-ri=
+ght: 12px; white-space: nowrap;"><!--[if mso]><a href=3D"https://calendar.g=
+oogle.com/calendar/event?action=3DRESPOND&amp;eid=3DNGFtY3A2cm50ZmNpYmtzNjU=
+xY2lqMTloM2sgbWFpbG1hbnRoaW5nd2hhdGV2ZXJAbQ&amp;rst=3D1&amp;tok=3DMjAjaWthb=
+mFnZW5jeUBnbWFpbC5jb21hMWIwNDYzNWUwMDgwMDMyYzY0OTEyOWJmMDNkMWY2ZDkyNjFkY2Jl=
+&amp;ctz=3DUTC&amp;hl=3Den&amp;es=3D1" class=3D"grey-button-text" itemprop=
+=3D"url" target=3D"_blank"><![endif]--><span class=3D"grey-button-text" sty=
+le=3D"font-weight: 400;font-family: &#39;Google Sans&#39;, Roboto, sans-ser=
+if;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule=
+: exactly; margin: 0; text-decoration: none; text-transform: none;">Yes</sp=
+an><!--[if mso]></a><![endif]--></td></tr></table></a></span></span></span>=
+</td><td align=3D"center" vertical-align=3D"middle" role=3D"presentation" s=
+tyle=3D"border-left: solid 1px #dadce0; border-right: solid 1px #dadce0;"><=
+span itemprop=3D"potentialaction" itemscope itemtype=3D"http://schema.org/R=
+svpAction"><meta itemprop=3D"attendance" content=3D"http://schema.org/RsvpA=
+ttendance/No"/><span itemprop=3D"handler" itemscope itemtype=3D"http://sche=
+ma.org/HttpActionHandler"><link itemprop=3D"method" href=3D"http://schema.o=
+rg/HttpRequestMethod/GET"/><span style=3D"color: #5f6367;"><a href=3D"https=
+://calendar.google.com/calendar/event?action=3DRESPOND&amp;eid=3DNGFtY3A2cm=
+50ZmNpYmtzNjUxY2lqMTloM2sgbWFpbG1hbnRoaW5nd2hhdGV2ZXJAbQ&amp;rst=3D2&amp;to=
+k=3DMjAjaWthbmFnZW5jeUBnbWFpbC5jb21hMWIwNDYzNWUwMDgwMDMyYzY0OTEyOWJmMDNkMWY=
+2ZDkyNjFkY2Jl&amp;ctz=3DUTC&amp;hl=3Den&amp;es=3D1" style=3D"font-weight: 4=
+00;font-family: &#39;Google Sans&#39;, Roboto, sans-serif;color: #5f6368; f=
+ont-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0=
+; text-decoration: none; text-transform: none;" class=3D"grey-button-text" =
+itemprop=3D"url" target=3D"_blank"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation"><tr><td align=3D"center" role=3D"pres=
+entation" valign=3D"middle" style=3D"padding: 6px 12px; white-space: nowrap=
+;"><!--[if mso]><a href=3D"https://calendar.google.com/calendar/event?actio=
+n=3DRESPOND&amp;eid=3DNGFtY3A2cm50ZmNpYmtzNjUxY2lqMTloM2sgbWFpbG1hbnRoaW5nd=
+2hhdGV2ZXJAbQ&amp;rst=3D2&amp;tok=3DMjAjaWthbmFnZW5jeUBnbWFpbC5jb21hMWIwNDY=
+zNWUwMDgwMDMyYzY0OTEyOWJmMDNkMWY2ZDkyNjFkY2Jl&amp;ctz=3DUTC&amp;hl=3Den&amp=
+;es=3D1" class=3D"grey-button-text" itemprop=3D"url" target=3D"_blank"><![e=
+ndif]--><span class=3D"grey-button-text" style=3D"font-weight: 400;font-fam=
+ily: &#39;Google Sans&#39;, Roboto, sans-serif;color: #5f6368; font-size: 1=
+4px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-deco=
+ration: none; text-transform: none;">No</span><!--[if mso]></a><![endif]-->=
+</td></tr></table></a></span></span></span></td><td align=3D"center" vertic=
+al-align=3D"middle" role=3D"presentation"><span itemprop=3D"potentialaction=
+" itemscope itemtype=3D"http://schema.org/RsvpAction"><meta itemprop=3D"att=
+endance" content=3D"http://schema.org/RsvpAttendance/Maybe"/><span itemprop=
+=3D"handler" itemscope itemtype=3D"http://schema.org/HttpActionHandler"><li=
+nk itemprop=3D"method" href=3D"http://schema.org/HttpRequestMethod/GET"/><s=
+pan style=3D"color: #5f6367;"><a href=3D"https://calendar.google.com/calend=
+ar/event?action=3DRESPOND&amp;eid=3DNGFtY3A2cm50ZmNpYmtzNjUxY2lqMTloM2sgbWF=
+pbG1hbnRoaW5nd2hhdGV2ZXJAbQ&amp;rst=3D3&amp;tok=3DMjAjaWthbmFnZW5jeUBnbWFpb=
+C5jb21hMWIwNDYzNWUwMDgwMDMyYzY0OTEyOWJmMDNkMWY2ZDkyNjFkY2Jl&amp;ctz=3DUTC&a=
+mp;hl=3Den&amp;es=3D1" style=3D"font-weight: 400;font-family: &#39;Google S=
+ans&#39;, Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: =
+120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text=
+-transform: none;" class=3D"grey-button-text" itemprop=3D"url" target=3D"_b=
+lank"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation"><tr><td align=3D"center" role=3D"presentation" valign=3D"middle" s=
+tyle=3D"padding: 6px 0; padding-left: 12px; padding-right: 16px; white-spac=
+e: nowrap;"><!--[if mso]><a href=3D"https://calendar.google.com/calendar/ev=
+ent?action=3DRESPOND&amp;eid=3DNGFtY3A2cm50ZmNpYmtzNjUxY2lqMTloM2sgbWFpbG1h=
+bnRoaW5nd2hhdGV2ZXJAbQ&amp;rst=3D3&amp;tok=3DMjAjaWthbmFnZW5jeUBnbWFpbC5jb2=
+1hMWIwNDYzNWUwMDgwMDMyYzY0OTEyOWJmMDNkMWY2ZDkyNjFkY2Jl&amp;ctz=3DUTC&amp;hl=
+=3Den&amp;es=3D1" class=3D"grey-button-text" itemprop=3D"url" target=3D"_bl=
+ank"><![endif]--><span class=3D"grey-button-text" style=3D"font-weight: 400=
+;font-family: &#39;Google Sans&#39;, Roboto, sans-serif;color: #5f6368; fon=
+t-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; =
+text-decoration: none; text-transform: none;">Maybe</span><!--[if mso]></a>=
+<![endif]--></td></tr></table></a></span></span></span></td></tr></table><!=
+-- More options --><a href=3D"https://calendar.google.com/calendar/event?ac=
+tion=3DVIEW&amp;eid=3DNGFtY3A2cm50ZmNpYmtzNjUxY2lqMTloM2sgbWFpbG1hbnRoaW5nd=
+2hhdGV2ZXJAbQ&amp;tok=3DMjAjaWthbmFnZW5jeUBnbWFpbC5jb21hMWIwNDYzNWUwMDgwMDM=
+yYzY0OTEyOWJmMDNkMWY2ZDkyNjFkY2Jl&amp;ctz=3DUTC&amp;hl=3Den&amp;es=3D1" sty=
+le=3D"display: inline-block;;font-weight: 400;font-family: &#39;Google Sans=
+&#39;, Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120=
+%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-tr=
+ansform: none;" class=3D"grey-button-text" target=3D"_blank"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+order: solid 1px #dadce0; border-radius: 16px; border-collapse: separate;fo=
+nt-family: &#39;Google Sans&#39;, Roboto, sans-serif;"><tr><td align=3D"cen=
+ter" vertical-align=3D"middle" role=3D"presentation" style=3D"padding: 6px =
+0; padding-left: 16px; padding-right: 12px; white-space: nowrap;;color: #5f=
+6367;"><!--[if mso]><a href=3D"https://calendar.google.com/calendar/event?a=
+ction=3DVIEW&amp;eid=3DNGFtY3A2cm50ZmNpYmtzNjUxY2lqMTloM2sgbWFpbG1hbnRoaW5n=
+d2hhdGV2ZXJAbQ&amp;tok=3DMjAjaWthbmFnZW5jeUBnbWFpbC5jb21hMWIwNDYzNWUwMDgwMD=
+MyYzY0OTEyOWJmMDNkMWY2ZDkyNjFkY2Jl&amp;ctz=3DUTC&amp;hl=3Den&amp;es=3D1" cl=
+ass=3D"grey-button-text" target=3D"_blank"><![endif]--><span class=3D"grey-=
+button-text" style=3D"font-weight: 400;font-family: &#39;Google Sans&#39;, =
+Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-=
+line-height-rule: exactly; margin: 0; text-decoration: none; text-transform=
+: none;">More options</span><!--[if mso]></a><![endif]--></td></tr></table>=
+</a></td></tr></table></div></td></tr></table></td></tr></tbody></table></d=
+iv><!--[if mso | IE]></tr></table><![endif]--></td></tr></tbody></table><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+align=3D"center" style=3D"width:100%;" class=3D""><tbody><tr><td style=3D"f=
+ont-size: 0; padding: 0; text-align: left; word-break: break-word;;padding:=
+4px 12px;" class=3D"" align=3D"left"><div class=3D"secondary-text" style=3D=
+"color: #70757a; text-decoration: none;font-family: Roboto, sans-serif;font=
+-size: 12px; line-height: 16px; mso-line-height-rule: exactly; text-align: =
+left;"><p>Invitation from <a href=3D"https://calendar.google.com/calendar/"=
+ class=3D"accent-text underline-on-hover" style=3D"font-family: Roboto, san=
+s-serif;font-size: 12px; line-height: 16px; mso-line-height-rule: exactly;;=
+color: #1a73e8; text-decoration: none;" target=3D"_blank">Google Calendar</=
+a></p><p>You are receiving this email because you are subscribed to calenda=
+r notifications. To stop receiving these emails, go to <a href=3D"https://c=
+alendar.google.com/calendar/r/settings" class=3D"accent-text underline-on-h=
+over" style=3D"font-family: Roboto, sans-serif;font-size: 12px; line-height=
+: 16px; mso-line-height-rule: exactly;;color: #1a73e8; text-decoration: non=
+e;" target=3D"_blank">Calendar settings</a>, select this calendar, and chan=
+ge "Other notifications".</p><p>Forwarding this invitation could allow any =
+recipient to send a response to the organizer, be added to the guest list, =
+invite others regardless of their own invitation status, or modify your RSV=
+P. <a class=3D"accent-text underline-on-hover" style=3D"font-family: Roboto=
+, sans-serif;font-size: 12px; line-height: 16px; mso-line-height-rule: exac=
+tly;;color: #1a73e8; text-decoration: none;" href=3D"https://support.google=
+.com/calendar/answer/37135#forwarding">Learn more</a></p></div></td></tr></=
+tbody></table></td></tr></tbody></table></span></span></body></html>
+--000000000000e50356060f46d56c
+Content-Type: text/calendar; charset="UTF-8"; method=REQUEST
+Content-Transfer-Encoding: quoted-printable
+
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20240122T140000Z
+DTEND:20240122T143000Z
+DTSTAMP:20240119T064610Z
+ORGANIZER:mailto:ikanagency@gmail.com
+UID:4amcp6rntfcibks651cij19h3k@google.com
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3Dmailmanthingwhatever@gmail.com;X-NUM-GUESTS=3D0:mailto:mailmanth=
+ingwh
+ atever@gmail.com
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DACCEPTED;RSV=
+P=3DTRUE
+ ;X-NUM-GUESTS=3D0:mailto:ikanagency@gmail.com
+X-MICROSOFT-CDO-OWNERAPPTID:-2011998019
+CREATED:20240119T064609Z
+DESCRIPTION:Nombre del evento: Reuni=C3=B3n Personalizada de 30 minutos\n\n=
+Quier
+ o saber m=C3=A1s de ti. Expl=C3=ADcame en esta llamada tu situaci=C3=B3n y=
+ te aconsejar=C3=A9 s
+ i nuestra formaci=C3=B3n es adecuada 100% para ti.\n\n\nEstos son los tema=
+s que=20
+ trataremos en la llamada:\n\n\n1. Tus objetivos personales y como cumplirl=
+o
+ s.\n2. Cu=C3=A1l es la mejor metodolog=C3=ADa de Marketing para tu caso.\n=
+3. Cu=C3=A1nto p
+ odr=C3=ADas facturar al mes seg=C3=BAn las horas que le quieras dedicar.\n=
+\nUbicaci=C3=B3n
+ : Esto es una conferencia web de Zoom.\n\nPuede unirse a la reuni=C3=B3n d=
+esde e
+ l ordenador\, tablet o smartphone.\nhttps://us06web.zoom.us/j/86785294539\=
+n
+ \nM=C3=B3vil con un toque:\n+1 312 626 6799\,\,86785294539#\n+1 646 558 86=
+56\,\,
+ 86785294539#\n\nTambi=C3=A9n puede hacerlo usando su tel=C3=A9fono.\nUS: +=
+1 312 626 6
+ 799\, +1 646 558 8656\, +1 646 931 3860\, +1 301 715 8592\, +1 305 224 196=
+8
+ \, +1 309 205 3325\, +1 346 248 7799\, +1 360 209 5623\, +1 386 347 5053\,=
+=20
+ +1 507 473 4847\, +1 564 217 2000\, +1 669 444 9171\, +16892781000\, +1 71=
+9
+  359 4580\, +1 720 707 2699\, +1 253 205 0468\, +1 253 215 8782\nID de la =
+r
+ euni=C3=B3n: 867-852-94539\n\nEncuentre su n=C3=BAmero local: https://us06=
+web.zoom.us
+ /u/kdgOgLibXk\n\nTel=C3=A9fono* =C2=A1Atenci=C3=B3n! Escribe correctamente=
+ tu tel=C3=A9fono ya=20
+ que te llamaremos para confirmar la Reuni=C3=B3n Personalizada. Si no est=
+=C3=A1 bien=20
+ puesto tu tel=C3=A9fono\, cancelaremos la sesi=C3=B3n. : +1 206-351-1983\n=
+\n=C2=BFNecesita
+ s realizar alg=C3=BAn cambio a este evento?\nCancelar: https://calendly.co=
+m/canc
+ ellations/072be722-6015-4266-97a7-2fac13b1d789\nReprogramar: https://calen=
+d
+ ly.com/reschedulings/072be722-6015-4266-97a7-2fac13b1d789\n
+LAST-MODIFIED:20240119T064609Z
+LOCATION:https://us06web.zoom.us/j/86785294539
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lenn Wood  y Iker Mengibar Fern=C3=A1ndez
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+--000000000000e50356060f46d56c--
+--000000000000e50359060f46d56e
+Content-Type: application/ics; name="invite.ics"
+Content-Disposition: attachment; filename="invite.ics"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UkVRVUVT
+VA0KQkVHSU46VkVWRU5UDQpEVFNUQVJUOjIwMjQwMTIyVDE0MDAwMFoNCkRURU5EOjIwMjQwMTIy
+VDE0MzAwMFoNCkRUU1RBTVA6MjAyNDAxMTlUMDY0NjEwWg0KT1JHQU5JWkVSOm1haWx0bzppa2Fu
+YWdlbmN5QGdtYWlsLmNvbQ0KVUlEOjRhbWNwNnJudGZjaWJrczY1MWNpajE5aDNrQGdvb2dsZS5j
+b20NCkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRT
+VEFUPU5FRURTLUFDVElPTjtSU1ZQPQ0KIFRSVUU7Q049bWFpbG1hbnRoaW5nd2hhdGV2ZXJAZ21h
+aWwuY29tO1gtTlVNLUdVRVNUUz0wOm1haWx0bzptYWlsbWFudGhpbmd3aA0KIGF0ZXZlckBnbWFp
+bC5jb20NCkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BB
+UlRTVEFUPUFDQ0VQVEVEO1JTVlA9VFJVRQ0KIDtYLU5VTS1HVUVTVFM9MDptYWlsdG86aWthbmFn
+ZW5jeUBnbWFpbC5jb20NClgtTUlDUk9TT0ZULUNETy1PV05FUkFQUFRJRDotMjAxMTk5ODAxOQ0K
+Q1JFQVRFRDoyMDI0MDExOVQwNjQ2MDlaDQpERVNDUklQVElPTjpOb21icmUgZGVsIGV2ZW50bzog
+UmV1bmnDs24gUGVyc29uYWxpemFkYSBkZSAzMCBtaW51dG9zXG5cblF1aWVyDQogbyBzYWJlciBt
+w6FzIGRlIHRpLiBFeHBsw61jYW1lIGVuIGVzdGEgbGxhbWFkYSB0dSBzaXR1YWNpw7NuIHkgdGUg
+YWNvbnNlamFyw6kgcw0KIGkgbnVlc3RyYSBmb3JtYWNpw7NuIGVzIGFkZWN1YWRhIDEwMCUgcGFy
+YSB0aS5cblxuXG5Fc3RvcyBzb24gbG9zIHRlbWFzIHF1ZSANCiB0cmF0YXJlbW9zIGVuIGxhIGxs
+YW1hZGE6XG5cblxuMS4gVHVzIG9iamV0aXZvcyBwZXJzb25hbGVzIHkgY29tbyBjdW1wbGlybG8N
+CiBzLlxuMi4gQ3XDoWwgZXMgbGEgbWVqb3IgbWV0b2RvbG9nw61hIGRlIE1hcmtldGluZyBwYXJh
+IHR1IGNhc28uXG4zLiBDdcOhbnRvIHANCiBvZHLDrWFzIGZhY3R1cmFyIGFsIG1lcyBzZWfDum4g
+bGFzIGhvcmFzIHF1ZSBsZSBxdWllcmFzIGRlZGljYXIuXG5cblViaWNhY2nDs24NCiA6IEVzdG8g
+ZXMgdW5hIGNvbmZlcmVuY2lhIHdlYiBkZSBab29tLlxuXG5QdWVkZSB1bmlyc2UgYSBsYSByZXVu
+acOzbiBkZXNkZSBlDQogbCBvcmRlbmFkb3JcLCB0YWJsZXQgbyBzbWFydHBob25lLlxuaHR0cHM6
+Ly91czA2d2ViLnpvb20udXMvai84Njc4NTI5NDUzOVxuDQogXG5Nw7N2aWwgY29uIHVuIHRvcXVl
+OlxuKzEgMzEyIDYyNiA2Nzk5XCxcLDg2Nzg1Mjk0NTM5I1xuKzEgNjQ2IDU1OCA4NjU2XCxcLA0K
+IDg2Nzg1Mjk0NTM5I1xuXG5UYW1iacOpbiBwdWVkZSBoYWNlcmxvIHVzYW5kbyBzdSB0ZWzDqWZv
+bm8uXG5VUzogKzEgMzEyIDYyNiA2DQogNzk5XCwgKzEgNjQ2IDU1OCA4NjU2XCwgKzEgNjQ2IDkz
+MSAzODYwXCwgKzEgMzAxIDcxNSA4NTkyXCwgKzEgMzA1IDIyNCAxOTY4DQogXCwgKzEgMzA5IDIw
+NSAzMzI1XCwgKzEgMzQ2IDI0OCA3Nzk5XCwgKzEgMzYwIDIwOSA1NjIzXCwgKzEgMzg2IDM0NyA1
+MDUzXCwgDQogKzEgNTA3IDQ3MyA0ODQ3XCwgKzEgNTY0IDIxNyAyMDAwXCwgKzEgNjY5IDQ0NCA5
+MTcxXCwgKzE2ODkyNzgxMDAwXCwgKzEgNzE5DQogIDM1OSA0NTgwXCwgKzEgNzIwIDcwNyAyNjk5
+XCwgKzEgMjUzIDIwNSAwNDY4XCwgKzEgMjUzIDIxNSA4NzgyXG5JRCBkZSBsYSByDQogZXVuacOz
+bjogODY3LTg1Mi05NDUzOVxuXG5FbmN1ZW50cmUgc3UgbsO6bWVybyBsb2NhbDogaHR0cHM6Ly91
+czA2d2ViLnpvb20udXMNCiAvdS9rZGdPZ0xpYlhrXG5cblRlbMOpZm9ubyogwqFBdGVuY2nDs24h
+IEVzY3JpYmUgY29ycmVjdGFtZW50ZSB0dSB0ZWzDqWZvbm8geWEgDQogcXVlIHRlIGxsYW1hcmVt
+b3MgcGFyYSBjb25maXJtYXIgbGEgUmV1bmnDs24gUGVyc29uYWxpemFkYS4gU2kgbm8gZXN0w6Eg
+YmllbiANCiBwdWVzdG8gdHUgdGVsw6lmb25vXCwgY2FuY2VsYXJlbW9zIGxhIHNlc2nDs24uIDog
+KzEgMjA2LTM1MS0xOTgzXG5cbsK/TmVjZXNpdGENCiBzIHJlYWxpemFyIGFsZ8O6biBjYW1iaW8g
+YSBlc3RlIGV2ZW50bz9cbkNhbmNlbGFyOiBodHRwczovL2NhbGVuZGx5LmNvbS9jYW5jDQogZWxs
+YXRpb25zLzA3MmJlNzIyLTYwMTUtNDI2Ni05N2E3LTJmYWMxM2IxZDc4OVxuUmVwcm9ncmFtYXI6
+IGh0dHBzOi8vY2FsZW5kDQogbHkuY29tL3Jlc2NoZWR1bGluZ3MvMDcyYmU3MjItNjAxNS00MjY2
+LTk3YTctMmZhYzEzYjFkNzg5XG4NCkxBU1QtTU9ESUZJRUQ6MjAyNDAxMTlUMDY0NjA5Wg0KTE9D
+QVRJT046aHR0cHM6Ly91czA2d2ViLnpvb20udXMvai84Njc4NTI5NDUzOQ0KU0VRVUVOQ0U6MA0K
+U1RBVFVTOkNPTkZJUk1FRA0KU1VNTUFSWTpMZW5uIFdvb2QgIHkgSWtlciBNZW5naWJhciBGZXJu
+w6FuZGV6DQpUUkFOU1A6T1BBUVVFDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVOREFSDQo=
+--000000000000e50359060f46d56e--

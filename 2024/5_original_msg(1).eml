@@ -1,0 +1,115 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:2319:b0:44c:c215:8d87 with SMTP id fr25csp521147vqb;
+        Thu, 1 Feb 2024 12:59:15 -0800 (PST)
+X-Received: by 2002:a05:6512:3742:b0:510:128b:4d8e with SMTP id a2-20020a056512374200b00510128b4d8emr2482923lfs.7.1706821155216;
+        Thu, 01 Feb 2024 12:59:15 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706821155; cv=none;
+        d=google.com; s=arc-20160816;
+        b=E6hVjIpOkDGe4NXHUloeJJAXZ4J2ZLyG39aiRKAj/lK8W4czXr83G/UXwFNYSSp1KR
+         C0ZRJQVT0WIaaF6RBzP5szV1P2r3Njd779MReFxwsJxlI0v1++CJB0z5nTT20gef5hkT
+         7yjRI2XmNN/Q/+OgNCryG3wRSx2xD8R6Y7fxIMHoE3a4Jrq1aUYr8WszmQFK8OQWCBoi
+         WS3Xa2f8Tn4kVXfNB4OOU9D+wbVI/eqQQNWl/nvdzluut/jCrZHGsfRuI46XkTpMVolC
+         MvdJb6Lb4W+ptkgFPTppSKZNR0Aa93OPfztlz+zx48BhdU3G1vuMHbB8lUnrdcd3dP5z
+         QvLQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=FBXCIoI44d4G+z6Qwdn0b1mHAELP0kIK6/qyLIJx5d4=;
+        fh=Z+u42BSsvtJwnmL36nNw9yE+wjkFm6zGMp7qGfHtQf0=;
+        b=dDcbLBL22+bCGMPN+24fYVzdeBE4UCyoHkO9XhxqkR4wJ7hBVa7V8CFfQxGaPv/oxK
+         Hhkm7V/+8+ZfBdnIDQuW+0KlJNmF+zPUX1s6m6EolmUIa3V9yPim4Uxm90GtoCBJbzmD
+         qZ7MTtRYexiEI0BLdNecoPtbOh6o3S/VtVQOvmzI4/ONvPpV7oOtL0YmnVGkcmIbX6vA
+         BD7YsPxAHIQOauWoQKv1V9c2OZ3JPVgkgZATvxaCod3d0PTyw3zhYsEl6o1hHGtwjKAn
+         EHLCPv9hdRAl7VwHVKELF9rccB2XHH+UH/JE+L3vM+5nY/0MZ82kcDmRGXvDiAgLDb2b
+         Y8lQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=JDYnjyTz;
+       spf=pass (google.com: domain of pmail2019pmail2019@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pmail2019pmail2019@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+X-Forwarded-Encrypted: i=0; AJvYcCU8a0FQXcdor1yEkTsFqGZmUY6QzpUdMD8701YRV1aNx9WPRBTLzH3EHJCQ/lgdIk+s+9dzr3lGRZVHuVtoGAdFsszWi1DjhASF8r50gdg=
+Return-Path: <pmail2019pmail2019@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id r16-20020a50aad0000000b0055d095d606asor149249edc.7.2024.02.01.12.59.15
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Thu, 01 Feb 2024 12:59:15 -0800 (PST)
+Received-SPF: pass (google.com: domain of pmail2019pmail2019@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=JDYnjyTz;
+       spf=pass (google.com: domain of pmail2019pmail2019@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pmail2019pmail2019@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706821155; x=1707425955; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=FBXCIoI44d4G+z6Qwdn0b1mHAELP0kIK6/qyLIJx5d4=;
+        b=JDYnjyTznmrej5WjWGm0+ME7dG4+2s3ABoTQtznqr/M3ASps+7kURIQCcgFPnndO+J
+         OhTdJwGsZgqPAwf/lTaQD3NPXwGHIVh7vkYpOrXr4wUjdeWNS48gD1QvVqlWkBG32L5Y
+         ZAH5BD2diqmGd2Cv7owiigHFvv/jxhqMIGiLMNX78Acv7H4gWZuELhhO72i1rNiMam67
+         RATVFXaEn0S1hmFRnO4fnUH+PEytc5Ig90kwoSlCiNZFSIhEpzAUPu1A4G5w72c2rg5L
+         tk8vLFwEoH9WuujzkkaZ1kRc0Xr8Dokg5Nz4PWSpJIKCLHB+a6+i0Xkx3CtRjrLTmne8
+         tufQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706821155; x=1707425955;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=FBXCIoI44d4G+z6Qwdn0b1mHAELP0kIK6/qyLIJx5d4=;
+        b=dVyObB6DDB8cmPxysvVsMAvq4y1jOKbl3+HIUYx09Zo0wwkrr17Bv80h/4Mgtn4xDs
+         K5tijLGfB8B6ZI+j6FajXj0+qQsSOB5KQp++ZDuDEKq2KXF6faGjftes3CtBeNJNM8N/
+         10MoLVKMgWCG6mPObf8sFGHgGfGD/hRgAnIAnn7Kds23C0cunpGui2MUY541nTRD3wSX
+         frtVW/CU5AFJhljdxJ+jr6O1vcHTrThrw1Vlq7RsEeBpGxZ7UPIa67+C2Tpl73SVr1Et
+         UwAf0ipDghriFQRJfDxiYSW6O7p9zI6K1qVmQlc59OuEp5G374INsy3YmGZCjI/n4c7O
+         pwlw==
+X-Gm-Message-State: AOJu0YxCQyx/0BBcnmp8i8j5Sz3JtDHSdFv/KNmblk8wpvHoFi4eicLR
+	fzUDEwCEOK3owPARl7BswNXHaVNI85iyJrhz+XS0gmhSsw6AyWZYd70mYEUEgsvp0qDHRegqLL4
+	87c7OyHHFNUVMCfomKDoufk1TnZU=
+X-Google-Smtp-Source: AGHT+IGdNbD2Q/J9X7PwuQ37yF9SMBRGxiPMTc0OX2Km0dV1A6t2JfiySsaiKrl7yv75sdBV11OHWvq2gYMfmmhoNPc=
+X-Received: by 2002:aa7:d410:0:b0:55f:e653:9b8c with SMTP id
+ z16-20020aa7d410000000b0055fe6539b8cmr294812edq.19.1706821154351; Thu, 01 Feb
+ 2024 12:59:14 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: removedfor@privacy.reasons
+From: From Vaillancourt <pmail2019pmail2019@gmail.com>
+Date: Thu, 1 Feb 2024 21:59:00 +0100
+Message-ID: <CAFJwZZZKL=BP8qSDc9N90nvsTHdiSy92vUGxKKxSsYyjd1h9qQ@mail.gmail.com>
+Subject: 
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="00000000000099b0b20610584404"
+Bcc: mailmanthingwhatever@gmail.com
+
+--00000000000099b0b20610584404
+Content-Type: text/plain; charset="UTF-8"
+
+Hello,
+
+I contacted you today on a very urgent and important matter. I'm Moritz
+Vaillancourt, Managing Partner/Senior Associate at Moritz Vaillancourt
+Solicitors. I got your information from a Business Directory and after
+extensive research I found that you have a clean record and no criminal
+record so I decided to contact you. I have already written a detailed
+letter, but out of discretion I have yet to confirm whether I can send you
+a confidential letter via this email.Please get back to me immediately. It
+is very important
+
+
+Kind regards,
+
+
+Moritz Vaillancourt
+
+--00000000000099b0b20610584404
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div>Hello,<br><br>I contacted you today=
+ on a very urgent and important matter. I&#39;m Moritz Vaillancourt, Managi=
+ng Partner/Senior Associate at Moritz Vaillancourt Solicitors. I got your i=
+nformation from a Business Directory and after extensive research I found t=
+hat you have a clean record and no criminal record so I decided to contact =
+you. I have already written a detailed letter, but out of discretion I have=
+ yet to confirm whether I can send you a confidential letter via this email=
+.Please get back to me immediately. It is very important<br><br><br>Kind re=
+gards,<br><br><br>Moritz Vaillancourt<br></div></div>
+
+--00000000000099b0b20610584404--

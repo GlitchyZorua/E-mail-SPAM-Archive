@@ -1,0 +1,112 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:cde2:0:b0:42b:92a8:c8f7 with SMTP id b2csp4403344vqx;
+        Sat, 9 Dec 2023 11:18:46 -0800 (PST)
+X-Received: by 2002:a0d:ca4e:0:b0:5d2:9344:e623 with SMTP id m75-20020a0dca4e000000b005d29344e623mr1572719ywd.40.1702149525845;
+        Sat, 09 Dec 2023 11:18:45 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1702149525; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fPGWzFOTKXN04czcWUV4cIJ06NrWXR4h0L9HadmuXY1lzDAQDqQ5gaKXdk905/xtuR
+         nFO+Y2FKHC08rJ9jzhdvT4ixefDZ4B8s5te8X1eAKUQ0Y4kZ9FTPXleRaDzD/6sQ4UUH
+         BYp3JoX0ZUPNlREXg1Hr7uwYFDdVHKaahT3UBe96lnl1WXcCXqmuOZDrbgv4DQ5xqC18
+         U4wM+0B4WuSQ3vet5hrup90ePxeddpwzApLYX9FeOOxKHar/TbIzIzmpO2/5bzEnZ6p3
+         rOVBqO8y7cctaB1ZEd0ya0VVNg7sQ/97RgsndUM0ArUxj+KElfQ4x2TwnUsJeMHyD+0C
+         R3oA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=JO0vFAPqS/zEY4VHoo6nosFEWRNoyoPUPaqV2JZXG4k=;
+        fh=Pr2plYkJn0ovdHybgHvE53243CPsqSX0NRPDPDnAMwQ=;
+        b=I8VmObKY9s5eNrju8mL25ffja5lGF5BqrnwuOPTVD+3ZFb1AGaKpa2ONarTyw4Jj04
+         +/G5vj0HvWKkuVb70C4E2EyWWjzFdJldNeSxPD+3mJD89P2bwNCGAf7sUSSg6860UG8x
+         ZaeNhfbfEBjcMuPPhHDfLFWexEsGVcTt6ORAW7m95uRWMbE5K8rdT0GHhJoZTV8JFXzV
+         tqZnd5/lnWtdTZmDWQ4kCVc1HlBqEwVaEfujEYSP45uqHPcvk+nHje2VTLOA7yX9BYYT
+         GLUzStnt4Rtlm4sJPlZYUMJcDL3m6GYfybHDZT1fj2C3WSp18zj8JVy7GbMUPi4l/UB0
+         30KQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Q1oQfULQ;
+       spf=pass (google.com: domain of 2022andphilip@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=2022andphilip@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <2022andphilip@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d65-20020a0ddb44000000b005d37dc3c80esor1717457ywe.17.2023.12.09.11.18.45
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Sat, 09 Dec 2023 11:18:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of 2022andphilip@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Q1oQfULQ;
+       spf=pass (google.com: domain of 2022andphilip@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=2022andphilip@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1702149525; x=1702754325; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=JO0vFAPqS/zEY4VHoo6nosFEWRNoyoPUPaqV2JZXG4k=;
+        b=Q1oQfULQYfWPxwY48VAwn2mFjj9nTyZ1DDAopmww9vv6P3hTTzb/7AvrSODbrY3gjg
+         MmfF+3o+DTkURkARDWBJv41wkuQjb6pfcugHb2Qw1LsKzv+QpIVF1OFxEEC2lnngtwUy
+         +B5S/xxS+XDAHrxPo/ZDXwjR56av/8NV5hD1NnAHiWHp9ILshdM/MVZxX0I1QMcqUJEH
+         GdFx7PzNoEHefVT+B13drcPhzBQb49buSwC4eAUddgyuvxeITIXwrUpbz1Fa+lFVjbMc
+         xs3ec1RIk1A511FxoVWFrYsu+7y2qA0vKwDXzQIDgQ0FzO/vxwScTjANIAqOjlSnFmBi
+         R5Jw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1702149525; x=1702754325;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=JO0vFAPqS/zEY4VHoo6nosFEWRNoyoPUPaqV2JZXG4k=;
+        b=h6tTV9eY11dazGtK4j7e4faMjHJuwDKumJ1mCyxrwyZPcaep51DT19qGandKspC8zM
+         fM5zcKejazWh5s5k2rxUPHGau1Oc8fhJLIHa5vFAw/Sd7ch3P6OnJ8Lc5r8dt4CXPnn+
+         yZvqLNTkq87crZBkdNL7gAY4n7yAIQ99B5SQqOC/+XRFhgVy2ZBoMxSFG6OSl6+oYMEG
+         tfP2HUseyWMJ8zTxYfwJRD05C92FcSyJ2/Fego9hil1z0oSuwBR6CXrezaNWMZyZ/BPo
+         k51ECk9jFdtQQ9DqhQIwkJQ89OVWyl3jgeLLAzaENfMu2AxAnGb/EffhmWh6WY9Xu5bW
+         96KA==
+X-Gm-Message-State: AOJu0Yx4JrG646wsP4cWvl3IBs6zWXJCgPdGll1yC//imRqotws3SCex
+	5ygVInLmM5mj1xS1wu4Opa0nSZnK9cwFyYb/DC8=
+X-Google-Smtp-Source: AGHT+IEDDzUOl6blXtfbNjXIw4nkiiZ7rl103jPgdsD3/eF43mkkHhyYAZZ7379rbVtUMODL1uAmThuDzVqapy4dnos=
+X-Received: by 2002:a05:6902:505:b0:db7:d413:df4d with SMTP id
+ x5-20020a056902050500b00db7d413df4dmr1359663ybs.59.1702149525410; Sat, 09 Dec
+ 2023 11:18:45 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: removed-for@privacy.reasons
+From: From a solicitor <2022andphilip@gmail.com>
+Date: Sat, 9 Dec 2023 20:18:33 +0100
+Message-ID: <CAK+Bkx-E3P96y2bioiPaGynY9=69ufThd2pyM_VoDSu73omUnQ@mail.gmail.com>
+Subject: 
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000d1178c060c189187"
+Bcc: mailmanthingwhatever@gmail.com
+
+--000000000000d1178c060c189187
+Content-Type: text/plain; charset="UTF-8"
+
+I am Khaled Faraj Mansour, a solicitor representing Robert 'Roy' Watterson,
+a Northern Irish businessman and CEO of Lincom, who died in a plane crash
+in Australia. He had funds deposited with a commercial bank for
+telecommunication investments. The bank management has issued a notice to
+provide the next of kin or confiscate the account. I seek consent to
+present Watterson as the next of kin. I promise a legitimate arrangement
+and aim for a swift transfer of the funds within three working days.
+In your response, I will send you a comprehensive message on how to claim
+the funds,
+Regards
+
+Reply to:
+
+laumcilwee@gmail.com
+
+--000000000000d1178c060c189187
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div><br></div>I am Khaled Faraj Mansour=
+, a solicitor representing Robert &#39;Roy&#39; Watterson, a Northern Irish=
+ businessman and CEO of Lincom, who died in a plane crash in Australia. He =
+had funds deposited with a commercial bank for telecommunication investment=
+s. The bank management has issued a notice to provide the next of kin or co=
+nfiscate the account. I seek consent to present Watterson as the next of ki=
+n. I promise a legitimate arrangement and aim for a swift transfer of the f=
+unds within three working days.<br>In your response, I will send you a comp=
+rehensive message on how to claim the funds, <br>Regards <br><br>Reply to:<=
+br><br><a href=3D"mailto:laumcilwee@gmail.com">laumcilwee@gmail.com</a><br>=
+</div>
+
+--000000000000d1178c060c189187--

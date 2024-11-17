@@ -1,169 +1,197 @@
 Delivered-To: mailmanthingwhatever@gmail.com
-Received: by 2002:a59:cde2:0:b0:42b:92a8:c8f7 with SMTP id b2csp2682481vqx;
-        Wed, 6 Dec 2023 20:31:46 -0800 (PST)
-X-Received: by 2002:a05:6000:10d2:b0:332:eb19:9527 with SMTP id b18-20020a05600010d200b00332eb199527mr1056570wrx.60.1701923506402;
-        Wed, 06 Dec 2023 20:31:46 -0800 (PST)
-ARC-Seal: i=1; a=rsa-sha256; t=1701923506; cv=none;
+Received: by 2002:a59:cde2:0:b0:42b:92a8:c8f7 with SMTP id b2csp5242489vqx;
+        Mon, 11 Dec 2023 04:48:22 -0800 (PST)
+X-Received: by 2002:a19:ca4e:0:b0:50c:256:7569 with SMTP id h14-20020a19ca4e000000b0050c02567569mr1518224lfj.114.1702298901947;
+        Mon, 11 Dec 2023 04:48:21 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1702298901; cv=none;
         d=google.com; s=arc-20160816;
-        b=KPzzUaF6FyoM6Ohk/lBs5sN4Afk6IbI2fLGqpkySqwtjU6u45qcCkGHLQ6EAnMOibu
-         JiWphhPs3l5cP+7iWokAl+21ZA1jMFE+UVXvZ3RZBOpOu4DnVrJqFVlyzCzaO9HAPB0T
-         lRXJD4TSC1BtOFfBEkl/N7dIMPsZCE1qEEPrqez13U9GfoC7tSVyhIgvnrSv3nPWG95p
-         G81LI3DWnyaEsDg9D/9uxLKVu6H5vGz6CKJJrI4ss/eKD7xBCFf1DtPKFbiO+WRghr9w
-         1KexDwN2XJpNQy56d1LJ5xne7z6aRit20GMi4zVADvgLgZN2r5LOVYHmElE+dZuHyD+q
-         iy7w==
+        b=hhXtlN++2dCU+AZX4Fx7n8bUr77QguL6b3G+Yfz8jPM60FdQIsqcVNT9uoNoCYY14L
+         0Zx3EZ5eh/gYhHwxQzAbf11QuEoOLSFxU7vkwwBqmOUonI7+ftttuXRG+LpZytoH7QdH
+         bQ8m3/Ig1UCtDCUxTPiJ3d+oiRmN2uosGyI7rN2lGdKupNGvPVt5UlYCqj2f2K9I0e3G
+         q+mAHPp2Y4GwW231WsN83cYssUd1RXrkl3OImJzRvj+xu8s/u0Vrs4bU09dIPa9W+idC
+         l+WdOwQUV+pL9SVlJd/mpTPi8ijVCHl8t3OTSG3tMs8KmZFjI7HU3vfi3O+Xi5kQ3wjV
+         4+aw==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
         h=to:subject:message-id:date:from:references:in-reply-to:reply-to
          :mime-version:dkim-signature;
-        bh=KRX2TJzE1uDAu0bo5FwQS42D6uqNwSLY6HHHziIeiVo=;
+        bh=NMDP46NQfPOm5XHcfqShtOAwV7UuzMSw9dx7ujXDiUQ=;
         fh=Pr2plYkJn0ovdHybgHvE53243CPsqSX0NRPDPDnAMwQ=;
-        b=I8cyRZ28PWx4XAd8EQ3w+lndO/9/l+YtF2tKFHaG63Cvb8wJbaB3rS+Z78bYE7VCs1
-         jEJ6ZmZmFV6ICufyGoAIA64WKgdD24eRHItzjeoR3S/NQR2IlQfX0T1BycWHIWJZz2hK
-         vigbvWbC+SCL6X5RDP4DEb6nPgURYOIOsZqD6erwml7fPFnxv+C4FoewXsGCAvlDKk6l
-         QHEP6q3PXDoueAqW6PWJHhGNQ/YzEgd4oI2JAYNkp5FdIz+CtLkUT6m2yCRyDJfaF/w7
-         wX0RwgqxYgtU0gmKhSTg3034pIp3y6iX1Xn3vMRAiNzmQX8w2NdvQ1xpEtBFA81B4ML1
-         7q7Q==
+        b=VB7KUbaKyuTRRPL5L0fv2Up+X3kbz4zmvKIrN60QYfkZ+xOZQA/kIBmEuNnIc56Ueb
+         MpU7UesbY/WF3DFI2W+HAGSuBAOR489qRLp3IMyoPe91fYW1uag1ZWpGk9lGbR9eZQVp
+         X1ShROLFRI4wR9nex9NnySt4cpYuIpPj7kRE2XH4Wq7vjXYnnk5Hzb7l8zQuC3aPmYyT
+         1YR9h7Idfg6FBDMmzCHD3yyiFVB8/uk92A9WTACmjYREnDPG4RdOGJzmlPWZPlVDFxEH
+         aHvZHWqgJgTizmkW2qsO2c3Dmfw2t4WMM7nKVgWJLew6sytCV94Ffa7/RfEMhWfeCnAU
+         B7Pw==
 ARC-Authentication-Results: i=1; mx.google.com;
-       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Sfzu3B7E;
-       spf=pass (google.com: domain of stella.rose488@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=stella.rose488@gmail.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=d1jLsfdD;
+       spf=pass (google.com: domain of sistermarymary22@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sistermarymary22@gmail.com;
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
-Return-Path: <stella.rose488@gmail.com>
-Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
-        by mx.google.com with SMTPS id cg14-20020a5d5cce000000b0033141ef61f4sor1444539wrb.2.2023.12.06.20.31.46
+Return-Path: <sistermarymary22@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id z17-20020a195e51000000b0050bfae5213bsor1488631lfi.4.2023.12.11.04.48.21
         for <mailmanthingwhatever@gmail.com>
         (Google Transport Security);
-        Wed, 06 Dec 2023 20:31:46 -0800 (PST)
-Received-SPF: pass (google.com: domain of stella.rose488@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+        Mon, 11 Dec 2023 04:48:21 -0800 (PST)
+Received-SPF: pass (google.com: domain of sistermarymary22@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
 Authentication-Results: mx.google.com;
-       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Sfzu3B7E;
-       spf=pass (google.com: domain of stella.rose488@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=stella.rose488@gmail.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=d1jLsfdD;
+       spf=pass (google.com: domain of sistermarymary22@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sistermarymary22@gmail.com;
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1701923506; x=1702528306; dara=google.com;
+        d=gmail.com; s=20230601; t=1702298901; x=1702903701; dara=google.com;
         h=to:subject:message-id:date:from:references:in-reply-to:reply-to
          :mime-version:from:to:cc:subject:date:message-id:reply-to;
-        bh=KRX2TJzE1uDAu0bo5FwQS42D6uqNwSLY6HHHziIeiVo=;
-        b=Sfzu3B7EXsPEndTQ5KcWsQuw3tcxEMhTPa7+pBTxL2KO0GnCBauJTelBEz4HYEQhYd
-         w6EPHQrN1tVc51+omY8WRjVOf8uoGVxmc7yhm+Pji3ty8XIodvr5NPYD+MzbI1sNLgz/
-         +bGBguekB88a4Iqz0Iqh1NZs2YTqqynh/auIU3gQFnyCUfQC3AilA4g2Pz+4SMAsMJf2
-         /kyPLyQ9xbzHKbmHDcq74S8k1ZSRfi4DyyFvm6u1KQeL7P8NTXpIQW3ufVBq+oV3f1QK
-         luSh6bvwLLTY/i6lqCm4ORyeH+mML6Y/CbsPtACmuEANUD+jplGlDTk/m0NZP6RVJiK1
-         denQ==
+        bh=NMDP46NQfPOm5XHcfqShtOAwV7UuzMSw9dx7ujXDiUQ=;
+        b=d1jLsfdDKO1hVtBgOaoJLh7PhBaIzAbj99eVTbFV9Eup8aPA95RJkVc6RQ57Gx5rog
+         FXbmM4I587d5hn0+OcYKolgn0uPsJp8mcB/5M5Z3fEguaKNPBF/Hg189xwVtwIytgIho
+         eyS3dcz68PWTy8FNP8HOyYC4cS19L4VwLPGCTPElUchBm/5i4ImTxMnC0NyVyTecfxmp
+         5yPga1spCZCaJbCh5k2/H9QhoubGPSiOwDCVgAg5td6Qdj9Cir+WX+WhG7YlRsAqrMGW
+         EGg0Qcbgg7grdgzGmvR+dxCe26OmVCR6zpkE5FnejHsTouwLxKOT2re+a7pFAKg4XbR6
+         pf0A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1701923506; x=1702528306;
+        d=1e100.net; s=20230601; t=1702298901; x=1702903701;
         h=to:subject:message-id:date:from:references:in-reply-to:reply-to
          :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
          :reply-to;
-        bh=KRX2TJzE1uDAu0bo5FwQS42D6uqNwSLY6HHHziIeiVo=;
-        b=b/lSFCwpvZaSWQDoG7pMchixlPQXCefGeeb53KVGz4KmHSkNT6bs2p7naWHTd++kvC
-         tbGH0P63NCC6D9rXSLj4QvQLGZDx1LmQEqZeTo5zYLLCiDCHTvnZSKin6AMKyoIsjCsm
-         k24AP5BErS4ovhRk+uvNsE6pMMljAB5EnKMI2a3gacZsIVJK4mtIqH8ixfzptSlP3VUV
-         RHP+SIl0s3hRuuxixKAtNJ7PsgmwGzDmvZqjf9laSwfDnEKIJy+u2kBHEmUYRxPkNlW5
-         zS67Ir0QZ165rCo5XzTaOqssNbBHG60tImQaEtu1GrB5/Qfew39JDjKaTiIn01oFJ7Bq
-         cT3A==
-X-Gm-Message-State: AOJu0Yw/GSooxhTpZ0nYBz+x85JkeXaQ5bnn6zJta1fE66L9WVgv3/vq
-	V2u6OWjIStKKDW3bt0rPf7nOs63etLmqR4nVL2k=
-X-Google-Smtp-Source: AGHT+IHw0v9PWIzHfwH2WJn75EKLAPwAy0twXB+CkK/n3nfUHKeUvmfEpPjBuMI340E+GAL5pt0R6XG0kX2o6c3hZxY=
-X-Received: by 2002:a05:6000:144b:b0:333:4d89:b172 with SMTP id
- v11-20020a056000144b00b003334d89b172mr2569333wrx.2.1701923505433; Wed, 06 Dec
- 2023 20:31:45 -0800 (PST)
+        bh=NMDP46NQfPOm5XHcfqShtOAwV7UuzMSw9dx7ujXDiUQ=;
+        b=seJpaaLs9M3eIp2/Pe2ZSxST/m4iQtEJ2/J4JtWi2++AsMveTuHONvU4htw4GsvBN7
+         +aCA/JwxNGjwK92qhJCEbiN0AnNj45BQV5tSTm5dwNHNu7GaRviv2wvr9w2JUz0UT6aB
+         n94OCvQHmRkovZgcMtWRyC5NeeSfXZhs0ybWk2do3JwWGqB6d/XRfhTuqUukliUjOHhM
+         zWt9BeMW+MBgvBYAm9PmZ1AbhbhM5qJ5ddOmawCnkWx0XJnXisF12+J2/TKcu2eWeImL
+         M+pu8aau2B17DfWswDZYUAFs0udgAUX8p71acO/zqmUq2kzfs6Enw1CC/cSBRuCrZszi
+         mcXg==
+X-Gm-Message-State: AOJu0YxQKM3VAdUUfAlSnSG4roxDsOxkQCKq/ZeR30ZyZHILrvQRn+og
+	9ROsabdVTDrdxgKnfs/8ZugxZYGCq/f1143LGiY=
+X-Google-Smtp-Source: AGHT+IF0/iem/xLz9NNX0odV91jXAxtOwmlCzpBpY5k/XZM+7TqUIbpz+VCSF/GXy8f21ymOI8Qw7qfljBH+sH8jmsU=
+X-Received: by 2002:a2e:a585:0:b0:2cc:1d21:80a0 with SMTP id
+ m5-20020a2ea585000000b002cc1d2180a0mr1014788ljp.107.1702298901008; Mon, 11
+ Dec 2023 04:48:21 -0800 (PST)
 MIME-Version: 1.0
-Received: by 2002:a17:907:3f20:b0:a1d:e82a:5847 with HTTP; Wed, 6 Dec 2023
- 20:31:44 -0800 (PST)
+Received: by 2002:a2e:9395:0:b0:2c1:874c:379 with HTTP; Mon, 11 Dec 2023
+ 04:48:19 -0800 (PST)
 Reply-To: removed-for@privacy.reasons
-In-Reply-To: <CAFdj9sSm4U6JhXiUtvtuffwP1sGCY0D_TBw1uo8ZL9RiTLveVA@mail.gmail.com>
-References: <CAFdj9sSm4U6JhXiUtvtuffwP1sGCY0D_TBw1uo8ZL9RiTLveVA@mail.gmail.com>
-From: Miss Stella Rose <stella.rose488@gmail.com>
-Date: Thu, 7 Dec 2023 05:31:44 +0100
-Message-ID: <CAFdj9sQusbv+XK+1LSOA8Q+9zemziV_x2nmUbp0JTuZnGjYZqw@mail.gmail.com>
-Subject: Dear friend
+In-Reply-To: <CAOYj_OyxLN9GU-So8p-uYSg5rO2r8TUtFA8D1o9KxHUC7VT9sw@mail.gmail.com>
+References: <CAOYj_OywDWKjhHC5E=tKBjeKP5b7Vx-1fVAapWxiy5XcfJ7fcA@mail.gmail.com>
+ <CAOYj_OzY1uEiCEhhuZkx7oi6dPkZYZB-ZQ=Nx=eO8ck+_1Qciw@mail.gmail.com>
+ <CAOYj_OxBNY3_BEoAbVt7VGi2on9yC-58SRMHqWipg3pxKSerAQ@mail.gmail.com>
+ <CAOYj_Owe9-OxS3=sbLkoZNYO2n2SmiC-LyhoZ-cr+w3Y+-Hfaw@mail.gmail.com>
+ <CAOYj_OxqLkXcp4mkDk5kgCnRA7WufJ83MoNmhQ-1h_bkbsq2xQ@mail.gmail.com>
+ <CAOYj_OyOmXSQaJ9+_nM1F8VzA0G_rs_MBdDRKcfOFApeJjoUGA@mail.gmail.com>
+ <CAOYj_OwYc_mcsjOrLtRA7LNENOj_4=55agdKBGUUjAy0QfwCLA@mail.gmail.com>
+ <CAOYj_OwSzRSRRDg7hytyOz8k8e0_Z6vqEVJ++BF9c_+MF=dQbw@mail.gmail.com> <CAOYj_OyxLN9GU-So8p-uYSg5rO2r8TUtFA8D1o9KxHUC7VT9sw@mail.gmail.com>
+From: Miss Stella Rose <sistermarymary22@gmail.com>
+Date: Mon, 11 Dec 2023 13:48:19 +0100
+Message-ID: <CAOYj_Oxj22h_brGGxPTQW8_Zg2OTudTQAuo16C4-QwT1TnQxAg@mail.gmail.com>
+Subject: Fwd: Dear friend
 To: undisclosed-recipients:;
-Content-Type: multipart/mixed; boundary="000000000000fab30f060be3f18d"
+Content-Type: multipart/mixed; boundary="0000000000004beca5060c3b59e7"
 Bcc: mailmanthingwhatever@gmail.com
 
---000000000000fab30f060be3f18d
-Content-Type: multipart/alternative; boundary="000000000000fab30e060be3f18b"
+--0000000000004beca5060c3b59e7
+Content-Type: multipart/alternative; boundary="0000000000004beca3060c3b59e5"
 
---000000000000fab30e060be3f18b
+--0000000000004beca3060c3b59e5
 Content-Type: text/plain; charset="UTF-8"
 
-Dear Friend
+Dear Friend,
+
 
 I have been waiting for you since to come down here and pick your
-consignment but you never respond, I have deposited the US$5,000,000.00
-with the ALINCO SECURITY COMPANY here in Nigeria, because I traveled to
-Japan to see my boss and I will not come back till next year ending.  I
-have arranged with the ALINCO SECURITY COMPANY to get your US$5,000,000.00
-to you this month and they will be coming to you with the fund inside black
-portfolio, I would have deposited the fund with Bank for transfer into your
-own account but the procedure of Bank is too much and they will required
-enough fee.  I drop your delivery details with the ALINCO SECURITY COMPANY
-but I will like you to re-confirm the information to them again so that
-they will not be any mistake when coming with the fund. Send the below
-information to the ALINCO SECURITY COMPANY.  (1)Full
-name:(2)Address:(3)Tel:  I want you to know that you have all right to
-declare how you want to receive your fund, I would have prefer the fund to
-be transfer to you but I make some searches about the Bank transfer and
-they told me that it will cost you the sum of US$4,590 to transfer the
-US$5,000,000.00 into your account. But I have deposited the US$5,000,000.00
-in cash to the ALINCO SECURITY COMPANY, below is the ALINCO SECURITY
-COMPANY contact.  Director: MR Paul Ego NMobile: 08023631198 Email:
-alincosecuritycompany2001@gmail.com  I have paid the delivery charges and
-insurance fee to the ALINCO SECURITY COMPANY. The only Money that the
-ALINCO SECURITY COMPANY will require from you is $235 Dollars for
-demurrage, if you can pay the $235 Dollars to them, they will proceed and
-get the US$5,000,000.00 to you in your Country. Pls if you want to contact
-the ALINCO SECURITY COMPANY, you are to contact them with your portfolio
-code number which is (PPL111RSS) and your address where you want your
-portfolio delivered. You are to pay the $235 to the ALINCO SECURITY COMPANY
-to enable them to proceed and get the cash to you, dont fail to resend your
-information to them for your own good.
+consignment but i did not heard anything from you since then, I have
+deposited the US$5,000,000.00 with the ALINCO SECURITY COMPANY here in
+south africa, because I traveled to Japan to see my boss and I will
+not
+come back till next year ending.I have arranged with the ALINCO
+SECURITY COMPANY to get your US$5,000,000.00 to you this month and
+they will be coming to you with the fund inside black portfolio, I
+would have deposited the fund with the Bank for them to transfer the
+fund into your own Bank account but the procedure of Bank is too much
+and they will required enough fee.I drop your delivery details with
+the ALINCO SECURITY COMPANY but I will like you to re-confirm the
+information to them again so that they will not be any mistake when
+coming with the fund.
 
-Regards,
-Mr Paul Ego.
 
---000000000000fab30e060be3f18b
+Send the below information to the ALINCO SECURITY COMPANY.(1)Full
+name:(2)Address:(3)Tel:I want you to know that you have all right to
+declare how you want to receive your fund, I would have prefer the
+fund to be transfer to you but I make some searches about the Bank
+transfer and they told me that it will cost you the sum of US$1500 to
+transfer the US$5,000,000.00 into your account.But I have deposited
+the US$5,000,000.00 in cash to the ALINCO SECURITY COMPANY, below is
+the ALINCO SECURITY COMPANY contact.Director: Mr.Paul Ego. Email:
+(alinco22@outlook.com ) I have paid the
+delivery charges and insurance fee to the ALINCO SECURITY COMPANY. The
+only Money that the ALINCO SECURITY COMPANY will require from you is
+$95 Dollars for demur-rage,
+
+
+if you can pay the $95 Dollars to them, they will proceed and get the
+US$5,000,000.00 to you in your Country.Please if you want to contact
+the ALINCO SECURITY COMPANY, you are to contact them with your
+portfolio code number which is (PPL111RSS) and your address where you
+want them to deliver the cash to you and you are to pay the $95 to the
+ALINCO SECURITY COMPANY to enable them to proceed and get the cash to
+you, don't fail to resend your information to them for your own good.
+
+Regards,Miss. Stella Rose
+
+--0000000000004beca3060c3b59e5
 Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
 
-Dear Friend=C2=A0=C2=A0<div><br></div><div>I have been waiting for you sinc=
-e to come down here and pick your consignment but you never respond, I have=
- deposited the US$5,000,000.00 with the ALINCO SECURITY COMPANY here in Nig=
-eria, because I traveled to Japan to see my boss and I will not come back t=
-ill next year ending.=C2=A0 I have arranged with the ALINCO SECURITY COMPAN=
-Y to get your US$5,000,000.00 to you this month and they will be coming to =
-you with the fund inside black portfolio, I would have deposited the fund w=
-ith Bank for transfer into your own account but the procedure of Bank is to=
-o much and they will required enough fee.=C2=A0 I drop your delivery detail=
-s with the ALINCO SECURITY COMPANY but I will like you to re-confirm the in=
-formation to them again so that they will not be any mistake when coming wi=
-th the fund. Send the below information to the ALINCO SECURITY COMPANY.=C2=
-=A0 (1)Full name:(2)Address:(3)Tel:=C2=A0 I want you to know that you have =
-all right to declare how you want to receive your fund, I would have prefer=
- the fund to be transfer to you but I make some searches about the Bank tra=
-nsfer and they told me that it will cost you the sum of US$4,590 to transfe=
-r the US$5,000,000.00 into your account. But I have deposited the US$5,000,=
-000.00 in cash to the ALINCO SECURITY COMPANY, below is the ALINCO SECURITY=
- COMPANY contact.=C2=A0 Director: MR Paul Ego NMobile: 08023631198 Email: <=
-a href=3D"mailto:alincosecuritycompany2001@gmail.com" target=3D"_blank">ali=
-ncosecuritycompany2001@gmai<wbr>l.com</a>=C2=A0 I have paid the delivery ch=
-arges and insurance fee to the ALINCO SECURITY COMPANY. The only Money that=
- the ALINCO SECURITY COMPANY will require from you is $235 Dollars for demu=
-rrage, if you can pay the $235 Dollars to them, they will proceed and get t=
-he US$5,000,000.00 to you in your Country. Pls if you want to contact the A=
-LINCO SECURITY COMPANY, you are to contact them with your portfolio code nu=
-mber which is (PPL111RSS) and your address where you want your portfolio de=
-livered. You are to pay the $235 to the ALINCO SECURITY COMPANY to enable t=
-hem to proceed and get the cash to you, dont fail to resend your informatio=
-n to them for your own good.=C2=A0=C2=A0</div><div><br></div><div>Regards,=
-=C2=A0=C2=A0</div><div>Mr Paul Ego.</div>
+Dear Friend,<br>
+<br>
+<br>
+I have been waiting for you since to come down here and pick your<br>
+consignment but i did not heard anything from you since then, I have<br>
+deposited the US$5,000,000.00 with the ALINCO SECURITY COMPANY here in<br>
+south africa, because I traveled to Japan to see my boss and I will<br>
+not<br>
+come back till next year ending.I have arranged with the ALINCO<br>
+SECURITY COMPANY to get your US$5,000,000.00 to you this month and<br>
+they will be coming to you with the fund inside black portfolio, I<br>
+would have deposited the fund with the Bank for them to transfer the<br>
+fund into your own Bank account but the procedure of Bank is too much<br>
+and they will required enough fee.I drop your delivery details with<br>
+the ALINCO SECURITY COMPANY but I will like you to re-confirm the<br>
+information to them again so that they will not be any mistake when<br>
+coming with the fund.<br>
+<br>
+<br>
+Send the below information to the ALINCO SECURITY COMPANY.(1)Full<br>
+name:(2)Address:(3)Tel:I want you to know that you have all right to<br>
+declare how you want to receive your fund, I would have prefer the<br>
+fund to be transfer to you but I make some searches about the Bank<br>
+transfer and they told me that it will cost you the sum of US$1500 to<br>
+transfer the US$5,000,000.00 into your account.But I have deposited<br>
+the US$5,000,000.00 in cash to the ALINCO SECURITY COMPANY, below is<br>
+the ALINCO SECURITY COMPANY contact.Director: Mr.Paul Ego. Email:<br>
+(<a href="mailto:alinco22@outlook.com" target="_blank">alinco22@outlook.com</a> ) I have paid the<br>
+delivery charges and insurance fee to the ALINCO SECURITY COMPANY. The<br>
+only Money that the ALINCO SECURITY COMPANY will require from you is<br>
+$95 Dollars for demur-rage,<br>
+<br>
+<br>
+if you can pay the $95 Dollars to them, they will proceed and get the<br>
+US$5,000,000.00 to you in your Country.Please if you want to contact<br>
+the ALINCO SECURITY COMPANY, you are to contact them with your<br>
+portfolio code number which is (PPL111RSS) and your address where you<br>
+want them to deliver the cash to you and you are to pay the $95 to the<br>
+ALINCO SECURITY COMPANY to enable them to proceed and get the cash to<br>
+you, don&#39;t fail to resend your information to them for your own good.<br>
+<br>
+Regards,Miss. Stella Rose<br>
+<br>
+<br>
+<br>
 <br>
 
---000000000000fab30e060be3f18b--
---000000000000fab30f060be3f18d
+--0000000000004beca3060c3b59e5--
+--0000000000004beca5060c3b59e7
 Content-Type: image/x-ms-bmp; name="picture.bmp"
 Content-Disposition: attachment; filename="picture.bmp"
 Content-Transfer-Encoding: base64
-X-Attachment-Id: ffc79738689f008a_0.1
+X-Attachment-Id: 9e7e5fb8e79d8bb_0.1
 
 Qk2OvAAAAAAAADYAAAAoAAAAbQAAAJMAAAABABgAAAAAAFi8AAATCwAAEwsAAAAAAAAAAAAAIi0q
 IDxaKkdsK0x6KkqFK06OMVSWOVycPWCfPWWgP2mkQ2yqRG2rRXCvSnW0TXm4Tnq6WHy8Vnq6V3u7
@@ -1012,4 +1040,4 @@ e4tkfo9jf5BkgpVnh5plhpZkhZVigJFqiJtsip1nhJlpiJ1piJ1yjp92kqNujJ1riZxkgpVaeY5i
 gZZmhZpmgqBcepdUdJFTd5VVfZpZgqJfjaxnlrVokapokappkqtslK1ulq9yl7F0mbN2m7V9n72A
 osCGpsOIqMWLqcaTr82Vsc+Srcierr96iJpOW2swOUcnLjc0OD06Pj8zNTUxOjcyOzgvODUpMi8o
 MS4tNjMvODUuNzQrMi0qMSwoLyonLikpMCsqMSwtNC8xODMpMCsxODMwNzIzOjUA
---000000000000fab30f060be3f18d--
+--0000000000004beca5060c3b59e7--

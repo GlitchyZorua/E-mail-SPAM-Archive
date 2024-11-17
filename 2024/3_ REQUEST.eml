@@ -1,0 +1,144 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:1a:b0:443:debf:37c3 with SMTP id v26csp1236200vqc;
+        Wed, 24 Jan 2024 11:40:42 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IECQYWH4OmEyVXz2BcSTXXzRmiKr3JLflCc4JyNExw0JKVSvIfLSYpIiSEn/AbEuGB1R5YL
+X-Received: by 2002:a17:90b:1989:b0:290:6de6:5721 with SMTP id mv9-20020a17090b198900b002906de65721mr87727pjb.32.1706125241918;
+        Wed, 24 Jan 2024 11:40:41 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706125241; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oMet47uaTFUjH9x1wt3k/VlMVjqi/O5QsiVEzK9+Y/w0dtd8oKG1yoARWCJmYZbRgK
+         Lb45vbofPp9QoQAZDD1f1wtNRiVOWy8RaSuYCTHYg1wTjVXMoyKbY/X4BYig9PaYEXqP
+         wGnss8IR+xLfv1u5hCVgZUON7/kH1TFEecGtCcxcL4JvfUSOgDxU9GwjCSlV4wytvA+c
+         +yvWbSZaeJ8xLdWX84uOEhN2Z/24EtnuFaVYbZNC36GUAtMA5cIdAOrniKVLiTQvXW1u
+         pTiF21JkTZUOTieKX+zb9cnhY2DhMPSqj0dOV7ld36kLXnyUMzSSQpfLe7qVMDXm1Jdu
+         N+7w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=thread-index:thread-topic:mime-version:subject:references
+         :in-reply-to:message-id:to:reply-to:from:date;
+        bh=2MDIT2MGIeEhXlw9ye2I2kCcT+zI8nzU/DMiNb7QTnw=;
+        fh=Fl7fP/keTHwZpW9LeEPbuLUj/o6i+n41Nn4wSHiDzj4=;
+        b=Dr933rMTjesJ2qZ5g0CdSlnIKCqLfz9fQ97j6iHrpLaBBwm3H7dNIU2hHbNOIzVZCl
+         1B2xTMgiPtc+Xu5iobwJVgH3FBnX9d+oE8naPdmHdDWk2QJtB8sB5UgZWHS6uMJlgO+R
+         hsm/RRnEmw+ZB6eE81XxM5IMGJgzGpH/4lvx6sz14d0GNMwp70TvWZJZsaB7HegIkCoF
+         wKARaYcEgnrtWtz9V4oGxOm0ICeBfGH0NJZARr4v6NFOYwWplu/sIU3Gw4mvXabFPwK+
+         R7IDNlgE/KidM0yAhmxhY2vw57Unpwoq2qI2Bxqsvk4CRiw6U/c+XRkCvdGQ1mJiHkbE
+         GHeQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of mr.hiroshiyuda2@mediacombb.net designates 35.164.127.233 as permitted sender) smtp.mailfrom=mr.hiroshiyuda2@mediacombb.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mediacombb.net
+Return-Path: <mr.hiroshiyuda2@mediacombb.net>
+Received: from omta010.uswest2.a.cloudfilter.net (omta010.uswest2.a.cloudfilter.net. [35.164.127.233])
+        by mx.google.com with ESMTPS id 13-20020a63194d000000b005ca4098bf5fsi12051842pgz.620.2024.01.24.11.40.38
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 24 Jan 2024 11:40:41 -0800 (PST)
+Received-SPF: pass (google.com: domain of mr.hiroshiyuda2@mediacombb.net designates 35.164.127.233 as permitted sender) client-ip=35.164.127.233;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of mr.hiroshiyuda2@mediacombb.net designates 35.164.127.233 as permitted sender) smtp.mailfrom=mr.hiroshiyuda2@mediacombb.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mediacombb.net
+Received: from mcc-obgw-5002a.ext.cloudfilter.net ([10.243.65.104])
+	by cmsmtp with ESMTP
+	id SasArJTZiH00VSj6zrwQmQ; Wed, 24 Jan 2024 19:40:38 +0000
+Received: from njtozcsv40.mcomdc.com ([10.0.20.24])
+	by cmsmtp with ESMTP
+	id Sj6xrkCOySKtvSj6xrRaBy; Wed, 24 Jan 2024 19:40:35 +0000
+X-Authority-Analysis: v=2.4 cv=LqqBd1Rc c=1 sm=1 tr=0 ts=65b167b3 cx=a_idp_d
+ a=FBMzrIrqT2VvHv8iZwVpfw==:117 a=FKkrIqjQGGEA:10 a=RWsxK55NmD8A:10
+ a=x7bEGLp0ZPQA:10 a=6XZ1VUka4aR9lHu-ijYA:9 a=QEXdDO2ut3YA:10
+ a=_W_S_7VecoQA:10 a=3D3u3_GVj5rP6Daiq4Ij:22 a=xo5jKAKm-U-Zyk2_beg_:22
+ a=nl4s5V0KI7Kw-pW0DWrs:22 a=dHb92Bjuc-bLpAB9Gz7K:22 a=7PlhcU7xGnINJ2miruxK:22
+Date: Wed, 24 Jan 2024 14:40:35 -0500 (EST)
+From: Satoru Ochiai <mr.hiroshiyuda2@mediacombb.net>
+Reply-To: removedfor@privacy.reasons
+To: anonymous <removedfor@privacy.reasons>
+Message-ID: <1296738655.14967482.1706125235220.JavaMail.zimbra@mediacombb.net>
+In-Reply-To: <2086316161.14960353.1706116734503.JavaMail.zimbra@mediacombb.net>
+References: <nuq4llie0iunneuda5te9gva.1625321045669@email.android.com> <2009128713.600725.1687251547345.JavaMail.zimbra@mediacombb.net> <1010476284.1994286.1689128085741.JavaMail.zimbra@mediacombb.net> <1999592754.5876438.1694034157093.JavaMail.zimbra@mediacombb.net> <1352047628.6750181.1695097673149.JavaMail.zimbra@mediacombb.net> <1931082289.10744579.1700488755754.JavaMail.zimbra@mediacombb.net> <1448124820.10745907.1700489379953.JavaMail.zimbra@mediacombb.net> <2086316161.14960353.1706116734503.JavaMail.zimbra@mediacombb.net>
+Subject: Re: : REQUEST
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="=_a15fbe81-65c4-4e11-a722-9da0e036d2c2"
+X-Originating-IP: [173.239.214.230]
+X-Mailer: Zimbra 8.8.15_GA_4359 (zclient/8.8.15_GA_4308)
+Thread-Topic: : REQUEST
+Thread-Index: kEkRh2JQ36BBidojgqiVudouQfGHBXNoeP/ZN/1sQcVqxyO5IBEfSVHKwXB56cR/d/Zf+zkc87GW+3WCFic7YP7r8Ehxm21MaY+7zCGLsdOeo3JLO/I9vqfNdbZ+EGBXKdOwWescztJiWG9kVu7uhQ==
+X-CMAE-Envelope: MS4xfFOmWEzK/7ElKrW5HjRDdRkvXoibHAkBdRVtmAZv3YuA1hIVrM0tpRQ9Z2C7WhorG0EIo7Obz0MSk+Nh4JRBLeuYmuODzmWb14PT3XfOJNYw+oWf7J9i
+ QXQZntjzzSIUbh8mL9/tPyaPU1JhM+AToXUVK9INaa74cbwiIKQDiOCz+YgLlt/iWzT5U8BXx8m3v4uu1XBIpYnmVBCEvZ8VUefkEAJYrAnzXRuswCkzJrY/
+ M2ko54Yjiip9/MwVrJ1zlnrjvEJlmrFQzhr4dq9jS/SkCBluikSlRnycVwZ1m9wAGPxqck6C84fYHZwVr+Q+mcJclLoZqdTXu3sDpi0r9NVvT2DoMOWHyc0+
+ /1EBHwjDnx0m1E23Y2EYQdgRY0qtrqrRt2U9QhVz5E7qJ9owP/4Ix+sxWvGOGaXP4CEwfSGcqhKOJRUB+EIIfGv1zLVjxEKDrWlgLx0bfIUu6ZL1RUi1Rq/V
+ Va+gZ9bigyl+VV20mK2l/JkHNxs9YzSX2InLUNFGB2yp/8HYBbD1K5ooYXlW2+5CzsNULArUU0GBNVI0j8vn+lCSqRRtTLtcI1GeYz8UGwDOSLgEwdTJAaCa
+ aiNmRAH5zJmPhEpp/6/VGGs+yszAXSgEsVhu99y27VsVwgSv+Cj2YRaYeVCJCngsDY2Z976aCoPoDsq8vCsu2oIne7I3RUSy/4lW/LUTy6AMi33Bop+I/V0W
+ vQz5iAIm8bUJeS08BSiUvjFB5bZlxzgVFLaX8rYA4jfaJBDz1Efmj7Xz3c+44MIoffYhKPGLtTREqUDV+FUYq3Y/OM7Lu3rSmQx4TreHoHbJfleTkbG36679
+ kuyzCyKdts+FfYeaCppZXQlMN0+aKXoCl1kCPonJFNxPFY9sW44PPXyQb/vwFhhgSxtEOdlnI/PJMMP6J/VXIJdm2ZS9owYphcLuKTEM
+
+--=_a15fbe81-65c4-4e11-a722-9da0e036d2c2
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+There's a deal in my bank you will receive more information upon your acknowledgment of this emailRegardsMr.Ochiai
+Managing Executive Officer of Resona Bank, Limited
+--=_a15fbe81-65c4-4e11-a722-9da0e036d2c2
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style> body {height: 100%; color:#000000; font-size:12pt; font=
+-family:Times New Roman;}</style></head><body><div><p style=3D"color: #0000=
+00; font-size: 16px; font-style: normal; font-variant-ligatures: normal; fo=
+nt-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans:=
+ 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; w=
+ord-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text=
+-decoration-thickness: initial; text-decoration-style: initial; text-decora=
+tion-color: initial; font-family: 'times new roman';" data-mce-style=3D"col=
+or: #000000; font-size: 16px; font-style: normal; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal;=
+ orphans: 2; text-align: start; text-indent: 0px; text-transform: none; wid=
+ows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nor=
+mal; text-decoration-thickness: initial; text-decoration-style: initial; te=
+xt-decoration-color: initial; font-family: 'times new roman';">There's a de=
+al in my bank you will receive more information upon your acknowledgment of=
+ this email</p><p style=3D"color: #000000; font-size: 16px; font-style: nor=
+mal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight=
+: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: =
+0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-strok=
+e-width: 0px; white-space: normal; text-decoration-thickness: initial; text=
+-decoration-style: initial; text-decoration-color: initial; font-family: 't=
+imes new roman';" data-mce-style=3D"color: #000000; font-size: 16px; font-s=
+tyle: normal; font-variant-ligatures: normal; font-variant-caps: normal; fo=
+nt-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text=
+-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-t=
+ext-stroke-width: 0px; white-space: normal; text-decoration-thickness: init=
+ial; text-decoration-style: initial; text-decoration-color: initial; font-f=
+amily: 'times new roman';">Regards</p><p style=3D"color: #000000; font-size=
+: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-ca=
+ps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-alig=
+n: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: =
+0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-t=
+hickness: initial; text-decoration-style: initial; text-decoration-color: i=
+nitial; font-family: 'times new roman';" data-mce-style=3D"color: #000000; =
+font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; =
+text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-=
+spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-dec=
+oration-thickness: initial; text-decoration-style: initial; text-decoration=
+-color: initial; font-family: 'times new roman';"><span style=3D"color: #00=
+0000; font-family: 'times new roman'; font-size: 16px; font-weight: 400; le=
+tter-spacing: normal; text-indent: 0px; text-transform: none; white-space: =
+normal; word-spacing: 0px; background-color: #ffffff; float: none; display:=
+ inline !important;" data-mce-style=3D"color: #000000; font-family: 'times =
+new roman'; font-size: 16px; font-weight: 400; letter-spacing: normal; text=
+-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px;=
+ background-color: #ffffff; float: none; display: inline !important;">Mr.Oc=
+hiai</span><br></p><p style=3D"color: #000000; font-size: 16px; font-style:=
+ normal; font-variant-ligatures: normal; font-variant-caps: normal; font-we=
+ight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-inde=
+nt: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-s=
+troke-width: 0px; white-space: normal; text-decoration-thickness: initial; =
+text-decoration-style: initial; text-decoration-color: initial; font-family=
+: 'times new roman';" data-mce-style=3D"color: #000000; font-size: 16px; fo=
+nt-style: normal; font-variant-ligatures: normal; font-variant-caps: normal=
+; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; =
+text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webk=
+it-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: =
+initial; text-decoration-style: initial; text-decoration-color: initial; fo=
+nt-family: 'times new roman';">Managing Executive Officer of Resona Bank, L=
+imited</p></div></body></html>
+--=_a15fbe81-65c4-4e11-a722-9da0e036d2c2--

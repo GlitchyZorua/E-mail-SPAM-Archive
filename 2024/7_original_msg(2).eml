@@ -1,0 +1,111 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:171:b0:44c:c215:8d87 with SMTP id h49csp17138vqi;
+        Fri, 2 Feb 2024 15:12:34 -0800 (PST)
+X-Received: by 2002:a25:bcce:0:b0:dc2:50e0:2be6 with SMTP id l14-20020a25bcce000000b00dc250e02be6mr3649499ybm.2.1706915554065;
+        Fri, 02 Feb 2024 15:12:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706915554; cv=none;
+        d=google.com; s=arc-20160816;
+        b=mVnGmio5sHTBxRPt/cDxmf+QLvD5M1AgKo0/NGz06GqEUSptvmKLhHDPKuUofG+YLu
+         mhlXSyYmz1u/1MnSsVfVpW9EUe/EKAep6cHA40yG8wuqYuQKlBSHQT3ElYd7Ay7vLgD8
+         x1yFtfW6UbUne2raEVzWexAfzu3y4SJejg9Saik9/9emXyLoMdPnLTwyLfUWHkzAgo6j
+         JPuyRg/5H9WB9T7CkcIIpJlkND6HA9vgZ8QnUHVdAIfQnArAnAiAD2DN2wWtowTaorBG
+         VCSu77V0N40FgZWFqbxUW3wn3m8q9OPhuvxENbz3EQ1TZL9ibwzfirMpIXwEGIyiFZFd
+         jKsw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=XK5ndYqID0hXmZyg4OvrYfpTdBNAyFmmi7s25ninHA8=;
+        fh=2fLev2vA1qZrbQVllyETuyuG5pLDIHDmYE3VLMHxPmE=;
+        b=d9obqRqIWW3OOVq7IL02PW4JG+Jon3Uupf+VJDuNkyHV4vpGvYcN4kuAjtZkLdtL0p
+         SwTG4r/9VM4SJcIeYMDfiuWkOPEAb1H3mC7j9cJaoZ7YW6U/FS/Xkp/PCzjYWJin31+O
+         ZLStCQM+c5jQq7EbUasbJ2wC6KulFb7KZYGWAxcNcsWyYnfaR8Ln7V8bSID9sGtW8AYG
+         Zk+6w4oU1sgAgHboYeNk2Es0z6qBf7H1G2TgJb4deRw0X2IrfNZk3HfodMxWZlWn6l02
+         n6zE5mabuNFUeOiIZsRRsPV4+ztJd2gVDL5ju9spXiENJ/jkMnK8DKhafRNkFjukFqPo
+         pDMw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=HOvlSa5s;
+       spf=pass (google.com: domain of uk2lnd018mail@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=uk2lnd018mail@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+X-Forwarded-Encrypted: i=0; AJvYcCWVzSJYf10S6sb3dsTf508dkTR9errRFZzMVXpYD+O15wBWKeMx+7VzlQdf+xYSz9aw/93cANAERn2hXl/iFobEUa36DPyMushwErRsPXg=
+Return-Path: <uk2lnd018mail@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 186-20020a2500c3000000b00dc21e437403sor1229344yba.14.2024.02.02.15.12.33
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Fri, 02 Feb 2024 15:12:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of uk2lnd018mail@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=HOvlSa5s;
+       spf=pass (google.com: domain of uk2lnd018mail@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=uk2lnd018mail@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1706915553; x=1707520353; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=XK5ndYqID0hXmZyg4OvrYfpTdBNAyFmmi7s25ninHA8=;
+        b=HOvlSa5scIVY0S2em7lrz/xlEUWm3ANg5QnFRSzaFLB4MWRTTWb2uLsnbymbGrZT+c
+         0g39gnJ0X9s4fBLQ40g0LiWC1oUUVGM4nNqi/nSlEluukOD+Ed/vJ3tX4ZdJE4w3Ibj+
+         JN9P0F69DSTyXwRAcnp6tX5LNk9q3msPs4dgLm1Wn6EBWTWcyyS8Ij8eBJTQE4NR9K5L
+         OfpuuX986qbApJTRyTs6ABg31CjSrHO8FrirhfDIVAoTOvFOMrGq5589pf980T5jQ5wW
+         mJe8xyZv67KKNaLrk5ZSP7KUgeZ/FcsgBYtmjCJd/8mF+0OHkn7u7aDfOOMtp7uN/dg+
+         qfjA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1706915553; x=1707520353;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=XK5ndYqID0hXmZyg4OvrYfpTdBNAyFmmi7s25ninHA8=;
+        b=ABEyTXcCbKdL8yDZbfhDO+w3+CAuCLEyyqq4WzVRJBZCeLEr45mYoBA9eIX0VqzKD8
+         uRlz8w2xxnnfzU7y42TXXROHu6/rchCmG2G89lHzQrpue1Eb2tbJ+xqFh7B/KK+rvlnT
+         uNIOAopaTs2vDb83nhVUUdG5FMBjaPIOFtOG33ILv5fIU4z2wUj67Vojf33uhc9XnS6u
+         U5JO08CWi060FyBIRPwqtwJD8vH3r9p+shPbU0EHkXclNqaXlRIPB3KArK1qaQUEcGE4
+         qAH9Y9ZXfB/GRZ80dhs9BEIyJ+qxKHsSrnJXWnufsq2bN6QdTUZftNjPrgmqp1C70GC8
+         Rw8A==
+X-Gm-Message-State: AOJu0YxI18zYJ2u2ybFGEMYK2ktI3JwpMRB/unPIHmIGSh2CQV9F0WE2
+	pt6g5/q0H48MxtyvHt+iI4jKbwTnV3g2dkkv40+/mTouiO4IV9sfZb6PtLYOIjzbMfX17UsP8QM
+	ZfrfVrjSzE7o4ZriCh+kRPIxowGY=
+X-Google-Smtp-Source: AGHT+IEWnQINXGA/F67fxPRtdjjg25lKo2+dTFaATTk9SBR7+MvZz3XZAqvHt1S7nHvaEo+GglGNjQgHrr7eAUIgTMI=
+X-Received: by 2002:a25:b294:0:b0:dc6:e4fc:9b0c with SMTP id
+ k20-20020a25b294000000b00dc6e4fc9b0cmr3633011ybj.47.1706915553558; Fri, 02
+ Feb 2024 15:12:33 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: redactedfor@privacy.reasons
+From: From Brown <uk2lnd018mail@gmail.com>
+Date: Sat, 3 Feb 2024 00:11:56 +0100
+Message-ID: <CAA=ckrW2GA08Ad_oFja+fPhNistJ6X69w8-xM6dnfB_ROPc_RQ@mail.gmail.com>
+Subject: 
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000003b467006106e3f51"
+Bcc: mailmanthingwhatever@gmail.com
+
+--0000000000003b467006106e3f51
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Sir,
+I am associated with an executive of a highly influential wealthy Arab
+family, I will share your profile with
+
+them, and if they are happy with your profile, They are ready to discuss
+the possibility of a premium long-term
+
+investment in your Country. Kindly inform me of your readiness to go
+forward with discussions, so that I can
+
+make the necessary introductions.
+Thanks
+David Brown
+
+--0000000000003b467006106e3f51
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:trebuche=
+t ms,sans-serif;font-size:small">Dear Sir,<br>I am associated with an execu=
+tive of a highly influential wealthy Arab family, I will share your profile=
+ with <br><br>them, and if they are happy with your profile, They are ready=
+ to discuss the possibility of a premium long-term <br><br>investment in yo=
+ur Country. Kindly inform me of your readiness to go forward with discussio=
+ns, so that I can <br><br>make the necessary introductions.<br>Thanks<br>Da=
+vid Brown<br><br></div></div>
+
+--0000000000003b467006106e3f51--

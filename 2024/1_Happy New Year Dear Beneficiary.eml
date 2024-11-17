@@ -1,0 +1,69 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:a7f2:0:b0:42b:92a8:c8f7 with SMTP id a18csp6582887vqt;
+        Tue, 2 Jan 2024 09:00:15 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IF+TjVGZFUhacEPRwo7D5mL+W3DQT1PO9CBePacVyQjf4+Rp37+tYc45yqK8z47VdK8iS3y
+X-Received: by 2002:a17:902:e743:b0:1d3:ea34:2b34 with SMTP id p3-20020a170902e74300b001d3ea342b34mr8389331plf.55.1704214814656;
+        Tue, 02 Jan 2024 09:00:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1704214814; cv=none;
+        d=google.com; s=arc-20160816;
+        b=X6Ab4lbsqF/tUBYdiNz8vM/fs8m5Tr/rq79aSDA/YGPE79hqDnpDehlAoA77pn6Bhx
+         vSdHLRzt8CUfZAKH3rz3gpdt2sVcrjnxW8ILE1AWmVQzhiJCfVvuTxHJVoJNxmOk2NQz
+         v/bQ8nEMAmRkl0/ik3s6X8J6t1vUtPTQHGnCdoYMK2F/W5ft7SHMoELPEuW/77+XXGgT
+         3LKzW22RL1Ea6GiHV1dFrLDG6J84gARllNuAi62nPWs1ncDjLWOb4eTz+J5mGLMNlDQI
+         pAaLZm5h2xW2qzhNyGWZlxlYioDBTN2ZV+G2FsG6RkFoUteTVh5T693xdeEL7qTxdNpy
+         U2YA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sensitivity:content-transfer-encoding:mime-version:subject
+         :message-id:reply-to:from:date;
+        bh=paP3qlyMI6KnNaMKGmkQJpNjjGnwohUFHiFZL1DQNkE=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=AFSAFlhF5iz1l7akD7TAzrYKetdrQgSjD7I85gzsaOfxCkxL8STMPeeVcAt/kyXYd3
+         ibs1ArsKs2SvTTK588fhSoEPRO/MXU3MJaonKn9iMWYPhfil/iPFckgvRgDMPdfVkao+
+         0ih6Y0EXXsB/ihsk7gmSUd/wdPN5YS03UlX3tOs/wSpajEQxhucAD314/C+lExrZvvGd
+         KWdeW233ZtePIEOtpIrKjJMf6nRZUgH90b0FiIV3xnYzwGdYT9qITIu+Ed32QfsLm6D7
+         aUj3iJ0y9Ekhd6FtOQjRw4U2nWkXp9kdLhPho0TpfPApGBAWHKtQAC97gBkWkctC91nv
+         DXOg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of ooyama.eiiti@brown.plala.or.jp designates 60.36.166.12 as permitted sender) smtp.mailfrom=ooyama.eiiti@brown.plala.or.jp
+Return-Path: <ooyama.eiiti@brown.plala.or.jp>
+Received: from msa12.plala.or.jp (msa12.plala.or.jp. [60.36.166.12])
+        by mx.google.com with ESMTP id b10-20020a170903228a00b001d4c2359a83si1965642plh.298.2024.01.02.09.00.10;
+        Tue, 02 Jan 2024 09:00:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of ooyama.eiiti@brown.plala.or.jp designates 60.36.166.12 as permitted sender) client-ip=60.36.166.12;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of ooyama.eiiti@brown.plala.or.jp designates 60.36.166.12 as permitted sender) smtp.mailfrom=ooyama.eiiti@brown.plala.or.jp
+Received: from mwebp13 ([172.23.13.133]) by msa12.plala.or.jp with ESMTP
+          id <20240102170009.SEJE843.msa12.plala.or.jp@mwebp13>;
+          Wed, 3 Jan 2024 02:00:09 +0900
+Date: Wed, 3 Jan 2024 02:00:09 +0900
+From: Airport Vault Authority JP <ooyama.eiiti@brown.plala.or.jp>
+Reply-To: removedfor@privacy.reasons
+Message-ID: <20240103020009.VYGR2.12757.root@mwebp13>
+Subject: Happy New Year Dear Beneficiary
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-2022-jp
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+Sensitivity: Normal
+X-VirusScan: Outbound; mvir-ac12; Wed, 3 Jan 2024 02:00:09 +0900
+
+ Attn Dear
+
+I have very vital info to give to you, but first I must have your trust before I review it to you because it may cause me my job, so I need somebody that I can trust for me to be able to review the secret to you.
+
+I am Mr. Edward J. David, head of luggage/baggage storage facilities (Operations Maintenance Transportation) here at the Harrisburg International Airport Pennsylvania USA. During my recent withheld package routine check at the Airport Storage Vault, I discovered an abandoned shipment from a Diplomat from Republic of KENYA and when scanned it, it revealed an undisclosed sum of money in a Metal Trunk Box weighing approximately 110kg. The consignment was abandoned because the Contents of the consignment was not properly declared by the consignee as “MONEY” rather it was declared as personal effect to avoid interrogation and also the inability of the diplomat to pay for the United States Non-Inspection Charges which is $2,950 USD. On my assumption the consignment is still left in our Storage House here at the Harrisburg International Airport, U.S till date. The details of the consignment including your name, your email address and the official documents from the United Nations office in Geneva are tagged on the Trunk box.
+
+However, to enable me confirm if you are the actual recipient of this consignment as the assistant director of the Inspection Unit, I advise you provide your current Phone Number and Full Address, to enable me crosscheck if it corresponds with the address on the official documents including the name of nearest Airport around your city. Please note that this consignment is supposed to have been returned to the United States Treasury Department as unclaimed delivery due to the delays in concluding the clearance processes so as a result of this, I will not be able to receive your details on my official email account. So in order to enable me crosscheck your details, I advise you send the required details to my private email address for quick processing and response. Once I confirm you as the actual recipient of the trunk box, I can get everything concluded within 48hours upon your acceptance and proceed to your address for delivery.
+
+The Requested Information is to ensure that no mistake or error is made and it should be forwarded in the manner stated below:
+
+Your Full Name:..
+Your Home Address: ..
+Name of Closest Airport to your city of Residence:.
+Direct Telephone Number:.
+
+Lastly, be informed that the reason I have taken it upon myself to contact you personally about this abandoned consignment is because I want us to transact this business and share the money 70% for you and 30% for me since the consignment has not yet been returned to the United States Treasury Department after being abandoned by the diplomat so immediately the confirmation is made, I will go ahead and pay for the United States Non Inspection Fee of $2,950 dollars and arrange for the box to be delivered to your doorstep Or I can bring it by myself to avoid any more trouble but you have to assure me of my 30% share.
+
+Best Regards
+Mr. Edward John David
+Personal Email: edwardjohndavid58@gmail.com
