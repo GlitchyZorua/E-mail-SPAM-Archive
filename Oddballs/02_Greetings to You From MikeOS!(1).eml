@@ -1,0 +1,109 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:1c52:b0:454:b5e8:ddf9 with SMTP id im18csp3486444vqb;
+        Mon, 1 Apr 2024 19:17:56 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWyrGmm8+dn1RzqU1oXnYVFzOGXQJy19gzdDJdDW1CoiUr58P8xRU1bgaSpx+6r06qa6ruG8jitKX4dFSpr25VQV7cyPoFPmgQUfKHutOY=
+X-Received: by 2002:a05:651c:198a:b0:2d8:1c09:cdc4 with SMTP id bx10-20020a05651c198a00b002d81c09cdc4mr3055642ljb.21.1712024276319;
+        Mon, 01 Apr 2024 19:17:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1712024276; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0esyJwDjB2BN2TVYG6ppj6LJhVskVXJ/J5St/70Oi5Rn4a4bAFxTAenEdlU9BZzYuV
+         n+k5yHjfK5LPqeiAbM0uARxZ2h/Vp2FAn5zJGpMa9+mZjm/nMwc+1gcj4n24ZvTH7YaX
+         P4mcnU2rK/hmhbwTJ+ooQLhgPRLZxIA1X3w5Ub8za2TY/tef8+kQkvqGeBGLsmypL3UB
+         mt+eWExlk0fr/mK5b5CJeudga0rYTCOEBb+OdvMy0bCSaJJvmegh1CwfBNBde80hGhJU
+         g6ScSr/R5wVPTsHQtPzsaA+HKDsfcDbglO7pXVZuz3jFUQeVfgUi982qnfTxrPLcoQc7
+         NjKw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=s1D5zRqBf6WwazffWL3EJuOlQUm/KSducoHL6/GSgq0=;
+        fh=TabUgAGiK4kvrMLpzs86BfLa0VbA0ElGYuRP945e5PU=;
+        b=Tu5DZJCfUWSp3aY7FoOie+EIFN8/cHArX6BaeTPNd4zEagq1xumupDxaLTzFfsTM+S
+         XFFDByBFGaaC94Bx67N3H6XqYA2PY1fOhOSRqLtZmUKfT07RJcL3G/gtmOQ3dm0sFnWH
+         y9CmyqFRvBNKwCIpacL2UvlFTAYMlIzeWGgscYOagHJIz6eDMXR2iH0bYJaCo1vYVbI8
+         s8XtaeYN5oYduyPYMc2TMvxceQUBMWXeTwsrWpnc+HsG/HuANnVCE/CeXEVXCQ3zTIJ9
+         wcSQXrp07p+r1/tHKS+O74WEgQumWRGzaKhxxoJNZrJKz8X/X4ESl+FherhidroW+mlI
+         ygOA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=PWS5iPwx;
+       spf=pass (google.com: domain of iamserik5@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=iamserik5@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <iamserik5@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id m16-20020a2e97d0000000b002d6df737e8csor1777680ljj.10.2024.04.01.19.17.56
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Mon, 01 Apr 2024 19:17:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of iamserik5@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=PWS5iPwx;
+       spf=pass (google.com: domain of iamserik5@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=iamserik5@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1712024276; x=1712629076; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=s1D5zRqBf6WwazffWL3EJuOlQUm/KSducoHL6/GSgq0=;
+        b=PWS5iPwxVDuS8au+1Pgxbe1z92vA0K8+yLz2JjI0uaKYgxwnWF0IhkICkbrTphE1Mq
+         J3ZcVSm75H+C4Bj+kkG9yrf8dfu7h7yOlYT83XGzHQuDogxYUl2J08jxlakpC3YtgKBi
+         +GDoobAi2aOu6PszHsvFPMkb9vCu328iTate09XG5hgmAkvbz1zSlAEDGg5uOuEGBrXL
+         KVGpLp6zqy8l6uW2sFVPG/gCcCv3r5hS2xkAlpvikR7dDPIMXxw8eBr+VybTtKJdpr9N
+         Dq/7Th0ziC8+ZFHTLIEg0qAxbiQfFcy4AqsCFkQsPyEWrj5r416BnKXLkfRoCr5pcEx+
+         3S8w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1712024276; x=1712629076;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=s1D5zRqBf6WwazffWL3EJuOlQUm/KSducoHL6/GSgq0=;
+        b=KfPTo7j0+FHrPdc+IUt8rrlgdrhfMjAiXNSKMu+IhCsHa7l9AR46M3vbYhQZE7zxbP
+         G8+E3TAE90zss/s9aE66aaru/KvPbbAe3t9aH0t+fi37GuewPNemDJ0rHjso/68CVK2R
+         h6gAEuEYIJGv6rvvkH6skVtp3m0xkv6VmSu1uqtwi0zUPT9qoCiowhAxlzxx+Z2xLHC2
+         JN9ZmdEQ7xcQSn0baHFa1427keP7XU2noIJhyGptFGX6j6KEvQeX0mJfxtAWlbvNZImN
+         Gj6AcORWDgqokDWF0NGS4XYljhnkJ+hUtKyclHshmNUHjdZx3Ss5nh8vs4xQQaKAUcDr
+         Vk9g==
+X-Forwarded-Encrypted: i=1; AJvYcCUtV3g009Rahq0Wrj6YIkROw3y9VXl8OlBgFVMm2ApbjhiIVhtTNY/80A88RJVBDPRVGM/cvlwmmckj7xfc9AUTQrMMogjtkIhpfX53caQ=
+X-Gm-Message-State: AOJu0YzCWVSSRShCA+0vCpm1KonpJS7KGYrDdt2s64YUMExzjEAB8eZo
+	ZPwWUg46t2IeyK2xKZq1Z3rg4MnLtEYHh3TV5NsGv3DK1tuvgE9jZTvW6c78iPZ/I4nw6GUWXlf
+	ALEBteKkSzgItG23MBPa0qWGJGQQ=
+X-Google-Smtp-Source: AGHT+IFGpoVEhMRjbmNejeQQ2A00S6E7CDhI3LgA1Y4ZNUgs+a74MF1zpjAJfemqtFxUFkoU3ZbV5T6itlxg1W/YvGY=
+X-Received: by 2002:a2e:a4a4:0:b0:2d6:f4dd:5e8a with SMTP id
+ g4-20020a2ea4a4000000b002d6f4dd5e8amr6501121ljm.53.1712024275424; Mon, 01 Apr
+ 2024 19:17:55 -0700 (PDT)
+MIME-Version: 1.0
+From: Erik Iams <iamserik5@gmail.com>
+Date: Mon, 1 Apr 2024 20:17:43 -0600
+Message-ID: <CAC6UseWtQv99Utj==xURK5P86GfjwRZ+fqvw30DPD=SC-Mu=XA@mail.gmail.com>
+Subject: Greetings to You From MikeOS!
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000c8a348061513b6a1"
+Bcc: mailmanthingwhatever@gmail.com
+
+--000000000000c8a348061513b6a1
+Content-Type: text/plain; charset="UTF-8"
+
+Hello
+
+I hope you are doing well over there in your country or elsewhere. Thank
+you for supporting MikeOS through the ages.
+
+This is Erick Iams, part of the MikeOS system advisory board. We are
+publishing a new app meant for our best subscribers to our program.
+
+If you received this memo it means you have been chosen to receive the new
+app. Kindly download the following file and add into your MikeOS setup.
+Thank you and enjoy!
+
+Cheers
+Erick Iams
+MikeOS Incorporated
+
+--000000000000c8a348061513b6a1
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"><div>Hello<br></div><div><br></div><div>I hope you are doing well over there in your country or elsewhere. Thank you for supporting MikeOS through the ages. <br></div><div><br></div><div>This
+ is Erick Iams, part of the MikeOS system advisory board. We are 
+publishing a new app meant for our best subscribers to our program. <br></div><div><br></div><div>If
+ you received this memo it means you have been chosen to receive the new
+ app. Kindly download the following file and add into your MikeOS setup.
+ Thank you and enjoy!</div><div><br></div><div>Cheers</div><div>Erick Iams</div><div>MikeOS Incorporated</div></div>
+
+--000000000000c8a348061513b6a1--
