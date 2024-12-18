@@ -1,0 +1,109 @@
+Delivered-To:
+Received: by 2002:a59:c5d1:0:b0:44f:11a3:fa3b with SMTP id c17csp618440vqs;
+        Tue, 13 Feb 2024 15:02:53 -0800 (PST)
+X-Received: by 2002:a9d:7acf:0:b0:6e2:da8c:1bfb with SMTP id m15-20020a9d7acf000000b006e2da8c1bfbmr1010953otn.29.1707865373050;
+        Tue, 13 Feb 2024 15:02:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1707865373; cv=none;
+        d=google.com; s=arc-20160816;
+        b=CVZFC1yqYQbjJqqxEPhkUvulZ1mWZ0v2z7PxibHWFFuIKGX3+V/H4ZZXzSFNe1+3og
+         y4EIAefoOJI0h2x1vCBtNj7HRaNkkl9G0SPHFBKBb+LQqeWMzW09ohL+9N2HndE8VU+R
+         gvXGsxwBIxHKCecgC+WR+3hqAM7UnxwXqU8yMf7VjjleQtCfXx+V1Rpq8mH/VOroec/1
+         9t/R7cBC8sptPTBV/eCIu6FE8BKp1CmUmXn8zkZKiU+qtXaQcaCYkKBXN/v5+21tTLOt
+         iTJDERGneKcgETdg+d91joXFi3LSUSg7feumJZQJKfB+I1EX/Gr+Wxsbj4Q8UH8m11Gy
+         97EQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:
+        bh=LqE400duSElNo7gPak2Fdu0X5v63mmD9n8jQiJhNWqI=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=G66WarR0mGSxNJKz0PoDVE0SqCJ6UC0OeGNnbR1eSlRqPeB1db82zwIJbvrz2mrqzy
+         WzLm7ri7THJyAgp1UJYpa6HJ0l3f8aKkmedEGOkh4hP5cO7tqE9iI+nBjQcJsyGnmQnc
+         GkHknneIiCF/km3129LGXhL+742jmjEhCp9ewNh+jq25kud9F+xMB/UaUb6IY6gY1k6T
+         /0pWP5ZSm5KH9d89AN+Q97VhK4ldPsqXP5+CHE87tkE7jNXmXtWVFnEcQeQakbG2Ft4H
+         17M/vDpcpE5R15t6Q3trahoWfvNmVw4DbPE77B6lkPa5WvJMMn2GG3oB3/yzVWcRVG/a
+         20nA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DcwUXvtQ;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id x3-20020a9d6283000000b006e2d63e2debsor998571otk.15.2024.02.13.15.02.52
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 13 Feb 2024 15:02:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DcwUXvtQ;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1707865372; x=1708470172; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=LqE400duSElNo7gPak2Fdu0X5v63mmD9n8jQiJhNWqI=;
+        b=DcwUXvtQZIRsibb95XJe5GCsU37/pkFthhD4ZjrHD52BUxGy/7Y1HsQdGzp/VZQ/+V
+         vW8IJOR+SnEeKjF+QG7YY/N4iK71MqnZWBd2au6eo+5cDfJ0KztOPyYYUqQOXiK5V5EU
+         otVIq9dPnBOarV4cE2/sGDy0o35+Ff1/N5eo3fa5Un7Fc3yHWUeQhov2afvbqB3njZQN
+         wrtNOZ6Zheiz1TsDr+AaVTOg3v11r0FZageOFGzpVanWDhMejrA2W0tQbwzTbrpwNzmZ
+         BPIwVu3BUBBzuNXTWQIDaKmyPi54+TivxslKMcUyJQNqB5yAp0PL8cxUhB2zXB0Z/qQF
+         sGVg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1707865372; x=1708470172;
+        h=to:
+         :from:
+        bh=LqE400duSElNo7gPak2Fdu0X5v63mmD9n8jQiJhNWqI=;
+        b=seELdetU1R7YNbcphOH9iLqQSWze2rvuVLQGFnpOANCd/7IwtY62ZSU/aUYfSv5iKY
+         sBDKuDCkhxMIxWIF4u8kO8WUMlfYrytMrHBsGyVFZFrGCjrajXgPJwKaEqhgAJjDC8ru
+         JN5OnzQZzy5YjB3sOIKozczmr5D6/uuF3ZY4RRbaWpoYuqnyB/XZ5ST+edkpOkMRR8jF
+         2LPTGRb3ZwTY4cmy1Av7tH1b7Y3ZfvpjI27RsLDHrTruuYAmbF4bK1Q+fNiZ37F+mmzA
+         DRZ7HyCNIr7yx7rRsSoAFjf22DmHQoVHrdrRbZoUV8QE4GDhy9AR3SKJ7qlXp/oWpW6P
+         cwEA==
+X-Gm-Message-State: AOJu0YxFFPdFfvH8LIz+9iryXwEKTd0MlWiDuTWiTD4M0PHoz3C/eIfj
+	OUs+fQtjvzUWF8aj9UwLresbqbfpgJ32g83oGdVOhB/L0gSW2Lk9UGc0sGQOOWr7AharHMj1Cvy
+	eBxafzuhfA0G3lPmvl8CaQH7xEJuT/dwF
+X-Google-Smtp-Source: AGHT+IHlSWdDJ3XW7nHE3zmrXlyplE4J1hdDPqAjS9rCOBL9vXzsSCmzRrF3+mVTT4c7CK8O367OnKfr4DrnjzU8Ojs=
+X-Received: by 2002:a4a:ea05:0:b0:59a:2da9:3e53 with SMTP id
+ x5-20020a4aea05000000b0059a2da93e53mr1219224ood.8.1707865372288; Tue, 13 Feb
+ 2024 15:02:52 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Tue, 13 Feb 2024 15:02:42 -0800
+Message-ID: <[removed]>
+Subject: Regarding Your Subscription
+To:
+Content-Type: multipart/alternative; boundary="000000000000d6ec7f06114b64ac"
+
+--000000000000d6ec7f06114b64ac
+Content-Type: text/plain; charset="UTF-8"
+
+Greetings! I'm a representative from the Omori Discord server and I'm here
+to discuss with you your recent subscription to Omoricord Plus! I'm glad
+you've decided to claim your free trial of access to an exclusive channel,
+five new colour roles, and a daily Gil ping with no risk of warning! If you
+wish to continue this subscription post-trial, (please please please please
+please please please please please) you'll be asked to send weekly payments
+of $9.99 through Paypal to [removed]. We
+hope you enjoy using Omoricord Plus!
+
+With thanks,
+Ryeish (Omoricord Plus Customer Representative)
+
+--000000000000d6ec7f06114b64ac
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Greetings! I&#39;m a representative from the Omori Di=
+scord server and I&#39;m here to discuss with you your recent subscription =
+to Omoricord Plus! I&#39;m glad you&#39;ve decided to claim your free trial=
+ of access to an exclusive channel, five new colour roles, and a daily Gil =
+ping with no risk of warning! If you wish to continue this subscription pos=
+t-trial, (please please please please please please please please please) y=
+ou&#39;ll be asked to send weekly payments of $9.99 through Paypal to <a hr=
+ef=3D"mailto:
+[removed]</a>. We hope you enjoy using Omoricord Plus!</div><d=
+iv><br></div><div>With thanks,</div><div>Ryeish (Omoricord Plus Customer Re=
+presentative)<br></div></div>
+
+--000000000000d6ec7f06114b64ac--
+

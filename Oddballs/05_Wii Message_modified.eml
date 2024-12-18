@@ -1,0 +1,69 @@
+Delivered-To:
+Received: by 2002:a59:cde2:0:b0:42b:92a8:c8f7 with SMTP id b2csp6953252vqx;
+        Wed, 13 Dec 2023 14:05:52 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFp5r+X4IBHCxA4hu8baCs1ubN5kh8pg+rp3TPgSYpsqwzxUoqXrWApIhCnxVS4+pjEw7eu
+X-Received: by 2002:a05:6512:1106:b0:50b:f847:36c3 with SMTP id l6-20020a056512110600b0050bf84736c3mr6211723lfg.14.1702505152122;
+        Wed, 13 Dec 2023 14:05:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1702505152; cv=none;
+        d=google.com; s=arc-20160816;
+        b=b98zFgbQ5rd92bzqElQroUGmmq0Nwh8O1vt51FtYJsEKyp55U2Y3TcvBy7NWHCZClF
+         tMqi3SwyoMc7dKaqWUw1ZK3mLQq9FcB7vr0SOp2lKLJRxP26Q9kzXBWnpLHqRhg+OOAh
+         XQ6o/Jr5+2BWWd+vgvermRWNV5XM+bUODLDI1wpCxDY19mm4DvG1iXqSE0vPzrJK7eH7
+         b55quy9C1n81RTdaC8BwSRJLpgRNQTwrhratw43Y/juSGcbEG55NpeYKssYeOH4/tOYv
+         XqejJvYO/xuozC/TKvV2eeQRftgMJL4GB43L48Br20geIxD2sGFFtDpeI7KXpmQx6xSv
+         GUXw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:
+         :date:sender:dkim-signature:dkim-signature;
+        bh=2RWTJZvpWJWA5TYyqvocYrUZmfKgEFt6gHkPNqYYS2M=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=aZg53pr545ZI5IzbpSLcVPzNkPG4tnkUWVO6pNw1RR1TiaDq+ydGuLAgukiocrwcnb
+         WblhcKYIk+LFD0HRwUOyTR6wR6gFVPZwkLll4mwkwRd7KJ+K0akL+MGUT3H0nvtNASkL
+         S/30RtL2sYLgrQlyAPB7j1sL6C3DA6C3UjJb4m/SnA3XZgS2q6aJJ+e68K+2XZXIfoSy
+         oHFjkCL9otZIbfcs9jAAJZ3G3QSVLIDS2LCQwVd7dS8USBcsXE5+edJQfXkpnzeTywdt
+         fyDO39Iqmo4Dh4z7iUI6C+fLP8zsS4NqiXAJNIP244ezNkgpFbpGjwkNyvv+mISfE21H
+         hFUQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@rc24.xyz header.s=s1 header.b=R3L3JTNK;
+       dkim=pass header.i=@eu.mailgun.org header.s=krs2 header.b=khOWtsyj;
+       spf=pass (google.com: domain of bounce+982137.52235-mailmanthingwhatever=[removed] designates 161.38.204.234 as permitted sender) smtp.mailfrom="bounce+982137.52235-mailmanthingwhatever=[removed]"
+Return-Path: <bounce+982137.52235-mailmanthingwhatever=[removed]>
+Received: from m204-234.eu.mailgun.net (m204-234.eu.mailgun.net. [161.38.204.234])
+        by mx.google.com with UTF8SMTPS id y1-20020a05651c020100b002cc41d5992fsi43256ljn.384.2023.12.13.14.05.51
+        for <[removed]>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 13 Dec 2023 14:05:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce+982137.52235-mailmanthingwhatever=[removed] designates 161.38.204.234 as permitted sender) client-ip=161.38.204.234;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@rc24.xyz header.s=s1 header.b=R3L3JTNK;
+       dkim=pass header.i=@eu.mailgun.org header.s=krs2 header.b=khOWtsyj;
+       spf=pass (google.com: domain of bounce+982137.52235-mailmanthingwhatever=[removed] designates 161.38.204.234 as permitted sender) smtp.mailfrom="bounce+982137.52235-mailmanthingwhatever=[removed]"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=rc24.xyz; q=dns/txt;
+ s=s1; t=1702505151; x=1702512351; h=Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Subject: Subject: Message-Id: To:
+ Sender: X-Feedback-Id; bh=2RWTJZvpWJWA5TYyqvocYrUZmfKgEFt6gHkPNqYYS2M=;
+ b=R3L3JTNKp+2DbontwsnTEQYBjkEiINZKN0eoStwUinplLcKT5IfNC47Ad7Qe1Iih1+W0WsBy0G6CAgu9hH25niikZVpLOb5/8WUfzrDFMqHkIFt2ii79zep92alc87ddXerNSqqzmj5UY+P7EqNwuu9lKPzmtsELZwl+DutIqzA=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=eu.mailgun.org;
+ q=dns/txt; s=krs2; t=1702505151; x=1702512351; h=Content-Transfer-Encoding:
+ Content-Type: MIME-Version: Subject: Subject: Message-Id: To:
+ Date: Sender: Sender: X-Feedback-Id;
+ bh=2RWTJZvpWJWA5TYyqvocYrUZmfKgEFt6gHkPNqYYS2M=;
+ b=khOWtsyjL5TgDnOLdjqiUvgDvvvo7+/GjDF3XP1VTgT4jHoRwqQYTGr1l2Pw7HvlwJteCiXQCKMJIVyTB8zp+NHWDKEd1WipZgzzSVcPseAHc1Y/zpwGj85YCS20C8PXXogmmIp6dBvvI3lmqq3RN+CfPS6ytP9TAaEicuzE860=
+X-Feedback-Id: [removed]::655ab38d9e50ebd72614f0a9:mailgun
+X-Mailgun-Sending-Ip: 161.38.204.234
+X-Mailgun-Sid: WyIwYTEzMSIsIm1haWxtYW50aGluZ3doYXRldmVyQGdtYWlsLmNvbSIsIjUyMjM1Il0=
+Received: from localhost (vmi586866.contaboserver.net [167.86.108.126]) by 86ada5a1009d
+ with SMTP id 657a2abf9a747facb3bf60b1 (version=TLS1.3,
+ cipher=TLS_AES_128_GCM_SHA256); Wed, 13 Dec 2023 22:05:51 GMT
+Sender: [removed]
+Date: 05 Oct 2023 09:22:56 -0000
+From:
+To:
+Message-Id: <[removed]>
+Subject: Wii Message
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+:warning:
+

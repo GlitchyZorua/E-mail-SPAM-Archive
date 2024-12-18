@@ -1,0 +1,155 @@
+Delivered-To:
+Received: by 2002:a05:612c:1b13:b0:49b:3a60:d7b with SMTP id ie19csp3523873vqb;
+        Tue, 22 Oct 2024 15:20:35 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFo9ex4BndqsOLegj56LH9Qe3iIK+wWhnFo50lXJ2Z38K24d21m+ZobGZ4xBrmcJnLFCan3
+X-Received: by 2002:a05:6a20:cf8c:b0:1d8:f1f4:f4ee with SMTP id adf61e73a8af0-1d978aebd78mr759305637.8.1729635634942;
+        Tue, 22 Oct 2024 15:20:34 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1729635634; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=ldWttC1NaULjvUkW4z23oyHw2cKVbZp9AJTGnA/5Uej45c3QibroYLATtsIg4iG3BJ
+         N2xhNM2iP81syFZQT/kg3rGsvvIkxS9d03Ws/MhwSXAyf0tOInUC6bCX7CXJlLLAq/X3
+         LlVWMNfAg2j9AwQalYRrmeX8S5F+3ymV3X7/saaJkBONqsmotYDAEW2/iRrjU2uAsQXF
+         P0zwU+d0uzsTjAVj9hcXQPBQdmWBENCJBSdXdCL8VInfuCCbqzsVdbumeOPn0MSTIdiQ
+         IAjygGKqJtlWHwxY570MlqPrrU8h92NH3j0qiaSR6pNwYy9aRhRCmqKTwVqP/oaMrvrO
+         8QNA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:msip_labels:content-language:accept-language
+         :message-id:date:thread-index:thread-topic:subject:to:
+         :dkim-signature;
+        bh=mOYu8AneDJg3NNbRUxTxRvDJlqebUCl4CqXllwHAC6c=;
+        fh=CCyaa74qj7D7ZdNjnUHNPt9NlolrqMjOuj/AsYq+ZV4=;
+        b=CEg1Ebyh5OR1YWSunkJl++B6efoY6vowwGUksMR/u5DUqzTixoelAd8mPmFafkYNvz
+         8pjHNzcZPIhHjXKCJ3x1GctqP9O56ipFr+hBak8P57SR8n/e+g43Q+t9gj+S+RdSbOSi
+         AWjblz3rmCLsfh7C01To3dFUJ6ejWTX+YEduxPxGim4XamCQrWzzNPSLbmPm5LE8YEgD
+         52Z2g4B1y8onyJnZ4yIcCXD1H6Hlqn2GF3HUR3rgSNzZvxTlbZi9QoCZXh592fEEOiLm
+         Q/1E4X7ECBxPCrByhnljGGDuxO78dze/wPCIhpFBiz1HCFCPmGs2OB6f5TftNW473Vgg
+         5TXw==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=W5dtCnBB;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of [removed] designates 2a01:111:f403:d111::2 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+Return-Path: <[removed]>
+Received: from CH5PR02CU005.outbound.protection.outlook.com (mail-northcentralusazolkn190120002.outbound.protection.outlook.com. [2a01:111:f403:d111::2])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-7eaeac4a2dasi6723443a12.828.2024.10.22.15.20.34
+        for <[removed]>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 22 Oct 2024 15:20:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 2a01:111:f403:d111::2 as permitted sender) client-ip=2a01:111:f403:d111::2;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=W5dtCnBB;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of [removed] designates 2a01:111:f403:d111::2 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=U6e1HGMUbaUTfLcKkDyvNa5RDcI7g0BTll+DfVfN73G+qK17EpIlLF77p5LjqgN7phsaBVYOIF6nKb41fWaILXSFeWA2w0dXVkxS8JEN219J6InNEJoyS3BTLPcISXdsBnIuS2bvbmGgYXmBdQqeM0PNtx9JwNx3MAKbYL9SC+4/YSkDqeJdA0fYCgB80IkdXPBodN4JnApDh+Fq2JXG1Czss+Q9FPknPxQRG1Q6OrDvmriw1M3P7PTAniqxyD+34D2/Qx6LCxAONUj0Y21iuptBWcCNSAvogXCA8+KEZoFk3IogoG2turYPk3ksvB6gq4FzN7XhgfOFzmmQFa4cTA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:
+ bh=mOYu8AneDJg3NNbRUxTxRvDJlqebUCl4CqXllwHAC6c=;
+ b=xie2FTEla8dtcRictvCY5pBAlhrddCFkdnAKfVH1tuySi4W06RNipgY5ylysluGgn4cu8gL7wINC9/ImE522nWzKcWIC5XiFMfbuaJoQriGOtVDPB8fNaYMcxZanZevrsaU2FtX8+mUgP5j4LW+El8sCYsyrZbWxnD8mtpssyQIISELx0g57DbkPFfcU0HhOE2WMVecEQ2XpS41MCra8adWyve4fk//jZsxirRLutC7mgfN8PO20dmzDqv9COh5+Rrc73b/ZGtI4BsNllZ++u3A3QnUFEU8va5fd4jAOD6Xlj1DC2S6QsmG2TRc7olTc0qnoz2gkelzMtM/g5WKkIw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:
+ bh=mOYu8AneDJg3NNbRUxTxRvDJlqebUCl4CqXllwHAC6c=;
+ b=W5dtCnBBBrA4GClN06dCC398gd1DVf5LEAlDzu8A/BDSELZLHw8v/8K4lBjVVyOIzfOQwwJXjffGuMMC90gpQ3kRbzuzQ3SWZyKVwK01TSoG9SqCB1mYzmtFYY4xsjDEgddo552T3ugvMgmiNeniCdxlsNCELhq8YrXadZpKDp7wtSekWKjjcsfNEM3eg7QvhkLvJcVIoFKaNkDdHpvYKQnvjXOYl/uM9mn+WYr4eBs0PpqrncpVh47B1BNiLW8CIBiMnN1sykeH/RJRXbVqGi9qH8BEQcxCBCkByy3UJZ8nfJnSnZfj3LYju17bYzklHmgVY0f+EaCONWAYKyBvbQ==
+Received: from BYAPR02MB5558.namprd02.prod.outlook.com (2603:10b6:a03:9b::16)
+ by IA0PR02MB9558.namprd02.prod.outlook.com (2603:10b6:208:402::9) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8069.28; Tue, 22 Oct
+ 2024 22:20:33 +0000
+Received: from BYAPR02MB5558.namprd02.prod.outlook.com
+ ([fe80::7402:8658:f278:27ce]) by BYAPR02MB5558.namprd02.prod.outlook.com
+ ([fe80::7402:8658:f278:27ce%4]) with mapi id 15.20.8048.020; Tue, 22 Oct 2024
+ 22:20:32 +0000
+From:
+To:
+Subject: bindows update
+Thread-Topic: bindows update
+Thread-Index: AQHbJM/wXYSnvm9KtEKe0kIcFM0txg==
+Date: Tue, 22 Oct 2024 22:20:32 +0000
+Message-ID:
+ <[removed]>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: BYAPR02MB5558:EE_|IA0PR02MB9558:EE_
+x-ms-office365-filtering-correlation-id: ce72dfa8-beab-4776-9fcf-08dcf2e7be9d
+x-microsoft-antispam:
+ BCL:0;ARA:14566002|15030799003|461199028|8062599003|42300799015|8060799006|15080799006|19110799003|4601999012|3412199025|440099028|102099032|10035399004;
+x-microsoft-antispam-message-info:
+ DhxC11uTbWK8Ckt3784pJEOP8cHBYsWAA3Dgw29v2Q7B49XkRv7RP7mpUSe4NOaHQ5aHAaooU8dFaFRiXphxZTVJlFAMuzdryL6dfydiKkRoCoJ4gizUHTb36x9dPbHfZfTz64CTcOZBwTPmd/sfMWam2ubJGWV/oXAh4h5UC+Ed/wHPw+zDS5goCv+5EixcSc3wlQwPitYXLFIZEOUJOELZZ0lshIHciwrJwUq7xKM/W1zZ5tAvkP4CoHv0VnZJhSZQvx6STgCrIjjz0aWRpvUh73lspkfzY3NFTDwz5ZPKXFQTHLvgPRdokySMx3ao5m6nCNreDo5bUz5qtBbbfSj8yT6295obN4VYc9TspOhM5iMbdKiykCcV5lC1eQg0uc8EdW2exmpkfYf5bdYAIZlGovQU2h1cBr3F7i/5sr0VlkOAcxmZAqGDlyJ8C/Wh4XOSwnrrZsGO5qDut//KtwAwdxDoetaL3ORTLxxrZoOWWFt13URxvQ+n5dk7HXdNVzQhy/Qga3lxcCIr9qUcdSc38FHf8kWtbEc6RPUOoqVxIZWoXErqS0FRKY+W/iC6ab5fQkjUv05EWcMBENRVt/nMIr9MAAc8HVdUl7yCA5SFzbeUarMmio5bHSLX4lhfaTBfMxF6wmHGZBgTLTIlGOi2yN9yAVjag6SjCCyfqkRM0GWFSwzt7bSh0ItUzpEMGYzgGagPysPtQVyAYYPnLQb6J9TMbgoTcPFFhfqNZJhN7ASqhYV18kZWyY+JHUYtqpkXrViXEBFhLtyRJE4yw5GX9qVH1xLIrFXb9f2RgVmRV1E5IaZrC0Wap+5DTPX1RfZaU31xZmcJsziXU4r5aIOu7tfKiLcGREBioLYrXSD4r0I7N0Axryn3qtMJ/ybN
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?1LOgdvRqnwmtbvm3bg4cAzMPotv4z5XdZl8o61jh8SnkSGmKq+LFDzzppz?=
+ =?iso-8859-1?Q?/h0ypnaGQ5uerK0+l33PBETqWBJU5XYyF0uLVw7zppU7KoE7BSI4eKhEUj?=
+ =?iso-8859-1?Q?F4MsBJafbV6dSWO9j50HgcjDCLQ/k2xcdd5PdPBtXKxW1jadtDxgx3oqgI?=
+ =?iso-8859-1?Q?eKQCCOPbnZkO1sZuZVOBXmK/8Mc4+8qXHWs27Tr1zwBiR6jcvSXfCjjhYe?=
+ =?iso-8859-1?Q?lrZFuEsrXqqJWAaQZOcmBsYERpyObw9LctuS8IN677Ak+4Xrle+Jf0dAQS?=
+ =?iso-8859-1?Q?ZmYPYXMJ54ltb1+4wWgkm32L5sqQlm7oL64jVTSK1z7g+NMS9ukcrVJ2Dz?=
+ =?iso-8859-1?Q?mI4jA+1hkzhbLFA/odutIqlfbSUMN5GI3rGILKRqk//wj1AWFy7ah1cPZZ?=
+ =?iso-8859-1?Q?LuAUvpWfe//eUuWOcXZYNSPVhIpBwQskApEPqV9+GxjaYOyl3HCwi9unVU?=
+ =?iso-8859-1?Q?BeVusIMBWOSzsim98dRQvs2F0Bp2qHp5qAzQSF7zuV4eJDrGYG/5e0vaCp?=
+ =?iso-8859-1?Q?cZnj1suPdxfAWK1jfkFwF8uR1LwaDoEFT3YSWzCUetMesvOBiGCGmv/vk8?=
+ =?iso-8859-1?Q?B7XXRJufC5URVJ8SHB79XbD/gnPO6hEftApvRetqois1Ii6HFl0FG6JNti?=
+ =?iso-8859-1?Q?hwZaLbpblZM6BiNm0kX1xZ4J+7pxO0XrdcBQIuamyKjVpM34euMcdI9Kzz?=
+ =?iso-8859-1?Q?kuWuEFJ7XNdS4mEosf21Y8BojEXHiPbozpyUUJpJChkjJkE2HMi93YIeYF?=
+ =?iso-8859-1?Q?TXl4MzgDJhOBRAzYYmGw5r8HEf0V6CqvBqM1ApD+9HcWqSO/O9Mrs5gIJp?=
+ =?iso-8859-1?Q?VJy24k/tXGtVssF3gcRv8OysbcCTi969o5+eBgHn3kR7oQ1wC7CXIQaTj6?=
+ =?iso-8859-1?Q?+mDe9q6paiU3zR84bpBgTyfWqTcRsvQqIKur7L0dkKAnRlD8sjJd+n7HGD?=
+ =?iso-8859-1?Q?t+4T42dfaNeeFku2YhDsXg8EZsHagn9/ou8DNjuF/9oi/+kSP4GA9l86OA?=
+ =?iso-8859-1?Q?k2x1zjj9WWX049lFydsGSdYx2gI+KuBXSNDmfzTEbtm2aAMqEHTOFLtstB?=
+ =?iso-8859-1?Q?SceQcqDvpDc+MG9D0ME393adpOeRGipQlI91rIxfAZehtXg8NgZVEr/Non?=
+ =?iso-8859-1?Q?j1X6C0A279tZJoc1rzL4CfkQW47taNUIA/hk/ITE0vaHx9h2vDtUaChza4?=
+ =?iso-8859-1?Q?kLq/66bN0vZY3FGo8cGMjMtUCxM1vyhE4KyCKgZv9XADpbN/KDSM3rBKqP?=
+ =?iso-8859-1?Q?F/mnlFeTsE7UDasKRSLg=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_BYAPR02MB55586BFC88D200B8DBD226E1AA4C2BYAPR02MB5558namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-7719-20-msonline-outlook-0f88b.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: BYAPR02MB5558.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: ce72dfa8-beab-4776-9fcf-08dcf2e7be9d
+X-MS-Exchange-CrossTenant-originalarrivaltime: 22 Oct 2024 22:20:32.8929
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: IA0PR02MB9558
+
+--_000_BYAPR02MB55586BFC88D200B8DBD226E1AA4C2BYAPR02MB5558namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+update descargar https://dexrn.duckdns.org/update.html
+
+--_000_BYAPR02MB55586BFC88D200B8DBD226E1AA4C2BYAPR02MB5558namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+update descargar https://dexrn.duckdns.org/update.html</div>
+<div id=3D"Signature" class=3D"elementToProof" style=3D"color: inherit;"></=
+div>
+</body>
+</html>
+
+--_000_BYAPR02MB55586BFC88D200B8DBD226E1AA4C2BYAPR02MB5558namp_--
+
