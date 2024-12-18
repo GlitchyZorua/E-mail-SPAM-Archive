@@ -1,0 +1,149 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a868:0:b0:4ab:72de:5861 with SMTP id t8csp114014vqu;
+        Thu, 5 Dec 2024 05:50:15 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXgUvTEXyfsQC7Z2gTWuQu3GkFyc3CrbmszqiwoADQ0E2AWxF/+6KuxaZqgZRxnvM7wyxbU3ftYi0xH3IlTZZdlBEblUw==@gmail.com
+X-Received: by 2002:a05:690c:7449:b0:6dd:f81a:80fb with SMTP id 00721157ae682-6efd03f35abmr34508017b3.1.1733406615763;
+        Thu, 05 Dec 2024 05:50:15 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733406615; cv=none;
+        d=google.com; s=arc-20240605;
+        b=c5xNy8mMqIWuxDxtdLA7tCpg1ffkhXUAnZKWeMrkRXl3T2LjK6vaOa2uAltLM5y7BA
+         6V4VmRkmLwusF9PWKirq3f4H5XKkAIj/3pvwQSE929Bonb3OdqHh3hXZ/rc/tmxTiZ1I
+         coVDZ6x3mOvo0r6Vi8hqhqT/oJBh/gk2kJhJeoScIV/plUJx11TN2i5bmI7kIdNSE+8+
+         mq4xWROw6PHW/fMb86L4S2B6cvhtKn5IvqiLjyHYU7YD9AfNufwbUPcI2mxZvPYqwLe8
+         xkjhsSeKj5BobOfut5vffbQXl/dH0wVDGihWHp3kJ5qPx/OLbBS/Bnu4623wDu6MmoGo
+         y7CA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=j8Xy7gSn766NFlsNNxVjme9xMsjKhWu2CWdaxNCJYu4=;
+        fh=TAwE/iLVPyAtoUvykOycteyUgzJkvi6uILkpbv22S4Y=;
+        b=b9oZEPgohEVWa38H8AfHbTWDez1t1+r4Vh5PIT0m2+i4YTqGwUzdQOgY33PBl3OeS/
+         n6QQQxCtCbPDGj706m9HnyoNZdMBJ3nzWBQ5+875JUK2K36eN7naAiwc4tXS3NXrrcyR
+         xGeFsytjeoKmD0bbGGha2WLYyTzlmG+3AGS3ioslOcrE7spCB1WX6saqwJSZXAvT/+ed
+         3h3D1cYtrn79gDEojQ3W+OAsmGw4c6lsRbNeMNDei2x14xREdIsy54W7xkafY2+5XYno
+         zpQaB5gLeMBc/EucD1330CnaB8aZ6snI77Y9RRBFE8Nym9X++hQ38KaonXLXexNumsDO
+         GyIw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=nGNxEIQ1;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 00721157ae682-6efd402fe54sor7967977b3.3.2024.12.05.05.50.15
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 05 Dec 2024 05:50:15 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=nGNxEIQ1;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733406615; x=1734011415; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=j8Xy7gSn766NFlsNNxVjme9xMsjKhWu2CWdaxNCJYu4=;
+        b=nGNxEIQ1MVhGn4VGuw3rU1jAk2gkQYaUIsg2FU3xN3KV+KtIoORdWau45Zaao6NvY6
+         j8Xravf7xdJutNogm7HxC7wSHbwAueR8dayZv051oQv0jLQKYgi9yWaAw7O8JSf2iXjt
+         PMKrjDLXmBP/daXSutBr/Qc8jFwE8ZkZR9D7hY8PYbrW8FZVknD+gRkhG9xqcr5oWLn+
+         84R0nLsLo1HedrdHmM/6q68xjd8ciPc3zZEqAgx3rvw2YTnYONSplFXsl00zQtKPAPN/
+         dbvKKZXAWNy5q1zf8787tpsZpueuGwS97zmA4IRlupJy2fzFJB24InHPf9DOUI4H4gjp
+         z6gw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733406615; x=1734011415;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=j8Xy7gSn766NFlsNNxVjme9xMsjKhWu2CWdaxNCJYu4=;
+        b=c4i/BA+0GspxWwfY8VQYDSA4WK/2/soKH/iyXQfz7ORg9YBF2e+h597OqKxtgQy+33
+         tVagPyNjBJCECDLbMHL/RlTA5uYLjugx8TqHUN/vA9ilHqF5xvR4k+Un+ezY+d8pz7RJ
+         8ElcfB9jmlx7uE6knzzEa2FIM7nMWGzTA3GL7gdJKxYyGMC5RUk3M9cgD8JkAS08yLiZ
+         R6i1D7GxFBXDLIL0c/YO4QcRQgxGWlRd6CECMQclHvnOPLvi5gNg5qY+7Rxx9i0+RBxu
+         XiuJgNyCq0HqEkt2AeVlO+LY1rzU/uPmBJBIt1DsH/KZGFov2sZ6alIO931BUDZZ4Q0O
+         AvDw==
+X-Forwarded-Encrypted: i=1; AJvYcCVQpWn1GWn8I/IeesraM9bxvvtoIE2VxIGOVTzWWK7Su3Vqzu8v3WceiK1m7jsFUjksNC+dm3BI7HHQv0hct8sV2ma3qw==@gmail.com
+X-Gm-Message-State: AOJu0YyOf7Iqnt1EMnKd7Eg02G9ixFGRcrb9Itg87wqSwmvbIHosLSUK
+	EzUv0lxFMVjBaiz6Tjbt0+aKDH4lEZyUEkiDi0AHyacNaQU9VeBX9mFKyzGjYjUpIdYwu+sdczg
+	j72SU+cxH8UAwGipLLLt7s5d5a2I=
+X-Gm-Gg: ASbGnctGseDwuB3SdmjS33BDuIjfVO+OcKrjeq/Luoau5pmpenhaMVyOYi59nww67AZ
+	wMfMtAb615+ewrU3F3WyxvCTNNu0ZHcM=
+X-Google-Smtp-Source: AGHT+IFwGfcpR6/41vvpmITdzsxbiApo6lD/dWaUrBwlbHqbzT32CTtMdtDNvjxxcdO/odR+jJlc4x/u1Xgn31itylQ=
+X-Received: by 2002:a05:690c:7484:b0:6ee:55c7:6128 with SMTP id
+ 00721157ae682-6efd041d77amr25612427b3.5.1733406615403; Thu, 05 Dec 2024
+ 05:50:15 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Thu, 5 Dec 2024 14:48:29 +0100
+Message-ID: <[removed]>
+Subject: Follow The Directives
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000009006320628862daf"
+Bcc:[removed]
+
+--0000000000009006320628862daf
+Content-Type: text/plain; charset="UTF-8"
+
+First National Bank of America
+Dept Credit Services
+Foreign Payment Issues
+241 East Saginaw Street
+East Lansing, MI 48823
+
+
+Attn:Sir
+
+How are you? This is to inform you that your ATM CARD is ready and will be
+despash to you by Mr. Pepple Williams, a Courier Diplomatic Agent.
+
+The ATM CARD security perfected with the sum of US$3.500.000.00 (Three
+Million Five Hundred Thousand United States Dollars Only,you will only be
+allowed to withdraw US$5,000.00 only on daily basis as soon as you received
+it wherever you are until you cashed in full the total amount.
+
+This was packaged as a Parcel to be sent to you as a compensation and I'm
+presently at Oakland International Airport with your package but
+unfortunately, the delivery was interrupted by Airport Authority because
+you are required to pay a sum of US$350.00 (Three Hundred And Fifty United
+States Dollars) for obtaining US Tax Clearance and Custom Duty Permits.
+
+This is the registration code (UGXA/102F-8550) of your package, so kindly
+use it as the subject when sending an email to me for identification and
+also don't forget to re-confirm your delivery details in your next email to
+avoid any mistake.
+
+                  [removed]
+
+Yours Faithfully
+Mr.Pepple Williams
+Senior Diplomatic Agent
+
+--0000000000009006320628862daf
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">First National Bank of America<br>Dept Credit Services<br>=
+Foreign Payment Issues<br>241 East Saginaw Street<br>East Lansing, MI 48823=
+<br><br><br>Attn:Sir<br><br>How are you? This is to inform you that your AT=
+M CARD is ready and will be despash to you by Mr. Pepple Williams, a Courie=
+r Diplomatic Agent.<br><br>The ATM CARD security perfected with the sum of =
+US$3.500.000.00 (Three Million Five Hundred Thousand United States Dollars =
+Only,you will only be allowed to withdraw US$5,000.00 only on daily basis a=
+s soon as you received it wherever you are until you cashed in full the tot=
+al amount.<br><br>This was packaged as a Parcel to be sent to you as a comp=
+ensation and I&#39;m presently at Oakland International Airport with your p=
+ackage but unfortunately, the delivery was interrupted by Airport Authority=
+ because you are required to pay a sum of US$350.00 (Three Hundred And Fift=
+y United States Dollars) for obtaining US Tax Clearance and Custom Duty Per=
+mits.<br><br>This is the registration code (UGXA/102F-8550) of your package=
+, so kindly use it as the subject when sending an email to me for identific=
+ation and also don&#39;t forget to re-confirm your delivery details in your=
+ next email to avoid any mistake.<br><br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 <a href=3D"mailto:[removed]
+otmail.com">[removed]</a><br><br>Yours Faithfu=
+lly<br>Mr.Pepple Williams<br>Senior Diplomatic Agent</div>
+
+--0000000000009006320628862daf--
+

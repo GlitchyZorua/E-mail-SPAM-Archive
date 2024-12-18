@@ -1,0 +1,123 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:2327:b0:4ab:72de:5861 with SMTP id fr39csp48580vqb;
+        Wed, 4 Dec 2024 00:17:27 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCWcBVz3PFIs5SQxrmwzYpXYmkNBZiiGC3FOlwE3eg6Sja7DThOGwljtG0fsljSwY3bE1lFEKjAlTGM4DS+XjI9gnzja4A==@gmail.com
+X-Received: by 2002:a05:651c:505:b0:2ff:cf77:a28c with SMTP id 38308e7fff4ca-30009d2a0dbmr32531941fa.40.1733300247061;
+        Wed, 04 Dec 2024 00:17:27 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733300247; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kiXnVfqeGx2wfFSzDDQiqmXTbfY5nkqG++qvy9T0WtpGeA4LK4Hsd1hwaTWH2ms9mb
+         togccexsSLyoXVM+cR3H5nEOMZymDkHaJzc327bmBDlo5Ejpb9+bG4cwLQLY1dw5Kx5R
+         L0svWlroPQ1aoSFVrJvX6Vxyt9fnBK/J4F69UQOSYoSLkXxSWQJTlJZIp6dA0kVLZscM
+         Das6kg+OLGFhJCRkkVGUsdgZS6T1UdyKODFI/5lEKmzGgAt3DecsMlPwn915H8i+11II
+         uwEYAepayzo2TwyJ5vyDtZwINis48gW5bP63+GQQKlsnOm5g3fmo8DPnWkDaPCkRH1og
+         GdWQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=CcjuHmgRUg8S7hQXwtR8hFqsbE6Waccum2J4PbQXByY=;
+        fh=KmsEHUJvtBAL9yjSWLJWclJaaAFBx9IibuWiuqIwCpw=;
+        b=OxU9PRWYJoOTMCC/0ok7DqqljG3lwq4m3bmzQvqlXIDHwQES6TBNGRietuRaffVguY
+         QI4tP4AIGFm3WJnFC7oRgbAZbrD4NCV3Lybr+jb8vHc70PelpOpSlVxf4HBp5ZdOHrNk
+         EORlGpU6X2ZxbrToYApPQylvYZRKP8u/3VWUrGWslnZGwc9WS/909ZO1YK3vVx/T74n3
+         rNT+fZEfoh/LADc5BF3/1145xNR8bVIm42F6ZVluts5+pi0yK7wll6oLtL2RWqqxgUux
+         qzTcCpvGBXIXgZG9pil5Ikqs+R4v1n5XiYsp+RkFoqEhiJrVWj9gOSRzr5LY9j4whmNb
+         mK2Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=nD3C72oz;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 38308e7fff4ca-30016c70a44sor3501791fa.8.2024.12.04.00.17.26
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 04 Dec 2024 00:17:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=nD3C72oz;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733300246; x=1733905046; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=CcjuHmgRUg8S7hQXwtR8hFqsbE6Waccum2J4PbQXByY=;
+        b=nD3C72ozN/Ri4k1ji4PGc49ZZNzFLERbs0uJ68fue9P52AhSXxUIo5xZfFpcguGGER
+         jIejzXPh1Bv+pi8phnw6osLuPxHwv3VZzjtXYqLAFtlbBhChjO1bYamn5RcM8jL7bPBp
+         VrKFd8tlJFY2XhFHG9IhiAloGmEACbxBSmfXcunVjmIJF95SifuOx6fUkuoMLj2jFWTA
+         AL1thjZhjQwIYMsMt5PjKBfdV/DZy5G+oOopnLvapcGiHkBz+DOYnsmn1awBvNwJOM5/
+         coSMX+pZFKHFsUruVQHLIDNE1Pdf66FOfFpWmnZ2dwr4oIUXnNVGugsb2/akgOXkKP8y
+         0eIA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733300246; x=1733905046;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=CcjuHmgRUg8S7hQXwtR8hFqsbE6Waccum2J4PbQXByY=;
+        b=nBXrEwVlo9w2RFUjTLRRKwq0odhaywxd2AaaNSQ7R0eg4ucdPtyoTwZ/ihHd95yZ9W
+         85n78glPc2+ECPXjAT24GWo7fbExE89RU9QQGAUXdypmlHN6zJhgpl7iwcR5u0+wQqn2
+         /ZwQu2I7hVeFcN0UN1+3cqf79I50SzetVazHemfW90k6NOGr9KX1ZhOlIldeQ0yKdU/L
+         RB2nrZfW0yXX+6bTTm2hmBqTl0upmlFIGSORZ/SO01BTBeIcXEoQ8n2bEdlGDm9mmzW3
+         PR9dSMXup5lPi6BmYyme50sILNsuKwriycxi3Z1yHqEBzu2DARkZyaQbVDjoVSJf+6Dh
+         wpGQ==
+X-Forwarded-Encrypted: i=1; AJvYcCVVTtMEt3YshtiYC5oWV7kh+T0QJdYdB8LY6E7NWsh+GFTxe4F2iUXjWKj/fFij6mNtHTnOq9tjtEkF+pnvR0YBCrJ1rw==@gmail.com
+X-Gm-Message-State: AOJu0Yyz5QXXn6cI6GtcMGtptaKZdHSsu5YvFEwtqZ+w8yz0/s3oASNn
+	a5Co8XG8xrPHjCebJqigVGrdxBo4pHcie3GTOhvPd9UPecfcgz8Ba5DTEfyu0KKbzORgd2+R3BR
+	G5bLj7NBDkBNall2Fye/RKWucCQc=
+X-Gm-Gg: ASbGnctS3Zjeaix83K9XTNGc2SUkpyb5Xdgk20gGoTn4vCx3Gqs3MgiYcHiMAO/jvCr
+	2T51o/hqQMbVBLgPr1KI4RiY9h4VJaf4D
+X-Google-Smtp-Source: AGHT+IE/52NJkIQ5nqciW8FiQTKy/UCQqPwLER+23h9zg51/eVXyGfZxMSl+oTAQa50P3Hc7G5eJ9RIkkXU6nTEwsG0=
+X-Received: by 2002:a2e:be8f:0:b0:2ff:caf8:3007 with SMTP id
+ 38308e7fff4ca-30009cad742mr34278261fa.19.1733300246083; Wed, 04 Dec 2024
+ 00:17:26 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Wed, 4 Dec 2024 08:17:10 +0000
+Message-ID: <[removed]>
+Subject: Attention dear,
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000074fe7906286d69c9"
+Bcc:[removed]
+
+--00000000000074fe7906286d69c9
+Content-Type: text/plain; charset="UTF-8"
+
+Attention dear, I am Paul Giorgio Davidson son of late Giorgio Davidson
+former Italian mayor who died of COVID 19.15th March 2020.I am here
+requesting for your urgent assistance regarding the $18.2 Million dollars
+inherited from my late father as the only son which is indeed required for
+a sincere foreign investment partnership.your full names home address
+phone number company/ or occupation names will be needed to submit
+to the bank as the foreign investment partnership to enable the bank
+transfer the money out from this country to your country bank account as
+a foreign partnership.more details will be forwarded to you as soon as
+I hear from you.Your sincerely Paul Giorgio Davidson,
+
+--00000000000074fe7906286d69c9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+PGRpdiBkaXI9Imx0ciI+PGRpdj48YnIgY2xlYXI9ImFsbCI+PC9kaXY+PGRpdj48ZGl2IGRpcj0i
+bHRyIiBjbGFzcz0iZ21haWxfc2lnbmF0dXJlIiBkYXRhLXNtYXJ0bWFpbD0iZ21haWxfc2lnbmF0
+dXJlIj48ZGl2IGRpcj0ibHRyIj5BdHRlbnRpb27CoGRlYXIswqBJwqBhbcKgUGF1bMKgR2lvcmdp
+b8KgRGF2aWRzb27CoHNvbsKgb2bCoGxhdGXCoEdpb3JnaW/CoERhdmlkc29uPGJyPmZvcm1lcsKg
+SXRhbGlhbsKgbWF5b3LCoHdob8KgZGllZMKgb2bCoENPVklEwqAxOS4xNXRowqBNYXJjaMKgMjAy
+MC5JwqBhbcKgaGVyZTxicj5yZXF1ZXN0aW5nwqBmb3LCoHlvdXLCoHVyZ2VudMKgYXNzaXN0YW5j
+ZcKgcmVnYXJkaW5nwqB0aGXCoCQxOC4ywqBNaWxsaW9uwqBkb2xsYXJzPGJyPmluaGVyaXRlZMKg
+ZnJvbcKgbXnCoGxhdGXCoGZhdGhlcsKgYXPCoHRoZcKgb25secKgc29uwqB3aGljaMKgaXPCoGlu
+ZGVlZMKgcmVxdWlyZWTCoGZvcjxicj5hwqBzaW5jZXJlwqBmb3JlaWduwqBpbnZlc3RtZW50wqBw
+YXJ0bmVyc2hpcC55b3VywqBmdWxswqBuYW1lc8KgaG9tZcKgYWRkcmVzczxicj5waG9uZcKgbnVt
+YmVywqBjb21wYW55L8Kgb3LCoG9jY3VwYXRpb27CoG5hbWVzwqB3aWxswqBiZcKgbmVlZGVkwqB0
+b8Kgc3VibWl0PGJyPnRvwqB0aGXCoGJhbmvCoGFzwqB0aGXCoGZvcmVpZ27CoGludmVzdG1lbnTC
+oHBhcnRuZXJzaGlwwqB0b8KgZW5hYmxlwqB0aGXCoGJhbms8YnI+dHJhbnNmZXLCoHRoZcKgbW9u
+ZXnCoG91dMKgZnJvbcKgdGhpc8KgY291bnRyecKgdG/CoHlvdXLCoGNvdW50cnnCoGJhbmvCoGFj
+Y291bnTCoGFzPGJyPmHCoGZvcmVpZ27CoHBhcnRuZXJzaGlwLm1vcmXCoGRldGFpbHPCoHdpbGzC
+oGJlwqBmb3J3YXJkZWTCoHRvwqB5b3XCoGFzwqBzb29uwqBhczxicj5JwqBoZWFywqBmcm9twqB5
+b3UuWW91csKgc2luY2VyZWx5wqBQYXVswqBHaW9yZ2lvwqBEYXZpZHNvbiw8YnI+PC9kaXY+PC9k
+aXY+PC9kaXY+PC9kaXY+DQo=
+--00000000000074fe7906286d69c9--
+

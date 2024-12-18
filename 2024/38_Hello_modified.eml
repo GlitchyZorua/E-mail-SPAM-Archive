@@ -1,0 +1,144 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a868:0:b0:4ab:72de:5861 with SMTP id t8csp23632vqu;
+        Thu, 5 Dec 2024 03:17:11 -0800 (PST)
+X-Received: by 2002:a05:651c:2226:b0:2ff:8e14:30a4 with SMTP id 38308e7fff4ca-30009be5c75mr50714061fa.10.1733397431274;
+        Thu, 05 Dec 2024 03:17:11 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733397431; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ALVGTMz9yZjEXjEHe0HAmL7Pr8Cqi+Is1iEppnVORVdOh2b4gE5BCK7XDjzFlG9OYd
+         AhJHrzItPn8zM7qPUAtBJXWo4E1S5STbbbFc8aWGFnn5ghKlYrBw8irfAvWKkaEbvYSE
+         wBooJZNMMXqmlvMFKAHd/U5FMdKoBYiOU6sAxaAPfGVAiuDuB3GZw36oUfULfvJ2POVg
+         8DRkmcJR3iUF8ZL6g4as7Jctba21hQtceUjga/J+cCR5QMu8S1zXYzQwiYEBeMgTrfv9
+         8/YOcfeAydauLIoK8waChzACJVfkNIUjCgkWILDCJlaOpeFJAJRBfqMoi7qsMBuiJa7O
+         jusg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=iNJthEKv4f2o4DwWCJBAgpaWxg1jLCZhbxQRGjxwzhw=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=HDn1pY37X51VMSVWX3MAAu5Xj21fLISIY0oQZ4/HuQA18JDWabYzPP8lh+3SQVP622
+         NnyXSBzJ/9CSiaR9h/9ZkcvFeFMhyGr3qElcMCDNzl04x5fcxADqU6qXrYAf75wIrMML
+         ShzSiOoQxyLNgIyUjh5hy3VrglXn8qOXLRI9j3oI2+MP/z232Qu3WPy34NQSm1JdS4uM
+         jwhVlXgUCE8/TZGr7Tji8bpccJPMM8yxfUYy2++Ddq7WM7zKrH2uGUnmWzXU8KoeFtku
+         vyroMIGMsK9vl2BLIRbmE/T7owgExAnJCVU16Q/hfSa3zslN2eoX/ds2DK7gOtzH9tw1
+         7Pzg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=UVb6l9Xm;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 38308e7fff4ca-30020d8d3a0sor2558301fa.2.2024.12.05.03.17.11
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 05 Dec 2024 03:17:11 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=UVb6l9Xm;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733397430; x=1734002230; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=iNJthEKv4f2o4DwWCJBAgpaWxg1jLCZhbxQRGjxwzhw=;
+        b=UVb6l9XmFwDNDguYsLOv1DMBxpIGkqKMjRs0GFNJYe/M8Lkii8iH0wK1LkDUwgxUC6
+         61ccSQuxkfSNmQCTAGEuwz09rc4yndABPgVJTw70FPqOH9ZNVPSU3J71/GdcN/CLxBzI
+         8LDiE30P833ftjnJNnCKA4dQqEESypDLjeNQKbbz4Dbm128QUM/oLNwngAY+9PlzcQKJ
+         sF70L7Cxi8doTtvPMjUqtP7myFbWOlsKKdFNz0qtHmqifnOTkX7ln311Yurv39fE/ydN
+         6lIkxbs/nHBPxLh7UcmfTt/TSH49uwN/gJIgTv3oGu7YdZE+yPvgfzRWuzN/JAXYhg8z
+         /5lw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733397430; x=1734002230;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=iNJthEKv4f2o4DwWCJBAgpaWxg1jLCZhbxQRGjxwzhw=;
+        b=XeqmbRVRMYcJyOCHZ+Zy28Dsn5FP9bzopwSUFIhR9pmgKvnqsNOpNkSFxgGKNLZ0Q7
+         JtqBEm6XrDjZ1N5oaV1qLB2qhj5w6urWHF4NKmTgJR6x1bLhKLzmqbgoS20xFLayCeTQ
+         cIkhhyA0/hs24od4AwuuR7gLI+pXwKH0SOeldU7qoODWijT4KtIjqUH/1yUpXZuE9Av1
+         0p0K26my0jh04QBT6senMtPHqxvPNtUliE4CLM4DPXEwtJTQNEedi+KflAZsRsfq/d8k
+         pifTECzLHEPnFZ75ZhOqKBJjUaRNGyX36OslTwOMsxHbP6mcIttqBHUF82eeONnVL/Su
+         2Nbg==
+X-Gm-Message-State: AOJu0YystzExzFPZPELImuyegxMwVwEZFhv4wFwBE6qFiUsddXJ4YXA4
+	LqnXfDQi2esmLhsCQZuY3yIaQuPc67Udd7/v+0s/bUycsbmkDsJLonB3vk7P6eS5ss4CJMhq5nw
+	WkYTgB7XvcRLdoKsKmazZ9xnlCj5/hlEQ
+X-Gm-Gg: ASbGncvSWKTw7VzQCCsWEklnBGXowL7yMAGKAJRtcgVOOj9L18O4fCcEQEDlAkV5TXW
+	m+sw3OUqtLF5xXfJaladyxgA+cpEB1Mkb
+X-Google-Smtp-Source: AGHT+IGuKEaj3tnx5YBSCeVZi52VcnUlKalqcgEmj7Mn+Olaw+cuW0EokAsw/cNP+7zogGxAxnMKGcRO2KTAX6w+fdQ=
+X-Received: by 2002:a05:651c:199e:b0:2ff:d7cf:a6cb with SMTP id
+ 38308e7fff4ca-30009be5b12mr49933161fa.11.1733397430080; Thu, 05 Dec 2024
+ 03:17:10 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Thu, 5 Dec 2024 12:16:55 +0100
+Message-ID: <[removed]>
+Subject: Hello
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000131ae60628840a5f"
+
+--000000000000131ae60628840a5f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+       Attn:
+
+I am Dr, jamesf entwistle, Executive Director and Finance  Account with the
+MALAYSIA PETRONAS GAS  BERHAD   DEPARTMENT one of our customer from your
+country had a fixed deposit account with our company in 2014 that valued
+the Sum of 2.5 Million Dollars  the maturity date for this deposit was on
+2016, unfortunately he was among the death victims of the Helicopeter
+Crash,  20 May, 2024 that killed many people.
+
+He was on a business trip on that day during this disaster that ended his
+life. Being single, he did not state any next of kin Heir-apparent  when
+the account was opened, he told our company that he will later forward one
+of his relative=E2=80=99s name as his next of kin Heir to the account which=
+ he did
+not fulfill before he met his death. Since then, our company management has
+been looking for someone from your country with a similar name. I was happy
+when I  saw your name and I'm now seeking your cooperation to release this
+fund to you since you have a similar name with the deceased.for the funds
+to be invested in your country without any deal if there's anything that
+you may need to know more about this transaction please let me know.
+
+Dr james f entwistle
+Executive Director Finance and Account.
+MALAYSIA PETRONAS GAS  BERHAD   Department
+
+--000000000000131ae60628840a5f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><span style=3D"font-size:12.8px"><br>=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0Attn:=C2=A0</span><br style=3D"font-size:12.8px"><span style=3D"font=
+-size:12.8px">=C2=A0</span><br style=3D"font-size:12.8px"><span style=3D"fo=
+nt-size:12.8px">I am Dr, jamesf entwistle, Executive Director and Finance =
+=C2=A0Account with the MALAYSIA PETRONAS GAS =C2=A0BERHAD =C2=A0 DEPARTMENT=
+ one of our customer from your country had a fixed deposit account with our=
+ company in 2014 that valued the Sum of 2.5 Million Dollars =C2=A0the matur=
+ity date for this deposit was on 2016, unfortunately he was among the death=
+ victims of the Helicopeter Crash,=C2=A0 20 May, 2024 that killed many peop=
+le.</span><br style=3D"font-size:12.8px"><br style=3D"font-size:12.8px"><sp=
+an style=3D"font-size:12.8px">He was on a business trip on that day during =
+this disaster that ended his life. Being single, he did not state any next =
+of kin Heir-apparent =C2=A0when the account was opened, he told our company=
+ that he will later forward one of his relative=E2=80=99s name as his next =
+of kin Heir to the account which he did not fulfill before he met his death=
+. Since then, our company management has been looking for someone from your=
+ country with a similar name. I was happy when I =C2=A0saw your name and I&=
+#39;m now seeking your cooperation to release this fund to you since you ha=
+ve a similar name with the deceased.for the funds to be invested in your co=
+untry without any deal if there&#39;s anything that you may need to know mo=
+re about this transaction please let me know.</span><br style=3D"font-size:=
+12.8px"><br style=3D"font-size:12.8px"><span style=3D"font-size:12.8px">Dr =
+james f entwistle</span><br style=3D"font-size:12.8px"><span style=3D"font-=
+size:12.8px">Executive Director Finance and Account.</span><br style=3D"fon=
+t-size:12.8px"><span style=3D"font-size:12.8px">MALAYSIA PETRONAS GAS =C2=
+=A0BERHAD =C2=A0 Department</span></div>
+
+--000000000000131ae60628840a5f--
+

@@ -1,0 +1,252 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:280b:b0:4ab:72de:5861 with SMTP id gw11csp1954878vqb;
+        Mon, 2 Dec 2024 13:39:15 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUSxGumrGo43CFMfNmhxaonUNtpIyl0lQGcUpDyl33L/ER2vCZ8C7kOtiJl6xxMQftMKgrKRGCqbZJbqFereniJYdpeTQ==@gmail.com
+X-Received: by 2002:a05:6808:2508:b0:3ea:552e:9c10 with SMTP id 5614622812f47-3ea6dd48f6emr19303692b6e.27.1733175555701;
+        Mon, 02 Dec 2024 13:39:15 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733175555; cv=none;
+        d=google.com; s=arc-20240605;
+        b=dopU8LkWc3JArnYmn2080AGrvU/vM7GphFjmwuRXHMZ7U9Co6HMmfX8mWY1ZfGsVbE
+         Uv9uXhRWkUqnFA8Tho2qXUOHauPRTqIH+o6nxO3bCzuoon+H5iqlm0Gop0zLe9PNI6vX
+         PmLTbHOhhTV4QAI+xTVyxX8ww/9UNCuN1B+SzSYTmJAYIwNQLAg0oHRSqs+vmYKyhPGy
+         UkNRbDbdE12UCfn58N5h6fgaIsNdBCbtkLdYw851UULvi77yJ4saGOuiK1OVMvFr/1Sd
+         3Xe2EfYh9H+ksMVA7yneK+6tjfpq/Xd9bzSHJJFKrrV8qDFaeLfgGec2PalPm3xfIQ80
+         ORHA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=xGUiR1s6puFQqVWss+NEf++gaepR1feNR2A8Rks5fVE=;
+        fh=dH3EfJtFyt3iMW9BF0g30y2WHvIFLkn4jGQ3aM1zwfk=;
+        b=Jn8k3W/rqqAeeV/SxqFPtFzMS7MGnk9//yl5MhsCGKiGQuZTST4Ea1TkpN4+ULHU1s
+         iARy0E1xbEV1PfKwVjxltVO4XkYLoxvmRc/87QleSBLLTcedqcmrDtsz+EZ6gGRGZY6X
+         rsZaO1cnviidFJ8Sr05xrA90mHb78yLb0Ch7MWYE4S97gnVMWwazLCsqTOaQYZrgRsUd
+         5PvQdHJLZ6uD5ZKfibumLXzNgNXNtC+P+a720xqf/KtiUgQUba1Mby+wlX8gDiu0lUAD
+         RCO7CJJBmmUspXN2wWS+4E/3bBihO7OJ2BneXTtzRc4fetTrYJ+eJEr5QCLDF65unLKC
+         eNBQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=dfWa6oWn;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 6a1803df08f44-6d8b1895ccasor8939616d6.9.2024.12.02.13.39.15
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 02 Dec 2024 13:39:15 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=dfWa6oWn;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733175555; x=1733780355; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=xGUiR1s6puFQqVWss+NEf++gaepR1feNR2A8Rks5fVE=;
+        b=dfWa6oWnctK06gZa5+in8v+RuL0mlrYqBBDB8nA9QjnBgs25t1EfzFA0FrHAte6wrN
+         Z9IjwRLIKp8KyoGBXchF/LCQ2FAQOAcal3f0jtQUpCu8RdKZ0HHlBa3G0fp14CHMmsql
+         bh2Hmon/uHlEP352m2XAPAQpTnEakPLxjAO91NBFVIEej5oBCODjgDEClys7/BFGS1OC
+         03N0Xusl3ruyMiFE00afBw6In8GiAYK7rEKwLeaHsPD0lbDOIhRCAe53cPZnGj5PMkGk
+         2CcFKVNJ+447/ce6lOw6B7g3ckcxdqy4kzydNQodpWZNmIdaZ5Z953aTWpT4IbNcUVH6
+         o/gg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733175555; x=1733780355;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=xGUiR1s6puFQqVWss+NEf++gaepR1feNR2A8Rks5fVE=;
+        b=YwiyH+B7tLIyRhbDQ3TRks18K/w1gahwQavb14wkO8OJ8zpa9RY75GgQ7m5W+9lEka
+         X0hs2NuKSclf3CKajklkx0H3XZo0ugRCjeavFlYBWy5Nw7ogstTKPwIsXDnX0XkRwX/s
+         GMlm96nIMB305R9U64rYD0SpXPDlVeFnGFWNELgtyAmD2FF5YnNUy1bxHLNvShso711j
+         iJYSxjhdtsGZm9+p6eHz+JuSyJX1DjhgW1c4/g9AAsB2nApLnUxDwwuX0rgoSKmrIcDw
+         1f9dww9L6JCWUV2u/vj0s97cxhgdknrIBu2EwahnTyG3zKS8FtFML21wLZofy3Y5rAkn
+         9Y8A==
+X-Forwarded-Encrypted: i=1; AJvYcCVyGBXksSnGZim4BJ+eTe0MsYEJycqpWKEQaLhYZEdgGtpO7CFrALKserJiLEZzbh0lXZbq5xVKJUB2mNk8RJOyFHBWvQ==@gmail.com
+X-Gm-Message-State: AOJu0YzgUnghIjyBQWC1knLFXs3gKbGpDe0mfuv5MZUi9VhI0XgFL+1W
+	Qc3QsUi236+XP3cVG2lIcWMF5royA6iFHQrrolluYc2y7S3EHb9CtJKpmtsK0yTb/L3KhkwdGxU
+	NiRP1JUe5YJVNp0ZTlcmlMc0Pa48=
+X-Gm-Gg: ASbGncsCxNKMVYaepFM+Mq39NkpY6zNQVU/lfosYl0ZZZU1TE1FTtE3F3bShfa66hdO
+	FUHf/j/bbl9l3EthlM+WDQg80QN/jwQ==
+X-Google-Smtp-Source: AGHT+IH6Hj4UnRplM9voC4kRXgZ6ikIP6X3HXUkeAxUov9ydoQKntjltklqBSXm81s+geAaICBsP+5P2yRTfQKlPr8s=
+X-Received: by 2002:a05:6214:518e:b0:6d8:99b2:63c5 with SMTP id
+ 6a1803df08f44-6d8b732f3ebmr3688976d6.12.1733175555042; Mon, 02 Dec 2024
+ 13:39:15 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Mon, 2 Dec 2024 21:39:02 +0000
+Message-ID: <[removed]>
+Subject: 
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000004ab41c062850617f"
+Bcc:[removed]
+
+--0000000000004ab41c062850617f
+Content-Type: text/plain; charset="UTF-8"
+
+SUPREME COURT OF UNITED STATES.
+1 First St NE, Washington, DC 20543, United States
+From:[removed]
+Chief Justice of the Supreme Court of the United States
+
+Good day to you!!
+
+I am John Glover Roberts Jr, Chief Justice of the Supreme Court of the
+United States. I would like to inform you that your fund issue worth
+the total sum of $15.5Million US Dollars was brought to my office this
+morning to cancel by Mr. Charles W. Scharf the Chief Executive Officer
+WELLS FARGO BANK USA.
+
+Then, I asked what are the conditions but I was told that because of
+your inability to secure the required Affidavit of claim Ownership so
+that the US Monitory Fund Investigation Union head office in
+Washington DC capital of the United State of America will declare your
+payment free from any money laundry and terrorism drug money sponsor
+activities to enable our service have the authority of releasing the
+payment to you and register it with US MAILING POST for over-night
+delivery to your address withoutdelay.
+
+But I told him to wait because there is no need to cancel the payment
+and that I will do my very best to bring the issue to a conclusion. To
+the best of my knowledge and humanitarian ground and sympathy. I
+immediately called up the new President Mr. Joe Biden and US Senate
+committees and explained your matter to them. We understand that the
+imposed fee $400 of Affidavit of claim Ownership might be too much for
+you to pay now, So we further make things easier for you by discussing
+with President Mr.Joe Biden and the US Senate committee on your
+behalf.
+
+They have given you the grace of sending only $100 to enable you
+afford this only fee after the Diplomatic Agent delivers your ATM Visa
+Card to you, then once you confirm your $15.5Million US Dollars, you
+can then pay the remaining balance of $300. All we want you to do
+right now is to go ahead buy a $100 Apple Card or Steam Wallet
+for immediately issuing the needed Affidavit of claim Ownership
+to enable the Diplomat make the delivery to your home address
+today. I advise you should send the required $100 to secure the
+Affidavit of claim Ownership to enable them ship your ATM Card that
+worth $15.5Million US Dollars to regain your financial freedom and have
+enough money to live on and establish a good business for yourself and
+your family. But if you don't need it then I can change your name to
+another person to receive the fund on your behalf so that
+Government will not claim this money but I know that you will love to
+have it, The ATM package will be successfully safely delivered within
+7-hours/ without any hitches or delays. Therefore. I will advise you
+to go ahead and buy a $100 Steam Wallet card or Apple Card
+because it is the only problem we have on finalizing the assignment on
+your behalf. Please quickly run now to buy the Apple Card to
+secure the Affidavit of claim Ownership which will show that the
+transaction was made through the full capacity of the Government
+and will not be queried for certain circumstances.
+
+All necessary official modalities are being finalized in your favor.
+Send the $100 Steam Wallet card or Apple Card so we can direct
+it to the right office imposition to release the document. And
+immediately you make the payment to them the document will sign and
+your ATM parcel will deliver to your address without delay.
+
+Please, I want you to know that you have from now till the end of two
+days to send the $100 Card to receive your ATM package worth $15.5Million
+US Dollar.
+Therefore, the days of you being subjected to paying twice Double Payment
+is over as
+that is the case with some corrupt officials down there in Africa.
+
+This is a lifetime opportunity and we will advise you to take
+advantage of it before it will become too late to do so. This could be
+the last opportunity you might have in receiving your ATM package so
+do not fail to notice this wonderful moment to have your fund that you
+have been looking for a way to make it a reality. This is an official
+notification and we advise you to treat it with utmost urgency. Reply
+this email with the Apple card or steam wallet card with
+the below contact details immediately you receive this email for
+immediate shipment of your ATM. kindly reconfirm your delivery
+information to avoid wrong delivery
+
+1. Your Full Names___
+2. Country_____
+3. Home Address___
+4. Phone Number___
+
+Thank you, God bless you, and may God bless the United States of America.
+Please we need an urgent reply to avoid.
+
+Yours Faithfully,
+Hon.John Glover Roberts Jr
+CHIEF JUSTICE OF THE
+SUPREME COURT UNITED STATES.
+
+--0000000000004ab41c062850617f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">SUPREME COURT OF UNITED STATES.<br>1 First St NE, Washingt=
+on, DC 20543, United States<br>From:[removed]
+ce of the Supreme Court of the United States<br><br>Good day to you!!<br><b=
+r>I am John Glover Roberts Jr, Chief Justice of the Supreme Court of the<br=
+>United States. I would like to inform you that your fund issue worth<br>th=
+e total sum of $15.5Million US Dollars was brought to my office this<br>mor=
+ning to cancel by Mr. Charles W. Scharf the Chief Executive Officer<br>WELL=
+S FARGO BANK USA.<br><br>Then, I asked what are the conditions but I was to=
+ld that because of<br>your inability to secure the required Affidavit of cl=
+aim Ownership so<br>that the US Monitory Fund Investigation Union head offi=
+ce in<br>Washington DC capital of the United State of America will declare =
+your<br>payment free from any money laundry and terrorism drug money sponso=
+r<br>activities to enable our service have the authority of releasing the<b=
+r>payment to you and register it with US MAILING POST for over-night<br>del=
+ivery to your address withoutdelay.<br><br>But I told him to wait because t=
+here is no need to cancel the payment<br>and that I will do my very best to=
+ bring the issue to a conclusion. To<br>the best of my knowledge and humani=
+tarian ground and sympathy. I<br>immediately called up the new President Mr=
+. Joe Biden and US Senate<br>committees and explained your matter to them. =
+We understand that the<br>imposed fee $400 of Affidavit of claim Ownership =
+might be too much for<br>you to pay now, So we further make things easier f=
+or you by discussing<br>with President Mr.Joe Biden and the US Senate commi=
+ttee on your<br>behalf.<br><br>They have given you the grace of sending onl=
+y $100 to enable you<br>afford this only fee after the Diplomatic Agent del=
+ivers your ATM Visa<br>Card to you, then once you confirm your $15.5Million=
+ US Dollars, you<br>can then pay the remaining balance of $300. All we want=
+ you to do<br>right now is to go ahead buy a $100 Apple Card or Steam Walle=
+t <br>for immediately issuing the needed Affidavit of claim Ownership<br>to=
+ enable the Diplomat make the delivery to your home address<br>today. I adv=
+ise you should send the required $100 to secure the<br>Affidavit of claim O=
+wnership to enable them ship your ATM Card that<br>worth $15.5Million US Do=
+llars to regain your financial freedom and have<br>enough money to live on =
+and establish a good business for yourself and<br>your family. But if you d=
+on&#39;t need it then I can change your name to<br>another person to receiv=
+e the fund on your behalf so that<br>Government will not claim this money b=
+ut I know that you will love to<br>have it, The ATM package will be success=
+fully safely delivered within <br>7-hours/ without any hitches or delays. T=
+herefore. I will advise you<br>to go ahead and buy a $100 Steam Wallet card=
+ or Apple Card<br>because it is the only problem we have on finalizing the =
+assignment on<br>your behalf. Please quickly run now to buy the Apple Card =
+to<br>secure the Affidavit of claim Ownership which will show that the<br>t=
+ransaction was made through the full capacity of the Government<br>and will=
+ not be queried for certain circumstances.<br><br>All necessary official mo=
+dalities are being finalized in your favor.<br>Send the $100 Steam Wallet c=
+ard or Apple Card so we can direct<br>it to the right office imposition to =
+release the document. And<br>immediately you make the payment to them the d=
+ocument will sign and<br>your ATM parcel will deliver to your address witho=
+ut delay.<br><br>Please, I want you to know that you have from now till the=
+ end of two<br>days to send the $100 Card to receive your ATM package worth=
+ $15.5Million US Dollar.<br>Therefore, the days of you being subjected to p=
+aying twice Double Payment is over as<br>that is the case with some corrupt=
+ officials down there in Africa.<br><br>This is a lifetime opportunity and =
+we will advise you to take<br>advantage of it before it will become too lat=
+e to do so. This could be<br>the last opportunity you might have in receivi=
+ng your ATM package so<br>do not fail to notice this wonderful moment to ha=
+ve your fund that you<br>have been looking for a way to make it a reality. =
+This is an official<br>notification and we advise you to treat it with utmo=
+st urgency. Reply<br>this email with the Apple card or steam wallet card wi=
+th<br>the below contact details immediately you receive this email for<br>i=
+mmediate shipment of your ATM. kindly reconfirm your delivery<br>informatio=
+n to avoid wrong delivery<br><br>1. Your Full Names___<br>2. Country_____<b=
+r>3. Home Address___<br>4. Phone Number___<br><br>Thank you, God bless you,=
+ and may God bless the United States of America.<br>Please we need an urgen=
+t reply to avoid.<br><br>Yours Faithfully,<br>Hon.John Glover Roberts Jr<br=
+>CHIEF JUSTICE OF THE <br>SUPREME COURT UNITED STATES.</div>
+
+--0000000000004ab41c062850617f--
+
