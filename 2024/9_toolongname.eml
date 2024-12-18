@@ -1,0 +1,169 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp7580698vqq;
+        Tue, 12 Nov 2024 08:27:36 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXmccrY5KQeXzLmeHyqfsRVzwL8oc3EJBQral4wsQn1SVAxAzfgQ2EiQWIKA+fWvXDPdeFD4It3SupIpsWqT5ts2pZbaQ==@gmail.com
+X-Received: by 2002:a05:651c:2227:b0:2fa:bb5d:db67 with SMTP id 38308e7fff4ca-2ff2025945bmr75197071fa.32.1731428855904;
+        Tue, 12 Nov 2024 08:27:35 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731428855; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Uv5tFNnOK84IE3owJmK7YUk9Y63LkD4yI3iGEI1CCb+iY5U9/qJZA73VJN4LLKs/3S
+         hBYbB7EC9mLmmK5nqT/bk1nFFGbKjtxfFTdy8IIPVOu1+J1sn+a9psxxFQ08R7dj8ZCA
+         PkNgk3FB/Pbv+srHKHwQHYYBZksTUAQr1wjcgW8xu+ui8v5kTKKMJlEr5BK9K6TwpiUS
+         +n7lwXH9sI8wBAgOTY6agOY5fOViG5LOcDnbaqyWRGTaOafhmis+TOI4cI+in8wfMYHl
+         l0Xot5nJmwqKuYtGrYurO5BN+M/fmOgfqbpUOSOj7E5tcq2tlPTsqWdLenotjt2t4xM6
+         fRaA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=kL5PACdbsjX159UgqnI3MC38aV2uWbY5u5x+i/b8XIM=;
+        fh=dIENBoA2lPpswDwNIaumTWfW8kPkTvf1vOVis1lRqXY=;
+        b=B9QDh7MZiP8EDE9CAXF2788cMvjgIn3krX2NA9rMlB1RxpcB/EADiRzpV9a61H7VQI
+         PckZNBVWO+atobPJTKSB+QhI5OGujdEYR+EOnTAMSmQgSijVWznPx+l6989diRcNoGmh
+         95G1M/uBrg4o5VMWjsprXhq3mCFYP0aMCmtpqMzDAbjOZPLTogJOuPD77IWKOgq19TLU
+         rl/Lnd3xu2LjvtFjlSDNkz5ourP8fLiF5dq2dURa/TuflOuQeNYdlM7w8S0Hy4+qmv67
+         6ahNNOPf/42EuRUguwLzCgLNsXtJP+ad6r2I2PHJKCfj8A/Cp/oo8eDGn6LA3dkUfVQ6
+         6n3w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CagtEQ2r;
+       spf=pass (google.com: domain of ogoo8385@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ogoo8385@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <ogoo8385@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5cf03b905cfsor3693048a12.4.2024.11.12.08.27.35
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Tue, 12 Nov 2024 08:27:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of ogoo8385@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CagtEQ2r;
+       spf=pass (google.com: domain of ogoo8385@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ogoo8385@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731428855; x=1732033655; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=kL5PACdbsjX159UgqnI3MC38aV2uWbY5u5x+i/b8XIM=;
+        b=CagtEQ2rbdyKO0Cm32v8UT7pp8ge6Efc8X2jWxtaGGTyAgm5Nph92/WqDi4qg7/8vG
+         3T7dkY8pNczs4T8sp6WhdmopmnAYS06fVAD48L3fOfMK7qDqTOLrL96FZcNzYk6FP4SE
+         9ajo7+C5SBNhxCXdmbZF8X0G7eBtj2VrMWeoeojzlOHeY6fgoaW0zrVwIuEvocLFumi5
+         iEfZ3Q5Wth/e9SplTgfa0Kr+S9Ey/y9fA5jerwhY3Yq5wdPZv3tpvSGVO/QCzCCwKIZ6
+         fnM9fK9nryzfzh3B8u0rV0cihT3S4ePmIRiUuk1D583xH4nthP0L3WeJdGytidBrRbeI
+         7N5g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731428855; x=1732033655;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=kL5PACdbsjX159UgqnI3MC38aV2uWbY5u5x+i/b8XIM=;
+        b=eqTgKDZeXZtlh2yh7iypS6N1BJdti7CeiPXkl+5YlcmoSWOSSqS3UesDEajBQOzxsV
+         oMwzO767cidveJCMw1QrqprnAuYJ7p0g4lv+4E0Dco2hAwudnEzO/0KhSAlbnuH5snzJ
+         jdKFZgkEur+DAdE+g4NNNT2bFTbXFKBbfZKbiNh6F0Rpi5gY0qjvVKgsggp/0P+hd2ol
+         PuwBZx1lPEQGDOxdJvydQXpEyuMXaI9gKGU3fCXPwYLsRC2IQuB/IPlyURh85GGVqw7F
+         RhX/oouGskLHhS3SFk+1jHNMhDSpor2SsD67zmPjy0MLjGnuC3RiwO8Uci885eqS/qKR
+         x9wQ==
+X-Forwarded-Encrypted: i=1; AJvYcCWDbBLWwRPAJc9ZYlbCJ/UsWfmorRGJV2yw4665Js2XhMo52aUmoZjB7QH7NQcm0JrRlzUqOpwdo4k8QGr1vMA+x8JpFQ==@gmail.com
+X-Gm-Message-State: AOJu0YzITBKsNMc05KMSUPxrn/4CPcZ2VoRsAQdXAQeszQ9DKj9PgWfk
+	Y9mSPD3SAyycEz7B7VqM96kOXwC4P+wiC/XP+QrS3jkLKnYBsYWEQcnaIxr5lUFpz7KHJFPiTZp
+	rDQAUjFx47ZZfQGAFfNBJwNXPcXw=
+X-Google-Smtp-Source: AGHT+IGpfBe8N8Tuj9SzETovuN361MQE81lXZyDZj3LKjw8VotApxygDoOWwhJQyfoBCqy8Le1mzK/6tUrPYOSpwBjU=
+X-Received: by 2002:a05:6402:5213:b0:5ce:fc3c:3c3 with SMTP id
+ 4fb4d7f45d1cf-5cf0a45c690mr15553355a12.28.1731428855012; Tue, 12 Nov 2024
+ 08:27:35 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: mromararounamromararouna@gmail.com
+From: Omar Arouna <ogoo8385@gmail.com>
+Date: Tue, 12 Nov 2024 08:27:23 -0800
+Message-ID: <CABmpzS6L2meX_P2xiPcvcqJBonWNhz09ZT4s2uWcR3CYLhLqNA@mail.gmail.com>
+Subject: =?UTF-8?Q?Hi_once_again_Dear_Friend_Please_my_name_is_Mr=2E_Omar?=
+	=?UTF-8?Q?_Arouna=2E_I_from_Burkina_Faso_and_I_work_with_Bank_Of_Africa_?=
+	=?UTF-8?Q?=28BOA=29_as_acting_head_of_finance=2E_I_contacted_you_in_good_fai?=
+	=?UTF-8?Q?th_and_I_am_optimistic_that_the_success_of_this_transaction_?=
+	=?UTF-8?Q?will_go_a_long_way_to_uplift_our_financial_status_in_no_dist?=
+	=?UTF-8?Q?ant_time=2E_However=2C_one_of_our_deceased_customers_from_Malays?=
+	=?UTF-8?Q?ia_abandoned_the_sum_of_=249=2E7_million_in_our_bank_since_2017=2C?=
+	=?UTF-8?Q?_and_according_to_the_financial_act_my_government_has_every_?=
+	=?UTF-8?Q?right_to_confiscate_funds_in_unclaimed_bank_account=2Funattend?=
+	=?UTF-8?Q?ed_after_7_years=2C_it=E2=80=99s_in_this_regard_that_I_want_to_commi?=
+	=?UTF-8?Q?ssion_this_fund_to_you_so_that_you_will_stand_as_associate_t?=
+	=?UTF-8?Q?o_the_deceased_customer_and_claim_this_fund_from_my_bank_aft?=
+	=?UTF-8?Q?er_which_we_will_share_it_at_the_ratio_of_40=25_for_you_and_60?=
+	=?UTF-8?Q?=25_for_me=2EPlease_you_on_how_to_apply_to_my_bank_for_the_trans?=
+	=?UTF-8?Q?fer_of_this_fund_into_your_personal_bank_account=2E_I_hope_to_?=
+	=?UTF-8?Q?hear_from_you_soon=2E_at_mromararounamromararouna=40gmail=2Ecom_=281?=
+	=?UTF-8?Q?=29_Your_Full_Name=2C_=282=29_Sex_and_Age=3A_=2E?=
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000db644e0626b9b1d8"
+Bcc: mailmanthingwhatever@gmail.com
+
+--000000000000db644e0626b9b1d8
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi once again
+
+Dear Friend
+
+Please
+
+my name is Mr. Omar Arouna. I  from Burkina Faso and I
+work with  Bank Of Africa (BOA) as acting head of finance. I
+contacted you in good faith and I am optimistic that the success of
+this transaction will go a long way to uplift our financial status in
+no distant time.
+
+However, one of our deceased customers from Malaysia abandoned the sum
+of $9.7 million in our bank since 2017, and according to the financial
+act my government has every right to confiscate funds in unclaimed
+bank account/unattended after 7 years, it=E2=80=99s in this regard that I w=
+ant
+to commission this fund to you so that you will stand as associate to
+the deceased customer and claim this fund from my bank after which we
+will share it at the ratio of 40% for you and 60% for me.Please
+
+you on how to apply to my bank for the transfer of this fund
+into your personal bank account. I hope to hear from you soon. at
+
+mromararounamromararouna@gmail.com
+
+(1) Your Full Name,
+
+(2) Sex and Age:
+
+(3) Country of origin:
+
+(4) Residential address:
+
+(5) Phone number:
+
+(6) Occupation:
+
+Best regards,
+
+Mr. Omar Arouna
+
+--000000000000db644e0626b9b1d8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi once again<br><br>Dear Friend<br><br>Please<br><br>my n=
+ame is Mr. Omar Arouna. I =C2=A0from Burkina Faso and I<br>work with =C2=A0=
+Bank Of Africa (BOA) as acting head of finance. I<br>contacted you in good =
+faith and I am optimistic that the success of<br>this transaction will go a=
+ long way to uplift our financial status in<br>no distant time.<br><br>Howe=
+ver, one of our deceased customers from Malaysia abandoned the sum<br>of $9=
+.7 million in our bank since 2017, and according to the financial<br>act my=
+ government has every right to confiscate funds in unclaimed<br>bank accoun=
+t/unattended after 7 years, it=E2=80=99s in this regard that I want<br>to c=
+ommission this fund to you so that you will stand as associate to<br>the de=
+ceased customer and claim this fund from my bank after which we<br>will sha=
+re it at the ratio of 40% for you and 60% for me.Please<br><br>you on how t=
+o apply to my bank for the transfer of this fund<br>into your personal bank=
+ account. I hope to hear from you soon. at<br><br><a href=3D"mailto:mromara=
+rounamromararouna@gmail.com">mromararounamromararouna@gmail.com</a><br><br>=
+(1) Your Full Name,<br><br>(2) Sex and Age:<br><br>(3) Country of origin:<b=
+r><br>(4) Residential address:<br><br>(5) Phone number:<br><br>(6) Occupati=
+on:<br><br>Best regards,<br><br>Mr. Omar Arouna<br></div>
+
+--000000000000db644e0626b9b1d8--

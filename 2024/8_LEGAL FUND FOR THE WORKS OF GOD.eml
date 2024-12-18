@@ -1,0 +1,159 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:1e03:b0:49b:3a60:d7b with SMTP id jd3csp208068vqb;
+        Thu, 14 Nov 2024 01:29:48 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXqPZa1/pCYu45Wb0r5QHWL+Za8WSefMd77QUawjWv61NQ6IhaGPIYvlmxegW+LWoT1TL2Eq3G31l+oz6YPOgHEFyEkbA==@gmail.com
+X-Received: by 2002:a05:651c:2221:b0:2fb:8df2:13e6 with SMTP id 38308e7fff4ca-2ff590641a0mr6475581fa.26.1731576588155;
+        Thu, 14 Nov 2024 01:29:48 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731576588; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NsXa1h0Z98vpQ/7o7Rk4g9lTGhnuAEUjJWqy5n/La8f5q1zIkN8XK/qUjhL4wTGWwf
+         2cJ2aoZI/whLhjED/4SvcWBEq8UHuIsdNGArwwJo/wr5OGWaWKpnpj0rVvEpFe9rqLv7
+         XqKqfwFVFgFUkRbbm5uO734HZNaYZ6pFklArcG5jHntOOVKh0q6492XAfw7Z612NR+ur
+         O9+u0dH2FAoX62IeHYQdMyXqnaIFKJo4x/Kv0SOnvyxB/+irfW408taj4pk8LwqeVQUD
+         2F+NJDOd1vVIydrDXyCZKRVMjLFBaNDv9hoIUFUsBVr6JQEqOLiS687K0WBI7s6gWncO
+         hq6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=GK8+Pw+ZA37usicikJ8XhtgEdbin5KAroaiVaeoISXU=;
+        fh=qW9S+nrP98A2L4JV9wzkJdKz9DyzW7zlr7ehh2S2jyY=;
+        b=j/A/McyZoU5Hv3jhGbP50pGI3+sBYrRTV1cSSFLj9i3VBwLtNUKtcVZL/OtHNiMTxH
+         s4lrDX0yONWwGkbyh+dTJHW/ziengnd5dx7pV2rg7EwaJM4uaUKrAvpdZ7AuPrlI+Ru0
+         jEX5eOyrbtsBWxAotmlotqJz+MjZrA9QNuYHf67c/6HJsw7GKfeqjcMYNP5rwh1CVzH3
+         fkouiQ0yu02AkuSP61HE7dJ9obVRSonGfBTGybNau/+6x/z0azP2WMTni1Kp4IH7MISd
+         0jGv0GuggQJfbS4SJwmupcWTGIfVg/GHrWlg9LMQbmx69Bdfx+Pcjbw9z3RZWoRkEVUP
+         jfjg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=UCbm1tl9;
+       spf=pass (google.com: domain of daveruth861@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=daveruth861@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <daveruth861@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 38308e7fff4ca-2ff59865a8csor1523671fa.7.2024.11.14.01.29.47
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Thu, 14 Nov 2024 01:29:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of daveruth861@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=UCbm1tl9;
+       spf=pass (google.com: domain of daveruth861@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=daveruth861@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731576587; x=1732181387; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=GK8+Pw+ZA37usicikJ8XhtgEdbin5KAroaiVaeoISXU=;
+        b=UCbm1tl9QQruaboUTuK02ccXZDSApG0rop6gB2I3h2yLBtqjt+S3kGiKp2w09VwWdI
+         4e9lOvabcKvCGG44zDniecqzRxyD9J2trYz+3JouLoe32BeetfiRTaErZbYE4u3NMq0+
+         aoLvWAXDziutEBeGrYGPSR4n8aD80BdmySfaR0ffXJyhkSmpzxDdrlsKLQo1Os5Jqobl
+         NjM2sjiNYCIRA4IXfIfBYPSt4byLKQBUBNO9PX2IlG9LMY8NDVH4c9k4TshUTT93iSxl
+         GOfwl+opioZMFg4VW+ABjUw2FDprOyg26TEo+SCoXOlRQH52cGY9wvEK4Lb30ux7u30f
+         /uJw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731576587; x=1732181387;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=GK8+Pw+ZA37usicikJ8XhtgEdbin5KAroaiVaeoISXU=;
+        b=dbB0zm+CfFZA45Uy3sSoFpYm1UGKVTyXSZ0ez5TkGUzCshy+7Sj+bGCKJCglNhbdnX
+         4nu7HRTvPa/ow1peWaGOQwh2z0ePH4KxhKA2E5LKhIHiMgxEVsm6Wq13F600GyJGeu3+
+         swMafkIjxQsx4f6FBca9oJiQ7ZpSmXVYsFP1l7BiCkfHvzoHa+uOAHui5bzegxV3WgCT
+         AwHjrOregi5NipmeSyJFddTGXm3fgyp1B/XCOvPutQHKXH9wE9LGFO5PaBIlhWkmWo1/
+         kALDXplk7KSF6Hm+avSv0rKLa5K+BeYwreqrHfkoP2s47DUKvWULfrWgYDAYdH/Kkzx+
+         WGmA==
+X-Forwarded-Encrypted: i=1; AJvYcCX2shpXaCv3nlMv7xsUUJ6n6exEKCzpKU4j+WFIq9EGqZwyM586cmUAtmKu16CXioKmiWOwSqK/t/dKRVekK9FSTYJOug==@gmail.com
+X-Gm-Message-State: AOJu0YxLea8JWr/VvLzWazHcwUnRFkHuvA72uBT5cuvgoevFkQg8U5o1
+	oiexSBf570rUrEkaI+S/ldat5d7KD9CunlLOG654vy9sf7WxpzpGCMv1ZXuf46yiekoAjcQzMGx
+	0/E9dLew1CUWCAvGedrqFzMNDk/I=
+X-Google-Smtp-Source: AGHT+IGKgiWQrV3X/dJ+TeNyJ/ia49UKkSFpPINqFqXyhn0jbbGwVNmZ0IDTu3QVp1hGu+9Q9yIPGxeIx9wjD6VFujo=
+X-Received: by 2002:a05:651c:24b:b0:2fb:cc0:2a05 with SMTP id
+ 38308e7fff4ca-2ff5908049fmr6391481fa.37.1731576586874; Thu, 14 Nov 2024
+ 01:29:46 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: removed@nowhere.com
+From: Ruhama koenig <daveruth861@gmail.com>
+Date: Thu, 14 Nov 2024 10:29:32 +0100
+Message-ID: <CAMapZPr6e+Bc_m0hnvBgLg+XmEyMdHRrOgUwNvfY1PEOkaqKPw@mail.gmail.com>
+Subject: LEGAL FUND FOR THE WORKS OF GOD
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000005cb9800626dc17a2"
+Bcc: mailmanthingwhatever@gmail.com
+
+--0000000000005cb9800626dc17a2
+Content-Type: text/plain; charset="UTF-8"
+
+God Bless You,
+Calvary Greetings in the name of the LORD Almighty and Our LORD JESUS
+CHRIST the giver of every good thing. Good day and compliments of the
+seasons, i know this letter will definitely come to you as a huge surprise,
+but I implore you to take the time to go through it carefully as the
+decision you make will go a long way to determine my future and continued
+existence. I am Mrs.Ruhama Koenig aging widow of 62 years old suffering
+from long time illness.I have some funds I inherited from my late husband,
+the sum of ($18,500,000.00 Million Dollars) and I needed a very honest and
+God fearing  who can withdraw this money then use the funds for Charity
+works. I WISH TO GIVE THIS FUNDS TO YOU FOR CHARITY WORKS. I found your
+email address from the internet after honest prayers to the LORD to bring
+me a helper and I decided to contact you if you may be willing and
+interested to handle these trust funds in good faith before anything
+happens to me.
+
+I accept this decision because I do not have any child who will inherit
+this money after I die. I want your urgent reply to me so that I will give
+you the deposit receipt which the SECURITY COMPANY issued to me as next of
+kin for immediate transfer of the money to your account in your country, to
+start the good work of God, I want you to use the 40/percent of the total
+amount to help yourself in doing the project. I am desperately in need of
+assistance and I have summoned up the courage to contact you for this task,
+you must not fail me and the millions of poor people in our world today.
+This is no stolen money and there are no dangers involved,100% RISK FREE
+with full legal proof. Please if you would be able to use the funds for the
+Charity works kindly let me know immediately. I will appreciate your utmost
+confidentiality and trust in this matter to accomplish my heart's desire,
+as I don't want anything that will jeopardize my last wish.
+
+Please kindly respond quickly for more details and also include your
+details like: Your full names, Your country/Address, Your occupation and
+your phone number.
+
+Warmest Regards,
+Mrs.Ruhama Koenig
+
+--0000000000005cb9800626dc17a2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">God Bless You,<br>Calvary Greetings in the name of the LOR=
+D Almighty and Our LORD JESUS CHRIST the giver of every good thing. Good da=
+y and compliments of the seasons, i know this letter will definitely come t=
+o you as a huge surprise, but I implore you to take the time to go through =
+it carefully as the decision you make will go a long way to determine my fu=
+ture and continued existence. I am Mrs.Ruhama Koenig aging widow of 62 year=
+s old suffering from long time illness.I have some funds I inherited from m=
+y late husband, the sum of ($18,500,000.00 Million Dollars) and I needed a =
+very honest and God fearing =C2=A0who can withdraw this money then use the =
+funds for Charity works. I WISH TO GIVE THIS FUNDS TO YOU FOR CHARITY WORKS=
+. I found your email address from the internet after honest prayers to the =
+LORD to bring me a helper and I decided to contact you if you may be willin=
+g and interested to handle these trust funds in good faith before anything =
+happens to me.<br><br>I accept this decision because I do not have any chil=
+d who will inherit this money after I die. I want your urgent reply to me s=
+o that I will give you the deposit receipt which the SECURITY COMPANY issue=
+d to me as next of kin for immediate transfer of the money to your account =
+in your country, to start the good work of God, I want you to use the 40/pe=
+rcent of the total amount to help yourself in doing the project. I am despe=
+rately in need of assistance and I have summoned up the courage to contact =
+you for this task, you must not fail me and the millions of poor people in =
+our world today. This is no stolen money and there are no dangers involved,=
+100% RISK FREE with full legal proof. Please if you would be able to use th=
+e funds for the Charity works kindly let me know immediately. I will apprec=
+iate your utmost confidentiality and trust in this matter to accomplish my =
+heart&#39;s desire, as I don&#39;t want anything that will jeopardize my la=
+st wish. <br><br>Please kindly respond quickly for more details and also in=
+clude your details like: Your full names, Your country/Address, Your occupa=
+tion and your phone number.<br><br>Warmest Regards,<br>Mrs.Ruhama Koenig</d=
+iv>
+
+--0000000000005cb9800626dc17a2--
