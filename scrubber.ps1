@@ -1,4 +1,3 @@
-# Function to remove personal information from an individual .eml file
 function Remove-PersonalInformationFromEml {
     param (
         [string]$emlFilePath,
@@ -25,9 +24,15 @@ function Remove-PersonalInformationFromEml {
     $namePattern = '(?<=From:|To:|Cc:)[^\n]+'
     $contentWithoutPersonalInfo = $contentWithoutEmails -replace $namePattern, '[removed]'
 
+    # Define a regex pattern to remove problematic characters for Windows filenames
+    $problematicCharsPattern = '[<>:"/\\|?*\[\]{}()]'
+
+    # Replace problematic characters with nothing (remove them)
+    $contentWithoutProblematicChars = $contentWithoutPersonalInfo -replace $problematicCharsPattern, ''
+
     # Save the modified content back to the file
-    Set-Content -Path $outputFilePath -Value $contentWithoutPersonalInfo
-    Write-Host "Personal information removed from: $emlFilePath and saved to $outputFilePath"
+    Set-Content -Path $outputFilePath -Value $contentWithoutProblematicChars
+    Write-Host "Personal information and problematic characters removed from: $emlFilePath and saved to $outputFilePath"
 }
 
 # Function to process all .eml files in the given directory and save redacted files in a separate folder
