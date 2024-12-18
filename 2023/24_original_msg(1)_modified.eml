@@ -1,0 +1,129 @@
+Delivered-To:[removed]
+Received: by 2002:a59:cde2:0:b0:42b:92a8:c8f7 with SMTP id b2csp2407756vqx;
+        Wed, 6 Dec 2023 10:19:12 -0800 (PST)
+X-Received: by 2002:a81:af43:0:b0:5d7:1940:3ef4 with SMTP id x3-20020a81af43000000b005d719403ef4mr872529ywj.37.1701886752310;
+        Wed, 06 Dec 2023 10:19:12 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1701886752; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oM/DxY2aPgrOoNiuRci24xEhO20PvBZdPlBJVEkZLjLOOwjX4e/osQiy6pjQ1nzdQY
+         4dO0GXHZkqn/Yvcu5xVxD17ECoprYMAjF7xIFbR/ru5AZh3m6WEKMX/IR/NUrWt1YrYS
+         eQQRjQwu0rDUkXoB68YDsMT8SHlbYDlGKvBCwefgWdbuDbBi+Ftlv5hdwf83vIkAVoGL
+         PxG3n4S9eh+mT+KMeb901OXbzILh/YwVG/xvTEB/UyPkiy6F5vgw58YBMcmhgakn2ZjF
+         641C3gjwlcIMY4Pk39OevVOFUQBaHhx0vPtXkdkLnJphCZCFl1kjJ4gHf4UQ/35BrMDo
+         EMBg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:[removed]
+         :dkim-signature;
+        bh=YTyau5U/Zby6dEvmO2IL0ibXA7m7/rBOvB3cVVAaJpU=;
+        fh=Pr2plYkJn0ovdHybgHvE53243CPsqSX0NRPDPDnAMwQ=;
+        b=TrtbPEC6Eqfit8fAjnyP7eP9NyMNvMERJ9V00rnlaCZV3wBSvqdjaOn8JOWBEjkOgO
+         CX5yAyMf757i40kc6hNulp3Z9pG0Pu8o6+gcJW15qroeySgy9v6givUcHAS5WU9TFSbQ
+         Q6b7em+Km6llGpYseQrKeKC+op7Bz295Tee82fr9u6DxD4r0BvHZaWOuHC5pycFUP/B5
+         tH1xEbN4jpp1wlQWdKTZTGRwYy6gFv/Mu4LTtCCs61A6eoT67pI5ICLLU3uYSM2mwUkk
+         LO02yJQTjGeC0XLztyj0HPxS/6yb6p3Pxf5k9NBYoPhau7qhrcBaOCx2IVky+3dru3SZ
+         lcLg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Hfk19vXB;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id v135-20020a81488d000000b005d37f244afcsor105854ywa.9.2023.12.06.10.19.12
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 06 Dec 2023 10:19:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Hfk19vXB;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1701886752; x=1702491552; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=YTyau5U/Zby6dEvmO2IL0ibXA7m7/rBOvB3cVVAaJpU=;
+        b=Hfk19vXBNiqh6WuwSzx5GMnPwBrLZ3hEUBTZnDQwzaAfrC9usr4c9XpoTdVcGuYrFh
+         GLYSX7Kon/bg0uhXXqMg7gUnGwQw6Opyy1xMDUhsQMBejPag/pBs94CH5ZRARzSedVt6
+         EK+gBx5iT1vYC2AVfnH7lWTf2qazHm6d/TEVloyABdeChtfvAK0uaEhuK2VVU4jliW2U
+         wKtbft17BliOJPbItSYk0B8oolo2cTzEws3Aa4t10xrvaJOGO5vq/3y8wujsLnndG1/W
+         ctC2MbMlpVsBZuOjN83EO5vtNYlwjX3OeHFDFiZHHUMtPmbRv+yG/lXQEED7TzfhzAAX
+         lHgg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1701886752; x=1702491552;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=YTyau5U/Zby6dEvmO2IL0ibXA7m7/rBOvB3cVVAaJpU=;
+        b=Soj7H0KaBLLTIsRMJFH/I32qLShVP2RS1PsXYYKz7RUCabtRD90UAqONdawZ8Zk4ze
+         Igzd3fGA8eqBYIj3UGlKi745xiVG3pDNFkEU0lnB9/4vNqaFYeb8Z8hakC1dh3H9/Syw
+         +Pn5rutiKBh0feQF3Uw9z6S7svk+1wUKq90YtkssO5LjfmJAVb/ocKboedlGTlB4ZU7Y
+         MJUHc7HANNykqvK0h6Gz2STTtxgoHTeK/Ou/G/o59dHtjhTZpTLfBFlS7CslyQ9pn2wO
+         VX96fP5h/tNkvXrUZaxjcdYo7P1I5VBkEOpnKJhDkn8PLuwjQYByIE5d2D6tChvoa1iL
+         Svkg==
+X-Gm-Message-State: AOJu0YzrIOm7RWTPrvhNuCfqeHODqREoAcGATTDduhbePPUzmStj09KJ
+	fUZuYXh4jY1HefqCZn/vVJs0VQBG8g7S26bVaMQ=
+X-Google-Smtp-Source: AGHT+IH5z4njidbX/rEImPwM71QUSEAa22B47mwEgBepxIawhO8LAAGEwVqY8BJlSqPd7Nj5qtjnVAtmBw29SMiJMus=
+X-Received: by 2002:a81:b728:0:b0:5d7:1940:3ef5 with SMTP id
+ v40-20020a81b728000000b005d719403ef5mr1091533ywh.38.1701886751613; Wed, 06
+ Dec 2023 10:19:11 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Wed, 6 Dec 2023 19:18:24 +0100
+Message-ID: <CAA=[removed]>
+Subject: 
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000472766060bdb6357"
+Bcc:[removed]
+
+--000000000000472766060bdb6357
+Content-Type: text/plain; charset="UTF-8"
+
+Hello,
+
+We are an international finance and investment consultant working privately
+for a high-profile international financial institution with operating areas
+in USA, Europe, Africa, the Middle East and Asia.
+
+We are currently handling huge business financial support management and
+consultancy for private banking clients of the high-profile international
+financial institution that engaged our services.
+
+We believe that you will be interested in a mutual beneficial financial
+support partnership for investments and business expansion; to be presented
+to you for your consideration accordingly.
+
+Kindly indicate your interest for further details to you  accordingly.
+
+Reply to our official mail and our gmail address below:
+
+[removed]
+
+[removed]
+
+
+Thanks and regards,
+
+--000000000000472766060bdb6357
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:trebuche=
+t ms,sans-serif;font-size:small"><br clear=3D"all"></div><div><div class=3D=
+"gmail_default" style=3D"font-family:&quot;trebuchet ms&quot;,sans-serif;fo=
+nt-size:small"><span style=3D"font-family:Arial,Helvetica,sans-serif">Hello=
+,</span><br></div><br>We are an international finance and investment consul=
+tant working privately for a high-profile international financial instituti=
+on with operating areas in USA, Europe, Africa, the Middle East and Asia.<b=
+r><br>We are currently handling huge business financial support management =
+and consultancy for private banking clients of the high-profile internation=
+al financial institution that engaged our services.<br><br>We believe that =
+you will be interested in a mutual beneficial financial support partnership=
+ for investments and business expansion; to be presented to you for your co=
+nsideration accordingly.<br><br>Kindly indicate your interest for further d=
+etails to you =C2=A0accordingly.<br><br>Reply to our official mail and our =
+gmail address below:<br><br><a href=3D"mailto:[removed]
+@lombardodierhk.com</a><br><br><a href=3D"mailto:[removed]
+[removed]</a><br><br><br>Thanks and regards,</div></div>
+
+--000000000000472766060bdb6357--
+

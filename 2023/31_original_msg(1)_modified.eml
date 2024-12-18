@@ -1,0 +1,152 @@
+Delivered-To:[removed]
+Received: by 2002:a59:cde2:0:b0:42b:92a8:c8f7 with SMTP id b2csp5897300vqx;
+        Tue, 12 Dec 2023 03:57:53 -0800 (PST)
+X-Received: by 2002:a05:6871:2316:b0:1ff:b17:7d60 with SMTP id sf22-20020a056871231600b001ff0b177d60mr7218183oab.93.1702382272955;
+        Tue, 12 Dec 2023 03:57:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1702382272; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oMjUbPUKE2+f3msy/u5d2qV5e3dXwdvxn+OOa5lcXZy1CSXugoM3Y+E/uELVwy8ISk
+         b3zVSFBHDKRQFZFN9j6kq2vz6D3m6byQtXnbDibv15S7GKxmMJCVMfc17+y07V4mTl3u
+         SnZfNWB67pC8QW9UcggMHCeIdKHSF2AVihOVwgDdl5yJUPxgOfvuNXZXBWuUVMtfZAzN
+         QV2DZ8Seg4RQ6yj0o4sb891a8+55SH1MeQ07RAfTZ1wfrccqDo228M4DY/qPGxEBh0A5
+         yK6y2z0GoxrKOrhZGClSQLbi+s7V6xinPz9LkJDFfHBA3Tg0criUo4JXqKxD38Q1mBOk
+         d2eg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:[removed]
+         :dkim-signature;
+        bh=I9ayKQz39kwwkiRhDCyoRqm7oIkkeDWCI+A9Ly9Efmk=;
+        fh=Pr2plYkJn0ovdHybgHvE53243CPsqSX0NRPDPDnAMwQ=;
+        b=FWepyHmwqaDkZOS6id+2KMsiNGddgd63UYQ0b4I6f7TsklBnkxhciW5/F23KjTxDYf
+         92JNxZv+ben58eCG1TMgLzUvSXG4JYhi0d6WsZ0oEaJgvYIuV0q5US3A0f03mTjBgJUH
+         U4RYJWum6qhOb7yXkxJ2eo+fEPoL2WGOqPM3wIrBoEm2on6xzEVAIyGlNAi6TRy6iSWr
+         35vgvycQezYNLNQpvob4/0Nv3ugDihEpn1pLKKg7sisosBXL9MPiWa4S9bmHBKyandAu
+         MST5l238B8HxCUAFXY6bi0oO4EDpMszcK5iwlyJ4jAllUpEg8eq1L9OFwe7quoBB/7HZ
+         2kfA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=boARXKP+;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id s10-20020a0568080b0a00b003b89cd52ae1sor7264864oij.4.2023.12.12.03.57.52
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 12 Dec 2023 03:57:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=boARXKP+;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1702382272; x=1702987072; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=I9ayKQz39kwwkiRhDCyoRqm7oIkkeDWCI+A9Ly9Efmk=;
+        b=boARXKP+8NrKFo5v/YIOr8xy5G8am6wJh1mCtJTz6pw+yV5cqSCG6wR7tBrd4MZ6pK
+         ORr3/4uN2O//fjVEhbV/Kw/q8xSIBqROfsIr6qL7NH65T8fHSIR+VGZnhsq9mJJ4U1Oz
+         19iSjJHcn70PfJ4RHfmtK0pXUH42XTtw3tDW9weSjRXTdy2z0rf47plAp09CXqo0Hj0Q
+         kRhj7NkWwv/ZFSRPwVAMB5oUbcX7OdXOcLBxJlY9qoRpXVXWqIXqEs4DOs//xoVVmlz9
+         2MM5+f+MjDXmdW5h3JGl0EWN7/+hp2MzN2Feqm0it8Ms4KngGpXC0fSoYxZVGadNxuYE
+         spKQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1702382272; x=1702987072;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=I9ayKQz39kwwkiRhDCyoRqm7oIkkeDWCI+A9Ly9Efmk=;
+        b=phYKLxwy087MkYVv1tI7w9/5sQaSJK6SgkNctz6ZymtEaE+CHWFIimJQqDQ0/eE26S
+         yDO3E1s0LFCRHgwHzL+LBANgZP7sn3kcMt0XORg3J7mo05oPmsAFS+2k75rMYO8PW9dk
+         tMZ/Q3lZ/LSfoRD9xYMxJkzDUESRxRwa8MDqp1nL15Gk4/waGYNBjJQYipf2WCs10DC7
+         JlMaJ51XJ9MRXU1ktv4pnLM5nctmYTc3iXUOEz/B+8yCGZ3IhH+EzhxDMxDtNZ108in7
+         FNh6K+gUmyXr7t+Rl2tvIgDBDgUuXS8eMXJCuK3Ws+w6MlgsulhQBEzxZ8QXrJzD6wWB
+         Lc2A==
+X-Gm-Message-State: AOJu0YwuAlU5fjjP5UnJlM4DHlr/h5PBY84AcHUQ6XZiNGhBAYJ9Ailx
+	7PZxJ63BAJ9NBxXUQz0jt8QY1pO0y7Tb6FtxYL0=
+X-Google-Smtp-Source: AGHT+IG7ZpC9tZEvQng+KG+D2JtDCMHyfcTKzfVn8qRkDPXkYtwIEqL12jk+wvhfxARBeMNEov0NIT+9oyBuFoSIXD8=
+X-Received: by 2002:a05:6358:a088:b0:170:ee39:2929 with SMTP id
+ u8-20020a056358a08800b00170ee392929mr825361rwn.1.1702382272328; Tue, 12 Dec
+ 2023 03:57:52 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Tue, 12 Dec 2023 12:57:09 +0100
+Message-ID: <[removed]>
+Subject: 
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000009d375c060c4ec2b6"
+Bcc:[removed]
+
+--0000000000009d375c060c4ec2b6
+Content-Type: text/plain; charset="UTF-8"
+
+Sir,
+
+This is very urgent and your attention is needed.
+
+In our office sometime last month, One Mr. John T. Kehoe of 1200 Fitch Way,
+Sacramento, CA. 95864 USA; filed an application contrary to your pending
+inheritance fund. The above mentioned person visited this bank last week
+with a Power of Attorney given in his favor by your good self, granting him
+the benefit to process and claim your inheritance of $15,000,000.00 for
+personal reasons.
+
+He further stated that the online account details be terminated while the
+fund should be wired to his bank account with CHASE BANK, Account #
+869210755, Routing # 021202337. We have asked Mr. John T. Kehoe to come
+back to the bank next week to enable us to have a personal confirmation
+from you, being hitherto the beneficiary. The Board of Directors discovered
+some foul play, and decided to move the fund to our affiliate bank in
+Germany.
+
+* OUR OFFICES NEEDS TO KNOW:
+
+1. Did you instruct one Mr. John T. Kehoe of 1200 Fitch way, Sacramento,
+CA. 95864, to claim and receive the payment on your behalf?
+
+2. Did you sign any 'Deed of Assignment' in his favor thereby making him
+the current beneficiary?
+
+We are sorry to have delayed your instruction in giving out this fund since
+we must adhere to the procedures of this honorable bank by making sure this
+request is verified and confirmed by the beneficiary and his existing
+attorney.
+
+Your confirmation to the above will be appreciated.
+
+Regards,
+Phillip Moore
+Contact E-mail: [removed]
+DIRECTOR: International Operations-Debt Reconciliations/Payment
+ISLE OF MAN BANK, ISLE OF MAN.
+
+--0000000000009d375c060c4ec2b6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div>Sir,<br>=C2=A0<br>This is very urge=
+nt and your attention is needed.<br>=C2=A0<br>In our office sometime last m=
+onth, One Mr. John T. Kehoe of 1200 Fitch Way, Sacramento, CA. 95864 USA; f=
+iled an application contrary to your pending inheritance fund. The above me=
+ntioned person visited this bank last week with a Power of Attorney given i=
+n his favor by your good self, granting him the benefit to process and clai=
+m your inheritance of $15,000,000.00 for personal reasons.<br>=C2=A0<br>He =
+further stated that the online account details be terminated while the fund=
+ should be wired to his bank account with CHASE BANK, Account # 869210755, =
+Routing # 021202337. We have asked Mr. John T. Kehoe to come back to the ba=
+nk next week to enable us to have a personal confirmation from you, being h=
+itherto the beneficiary. The Board of Directors discovered some foul play, =
+and decided to move the fund to our affiliate bank in Germany.<br>=C2=A0<br=
+>* OUR OFFICES NEEDS TO KNOW:<br><br>1. Did you instruct one Mr. John T. Ke=
+hoe of 1200 Fitch way, Sacramento, CA. 95864, to claim and receive the paym=
+ent on your behalf?<br><br>2. Did you sign any &#39;Deed of Assignment&#39;=
+ in his favor thereby making him the current beneficiary?<br>=C2=A0<br>We a=
+re sorry to have delayed your instruction in giving out this fund since we =
+must adhere to the procedures of this honorable bank by making sure this re=
+quest is verified and confirmed by the beneficiary and his existing attorne=
+y.<br>=C2=A0<br>Your confirmation to the above will be appreciated.<br>=C2=
+=A0<br>Regards,<br>Phillip Moore<br>Contact E-mail: <a href=3D"mailto:[removed]
+[removed]">[removed]</a><br>DIRECTOR: Internatio=
+nal Operations-Debt Reconciliations/Payment<br>ISLE OF MAN BANK, ISLE OF MA=
+N.<br></div></div>
+
+--0000000000009d375c060c4ec2b6--
+

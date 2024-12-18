@@ -1,0 +1,146 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a944:0:b0:49b:3a60:d7b with SMTP id d4csp492vqw;
+        Mon, 14 Oct 2024 18:20:45 -0700 (PDT)
+X-Received: by 2002:a05:620a:44c2:b0:7a9:a991:f6d7 with SMTP id af79cd13be357-7b11a3ad395mr1623995685a.48.1728955245292;
+        Mon, 14 Oct 2024 18:20:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1728955245; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Noxe5ET6moN5P0lzobmn1q7+Hkv1UTNyyS7ndvLo0PZ4psPZzfOrfBYO/y3xWFLmeH
+         jqHib8jMl0FIOV7+1bFS73rt277g9o62NJ6RET6l9JSGjqvn9aQT88j6b2scXWGgbkaw
+         SDKawrSNoyRnO8cad62k8v9gDeFB3nOfCl2Kk1Bf2gRyJEbnK9EHuvZ14wRVBwo3V5az
+         52Hk1eYgw3yw8ESgGB+vBTd8wMnxO38xWvhwD/rLbG3IPxYir6dgQicKheAvW0rSm78H
+         GGGVCxYgse8+77T/7e0KUMnS8e95HQTcm5dzZ+oo1Im2VDWynKFS09QmvCsAn+72Hbei
+         8yMA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=dAurzVw40/K7QjesGng6TjcsEYge6XgXgx5zL5CfEA0=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=kGb2iMHrlY+THTxOLAV7jdoI16OmLHC03NGJIvpTz46ncc4nBrdPkamssULZf04dnV
+         GFM7tusT9r2DjScnR89+RPpP8sX/kUWC7FeycYf8cxuoHSXMX/W/LuOV8O7dt0Z5GnBu
+         7/W43hR7gsLwVaMqINVNZ2NFngpvPDy69bNeQmBvV97KLEOtk9Ier94aeTCqOHd6aVlV
+         ux85RjptaFJVRjEMUk7VmxVXoMeuxj2UIdmdP+V7s6eJZFyB84Vos2otGDzcKaJV2mit
+         L+9p6F1+RF2PhdTuENbvjPOqXvM+F60WDnnt8FP3Ais3SFf/IrQ1jvihNurvX/K+3uw4
+         vwBQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=mKbcrML3;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id af79cd13be357-7b136170dc8sor26380585a.16.2024.10.14.18.20.44
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 14 Oct 2024 18:20:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=mKbcrML3;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1728955244; x=1729560044; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=dAurzVw40/K7QjesGng6TjcsEYge6XgXgx5zL5CfEA0=;
+        b=mKbcrML3gCgU2tNIJZgQBWK2eAO1SW3bFTVxw1TPJeYr9nNDZ5us17LJA9B3nQejO8
+         xxgr8VFoWC4QjdfAnkMYeDxMk9aw/clIibNM8MScPICj5TTDFCjLAFX4bi672xcgj/wy
+         YRukcZB07VqryNxB3OqC6O7+pWV/wkJczG8fHm+1ZIGWyvUNWW5wL8MxNT4mlsOVmvam
+         600DFgYe4v1c9z95/We5HWflMgBuB/61+Ds+zY4iI0lYZytdla3C78Y1e7S7OJowoAW/
+         WMns3tZyROs+4NYqjuVZUX6lALQ3TxE13kzlpQweuXC0Id8JvetpFLaeQUBR1jDfdAy2
+         dvsQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1728955244; x=1729560044;
+        h=to:[removed]
+         :from:[removed]
+        bh=dAurzVw40/K7QjesGng6TjcsEYge6XgXgx5zL5CfEA0=;
+        b=DUAniAWaWh1QZI0BNkiv6qKzi2VGami6SxWcMdDv6xXVhcYtpfbnPVObG5/bbeefjr
+         5B7vk6IfGiV4SZxE+qQyHRqNiizi+TVgsldfVO66DIyf03rt12RmQAYAbvRoX7UsAaG9
+         oZlkU4xy6RmLmIlNGrhrY7NoIRrhx6IU76C4Lf3sGryO+cJZL3F9LkBbjFMi+2DgpaIB
+         QQKR9aM5C00iOykg1gwIBZamcYiqhaXZlYlngQTXSBNi0q976asPzog8iJjC7KoivNmG
+         CMKfZbtWSe73mHgqrI5WpZmRYTWj8OO+7wXmh4DKWiT9zfF/ZyADsNlaVs8sfP/aorWn
+         Z4sw==
+X-Gm-Message-State: AOJu0YwObDgPraIDXb1oZBju/q3Wjz+aN2yDTAXP9nR3fOXbESJJGQKO
+	JbWsnVSdK7wUhehkbxtJ6lx7yVKXdJPXI24Vk9Wp9RP9tU8TgQu2fkCsXHuI1DyCMS1VIQmN2XB
+	r8AJrpLXtBo1TBB1a9I3Xm75d05PjdeMOj8M=
+X-Google-Smtp-Source: AGHT+IEfDTMKZQjreQiM/nVuTgc01lWi+dEGetsxeVanjdMbYlzW9pZtQ4yTukmq89FNC/jmlurTK/1h+5eSL5f0pUI=
+X-Received: by 2002:a05:620a:170c:b0:7a9:c610:99fd with SMTP id
+ af79cd13be357-7b11a3b9bfemr1788455385a.56.1728955244470; Mon, 14 Oct 2024
+ 18:20:44 -0700 (PDT)
+MIME-Version: 1.0
+From:[removed]
+Date: Tue, 15 Oct 2024 02:20:19 +0100
+Message-ID: <[removed]>
+Subject: Carrie J. Troy,
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000002de668062479c35d"
+
+--0000000000002de668062479c35d
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+Re: Personal proposal
+This mail is with heavy tears and great sorrow because i don't have any
+other option than to open up to you all
+
+However, I am Mrs. Jennifer Choo suffering from a long time cancer of the
+breast and my conditions is really deteriorating and the doctors have
+courageously advised me that I may not live long, because the cancer has
+reached a critical stage and for this reason I contacted you.
+
+I was brought up in a motherless baby's home and was married to my late
+husband for many years without a child.
+He was a pilot before his death and I decided not to remarry because of my
+health and before his death; we have a family inheritance of five million,
+six hundred thousand pounds treasure in London.
+
+The management wrote me as the next of kin to come for the claim after
+keeping it for so long or rather issue a letter of authorisation to someone
+to do so on my behalf since I am terminally ill.
+Failure will result to them reverting this inheritance to the state
+treasury as unclaimed and possibly; divert it to themselves.
+I am undergoing treatment and my last wish is to make sure this treasure is
+secured.
+
+I took this decision to enable me die in peace and please assure me that
+you will act on humanitarian motives if given the opportunity.
+
+Yours Sincerely
+Mrs. Jennifer Choo.
+
+Reply here:([removed])
+
+For more information
+My lawyer Barr. Rose Taylor ( [removed] )
+
+--0000000000002de668062479c35d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+-- <br><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_s=
+ignature">Re: Personal proposal <br>This mail is with heavy tears and great=
+ sorrow because i don&#39;t have any other option than to open up to you al=
+l <br><br>However, I am Mrs. Jennifer Choo suffering from a long time cance=
+r of the breast and my conditions is really deteriorating and the doctors h=
+ave courageously advised me that I may not live long,  because the cancer h=
+as reached a critical stage and for this reason I contacted you.<br><br>I w=
+as brought up in a motherless baby&#39;s home and was married to my late hu=
+sband for many years without a child. <br>He was a pilot before his death a=
+nd I decided not to remarry because of my health and before his death; we h=
+ave a family inheritance of five million, six hundred thousand pounds treas=
+ure in London.<br><br>The management wrote me as the next of kin to come fo=
+r the claim after keeping it for so long or rather issue a letter of author=
+isation to someone to do so on my behalf since I am terminally ill. <br>Fai=
+lure will result to them reverting this inheritance to the state treasury a=
+s unclaimed and possibly; divert it to themselves.<br>I am undergoing treat=
+ment and my last wish is to make sure this treasure is secured. <br><br>I t=
+ook this decision to enable me die in peace and please assure me that you w=
+ill act on humanitarian motives if given the opportunity.<br><br>Yours Sinc=
+erely<br>Mrs. Jennifer Choo.  <br><br>Reply here:(<a href=3D"mailto:[removed]
+[removed]">[removed]</a>) <br><br>For more inf=
+ormation <br>My lawyer Barr. Rose Taylor ( <a href=3D"mailto:[removed]
+outlook.com">[removed]</a> )<br>=E2=80=A8<br></div>
+
+--0000000000002de668062479c35d--
+

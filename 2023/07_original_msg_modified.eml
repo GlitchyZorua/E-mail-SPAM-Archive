@@ -1,0 +1,192 @@
+Delivered-To:[removed]
+Received: by 2002:a59:b7aa:0:b0:49b:3a60:d7b with SMTP id t10csp552039vqi;
+        Tue, 15 Oct 2024 23:59:04 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVWYGRusujTmp8ge03NQ47lH5ai9GG4w1bi5uZsl7JeAvim8RGN/yAYxfguvcPLFX9Jf63APRTAfXWlj2FF2H9OaEa61w==@gmail.com
+X-Received: by 2002:a17:906:99c4:b0:a99:5f16:3539 with SMTP id a640c23a62f3a-a99b8e9f11bmr1653650666b.0.1729061943862;
+        Tue, 15 Oct 2024 23:59:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1729061943; cv=none;
+        d=google.com; s=arc-20240605;
+        b=DtarOz88g9kAyFiKZM8BRWa+n+lGn01mjRlWPaho56J/pTMUebNH6dskGFg5Il+viu
+         5st2nOxBDsfNtiexTaxUYodVo0JZDRAuNqbSZmXsLvVfPyJuG4jMQ3B/xY3nUSbRAL4T
+         GRrwZY8dPkT1ywGwWbdzSQ6+XeCOWz/FMcFnPSvECPWV3jqR5oTZG8colJDTjHu1+lEf
+         2QHHoJk0V6GqrE217g7QbdrlFG959CkEM9k9cmQax2xnNsThfmxkITkC+pnUr+4Nwqvp
+         5RN44b99UY2MUZTd2z96fEQ8GKzX6eLmZvZ3sFjODjjKDEgvOaC1bCxwnD+Nxk9SJVy1
+         ikrA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=tCGtMUjjFJVjwQifjgObSXsRgfkmd0ujvrxK6yJvhvE=;
+        fh=nT6W8jbObnYjqgUO8HlNUyJf26LbXXTcKPGmcQpW7PA=;
+        b=XJxTye6BfPelEScROUMnRbUIVWD8Uu6v/MwWfYKeO301l5Co8MY+/HEuMh7lJMkwEj
+         HIH7z4A6YJCE+2TQ920VyBaEJZkViNOYAcHRwwM/IpCwevokuJcu+6rGXeEnO1ZGM/gG
+         plkb7N0W+yoLEE1ABZfHZnv5yBy7unhcJ8Kh1pDNLsTab9oRe6/HxReQXPVVMC87UqRv
+         rs4HOS9ninK5J9p3vgfdB2TqjydcQSAYnfeBv3uWAYcJzYUIXz+U90M2hr4l5ULMyoCT
+         DF4GpOihRJwQaJAfOycn2/Q/YfFLb72zxuPWLvUxMH8ErlA2yfBliKHH0rk2OtQx75LB
+         LFuw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@student.ums.ac.id header.s=google header.b=LAbYkxbR;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=ums.ac.id;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-a9a38dc4c48sor45442066b.4.2024.10.15.23.59.03
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 15 Oct 2024 23:59:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@student.ums.ac.id header.s=google header.b=LAbYkxbR;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=ums.ac.id;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=student.ums.ac.id; s=google; t=1729061943; x=1729666743; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=tCGtMUjjFJVjwQifjgObSXsRgfkmd0ujvrxK6yJvhvE=;
+        b=LAbYkxbR9nS9kW+DFH0Zxn2NiXpqG9UzKGBz/zPt355RVvj4QenXhC+yBOjNmpLxmJ
+         BqaUxtwcmn/rGbvlebg7TMILXP1jQIHf6rn7u37HUzVdZ79rCKvBRbN+5AnnIv0+QNEX
+         CTyy8jaHfphH3tHeCngHY2JEEMY2pMakrwn1w=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1729061943; x=1729666743;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=tCGtMUjjFJVjwQifjgObSXsRgfkmd0ujvrxK6yJvhvE=;
+        b=VS9Bo9DyvHJXw/hS+qUnRAhH1W6kVgZVL+iGy0Z446FLKspEhyuPXk9hRmWjepdFqz
+         OyqmJXIsAAjhqfveVfHW/VZTgOKI7y7GA8IltWIKANNi/nLhPSGcSkjKRHrYGKfc5gVp
+         UvHFCHbSenZZirQgGGGQm5HwOgLRKtlyDzbK+WdJY2rGimDks4iOS6FcMemDMRMSdRZH
+         GlBVzTmyUIGutLBWow7riwceWEtiQX2Ms3JvKBJiJuKxe/26NqkgsD6TDLCA+7N9SKtg
+         8n0WSN29NgvvsJ4szvRbdP3iMUI6o8oYdfWt8hupH7fI0J3QInXvtllnbqcfJSmHFfWz
+         sl0Q==
+X-Forwarded-Encrypted: i=1; AJvYcCXfaqK5VA6eVDKzWTsEO4TGrAabyU++vNPkDkyEP1OzZoadiCGyjoOcCE8C1+3kJh3lCQnX2M1GoV9shNIyyDMuYGWvJQ==@gmail.com
+X-Gm-Message-State: AOJu0YzxBBsxBnaxbePyyKe3qlm+mfs0MLFF17nj0iwtXLimuFvIRURm
+	K1hN72R/b+NWhBd/DFCwFeNzKoFI0gKWZjB6x5Ztq1z8rBBx+1VPWNcYkGaGKSSlwLc5528W3o3
+	thjKpy84GfhmaQRqvbV5PrVo8uoXlQcxH4t0cHw==
+X-Google-Smtp-Source: AGHT+IFXqNjMCk4yHcXYEgh0dNvwLSFveGJlQQ0GaiC70gXqAdfY0l8D5tBaym9YUC5WwwUrqN4j69lXS/EIRYIEvB4=
+X-Received: by 2002:a17:907:3f07:b0:a99:6a5a:bba with SMTP id
+ a640c23a62f3a-a99b93aae71mr1512381066b.2.1729061942878; Tue, 15 Oct 2024
+ 23:59:02 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Wed, 16 Oct 2024 07:58:48 +0100
+Message-ID: <[removed]>
+Subject: RE:
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000e6701e0624929a7e"
+Bcc:[removed]
+
+--000000000000e6701e0624929a7e
+Content-Type: text/plain; charset="UTF-8"
+
+ Hello dearest,
+
+Permit me to inform you of my desire to go into a business
+relationship with you. I got your contact from the International web
+site directory. I prayed over it and selected your name among other
+names due to what my mind told me to tell me that you are a reputable
+and trustworthy person I can expose my ordeal to and do business with.
+So I must not hesitate to confide in you for this simple and sincere
+business.
+
+I am  Raphael Kamara , the only son of the late Mr and Mrs VINCENT
+KAMARA. My father was a very wealthy cocoa merchant in Abidjan, the
+economic capital of Ivory Coast, before he was poisoned to death by
+his business associates on one of their outings to discuss a business
+deal.
+
+When my mother died on the 6th August 2019, my father took me special
+because I am the only child and motherless. Before the death of my
+father on 30th March 2024 in a private hospital here in Abidjan, he
+secretly called me on his bedside and told me that he has a sum of
+$7.500.000 (Seven Million, five hundred thousand dollars) left in a
+suspense account in a local Bank here in Abidjan, that he used my name
+as his only child for the next of kin in deposit of the fund. He
+explained to me that it was because of this wealth and some huge
+amount of money his business associates supposed to balance him from
+the deal they had, that he was poisoned by his business associates,
+that I should seek for a God fearing foreign partner in a country of
+my choice where I will transfer this money and use it for investment
+purpose, (such as real estate management).
+
+Please, I am honourably seeking your assistance in the following ways.
+1) To receive the money for me in your account by providing a Bank
+account where this money would be transferred to.
+2) To serve as the guardian of this since I am a boy of 18 years and I
+do not have business experience.
+3) To help me come over to your country as soon as the money is
+transferred to your account so that I will continue my education and a
+new life.
+
+I am willing to give you 15% of the sum as compensation for effort
+input after the successful transfer of this fund to your designated
+account overseas. Anticipating to hear from you quickly please. Thanks
+and God Bless.
+
+I await your response through my private email address at (
+[removed] ) for more details.
+
+Yours faithfully
+Raphael Kamara
+
+--000000000000e6701e0624929a7e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+PGRpdiBkaXI9Imx0ciI+DQpIZWxsbyBkZWFyZXN0LDxicj48YnI+UGVybWl0wqBtZcKgdG/CoGlu
+Zm9ybcKgeW91wqBvZsKgbXnCoGRlc2lyZcKgdG/CoGdvwqBpbnRvwqBhwqBidXNpbmVzc8KgcmVs
+YXRpb25zaGlwwqB3aXRowqB5b3UuwqBJwqBnb3TCoHlvdXLCoGNvbnRhY3TCoGZyb23CoHRoZcKg
+SW50ZXJuYXRpb25hbMKgd2ViwqBzaXRlwqBkaXJlY3RvcnkuwqBJwqBwcmF5ZWTCoG92ZXLCoGl0
+wqBhbmTCoHNlbGVjdGVkwqB5b3VywqBuYW1lwqBhbW9uZ8Kgb3RoZXLCoG5hbWVzwqBkdWXCoHRv
+wqB3aGF0wqBtecKgbWluZMKgdG9sZMKgbWXCoHRvwqB0ZWxswqBtZcKgdGhhdMKgeW91wqBhcmXC
+oGHCoHJlcHV0YWJsZcKgYW5kwqB0cnVzdHdvcnRoecKgcGVyc29uwqBJwqBjYW7CoGV4cG9zZcKg
+bXnCoG9yZGVhbMKgdG/CoGFuZMKgZG/CoGJ1c2luZXNzwqB3aXRoLsKgU2/CoEnCoG11c3TCoG5v
+dMKgaGVzaXRhdGXCoHRvwqBjb25maWRlwqBpbsKgeW91wqBmb3LCoHRoaXPCoHNpbXBsZcKgYW5k
+wqBzaW5jZXJlwqBidXNpbmVzcy48YnI+PGJyPknCoGFtwqDCoFJhcGhhZWzCoEthbWFyYcKgLMKg
+dGhlwqBvbmx5wqBzb27CoG9mwqB0aGXCoGxhdGXCoE1ywqBhbmTCoE1yc8KgVklOQ0VOVMKgS0FN
+QVJBLsKgTXnCoGZhdGhlcsKgd2FzwqBhwqB2ZXJ5wqB3ZWFsdGh5wqBjb2NvYcKgbWVyY2hhbnTC
+oGluwqBBYmlkamFuLMKgdGhlwqBlY29ub21pY8KgY2FwaXRhbMKgb2bCoEl2b3J5wqBDb2FzdCzC
+oGJlZm9yZcKgaGXCoHdhc8KgcG9pc29uZWTCoHRvwqBkZWF0aMKgYnnCoGhpc8KgYnVzaW5lc3PC
+oGFzc29jaWF0ZXPCoG9uwqBvbmXCoG9mwqB0aGVpcsKgb3V0aW5nc8KgdG/CoGRpc2N1c3PCoGHC
+oGJ1c2luZXNzwqBkZWFsLjxicj48YnI+V2hlbsKgbXnCoG1vdGhlcsKgZGllZMKgb27CoHRoZcKg
+NnRowqBBdWd1c3TCoDIwMTkswqBtecKgZmF0aGVywqB0b29rwqBtZcKgc3BlY2lhbMKgYmVjYXVz
+ZcKgScKgYW3CoHRoZcKgb25secKgY2hpbGTCoGFuZMKgbW90aGVybGVzcy7CoEJlZm9yZcKgdGhl
+wqBkZWF0aMKgb2bCoG15wqBmYXRoZXLCoG9uwqAzMHRowqBNYXJjaMKgMjAyNMKgaW7CoGHCoHBy
+aXZhdGXCoGhvc3BpdGFswqBoZXJlwqBpbsKgQWJpZGphbizCoGhlwqBzZWNyZXRsecKgY2FsbGVk
+wqBtZcKgb27CoGhpc8KgYmVkc2lkZcKgYW5kwqB0b2xkwqBtZcKgdGhhdMKgaGXCoGhhc8KgYcKg
+c3VtwqBvZsKgJDcuNTAwLjAwMMKgKFNldmVuwqBNaWxsaW9uLMKgZml2ZcKgaHVuZHJlZMKgdGhv
+dXNhbmTCoGRvbGxhcnMpwqBsZWZ0wqBpbsKgYcKgc3VzcGVuc2XCoGFjY291bnTCoGluwqBhwqBs
+b2NhbMKgQmFua8KgaGVyZcKgaW7CoEFiaWRqYW4swqB0aGF0wqBoZcKgdXNlZMKgbXnCoG5hbWXC
+oGFzwqBoaXPCoG9ubHnCoGNoaWxkwqBmb3LCoHRoZcKgbmV4dMKgb2bCoGtpbsKgaW7CoGRlcG9z
+aXTCoG9mwqB0aGXCoGZ1bmQuwqBIZcKgZXhwbGFpbmVkwqB0b8KgbWXCoHRoYXTCoGl0wqB3YXPC
+oGJlY2F1c2XCoG9mwqB0aGlzwqB3ZWFsdGjCoGFuZMKgc29tZcKgaHVnZcKgYW1vdW50wqBvZsKg
+bW9uZXnCoGhpc8KgYnVzaW5lc3PCoGFzc29jaWF0ZXPCoHN1cHBvc2VkwqB0b8KgYmFsYW5jZcKg
+aGltwqBmcm9twqB0aGXCoGRlYWzCoHRoZXnCoGhhZCzCoHRoYXTCoGhlwqB3YXPCoHBvaXNvbmVk
+wqBiecKgaGlzwqBidXNpbmVzc8KgYXNzb2NpYXRlcyzCoHRoYXTCoEnCoHNob3VsZMKgc2Vla8Kg
+Zm9ywqBhwqBHb2TCoGZlYXJpbmfCoGZvcmVpZ27CoHBhcnRuZXLCoGluwqBhwqBjb3VudHJ5wqBv
+ZsKgbXnCoGNob2ljZcKgd2hlcmXCoEnCoHdpbGzCoHRyYW5zZmVywqB0aGlzwqBtb25lecKgYW5k
+wqB1c2XCoGl0wqBmb3LCoGludmVzdG1lbnTCoHB1cnBvc2UswqAoc3VjaMKgYXPCoHJlYWzCoGVz
+dGF0ZcKgbWFuYWdlbWVudCkuPGJyPjxicj5QbGVhc2UswqBJwqBhbcKgaG9ub3VyYWJsecKgc2Vl
+a2luZ8KgeW91csKgYXNzaXN0YW5jZcKgaW7CoHRoZcKgZm9sbG93aW5nwqB3YXlzLjxicj4xKcKg
+VG/CoHJlY2VpdmXCoHRoZcKgbW9uZXnCoGZvcsKgbWXCoGluwqB5b3VywqBhY2NvdW50wqBiecKg
+cHJvdmlkaW5nwqBhwqBCYW5rwqBhY2NvdW50wqB3aGVyZcKgdGhpc8KgbW9uZXnCoHdvdWxkwqBi
+ZcKgdHJhbnNmZXJyZWTCoHRvLjxicj4yKcKgVG/CoHNlcnZlwqBhc8KgdGhlwqBndWFyZGlhbsKg
+b2bCoHRoaXPCoHNpbmNlwqBJwqBhbcKgYcKgYm95wqBvZsKgMTjCoHllYXJzwqBhbmTCoEnCoGRv
+wqBub3TCoGhhdmXCoGJ1c2luZXNzwqBleHBlcmllbmNlLjxicj4zKcKgVG/CoGhlbHDCoG1lwqBj
+b21lwqBvdmVywqB0b8KgeW91csKgY291bnRyecKgYXPCoHNvb27CoGFzwqB0aGXCoG1vbmV5wqBp
+c8KgdHJhbnNmZXJyZWTCoHRvwqB5b3VywqBhY2NvdW50wqBzb8KgdGhhdMKgScKgd2lsbMKgY29u
+dGludWXCoG15wqBlZHVjYXRpb27CoGFuZMKgYcKgbmV3wqBsaWZlLjxicj48YnI+ScKgYW3CoHdp
+bGxpbmfCoHRvwqBnaXZlwqB5b3XCoDE1JcKgb2bCoHRoZcKgc3VtwqBhc8KgY29tcGVuc2F0aW9u
+wqBmb3LCoGVmZm9ydMKgaW5wdXTCoGFmdGVywqB0aGXCoHN1Y2Nlc3NmdWzCoHRyYW5zZmVywqBv
+ZsKgdGhpc8KgZnVuZMKgdG/CoHlvdXLCoGRlc2lnbmF0ZWTCoGFjY291bnTCoG92ZXJzZWFzLsKg
+QW50aWNpcGF0aW5nwqB0b8KgaGVhcsKgZnJvbcKgeW91wqBxdWlja2x5wqBwbGVhc2UuwqBUaGFu
+a3PCoGFuZMKgR29kwqBCbGVzcy48YnI+PGJyPknCoGF3YWl0wqB5b3VywqByZXNwb25zZcKgdGhy
+b3VnaMKgbXnCoHByaXZhdGXCoGVtYWlswqBhZGRyZXNzwqBhdMKgKMKgPGEgcmVsPSJub2ZvbGxv
+dyBub29wZW5lciBub3JlZmVycmVyIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0ibWFpbHRvOnJrYW1h
+cmE5OTlAZ21haWwuY29tIj5ya2FtYXJhOTk5QGdtYWlsLmNvbTwvYT7CoCnCoGZvcsKgbW9yZcKg
+ZGV0YWlscy48YnI+PGJyPllvdXJzwqBmYWl0aGZ1bGx5PGJyPlJhcGhhZWzCoEthbWFyYQ0KDQoN
+Cg0KDQoNCjwvZGl2Pg0K
+--000000000000e6701e0624929a7e--
+

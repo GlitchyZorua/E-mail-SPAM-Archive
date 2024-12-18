@@ -1,0 +1,109 @@
+Delivered-To:[removed]
+Received: by 2002:a59:786:0:b0:42b:92a8:c8f7 with SMTP id 128csp657209vqh;
+        Wed, 29 Nov 2023 13:37:53 -0800 (PST)
+X-Received: by 2002:a2e:9b0e:0:b0:2c9:b88c:b492 with SMTP id u14-20020a2e9b0e000000b002c9b88cb492mr3768705lji.23.1701293873558;
+        Wed, 29 Nov 2023 13:37:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1701293873; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zyV4ENIOYqxOigSvwMvEbXxw8n8Z4+s94x4xUbpJpdDzk7s95gNXoDOdNiaCU4Bk/Y
+         ziEv2cIvGjsAYmN/3pUwFhpY/kCNFyxYR3q8mW39sdXa/FYuA+9qQt6VFG/6hU23V1Yf
+         flpzfjpix+uxshGO2wlt1UxFJrPPiVHvRviX1k0z0UsT5T1ebeEgfcVm2TDR1aJ9L3In
+         89snZBa4wWzbeJ1WkNSWllrSL1g6Pjqe1dGZdhxNZmBrrZCmNm37zy6CW0AFtrsDDzn4
+         9dV5OTQLEhJJgjc6DW/ntw+yk19rijXavFMMb4tkbhxRsSo7aiEPHYagWdt/nFOBVRky
+         C54g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:[removed]
+         :dkim-signature;
+        bh=BUn56avhX9FiKvI7SSWBsF3mEwyPTByCOxXdiD+kqwE=;
+        fh=Pr2plYkJn0ovdHybgHvE53243CPsqSX0NRPDPDnAMwQ=;
+        b=yJjt3DMiMDDVhOR9K4xGX8gYhJmj6sbxYZR56CrGFDV6LLFZjJks0wXecrBpTYjxjb
+         /l1zqstZXRsuKtD3kcVAUXKBM2RIdXVSr7aFsFdhX9FzMO+VJMCDU3EJrxslXwdbcrvo
+         tCFE6/sSxx7ojLp2YoUJTGPpPFQH+6hS4Nrz20EwQxSD5pnHPpSb589Lc6VQAcAvBF8J
+         H7fXe7C5bT/UG/mY42BAgOF4kzOUboWSGhPMscU/aBppo+lykO2OhLxykI2Mdux23jVr
+         7p809afEDQTxmncsus1hgCv1YNn9TqlveijojK5abrKkAQZ+3a61UAYtmyKp+d3Amc56
+         L7Nw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KcnIh6bg;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d21-20020a2e96d5000000b002c509e7313csor606502ljj.14.2023.11.29.13.37.53
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 29 Nov 2023 13:37:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KcnIh6bg;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1701293873; x=1701898673; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=BUn56avhX9FiKvI7SSWBsF3mEwyPTByCOxXdiD+kqwE=;
+        b=KcnIh6bgEz2qXcOTfYJDQxZHs6odO4ZTwkWfMjk+C4tvZfIXNSRgquP0wiiPRYXpfD
+         6NGBrQ3HXpBxnSBiWxoKrjXWtBVTR4UPYKSvqbmS0MIKhZDtTaZYNFMSBO2FYY3aUYnq
+         PtmsC2NhgN1QpfRem4IuE7485Ks4OmkLhxEzravvdl5ah80nIedNa02svObvycfnHXc+
+         mqK3UQxqP4g9xetlxBFG5zjhBWlH3Xr7UECUR1hBePo5BuURtkr1ClFA3/8t/X15nemS
+         FhZdqoiln9q/jUGGadK/K4fORE7OmK60B4SYb/4/Z8gjBZznyq5Hh4JRLPCRmzgbE0Kh
+         r3mA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1701293873; x=1701898673;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=BUn56avhX9FiKvI7SSWBsF3mEwyPTByCOxXdiD+kqwE=;
+        b=ZkqBFzctq+Nu7RozAxp40z1dW4UaAN7G0UH4pZvsqBZBaa5Md1v5KLFECa8VujCvKs
+         gPuh66mpfr/hioc15LhzOt4ir9EFKCQsB7NVnKFsT1d2NNBs8dzrHKIeGbxJdkQjryRY
+         siLlGUonahJPu51wFHvBfZPtRsM+D/rkiWlFOGW67dYWalUVTOYz0T+frUSAePJk7VlU
+         3s4Ak7qAeem+sfig3Rzrv6Tovr0UWR04iH+KzX8tTZDvr2PA95CzCNHQRqEIFz5SqltN
+         hXxrlfQyri0YVRDe8WIL14YHOUsakyDqedxKexed5oZUrD7v0q74xhjrBbKFQyg83SHm
+         4CzA==
+X-Gm-Message-State: AOJu0Ywj8xszJ3t4/5vef5xteUD0oa2EY0nAD646dBbVZCFvUvWTm515
+	h820sv76w9qfaTtxJ2I5uThCJqON5w7xO7OytNU=
+X-Google-Smtp-Source: AGHT+IG7KOBrTkqwHoDCjbF9XrSMJlMi6pmVvcpPH79q/Qo9n6+w8+kcH4YMw8Na+xXptH7g5ZLTPmkdK9D1niL+ay8=
+X-Received: by 2002:a2e:3c12:0:b0:2c9:c81c:ba4c with SMTP id
+ j18-20020a2e3c12000000b002c9c81cba4cmr184977lja.45.1701293872660; Wed, 29 Nov
+ 2023 13:37:52 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Wed, 29 Nov 2023 22:36:05 +0100
+Message-ID: <CAHLhecU_nzAXP_y3pZ7O0J5bWQqshxL31_9tyMu+OMFet=[removed]>
+Subject: 
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000f04980060b51587a"
+Bcc:[removed]
+
+--000000000000f04980060b51587a
+Content-Type: text/plain; charset="UTF-8"
+
+Good Day,
+
+I am Mr. Viktor Zubkov an investor and a director with Gazprom Russia.
+Considering the current economic sanctions melted on Russia by some
+European countries and United States of America which is seriously
+affecting us now, I'm soliciting for your consent transfer Two Hundred
+Million Dollars ($200M) investment funds deposited with an American bank
+into your personal bank account for investment and also to escape
+confiscation by USA government. Please respond back for more details.
+Yours Truly,
+Mr. Viktor Zubkov
+Chairman of the board of directors Gazprom
+
+--000000000000f04980060b51587a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div>Good Day,<br><br>I am Mr. Viktor Zu=
+bkov an investor and a director with Gazprom Russia. Considering the curren=
+t economic sanctions melted on Russia by some European countries and United=
+ States of America which is seriously affecting us now, I&#39;m soliciting =
+for your consent transfer Two Hundred Million Dollars ($200M) investment fu=
+nds deposited with an American bank into your personal bank account for inv=
+estment and also to escape confiscation by USA government. Please respond b=
+ack for more details.<br>Yours Truly,<br>Mr. Viktor Zubkov<br>Chairman of t=
+he board of directors Gazprom<br><br></div></div>
+
+--000000000000f04980060b51587a--
+

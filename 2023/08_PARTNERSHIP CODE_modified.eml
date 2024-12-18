@@ -1,0 +1,123 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:1b13:b0:49b:3a60:d7b with SMTP id ie19csp1521910vqb;
+        Sat, 19 Oct 2024 09:44:54 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUdfSAedZZg9U/BOgZL+DEGqrpvzHsFRYsOTO95UbLOjJVXnlKwhoijDsceantk86x4ACGAW6U2WM/JWgNv3QaJpK2fsQ==@gmail.com
+X-Received: by 2002:a05:690c:a:b0:6e3:dbbe:2736 with SMTP id 00721157ae682-6e5bfd4e9b3mr64850377b3.32.1729356294159;
+        Sat, 19 Oct 2024 09:44:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1729356294; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Yr0PDSa5HljgDi15PMB4OjG24nFEkM/jH935i/g/VGScTvXYO0h4VxwOAaV3gAEcmb
+         RGmzzV81d2c3v5r4ZQf5qC/q3LOnu1K1KmdcYFSWG4sXeoSvZN+IeUBQ7zpjOtmVM6l8
+         0dImXDm81TSXsi7BGgw3zgKxDpDKNy74+C+4kGz6qYbjXd9gNu2HTb4AmR0yMiDGlNO2
+         fshZ8HNJVfapVck38ecLXNh/WqrYT12uJWZkzJWciQW3rdDF75rDxGXDu6iZRSlUEOO2
+         6OasXC+fUVLMfLqazGfO//jp3R7sx4u/tfaGDZY82Yg+3yqGdP4LAM+TFvNpEpz6pSJw
+         Uf1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=crq5ih6vDYW1Uv913yH7/gij0hS/MDf8XwvEqvZcbUs=;
+        fh=xU/wtDnT6itkGxQifu0Ac8sW3yWJFh3wSSeS6S3rBt0=;
+        b=Dtp44X1gzWK9z3SkKgdL2sYT4YOF3HPO0x0DKAhTJ3dF/YDq+3LPRVpEGapAFDPogU
+         gZfoKJr2XGsj/pTo8aVjlssBQbJcu+8zByjXWVdZq6iHgXjlhddfp4obeyNJ9397SErB
+         HN5dxDmujmSBes3+yUhFphgvqs8EZjh61t/LvyqxKSIVMFivUvpi21+bwh2t2fqBeaDQ
+         62ZKql4aBdXtCfREMFsAHRJdlQy0N7/yWmWWxHsmaKNHCxBm5dsbOm3bWoJtbz85PD9V
+         yOunV5mc6lRyrodIBZChshn6XfAygNTpgzfPPllRFnbHwiUnzD5btfgcJw+2W8flzGgb
+         D1XA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=e1NoyJ3Q;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-6e5bffc545dsor24699027b3.4.2024.10.19.09.44.54
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 19 Oct 2024 09:44:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=e1NoyJ3Q;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1729356294; x=1729961094; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=crq5ih6vDYW1Uv913yH7/gij0hS/MDf8XwvEqvZcbUs=;
+        b=e1NoyJ3QOJuGNrniCCMBMYe5dVKiLVB5DfN0pzqrEzmxQUhsSWXq4XhGXa/x5F8KpI
+         AmfHByQl8dIsI6YVS6ceRoyhBejzeGQxUhU7nnuLZm6qSToEeTzNIAHkj+D6R5HQ7c+E
+         aI/zpZP3ABId0/NvRBWaIUzrzyJ+8ANh+SDYG40ha8NdIdqRaL7iq7o38wtc81/aBopu
+         MfWWicuF2D/EyQcfxhfVPtSYS7sJBeg4W4odcxILtCw3pckgXpcUcSKXUpZES00QDmxx
+         iCDD6RfmBWJtNKXxarlB98n3JVaDlBJf4EXXIqAt8wEsL9KNP3nTp3GvLf6HqBhDPSJR
+         vR6w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1729356294; x=1729961094;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=crq5ih6vDYW1Uv913yH7/gij0hS/MDf8XwvEqvZcbUs=;
+        b=pk0ni8IKbNsiNe3oxlSRSDLbEkv/jb9x73DJ63a/jR7I/CfHSW0BeTeRmGJJ2XqNHP
+         AuRZZr6SXl6S3DJ7TgSO+31rOvm17dY+TR8jpSBhZrMD4YOMTdeil1i0ZAGN7SHz/49x
+         a4aL6IimHCyhCkPM/oan/n9P0UMV/9fEmMJLk69mUj0w2uioFEglcUmyHeOThYKgpgxR
+         Os1Ewhqm8489bLmZgyTnm5+KHCvcUHWAMwl1cnKCl0oXnS2H0AFbrBs8W/TIHH1iFczI
+         QYqQiLDCHhoVMmrsYfz3wvWS9C12kjdyIb4pRHhtNQgJjaZ4xP9vev7yDUmwkAIzzuka
+         U00w==
+X-Forwarded-Encrypted: i=1; AJvYcCW7qbffEcrxiWZjvOgrvZ+I1Jty2O/MHZUA961I9kK8UcGojUZSfiYxbCwezoFfL/8v2rwGSE3Ir/W570ZI4H3v1MGqoQ==@gmail.com
+X-Gm-Message-State: AOJu0YwjG5yy/AYqpSDbN3DqL9v4LOKK5FCgWGJ8Gpm9l7w8JK34W+fC
+	kck+H8wTMQ+OcgA8uFdwJtGt7GAT/qDzcLV6OO1zqMiy75osq/607SFwHEp7KRcsQuJLV3JVOwY
+	R1nwDoc7e4PIFWVvKNDTejMayW6w=
+X-Google-Smtp-Source: AGHT+IFnIUCy0HofmoR8Ml0VT/dkrsnSzDtNVwxn2Vasc6WrPA12mAws/WsUqKRg7cRE5NbYGv6cOcOKySuvEYW6z/w=
+X-Received: by 2002:a05:690c:c08:b0:6e3:116c:ebf0 with SMTP id
+ 00721157ae682-6e5bfd541f6mr58518317b3.36.1729356293705; Sat, 19 Oct 2024
+ 09:44:53 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Sat, 19 Oct 2024 17:44:42 +0100
+Message-ID: <[removed]>
+Subject: PARTNERSHIP CODE
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000009398a90624d72325"
+Bcc:[removed]
+
+--0000000000009398a90624d72325
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Sir/Madam,
+I came across your info through a chamber of commerce when I was looking
+for a reliable partner to join me to execute and relocate funds belonging
+to my late client who has the same surname as you. He died and left behind
+a deposit account at UBA Bank Plc Ghana with no next of kin. As his
+attorney, the bank has instructed me to go in search of the beneficiary. I
+have made several attempts to locate some members of his family without
+success. Instead of forfeiting the funds to the bank, Can you obtain a
+court affidavit for the bank to release the funds to you? With my position
+I will send you depositor deposit documents to enable you obtain the
+affidavit and I will expedite release of the funds to you for our own use.
+For more information, please email me with your opinion at:
+[removed].
+Sincerely,
+Dr. Abu Ghazaleh.
+
+--0000000000009398a90624d72325
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><div>Dear Sir/Madam,<br></div><div>I came=
+ across your info through a chamber of commerce when I was looking for a re=
+liable partner to join me to execute and relocate funds belonging to my lat=
+e client who has the same surname as you. He died and left behind a deposit=
+ account at UBA Bank Plc Ghana with no next of kin. As his attorney, the ba=
+nk has instructed me to go in search of the beneficiary. I have made severa=
+l attempts to locate some members of his family without success. Instead of=
+ forfeiting the funds to the bank, Can you obtain a court affidavit for the=
+ bank to release the funds to you? With my position I will send you deposit=
+or deposit documents to enable you obtain the affidavit and I will expedite=
+ release of the funds to you for our own use. For more information, please =
+email me with your opinion at: <a href=3D"mailto:[removed]
+m">[removed]</a>.=C2=A0</div><div>Sincerely,</div><div>Dr=
+. Abu Ghazaleh.</div></div></div>
+
+--0000000000009398a90624d72325--
+

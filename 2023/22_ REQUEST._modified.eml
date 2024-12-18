@@ -1,0 +1,137 @@
+Delivered-To:[removed]
+Received: by 2002:a59:b94c:0:b0:3f9:997e:56ad with SMTP id v12csp123313vqh;
+        Fri, 20 Oct 2023 22:21:16 -0700 (PDT)
+X-Received: by 2002:a05:6512:3052:b0:507:b099:749d with SMTP id b18-20020a056512305200b00507b099749dmr3097277lfb.15.1697865675856;
+        Fri, 20 Oct 2023 22:21:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1697865675; cv=none;
+        d=google.com; s=arc-20160816;
+        b=cQH8xVxyllKSkkJBmgtt408Gaw9FD8S7tk1N6tydbbxxHLBRUyR8kFwsHRtGjECYzW
+         gDZwlotGYUlGvu4H45/xUfyk8nHxUfduMWk33xA60P9n563eT+XOkpEq0Q7oQ8hOC7Ii
+         XA3o6wZ5fG39jPka3NoV5QUoFlPcftBRrkJRIY/kjpLG5S2R3trf9kyh37QCOepUlpkP
+         xhJXjk3an+5RAjt3RsHCl+2bCy+HPLxioe/n208og/JzmmwwlEJwa8PGfrDf0dFuPXCt
+         zHuEy9r+zuSJ/ZMzLol5QULmYE02V7PNTQuLQpIztXZsZahU5tk+dhAlIHkO3rbvyG+4
+         KmJw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:[removed]
+         :mime-version:dkim-signature;
+        bh=4o+oeusYAcJwkOq5Vw5LDGcXq9moM7CSso+OWbxsrbU=;
+        fh=id4th6stN0ryfdq4MOvVlN63i3TfoVY/gwyVI+rYxbk=;
+        b=YnjEmmSMg5EEa9ty44WMKOn4PMszAO7rKajC+bSIQ8jw82WQeemec4y8hdTgcegQ4w
+         90QPvcndR59NwJafnaDJIBCqWnivN90NnY1J40cE4q3I7Bb3yosuDytoFyGDsvqMKMPA
+         3EXHehVGcoBIdKpUlj8olHN/1XXQ+87J3icQ/fXlcjxUrlwsuj79epIvaiN34BSrwBfc
+         xBQLL5n0jfq3bXIfeAjNhMccPpKI+3dY4iaxLSospOSVrB3YprIC7JiG0qToI+F/gVm3
+         IEiBEG3PlO5k9E6g+IQ2FCQt+W+ObGGBwFvX5SHwxbDC8l3aVK79xgefuIlQ6N8tlSl6
+         2rOA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=nAAZSkn4;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id s2-20020a056512314200b005079a62fc7esor848424lfi.8.2023.10.20.22.21.15
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 20 Oct 2023 22:21:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=nAAZSkn4;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1697865675; x=1698470475; dara=google.com;
+        h=to:[removed]
+         :mime-version:from:[removed]
+        bh=4o+oeusYAcJwkOq5Vw5LDGcXq9moM7CSso+OWbxsrbU=;
+        b=nAAZSkn4IJ4Xg4nEhkPbDRHd0KSQuJjv3k19xVS3IM/da2P4ciZzi54KXyTIrDZd++
+         2+bVWWAKSNu8JMoqvayGk1vSNrx9xQUfB5/GyJtdW4KmUvYb9+fDxSL1CvwnXNrrwxKs
+         9VtMruHVQBhLN/oblEKDpeqn5uE3RPpSzgVLu3iPZ1WVfI+n6F4pdNJJ9Uso6gXysLjb
+         EKuOvMC7vHm8vw+8TkxctF8M/GnJFSu/VrNSynKHaARXZo1Y/yhNCloTs7geBIGrX+Q1
+         MG+dDGl7Y/AUso+W7KxSG/c1ApTMlKrzosFN3tIsm0YUY3YkVYwLDFAJC15ANttgU/Rf
+         urJw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1697865675; x=1698470475;
+        h=to:[removed]
+         :mime-version:x-gm-message-state:from:[removed]
+         :reply-to;
+        bh=4o+oeusYAcJwkOq5Vw5LDGcXq9moM7CSso+OWbxsrbU=;
+        b=DluzHZBrjooxlU/b/ZEgygkhMknbI3uZXecF7YGxv2ImOt5xGIM68JDuRd8EuOr+cd
+         NWF+vsE+1iUAumJw4KR6pLHb3WbJIfoSMcxXfJMKQT5+DCD8nttX+CWcL79946V/uSX8
+         KeS6Vo1kfZ1v16TBqxniWaLHkg6mlKXGDAdB/PZlbOXNxVw3GhIENi1DK036JcVCP6Ol
+         TQKYxORfXzHBhiKUGeCClrX/K9q2a5Yk7VENvdcsa5CZaUHvvrVVLDC227eVLCpMfRwm
+         yU1XyyMtJJG5R1YsdQAOMEF6ABZLioYWpbJHNAVm2JX3K+uHQMM8KgKOJSpA08S9QGUi
+         2mRA==
+X-Gm-Message-State: AOJu0YyiGnQft0ublQI3ypNzx5FEDshK0Nt9jKMiQFrYs4tsVxElIlA0
+	8rJTzrn81qrSxPtC9DohErBzU/tf9TptdUNOGQVxq0GEpTcCEd5uXjs=
+X-Google-Smtp-Source: AGHT+IEo1V/Ch0zQd1xAPYwFlWaCBbKEGcLJcstwCy7CVvbTfvBrpG0hMyP4Cp+uzQjVKGINZYbVH9f5ID2Mgq7Kk3w=
+X-Received: by 2002:a05:6512:2095:b0:507:973f:39bf with SMTP id
+ t21-20020a056512209500b00507973f39bfmr2658908lfr.38.1697865674942; Fri, 20
+ Oct 2023 22:21:14 -0700 (PDT)
+MIME-Version: 1.0
+References: <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <[removed]>
+ <CAFRLAj-MGspatY9tQBFjJqQbcbKUpDE05bcqS7QVAZAgMuK=[removed]>
+ <CAFRLAj-8+fB4Rv6m3q=[removed]>
+ <CAFRLAj9y-3J8rvN5ju3zpcDqmXjQ1GsNyg7Pho+_=[removed]> <[removed]>
+In-Reply-To:[removed]
+Reply-To:[removed]
+From:[removed]
+Date: Sat, 21 Oct 2023 14:20:52 +0900
+Message-ID: <[removed]>
+Subject: Re: : REQUEST.
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000006e6d9306083328b6"
+Bcc:[removed]
+
+--0000000000006e6d9306083328b6
+Content-Type: text/plain; charset="UTF-8"
+
+>
+>
+>
+>
+>> There's a deal in my bank you will receive more information upon your
+>> acknowledgment of this email
+>>
+>> Regards
+>>
+>> Mr.Ochiai
+>>
+>> Managing Executive Officer of Resona Bank, Limited
+>>
+>
+
+--0000000000006e6d9306083328b6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_quote"><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204)=
+;padding-left:1ex"><div dir=3D"ltr"><div dir=3D"ltr"><br><br></div><div cla=
+ss=3D"gmail_quote"><blockquote class=3D"gmail_quote" style=3D"margin:0px 0p=
+x 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div d=
+ir=3D"ltr"><div dir=3D"ltr"><p style=3D"color:rgb(0,0,0);font-size:16px;fon=
+t-family:&quot;times new roman&quot;"><br>There&#39;s a deal in my bank you=
+ will receive more information upon your acknowledgment of this email</p><p=
+ style=3D"color:rgb(0,0,0);font-size:16px;font-family:&quot;times new roman=
+&quot;">Regards</p><p style=3D"color:rgb(0,0,0);font-size:16px;font-family:=
+&quot;times new roman&quot;"><span style=3D"border:0px;font-style:inherit;f=
+ont-variant:inherit;font-stretch:inherit;line-height:inherit;font-kerning:i=
+nherit;font-feature-settings:inherit;margin:0px;padding:0px;vertical-align:=
+baseline">Mr.Ochiai</span><br aria-hidden=3D"true"></p><p style=3D"color:rg=
+b(0,0,0);font-size:16px;font-family:&quot;times new roman&quot;">Managing E=
+xecutive Officer of Resona Bank, Limited</p></div></div>
+</blockquote></div></div>
+</blockquote></div></div>
+
+--0000000000006e6d9306083328b6--
+

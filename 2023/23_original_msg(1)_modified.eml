@@ -1,0 +1,102 @@
+Delivered-To:[removed]
+Received: by 2002:a59:9b06:0:b0:42b:92a8:c8f7 with SMTP id l6csp1294579vqr;
+        Fri, 1 Dec 2023 09:17:45 -0800 (PST)
+X-Received: by 2002:a25:ca4a:0:b0:db5:4b32:c9f6 with SMTP id a71-20020a25ca4a000000b00db54b32c9f6mr3446442ybg.17.1701451064926;
+        Fri, 01 Dec 2023 09:17:44 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1701451064; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Rzj0j0McNpAK1mKFqybZlpYG0TCvuuBfeUTCBv7KaFx+cgueAwOuBlD+oQ0g6+oQ1e
+         4QAAgMl+2R0DuRBC5HVvgdT4HNN2dbmTe05W9jU5ajyKmtLyL1JfFlrNEnMJ6StWbZtP
+         WqkiXO74lHzSSq1dK2H5sSZx+7fHrC0uu6RxyabOv3HopmFi4QFdGsA+LsqvWCjh3jLN
+         RSWVwNFW/fNw/T+cUcewINUdBbl5FXtVnRhx+xIHVzIE0AvqZkVcGGALsAzJrSxjvhs7
+         Ui6o4V9fZpz4l6c4vKtuHEoPTxUrv3riLQLagpCxySJNEGeDwMG16kGuUDpaKVA3w/8Y
+         o7mg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:[removed]
+         :dkim-signature;
+        bh=QN/QlPT5Lr07+M1ZqMUBphIbzsQDKg2Wo/ql/4pE7Mw=;
+        fh=Pr2plYkJn0ovdHybgHvE53243CPsqSX0NRPDPDnAMwQ=;
+        b=F4k7RP2noeWM6tU3+pdOhvqtjFgqA06Gqv89153AGJ+ousaxVrxW0GB67/txtlrh/7
+         zZNmR5TjERjnG44vUmMVn1iDym2HbDkq/+iFq1J3IJlIm1gDg7i4F+ny2DBY5qRhaFY7
+         QMxWAfyuy5lhmig0/2j11tf4Wx5uBFMWO2LxCyiSBSMirQmPBPB4ZMgavlQdWwEQ8kj0
+         BRhh1jPvGIOPoFjLzCwhh5IcK7/nO3dZidUkJiMr2vivH6aB0V1olurYC6PVVj+T96W9
+         Rq/ApigA7kgYm3Zv/LqFZioejuXP7SOPvN4B5JMMbQvpBdH+VZh8H5mgAbLKuhBbCzek
+         w8TQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=S+Eju3GF;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id l205-20020a2570d6000000b00db3a3180b7esor628984ybc.8.2023.12.01.09.17.44
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 01 Dec 2023 09:17:44 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=S+Eju3GF;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1701451064; x=1702055864; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=QN/QlPT5Lr07+M1ZqMUBphIbzsQDKg2Wo/ql/4pE7Mw=;
+        b=S+Eju3GF2J1iCTRvMrx0jL1fMyKxCIQzoLvnQvFWpuagZ8nTU3Voj2VIswVw4k2P77
+         I19X+Hch2P9I+h2ia+Xzkp2FK6IOEtuqXeVZ30enlfCTlAQ8BljlfMG0XvFsiVwrCtvf
+         v84c/ytStO1wQSrDp2//B6RLt4WRyFv6BOFHP/MaXDIz1/cXgNm+EmiwSnZDX1xrTXZ8
+         8YgokxZb0/bTK7Wf9YhrkeU2mZmrPPq1WtC0H7U4Pd90qZ3rNMNCQVoEOvInZHLuw8qi
+         tY8m0Z1HxXo7ySTeGieZdw8Pucm3Jm+Bl4PgS05JeFx/Pm8K+7h8o8iOwFPWYwuRsNJT
+         Ek9g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1701451064; x=1702055864;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=QN/QlPT5Lr07+M1ZqMUBphIbzsQDKg2Wo/ql/4pE7Mw=;
+        b=v8RMiW9NAzJ78aMilP++VfhNkNvsYamkfA+wcHJDqBAqjnfyOGuIvZ+Chq4WYyb+fI
+         oBwHrmlvDi08S0nhLbSH8HI/FtiEE4jk4Fthpay+oADyMLGq3wGS7N4j51CYrPCrf9Sz
+         uXsRSpidLpTtdc8UdKp0fzp7odE4A2fsqbKxjRbgLyDQP32WuQ2T0FI6AxaVaeaV+7fB
+         0gHkfsBlfT0vO4VsL/DBLQJxfTXzFRkQs12jXbKmUwWBQa3z9j/EajuQUc7iFBBr96Nz
+         wic9uwO8ifxF9IKmRWIyUTy33ugb5YADo8UYkDWJrF6nIFy6WZBnh/jTkBFfOroK3d25
+         u1KA==
+X-Gm-Message-State: AOJu0YyJmCgKBLnNp1bYo9UcCMl/EMZgSbqn3QrT3OVsShPyVu/LtXM2
+	yrQjwbMpkimqKfRvRr37GJpM6j2c2rUzfqGwJ9ngmiIAtmxiCqTrabg=
+X-Google-Smtp-Source: AGHT+IFYnMPm9lHHu7G+S/h21b5hOQPmOEMAhv4lF5ccJQiRwo2zCkZCmJ7ka5KfRQSL4koYfmkxgTm2mcLSglfHtEA=
+X-Received: by 2002:ac8:5e0d:0:b0:423:76a8:4209 with SMTP id
+ h13-20020ac85e0d000000b0042376a84209mr35869683qtx.54.1701451043723; Fri, 01
+ Dec 2023 09:17:23 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Fri, 1 Dec 2023 18:17:02 +0100
+Message-ID: <[removed]>
+Subject: 
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000010642c060b75f170"
+Bcc:[removed]
+
+--00000000000010642c060b75f170
+Content-Type: text/plain; charset="UTF-8"
+
+Do You Need a Loan At 3% To Pay Your Bills or Start Up a Business of Your
+Own? If Yes,Contact us With this Following Details...
+(1)Full Name
+(2)Loan Amount Needed
+(3)Duration
+(4)Country
+(5)Phone Numbers
+([removed])
+Best Regards,
+
+--00000000000010642c060b75f170
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br>Do You Need a Loan At 3% To Pay Your Bills or Start Up=
+ a Business of Your Own? If Yes,Contact us With this Following Details...<b=
+r>(1)Full Name<br>(2)Loan Amount Needed<br>(3)Duration<br>(4)Country<br>(5)=
+Phone Numbers<br>(<a href=3D"mailto:[removed]
+[removed]</a>)<br>Best Regards,<br><br></div>
+
+--00000000000010642c060b75f170--
+
