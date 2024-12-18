@@ -1,0 +1,263 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:2d08:b0:4a6:b479:dd26 with SMTP id iy8csp197007vqb;
+        Mon, 18 Nov 2024 00:20:14 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUH4UnRjQ2f7fWsT2gvKRzqvlBxjUxHndOE3XrRBzFlCH1jlE/ioEevi9jkmuuHZBkCjk4yIW9Lo6zETRWxsVAM0Xw8Sg==@gmail.com
+X-Received: by 2002:a05:620a:4047:b0:7b1:5402:48f2 with SMTP id af79cd13be357-7b3622d6459mr1717585785a.31.1731918014714;
+        Mon, 18 Nov 2024 00:20:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731918014; cv=none;
+        d=google.com; s=arc-20240605;
+        b=WaxS0XmeSF1CSBbsaTzPmRRkAEg0O5tTUpdY+39zqjPvnPpkUF9hD/Os23WscpgKK2
+         z+nrycnXSv7wrvd4A0rvfett6/lQyXg9mNrSPgIxkEPUmTTOzP8yVmR6KktzD5Ipdmxx
+         mUQ1fgga6TnHkQCnB4RYjus+DApC7lJf1bwZuwUBD+FTQd239q9Q4E8YCFcz4S4wBH4e
+         JMR2n2P4bi26037lZ4gLCBRK35HO8wG6Am0MLf0xuikdNQ/lX/4Ct8ZthQig8LJpZ7ia
+         J/5fZb5f65BSP1pyuh6Dg6FPzWEvBpNhB6taMO6WA3apqR398HZyP4JyBJGtBNgLi3Md
+         H55A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=9gyUm4yGSpb9ZqAKXalMCYSEQNkaVnLHHEHn/nRMKIU=;
+        fh=b6xUxo9PAtNrjJA6Nqt447xQPkKqMEggxVcz75dhj84=;
+        b=YNyyEqSQGD6b8he7X4ZvfnMjxOsunGKi9Zftj4s75PvF5Rd+rgZ1AzWql0NmB28nnQ
+         0MPfhD5ibWGV6PWTcwv+pOBtSa4lioTAo9Noad3tYf7teUUjIxBvy7R/HjbN9E21EEL4
+         sb4O6SG2GPkSENjqmIw4qkaTvtgbadJc8qw3KqXfzBkuRZKRsMYo9bQW29UbhipAPJVM
+         b/hee28s13M3VVsArshMV2nUrKlwgshE80JiRST6whF1etAjRYesiPJ+qhB4CMClr+ms
+         rVbdJXaDKXXDyaTegeWj/j9r3q02v4N4ePH+M4j6w+2fwRFzG2px+npRyavr1y/q8rN9
+         Ym0w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=jovyIEO7;
+       spf=pass (google.com: domain of yussufmahamud04@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=yussufmahamud04@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <yussufmahamud04@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id af79cd13be357-7b360195993sor225130985a.1.2024.11.18.00.20.14
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Mon, 18 Nov 2024 00:20:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of yussufmahamud04@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=jovyIEO7;
+       spf=pass (google.com: domain of yussufmahamud04@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=yussufmahamud04@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731918014; x=1732522814; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=9gyUm4yGSpb9ZqAKXalMCYSEQNkaVnLHHEHn/nRMKIU=;
+        b=jovyIEO7G06u+Wo1A38P4rFjJOg0FrzSia/MeTzMzL1sI1jbP+dJv3/IH5FGEOInKW
+         jU3CYRGXMcC5DuJHEb6F90ItVYAgt2rm/5hkvgr0S2NG8ZhmKpTBDcR4a7I3ec2OTXx4
+         1CEG0dsF1JGx/yWso0yupUDyCqu0GoE96b4i/q8r5C4IXbOh3SurB6blHg0KWz61/VN0
+         huu9umrDHUxSYRRxE9cwK4V+KvmA19qLWh36Icd2+GHG/IGwe9zE/SavLvGnIj6NxOCq
+         sqhTzVeRPWv2J7OLCS2ci5rowMFQYLYdTgekL+CFDLPJd+Dy3MYqPYbMjxsEtMsO70tz
+         g7og==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731918014; x=1732522814;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=9gyUm4yGSpb9ZqAKXalMCYSEQNkaVnLHHEHn/nRMKIU=;
+        b=gEtN+5z/BVAFtYOL1I6EybUXv7/M+/RrGs9fODIHDWmxqq8+uPlQqMIkZ6JOGK635H
+         6n3bQOJMWB//sV/SQF1e8MNOmi4Y5KNL6diK2U/ZX/EsuZgW7lfYZjmbGn/oyCZWunr9
+         lIln7IGUARgf/ehqY8aOTNv1YA7juQkyJSsqAENHSQSesBmqAhPS8xWVxWhy+b1hvt+s
+         janhWp+NK64GdQWYcr7TYmkYhXGTGgTT1nNecMnJ6vEAjYqC9ulGAm1cpgvmNZYHixKC
+         Y4k5XM56TYhOx+MHo0Pe0rGVikTxuP7is7MqAgJw2U7XLTVYSrhyq9j9qbSPKWoMbJ9+
+         t52g==
+X-Forwarded-Encrypted: i=1; AJvYcCVbntMRDPbQOFYd/V4IcplVQ3lSjApFOs1dlU4KcezCnB3r14On7MRpCx9v0er5kEPDQi/ZgiFsjhabIsonYfUozTGI5Q==@gmail.com
+X-Gm-Message-State: AOJu0YzrAMOKnrx3ku3NE5bG+0iY7SrkrrIs8a9Qd/unyZTDiWoNcLSI
+	ELYYkFBR1OIvGBVKKZtnpXyFttn8ALA8XKO8GzdcfxCjwzxfdsokuGYrpIMVGSpZLEgu6UaFIMS
+	pm/BiwuIGLY8GYid1TBaCE60HeyE=
+X-Google-Smtp-Source: AGHT+IGkEeHX0sBasYX4tMF10DApU1eSgbVFuXB95v7dEzAJmrC+s0MOHDEeu97AQ8/NZW57U6GI7IzslKAy/8qEtFs=
+X-Received: by 2002:a05:6214:ccd:b0:6d4:218c:f5 with SMTP id
+ 6a1803df08f44-6d4218c030fmr16396776d6.9.1731918014111; Mon, 18 Nov 2024
+ 00:20:14 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: yes@yes.yes
+From: Janet Yellen <yussufmahamud04@gmail.com>
+Date: Mon, 18 Nov 2024 08:20:02 +0000
+Message-ID: <CACnbXXJOL3Qcb0MTZea+8aUfZZ26wzXfaL2zB5C4LTh1FUcczQ@mail.gmail.com>
+Subject: United States Department of the Treasury
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="00000000000002e8ae06272b96f8"
+Bcc: mailmanthingwhatever@gmail.com
+
+--00000000000002e8ae06272b96f8
+Content-Type: text/plain; charset="UTF-8"
+
+United States Department of the Treasury
+1500 Pennsylvania Ave., N.W.
+Washington, D.C. 20220
+Desk of Secretary: Janet Yellen
+
+Attention:
+
+You deserve the best in life, you truly deserve the best, take this
+proposal as your last effort to secure your fund which some impostors took
+advantage of you in their ability to steal from you and deny you the right
+to your fund. Our president; Joseph Robinette Biden Jr, has approved all
+delayed payments to be released to all beneficiaries immediately within 7
+days and the United States treasury is to take responsibility for the
+disbursement of all outstanding payments that has been delayed by the past
+administration of Donald Trump and Steven Mnuchin, it is time for you to
+peacefully receive your funds without any stress or extortion.
+
+You are very lucky because I discovered from my records that you have
+passed through rigorous experience in your effort to get what is rightfully
+yours, and they all took advantage of you and stole from you, I want to use
+this medium to let you know that those impostors know that you have a fund
+meant for you and for you alone from a Contract/Inheritance funds that has
+been put in your name through the power of Attorney in your favor, It's
+quiet unfortunate they knew about it even before you and they tried to get
+information from you and also to steal from you presenting other fake
+transaction to you thinking you have already received your funds so they
+can steal from you, some went as far as collecting your bank account
+information trying to hack your bank account? If I am not telling you the
+truth, confront me right now and tell me I am a liar!.
+
+I know you have lost faith in any transaction that I or anyone will bring
+to you because of your rigorous experience from these impostors known to be
+scammers/Fraudsters.
+
+I am Janet Yellen the new Secretary of the United States Treasury, I
+Assumed this office January 26 2021 and I hope you know the major
+obligation of the United States Treasury? let me enlighten you, they are as
+follows: Treasury's mission highlights its role as the steward of U.S.
+economic and financial systems, and as an influential participant in the
+world economy. The Treasury Department is the executive agency responsible
+for promoting economic prosperity and ensuring the financial security of
+the United States and its citizens.
+
+I will Put it direct to you that your contract/Inheritance fund is $14.7
+million United State Dollars, and that is what you are to receive by our
+special delivery company that has been assigned for this project only, the
+name of the delivery company is FedEx Delivery company, they will take care
+of your delivery to your address and hand over your complete fund to you
+and accompany you to your bank with their security agency who will come to
+you with the delivery agent for you to go and deposit your $14.7 million
+into your bank account for perfect safety, you are to contact the delivery
+company with your full name, address and telephone number on this email
+address : officenotificationwqa@gmail.com Phone number +1(202) 930-5575
+ make sure you contact them immediately as we have already handed over your
+fund to them for delivery to you together with all your paperwork of
+legality that shows the legitimacy of your fund.
+
+As soon as you contact the delivery company, they will respond back to you
+with your delivery schedule, also they will educate you on the delivery
+processes. I think the most important thing for you to note here is that
+you are dealing with the right office and the right person this time and
+it's a confirmation that you are taking a bold step in the right way,
+manner and definitely you will have your fund delivered to you as
+scheduled, I cannot deceive you as that will be inhumane to me, I have
+family as I know that anything I do today which is not good in the sight of
+God must surely come back to me .i.e.' NEMESIS, So feel free and receive
+your funds in good faith. Also note that you are to take responsibility for
+the delivery charges which is the total sum of $185, the fee comprises the
+delivery, security and insurance all together, most importantly make sure
+you contact the delivery company immediately and get back to me, letting me
+know you have contacted them.
+
+You should know that a man is an architect of his own fortune and therefore
+should not allow anybody or the past to discourage you in your efforts to
+achieve your goal, especially a benefiting one like this which will be
+concluded immediately if you comply with my directives. I know you can only
+force a horse to the river but cannot force it to drink water, I can only
+give you the best advice I can as I have my integrity to protect as good
+name is better than riches. A word is enough for the wise, I know that
+things are really difficult, but I can sincerely tell you that you do not
+have anything to lose or regret. I am a woman of my word and I have to tell
+you that my word will remain my bond and I cannot live without fulfilling
+it, seeing is believing, I assure you, contact the delivery company as i
+directed and make sure you cooperate and comply with the directives of the
+delivery company so that your $14.7 million Dollars will be delivered to
+you within 48 hours after the confirmation of your payment,
+
+I AWAIT YOUR PROMPT RESPONDS.
+
+Yours Faithfully,
+Janet Yellen
+
+Department of the Treasury
+1500 Pennsylvania Ave., N.W.
+Washington, D.C. 20220
+
+--00000000000002e8ae06272b96f8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">United States Department of the Treasury<br>1500 Pennsylva=
+nia Ave., N.W.<br>Washington, D.C. 20220<br>Desk of Secretary: Janet Yellen=
+<br><br>Attention:<br><br>You deserve the best in life, you truly deserve t=
+he best, take this proposal as your last effort to secure your fund which s=
+ome impostors took advantage of you in their ability to steal from you and =
+deny you the right to your fund. Our president; Joseph Robinette Biden Jr, =
+has approved all delayed payments to be released to all beneficiaries immed=
+iately within 7 days and the United States treasury is to take responsibili=
+ty for the disbursement of all outstanding payments that has been delayed b=
+y the past administration of Donald Trump and Steven Mnuchin, it is time fo=
+r you to peacefully receive your funds without any stress or extortion.<br>=
+<br>You are very lucky because I discovered from my records that you have p=
+assed through rigorous experience in your effort to get what is rightfully =
+yours, and they all took advantage of you and stole from you, I want to use=
+ this medium to let you know that those impostors know that you have a fund=
+ meant for you and for you alone from a Contract/Inheritance funds that has=
+ been put in your name through the power of Attorney in your favor, It&#39;=
+s quiet unfortunate they knew about it even before you and they tried to ge=
+t information from you and also to steal from you presenting other fake tra=
+nsaction to you thinking you have already received your funds so they can s=
+teal from you, some went as far as collecting your bank account information=
+ trying to hack your bank account? If I am not telling you the truth, confr=
+ont me right now and tell me I am a liar!.<br><br>I know you have lost fait=
+h in any transaction that I or anyone will bring to you because of your rig=
+orous experience from these impostors known to be scammers/Fraudsters.<br><=
+br>I am Janet Yellen the new Secretary of the United States Treasury, I Ass=
+umed this office January 26 2021 and I hope you know the major obligation o=
+f the United States Treasury? let me enlighten you, they are as follows: Tr=
+easury&#39;s mission highlights its role as the steward of U.S. economic an=
+d financial systems, and as an influential participant in the world economy=
+. The Treasury Department is the executive agency responsible for promoting=
+ economic prosperity and ensuring the financial security of the United Stat=
+es and its citizens.<br><br>I will Put it direct to you that your contract/=
+Inheritance fund is $14.7 million United State Dollars, and that is what yo=
+u are to receive by our special delivery company that has been assigned for=
+ this project only, the name of the delivery company is FedEx Delivery comp=
+any, they will take care of your delivery to your address and hand over you=
+r complete fund to you and accompany you to your bank with their security a=
+gency who will come to you with the delivery agent for you to go and deposi=
+t your $14.7 million into your bank account for perfect safety, you are to =
+contact the delivery company with your full name, address and telephone num=
+ber on this email address : <a href=3D"mailto:officenotificationwqa@gmail.c=
+om">officenotificationwqa@gmail.com</a> Phone number +1(202) 930-5575 =C2=
+=A0make sure you contact them immediately as we have already handed over yo=
+ur fund to them for delivery to you together with all your paperwork of leg=
+ality that shows the legitimacy of your fund.<br><br>As soon as you contact=
+ the delivery company, they will respond back to you with your delivery sch=
+edule, also they will educate you on the delivery processes. I think the mo=
+st important thing for you to note here is that you are dealing with the ri=
+ght office and the right person this time and it&#39;s a confirmation that =
+you are taking a bold step in the right way, manner and definitely you will=
+ have your fund delivered to you as scheduled, I cannot deceive you as that=
+ will be inhumane to me, I have family as I know that anything I do today w=
+hich is not good in the sight of God must surely come back to me .i.e.&#39;=
+ NEMESIS, So feel free and receive your funds in good faith. Also note that=
+ you are to take responsibility for the delivery charges which is the total=
+ sum of $185, the fee comprises the delivery, security and insurance all to=
+gether, most importantly make sure you contact the delivery company immedia=
+tely and get back to me, letting me know you have contacted them.<br><br>Yo=
+u should know that a man is an architect of his own fortune and therefore s=
+hould not allow anybody or the past to discourage you in your efforts to ac=
+hieve your goal, especially a benefiting one like this which will be conclu=
+ded immediately if you comply with my directives. I know you can only force=
+ a horse to the river but cannot force it to drink water, I can only give y=
+ou the best advice I can as I have my integrity to protect as good name is =
+better than riches. A word is enough for the wise, I know that things are r=
+eally difficult, but I can sincerely tell you that you do not have anything=
+ to lose or regret. I am a woman of my word and I have to tell you that my =
+word will remain my bond and I cannot live without fulfilling it, seeing is=
+ believing, I assure you, contact the delivery company as i directed and ma=
+ke sure you cooperate and comply with the directives of the delivery compan=
+y so that your $14.7 million Dollars will be delivered to you within 48 hou=
+rs after the confirmation of your payment,<br><br>I AWAIT YOUR PROMPT RESPO=
+NDS.<br><br>Yours Faithfully,<br>Janet Yellen<br><br>Department of the Trea=
+sury<br>1500 Pennsylvania Ave., N.W.<br>Washington, D.C. 20220</div>
+
+--00000000000002e8ae06272b96f8--

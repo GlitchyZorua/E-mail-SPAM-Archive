@@ -1,0 +1,176 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:1e03:b0:49b:3a60:d7b with SMTP id jd3csp2097230vqb;
+        Sun, 17 Nov 2024 02:42:22 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXNIypdLWqxdH6yw3Vv/TyV6GSDXX8vO3ZZTCRlvCPpVyyNUPjlTHEqs5x+MCC+jwex+VN/HZK/d9dsuChmdmoFytsOoA==@gmail.com
+X-Received: by 2002:a05:6512:2393:b0:53d:a4d7:1a8b with SMTP id 2adb3069b0e04-53dab29f00emr3728405e87.24.1731840141881;
+        Sun, 17 Nov 2024 02:42:21 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731840141; cv=none;
+        d=google.com; s=arc-20240605;
+        b=R4gcBrz2gtMfMa7vbyVpRXXIG9zHdbnM6HIzhpXryZ9ek09UvGe4v5zbV67b0r1ZPp
+         B36YS1vdDaM5e8xrjg4qGF5lvogUO0JgD08HIeiymeNTiIxwZUVBwAGQx+lz/kwSyyi6
+         2wZYFPvIusaZ3REXqr0iyLO6uCKbTbAa5cqo9zhL0wMPYe3fYi8+gyNPuwW1yCpzRRJR
+         uu6nnpNpAnIHLPW3IXJfaJh5f7N70O+xAfKRUh0N5tWsb3+tdCLAiIbFHf545/OKh+r9
+         PpKlVNsYpqvJPxmo6fQgUb8JTPjLB84VnnJkwaCGSGyiT/0tp/Vf2wD9+71Qxxb6JrOQ
+         7arg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=cI/DfwN86L86T/wIL/YWXgrSiaaYcC9/EAcynj4Nwm8=;
+        fh=9lhqXy/75BmwCShqai3jP/2XFXoaEZZfsP36citbFjc=;
+        b=FgWFowoW06aymnRj2RxWTNz/4hv6nwwr8Rq+FIaXwwLvoqL2gP+p6H/h4F7hHmMMc7
+         sbXADpOEpL3axhe1eV8MNyaJMsxggSbFByywWIz4EaVS6j8obEqJ4bV/3EyVJrSHGL7k
+         4qEm1P6Xf7Qt6s9DB8tBdAa4BpRL9IT9ZPlJS5zj9cFj74SG4UAPgEP1HILdCWsKm9Ug
+         axeuo6w2zw9CS574ipHwjQvFUfLvGpJKUXciYBjmh+1cvyi69QvM5Q7VSbrmrgT8l3vQ
+         Ls9ZgSd0GSZ+ChMjX10baZ/Za457Qw/QcR3EM6swUweJDbeNisxJ2QSp/StoquGIpBSz
+         xvTw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="RPWg/P8E";
+       spf=pass (google.com: domain of suvosakar363@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=suvosakar363@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <suvosakar363@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 2adb3069b0e04-53da650f509sor1357064e87.9.2024.11.17.02.42.21
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Sun, 17 Nov 2024 02:42:21 -0800 (PST)
+Received-SPF: pass (google.com: domain of suvosakar363@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="RPWg/P8E";
+       spf=pass (google.com: domain of suvosakar363@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=suvosakar363@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731840141; x=1732444941; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=cI/DfwN86L86T/wIL/YWXgrSiaaYcC9/EAcynj4Nwm8=;
+        b=RPWg/P8EKNiRFLAeWNRPvVq/zrgzfclZPRcyvJd3KcO7Jn0PFu50GsN93llV45up9n
+         euJGiMXxz8+HZWyB8kdisWz19u86yjswFd06vpaFIy4V7pVHLL5bUJD1kIWk7G1TdhSm
+         sS2+k4SWfdW/NlIG1gzoEI2ebbnhoW6eHaHcrBOcZzRhwnC2hxUoD0iOt0EZR/YyndUg
+         ljs7Eq9YdhPnelWWt9pP27VFAkrlygnN1sW7bC+m2QjrpykwK0n4LbZsrLapf4pMvE1G
+         jy2CW5+MSkBhSots5S72DRBHWykiFKoJ9pSQsYnyiE6GNBgLiCxcTaM8zdFLAjEIhslA
+         HRiw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731840141; x=1732444941;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=cI/DfwN86L86T/wIL/YWXgrSiaaYcC9/EAcynj4Nwm8=;
+        b=AW7SpzsoF5CE37bCuasHQzokNFe1HWb7RBEmotc900GXVaUkRuW7H0lYtn6hqKmaQp
+         U4UYhvn19DNR6ICwguXpoT9hht5kv4bqSMnMqfd4Mcaq+jR0L5PsJMMRVgDTMPGFykD6
+         AVOGY6GceBKGMDiLdeszKelHTwt7lF21x4R4BYlOl+H5cxidB+VM0ive4ivG8Qhhf/W5
+         Cydlr2HTU0U9qS14FDJVhswuvMfPszQCuErcV3JTs9xvPgXc4hx4rY0q8eFQzUdFtnit
+         j1jqvwZsm6R/lnwwRPIb2Crupgw83/opFVNNmphhFnB887QAdPu4ZWPQR3rzk7W5NMG9
+         wkew==
+X-Forwarded-Encrypted: i=1; AJvYcCWampJjUA52qat8mUKmJJ3uc9DYiCsOaQvEKNK+g11vYbWXChSJ7pFT7YPX33yjEvUZufdNG5IOLEWV6lAXIOA/L2TqZw==@gmail.com
+X-Gm-Message-State: AOJu0YxAndVlrZzwlTxpCClonTS96YA/jMaGtT7TLCWKc6eQUhs/9ijJ
+	KUHxolErdBE82CFYBoXtwvrjYNOx62PFrDHCmJ8xdOPIuRPl+DfYxmX6NhEHavbIrYdt0HJFMlh
+	FWdovOW2I7eh4tm0meqlD1S5ZD98=
+X-Google-Smtp-Source: AGHT+IFLhTf4xbkzKMlUo/M8+QnNbLRJIw5CuilIZ7qLgfOEfUb2dZYtHifyTVbbkAKQJCfj63XrSWCTtnz9hyBJ0gQ=
+X-Received: by 2002:a05:6512:3407:b0:53d:a866:9f36 with SMTP id
+ 2adb3069b0e04-53dab2a723emr3575998e87.34.1731840141147; Sun, 17 Nov 2024
+ 02:42:21 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: no@no.no
+From: Managing Director <suvosakar363@gmail.com>
+Date: Sun, 17 Nov 2024 02:42:10 -0800
+Message-ID: <CAEq4kGUzweyrNVUsFemm2RzRqR+vH91BfwKUa5atJdiDUdLyzw@mail.gmail.com>
+Subject: Re: PAYMENT
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000006bc564062719749a"
+Bcc: mailmanthingwhatever@gmail.com
+
+--0000000000006bc564062719749a
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+BARCLAYS INVESTMENT BANK PLC.
+FC7G+7HH, Southgate House, Osborne
+Estate, Osborne Rd, Lagos.
+Bank RC Number: 41757.
+Phone: +234 905 581 2022
+Ref: Payment of =C2=A33.5 Million Pounds.
+Date: 15/11/2024.
+
+
+
+Attn: Sir/Madam,
+
+APPROVED INHERITANCE PAYMENT OF =C2=A33,500,000.00 POUNDS.
+
+We have a transaction documentation in your name for the remittance of
+=C2=A33,500,000.00 Pounds (Three Million Five Hundred Thousand Great Britai=
+n
+Pounds Only) into your bank account. Your email ID was found in the
+Agreement documents of a late contractor (Steve) who died 4 years ago, a
+citizen of your country. Your email ID was discovered as a Beneficiary to
+the Contractor.
+During the auditing of all financial records in Barclays Bank, it was
+discovered from the records of outstanding payment with our Bank that your
+name is next on the list of those who will receive their funds.
+
+We hereby bring to your notice that your Inheritance payment is being
+processed and the sum of =C2=A33,500,000.00 Pound has been Converted to Uni=
+ted
+States Dollars, which is the sum of $4,576,932.50 USD (Four Million Five
+Hundred Seventy-five Thousand Nine Hundred and Eleven US dollars 10 cents).
+Kindly re-confirm your information to this bank, and we will proceed on the
+releasing of your fund immediately into your bank account.
+
+Your Full Name:
+Your Address:
+Your Telephone Number:
+Your Identity Card:
+Your Age:
+Your Occupation:
+Your Nationality:
+Your Bank Name:
+Your Account Number:
+Your Account Holders Name:
+Your Routing Number:
+Your Swift Code:
+
+As soon as this information is received, your payment will be wired into
+your bank account directly from Barclays Bank, and a copy will be given to
+you for you to take to your bank and confirm it.
+
+
+Best Regards,
+
+Mr. luis filipo,
+Managing Director,
+Barclays Investment Bank
+
+--0000000000006bc564062719749a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">BARCLAYS INVESTMENT BANK PLC.<br>FC7G+7HH, Southgate House=
+, Osborne<br>Estate, Osborne Rd, Lagos.<br>Bank RC Number: 41757.<br>Phone:=
+ +234 905 581 2022<br>Ref: Payment of =C2=A33.5 Million Pounds.<br>Date: 15=
+/11/2024.<br><br><br><br>Attn: Sir/Madam,<br><br>APPROVED INHERITANCE PAYME=
+NT OF =C2=A33,500,000.00 POUNDS.<br><br>We have a transaction documentation=
+ in your name for the remittance of =C2=A33,500,000.00 Pounds (Three Millio=
+n Five Hundred Thousand Great Britain Pounds Only) into your bank account. =
+Your email ID was found in the Agreement documents of a late contractor (St=
+eve) who died 4 years ago, a citizen of your country. Your email ID was dis=
+covered as a Beneficiary to the Contractor.<br>During the auditing of all f=
+inancial records in Barclays Bank, it was discovered from the records of ou=
+tstanding payment with our Bank that your name is next on the list of those=
+ who will receive their funds.<br><br>We hereby bring to your notice that y=
+our Inheritance payment is being processed and the sum of =C2=A33,500,000.0=
+0 Pound has been Converted to United States Dollars, which is the sum of $4=
+,576,932.50 USD (Four Million Five Hundred Seventy-five Thousand Nine Hundr=
+ed and Eleven US dollars 10 cents). Kindly re-confirm your information to t=
+his bank, and we will proceed on the releasing of your fund immediately int=
+o your bank account.<br><br>Your Full Name:<br>Your Address:<br>Your Teleph=
+one Number:<br>Your Identity Card:<br>Your Age:<br>Your Occupation:<br>Your=
+ Nationality:<br>Your Bank Name:<br>Your Account Number:<br>Your Account Ho=
+lders Name:<br>Your Routing Number:<br>Your Swift Code:<br><br>As soon as t=
+his information is received, your payment will be wired into your bank acco=
+unt directly from Barclays Bank, and a copy will be given to you for you to=
+ take to your bank and confirm it.<br><br><br>Best Regards,<br><br>Mr. luis=
+ filipo,<br>Managing Director,<br>Barclays Investment Bank</div>
+
+--0000000000006bc564062719749a--

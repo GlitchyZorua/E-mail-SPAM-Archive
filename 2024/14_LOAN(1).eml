@@ -1,0 +1,113 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:2d08:b0:4a6:b479:dd26 with SMTP id iy8csp1812793vqb;
+        Wed, 20 Nov 2024 06:52:47 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXG9Zeux0yTAhgtXj0YwLPybvI49nJyUbBZvNiV68H6bFh5IPlHhtCtIg7tiNuXA8chcXRCrmL7qEOwvHYbAhdoV/J7Hw==@gmail.com
+X-Received: by 2002:a05:6122:1da4:b0:50d:5a12:9436 with SMTP id 71dfb90a1353d-514cf8838d9mr3559972e0c.3.1732114367025;
+        Wed, 20 Nov 2024 06:52:47 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732114367; cv=none;
+        d=google.com; s=arc-20240605;
+        b=hunq4KaAAGMx9wNGOBNSZ3YqWOta+cH7qVWrfvYvfX9goMvzPt+lb2IgC25jqlbyqY
+         YLzl+z1cFqIcuf0UIS6IEqRo8S/Umh0HOqVajevKpj0Oi4eckzp7mUE/79N9gTxrcTQD
+         1bmGUj/SiMFLE06HGS2xPkBrfo3ksIgqrdbzJ8bYYDkqebmzWEd+1XHb6FVlpI/tRYsx
+         NcF6BDWODdNeWLDHlL9f543qMs58K0sy72sLNCQNNTc8TIGOjbRQMyFIDcyhpRvXwUoc
+         zLtcRjscC918w4M8SrBIcUm6Z0adZTddS4di4w9kVsytsfw3NCKKLUzZNqcOLQIDyv7r
+         b9cA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=dQF+mERwkGD1beb/OOZhiRKQaRLy74CNrzfCvIv8vjE=;
+        fh=HBYiq1MXSto2NRfX2W9tAH1s7Fd2tvSyOQJSXK2AeBg=;
+        b=XJvZCbWCm1ujAu15eNV5hnO9lJdigFZtSSVUSom1S6qV0dJe2tPdAy+Xg7pUIbDli8
+         YVdc6Ge3YfKAMaSI0PNXw8lAoX7cCsERgnRSw5ffKITENsaM3Kl4EPeQc/1av3apSfxh
+         xNEQSdxO9GJawetZYXM8zwlKZJNObiuo2mhOU9z8nT11GOnuUOjX8o9mWIPYkSldQjHZ
+         JG19eeJGfUnxkq2DeyTjTfJRgynjo9iMK7H32cn8GGkvdj0EchHqW9652pa/tJqlg81V
+         eMw8FfUqtsicVe4SX9o8ytrBY2O0H8ojSTZsDtQGKj18kxiRYUgiUU5yRE2uyFUTXpUS
+         4Y5A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=EFri1X4B;
+       spf=pass (google.com: domain of kaiserpeter536@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kaiserpeter536@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <kaiserpeter536@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a1e0cc1a2514c-8570b97165bsor1264864241.4.2024.11.20.06.52.46
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Wed, 20 Nov 2024 06:52:47 -0800 (PST)
+Received-SPF: pass (google.com: domain of kaiserpeter536@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=EFri1X4B;
+       spf=pass (google.com: domain of kaiserpeter536@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kaiserpeter536@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732114366; x=1732719166; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=dQF+mERwkGD1beb/OOZhiRKQaRLy74CNrzfCvIv8vjE=;
+        b=EFri1X4BuGN1+ChqDUudb+3Au7O+39cVLKMz+BVN9oTF06YFYhgg6gzp3S3sXqlYkl
+         tGeZkX4lCKWrGs8yghNFX3aXar0Uv4wcp68pNO0KYKEBbcspacPo31T3m2MaANBGSm4j
+         6nghEDlYTJ2I/CY0XV5lyj4vTCeO+5ljJRXRC+50glQH1lG1WSj+PbaPKpbQZxPv/+Wq
+         ESpaK1GUa5ukVm+sci/pCf8EfrYziUfXbpqdXmFeKAWymSVzzI/hqRQC8DVRwqArtdxt
+         QQW4mfpgCizPE5UqlSzTXev6DF1DFwgC6dvNpdnpaVWIM1vs4OML5CfHSYcEp0iqUyF3
+         J9RQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732114366; x=1732719166;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=dQF+mERwkGD1beb/OOZhiRKQaRLy74CNrzfCvIv8vjE=;
+        b=LOTNQAY91GdvXyY17A9MOmmVDnQX0gK4svv4AMnf7Auz1acdK8JYmNJNixF/s0rchf
+         WKgO7f5OkgcHvQdaUnZvusGkabQsMF495PNlvjt4ZzHC8FaQk1yHb6tKLiz5l3eR9UDP
+         1+13JcoREIq60TVL8ZuLPUhtXaAKPiDPIL5s/QuoX1kafqpUMHrW1Zuov0GjUDOje7oI
+         K8HCJyCI8g5MgBUQKE2Mr13OK+BtHsyoi+/U51pVwk+UToxIALidxOx8o2+OGDkkCpwE
+         NdCjgyWNVKXAIa2DvY4+8stmlHm00xWha0ECU2YFTPaHDDUr1LLvr7kOhBu9cFC+UZ7V
+         gnDg==
+X-Forwarded-Encrypted: i=1; AJvYcCWY5/GgjP+plTF4kBk5Xx44GCuLcr7JGVcb0pv/OZ47RoF57y6r5cgcWEbYFc+Chn36XBzRHQZ+hYd8DyMcxXXbJgMn7w==@gmail.com
+X-Gm-Message-State: AOJu0YxKxFH4wouYe0h/E/27ZjiRNhb5CGFPIb1dfpAtMfgHUl35+ZdD
+	1miu6E2yLSsmWdRlocY2VRO8K7OQquFocx0l7Hd14q+sA9dRDeA4wIvUF3Ir+hvKQKZTw/gI7Hx
+	TMib0El7spXglJth8jHCP8wEBGmAaCGvD/aXU3g==
+X-Gm-Gg: ASbGncvHO4psZ9cCm+GvDfiv0cDK/sLDf9c+JTrp+jOVaUhJugAmPzazaP3V1Efqpbz
+	TQIt6dDdvru2vtHnYaTLhu4aKuIX+YA7X
+X-Google-Smtp-Source: AGHT+IGGlG2E17zRx44nwYyelrhH+51j6WdkCbKzMPI6neiE7fekLVNbFF9soNkt9X77JOJHYhDFW90UbWUp1E1DyrE=
+X-Received: by 2002:a05:6122:2014:b0:50d:5ab3:5209 with SMTP id
+ 71dfb90a1353d-514cf96a42dmr3271562e0c.8.1732114366439; Wed, 20 Nov 2024
+ 06:52:46 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: HellemansWerner536@eclipso.uk
+From: Hellemans Werner <kaiserpeter536@gmail.com>
+Date: Wed, 20 Nov 2024 14:52:35 +0000
+Message-ID: <CAMd+bzMjw6cTTHUYR=P9pO5PMyOMz7D5pjKBk7sAvHGHNekUJw@mail.gmail.com>
+Subject: LOAN
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="00000000000085a92f0627594d25"
+Bcc: mailmanthingwhatever@gmail.com
+
+--00000000000085a92f0627594d25
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+*Looking for a Business loan to grow your business or a personal loan that
+fits your needs? Whether it's for a home, car, education, or personal
+expenses, we offer flexible terms and competitive rates of just 2%. Fast
+approval, easy application process, and tailored options to help you get
+the funds you need. Apply today at HellemansWerner536@eclipso.uk
+<HellemansWerner536@eclipso.uk> and take the next step toward your
+financial goals!*
+
+--00000000000085a92f0627594d25
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><br></div><span class=3D=
+"gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_sign=
+ature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><font color=3D"#=
+222222"><b>Looking for a Business loan to grow your business or a personal =
+loan that fits your needs? Whether it&#39;s for a home, car, education, or =
+personal expenses, we offer flexible terms and competitive rates of just 2%=
+. Fast approval, easy application process, and tailored options to help you=
+ get the funds you need. Apply today at <a href=3D"mailto:HellemansWerner53=
+6@eclipso.uk" target=3D"_blank">HellemansWerner536@eclipso.uk</a> and take =
+the next step toward your financial goals!</b></font></div></div></div>
+
+--00000000000085a92f0627594d25--
