@@ -17,4 +17,6 @@ Please let me know via the pull requests.
 
 # License
 
-- Permission is hereby granted to use this archive without restriction. 
+Permission is hereby granted to use this archive without restriction.
+
+If you do plan on using this for a project or research or whatever, Credit not needed, but is appreciated.
