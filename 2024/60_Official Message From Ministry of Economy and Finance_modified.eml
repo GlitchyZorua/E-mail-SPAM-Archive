@@ -1,0 +1,181 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp4697521vqq;
+        Thu, 7 Nov 2024 17:31:55 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUMLuoSRBvk2YlPtpj0FVDz73edgNTkvT/wU3DVvC7NtdWO64HQMGoqfVh+g6kLMihOnLiCUDmgINXyPlk1tJAxoFcMyg==@gmail.com
+X-Received: by 2002:a05:620a:3f85:b0:7a9:a3f7:ef30 with SMTP id af79cd13be357-7b331f20fb1mr171059285a.45.1731029515716;
+        Thu, 07 Nov 2024 17:31:55 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731029515; cv=none;
+        d=google.com; s=arc-20240605;
+        b=jApcVXZhHfzbndv4Jrlk6rf+CvNVJpo+ykr2lm+7QGpysJhxIoiT+zj8++IA4jBk11
+         UpaV+Mn3/GfgYZmn1CG9jRwvu34wjXY7+u1IGPEOYq6yEz8AaP0nxy9TSX9CtYnaIWIq
+         XuACKSSdO/+m5cle43jDc0LxG1569rmPbIFeD0LfXqc4Q6WENcklgYc4aZcqvo7P7RyB
+         BGq0w+rLuElASGjMk0A1KzIQbznQWP/8yrEdDO40lY2LxQg3T8W69bYhpolqlUQrfdVG
+         erf+zvwZxAdFTkV6DeXKGs+HrmtrIZksXbVfUzWnDKgNjya/oZqtS+PQbZ7gDxy+p3gp
+         xvZQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=l2rppDlCLCb4xVhpHSZU1Uhes08nZsgA9WXUxpa3cgg=;
+        fh=iz7Um4kHAo1EOWOScvzhjUyvmP6abOibQDT039o/+uQ=;
+        b=WKwHDKZu3bPdYz+sZn1TXEj2n1J/5DVlWGUwtyOPMBpjsNXi0s0HwbTuZQ5MTn8LYz
+         u0ZiVr4bOCKlSDUHdpJRQo3sblur7fdsfiovzJQVP/r5Y3SXbBz9a/YYjt+w6U3nk94J
+         mE3iN9YF2T28dN1n73XP7PNsTkjRmVRkAudai0AhbTewPL9WTnDvp+FQiJafzVAXrXSh
+         YxKA3XNOW+miO/3xyDIOaaHR1kiS+Z1ys9EAN//Nze4v+TSMMp3CUXQFTtFv2sVJ2mWK
+         1Ofr/j7Hor4f5W1zWLwGJ79dW3Lge4c9rwDi1xN5yKbQSR8i8dUCC9rLHo+4ekBlA3h4
+         KC9g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=jrkg1E7w;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id af79cd13be357-7b32ac9ec12sor200186385a.11.2024.11.07.17.31.55
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 07 Nov 2024 17:31:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=jrkg1E7w;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731029515; x=1731634315; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=l2rppDlCLCb4xVhpHSZU1Uhes08nZsgA9WXUxpa3cgg=;
+        b=jrkg1E7wLejSTiYeiZ1YoDALfJjUkNEZWOnphfWFjKel3iXmYLhfkG40ai9a6AgMee
+         h/SeNmyVUDXl9YBdoRRaQREc8MT+tjnaEYXIWmBCUm4hEXbTc07HpblmpPSYevLpZVYC
+         S6GrTp3738knHmcgKa675ZhvCvhqFwVf7v8QBbHhgnBmWp/PBLt4fUN1+kIUKdkxY8lV
+         H7gBfNNvpHrXxTtDMES163k4IlPPeCt7SS6FPwgywD+LG80U3D3LLxWD1s9Zi5hopTfV
+         +bfGxozlGzMPjLJI6/di0VKCmoGWzQZAqFI/cAi8xMgISH0a/+83jKQt3blFtLtQZQAu
+         Ad4w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731029515; x=1731634315;
+        h=to:[removed]
+         :from:[removed]
+        bh=l2rppDlCLCb4xVhpHSZU1Uhes08nZsgA9WXUxpa3cgg=;
+        b=ngpqTAYuFlDTLP3PWHBioI0pRaaUxE9SYv45pQhP/UVK2s/8uUngSOaaRoJMxbvZep
+         dNIqzCzHl1+YVZkCs5UvS51WP7AQD5xPjMoMGtt2ZuBhZcpcqi5roP1L0XZIA+FIbV4E
+         QIqr7nxsyXaxdDPG7l/vyzUh15QNuZa+OZwH7kwHEsHhhRU/Nz//bUyJLm1fJ5HF4yDw
+         G7Uh9JyyXcNPLFrXfIsF5j1wO5zFPf3cRjZ19xNhoxf+XtE18gjzCR3uH6B+rc/OIylH
+         fI+C1D5A7Vjg9XvnMmVTLz6Wji5ZM93hZXNmLYUFDR5RdJEsM0QAfXJLzjcC7jTdmWz2
+         Vm5g==
+X-Forwarded-Encrypted: i=1; AJvYcCV9JSJM8xk3mhKU8te+VfGLs8+U0BuRnUKYrYOK5/RPuSZA69XAG7UKUd4XnxwLoyQm4AFGL5RNwNAQHvLwg/hrzV59iA==@gmail.com
+X-Gm-Message-State: AOJu0YyNDtPyXh0U2OyJj3v9/c2ILHsqy4FwTHVbtd6L02d0l+ijQvMA
+	ctpe0YU78J2Z8Wr61b1DZWC6r7VXHVwh2eX0rAWyNc1R84Z1yd+oSlhH0+TMLV4Z4JrH4wVSWi4
+	3mxh2Jh45hfmRxjt3e+6CsEmqle0=
+X-Google-Smtp-Source: AGHT+IGU/K4IDr1weegOLSvyC7vNuAqZFDs/FUmuEbLOPraD6ji8pUGIP1v5rmkHzI9YsJiCdKCYxyiidCoje9h9zQc=
+X-Received: by 2002:a05:6214:5d8e:b0:6cc:[removed]
+ 6a1803df08f44-6d39e101c39mr13011406d6.5.1731029515233; Thu, 07 Nov 2024
+ 17:31:55 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Fri, 8 Nov 2024 02:31:43 +0100
+Message-ID: <CAPxjBf6R=[removed]>
+Subject: Official Message From Ministry of Economy and Finance
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000059f28706265cb71d"
+Bcc:[removed]
+
+--00000000000059f28706265cb71d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ Ministre de l'Economie et des Finances | Togo
+75572 Paris Cedex 12
+B.P. 8000, Lom=C3=A9, Togo
+
+
+      =E2=80=9COfficial Message From Ministry of Economy and Finance, Togol=
+ese.
+Dated: November 08, 2024=E2=80=9D
+
+Attn:
+
+
+Following my appointment as Minister of Economy and Finance by President
+Faure Essozimna Gnassingb=C3=A9 Eyad=C3=A9ma. I have been specially mandate=
+d by the
+President himself to make sure I use my position to restore the good image
+and past glory of this country which has been dragged to the mood by some
+dishonest bank officials, and top government personnel.
+
+
+Subject to this directive, my office has being directed to ensure that all
+outstanding debt payment of contractors fund, next of kin claim is looked
+into very carefully and payment of such long overdue debt paid immediately
+through this office after a wild verification that the beneficiary whose
+name like yours is the legal beneficiary of this fund.
+
+
+Your file has just been submitted to my table among the beneficiaries whose
+part payment of US$2.8Million United States Dollar is long overdue for
+payment. You are as a matter of urgency requested to forward your personal
+number, contact address, a copy of your identification for administrative
+processing of this payment either through following Email:
+[removed]. Contact on WhatApp Number:
++228 96 57 69 86
+
+
+            KINDLY REPLY TO THE EMAIL ADDRESS (
+[removed])
+
+
+(1) ATM MasterCard.
+(2) Bank to Bank Wire Transfer.
+
+
+Bcc:[removed]
+
+
+
+Thanks
+Yours Faithfully
+HON. (DR.) Sani YAYA
+Minister of Economy and Finance | (Togo)
+-----------
+
+--00000000000059f28706265cb71d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+Ministre de l&#39;Economie et des Finances | Togo<br>75572 Paris Cedex 12<b=
+r>B.P. 8000, Lom=C3=A9, Togo<br><br><br>=C2=A0 =C2=A0 =C2=A0 		=E2=80=9COff=
+icial Message From Ministry of Economy and Finance, Togolese. Dated: Novemb=
+er 08, 2024=E2=80=9D<br><br>Attn:<br><br><br>Following
+ my appointment as Minister of Economy and Finance by President Faure=20
+Essozimna Gnassingb=C3=A9 Eyad=C3=A9ma. I have been specially mandated by t=
+he=20
+President himself to make sure I use my position to restore the good=20
+image and past glory of this country which has been dragged to the mood=20
+by some dishonest bank officials, and top government personnel.<br><br><br>=
+Subject
+ to this directive, my office has being directed to ensure that all=20
+outstanding debt payment of contractors fund, next of kin claim is=20
+looked into very carefully and payment of such long overdue debt paid=20
+immediately through this office after a wild verification that the=20
+beneficiary whose name like yours is the legal beneficiary of this fund.<br=
+><br><br>Your
+ file has just been submitted to my table among the beneficiaries whose=20
+part payment of US$2.8Million United States Dollar is long overdue for=20
+payment. You are as a matter of urgency requested to forward your=20
+personal number, contact address, a copy of your identification for=20
+administrative processing of this payment either through following=20
+Email: <a href=3D"mailto:[removed]
+[removed]</a>. Contact on WhatApp=20
+Number: +228 96 57 69 86<br><br><br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0			KINDLY REPLY TO THE EMAIL ADDRESS (<a href=3D"mailto:[removed]
+[removed]">[removed]</a=
+>)<br><br><br>(1) ATM MasterCard.<br>(2) Bank to Bank Wire Transfer.<br><br=
+><br>Bcc:[removed]
+[removed]</a><br><br><br><br>Thanks<br>Your=
+s Faithfully<br>HON. (DR.) Sani YAYA<br>Minister of Economy and Finance | (=
+Togo)<br>-----------
+
+</div>
+
+--00000000000059f28706265cb71d--
+

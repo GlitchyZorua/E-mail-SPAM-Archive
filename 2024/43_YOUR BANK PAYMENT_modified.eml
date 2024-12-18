@@ -1,0 +1,109 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:1391:b0:4ab:cde1:8319 with SMTP id gz17csp1204690vqb;
+        Sat, 7 Dec 2024 18:11:08 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUWiHlq0U+kBgWiETiYtvWtJMIWlOD12HWn8Ld1UvgGkAYDMStaHqtlx8ydsaSv1VjED04GKOAsV/AvN+Vh7+bru92ERQ==@gmail.com
+X-Received: by 2002:a05:6000:a07:b0:385:faad:bfb8 with SMTP id ffacd0b85a97d-3862b3ce0f6mr6681022f8f.41.1733623868680;
+        Sat, 07 Dec 2024 18:11:08 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733623868; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NCDAInjFSFzLOmwk5jTZCbqOUn4s9YglxiJ46wNuTc0JYExYHEeYXL1IbpqCQGH2HM
+         twpC3EP9UHBCGX8BsDw0iuxsIZ0IvtUJ3eqwB8ClT0SaRUiaa2Pjbnm5gALJn+GnCorR
+         xyRf4CmCAecFrAqBXTGjI7l5qWxuPyhB++AYZQymH/r1A/YeFlmpA3IflZCo+MJgRCeG
+         eHlYR1YN1yisu8jnlwVOavsrrvyhBktY0mtkloQHnWtJ9vxbikfQqHjk0KkuBE8Q0v1b
+         NqQ7BemDvwiyt62m626n7uYIkSFjRraQN+WSgas/prG4u8vwI80MJZ8OabaH7Lg3mnxZ
+         INIA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=e66aGR92SlsMBVLIUGtIY6BsdB4jWQVElovdR3P+nEU=;
+        fh=6GCpPyoKM0fI5Thub+lP0gUYVROXPLbSH23WYC1gcwU=;
+        b=FTb/rJToH15AF5eHhEsQL1EC6j3U9h235KKDZ54AZeI9Tkis+Vfx+i+Yd2t6a7QCUs
+         jH8553I4rznkShNOET86YWwhvHOUdegnf9Fhc55fPLO97BzlLOjaV6rAVGXauwRsA8qP
+         gQBOjmmXUDkOAOsnZvCeZJ9wS0qF0YXKfllrZtSJ3jlNPBB9EQxL4kiCtRitGt8eqhI9
+         wIrctr67D8jNZx7+5gU3kA7nS+SI+Jw7G+DBbiNv6LFQPfhWVyfhHBEjemQspUG9DzLp
+         gJjkqeUP1Ifn//lFsvYCPV/jDe8N4icgrTbyaIKsq9fXAdfaBkiaAjEA9QgNwzbJ8d+v
+         7S5A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hwtvspG0;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-434d9e9cc71sor27826315e9.9.2024.12.07.18.11.08
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 07 Dec 2024 18:11:08 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hwtvspG0;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733623868; x=1734228668; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=e66aGR92SlsMBVLIUGtIY6BsdB4jWQVElovdR3P+nEU=;
+        b=hwtvspG0EhronGf0TexYZsbISSvE4U7PaXwHH5jpt0l62MT03fEajNjml9xTP74Hkp
+         qVTsZh2Qu1aLDCO7oZOEAf8A9YocM7XwZ0qqHiN91I2pCWfpNo75wrIEEvDO4sCrjFKy
+         tXc8yZFvQWdph9mnykjvbdCapu2ZxE+ZJvTgZsvDZEjBK/rvByBUmZsOqCcXxY/xfjEQ
+         fcOfInIzpLfbxnNnMwU+9Q7YuiRT85U6OGntoY7dhRIfTS/2+7/J3xhXEC8TV9yxMMwN
+         sov0HelL9FwV5CW0NTeAiKpC7zQmlfa4ieyBr+AMq8yAeRIMan3YwGFFoYCFlvD3i3NK
+         xG7A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733623868; x=1734228668;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=e66aGR92SlsMBVLIUGtIY6BsdB4jWQVElovdR3P+nEU=;
+        b=uKAb/vJwEYlCquMmrkxqVw3D/dg1hE5ZsDGSqATMhkfPzlCDkarrxOX6wTPn1takJL
+         /07JXs+RESeL4VAlq9zYFjhAZpWh9Y1YjKps4Eq8a1m978EnzaK6ZUNBv3NNh6GHDAJY
+         Kcj1xrDJDgvMvNEVE9feDWa2baiX7fkRx0H3w/mbZtymaej9d2wjdmIrO6Mhms7HNP5I
+         nMEhB1lhR1He5lbKai+EonSLo4yNnrOsqbOsFg1izfynJJnbk3ht6GRuLKXXbmVbVAHa
+         LQ7OMTsgHR7IqFaPFMjD2ReUnWz9yDtyTxdG3OHQ690lvcfrl8GOmuUUJMpWDTWpijvv
+         9TjQ==
+X-Forwarded-Encrypted: i=1; AJvYcCWuRmxnq0GmvqLz8in6cyVGTzgDX4W7vz3SiEXJmzJFfCjtn/yQCNRej81CTAOMxDahiy0D7orIabKSU1sqjKnYaonIhQ==@gmail.com
+X-Gm-Message-State: AOJu0Yz0G0MfO4dZY/Fa1raRn/VUHvrdSPZiOBxL8eOmY8bUlvFbRAYd
+	mNyEJ+B8jb+ufOJRwrp98Ouu7qf/Wot/uRtHyQSI4TYY7nz7fbzPOmd42Re7HkR2WDckekAni8G
+	mQMrscPGmZSr3F1TVPGXPqlKFR7g=
+X-Gm-Gg: ASbGncu5XizCj5HGRWwo4RHOQ8Fwh3asTJqaSibgXA1T1eBWavyIy4NOFn1ME574koT
+	/ZIs/MHD8TvgELm+xOOuGyzzCHej0yus=
+X-Google-Smtp-Source: AGHT+IF/pUpnPxa0gbSLRH9TU2f1khMR9lM7F+j0Yw39A3GTbpoPYQ1Ib/0U9dRD8KQrIGOlSBDgW/ajUYx0USTKBss=
+X-Received: by 2002:a05:600c:3c9c:b0:434:a1d3:a321 with SMTP id
+ 5b1f17b1804b1-434ddead666mr77952195e9.3.1733623868075; Sat, 07 Dec 2024
+ 18:11:08 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Sat, 7 Dec 2024 18:12:00 -0800
+Message-ID: <[removed]>
+Subject: YOUR BANK PAYMENT
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000d4b8910628b8c2d5"
+Bcc:[removed]
+
+--000000000000d4b8910628b8c2d5
+Content-Type: text/plain; charset="UTF-8"
+
+ Hello,
+You are the next of kin to a late diamond and gold trader in your country
+who deposited $7.5 million. here in our bank. please Reply for more
+information about this money through this email: [removed]
+
+Best wishes,
+Mr. Raymond March
+QNB Finansbank istanbul Turkey
+
+--000000000000d4b8910628b8c2d5
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">
+Hello,<br>You are the next of kin to a late diamond and gold trader in 
+your country who deposited $7.5 million. here in our bank. please Reply 
+for more information about this money through this email: <a href="mailto:[removed]
+
+</div>
+
+--000000000000d4b8910628b8c2d5--
+

@@ -1,0 +1,158 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:1391:b0:4ab:cde1:8319 with SMTP id gz17csp1987874vqb;
+        Mon, 9 Dec 2024 05:33:55 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVbiVxMDM5emS1t/jfFm/WKOYxTLSGL1kpTsIM/E3QLRIneLbNIiQdwCrWOi35eELlKk08jStFlyqvTEVOJ/QEXPHRDsg==@gmail.com
+X-Received: by 2002:a05:620a:63c6:b0:7b6:d7be:2e4 with SMTP id af79cd13be357-7b6d7be04c6mr378060985a.26.1733751234982;
+        Mon, 09 Dec 2024 05:33:54 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733751234; cv=none;
+        d=google.com; s=arc-20240605;
+        b=H1UxQYXP+UmcsDxp0rUEhG1gANIN/Z25rwhM2H5yxnQC5BIXiUH2MAx3NXknosMfaN
+         +ee8k7l3CzU+MxNXgr9ILujQIrkpc+XOoZXyvc4ZCDejq6qjd+7wZPLCkyR6k6Ytmx5l
+         SK+Hthuno+vij31jAOltvMW/dzC1ciJI41fl3p7TpQVfTAQdVeiSfJgIYylK+mhBQDOK
+         PF19FNFfE7ZZ4oEAteW3AIuMZSqPMDWihbQOd/JGIT31ZQcsJ+ote4ghlCYgG3mtCl76
+         /FuLcs3VYUHf5Pt6HXwBdRDBPMKzl+Avv5jiwLpkEdlsPPkZDibJgnfaOP45sTbjqvIT
+         5wmQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=rQqH7IT8ooIx/mk3j4JsjaWn92MZod/rWqgJ9yn0J10=;
+        fh=fHPPu/cF1ohQf7w1fUYWzf293pgsCYf7YdmJAlcxPlI=;
+        b=f7+gn3mVg8mE/pN0bJf4oQQgjY61iCoHVsiz+OC/4si7idkrmxK3R/WaRGmP4vn4aK
+         r0AE0flOvv/o16cGPg+u/nBXbDNExXAxdf7zDUWCnTEmSUhFIwnUe5elH1U2P1Rv4YKH
+         pVcChnlUnVots4YSqdOYsfSOd1MysiuZZbpUtXuZW9MjFHr+w1l0zfus3ptS0OUAuJrP
+         M/HI5dQY38MZKQI0mTjn2luC+EYma9AHbrXs0tX4hdlqW2lNJMRYuvGyR2rt1arzUjZ7
+         ohod7ejvNjgLsGWZ9sz/IrH90Ciia2kQ+IT/IXCSkdRjPhPonZTnLuyHxzdr4Htl9lIg
+         pN0g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="Lz+3Ii/3";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id af79cd13be357-7b6c7017b3bsor341930785a.6.2024.12.09.05.33.54
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 09 Dec 2024 05:33:54 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="Lz+3Ii/3";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733751234; x=1734356034; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=rQqH7IT8ooIx/mk3j4JsjaWn92MZod/rWqgJ9yn0J10=;
+        b=Lz+3Ii/3IhUFDdV9/xWIXPhydV7SHuWubmdvhsQHihSRgoQClNR9EcaoK4xrLb3jCh
+         zUd0pHy/ROD19807Q/gfunI61hICnBTxw8w9eXKCpPKMr0SZL1aNyhbLb86OwLqQmE+S
+         esASf6NtWXpqOoB2CmczyF8ad/LAtLyh7wZnkMYc7iPgtK5TrUTmSp4tGLuLN9XAv2aB
+         IU5qAv5HSE6zOOxHdqgOgi0SY+XsryVZDakFzTMyCDtrHTFzfe17YlLOx67zGTecB3Cm
+         nMQ4jKr+p/6vhYGmoTJYe43jGqkuXR0iNZnFCIz3eR/BwrHoTNULoqhOzuw56ie6f5wG
+         CXeQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733751234; x=1734356034;
+        h=to:[removed]
+         :from:[removed]
+        bh=rQqH7IT8ooIx/mk3j4JsjaWn92MZod/rWqgJ9yn0J10=;
+        b=OiJg/kZYX0xBNugiisb1NyICHzj5N1Ldn5jjI5zoCW909/rS8fx94ms76Jw+ee25Yf
+         2ed4t3nJpXHOTbozqSKXTrhbagPfGn4hXX9IuEKmBXueb9scto3YRzgBtxzl1KRRfRz7
+         aOglbPP/B0oTSKU21WQETARRoy10ozoOEOR3Tp3PouW5D25C7Jy3Vphv1l/Tngqx7hnd
+         GhE4LnDQmA9r0tBEYmnysM9g6Zcv5YE4/rHGr1e9T1Vt90Y0CQAOxArk9ltbxtxSEYS5
+         unz6E1/cmFT7xlmHf/dvCZ0qQUDNAaXTbHIrsO/do4yks0kbcfdyp3grT6uI7FKc6Scf
+         Y31A==
+X-Forwarded-Encrypted: i=1; AJvYcCWtN2ZduYuDUhoIu4fNGo1Q98/WbSSnqq5NeLwZHnkCenW6RYHVXIiHuuqnku58ma5gPmvboVKZMIn7c4xpFDPMQzfVhQ==@gmail.com
+X-Gm-Message-State: AOJu0YxEn6q6J0Sa8wnDsedmuLF/1K1J1XTaR2Rl41XceHOvo7G3A9TL
+	brHp3N0wplX6UTFq7w0Ke9jWsN3Jwyfgwul3hy6wQOWSGs/CO2NJFXGZugzZiWxbVvxqKL5Le5A
+	LaKOCxlHZQy7oUly4Io/TSG2ThK7szZoJZKoHqQ==
+X-Gm-Gg: ASbGncsilyehfK1ZpeazT6yRStSovFfnK2QwzQ25btoJOxV6jXbt4Ypl3DGetHSw3HL
+	rupW2LDr6ApT7Y+RSG964c67Hyw18owQ=
+X-Google-Smtp-Source: AGHT+IHgNvqoFkFF12LhmlPLKT9+ZAl1UVBoyW6zNSltXEOXsIjk5SwtT5Vobcct6bcRwUAsyFzaK/OVDeFv3SUClKY=
+X-Received: by 2002:ad4:5ca4:0:b0:6d8:b733:47c with SMTP id
+ 6a1803df08f44-6d8e676d8e6mr197472166d6.22.1733751234265; Mon, 09 Dec 2024
+ 05:33:54 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Mon, 9 Dec 2024 05:33:43 -0800
+Message-ID: <[removed]>
+Subject: Good Day
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000728ca70628d66af7"
+Bcc:[removed]
+
+--000000000000728ca70628d66af7
+Content-Type: text/plain; charset="UTF-8"
+
+Good Day,
+
+We are Canadian solicitors working as representatives to the United Nation
+and the European Government.
+In the course of a recently concluded investigation and subsequent arrests
+of suspected fraudsters and scammers from the Africa region,and in
+collaboration with the current governments of Ghana, Nigeria, Cote
+D'Ivoire, Burkina Faso,Benin, South Africa, India, European Member
+State,USA, ETC. The UN security operatives have so far arrested and
+prosecuted over 500 government and banking officials and the arrest is
+still going on.
+So far, the UN security operatives have also recovered about $2.1 Billion
+from both cash in accounts and properties and assets confiscated.
+
+It is from the address books of the arrested officials that your email
+address was recovered. Right now, the United Nations (UN) and their Africa
+Union (AU) counterpart are paying a part payment of ($5.8Million) to those
+whose emails addresses and other personal data are recovered from these
+arrested officials, and also paying full contract or inheritance and
+winning amounts to those with provable information qualifying them as
+genuine contractors and beneficiaries of funds in the affected African
+countries, European Nations and United States Of America.
+
+You are advised to immediately get back to this office to enable us to
+process and have your Part payment released
+
+Sincerely,
+Todd Hoffman
+
+--000000000000728ca70628d66af7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div style=3D"direction:ltr;font-family:Helvetica,Arial,sa=
+ns-serif;font-size:14pt;color:rgb(38,40,42);outline:none">Good Day,</div><d=
+iv style=3D"direction:ltr;font-family:Helvetica,Arial,sans-serif;font-size:=
+14pt;color:rgb(38,40,42);outline:none"><br style=3D"outline:none"></div><di=
+v style=3D"direction:ltr;font-size:14pt;outline:none"><span style=3D"font-f=
+amily:Helvetica,Arial,sans-serif;color:rgb(38,40,42);outline:none">We are C=
+anadian solicitors working as representatives to the United Nation and the =
+European Government.</span><br style=3D"outline:none"><span style=3D"font-f=
+amily:Helvetica,Arial,sans-serif;color:rgb(38,40,42);outline:none">In the c=
+ourse of a recently concluded investigation and subsequent arrests of suspe=
+cted fraudsters and scammers from the Africa region,and in collaboration wi=
+th the current governments of Ghana, Nigeria, Cote D&#39;Ivoire, Burkina Fa=
+so,Benin, South Africa, India, European Member State,USA, ETC. The UN secur=
+ity operatives have so far arrested and prosecuted over 500 government and =
+banking officials and the arrest is still going on.</span><br style=3D"outl=
+ine:none"><span style=3D"font-family:Helvetica,Arial,sans-serif;color:rgb(3=
+8,40,42);outline:none">So far, the UN security operatives have also recover=
+ed about $2.1 Billion from both cash in accounts and properties and assets =
+confiscated.</span><br style=3D"outline:none"><br style=3D"outline:none"><s=
+pan style=3D"font-family:Helvetica,Arial,sans-serif;color:rgb(38,40,42);out=
+line:none">It is from the address books of the arrested officials that your=
+ email address was recovered. Right now, the United Nations (UN) and their =
+Africa Union (AU) counterpart are paying a part payment of ($5.8Million) to=
+ those whose emails addresses and other personal data are recovered from th=
+ese arrested officials, and also paying full contract or inheritance and wi=
+nning amounts to those with provable information qualifying them as genuine=
+ contractors and beneficiaries of funds in the affected African countries, =
+European Nations and United States Of America.</span><br style=3D"outline:n=
+one"><br style=3D"outline:none"><span style=3D"font-family:Helvetica,Arial,=
+sans-serif;color:rgb(38,40,42);outline:none">You are advised to immediately=
+ get back to this office to enable us to process and have your Part payment=
+ released</span><br style=3D"outline:none"><br style=3D"outline:none"><span=
+ style=3D"font-family:Helvetica,Arial,sans-serif;color:rgb(38,40,42);outlin=
+e:none">Sincerely,</span></div><div style=3D"font-size:14pt;outline:none"><=
+span style=3D"font-family:Helvetica,Arial,sans-serif;color:rgb(38,40,42);ou=
+tline:none">Todd Hoffman</span></div></div>
+
+--000000000000728ca70628d66af7--
+

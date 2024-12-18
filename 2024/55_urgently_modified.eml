@@ -1,0 +1,108 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp6342810vqq;
+        Sun, 10 Nov 2024 10:58:45 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUy3ADRkY1Oe90XoD+QaTNw2X17+O3ryPyquV7OIRvwXMdlMjd5WJq8X+l6JojGbNl94R/5tIzJdCACE+t4B5sNHB2+cw==@gmail.com
+X-Received: by 2002:a05:6512:239d:b0:539:f7c1:5feb with SMTP id 2adb3069b0e04-53d8626c8eamr3693391e87.39.1731265125324;
+        Sun, 10 Nov 2024 10:58:45 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731265125; cv=none;
+        d=google.com; s=arc-20240605;
+        b=DVN/GYIckef0QTv/hsMBlqGg4bvR+WPuPp0Ok4rcylAnO8cKabv4Eydygn9GbtqSxE
+         UX9TdYjEcNSbYUqqniq0Ixv6sw5Wk8Ajx/fqFKr+ks8lgl7bpnmnzZPXD0sMk4wdCmL4
+         5GxltLiPdmibQKKxwOQdQU5ihDD3k9ULIsWz2x8Rg70ie3c/3/P+4P9K2Ejx/qfH4PVh
+         m5nIg8x1cA++8vKXeZhrR1Hy1DnRD1z3EJKt574UvVqOhdEQ6KhcV8HwEi8DgO0b1X5i
+         dQv7cSAfebw42CDkrrCZ7KxWQIgiFj2mlD+PyEDANpgpszV8BnELyqEZeunWlp81k7+F
+         82gw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=OA7B0OPba2zpaxb07kY+YUEwJDMcJwWx4wowomK4tFs=;
+        fh=QlYmAmN03ZWQZz6Fk8kl01mC8/a6dVkplvvAcE7SDgo=;
+        b=l3dzCHSyU+bFX2Qg4PWHHGPNt8ymRrHU6WIRDKkhoDs1VZrKDjbYC7SN3P43oERfDA
+         qPMPx8qu0f5ldF0qz6liwpdcB7MsgtqrxnnjdxWHGymxUbH0o6KI6z1AXOQDgMPFDTUL
+         LBfZGqBafgJB6oDYDTRz1V8lB6RGPLTGcG21I5/F1JcEOWtRYj0UGy8FB8IaBK/4n8fy
+         bpnpXySUtihVIaSMqKRIBINdUgKDmf8EA3mMMy+k61DHCIypXpzkw0NgZhLeVkJrxGNa
+         8aX3rRqQgAjqiL2Xx6mj3YRs5gsoLHLchJV8Ci0qKwAStRlPkl6tN1lNkpXJsOfSAGaC
+         BADQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Qmf0zUZG;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 2adb3069b0e04-53d8268d7c9sor1492889e87.14.2024.11.10.10.58.45
+        for <[removed]>
+        (Google Transport Security);
+        Sun, 10 Nov 2024 10:58:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Qmf0zUZG;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731265125; x=1731869925; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=OA7B0OPba2zpaxb07kY+YUEwJDMcJwWx4wowomK4tFs=;
+        b=Qmf0zUZGV1hALhB7+8QFAEtbN34loUdgkiYGAobrbqPH7gp1K94kTpDKdBXeaAgKpl
+         h3EyG5QCpiUMeGgcwv5NN1RhgQCVBwgrkDni7PgNhUiv2IubIwPyLXFnMnPfaWgegAsE
+         ioS1Cj6Uuq8s296/wKsDiwQGJMyXA3UCELIwi+Vnt0wLn9B4Oc+VqFT8U2+oimHC7giv
+         NG/lANu5WZbdelSdwZ7DHpO7qtaZngNXcntftx8ge9dvxrzjug6qYHrzMNPHLe8ohD1G
+         83BtckwhKrQyeQ/Zq1EX5VrtDwFMeLgQ+7rIc9MiOkVxQCU1LiRUrd4K94aI1puqb9Er
+         tTyQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731265125; x=1731869925;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=OA7B0OPba2zpaxb07kY+YUEwJDMcJwWx4wowomK4tFs=;
+        b=sLHmTxh1cyvpg4nGkcBR+K4Wjouw3+Rrhuyeez0tCtpf1pHejcbA1ds12G+ZH9Z8Un
+         WZXVy4mWLGpNJdINZqaVRgcbPhZGFiyeKUgQydxtPhKtnwjkXFav8IqVTmMTtTJ/AJOR
+         klgJzt5KZYYUX3FrD6ImHKF+YjliJcGLSvGwOTVArJzIRH/MyhxoSLpevMSJvtLAmm62
+         eWBcLOQbzMvhFiRVaQenAkokiOBwhIyokH0IHT6cx6/wE9xAl5gclGnQfBMfgIe2ANDv
+         kNJIS/iplRySnMFHz4aW3a5HiOgRvJYHcIVxF2F9FOzT8qgh/6QGgJ7sKXkFvolrNcJj
+         S9IA==
+X-Forwarded-Encrypted: i=1; AJvYcCXr11rVIrdYbJ7JIfeo32NClGaxGl2ze9nL3HQd1s6uDmv80YQVjtb+x0e1KK5DVfZGn2bTe/8DzBE4wadcwqypgksaNA==@gmail.com
+X-Gm-Message-State: AOJu0YziTOv406CTubrCOy+3nBDU0Hbgpurik7e4ApLa7lRcm14PhgNn
+	kRS3rfu5Q8pxUvV5WHkk1kSy63qPbp/irjnh/BhFCsIO6zgze28oY4tVI91Hd5rEcoxJd6OnnJf
+	oM9+LmuIQXe0Bs/lMNpDXdU/7PB8=
+X-Google-Smtp-Source: AGHT+IGVNuAtIearWZ0eC+/UpZlw7zfgBbMinEkNa9E4Zrais5wjTjNnfRABKUUCR0ad17Y6LzkBvgnQ1McBwD31nZs=
+X-Received: by 2002:a05:651c:221d:b0:2fb:5810:341a with SMTP id
+ 38308e7fff4ca-2ff2015026cmr41507511fa.13.1731265124300; Sun, 10 Nov 2024
+ 10:58:44 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Mon, 11 Nov 2024 00:01:47 -1200
+Message-ID: <[removed]>
+Subject: urgently
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000bf01ed0626939273"
+Bcc:[removed]
+
+--000000000000bf01ed0626939273
+Content-Type: text/plain; charset="UTF-8"
+
+ Hello, did you receive my message? I would like to speak with you urgently.
+Please get back to me as soon as possible.
+Sincerely,
+---------------------------------------------
+Dr I James entwistle PhD
+
+--000000000000bf01ed0626939273
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br style=3D"font-size:12.8px"><span style=3D"font-size:12=
+.8px">=C2=A0Hello, did you receive my message? I would like to speak with y=
+ou urgently.</span><br style=3D"font-size:12.8px"><span style=3D"font-size:=
+12.8px">Please get back to me as soon as possible.</span><br style=3D"font-=
+size:12.8px"><span style=3D"font-size:12.8px">Sincerely,</span><br style=3D=
+"font-size:12.8px"><span style=3D"font-size:12.8px">-----------------------=
+-------</span><span style=3D"font-size:12.8px">---------------</span><br st=
+yle=3D"font-size:12.8px"><span style=3D"font-size:12.8px">Dr I James entwis=
+tle PhD</span><br></div>
+
+--000000000000bf01ed0626939273--
+

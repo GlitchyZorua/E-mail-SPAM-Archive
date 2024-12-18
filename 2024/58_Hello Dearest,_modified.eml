@@ -1,0 +1,164 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp5692390vqq;
+        Sat, 9 Nov 2024 05:14:47 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXglxhE/WzfI1ZndEq+JmfscD+Zomo/mAWRnVNLWmIfLC6pRTs/8fsp2scakkZYQmkf2nB4aI8ZmMjb82Pfs576tFni+g==@gmail.com
+X-Received: by 2002:a05:6902:1023:b0:e29:629f:8a7f with SMTP id 3f1490d57ef6-e337f8c6c7fmr5375976276.35.1731158087168;
+        Sat, 09 Nov 2024 05:14:47 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731158087; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ORWK6cFHVUb6VOc3ltEEgxg4SZTNJzHoEgskE8+9h3kcRhuABUFC2PdT4Bdwr4H4v4
+         shpiZJo1hkdMteYin4i9S1gKaBkC3Gk7XnjQgsh+eRN/LsnmwlyVvUMM5GG9BGG7wlsZ
+         kRJiz+ASmiiZO5SeYlWJ+lcw3d761Nm4/BBhbXTVCQHASP8iNxsgZIz24dvMGwqxZtaf
+         mzKOBCcduuHUiLU1ZQwaAU87AdNGUXsNYnnNDAYaXQ8VGA8WOSBW0OnvsTJ4xk9RnVe/
+         rDpSRpITn9uSy0tsNmtLVC2QWR3+Kt1nbaqFNp+ZyqKG00xscegRgCNzVzjc9lYQTGEC
+         gCrQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=bZLmHmFfiaJAzBxMghDLJ5mZj1iRYRXXgSiRrPKjlkY=;
+        fh=NIwMluFHygPL2mQJLKNiQycBC+BkFUW7GoPaeHKXTvc=;
+        b=ViD1DLR5tc0+24yGfZmQ4WGNwI52Kq+H7xEdha/hRT93rg/DpJHvd3mebefPPJRL9A
+         LjWkRswnMOJeySJAbfoOUkt8sEwaRYXLpqYmolZbqidZ+iw+0TKqy8SRvgPJXmazXpZo
+         nHr8nkcn2gwUZpCLfFXwZSLarvoQFUDeCOoMU+PSoauEkweOa/A4I/sFCRjKupi+MuhI
+         65EtSxiQgdXG5zQUfBwFiCT1nL+OCY79TVfuW8DOrisVs4bQYWcTMABkA6RvWND1bbAX
+         8e/pw08hwZRvo0z9CUb0i8BKr4EWHduO4+4KFyxNuBOH8q6t37o/laVVqDDd5EA8Wu/5
+         87Bw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hTHY8UR5;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 3f1490d57ef6-e336ef28206sor4225908276.6.2024.11.09.05.14.46
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 09 Nov 2024 05:14:47 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hTHY8UR5;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731158086; x=1731762886; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=bZLmHmFfiaJAzBxMghDLJ5mZj1iRYRXXgSiRrPKjlkY=;
+        b=hTHY8UR58WypaBj7ztdpkdV3lxD4PNaizwSyRh+1eufw9tz5jv0nTlCv26yrGDngmb
+         cZ3VtPaeZJ2xZ6TggAGKbHQA3QfAkQYBDgF2HU2jJMNiaTioBUHLhL0DyEjJQK4UIuct
+         3JYhP5o6rEag9+PZ/FQn2nbvtovjeIRMxMyzhkT85hx86m5+JQ27fD/vUxkkafDbF1nX
+         LicfbZtqrA8Cr69S2+blBVyR+6Uhhf9L8OwoBqh/8iOAJnLJD/IDFBnx8qve4mZEN9ff
+         nNndrC3/4aqu1P/HSW0djw6ytnwMQqjahBy0bI23kanhcjJ1mc+XZ09s+acDfBnmM8hQ
+         wpYA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731158086; x=1731762886;
+        h=to:[removed]
+         :from:[removed]
+        bh=bZLmHmFfiaJAzBxMghDLJ5mZj1iRYRXXgSiRrPKjlkY=;
+        b=ij9LZKwkrKxKdefiCBwRUJz4+phvDY9fX62TaiNgQyTVuSog/BjYiqm1BxtOi/cM9k
+         QhCknzAvw4RqAP7MGowA4pa+oUVLQgsbqDCWkWVPOufLLNtsJgK4L9IJK+q09LYjn+r5
+         fbPH/QAgw6+XFf7CilFMgqoTce9jekTyIJI2/f6DyznxPAVVNjCt+MuGKQcGr6/e+W1o
+         kZI5z9dbwcoWJdilUW755lIukPn/g00+4Oa5kYGwf+C+ztgTIxPS58yKyXsd1ryDoql8
+         6d+9m4VoimSZ8ZUnoslyMcAej8TviHohvI0TOUCK8E+lx871QnehNFWwrvFMO38XSbQE
+         aYhw==
+X-Forwarded-Encrypted: i=1; AJvYcCVDxSNe6mOJJNk+v8U/Lzr8x+l3dlIaOsMHbZF7nvDxkV9twCehzs0IlGacpMuCSw0NaPR3l6d/FOE2D/TxUMCK/qSRqw==@gmail.com
+X-Gm-Message-State: AOJu0YwCBk4h+Lp2SyoQLmEYuiYdQFJoDZK7UV8+TUjL2E9tYjWAbAXT
+	0yZRiGaAZsrFzbHCTz4MophXeM+A03hjuXKxQtPHijs11/CWlLKVv0HjYJEuCejqsTXbuCI0XaR
+	nErg7T6RwnTpGUKMI3q/ZaiZ9WOE=
+X-Google-Smtp-Source: AGHT+IE/m2P05R/5RiMcUe+vEnVCZFpWgxnK78jF/jcreyrAD/o2yCsY1Y46waclr8omz2gzDLQcsTNhBWj1YuMK0gY=
+X-Received: by 2002:a05:6902:2890:b0:e30:bbf9:993 with SMTP id
+ 3f1490d57ef6-e337f861472mr5979754276.20.1731158086407; Sat, 09 Nov 2024
+ 05:14:46 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Sat, 9 Nov 2024 14:14:34 +0100
+Message-ID: <[removed]>
+Subject: Hello Dearest,
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000ca626506267aa6f9"
+Bcc:[removed]
+
+--000000000000ca626506267aa6f9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello Dearest,
+
+I am writing to you with tears falling down my eyes and My name is Miss.
+Mireille Yapi, I am a single girl  17 years ,and an Ivory Citizen, But I
+and my parents relocated to Turkey when the war broke out in Ivory Coast
+2011 since then we have been living in Turkey Gaziantep province until the
+recent earthquake that made me lose my parents which has affected me so
+much.
+
+I relocated to Cote D'Ivoire after the death and funeral of my beloved
+family   and I could not go back again to Turkey due to lack of money and
+no one will be helping me over there since my parents are no more .
+
+I need your kind and urgent assistance to build a sincere and honest
+relationship with me, My late parents deposited US$75 Million Dollars cash
+in a bank in Ivory Coast ( Banque Atlantique Cote D'Ivoire and I have gone
+to the bank for the release of the fund which they refuse me access due to
+am not of aged instead advise that I should bring my guardian /trustee who
+can stand for me for the release of the fund or I should wait till am 21
+majority' age which is not possible because no one to help me and I don=E2=
+=80=99t
+want my father=E2=80=99s family to know about this fund as they have take
+everything that belong to my late father and left me with nothing
+Meanwhile, I wish to solicit for your services to be my foreign
+partner/Investor and support me to transfer and manage my funds by
+investing it in profit making ventures like buying of company shares, Real
+Estate Investment Trust funds, or Agriculture.
+
+I am ready to part 20% of the entire funds to you as your own gratification
+while the 80% will be strictly for the investment and my education. At the
+successful transfer of the investment I will relocate to your country to
+further my education and start a new life over there.
+
+I have no experience or perfection in running a business, I would like you
+to help me out so that I can further my education and invest the fund in
+your country. I will send to you all the documents related to the funds and
+with your good intention to assist me.
+
+May God bless you earnestly,
+Yours Sincerely daughter,
+Miss. Mireille Yapi
+
+--000000000000ca626506267aa6f9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello Dearest,<br><br>I am writing to you with tears falli=
+ng down my eyes and My name is Miss. Mireille Yapi, I am a single girl =C2=
+=A017 years ,and an Ivory Citizen, But I and my parents relocated to Turkey=
+ when the war broke out in Ivory Coast 2011 since then we have been living =
+in Turkey Gaziantep province until the recent earthquake that made me lose =
+my parents which has affected me so much.<br><br>I relocated to Cote D&#39;=
+Ivoire after the death and funeral of my beloved family =C2=A0 and I could =
+not go back again to Turkey due to lack of money and no one will be helping=
+ me over there since my parents are no more .<br><br>I need your kind and u=
+rgent assistance to build a sincere and honest relationship with me, My lat=
+e parents deposited US$75 Million Dollars cash in a bank in Ivory Coast ( B=
+anque Atlantique Cote D&#39;Ivoire and I have gone to the bank for the rele=
+ase of the fund which they refuse me access due to am not of aged instead a=
+dvise that I should bring my guardian /trustee who can stand for me for the=
+ release of the fund or I should wait till am 21 majority&#39; age which is=
+ not possible because no one to help me and I don=E2=80=99t want my father=
+=E2=80=99s family to know about this fund as they have take everything that=
+ belong to my late father and left me with nothing Meanwhile, I wish to sol=
+icit for your services to be my foreign partner/Investor and support me to =
+transfer and manage my funds by investing it in profit making ventures like=
+ buying of company shares, Real Estate Investment Trust funds, or Agricultu=
+re.<br><br>I am ready to part 20% of the entire funds to you as your own gr=
+atification while the 80% will be strictly for the investment and my educat=
+ion. At the successful transfer of the investment I will relocate to your c=
+ountry to further my education and start a new life over there.<br><br>I ha=
+ve no experience or perfection in running a business, I would like you to h=
+elp me out so that I can further my education and invest the fund in your c=
+ountry. I will send to you all the documents related to the funds and with =
+your good intention to assist me.<br><br>May God bless you earnestly,<br>Yo=
+urs Sincerely daughter,<br>Miss. Mireille Yapi</div>
+
+--000000000000ca626506267aa6f9--
+

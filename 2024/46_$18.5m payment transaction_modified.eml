@@ -1,0 +1,129 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:1391:b0:4ab:cde1:8319 with SMTP id gz17csp215621vqb;
+        Tue, 10 Dec 2024 01:21:30 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCW8T0yuoRU6tEwrpC30c2JdC3eteNxI9mf8BqPWwrRia7QzukmtFiZcn9ALOkpsJsJFbwgPll3mTTKERmamF4ZcgUibAA==@gmail.com
+X-Received: by 2002:a05:600c:3d9a:b0:435:b064:7dce with SMTP id 5b1f17b1804b1-435b0647e45mr10488315e9.18.1733822490354;
+        Tue, 10 Dec 2024 01:21:30 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733822490; cv=none;
+        d=google.com; s=arc-20240605;
+        b=faWNF4OdphkU80C803nh0R/4P/6dPw1XSKIgc4SjLVu2JP6KdIBx/E0cQYNVzw3jI3
+         9+22IlhLwltTmgfMGn0TAFDotFcXRF/3R7L872mHAnhlqzDSmRHuOZk6Mcy6vxWnNmor
+         MJIkPg2/NQMyBh0GATsRtB9pX4GJlLt+O5OIiqyFamrbSbhAvGP3xwIcmV4bweXKvocp
+         /8DpdWFPVIn+jCP/zmjQkZFN7AASaFMTl4/EB0GH/4t4AUEZxq3Qv5FihFxrObUpBK25
+         e9qUQo4t95TeEt0HVAXPm3gtxnjbPqzVBXeIOXa6jeTl9V7Wn2nDDfdq3oNEjfrILCWx
+         0k+w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=QNeXt7CPrP1PvwECkzgXT1Kbr3fae21R3bVnEWp1hcE=;
+        fh=pLYZ4S+yUj0Hxplamf8FmvQs/2RrBzlYViXL6T4dSz4=;
+        b=IULNqMLh9zqfP+IUFLRXeohRu58vCN8cjPLYs41M7xNd/JXQVIhcIQH+nQqXopb8iM
+         8PF5ACe1exgxzdm0tRVRGGviywg0L9pd9Q+rTUmcUPeAudyblbOls1Mru6e9GbDLgoU+
+         9QCUGMuWmjLB/+saq/k/eb953N74ALcpCgqdMTaoFMvWFuIEEXBYQRO3n2bgewx6u6Yc
+         QdeQyjQtGOlxt+IG3w0L7RJYRFVIAcDhUiE68y61+Oi12B8dJx78ALXlZgTdkHefPnXv
+         1DmN10DC0aMYpphKUynnHG6P0XxLmfWgrmV9NpODLnRooW0m5BkUSSh+Fw/HQ4KjiX1k
+         4q8g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=SCgiKcCU;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-434edd76261sor21559385e9.2.2024.12.10.01.21.30
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 10 Dec 2024 01:21:30 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=SCgiKcCU;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733822490; x=1734427290; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=QNeXt7CPrP1PvwECkzgXT1Kbr3fae21R3bVnEWp1hcE=;
+        b=SCgiKcCUgtNgHD7tC6FbcmBVnSptNt4PNJOJqrKmvaeAEJYP+79Eq8cNtcjouiCthP
+         aznnr+s3RxtAONGZ+toi17KMDAsA1bFM2tRLcGZhAo5AxHtuz65oNm7xVJyuBXZK+f3I
+         yJipMSKijg0NL1bNu88X9wX988XKIb9ic0v9qBgq/LAuYIEzGbBuwoCqD6w9TUCcHfBO
+         /hDb1gb2nsalaTBwSy1FL4IzGLU9fnw+Rb/ETrTlgV2q7P6AEVFwMlAmRZzl3+vRW1Eg
+         fLcuE+0f9z5cwYpP2ESFD9BGS6Mlg84hnZeQ0LXiBB1fzf6cVbQXMf+rWEzCmyJL0Ku7
+         fLYQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733822490; x=1734427290;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=QNeXt7CPrP1PvwECkzgXT1Kbr3fae21R3bVnEWp1hcE=;
+        b=nLqmrdVFEJ2VshmFmORn6ZKf8lFcGAVJShKxl1X2AmjwUPj1TDp1jX/Zqh/GdMvm1W
+         meID/BEGzQ8RDVvaa7iSmkykCZHNLarzArEvVYf6ge3C+GCzVHF02GlQQ1nYZ6mMJ/yz
+         +SMQsfi3SIFlRGGYxD3JVRmOZcMRKfqEilTsUoQwknC4FWDsV9YmA8muSNKIlg48oPOu
+         YcMwVCsPmMJP3nWogM0E50wGeK3UkVOvGLRyHsFtKBK2o75DQKsYBXGrmADwMKR13j1Q
+         3K3TXdtrJBGVuDrkbOTHX+OPCCIpFMtEYaOwWtyH125xdR1IJ3kdzhiAoNDiIWYYQEOF
+         XKCA==
+X-Forwarded-Encrypted: i=1; AJvYcCXVHbb9v2FNs3sww4CRnCNDpZuQ3cn8uDbE8ei6SjXzlm1TP5w8Z0jJPtUHZnocfl5vRWMu/dWGo3TBavrqwWNg+CsNPg==@gmail.com
+X-Gm-Message-State: AOJu0YwGBSK6O5YS/rKLl9BmtQG1lyYrfHN151Gln+D4enpvv4Iu834D
+	8lZCeLFzlzR9gblNt7YSeqSnXxfM142GubJSYIW2HJMXFS3P7o20Jzg2l8R9mimfr/J0D8fy1Jw
+	oynE2q1yaMi3s6E4JpKD0WYq92fU=
+X-Gm-Gg: ASbGnctJ+5OocZzo5qMmA93oZTi1pC7o4y9kSI93TEW5zH854EYdzgdD27TWykkZ0xX
+	eaHr6SZJf3UT+zHAvtx9FWRZfj3C4vTKCIR5wVQ==
+X-Google-Smtp-Source: AGHT+IF4Y0okGYlINzYB5ig8RcD4//loZQCUT3vetqAsNxw1iF70annbglOBVUzebT4cBRLKnUQM2mvuhvi0P2arr7I=
+X-Received: by 2002:a05:600c:1550:b0:434:fdbc:5ce5 with SMTP id
+ 5b1f17b1804b1-434fdbc606amr39311575e9.29.1733822489725; Tue, 10 Dec 2024
+ 01:21:29 -0800 (PST)
+MIME-Version: 1.0
+Received: by 2002:a05:6000:18d:b0:386:34cf:d850 with HTTP; Tue, 10 Dec 2024
+ 01:21:28 -0800 (PST)
+Reply-To:[removed]
+From:[removed]
+Date: Tue, 10 Dec 2024 09:21:28 +0000
+Message-ID: <[removed]>
+Subject: Re:$18.5m payment transaction
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000009a92760628e70187"
+Bcc:[removed]
+
+--0000000000009a92760628e70187
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+Dear friend,
+
+Hello, I am the Executive Director, Commercial Banking Division, at one of
+the commercial banks here in Ghana.
+
+ I came across your contact while on a private search for someone to help
+me receive funds belonging to a dead customer without "next of Kin" efforts
+made to reach out to anyone linked to the dead customer proves abortive,
+and l do not want the funds in the amount of $18,500,000.00 to be
+surrendered to the government account as "Unclaimed Funds".
+
+ I propose that you stand in gap as the next of kin for the funds to be
+paid to you for mutual benefits (We share 40% for you and 60% for me).
+Please reply for further information. Please, keep this proposal
+confidential.
+
+Truly yours,
+
+H.A
+
+--0000000000009a92760628e70187
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<br><br>-- <br>Dear friend,<p>Hello, I am the Executive Director, Commercia=
+l Banking Division, at one of the commercial banks here in Ghana.<p>=C2=A0I=
+ came across your contact while on a private search for someone to help me =
+receive funds belonging to a dead customer without &quot;next of Kin&quot; =
+efforts made to reach out to anyone linked to the dead customer proves abor=
+tive, and l do not want the funds in the amount of $18,500,000.00 to be sur=
+rendered to the government account as &quot;Unclaimed Funds&quot;.<p>=C2=A0=
+I propose that you stand in gap as the next of kin for the funds to be paid=
+ to you for mutual benefits (We share 40% for you and 60% for me). Please r=
+eply for further information. Please, keep this proposal confidential.<p>Tr=
+uly yours,<p>H.A<p><br></p></p></p></p></p></p>
+
+--0000000000009a92760628e70187--
+

@@ -1,0 +1,340 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:1391:b0:4ab:cde1:8319 with SMTP id gz17csp577357vqb;
+        Fri, 6 Dec 2024 14:02:30 -0800 (PST)
+X-Received: by 2002:a17:906:dc90:b0:aa5:4acb:b06c with SMTP id a640c23a62f3a-aa6219f0a0amr831682266b.24.1733522549755;
+        Fri, 06 Dec 2024 14:02:29 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733522549; cv=none;
+        d=google.com; s=arc-20240605;
+        b=c1Xu2SgpfT6KxWqk5iOmvuIPx/ONUGU+rFswOCIdSKf0RpKskc0W8IW2Igwe0HNNCA
+         k7RYQZeUnwfs92ahKMTF37S5nNZopobZbLcXSOv0MUUTQjf8q9RfYbjxu4TW5uuspp16
+         2+HlxhuwKTd1EY867HUIWOP1wy2L5SeBZ8ZSgz5RZ6bfFhZ3vtxUvPFm2++MUl7UQH65
+         Jg3hw6DYf6HB8FV2wTUjZG5LGIoako5Rh+SAzi4kJnAMLTKEoVfXVX7mwvOGotlXbxjH
+         rRudxtpwZUMO5uMQs9bsTLbJaqcnSeZfD5nQGuqdWsTTBN0SFABMS3sI622qwqveIkfM
+         2mnA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=wso7TLfkClL7F9X64kjoX9SoBbMEa9aisfN1eOBzg4Q=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=PFEbliTriNW/GQnoFUU9gZ41RFaJTsfmtrs/Reaqv5tS5NaWTD1hqrUH7cRg4NjNDX
+         HX48FEMNqzhcRzELEWtXzKzYfu87EJyRk9QSyfzS9VXbVyVxY6+Y6DCHyMWejLAqUi58
+         i81YjJI5jeA9Om6kzX64ehrX0LekngHxkdMzaLCHPYc8osuhdPBTjljqj8S+ygqyHAV3
+         8v1rjVeHcx32a0ygYjXD0ZTAMVDATn7B9LjLjOX+KQEeO4DNbSAjXh2IxzlO92lIw44I
+         VMsRw8/5pJDdCSzQ0H1aSnnAioBrJVmMT+Gs8gBH4KBlMoIlup7fQ7I9RWzZ6J79wXAi
+         uX5g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=IemH5br6;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id a640c23a62f3a-aa62716a7e3sor222177566b.7.2024.12.06.14.02.29
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 06 Dec 2024 14:02:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=IemH5br6;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733522548; x=1734127348; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=wso7TLfkClL7F9X64kjoX9SoBbMEa9aisfN1eOBzg4Q=;
+        b=IemH5br6ultk1/O6AVE63blRthmL1eTUsyAnZ7YWlvgIZTZSm6ATYAfU1uqsDqabCa
+         7rfYOdD7epUJQ00mDVCqrwmWvbDD7tRrjJY6aMldYsKankeG3Kk5edMh75Do7uYthHMQ
+         +IpLbDzWXeXRj1E8AWYSxKTnf6eIPOVae71zfm/hiJDO7pD+cN1LUz5C4mMMgMU/wHlD
+         jgAX8oGgccVuCOTkZtFmkJ07of3dZTrWFSB/vKTPdQpoYwrL1qIYjhtSS8MYEbKnv1M7
+         wFoa4xwyGbwjw8obS7Q6yh6LE/Eo8kpu0mNZ4NUb6YkUlLO2JOX5V+sfVFMGtw3JL0NY
+         KOKw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733522548; x=1734127348;
+        h=to:[removed]
+         :from:[removed]
+        bh=wso7TLfkClL7F9X64kjoX9SoBbMEa9aisfN1eOBzg4Q=;
+        b=PDTjIQpCHZmb5w+5XqeTLtX1P3xe2UhkeaKeTJYrMKz2i/++/nFoySEPgp7W/JeTn8
+         85gkHxpqwJkBoz/kp+bm6gHFw7tze8QM0M+Qxyx4EqDPFdRIJImRPbUXbS+9ITgrQjpF
+         Q0U2qCwXxio1HPn3cxIytHBwNLhS55JIKu7XBhJC14XQc2whj6Q1g0g488WfHD4GZ8cA
+         6zNDWCL1hWATUBObu0fxkibboD8VG8CLlzrLr/6DffYR95b0D9TmPQX0ZprPbCMzz1PM
+         q4v8INZmTk5XttrnapdZ1Q445KW+UkzEdq+CGavu1CD+bT0dLuw9By9qI2YxkBJfZ0Ak
+         +cdw==
+X-Gm-Message-State: AOJu0YzEDRUZWGnCQAo2TdKpmubKgbXJBc+YK5TyrKCFVtjQs8/rGCfZ
+	CNl1Te6Ntns9mmeSJkx2RQzI/i7j9xH5Go/ekrxajB7AiBXBbJDBZ84zvVGXvvp66w7WmaloX+j
+	gRqBS7NgyZDFzBzQAQowG+xLpr/5l9PHL+kWqng==
+X-Gm-Gg: ASbGncs2xegKqClSAotq43dB/fiAv8vLQUvt98NT+0Mb8+EgcuEZrFnWSt2vM4fFaFw
+	qRmIQViGR6aOI5EnGWQg9tfB0PpONnCtN
+X-Google-Smtp-Source: AGHT+IHz2acdr8NdUVTSzk0nkT0uVKkMu7f2F4funoYNPJxUfbEOitxk+kmeQDU3wtIda6DoFF9zaoMu8h20eI9mTnM=
+X-Received: by 2002:a17:906:1baa:b0:aa4:e53f:5fbe with SMTP id
+ a640c23a62f3a-aa637474a7amr434630266b.19.1733522548280; Fri, 06 Dec 2024
+ 14:02:28 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Fri, 6 Dec 2024 23:02:16 +0100
+Message-ID: <CAMDXGo6dGXr80y9toMX_bw1oAF_mZhaXadz6=[removed]>
+Subject: Hello Edwards
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000b357610628a12b44"
+
+--000000000000b357610628a12b44
+Content-Type: text/plain; charset="UTF-8"
+
+Assalamu Alekum Warahmatulahi Wa'barakatu,
+
+Hello Edwards,
+
+Please I need your urgent assistance; kindly take out time and read about
+my request which I honestly promise would be of our overall benefit.
+
+I am an Islamic cleric, a strong ally and trusted confidant of Sylvia
+Ondimba Valentin Bongo, wife of the deposed former Gabonese president Ali
+Bongo who was arrested in September 2023 by the new military junta that
+took over government from his husband Ali Bongo.
+
+By introduction, my name is Tareeq L. Nazeer, I was a personal cleric to
+the Bongo family and I enjoyed a lot of their trust during their reign in
+government.
+
+I have funds entrusted to me by Madam Sylvia Bongo for safe-keeping on her
+behalf with no specific instruction on what should be done with them before
+she got arrested and incarcerated.
+
+In February 2016, Madam Sylvia and her son invited me to Paris in their
+private hotel suit, she requested me to use my position to discreetly find
+a trusted financial safe house anywhere in the world and use my name to
+safe-deposit a total sum of Nineteen Million, Five Hundred Thousand United
+States Dollars without making any reference to the Bongo dynasty.
+
+By April 2016, I located and finalized the plan with a financial security
+company management abroad for the movement of these funds with a privately
+hired trunk boat.
+
+The said funds are currently lodged in the private financial company
+overseas in my name  and my first daughter's name filed as the Next of Kin
+but with a clause subjecting it to change at any willing time.
+
+I have the desire to invest these funds as quickly as possible through your
+assistance if you will be interested in assisting me to move/receive them
+with the aid of a  power of attorney which I will use to replace my
+daughter's name with your own name as my new Next of Kin giving you all the
+right of ownership  alongside all the  relevant deposit documents, putting
+you forward as my legally appointed receiver/beneficiary to the funds so
+that you can receive the funds and invest them in any partnership business
+venture in your country which the terms will be fully discussed as soon as
+the funds are moved and secured by you in your country.
+
+I also have hopes of using this same means in securing a fresh asylum in
+your country so that I can leave my present poor asylum location and
+possibly secure a residential status for myself and my family in your
+country with the influence of the projected investment(s).
+
+Please kindly note that I have never been a businessman at any time in my
+life, hence the need for seeking your investment experience and partnership.
+
+I shall avail you with further documentary and factual details as soon as
+your interest is validated and we are assured of building a genuine and
+mutual trust going forward.
+
+
+
+I have intimated my lawyer Abdul and he will be providing all legal
+guidelines for us on this process.
+
+Please, if you accept to take part and share with me the benefits of this
+mutual deal, kindly do let me know as quickly as you can so that we can
+proceed very confidentially and finalize as earliest as possible.
+
+Let me know your decision on this by replying to me via the personal email
+address of my lawyer Abdul Hamad Musa Dede (Esq) on [removed]
+Please send me your telephone number plus more physical information about
+yourself.
+
+Allahu Hafiz,
+
+Tareeq L. Nazeer.
+
+Management Opportunity
+
+--000000000000b357610628a12b44
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Assalamu A=
+lekum Warahmatulahi Wa&#39;barakatu,<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Hello Edwa=
+rds, <span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Please I n=
+eed your urgent assistance; kindly take out time
+and read about my request which I honestly promise would be of our overall
+benefit.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">I am an Is=
+lamic cleric, a strong ally and trusted confidant
+of Sylvia Ondimba Valentin Bongo, wife of the deposed former Gabonese presi=
+dent
+Ali Bongo who was arrested in September 2023 by the new military junta that
+took over government from his husband Ali Bongo.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">By introdu=
+ction, my name is Tareeq L. Nazeer, I was a
+personal cleric to the Bongo family and I enjoyed a lot of their trust duri=
+ng
+their reign in government.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">I have fun=
+ds entrusted to me by Madam Sylvia Bongo for
+safe-keeping on her behalf with no specific instruction on what should be d=
+one
+with them before she got arrested and incarcerated. <span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">In Februar=
+y 2016, Madam Sylvia and her son invited me to
+Paris in their private hotel suit, she requested me to use my position to
+discreetly find a trusted financial safe house anywhere in the world and us=
+e my
+name to safe-deposit a total sum of Nineteen Million, Five Hundred Thousand
+United States Dollars without making any reference to the Bongo dynasty.<sp=
+an></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">By April 2=
+016, I located and finalized the plan with a
+financial security company management abroad for the movement of these fund=
+s
+with a privately hired trunk boat. <span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">The said f=
+unds are currently lodged in the private financial
+company overseas in my name <span>=C2=A0</span>and my first
+daughter&#39;s name filed as the Next of Kin but with a clause subjecting i=
+t to
+change at any willing time.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">I have the=
+ desire to invest these funds as quickly as
+possible through your assistance if you will be interested in assisting me =
+to
+move/receive them with the aid of a<span>=C2=A0
+</span>power of attorney which I will use to replace my daughter&#39;s name=
+ with
+your own name as my new Next of Kin giving you all the right of ownership<s=
+pan>=C2=A0 </span>alongside all the<span>=C2=A0 </span>relevant deposit doc=
+uments, putting you
+forward as my legally appointed receiver/beneficiary to the funds so that y=
+ou
+can receive the funds and invest them in any partnership business venture i=
+n
+your country which the terms will be fully discussed as soon as the funds a=
+re
+moved and secured by you in your country.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">I also hav=
+e hopes of using this same means in securing a fresh
+asylum in your country so that I can leave my present poor asylum location =
+and
+possibly secure a residential status for myself and my family in your count=
+ry
+with the influence of the projected investment(s).<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Please kin=
+dly note that I have never been a businessman at
+any time in my life, hence the need for seeking your investment experience =
+and
+partnership.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">I shall av=
+ail you with further documentary and factual
+details as soon as your interest is validated and we are assured of buildin=
+g a
+genuine and mutual trust going forward.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span>=C2=
+=A0</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">I have int=
+imated my lawyer Abdul and he will be providing
+all legal guidelines for us on this process.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Please, if=
+ you accept to take part and share with me the
+benefits of this mutual deal, kindly do let me know as quickly as you can s=
+o
+that we can proceed very confidentially and finalize as earliest as possibl=
+e.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Let me kno=
+w your decision on this by replying to me via the
+personal email address of my lawyer Abdul Hamad Musa Dede (Esq) on <a href=
+=3D"mailto:[removed]
+rline">[removed]</a> Please send me
+your telephone number plus more physical information about yourself.<span><=
+/span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Allahu Haf=
+iz,<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Tareeq L. =
+Nazeer.<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Management=
+ Opportunity<span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span>=C2=
+=A0</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span>=C2=
+=A0</span></p>
+
+
+
+
+
+</div>
+
+--000000000000b357610628a12b44--
+

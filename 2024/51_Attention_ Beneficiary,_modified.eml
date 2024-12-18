@@ -1,0 +1,173 @@
+Delivered-To:[removed]
+Received: by 2002:a59:caed:0:b0:4ab:cde1:8319 with SMTP id r13csp2468693vqu;
+        Mon, 16 Dec 2024 12:57:50 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCV8pqcVTKGesD9JrnjeOzyQvR+H1LD3rrqP1M2F3VJOTrBF9LLg0qsBTo5lDeRDlmK1JX4rzMF4c0qHSTMEpGd4Lpkj0Q==@gmail.com
+X-Received: by 2002:a05:6122:1ac4:b0:50d:39aa:7881 with SMTP id 71dfb90a1353d-51a25b579a3mr1509573e0c.0.1734382670036;
+        Mon, 16 Dec 2024 12:57:50 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1734382670; cv=none;
+        d=google.com; s=arc-20240605;
+        b=FiwiY76BiT9uXIKDN3SAoKQDFN6zQd4YFFxcUQ8ffIeVroLxbzIqwVI0K0hJAziYGY
+         W2+wompZeIjRNjGiwYt0To/Ea9W7y/JPEA+/hxUIhlCQVBpQFFo+QReZG3lGTV5Ag1cv
+         +BK9Uaoans3BCLO8Hqgskwqo70HO9ot2GHnoHacG+7a7Rpv6Du0DSvkx5yNBs0RK1Hdi
+         2mTnb1/l45jFvdoUTF4mcb1FKjUz/oi36uEhOMqgMKUWN1xKWypDmn9Lx2GfDgBJosMZ
+         FEPzq1MXMst7VWVFzCjFgoJYqtMhGkTsQJdyUrnVwCpGeFq/84gGvBz3L/rlTMDPXjei
+         M4iw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=H01LmtMqKLcIRT8bltNGujjjzzyq9Fyy3q29tbg2d7M=;
+        fh=4tnzwCNA7h9RS63fnaqn7G0NGWcq5lAVgac95/r1XfY=;
+        b=K0yqWhgzK6Vw8M9Q+owDRfWRlSY5Vpccz2RzBTs0ahVVSM9CAoWxsdYhi7KnwdRNBR
+         svN4x6tJzrrhtwXhzvIh/1dWREgufHIqiVgTlrlD4KsQY1by5ux2/+952RjI1bLMZ3zx
+         BFfyfpzwGxyq65k0z/ps36bgCJUPFUHx2EFTsITVRWfLFPdNgo6n4JBCSbShnr9ZhNwF
+         Ff4EXf4ihTt9U9bJzvJdnGs5gao6gF/r2WN+uxDIU89w7/bbE5zmgPCAQ1RmUCyGvoPh
+         nbnoSNqrb/tDMGLv7elLg6/zv0HVdfK/zez4sVycxtd34Wnc72q69LzosG1Jec7j2+9B
+         2grw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Btaq8kqK;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 71dfb90a1353d-519c852d51fsor2164720e0c.0.2024.12.16.12.57.49
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 16 Dec 2024 12:57:50 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Btaq8kqK;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1734382669; x=1734987469; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=H01LmtMqKLcIRT8bltNGujjjzzyq9Fyy3q29tbg2d7M=;
+        b=Btaq8kqKrgEWFUg6VkqS/+Pa+sk+KyRuT6OIlthKMTfgacBmO/e9I/G24cKflsv/60
+         Z3SbgBvRNHSgNmzTbOrxNj5YfrxiO6EOFk9nhShgGo9e3ejXQW2EazE+nPXVGPe35vbb
+         CZzFN12S+zBpv4Q5QpvewDifBbto9POkIwWFrzMWfFGK/FMTxP9/KEgJpji9O1EniCtP
+         pNeKn9coRrDZDTk2PcJ5Fk3Ixj7gHNsoFewB3rNvwJ704GXN3Nn2ez9xM7IgeBZo8CTD
+         tW828fXUEIvrMFAXMUF3nZDo6F/zdTwXknHV0SFtEU7KCFdZsOhJ+CthW1suNcJi4+Ry
+         TZXg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1734382669; x=1734987469;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=H01LmtMqKLcIRT8bltNGujjjzzyq9Fyy3q29tbg2d7M=;
+        b=HuzhkqVbpoF5HRRwUcE6mmLnQmFJOjxQ60tgCYye6QJ05zRCwv3pg4CMRD8xvJ3zHo
+         fcWM+fhHnRg0Dvdupt8zUAggQ3Ml1gwxREP1Q16R6ijaiwUzkRLlf3WQrh6IWi6e8CC+
+         l64PI7G4CnDdtOXKb5fhnvGc/t7vHzbK7MH1D1k2ldGLT34XOsBo5NTXAk2mwWHcCoVz
+         32JgpOvurZACyVvhA0ZFFWSAlj6ozhSF0xFV+BGe1PK6o4gKlWCkQxn2PJ9k7n+zFH2q
+         TN8AZ21m79nrY18nLIIE4zOERFmR0ifszRwJ4oNH4jV6dEqMyOvU2E1ocX1f6LCuSWEf
+         TACg==
+X-Forwarded-Encrypted: i=1; AJvYcCW21HqH71xRit2PQlH7jqhyOOWKqqNCoFbaMMj0Mumn79gPd3xArEOTMMSS3pDaFBuc8GVlwBjW7UIIstvR9fIThG0IEA==@gmail.com
+X-Gm-Message-State: AOJu0Yygqo89imLLVt6RMr9U2jhJ8QeS3lQ9VZuzXHEiLn28FgHeoF0i
+	eMYp18x23KYfSt8mDEXpomPdibLzzTlAudVH48f8024ewcvfKZFNv/jbMknlWIhfixMOHOJrTkj
+	xh8fN+sgN5ejdp9/3Kjuqfr3uQ4k=
+X-Gm-Gg: ASbGnctVkN/tWxsVTyK6UPnP8H+n1nhs4LBVNC/4t2iu0j+Rn5UWl2738ymMyXr4qO6
+	ZbH7mmGg+nikqJC1oFvIugMKPGDGAo/TUenedqvDz
+X-Google-Smtp-Source: AGHT+IG+Zr9TPmMrbNNnhlKPM3yvc+pXFY7f3Iw2Hsg8CsqWdZQ5wLuNRiVGIYMd6aPA95Ta25Ywi2rwes6rA5cnpSg=
+X-Received: by 2002:a05:6122:18a6:b0:516:1e32:f8c7 with SMTP id
+ 71dfb90a1353d-51a25b477d9mr1221229e0c.0.1734382669547; Mon, 16 Dec 2024
+ 12:57:49 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Mon, 16 Dec 2024 21:55:51 +0100
+Message-ID: <CAHXqMwaUHmMHcMiE0G2JT-i9+H-sHOWeLSi501JWqXQiB=[removed]>
+Subject: Attention: Beneficiary,
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000ec4ed40629696e8e"
+Bcc:[removed]
+
+--000000000000ec4ed40629696e8e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Attention: Beneficiary,
+
+
+
+This is to officially inform you that we the Headquarters of the United
+Nations in collaboration with the World Bank  and IMF
+has come to an arrangement legally to compensate 110 internet scam's
+victims, this means is to reward all the citizens of the United states and
+all part of Europe including Asia, Australia, South America and Canada with
+others.
+
+After the Board of director's meeting held in world bank your name was
+approved to be compensated among the 110 internet scam victims with a total
+sum of $950 000.00 Nine hundred and fifty thousand U.S. dollars, and it is
+our pleasure to inform you that we have forwarded your name to our
+authorized paying bank.
+
+As a matter of urgency we have instructed the paying bank to immediately
+facilitate your payment via online banking tranfer in other to avoid delay
+of your payment. Meanwhile,one MR.FAIZIDATUL BINTI ISMAIL wrote us few days
+ago with a letter of authorization, claiming to be your true representative
+who has been sent on behalf of you to claim your fund he said that you were
+Involved In A car Accident Last few days. Find below him information's and
+confirm to our paying bank if this person is truly from you or an impostor.
+This is to avoid false payment to wrong beneficiary:
+
+
+FULL NAME ; FAIZIDATUL BINTI ISMAIL
+ADDRESS ; Perif=C3=A9rico Sur No. 3106 Piso 9, Col. Jardines del Pedregal
+Mexico, D.F., C.P. 01900
+
+You are hereby being advised to Send your full information contact the
+paying bank in respect of your immediate release payment and you are also
+advised to follow the instruction of the payment officer in charge to
+enable you receive your fund
+
+
+(1) Your Full Name
+(2) Full residential address
+(3) Your country
+(4)Your age
+(5Your whatsapp number
+
+Best Regards,
+Mark Malloch Brown
+Admin secretary
+UNITED NATIONS/WORLD BANK ORGANIZATION
+
+--000000000000ec4ed40629696e8e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><div dir=3D"ltr" class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr">At=
+tention: Beneficiary,<br><br><br><br>This is to officially inform you that =
+we the Headquarters of the United Nations in collaboration with the World B=
+ank=C2=A0 and IMF<br>has come to an arrangement legally to compensate 110 i=
+nternet scam&#39;s victims, this means is to reward all the citizens of the=
+ United states and all part of Europe including Asia, Australia, South Amer=
+ica and Canada with others.<br><br>After the Board of director&#39;s meetin=
+g held in world bank your name was approved to be compensated among the 110=
+ internet scam victims with a total sum of $950 000.00 Nine hundred and fif=
+ty thousand U.S. dollars, and it is our pleasure to inform you that we have=
+ forwarded your name to our authorized paying bank.<br><br>As a matter of u=
+rgency we have instructed the paying bank to immediately facilitate your pa=
+yment via online banking tranfer in other to avoid delay of your payment. M=
+eanwhile,one MR.FAIZIDATUL BINTI ISMAIL wrote us few days ago with a letter=
+ of authorization, claiming to be your true representative who has been sen=
+t on behalf of you to claim your fund he said that you were Involved In A c=
+ar Accident Last few days. Find below him information&#39;s and confirm to =
+our paying bank if this person is truly from you or an impostor. This is to=
+ avoid false payment to wrong beneficiary:<br><br><br>FULL NAME ; FAIZIDATU=
+L BINTI ISMAIL<br>ADDRESS ; Perif=C3=A9rico Sur No. 3106 Piso 9, Col. Jardi=
+nes del Pedregal<br>Mexico, D.F., C.P. 01900<br><br>You are hereby being ad=
+vised to Send your full information contact the paying bank in respect of y=
+our immediate release payment and you are also advised to follow the instru=
+ction of the payment officer in charge to enable you receive your fund<br><=
+br><br>(1) Your Full Name<br>(2) Full residential address<br>(3) Your count=
+ry<br>(4)Your age<br>(5Your whatsapp number <br><br>Best Regards,<br>Mark M=
+alloch Brown<br>Admin secretary<br>UNITED NATIONS/WORLD BANK ORGANIZATION<b=
+r></div></div></div></div>
+
+--000000000000ec4ed40629696e8e--
+

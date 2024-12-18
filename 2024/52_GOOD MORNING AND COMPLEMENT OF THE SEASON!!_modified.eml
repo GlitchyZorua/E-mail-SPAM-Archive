@@ -1,0 +1,121 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:41ad:b0:4ab:cde1:8319 with SMTP id le45csp810517vqb;
+        Tue, 17 Dec 2024 23:51:23 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCULPvQLwrl8kFCKu0jub1KV1QuhpPZ3eDcKXbNiTZUXztr7JOyEvmDOALoA0bZJvtdu+OM39KowsbAq732GJFZYa39RjA==@gmail.com
+X-Received: by 2002:a5d:64a7:0:b0:385:f560:7924 with SMTP id ffacd0b85a97d-388e4d30f16mr1285676f8f.4.1734508283162;
+        Tue, 17 Dec 2024 23:51:23 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1734508283; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Yx2FlhiwlKbhIMsG6+PEquC3QzApcYVQF+oTC7hIVxI3e73nAJXQVlOMqsNUF2zZAy
+         dcPJxfUNST3MPPxycQwbBZNTrJW1N2StEiA0Kwg4mV6JE3rDNOY/mXTOyiNohz1tKwUG
+         eYoxNvo3pOZUzVGfx72l1NgVU+n605ZnhB+oDUbf0Scv6AA7rCfyoR/apsEGNRQKIvcQ
+         vbfTERB3oOZC9ry7pRvXs2HeDuQjxulebMN5GP5nY7Ue2UPcS11ePbzh5SEj1DYoDZi/
+         gz6C17DetNHtwd0CemysZ3lyA6soH8YHsb7cfUqFua9vo1FJusqThRM/hfQkCEjA/reJ
+         5Q1w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=5S6sZ5ZafOPwQ80TFpuhkibfB0xQvv5I/FpXg6lLTuk=;
+        fh=S6f1lNNk8mloQp2G+/dQAHn7x/iqNbM3iNEtCVVz+tI=;
+        b=Ywo+21voBJcRw1Kar+/uy8lxkZxsmLIa8P3VDT1Ijd0viy/ls6jeh/PkhTob6u/Izb
+         R+mo+fjrcjySOegqSO1IgXb41478tloW9V9ASvOi7H9l+WcUMfAN8q64RL1kj8x4RBGr
+         XRz1BN3mYq6t5pjrDh8k4sMJ/bsrKU7L+exk3smTOIuZ0CC6m1gG4xFHL9T/i1QOcrwq
+         Ca5YsrjlPmYD7yYM6inzifiWe/ZPvkgT3yRYelY1soAB+fG702cvQgELNKbAqgh2ShCI
+         cvcYxsUC+n2iP/hdPL2UIlrXvPSSvyfEdpEvBGpiqR38PVSKecZZMuChLA6nnUR3Pto6
+         pN/w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=I17+wHsf;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-436362ba3c9sor32900565e9.12.2024.12.17.23.51.22
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 17 Dec 2024 23:51:23 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=I17+wHsf;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1734508282; x=1735113082; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=5S6sZ5ZafOPwQ80TFpuhkibfB0xQvv5I/FpXg6lLTuk=;
+        b=I17+wHsfcg1etqaOb4XhPwfVsWKFdj+PAV+H7Vejc+p99kmhpgAtuTcqDbZstF+WNv
+         xBPFjnh04jmJ9jrGpoy7Ba411YOtNYc/3yETI0MTn0pnWNQh+1KzI0FiFtguN2mbw/kH
+         nqmBqlych1N1MIUkmw+XCIwefS6a9hPVSyXK26UE33TFKd/uxG6bDk15IjLmVTcTDr1A
+         ndH7181AJ/hOY7rbWwp1rNdTkQdQ7sp7f2QB/NIYZFSgb3cQKObS7tdv320ItTt6J8JH
+         DUqHDlzytxCFCh93ixc6/dOUtjp2CgTQaPd1GgQE+rk6ISdfZa96dkzuNE66fF9O3TRa
+         J/4A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1734508282; x=1735113082;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=5S6sZ5ZafOPwQ80TFpuhkibfB0xQvv5I/FpXg6lLTuk=;
+        b=Xe4hImqGfI46nDwMkCK50A44tIFtYECOq5hiBE4p8t34s6V9kwL36QOEmH7Xod4GWH
+         yNYhIMJUBLAhDGSCXxY2SU4HNsYWYRKdMjLE7Es8LgrOtt2E1PBgnutyBzBqv4l6XxqL
+         Gz0fUiUG/mv/v/hmdO/5njIRl9wAlbZp1SKc1SAhfriJpJfjyTdruKNOuUefb241uHD/
+         HHM4zmm/kuDXpNeRF5pjC2wIUclvawFDCW+C435KKbt4+xUT5aSZHC/8E3fRTrMQePuI
+         fJDem98YcWzkE6oQOo/pn8su3ZChDsQaXnGu0nxObpkea2HOcMDktNNRruHK0c3biREr
+         M5QA==
+X-Forwarded-Encrypted: i=1; AJvYcCVWhu+tPZk63QEbXzhuYJZv0Zblj1uLGE2rflfKfkYkkKXGV5VI4+0XNDbAW98rgYg6Bg6+/bxZYvvROsAaZuw7OBrFZA==@gmail.com
+X-Gm-Message-State: AOJu0YzOkUeSe3ppA0AaRIyYlS1GOEuLDpT8DdvYBowIJz65RswdcTSG
+	eywDHCoD6xaTVyT+UH4VYfZoZH3E3oGx3kRQgurIzhW+Qn+t5voiezdkDK49iSHMI5QrzPEw910
+	FoYbBLRcngkMyarNy9wkYiDRC4hQ=
+X-Gm-Gg: ASbGnctTUTGk6lt5/jMZzzKzrxcz3PovnZbVoKgiDVBYOtjqxxksJ1VHSsHrHGdqCZ+
+	2xGd697qvd2tOmaeJPdaKFuLZLEZmRS8KeOJbhA==
+X-Google-Smtp-Source: AGHT+IGuALchUsrrkUCeZsUwJWqejL6yHrdI8TSzEvpIKVHUwJAXK8+R6fxCc3ajoM2FoHs2cg4uWzOfIdO3j7DsMyo=
+X-Received: by 2002:a05:600c:190c:b0:434:f623:a004 with SMTP id
+ 5b1f17b1804b1-4365536f98dmr13621355e9.16.1734508282282; Tue, 17 Dec 2024
+ 23:51:22 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Wed, 18 Dec 2024 08:51:07 -0800
+Message-ID: <CAGunGew3n=HuKVykphQSF=[removed]>
+Subject: GOOD MORNING AND COMPLEMENT OF THE SEASON!!
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000000690b9062986ae51"
+Bcc:[removed]
+
+--0000000000000690b9062986ae51
+Content-Type: text/plain; charset="UTF-8"
+
+GOOD MORNING AND COMPLEMENT OF THE SEASON!!
+
+My name is Mr. Joly SH, I am an Esophageal Cancer patient, and presently
+hospitalized. My doctor says I have a few months to live.
+
+I have been touched by God to donate from what I have inherited from my
+late wife to you for good work of God.
+I will be going in for an operation soon. I decided to WILL/donate the sum
+of 7million USD to you for the good work of God, to set up a foundation for
+the orphanage.
+
+I will provide you with more detailed information after knowing your
+willingness to handle this fund.
+
+Thanks and God bless.
+Mr. Joly SH
+
+--0000000000000690b9062986ae51
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">GOOD MORNING AND COMPLEMENT OF THE SEASON!!<br><br>My name=
+ is Mr. Joly SH, I am an Esophageal Cancer patient, and presently hospitali=
+zed. My doctor says I have a few months to live.<br><br>I have been touched=
+ by God to donate from what I have inherited from my late wife to you for g=
+ood work of God.<br>I will be going in for an operation soon. I decided to =
+WILL/donate the sum of 7million USD to you for the good work of God, to set=
+ up a foundation for the orphanage.<br><br>I will provide you with more det=
+ailed information after knowing your willingness to handle this fund.<br><b=
+r>Thanks and God bless.<br>Mr. Joly SH</div>
+
+--0000000000000690b9062986ae51--
+

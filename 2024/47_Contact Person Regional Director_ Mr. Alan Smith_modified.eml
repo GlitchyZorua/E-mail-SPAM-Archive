@@ -1,0 +1,152 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:1391:b0:4ab:cde1:8319 with SMTP id gz17csp1063549vqb;
+        Wed, 11 Dec 2024 05:20:42 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCWH/QRUgca0y1W5fMGOHZ8w2SUuBfH8FH2i/MpP9PL6Qq17EV/11KgvNGywMzBPU1uImK/1QLtEB/gcXAq9nmt4wBtulg==@gmail.com
+X-Received: by 2002:a05:6102:c49:b0:4af:bb06:62c with SMTP id ada2fe7eead31-4b1291494a2mr2600411137.25.1733923242657;
+        Wed, 11 Dec 2024 05:20:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733923242; cv=none;
+        d=google.com; s=arc-20240605;
+        b=dGqT2RJ1UXefWT47j7kU7cghGJDpOMzhiDULeu6kqPvVzSyYU3jJ5rZ8yaUy4GQOyi
+         vjVl6pBB6VWSzq7Eb2lyg9oEIyXSai4zo221cNNkXrki9RhxYj4jg4/nK46VjUdTN4aN
+         iWAW9ZpKtk8djdePBBcK4yqes4ajj2OmgjrGjlWUCX8K2m+lWVmZzsNbvW2JV8bE4FdA
+         Bo/SV0GrKH/n0HvO607vCZoV5ALDU34YQXKuGM+RG0hts++2VcEYMPVi2wQVI/5PErpd
+         Ui6cjYqQIip8eN/gYEOHf4Vbtdqws0zu7U4ry/zQPSGoz2LMuI5C0jfSVW/X2vuwITi4
+         +TGQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=P7kqasK3pOumD+TFi995LYDk/h+IFReKpGyYRsjbui4=;
+        fh=u+lXbIX9xSUmjLwsOSwwUuZ8E0M4rht21D2iDup/y58=;
+        b=RML5WtcEh434NoWuKf0SZWBTLwK6WAXIthKbmv3mrh7f4Zocn4i3l5wHE3NsfrDBOz
+         Dg/umqaEP8s08cTpM0TdJiN5/TYjoYlyyW9CgQJMrsMdScBueDqMyf357IbippXZvzt7
+         Y6QjKmaIzupMF//uiZRphkOdR8ASpu7jjSiWZt2IQwF249P/KUUwsw3JUYatO6ZPyQWX
+         H2pz/bpmhf8HTCPQvzyMp5RARr/l1jEBgGfJSAx7QxD91tdZGfTkPGdHDdQZG57RkVrf
+         wuz5Bbddloav5XHkY3Tczb85oKmkjJ+W5gvBofxeMhtEkmQoTV8LhweEAGmbJDjZa9bb
+         7zfQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KqWJVOpB;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ada2fe7eead31-4afbc707ad3sor7128310137.14.2024.12.11.05.20.42
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 11 Dec 2024 05:20:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KqWJVOpB;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733923242; x=1734528042; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=P7kqasK3pOumD+TFi995LYDk/h+IFReKpGyYRsjbui4=;
+        b=KqWJVOpBxsO2/neRELMo8kdi0j8JowrWXiGwykO/swfjkWE+ddkyMKLDAKS2YfCFWr
+         nxXOizzOxGp61BK3zylDPIdIFa2UJDXGp5b0+yC9aLpUoeriSWvPq/LdkjVwQktTUt+5
+         Bs3lyY8l4IGc0aG3eg7l3HW/DUkQvvF59r7iy9jI78zloE0nQJLhFJYB22A99w5KL2T4
+         n+aCDdb0juePVNxDmC0wZ8KxnCaAgZPzSXOSZRuWoOFEhICeD3LImNYJtxnIKPvWEJ8z
+         ydfCuvG7k+jJzf8QVuduKum22a+b2KPRyHb65JGnJsAQgkTVpRHrZB7sgU+ms1zNUk91
+         aN2A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733923242; x=1734528042;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=P7kqasK3pOumD+TFi995LYDk/h+IFReKpGyYRsjbui4=;
+        b=QN3z5GOq+0Vw5DltTkGFd5Znza4jKyrxoGFCGRWkHKddg8t9E00LjVQe2N5lUOzCUw
+         26VS8r8DnMig6XQcHjBndCwYlwwmEBGm86HQJxOHSWhhOxCaZ/MRTXL/CNur96N62XHo
+         NnhkRNcPjUHw+R83U+vkI2GIqMmjkLVhRRn+6lBCtKXSdb76qOwjoYHzt3tFki6D3+pB
+         WS0KESgOhsWdw2y6EmyW5UEKVgsbr9AaRXJcCBXG3KOc+OLObAdj/YKLg7s8kyqBKVrK
+         1B+a2ZlJQnR4fGfrxA2/rtxEpJxVn4gIxboVg5Z4uT64M0EBzZii9/bxX/a9BD5iXHH4
+         SQKg==
+X-Forwarded-Encrypted: i=1; AJvYcCVAVzvKTbbv7neUv6lynYp7uJF8LpLsYZFVk81g+N7NWpf/2Vu6oUrM6Y6xCHgfLEnequ9ZuhRe3FUSuefhc45BrkK2hg==@gmail.com
+X-Gm-Message-State: AOJu0YwFOMHDCp9u3jg7BX/TlWndBXPUznZuFAEPvARPLsLPUtUPtIyL
+	gqLIEXc/4Mxz876h2y/XS2SSG6FfzjUb5nVpscY9g3ZifD0XDL24n/SBgpECDRrT1LKingA1BG5
+	di4bh6TFy2Vv5aRLgrRRIxnlQTU0=
+X-Gm-Gg: ASbGnct5roTDVgJ7YdlsizhgLObwOY9AYso20ACDptsgBAlU+wnFUMUkqDkNFCdS8Wz
+	hltx3fGZome4dVd5PKg7lZIavmZBvUHYtjApI
+X-Google-Smtp-Source: AGHT+IEUPN6QAvmiTBZLi+x8FeX+LY53ZPyPVFuyqoXZLlTYdjeMBr71ojLi1VY/y/O3sAkGLWcqPZKonwCdYyYM3es=
+X-Received: by 2002:a05:6102:418d:b0:4b1:1a24:e19c with SMTP id
+ ada2fe7eead31-4b128f93f10mr2571265137.7.1733923240622; Wed, 11 Dec 2024
+ 05:20:40 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Wed, 11 Dec 2024 05:20:52 -0800
+Message-ID: <[removed]>
+Subject: Contact Person Regional Director: Mr. Alan Smith
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000d3437e0628fe7656"
+Bcc:[removed]
+
+--000000000000d3437e0628fe7656
+Content-Type: text/plain; charset="UTF-8"
+
+ Attention.
+
+This is to acknowledge the receipt of your details and to confirm your
+reliability in this donation. What is the update between you and Mr?
+Alan Smith Citibank manager, regarding your donation funds worth
+[$12.900,000,00 MILLION UNITED STATES DOLLARS] permit to your name? I
+have decided to use my bank Citibank (111 Wall Street New York) to
+disburse this money to your position.
+
+Therefore, I have issued out a bank draft of [$12.900,000,00 MILLION
+UNITED STATES DOLLARS] in your name through my attorney Mrs. Hilda
+Williams, which has been sent for deposit with my bank in Citibank
+(111 wall Street New York), the Bank is authorized to conclude the
+disbursement of the funds via ATM CARD or Bank Draft Check or via Bank
+Wire Transfer to any Bank account of your choice.
+
+You are hereby advised to keep this donation strictly confidential
+until your claim has been fully recovered before you can share the
+good news. Kindly contact the bank for instructions on the wire
+transfer.
+
+Contact Person Regional Director: Mr. Alan Smith
+Contact Email: [removed]
+Service Center 111 Wall Street New York
+
+Please note that upon your contact with Mr. Alan Smith, you are to
+provide him with your Full Name so he can verify you with information
+sent to him already. Please endeavor to keep me fully informed on all
+developments with the bank so that I can also monitor the transfer the
+process through feedback from you.
+
+Best Regards
+Mr. Charles Francis Feeney
+
+--000000000000d3437e0628fe7656
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">=C2=A0Attention.<br><br>This is to acknowledge the receipt=
+ of your details and to confirm your<br>reliability in this donation. What =
+is the update between you and Mr?<br>Alan Smith Citibank manager, regarding=
+ your donation funds worth<br>[$12.900,000,00 MILLION UNITED STATES DOLLARS=
+] permit to your name? I<br>have decided to use my bank Citibank (111 Wall =
+Street New York) to<br>disburse this money to your position.<br><br>Therefo=
+re, I have issued out a bank draft of [$12.900,000,00 MILLION<br>UNITED STA=
+TES DOLLARS] in your name through my attorney Mrs. Hilda<br>Williams, which=
+ has been sent for deposit with my bank in Citibank<br>(111 wall Street New=
+ York), the Bank is authorized to conclude the<br>disbursement of the funds=
+ via ATM CARD or Bank Draft Check or via Bank<br>Wire Transfer to any Bank =
+account of your choice.<br><br>You are hereby advised to keep this donation=
+ strictly confidential<br>until your claim has been fully recovered before =
+you can share the<br>good news. Kindly contact the bank for instructions on=
+ the wire<br>transfer.<br><br>Contact Person Regional Director: Mr. Alan Sm=
+ith<br>Contact Email: <a href=3D"mailto:[removed]
+[removed]</a><br>Service Center 111 Wall Street New York<br><br>Ple=
+ase note that upon your contact with Mr. Alan Smith, you are to<br>provide =
+him with your Full Name so he can verify you with information<br>sent to hi=
+m already. Please endeavor to keep me fully informed on all<br>developments=
+ with the bank so that I can also monitor the transfer the<br>process throu=
+gh feedback from you.<br><br>Best Regards<br>Mr. Charles Francis Feeney</di=
+v>
+
+--000000000000d3437e0628fe7656--
+

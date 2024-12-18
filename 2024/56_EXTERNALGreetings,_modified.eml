@@ -1,0 +1,174 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp5911281vqq;
+        Sat, 9 Nov 2024 13:36:25 -0800 (PST)
+X-Forwarded-Encrypted: i=3; AJvYcCViBUL40CqtyrhPOaSpkqKfCD4FE21CKg2hjU+a7OLIkVwflX2UlRYe7PyLalyfb1IVOn9xNXi//Q2pf4HDtncuOaCZqg==@gmail.com
+X-Google-Smtp-Source: AGHT+IHyzmwOSy5DhP1p+enk0wr6bZL7EjqNk7EzCkbnRBWcbmCwPrUpG0gvJ2I3WqMIjqzraaju
+X-Received: by 2002:a17:902:d486:b0:20b:6f02:b4e5 with SMTP id d9443c01a7336-211834f3a60mr105357545ad.9.1731188185181;
+        Sat, 09 Nov 2024 13:36:25 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1731188185; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=gO7aMadsb9zghZunsy23i0EA8J6cHylIGXud7IL594oaZTrowSodsP6GxYgY32f2zU
+         PKsWvbgZsUdq1c1PfN+NULWdvbatqYhnbzTiFSareqvLVrzOD/kQp8VqcY21jTj33+Tq
+         ofiW8D+7KVTSI6lM7XVsPkDXgHZGeMTuRL41UPzhop/A4Xk/frXe1enJYxvO/fACZ711
+         2gy4RlDQ8D69gzgh8MUbWXaoe8HlJYg/ePPWKQizefZ1MpfZMGzwzQmJVRqtcGzxlYCl
+         etwcxvXBxjC87QYPkLcudwGC6n1sbosbZhmIVEL0Q3+GcOTa8EoGJxgk6K/ytbiqbEYb
+         97Qg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :from:[removed]
+        bh=S8VRJNYep6L05HHbKKSZNlcY2L9B5TEzdR/e5gScpTs=;
+        fh=zEMK+f3w3jEJ+rVETDLljm1MjZ16EIk9osNt+OMcE4w=;
+        b=CNC8wL+kSj4dORBU4B7X4hRqzsOe997BRiTI1G0NWyn404GrNu8ROB8FgE0SlrAYrC
+         MuQRCPK9CIBbD4Isl9g1rLZyiCK2B7MXJ1XdnRzE6tHcVe89QFsDoISM7aal3CcH1yLA
+         1SZYaoM0TatrBf9B98P6SOpzPXH3QVqM74ZovS0i7caWd6FFaSKDJfc2A97kZHPcJddr
+         IB1vpX6iCaosh32ePEZqgH3PjnmTAY4q+0smPztfey91jdJIiFCxCft2t0Ab31Hf+3AA
+         gqFtlUWV3DAVhIuq3BQQdACYiTrM1xlcinv7uQib3WGCLPQdBDrl/PPesgEIjI3ZCfDd
+         uxkQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@dsdepr.onmicrosoft.com header.s=selector2-dsdepr-onmicrosoft-com header.b=lDxPQivH;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of bounces+srs=g/5b6=[removed] designates 52.102.140.18 as permitted sender) smtp.mailfrom="bounces+SRS=G/5B6=[removed]"
+Return-Path: <bounces+SRS=G/5B6=[removed]>
+Received: from SA9PR09CU002.outbound.protection.outlook.com (mail-southcentralusazhn15010018.outbound.protection.outlook.com. [52.102.140.18])
+        by mx.google.com with ESMTPS id d9443c01a7336-21177e4aa2fsi78095705ad.215.2024.11.09.13.36.24
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 09 Nov 2024 13:36:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+srs=g/5b6=[removed] designates 52.102.140.18 as permitted sender) client-ip=52.102.140.18;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dsdepr.onmicrosoft.com header.s=selector2-dsdepr-onmicrosoft-com header.b=lDxPQivH;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of bounces+srs=g/5b6=[removed] designates 52.102.140.18 as permitted sender) smtp.mailfrom="bounces+SRS=G/5B6=[removed]"
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=dzlfvlVYXNdCDQjfU44Qlcf0HcmwU0mOJYzh6HwaXLKzmJ+S837101Gc6xD2zOSza2GDCleUhVKllfC6dvBXVlMTf9ngYtgv1Y6XsEVkTmAuEIXH5QQWsTvLnheBSS5CczRerniEY1VxiBCT7kVd+F2GcYEFFouHwY/EbOQ7XlEey+z25H4X2vNI5X3ramsdrYsgwBxJkZM4Wjpot8fmO0sCa5156ABavsEBqILsKxoEnNP7McXySqoVejIR+VZVHL/a9K2DppUzB7JWK/HzlLcrCR46qStePgI1nG3QEJHDSWtcjvzTRkro3UFtsFePEET9CaSIPBQp7UoofrMwnQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:[removed]
+ bh=S8VRJNYep6L05HHbKKSZNlcY2L9B5TEzdR/e5gScpTs=;
+ b=MHsSv6RtZS/dRZf02jGERVG85yEVRIYYgI5op1yX5EMcCggOLIaxz9FV4XWdLAt//bIsEUsw1EfGKQSVMxlFCEgmaOlqhprhbuXuZpHBc+//Y0ISUBkkisxLzKkx/SkL7vNm5sES8Not4p8pjsQJxK7Kf/k7Chs2LKMGktGzf2nglYdvu/NfUjF/9Sn29jX4S4NmnhS6ukOyy+EcBDZ2qWZpkL8yCdrJQdErOgYNqCODIIr73Vt/TXkd6wsl5Yn/h/gySWaXBlKw2zMFlpNLJJBHCCqV7NeCl4fFo39FJK07LzvhjENMBpUBcdxDLLjc1/lno43PmozmutU2XXso5w==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none (sender ip is
+ 200.5.3.153) smtp.rcpttodomain=xponentgroup.com
+ smtp.mailfrom=capacityproviders.com; dmarc=none action=none
+ header.from=capacityproviders.com; dkim=none (message not signed); arc=none
+ (0)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=dsdepr.onmicrosoft.com; s=selector2-dsdepr-onmicrosoft-com;
+ h=From:[removed]
+ bh=S8VRJNYep6L05HHbKKSZNlcY2L9B5TEzdR/e5gScpTs=;
+ b=lDxPQivHxh+7lZ1O4tHf3q8Z71QNkSppUDGjbBZg+QDfRnXzpvGRCPzd9iEUR63HYfwejuYlhDz5/hOD01CtbRVyEUJGqpuz1xCYzVnkHlveMRI+qqCmfIPwl+M1Xzdewpe3PT2DCyovNWFcvEJpjoaEisIeQNsEHpNrIG2dtzI=
+Received: from DM6PR09CA0004.namprd09.prod.outlook.com (2603:10b6:5:160::17)
+ by PH8PR09MB9625.namprd09.prod.outlook.com (2603:10b6:510:17c::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8137.26; Sat, 9 Nov
+ 2024 21:22:06 +0000
+Received: from DS4PEPF00000170.namprd09.prod.outlook.com
+ (2603:10b6:5:160:cafe::4b) by DM6PR09CA0004.outlook.office365.com
+ (2603:10b6:5:160::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8137.26 via Frontend
+ Transport; Sat, 9 Nov 2024 21:22:06 +0000
+X-MS-Exchange-Authentication-Results: spf=none (sender IP is 200.5.3.153)
+ smtp.mailfrom=capacityproviders.com; dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=capacityproviders.com;
+Received-SPF: None (protection.outlook.com: capacityproviders.com does not
+ designate permitted sender hosts)
+Received: from mail.asem.pr.gov (200.5.3.153) by
+ DS4PEPF00000170.mail.protection.outlook.com (10.167.18.196) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8158.14 via Frontend Transport; Sat, 9 Nov 2024 21:22:06 +0000
+Received: from AEX01V170.asem.org (10.12.31.170) by AEX01V170.asem.org
+ (10.12.31.170) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.28; Sat, 9 Nov
+ 2024 17:21:51 -0400
+Received: from User (10.12.31.254) by aex01v170.asem.org (10.12.31.170) with
+ Microsoft SMTP Server id 15.2.1258.28 via Frontend Transport; Sat, 9 Nov 2024
+ 17:21:48 -0400
+Reply-To:[removed]
+From:[removed]
+Subject: [EXTERNAL]Greetings,
+Date: Sat, 9 Nov 2024 15:21:51 -0600
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2600.0000
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2600.0000
+Message-ID: <[removed]>
+To:[removed]
+Return-Path: [removed]
+X-EOPAttributedMessage: 0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DS4PEPF00000170:EE_|PH8PR09MB9625:EE_
+X-MS-Office365-Filtering-Correlation-Id: 6317d461-fafc-48a2-a969-08dd01049008
+X-MS-Exchange-SenderADCheck: 2
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Forefront-Antispam-Report:
+	CIP:200.5.3.153;CTRY:PR;LANG:en;SCL:5;SRV:;IPV:NLI;SFV:SPM;H:mail.asem.pr.gov;PTR:InfoDomainNonexistent;CAT:OSPM;SFS:(13230040)(7416014)(32650700017)(35950700016)(82310400026)(61400799027)(23876020);DIR:OUT;SFP:1501;
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|7416014|32650700017|35950700016|82310400026|61400799027|23876020;
+X-Microsoft-Antispam-Message-Info:
+	=?windows-1251?Q?xNGEmYHYqW5xmEzzQr0aUoh5WQDbTSSP8MrfMld8OrZykTUt9k3X7LRW?=
+ =?windows-1251?Q?v+Yd+HZF4ch9CkcbmvIktqgXabfTF0NyMzDnu//PIsPll3NWDFGXb+aM?=
+ =?windows-1251?Q?dAcwhiYbjwEBTdapsqOFPJl5K0P0ADuit4c4fmwkTBdwBo1uXzxqFMFC?=
+ =?windows-1251?Q?a9ID9Z2XkTIO8TQCSDwMCB/xuc2S5oEm8QZZVNmeK5Yu2VUa2SIy2+eU?=
+ =?windows-1251?Q?MsZSC6lh6wSW2+Y6TjhmylpCG/u8qeOjYAUk6te3iySOD+twq2zY9WX7?=
+ =?windows-1251?Q?Hy/1KDsI+hNwq66gfK2qv6X6WF9kbDvbAH+/nhqZGP2l4730aSYVyGoC?=
+ =?windows-1251?Q?fM9INW1Gxow9vuvcmAwz0pIMsWPtKEtzE8zoGUD6nFM4/1pqeHHSHOIt?=
+ =?windows-1251?Q?c9S7EW3sJ8ydbnLUSCY9Hg+h8XD+U9gurpHQFUdNjFsym56ge/E9x/CT?=
+ =?windows-1251?Q?F7qkx0NDucfqvt6KD4ihEh8D+0+nDbwiC8KHBrLkEyQWHiFYotAH2zoB?=
+ =?windows-1251?Q?B+d41NkiliZb6awhCkylO25mokb3fWYu3tBQySFZrRDua5abt4p2RgL3?=
+ =?windows-1251?Q?rF8iu/MXHLtncuOzSkvL7IuEWZyljLkGseeVewyQ0Rv4O1eNBCvjjCyw?=
+ =?windows-1251?Q?4SQubE/nSAqemAUZHHemly+oSF9ecEKaCHW0sFf+cjSFWoMWiLBPfn5l?=
+ =?windows-1251?Q?J7GfJu2nqc19ycTbOt5XaR7Y0Ieg4gQgd1aWPfdBMWptX1TjkdT0fWfa?=
+ =?windows-1251?Q?IY6Cx+eaRkgNj9tSU96j2RuLBy8dpfVVIWyoJQBWDGatAujfnvQMdDuD?=
+ =?windows-1251?Q?QOLvzJJvvI2/WDJQu+NhUN0QVR2dOp7fx4Hx+pzQaS2wp0in3xhNqDWa?=
+ =?windows-1251?Q?HjJTOet7pa8IVm1f0Wr2EOOAJdbwEz8cpUHB2C527NvvCylbJ/4HpuYo?=
+ =?windows-1251?Q?l/44fwzW6eV02KAMVLG4pQ2B7fe26PWRqhvnY1adrS3gCUUtSktTzCjV?=
+ =?windows-1251?Q?WqszOgB4eb9guSp2Xh3H8+KFE6As/CeU1KPFqxtF4MqvTHkk+kLIPLIA?=
+ =?windows-1251?Q?fTWLQ9zhpbbkOU8fkiiKjmIUbDQ+GDzcHhRbv0BuDSVaEDXSRI70z0hv?=
+ =?windows-1251?Q?ngDyko/Ns344KHY272cQhLrrpfBRYE0L1Yl0cBGm1iQxXf+yVPYZVUd2?=
+ =?windows-1251?Q?b3HdXFnW99vFYUDcvY/A/DiEGllmhe3DE+QEnhEzFoQVQJEUG18PkRQN?=
+ =?windows-1251?Q?W32uF2QkMkjNVAudd6yzc6R38dfNwIN8AB9HbIyCtUEncfQtkdtRds/G?=
+ =?windows-1251?Q?RU5l4oqVWDimdZLmicttKvQoJ5IvQB2s0u2MUaXfFEW2tLxn95RvXZEe?=
+ =?windows-1251?Q?xHSu2umSFFdbl1ODBPEhMU0omo/95LjUvXjIyPqi9K8J48dT9onbTkfu?=
+ =?windows-1251?Q?WALO/99cU5Ubqx3xxLJbOMqS6pEixDWgApvBM9Kf3fQKl9KxaY5KGE/H?=
+ =?windows-1251?Q?Y5OR1YrFm6mGrYK/Lx53zAbAECyyQH5+kJj6xymyH+cIuRDtWNXRJU/D?=
+ =?windows-1251?Q?pRazojDc5JXOaPbsDISHStv16iqmQtHPi42SvZWxhBolYNbT28Gvezax?=
+ =?windows-1251?Q?4sSPUmLN+/mWsM6y/NszsM9BT+ySLRGlXpigKzpylPOY6RNRe/6zqBkt?=
+ =?windows-1251?Q?MTcljSJiF540AEQ7HCfMjKSplrsQ5sdhO1GG6dfO7KjuL3nmGiKaQL6T?=
+ =?windows-1251?Q?FGr5C4yeSPEucf+eVh8NGo7hm595cXSnp1b5k61gk08s/43y7N8sHeC/?=
+ =?windows-1251?Q?jDvPdNBUQXEov/R7VuyamKRSbAk4lrVseDnXwpfciw/e9HCQnNcKwV0F?=
+ =?windows-1251?Q?qwosFq9TlY8xvpIrt8U/F9PSSMjwdcIkmOyB3ltU3km2h7+zMQ8ubxsn?=
+ =?windows-1251?Q?JWfdYLvOPMeeUSE7T47cc077qDqH+d7rpHOuqSGO6Rkp/l0H9U+A1G18?=
+ =?windows-1251?Q?D8GOjpAMhWezSm7G1PrDJUqOcmLSOg=3D=3D?=
+X-OriginatorOrg: salud.pr.gov
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Nov 2024 21:22:06.1805
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6317d461-fafc-48a2-a969-08dd01049008
+X-MS-Exchange-CrossTenant-Id: e906065a-f03e-47ad-a4c4-6b139a08445c
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=e906065a-f03e-47ad-a4c4-6b139a08445c;Ip=[200.5.3.153];Helo=[mail.asem.pr.gov]
+X-MS-Exchange-CrossTenant-AuthSource:
+	DS4PEPF00000170.namprd09.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH8PR09MB9625
+
+The sum of $3.5millon has been donated to you by Mr. Bernard for the purpos=
+e of charity. Kindly get back for more info via Email: bernardarnault294@gm=
+ail.com
+NOTA DE CONFIDENCIALIDAD: La informaci=C3=B3n contenida en esta transmisi=
+=C3=B3n est=C3=A1 destinada =C3=BAnicamente a las personas o entidades a la=
+ que se dirige. Puede contener informaci=C3=B3n privilegiada y confidencial=
+, incluida Informaci=C3=B3n de Salud Protegida (PHI). Si usted no es el des=
+tinatario, se le notifica que cualquier revisi=C3=B3n, difusi=C3=B3n, distr=
+ibuci=C3=B3n o duplicaci=C3=B3n de esta comunicaci=C3=B3n est=C3=A1 estrict=
+amente prohibida. Si recibe esta comunicaci=C3=B3n por error, notifique al =
+remitente inmediatamente y destruya este mensaje. CONFIDENTIALITY NOTE: The=
+ information contained in this transmission is intended only for the person=
+s or entities to which it is addressed. It may contain privileged and confi=
+dential information, including Protected Health Information (PHI). If you a=
+re not the recipient, you are hereby notified that any revision, disseminat=
+ion, distribution or duplication of this communication is strictly prohibit=
+ed. If you receive this communication by error, notify the sender immediate=
+ly and destroy this message.
+

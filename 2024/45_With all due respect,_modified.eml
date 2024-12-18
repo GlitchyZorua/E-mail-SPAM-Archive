@@ -1,0 +1,148 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:1391:b0:4ab:cde1:8319 with SMTP id gz17csp211455vqb;
+        Tue, 10 Dec 2024 01:12:14 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUjA0JfjL3wZiY2IznoSDWGvGA35a0C1dPznL6nHkjID+tYS5fsE9s0ISdmmaSJW3vsoSfg66ryIfGohpACTne9anXhMw==@gmail.com
+X-Received: by 2002:a05:690c:62c9:b0:6ef:7d1e:bffd with SMTP id 00721157ae682-6f022f970e7mr43067297b3.37.1733821934319;
+        Tue, 10 Dec 2024 01:12:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733821934; cv=none;
+        d=google.com; s=arc-20240605;
+        b=djiG+4Nqsnvdk+oi4YSWB3vOxqI4Fkx8pqkHs9CPuqc4Xbyw2Fk/MxJEGCxasdJI4f
+         2sPY8BoqEhEeb8oXHZj3WONhlJeuI38H8nFX07d9N8aRPL/lBlKAGsUDovUMC4Ef73UU
+         LNvHJ1p3Jfu9j2HTPSHB6WKgznA3TblcVocsfy8uMVcXWtfWorfjzb5tIRx6DO8MKXH/
+         n1BAc8E5LVLmd9hsVsKIcBR9fwrqqWkwqtceizG+aqFeJ2phUj/wgEPvPd3nNefiNx3o
+         6Etk1F2tmTxKR9Wv/EgopPjtDsBqRuCZHpQl/Gx7g2fHPCR+qLi/+Rr/RmTsBnQryZu5
+         Mz1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=ydi4ripUBwWQUEhKTGYToJiOIdS7aY5pSE1FWfVyrls=;
+        fh=0uoTfIO2CvSzOUAynwhaZnSNMjqD4+/4jcHMzHmgeHY=;
+        b=CQZi568aljiFPnzKkVygZ8SEqFiN24j69IYqBQkkRhujehElesUIH+HeIBlRlw/wOH
+         Gm82+NUvJTwrDGQiWUtJtSmuBrQjHfT4gcQFtWksg5OtBgCx2brGDu2AtnOfrStc1KgT
+         M9bgaNATz3TT/FkbJyWiET7Fvh+3yTlYvL7ihcmW9BaxZNbxhz3aHkYJXc9sLtTZKkOa
+         +ecBpOUcuKF/PmkDBgOzou12bMWCMf9MnVFiBBd3XrT5mCOGLrODa/J/ccjU37FjgJM3
+         o+tM86vWyqreWi51DuKt4KLgE5yH8mFJkITqS5KG63gmUA+4CA4voPTkqUoci/59GylU
+         y/Jg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=LRjl4uAd;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 00721157ae682-6efd3871e09sor75054267b3.6.2024.12.10.01.12.14
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 10 Dec 2024 01:12:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=LRjl4uAd;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733821934; x=1734426734; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=ydi4ripUBwWQUEhKTGYToJiOIdS7aY5pSE1FWfVyrls=;
+        b=LRjl4uAdZizxl48L9X7JUgbGQB4R6pDU6j96bc/M+CSTayi5uL6orYVa64Gxosa9WE
+         htAYIePB1XB27YZR21SsQwqX9B7NgmQ/b1KD9C+/GqOUgVyGvf7n79cVU8U5v/wCpbz5
+         2k2eg7qRsAs1wq8UWoJXcrBeBBiJoi1SmdoZmV0tXqpQmw41WGVeBP+rZbONW3q6atxV
+         rBwvVRsXA5uYRoeW1VlRK5YABQUTEt9RfUSHZ15EPfH53gYBuYC2XqWHsLDGSpMcYeoX
+         fR8j0N7ocELwGW8MYUWawj9VJJgKdwOO762YpSIgFLGf5rs2GICOQ6GtjL16gw8/bSdM
+         DuUg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733821934; x=1734426734;
+        h=to:[removed]
+         :from:[removed]
+        bh=ydi4ripUBwWQUEhKTGYToJiOIdS7aY5pSE1FWfVyrls=;
+        b=jmMDDKbB19UuuI1KTUdrdBb9dnFKSQB64WsMXr8joB3JKBrD0GeZO8qZ3tfLuh0yoT
+         yuM2Lg6saO03Y6xCugy7p+WNB4TbrO0WcoNVvBhY9X4uilU77LzgC23loNxT52PGPn+M
+         2Ngkc6AEKRqGA+Ma1/ZFe6na6Y/fb+RhC7XTTvgtZDPSrEV0oEH0Z2xTT6uHFtvQwTAy
+         h12p2+rPDfXp4oNN1GBVfvEAofEw0EdaPRNIDyrfM+pkfg68qozjFl4tMNRSPCCdvQmy
+         Zo/AyBhRcpIjqSya4vdPOCKdgonJbpidgPRsZriFfGL9zHjg+vTbUyMu4gWz87lGjurM
+         Xyrw==
+X-Forwarded-Encrypted: i=1; AJvYcCXuwM7QbrtMHaMZRsXTgCsUOk2OZpMc9XicEkxDsKz5zJB7HWSqdKKupdBLrMqmFW6XDZ7cPlZVUQ1TTtjQMpLOzIhGzA==@gmail.com
+X-Gm-Message-State: AOJu0YzIIV9n9PlnqOPCdJs1YPJVPqaDb0ADPzNDwITEZBoHx3HiUZAD
+	hwPxw3TuKkVLWo0Rbl4gvd22NivZMck1JD9brQfNtsIno0b1oos5tED8bj5k/hFXiRplhokcoJe
+	7R/LKKgqMszzr+YCLbRnMauk92jc=
+X-Gm-Gg: ASbGncsO5pwKk7nJT3iKOTvFLbdO1y5gbmYglVR9O7AGBlGLpGcvze78m/Oz/oMUYzn
+	6Wecu0jGb9phTjStcSsNDKdyX4jLfsyJRzZ/NXtc88iyR5dXmAI2nTZdoB57XrlzEgz5Q
+X-Google-Smtp-Source: AGHT+IH/gHESOGKhliQErFDddN6eVj8yLRe77ucN6gjQiZUmClDIhOrV0oh0jCISDMO+sINSiOit3M794x2srJZQdL0=
+X-Received: by 2002:a05:6902:72b:b0:e39:c67d:ba1e with SMTP id
+ 3f1490d57ef6-e3a59b0aa0fmr3759167276.16.1733821933892; Tue, 10 Dec 2024
+ 01:12:13 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Tue, 10 Dec 2024 09:08:52 +0000
+Message-ID: <CAB=Ftc=[removed]>
+Subject: With all due respect,
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000793d940628e6e05f"
+Bcc:[removed]
+
+--000000000000793d940628e6e05f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+With all due respect,
+
+I have to resend this mail to you because I have sent it to you several
+times without response.
+
+I plead that you make out time and read our email and we beg you not to
+misunderstand us.
+
+I am Thomas Soro and my sister Theresa Soro, Our late parents Mr. & Mrs.
+David Soro left some funds here in Abidjan, C=C3=B4te D'Ivoire, the total s=
+um of
+USD $43.Million Dollars (Forty Three Million Dollars) which we wish to
+invest in your country,
+
+On behalf of myself and my sister Theresa we have agreed together to
+compensate you with %50 percent of this total fund US $43.Million Dollars
+once you receive the total fund, then you will help us to invest our own
+share of our own %50 percent into a good business investment that you have
+an idea.
+
+Our main concern of contacting you is for you to receive these funds in a
+safe account in your country or any other safer place as our beneficiary.
+
+We have plans to do investment(s)in your country, like in Real Estate,
+industrial production(s)or any profitable venture you deem fit.
+
+Please if you are willing to assist I and my only sister Theresa,  indicate
+your interest by replying to our mail.([removed])
+
+Thanks and best regards.
+
+Yours Beloved Children.
+Thomas Soro and Theresa Sandra Soro.
+
+--000000000000793d940628e6e05f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">With all due respect,<br><br>I have to resend this mail to=
+ you because I have sent it to you several times without response.<br><br>I=
+ plead that you make out time and read our email and we beg you not to misu=
+nderstand us.<br><br>I am Thomas Soro and my sister Theresa Soro, Our late =
+parents Mr. &amp; Mrs. David Soro left some funds here in Abidjan, C=C3=B4t=
+e D&#39;Ivoire, the total sum of USD $43.Million Dollars (Forty Three Milli=
+on Dollars) which we wish to invest in your country,<br><br>On behalf of my=
+self and my sister Theresa we have agreed together to compensate you with %=
+50 percent of this total fund US $43.Million Dollars once you receive the t=
+otal fund, then you will help us to invest our own share of our own %50 per=
+cent into a good business investment that you have an idea.<br><br>Our main=
+ concern of contacting you is for you to receive these funds in a safe acco=
+unt in your country or any other safer place as our beneficiary.<br><br>We =
+have plans to do investment(s)in your country, like in Real Estate, industr=
+ial production(s)or any profitable venture you deem fit.<br><br>Please if y=
+ou are willing to assist I and my only sister Theresa, =C2=A0indicate your =
+interest by replying to our mail.(<a href=3D"mailto:[removed]
+" target=3D"_blank">[removed]</a>)<br><br>Thanks and best reg=
+ards.<br><br>Yours Beloved Children.<br>Thomas Soro and Theresa Sandra Soro=
+.<br></div>
+
+--000000000000793d940628e6e05f--
+

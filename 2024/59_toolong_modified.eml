@@ -1,0 +1,212 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp5076235vqq;
+        Fri, 8 Nov 2024 07:10:36 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCWxlb/Uk69ss7d9GQjyKCje2AkcrRrYielwieq3VgZMd7kcfYXeS3Q374s5rHcSOKw82siNQv2fmePH39uZyeElvqTwow==@gmail.com
+X-Received: by 2002:a05:690c:60c6:b0:6e5:e571:108b with SMTP id 00721157ae682-6eaddd7976emr33260827b3.8.1731078636139;
+        Fri, 08 Nov 2024 07:10:36 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731078636; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Y/hK8IQAIYmfrICZTV9SRNxFrlZtjsNeTyhCxZeRnCtrRUf/MzwuFKuy+6k6QtLY+B
+         PxQr+lKX+czLwdtNqPL3pRAYHdcSBh/Vp6cUVHuV3pZvDN8+UwC0vyWoptp79e7SPw5M
+         HcYGts4otBRnLljmJLV2jBSXCwWnLAfy4ZkVPoprN7mD4e8olVkGOIWB9qog1UZCG0im
+         Oy7Gc/WeiJcVyTWVmJbN6PsUyYMFuAIhlHZkJpiksP6xnOX2H/GavaP25A1aQIc2AaHX
+         tEXo5BnzASsLbiPcmvgBUaAkb0MPViDcOVuannlYf5rlEHCfDNV60EjMnpMPlZWbf+X9
+         5aUQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=Y+/b66y+2nTM9nhpLum2zgZgjPqzorbsci7YHxro0lo=;
+        fh=b+7EuIKB4GJCnugk8Z+FPWaVGteslz22ddHOZCYrAMI=;
+        b=B6sJ0u3KCXyIBwYvNG+TJKuSAbUXUg9p02M5VzagmjpKy+D/TkFZhSzOX6343PBnYE
+         vZoDjsdvQ9n3sL6d1XMWj78XwbZIah3hxkQ6T6iHo+Hra0aTw0InO7nDDgcvBcX+Avj8
+         koto8+/jL4aul3zLI4MYAHg3JV9pmaKQ52deEgAYmstDV6gKJhKklxfkaRQmfIAaPoNm
+         BiZOj7IuRn0hWUen1qMbkQ3bxGPpIoODMXSpuOCiDfJv6k86lbuHb7pm7JctWya26OVY
+         Trdn/efXFVcvtX6URCywqHuhj0YYgfIJoNRHCO0VjfesAy8wmHmRT/25umPRuF99N7gw
+         dNAg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=He5wccjU;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 00721157ae682-6eace8ca250sor39116797b3.6.2024.11.08.07.10.36
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 08 Nov 2024 07:10:36 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=He5wccjU;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731078636; x=1731683436; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=Y+/b66y+2nTM9nhpLum2zgZgjPqzorbsci7YHxro0lo=;
+        b=He5wccjU81MXIHbhyiv9YmREQFq3EB8KYe+6G8K15CuSORa2K2v421l5AritsIIsKS
+         T7GnQ+FVeH5bjXmxNOW+j2NzL0srUzan1rgKrqZpqOXHfS9mZLG+RNU7kGNFypA2ZMGh
+         4vH5I+Nencvqy77BojjevzAWr9/ED9Fd4BydOF14llH6hua0wbGJ9naWjcKe7i/H2k7F
+         MVmNuZ9fdRS/DqAXQvROqiNcd895R2Jk2N2AyR8OiDx6KSKPNyy1cn6HjdOlH2YOw1Wc
+         jbAiUSqr7iQQJt3uxHqbOPEiaKan1AFlIh6HR97vx3E7oELHaqCPg/6rLDdLmJyQ51nQ
+         UoXw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731078636; x=1731683436;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=Y+/b66y+2nTM9nhpLum2zgZgjPqzorbsci7YHxro0lo=;
+        b=gdU2ABJkkHrKHUIHfd+/qytt9IpEGd1GbbJdeKWiws65VnV+3MWOTSfdwy+Z7EpBuO
+         ayBEz/sExgSlDUL3gD42CkQNIz+Z058uPGQJF9oqx+Bkw8tdDNsO+jmj5VYV3OR3nK9r
+         nX9ntACX9mT8FxuUDQcsp/HDies621ZdrK7kRvq/lSZrID7n3IsucZnbGBOVtZG3enui
+         NQd14r/q25ikzmyKH37dsqHnfRYBT/uudcGeymt0a8DzP3/hG6AqERWIJuSwS5m6BfYa
+         7Pqcao+0w13q6RvK5hI9HiFdsT0ilHMwcuc0UU24ZFPAFZHsuWYrrWXEuGvheNM+Tu5b
+         EJYQ==
+X-Forwarded-Encrypted: i=1; AJvYcCU0dxZKnSxo+PzIIsHXhQaRC34YaPhSfRXvJkwgs+jEX3SOTYTBjldx2eX9JhhlJRP6aBQ2mx9/UA48ebIQr6Sipi07/g==@gmail.com
+X-Gm-Message-State: AOJu0YxnPuzcb6Qr6UX2HREyax8ojlAMLjKGAzfSA0OXlEW31joOtuhQ
+	mAq2teo1uZqmLjbag8/Slho/3lYoWD/+LMMQJWfibkS9HO2QuYfhuK/2mS3iM1FDxDp44Vva59g
+	/yGfQOALxDFnHB7UJEZz29ancQrE=
+X-Google-Smtp-Source: AGHT+IEPZshTY4e0pyH+g+aJbQF0/Es5P5jzGS5M4JOi5HfpZ07wANAjKNm47HhO3d9qAnyrg7w24pekM6Oj3UXqwQw=
+X-Received: by 2002:a05:690c:7307:b0:6e2:1090:af31 with SMTP id
+ 00721157ae682-6eaddd74f21mr35437947b3.3.1731078635546; Fri, 08 Nov 2024
+ 07:10:35 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Sat, 9 Nov 2024 04:10:06 -0800
+Message-ID: <[removed]>
+Subject: For Your Payment Valued US$ 10.5 Million USD Dear : It's my wish to
+ inform you about the new development concerning your approved ATM Cash Card
+ payment of 10.5 Million United States Dollars,The Board of Trustees and
+ United Nation executives has finalized with the Federal Ministry of Finance
+ to process and release the Amount to you through our Corresponding Bank of
+ Settlement First Bank Nigeria and the delivery will be carried out by
+ Banker's Courier Service. Two days ago one Mr.Raymond Scow Kendel from
+ Florida United States sent to us a message stating that he was a family
+ member of yours and he made us to understood that you died last month due to
+ CoronaVirus pandemic that you have willed to him your approved funds when you
+ were still living battling with virus, So he said he will all his funds in
+ the bank to him demanding the released as he is trying to stand as your next
+ of kin to you as Inheritance but we are still waiting to see if you will
+ respond to this email withi...
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000026748d06266827f1"
+Bcc:[removed]
+
+--00000000000026748d06266827f1
+Content-Type: text/plain; charset="UTF-8"
+
+From Desk Of Mr.Pius Idoghor Adogbeji
+Plot #21 Macpherson Close Victoria Island
+Lagos-Nigeria
+
+
+
+            For Your Payment Valued US$ 10.5 Million USD
+
+
+
+Dear  :
+
+
+It's my wish to inform you about the new development concerning your
+approved ATM Cash Card payment of 10.5 Million United States
+Dollars,The Board of Trustees and United Nation executives has
+finalized with the Federal Ministry of Finance to process and release
+the Amount to you through our Corresponding Bank of Settlement First
+Bank Nigeria and the delivery will be carried out by Banker's Courier
+Service.  Two days ago one Mr.Raymond Scow Kendel from Florida United
+States sent to us a message stating that he was a family member of
+yours and he made us to understood that you died  last month due to
+CoronaVirus pandemic that you have willed to him your approved funds
+when you were still living battling with virus, So he said he will all
+his funds in the bank to him demanding the released as he is trying to
+stand as your next of kin to you as Inheritance but we are still
+waiting to see if you will respond to this email within Seven bank
+working days perhaps this will be the last notification to you.The
+First Bank Board of Directors has warned us to be very careful in our
+dealings with Mr.Raymond Scow Kendel and that was the very reason we
+ignored any message from him but still waiting to see if you will
+respond to this alert message for us to be sure that you are still
+alive before we tell you the next line of action and the best way you
+can received your approved funds without any further delay on it.But
+at the same time your Loaded ATM CARD delivery fees is just $200.00
+therefore your urgent
+
+respond will Determine if you will send the delivery fees to enable us
+dispatch the Card to your address or we should return to Mr.Raymond
+Scow Kendel for the delivery of the Card.Stated below is his Bank
+Account information provided for us to wire the funds.
+
+
+                    Bank Name:JP Morgan Chase Bank
+                    Address:270 Park Avenue, Reno Nevada, NV 10017
+                    Bank Swift Code:CHASUS33
+                    Routing Transit Number:021000021
+                    Account No:4021-765783-300
+                  Beneficiary Name:Mr.Raymond Scow Kendel
+
+
+Awaiting for your urgent and immediate responses and Kindly respond on
+time to enable us deliver your approved ATM Card without any further
+delay.
+
+Thank you,
+
+
+Yours faithfully,
+
+From Desk Of Mr.Pius Idoghor Adogbeji
+Plot #21 Macpherson Close Victoria Island
+Lagos-Nigeria
+
+--00000000000026748d06266827f1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">From Desk Of Mr.Pius Idoghor Adogbeji<br>Plot #21 Macphers=
+on Close Victoria Island<br>Lagos-Nigeria<br><br><br><br>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 For Your Payment Valued US$ 10.5 Million USD<br><b=
+r><br><br>Dear =C2=A0:<br><br><br>It&#39;s my wish to inform you about the =
+new development concerning your<br>approved ATM Cash Card payment of 10.5 M=
+illion United States<br>Dollars,The Board of Trustees and United Nation exe=
+cutives has<br>finalized with the Federal Ministry of Finance to process an=
+d release<br>the Amount to you through our Corresponding Bank of Settlement=
+ First<br>Bank Nigeria and the delivery will be carried out by Banker&#39;s=
+ Courier<br>Service.=C2=A0 Two days ago one Mr.Raymond Scow Kendel from Flo=
+rida United<br>States sent to us a message stating that he was a family mem=
+ber of<br>yours and he made us to understood that you died =C2=A0last month=
+ due to<br>CoronaVirus pandemic that you have willed to him your approved f=
+unds<br>when you were still living battling with virus, So he said he will =
+all<br>his funds in the bank to him demanding the released as he is trying =
+to<br>stand as your next of kin to you as Inheritance but we are still<br>w=
+aiting to see if you will respond to this email within Seven bank<br>workin=
+g days perhaps this will be the last notification to you.The<br>First Bank =
+Board of Directors has warned us to be very careful in our<br>dealings with=
+ Mr.Raymond Scow Kendel and that was the very reason we<br>ignored any mess=
+age from him but still waiting to see if you will<br>respond to this alert =
+message for us to be sure that you are still<br>alive before we tell you th=
+e next line of action and the best way you<br>can received your approved fu=
+nds without any further delay on it.But<br>at the same time your Loaded ATM=
+ CARD delivery fees is just $200.00<br>therefore your urgent<br><br>respond=
+ will Determine if you will send the delivery fees to enable us<br>dispatch=
+ the Card to your address or we should return to Mr.Raymond<br>Scow Kendel =
+for the delivery of the Card.Stated below is his Bank<br>Account informatio=
+n provided for us to wire the funds.<br><br><br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 Bank Name:JP Morgan Chase Bank<b=
+r>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 Add=
+ress:270 Park Avenue, Reno Nevada, NV 10017<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 Bank Swift Code:CHASUS33<br>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 Routing =
+Transit Number:021000021<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 Account No:4021-765783-300<br>=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 Beneficiary Name:Mr.Raymond Scow=
+ Kendel<br><br><br>Awaiting for your urgent and immediate responses and Kin=
+dly respond on<br>time to enable us deliver your approved ATM Card without =
+any further<br>delay.<br><br>Thank you,<br><br><br>Yours faithfully,<br><br=
+>From Desk Of Mr.Pius Idoghor Adogbeji<br>Plot #21 Macpherson Close Victori=
+a Island<br>Lagos-Nigeria</div>
+
+--00000000000026748d06266827f1--
+

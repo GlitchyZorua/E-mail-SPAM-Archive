@@ -1,0 +1,266 @@
+Delivered-To:[removed]
+Received: by 2002:a59:b6a6:0:b0:49b:3a60:d7b with SMTP id r6csp1591262vqj;
+        Thu, 31 Oct 2024 02:36:35 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVnapOHcJ5l7JSHsRvLVVgBJMpPHuWaV7b5PQUP63Mt8Ogw6N7UVGniReQQJjCXzFoWPp7HJSItR4Iu52RFLPKpXwXUXw==@gmail.com
+X-Received: by 2002:a05:6602:164f:b0:83a:9488:154c with SMTP id ca18e2360f4ac-83b64f3b524mr272131139f.3.1730367395072;
+        Thu, 31 Oct 2024 02:36:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1730367395; cv=none;
+        d=google.com; s=arc-20240605;
+        b=DfA998OGtd4ek7MsIQ60ox5PKfN5UfKGFx8NYv+Yyd49XOr8w/u5VzFjmlJbXu/8EA
+         ZsnbY1BtxfoHvVJWX1FMdo2J6Ce+rjbo606J2sYY+Aq6vg0C5RlAX5puNobK9VWmalQi
+         izAVFUvdwuqTVPMb3D07F8sqfILGr4HnBsbz/XSWthcY85s8g85/7WXJ+pBoLj1qt+aZ
+         J+EoP5Ue7IUbCeAGztKqOgd4c3c3+eZ3soaShCtcrs9iVYo2e1FD1SWuQcSqYJM6+8eY
+         UMuPe6rs+vjBouScW6/63KmiICI7XiHlfuh5jpihJTUQ7pLtK94XO2AoOAZBrYs5RE8m
+         ZlkQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=hePwgou2fbNEEoKG00boFOZDrnRYjySmLcw17M9lGNQ=;
+        fh=mHNxANh60u/xRKVmZqh5PjDrpp8ascO1O7uWQ0NaOO8=;
+        b=aAdgcYOmSQ1tuN/4ZP9fuC/z7viI9cnFEyLqDYgQ8R3cz0n1x3ZnxSoLBr/JivAFsi
+         MYds60LgZ0RT/jT2fthoUq01KRow5JVcG9xA+ZcyBvB4hhGorjv4ICO52X3YbIuyEZlx
+         6fPOnCM+6Ba1KbjGB/IvTi1EGPF1phCdjkUltttOWt/mPdz9xB+uAmdNce3kEozdCNJV
+         uytn97ysnbXYkBY8DmJmzluzilDWhj7ELB/RO5K6DJgmsIOgnte5vrO2BVN5u3ureau+
+         wI13IBjVcXOYIFAPUI8yStIjmc+sz49Jkk6SoY85HiUCcsYGA5+xlhK2TXs7rD9+hRxa
+         14sw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=jnCySQj4;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 8926c6da1cb9f-4de04965e95sor437543173.9.2024.10.31.02.36.34
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 31 Oct 2024 02:36:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=jnCySQj4;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1730367394; x=1730972194; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=hePwgou2fbNEEoKG00boFOZDrnRYjySmLcw17M9lGNQ=;
+        b=jnCySQj4t5eYAeO2oluN0TgGYnM3MDXN63QvhmN62UnX0seH0MVVKOtBTivjLiVMv3
+         e8ShzhqGYeKpHw7780A0AmOwkyyeIUHBVMc5/oZTbXhkFWb9DlLrBLB7IMvpskYSaUIs
+         jsAm3sg2TX64TPjM7VU77auPvp5bRPMXwZ+xJQDTl3tsJGYHAncnHmPdRpfflzXG6jU5
+         laclr8sPVZy79IntH37dGiLLeSYIFhhC91wFUb8EU0a1GeF03rXMSmU83KeKxdgdzbAH
+         GXFKHsnXW3LWZ9JoQXtSBmlmX89PCDdLZQOz58f2I0+e7jk7E1HfRm5r/r6DdvPjALm7
+         b2Wg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1730367394; x=1730972194;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=hePwgou2fbNEEoKG00boFOZDrnRYjySmLcw17M9lGNQ=;
+        b=Lr9du0KBDEN0k0MJCopQeRWq41rd3MLBIcZzY/nGp2NeHG0hZg3jQXduvwKYBwo4bG
+         H5dwGJgCUtuk/ZlkoovBMS81h6KNnXLl2SAvaRbPSeK5UimKbEhXw0KRIzmTZ9gl5fWk
+         D4x8QrQ2tC29b7pY+WHWG6sMEVkeI4ktzJEWTRNBxCeYzl/UFmSIa5y8268WsZqpSnGO
+         UKZvhJZUQHaXAcuBAc9PRTxW/UeWO/XNNyhS4aLezT8P4S2nd3o5+gp7dXHRu/sL+Ztk
+         /XX+10voawiHuuA9bS+/IKSl7W7TamWurZhvyputduMtgBxOm5R4WOpv8DC/2be6hWXN
+         fMuQ==
+X-Forwarded-Encrypted: i=1; AJvYcCWrEOC79Lfo4DMjpW9TR/3veZlAPiA11M1EzouM+MVigfo37WARvnG6YD5gwR378qfzR2+HxAnNYELwgZUDA1cX62ySNg==@gmail.com
+X-Gm-Message-State: AOJu0Yy7bKtf8I7q6nYYEshEsE1x4fCVPEMd9v7tLlxzazquJVYNxuO1
+	xoY+Dv4H7RkN7joOgbf5hMIP+1mWWfdWDQ4QTW2XmOE0S3uQebqxPnZncSR86D6cabzZ84bKbpO
+	OmKUt7hNTUj9J1yXlV80dNvouMX0=
+X-Google-Smtp-Source: AGHT+IEa/oOaXnqPCdRX5dBcvUucSIDpRXWE11A95kFlTtAWXTCo32LJLl47m7Kq7KfvAnUWOZQgmfe/GJrEb3vh9WY=
+X-Received: by 2002:a05:6830:912:b0:718:1109:9626 with SMTP id
+ 46e09a7af769-7189b4cb6dcmr2681328a34.6.1730366937312; Thu, 31 Oct 2024
+ 02:28:57 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Thu, 31 Oct 2024 10:30:03 -0600
+Message-ID: <[removed]>
+Subject: CHEVROLET COMPANY AWARD LOTTERY DEPARTMENT UNITED STATE
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000a137d90625c27255"
+Bcc:[removed]
+
+--000000000000a137d90625c27255
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+CHEVROLET COMPANY AWARD LOTTERY DEPARTMENT UNITED STATE
+
+300Renaissance Centre P.O. Box 431301.
+
+
+YOUR ATTENTION IS NEEDED NOW PLEASE!
+
+YOUR EMAIL JUST GOT LISTED IN THE CHEVROLET AWARD  WINNING PRIZE
+YOU WON AN ATM MASTER CARD AND A CHEVROLET SUV CAR.
+
+
+Dear Lucky Beneficiary
+
+
+This is to inform you that you=E2=80=99ve been selected for the Chevy year =
+prize
+winning brand new 2024 CHEVROLET SUV and an ATM MASTER CARD Of One
+Million Nine Hundred Thousand United State Dollars ($1,900,000.00) from the
+United States Embassy international balloting program and Mrs. MARY BARRA
+the current and acting {CEO } Of Chevrolet Truck Dealership Decided to
+handle
+transaction so you're required to contact her via her official email
+below with your Secret Pin Code Number to enable you claim your winnings.
+
+ONCE AGAIN CONGRATULATIONS  =F0=9F=A5=87=F0=9F=A5=88=F0=9F=A5=89
+
+Description Of Prize Vehicle ;
+
+The SUV comes with CHEVROLET Drive infotainment system, satellite radio,
+
+Bluetooth, a USB port and a 10-year subscription to CHEVROLET Assist eCall,
+
+which can automatically notify first responders after a collision. For
+
+2024, the SUV comes standard with enhanced USB and Bluetooth features,
+
+including an additional microphone, Bluetooth sync for a second
+
+phone ,library browsing via Bluetooth, voice control for contacts and
+
+music and a Mobile Office system. Available features include leather
+
+seats, a surround-view camera system, navigation, a Harman Kardon
+
+surround-sound audio system, a head-up display, a panoramic moon roof,
+
+front and rear parking sensors, blind spot monitoring, active park
+
+assist and lane departure warning. The Drive infotainment system takes
+
+a bit of getting used to, but is fairly straightforward and works
+
+well, reviewers agree. The audio and climate controls are also clearly
+
+labeled and easy to reach.
+
+
+The selection process was carried out through random selection in our
+
+computerized email selection system (ESS) from a database of over
+
+250,000 email addresses drawn from all the continents of the world
+
+which you were selected. However, no tickets were sold but all email
+
+addresses were assigned to different ticket numbers for representation
+
+and privacy.
+
+
+The CHEVROLET is approved by the United States Gaming Board and also
+
+Licensed by the International Association of Gaming Regulators (IAGR).
+
+To begin the processing of your winning you=E2=80=99re expected to follow
+every instructions that MRS. MARY BARRA will give you so that you will
+receive your Chevrolet Award Winnings prize very fast and without stress
+
+
+
+C . E . O DETAILS:
+
+NAME:
+Mrs. Mary Barra
+EMAIL
+[removed]
+
+
+NOTE::You can't claim your winning without your Secret Pin Code
+
+Number, so therefore here is your Secret Pin Code Number
+
+CHEVROLET:245125HGDY03/
+
+You are advised to provide this secret pin
+to MRS. MARY BARRA only and please don=E2=80=99t disclose code.
+
+
+We're mandated to deliver your car and your ATM MASTER CARD to your
+doorstep. But you're required to pay a  fee which is called a delivery
+process file charge,
+It will only cost you the sum of $150 United State Dollars Only.
+You're required to send the $150 delivery fee to MRS. MARY BARRA  via Email
+address and
+once she confirmed your payment your delivery will take place immediately.
+
+
+Congratulations again from all our staff and thank you for being part
+of our promotional program.
+
+
+Steven Majoros
+
+THE GENERAL MARKETING
+DIRECTOR
+
+CHEVROLET DEPARTMENT
+UNITED STATES
+
+--000000000000a137d90625c27255
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">CHEVROLET COMPANY AWARD LOTTERY DEPARTMENT UNITED STATE<br=
+><br>300Renaissance Centre P.O. Box 431301.<br><br><br>YOUR ATTENTION IS NE=
+EDED NOW PLEASE!<br><br>YOUR EMAIL JUST GOT LISTED IN THE CHEVROLET AWARD =
+=C2=A0WINNING PRIZE =C2=A0<br>YOU WON AN ATM MASTER CARD AND A CHEVROLET SU=
+V CAR.<br><br><br>Dear Lucky Beneficiary<br><br><br>This is to inform you t=
+hat you=E2=80=99ve been selected for the Chevy year prize<br>winning brand =
+new 2024 CHEVROLET SUV and an ATM MASTER CARD Of One<br>Million Nine Hundre=
+d Thousand United State Dollars ($1,900,000.00) from the<br>United States E=
+mbassy international balloting program and Mrs. MARY BARRA<br>the current a=
+nd acting {CEO } Of Chevrolet Truck Dealership Decided to handle<br>transac=
+tion so you&#39;re required to contact her via her official email<br>below =
+with your Secret Pin Code Number to enable you claim your winnings.<br><br>=
+ONCE AGAIN CONGRATULATIONS =C2=A0=F0=9F=A5=87=F0=9F=A5=88=F0=9F=A5=89<br><b=
+r>Description Of Prize Vehicle ;<br><br>The SUV comes with CHEVROLET Drive =
+infotainment system, satellite radio,<br><br>Bluetooth, a USB port and a 10=
+-year subscription to CHEVROLET Assist eCall,<br><br>which can automaticall=
+y notify first responders after a collision. For<br><br>2024, the SUV comes=
+ standard with enhanced USB and Bluetooth features,<br><br>including an add=
+itional microphone, Bluetooth sync for a second<br><br>phone ,library brows=
+ing via Bluetooth, voice control for contacts and<br><br>music and a Mobile=
+ Office system. Available features include leather<br><br>seats, a surround=
+-view camera system, navigation, a Harman Kardon<br><br>surround-sound audi=
+o system, a head-up display, a panoramic moon roof,<br><br>front and rear p=
+arking sensors, blind spot monitoring, active park<br><br>assist and lane d=
+eparture warning. The Drive infotainment system takes<br><br>a bit of getti=
+ng used to, but is fairly straightforward and works<br><br>well, reviewers =
+agree. The audio and climate controls are also clearly<br><br>labeled and e=
+asy to reach.<br><br><br>The selection process was carried out through rand=
+om selection in our<br><br>computerized email selection system (ESS) from a=
+ database of over<br><br>250,000 email addresses drawn from all the contine=
+nts of the world<br><br>which you were selected. However, no tickets were s=
+old but all email<br><br>addresses were assigned to different ticket number=
+s for representation<br><br>and privacy.<br><br><br>The CHEVROLET is approv=
+ed by the United States Gaming Board and also<br><br>Licensed by the Intern=
+ational Association of Gaming Regulators (IAGR).<br><br>To begin the proces=
+sing of your winning you=E2=80=99re expected to follow<br>every instruction=
+s that MRS. MARY BARRA will give you so that you will<br>receive your Chevr=
+olet Award Winnings prize very fast and without stress<br><br><br><br>C . E=
+ . O DETAILS:<br><br>NAME:<br>Mrs. Mary Barra<br>EMAIL<br><a href=3D"mailto=
+:[removed]">[removed]</a><br><br><br>NOTE=
+::You can&#39;t claim your winning without your Secret Pin Code<br><br>Numb=
+er, so therefore here is your Secret Pin Code Number<br><br>CHEVROLET:24512=
+5HGDY03/<br><br>You are advised to provide this secret pin<br>to MRS. MARY =
+BARRA only and please don=E2=80=99t disclose code.<br><br><br>We&#39;re man=
+dated to deliver your car and your ATM MASTER CARD to your<br>doorstep. But=
+ you&#39;re required to pay a =C2=A0fee which is called a delivery process =
+file charge,<br>It will only cost you the sum of $150 United State Dollars =
+Only.<br>You&#39;re required to send the $150 delivery fee to MRS. MARY BAR=
+RA =C2=A0via Email address and<br>once she confirmed your payment your deli=
+very will take place immediately.<br><br><br>Congratulations again from all=
+ our staff and thank you for being part<br>of our promotional program.<br><=
+br><br>Steven Majoros<br><br>THE GENERAL MARKETING<br>DIRECTOR<br><br>CHEVR=
+OLET DEPARTMENT<br>UNITED STATES<br></div>
+
+--000000000000a137d90625c27255--
+

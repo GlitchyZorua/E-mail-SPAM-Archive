@@ -1,0 +1,88 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp5843616vqq;
+        Sat, 9 Nov 2024 10:29:53 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXiTl62ATsHtVWZBF5jL69K0YHzEHWkDLROyQuIyDtBQkZZm8zd7w0FpeS7bGMIqYa1rXJikDGknJ4Vh4ZzNYjlM+WkPA==@gmail.com
+X-Google-Smtp-Source: AGHT+IHDiHXfvNvtyQYKM0GssdWKv+AmQuRiIZXnJBluh17S1jNA/DQHC6a3VSbqOmOnDJz4tufb
+X-Received: by 2002:a05:6a21:e590:b0:1db:ff57:562b with SMTP id adf61e73a8af0-1dc22b5769fmr9818535637.31.1731176992857;
+        Sat, 09 Nov 2024 10:29:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731176992; cv=none;
+        d=google.com; s=arc-20240605;
+        b=SyMg7CmEEJe0qcEdN0N6KhUJgFBwnvP3kG5gGfSsMkjqyA+SXzZfVujb3YkXg36P+M
+         YA/4OFAy12bvSoOGH5v9z/QTd14F67wW9fY+eGwb97bWdVCZOsvzKBHfzx3Jf0lJzvra
+         QwRi9u+oypl17cpK37OIJf29loN8IEZULyXAPKsN5OyBt7akZtAzFgnN0ugJQNBh//C8
+         xuSZOrBRdNwXeGc7qS3hdqsE1dsinyvtqTT6Z1SNt5xQBvYvyVjzp5KDylZ5WHWcwIys
+         HNY2k56O4uxQOenxPfMm1xXZWcyiNl/jv6H8VcPmsYShOz00lLDPavnEbtrHDioKNLaE
+         fIlQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=sensitivity:content-transfer-encoding:mime-version:subject
+         :message-id:reply-to:[removed]
+        bh=lE15bFAA9ImWG3+Hz7oyxyyrkPPIlOWGP+LChtucA3c=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=LTJledhs+eAFSLxBqO3Ni7hHjecI/zZyurGVO9oiT3s7pvelenogwPSyIrkUlGODSm
+         HP9OH5jGrHyk2XppotkAscCirP7dQt1+8xMwKfeYG0CVsivXrtjMO79DlP+h6VdgpH9I
+         QtAFcTe9g+ICCnO8G65eANnv98sMclWw9b4h9itjfNe9X5E4Z3IaciqOo4Qaf8iT8qtq
+         egZLr39Mb976NzvmijmiKn19NgPDtEtpyj3yzJqL6536lNoCHfMP683KjLrjmttMrS+R
+         eI64PUfGwTR9N/qLE+/jy4pJxzbE4TcPQJabZRvxCeqyuVnkk5jYjovflB+9tajIicqo
+         TgKw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@plala.or.jp header.s=p20240201 header.b=jLzpN7iB;
+       spf=pass (google.com: domain of [removed] designates 60.36.166.37 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=plala.or.jp
+Return-Path: <[removed]>
+Received: from msc115.plala.or.jp (msc115.plala.or.jp. [60.36.166.37])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-7f41f6b744bsi7652492a12.685.2024.11.09.10.29.46
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 09 Nov 2024 10:29:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 60.36.166.37 as permitted sender) client-ip=60.36.166.37;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@plala.or.jp header.s=p20240201 header.b=jLzpN7iB;
+       spf=pass (google.com: domain of [removed] designates 60.36.166.37 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=plala.or.jp
+Received: from mdkim-o09.ake-mailbk.plala.or.jp ([172.23.12.58])
+          by msc115.plala.or.jp with ESMTP
+          id <[removed]>;
+          Sun, 10 Nov 2024 03:29:45 +0900
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+  d=plala.or.jp; q=dns/txt; s=p20240201; t=1731176985;
+  x=1762712985;
+  h=date:from:[removed]
+   content-transfer-encoding;
+  bh=lE15bFAA9ImWG3+Hz7oyxyyrkPPIlOWGP+LChtucA3c=;
+  b=jLzpN7iBLNCtVPvN1PHvpyS7KOi+8wLnTo7ArOJhBhI3N9NH9c6y86V/
+   KnBSic5tlqUo0RAmDOUL/MQBZ7vVz/pRpHudWBIqhXbawVJxu2ycR16vI
+   4C+aVGK2Cu+rXCcKAH7PjEKU+WJ9/Xelb/3RqDXtevJlS2P9nWocQzUK5
+   0kwi6UwLCj3dbDOW4yy6qQe4fVb0ZWZ9UYnhOmw48HBepFmLHYekgLvQ0
+   Yx364rAV5U/mEnmzm0nCKe9d3GWhzyRGpDZoQOnSDK3P+Z48Y7hevbwzO
+   9AK9F5F9ezaZNV/lY8MJVpZEtylYxtFscKYOPEWkRw+0UbMu7Bp9gruzF
+   Q==;
+X-CSE-ConnectionGUID: ukcYxZIWSRWd1rOZN4CuPw==
+X-CSE-MsgGUID: GDi3xXXEStSKbJ62IE4NJQ==
+Received: from msa13.ake-mailbk.plala.or.jp (HELO msa13.plala.or.jp) ([172.23.12.93])
+  by mdkim-o.ake-mailbk.plala.or.jp with ESMTP; 10 Nov 2024 03:29:45 +0900
+Received: from mwebp12 ([172.23.13.132]) by msa13.plala.or.jp with ESMTP
+          id <20241109182945.KBBC18764.msa13.plala.or.jp@mwebp12>;
+          Sun, 10 Nov 2024 03:29:45 +0900
+Date: Sun, 10 Nov 2024 03:29:45 +0900
+From:[removed]
+Reply-To:[removed]
+Message-ID: <20241110032945.ILHLE.572.root@mwebp12>
+Subject: Business Offer
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-2022-jp
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+Sensitivity: Normal
+X-VirusScan: Outbound; mvir-ac13; Sun, 10 Nov 2024 03:29:45 +0900
+
+Hello Friend
+
+My name is Dr Richard Woodhead,I am a Researcher at a reputable Bio Firm in the United Kingdom , I would like to share with you some business  insights .
+
+Note: You have the right to quit by the end of my detailed explanation and you don't feel like moving forward with me .
+
+But Trust me, you won't regret it.
+
+Best Regards
+Dr Richard Woodhead
+

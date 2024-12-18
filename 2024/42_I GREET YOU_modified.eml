@@ -1,0 +1,136 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:1391:b0:4ab:cde1:8319 with SMTP id gz17csp995943vqb;
+        Sat, 7 Dec 2024 08:32:13 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVNsH/QvaZMEpPQ2LQ/q2PyIj14rwp8h284I8lryrBeCSKOlal2UCq2rMLlkvxDhmFtPbv/xWaM/QBzv4/LcxTMd4ivVg==@gmail.com
+X-Received: by 2002:a05:6402:518c:b0:5d0:9ae9:587a with SMTP id 4fb4d7f45d1cf-5d1247844ffmr11803845a12.4.1733589133554;
+        Sat, 07 Dec 2024 08:32:13 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733589133; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Bg5VsoUUtVdlRsbhgFpCAobhZYqXGKOG8WiLz/zqRqEPcWY+qIPLUYsYrMr+atTEsl
+         wrCDNJ4FIeMhMzNTbHcvBZhNFrwf69vvgXz3OdfQxNHCb9cgPVJAUDGubiuGeiVa+UXF
+         Wy4jg0mGfqDjFr1TmjcplX7FqB6XcSmJS2El1zUakbXLO0W6sUSlJLmNwzYKRDkbqgrk
+         P5xIp9gzVi801tQku7RRvKr7EBCAMXdJ/mtjGogMW/CrhZGsm6dOLFPGtNYbSyGRPkRf
+         aK/foUqFd2y3BU4Q7Qd/OPgMo6nJhYf0TcKBNmQKGkdivBnycL/VzsHKDuvVBn6E6PuJ
+         D2yA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=yMvZCWbJPzRjjT+02Km/CvdiZpUNVM8IyqpWEHtAIvE=;
+        fh=Fdj1kyIM4FAe9g2hK7rSyv3C8RYISqPeHwXENq/jBFs=;
+        b=ZVE0iZGPnl2CCB0irxAd3TPqXdFy8QnknEvKi0LEx6RIwC/zD9HeLYk3TgPxp4+asA
+         L1+N+2lqeG/mpPYYYge7JYMCDedPPX9eBSLeu4tr0CPm7ZmQJb8rzbeOk445AhHReT+V
+         s5jbd68yfBl9UkpAFoffUTuxOTCAcSDA9TUBl1UEYYMow4Dv8N1PTtkIHi1q3QOSHTNA
+         Vb27svQ6SFmOe8E5YW5FNbYha2xvpuVwwytJQLZfQvGSVcXYPd42DJV0PW5RJZ8X+yKo
+         OejdEqQka9QH1VI79ehyZYKUNb0T/BBSBKQaDjNkwp4UeZ7H1tBjv545IxSD481YLTwW
+         v7pw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OBmOOjJC;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5d3e84707ecsor235103a12.0.2024.12.07.08.32.13
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 07 Dec 2024 08:32:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OBmOOjJC;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733589133; x=1734193933; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=yMvZCWbJPzRjjT+02Km/CvdiZpUNVM8IyqpWEHtAIvE=;
+        b=OBmOOjJCTzv/VeC2U54UAtNkk7vAHqSoxd0mzKH/EUyBFiMmevFZCQUtyZgTz6t21l
+         ZvC8jQ+wNids2qe3Ua6rXEy26fihBlmlTor2k1FLj3LhcrWqcWMpFrNtFB7ZbXPlAvnu
+         ww+g3aAR01B4sLArkOxa0mRh6OWRMM63CfagvQ/0GOqDL/JqRAcwVDFIiD7sdYqpXM7O
+         PhjXLgYKODWw/xZnKel8Aswp7/hejkutTF2zk+O9I1EPglaZy2V1IyoGfHdGtLJMULM2
+         b3QcYfXz+Wk5GEmw+7B2yxAgW26+DyNlwRYp8vQQ92LrHN0NCiJjMi6OwtMmhp3+duJM
+         h3VQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733589133; x=1734193933;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=yMvZCWbJPzRjjT+02Km/CvdiZpUNVM8IyqpWEHtAIvE=;
+        b=maKZptLpKf7PxtUJRHMIx46RZhVc1DQO51PcOxSmtqmCfE0VSlHIwk3tM/XTRhxBX6
+         d8ITbUPd+GdgCm9YgwHyXB8txq5t24ZAXcoiJCvk63GmVpGn6vCZRl5Xgq9N3VHV9GD6
+         +GMdwyt9axtvGc7plaQ8trFTWVZUjLycCL3qm/foDFzD/rtTTO8T76zRHNSy4YakDFeY
+         RoSJTVX7gEmiwQn4zfHmGUHzT16Uw84Z1sRgJIV6dw46hULOxnwwgtY6lHpERqP8afs4
+         0eZv2y7hFGRZe1OyDCTZ0DpQYPzkDTOTAW5z38LCW1U3UD/RIUdxA+PaA7JhWlvpktvD
+         iUng==
+X-Forwarded-Encrypted: i=1; AJvYcCWXGJhaNlK8oDfBbmm233jJYm4wly2ABE4IgmDQSa/AnCTli4leeVPxrCeOYWamlYrxPejdYxyACt2HRNVYE1cvUKz0Tg==@gmail.com
+X-Gm-Message-State: AOJu0YwxAnx/5/2k42eWUO23WhV0A1U4c7Ents023UKLaMRSVZcYowN4
+	ygFUqWckWltkocvZhM4fVXs9SjuiMPv6uhM+mdaVXY/wcqydZmOjEvsSJcHN1k7WLYC5ZyMpptd
+	GXutG6FzC6bOkUXOeXGCLpclBLt0=
+X-Gm-Gg: ASbGncsMhzhbukJsuGF4Hvn5LWm6Z/zSoTTdhSFmMQIXrCVBRsnFieqvBWaTugNXqJU
+	oTZNx7OHmhap9BvVpdKUNkZhK/atfeA==
+X-Google-Smtp-Source: AGHT+IFU63xmpggyhZnYnOmROM6gwH9j+VDvi69zkYVYDB5qlV8RJEroLOzmIvt+11NBxu9clyF83www59Pda8SkApw=
+X-Received: by 2002:a05:6402:354e:b0:5d3:e9fd:9a16 with SMTP id
+ 4fb4d7f45d1cf-5d3e9fd9c35mr1091023a12.12.1733589132218; Sat, 07 Dec 2024
+ 08:32:12 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Sat, 7 Dec 2024 16:31:26 +0000
+Message-ID: <[removed]>
+Subject: I GREET YOU
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000699ea10628b0acca"
+Bcc:[removed]
+
+--000000000000699ea10628b0acca
+Content-Type: text/plain; charset="UTF-8"
+
+I am Mrs. Aminata , a personal Accountant/Executive board of
+Directors working with United bank for African Burkina Faso (UBA). I
+have an interesting business proposal for you that will be of immense
+benefit to both of us. Although this may be hard for you to believe,
+we stand to gain a huge amount between us in a matter of days. Please
+grant me the benefit of doubt and hear me out. I need you to signify
+your interest by replying to my mail
+
+Honestly, i have business transaction worth the sum of
+(US$8,200,000.00) Eight Million two hundred thousand united state
+dollars to transfer to you through proper documentation in position of
+your own Account Most importantly, I will need you to promise to keep
+whatever you learn from me between us even if you decide not to go
+along with me. I will make more details available to you on receipt of
+a positive response from you.
+
+This transaction is risk-free; please urgently confirm your
+willingness and interest to assist in this deal, I am in good faith
+and with trust waiting for your Urgent response and maximum
+cooperation for more details
+
+Best Regards,
+Mrs Aminata Zongo
+
+--000000000000699ea10628b0acca
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><br>I am Mrs. Aminata , a personal Accountant/Exec=
+utive board of<br>Directors working with United bank for African Burkina Fa=
+so (UBA). I<br>have an interesting business proposal for you that will be o=
+f immense<br>benefit to both of us. Although this may be hard for you to be=
+lieve,<br>we stand to gain a huge amount between us in a matter of days. Pl=
+ease<br>grant me the benefit of doubt and hear me out. I need you to signif=
+y<br>your interest by replying to my mail<br><br>Honestly, i have business =
+transaction worth the sum of<br>(US$8,200,000.00) Eight Million two hundred=
+ thousand united state<br>dollars to transfer to you through proper documen=
+tation in position of<br>your own Account Most importantly, I will need you=
+ to promise to keep<br>whatever you learn from me between us even if you de=
+cide not to go<br>along with me. I will make more details available to you =
+on receipt of<br>a positive response from you.<br><br>This transaction is r=
+isk-free; please urgently confirm your<br>willingness and interest to assis=
+t in this deal, I am in good faith<br>and with trust waiting for your Urgen=
+t response and maximum<br>cooperation for more details<br><br>Best Regards,=
+<br>Mrs Aminata Zongo<br></div>
+
+--000000000000699ea10628b0acca--
+
