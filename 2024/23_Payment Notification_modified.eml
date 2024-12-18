@@ -1,0 +1,149 @@
+Delivered-To:[removed]
+Received: by 2002:a59:af03:0:b0:4a6:b479:dd26 with SMTP id ba3csp31179vqb;
+        Tue, 26 Nov 2024 01:22:12 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCU9zZpRuoKB6BM7yS4JpELfH8HVvc1+X5qwOo47QM2QByT1O8pljNa6Ujwxw3HbvwLW2SF8ucW+B9BbjmYuatQlJOUARA==@gmail.com
+X-Received: by 2002:a05:6402:5113:b0:5cf:c0f6:b1b4 with SMTP id 4fb4d7f45d1cf-5d0205f54b1mr13193542a12.12.1732612932117;
+        Tue, 26 Nov 2024 01:22:12 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732612932; cv=none;
+        d=google.com; s=arc-20240605;
+        b=X9djpU6UZN8VSIYhxJZ2yotwUy2Nwet1WExnL6UbCJawRt8+ysmJfS6i9bai8VCeLE
+         beapWFDVcM74OxD5mvYEaR48xzIySgkCbnQFc12jITQYUo1qBRu3T41gZaEIArIGm7Vu
+         fUZczNI/hfmkF5N3gizYt+egteP0vccwjuSrbFFPaGdAvDUzJoVbe4T0odv3T5nuuAne
+         A+FkZmWFMSbQmq4fQwIspta6MZ4oA1X1FbVNMo/NGzi95eMOVFH7Ayb90arieunRnhPO
+         ZfdBRvqSvi/xfZNOtpf3nK8HVfdI7Da0a8359iMFOFBG/ClK2insrn3ZUBz7o6I43ohf
+         emtQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=bV6WKBomAk57LMZP+oYgluzxRmI2ySEYymovlITqvn0=;
+        fh=Mj6jdozoQV7xYz5xHAQqUn1IWgUP2raKzm6eAbHRDqE=;
+        b=lCv3BTlkf6LTG+b98mk9hgEiCd9shFF1/ShdhoX6vbspY4v/aP/WmvVKXEQS1VmRM5
+         CAbnO2kUQjYYdOZHc9VE/UxAu4KnubXXNyp48eEzda3tyd6+VWa1Ys/14p4tX77fmJpY
+         LJvBU3M60csQb6lWaSGJILnj8EmXFvb4XyI/3V410JkkMdwCXxKdliBGOXqIgLPGCVmX
+         Vo4Ri44faqaHTyL1QctXJ2FPsyhPNEwnqV6++jUwPXnSnUyFDtH8sXJpdpQA0mIXWGkF
+         Hka4C19/WIXLyERAO+sNvn/ZeQpWPch5VaUAZlK/Lkv/EAbSCpSd92whiQugbNoAP4Us
+         xwKg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=gfhADKIS;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5d01d3fc9e6sor2535322a12.9.2024.11.26.01.22.11
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 26 Nov 2024 01:22:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=gfhADKIS;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732612931; x=1733217731; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=bV6WKBomAk57LMZP+oYgluzxRmI2ySEYymovlITqvn0=;
+        b=gfhADKISDgV5pGjSfreIDHsyYtyjlraunDHQ9L115Du96wcCG+loa6S+LHThfJkW7G
+         UBgqeT8lCU6k1d2zFa4TpMeJSnvQjnDdQrAIgijqJg8w6oTzYwvVnxRJhvpeG0tvkDy3
+         OLQpmushB3clAYpzcG6QlT9hdb/WOJer7r/NErT6wOROvxtm2AssG5BPO0RlWKfJCeLQ
+         R7WpTehxUdvW9oMQ0lkQX8C1NcXIm3g2HE2jWTFXi3wUC6s3JVu51rSTxq/qxuJRaTD4
+         bpr7qf7Z0FnkphF6jcLEUxPKx1BIiDMJY1JtTPk4hul/2Sos3aGMudiVnnNBacRJaCmp
+         Y2OA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732612931; x=1733217731;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=bV6WKBomAk57LMZP+oYgluzxRmI2ySEYymovlITqvn0=;
+        b=degYi8m8QTtT7INlK2YMlzrldlMmPxWtURN+DbP32uwQpBCv66VKbBRo+qw3ZPjLl5
+         SHNz6XfVXdj2lDepTYY7u+lc7oZofCQ0AROz6VHplr6RyEtOhPGm2bLRlL+RCoRsmdyq
+         rvpyJCE17bR+xFFtEF2C7Gm2X7ye1oB4dPDGMXN/hFzGjeZA7/VoTOl08NGAmy4VIykd
+         ucDwmteio7wqHFGP3kSkAUVI48azJduqRca1+/TSauwRbgjZagKnxtMZHWnxLuXZwEpU
+         xQ27KnDUXFXYSUisbowOE36snebdlNSK9m5dm46Ap28TVBZ20+bvvw0CFLhptpwEBZfa
+         Hm6Q==
+X-Forwarded-Encrypted: i=1; AJvYcCUael0h4dqLbKeYv6VO0p+t6CG787SuQTl7fxtL+g1+BzJd1g6RGJ7idd/qNOlrzDNiFNPhkYSvdIYUJo2K49SKbRwvDQ==@gmail.com
+X-Gm-Message-State: AOJu0YyTv5H3JOXYfgNUDmRU8PuX63pNvWrvYkRYKXxAegRUx3FwLW1X
+	YU8M9EXENUBn+J+SBJ4ohUnYImx9SgQVy/DhuKdykk4amc+DFtp5ZceuHk+dfaqnVsS9VR4a8cS
+	7CdO3EAFSI0ZIbnhchSdgaSQZNkw=
+X-Gm-Gg: ASbGncsLYRR/o/JcbODa0tDmhZsGmGuj5WW8WDdyIZZ7ySONEqlHOaRP5dEeN10LYFd
+	dPPevbKkJHLAi1NoNso10f8m1TgqqQW0=
+X-Google-Smtp-Source: AGHT+IGEYnqfrLiI9OvLo4AhDBloaDh1v4Ezdus11c2a14nvpZG19+554/lplv9Q7VPws9jNSW1cIIEkzalPWHquntE=
+X-Received: by 2002:a50:a412:0:b0:5d0:68b1:6478 with SMTP id
+ 4fb4d7f45d1cf-5d068b164aemr2215806a12.27.1732612931461; Tue, 26 Nov 2024
+ 01:22:11 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Tue, 26 Nov 2024 01:22:00 -0800
+Message-ID: <[removed]>
+Subject: Payment Notification
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000502ef50627cd62a5"
+Bcc:[removed]
+
+--000000000000502ef50627cd62a5
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ UNITED NATIONS PAYMENT RECONCILIATION OFFICE
+AMERICAN QUARTERS, TEXAS USA
+
+Payment Notification
+
+Attention: Beneficiary,
+
+This is to bring to your notice that the United Nations Secretary General
+Ant=C3=B3nio Guterres
+has deliberated with the World Bank Group President Ajay Banga for a
+compensation payment
+of Five Million US Dollars (US$5,000,000.00) to scammed victims from Asia,
+America, Africa
+and Europe.
+
+Meanwhile, your name and email address has emerged as one of the lucky
+beneficiaries.
+To enable us start processing your payment, you are hereby advised to get
+back to us
+as quickly as you receive this email for quick release of your
+$5,000,000.00 to you through
+our paying bank.
+
+
+Yours faithfully,
+
+Lance Gooden
+Representative Coordinator     |    [removed]
+Texas Office, USA
+...........................................................................=
+.................................
+NOTE: If you receive this message in your SPAM/JUNK folder, that is because
+of the restrictions implemented
+by your Internet Service Provider, we urge you to treat it genuinel
+
+--000000000000502ef50627cd62a5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">=C2=A0UNITED NATIONS PAYMENT RECONCILIATION OFFICE<br>AMER=
+ICAN QUARTERS, TEXAS USA<br><br>Payment Notification<br><br>Attention: Bene=
+ficiary,<br><br>This is to bring to your notice that the United Nations Sec=
+retary General Ant=C3=B3nio Guterres<br>has deliberated with the World Bank=
+ Group President Ajay Banga for a compensation payment<br>of Five Million U=
+S Dollars (US$5,000,000.00) to scammed victims from Asia, America, Africa<b=
+r>and Europe.<br><br>Meanwhile, your name and email address has emerged as =
+one of the lucky beneficiaries.<br>To enable us start processing your payme=
+nt, you are hereby advised to get back to us<br>as quickly as you receive t=
+his email for quick release of your $5,000,000.00 to you through<br>our pay=
+ing bank.<br><br><br>Yours faithfully,<br><br>Lance Gooden<br>Representativ=
+e Coordinator =C2=A0 =C2=A0 | =C2=A0 =C2=A0<a href=3D"mailto:[removed]
+n-payment.com">[removed]</a> =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0<br>Texas Office, USA<br>.....................................=
+.......................................................................<br>=
+NOTE: If you receive this message in your SPAM/JUNK folder, that is because=
+ of the restrictions implemented<br>by your Internet Service Provider, we u=
+rge you to treat it genuinel </div>
+
+--000000000000502ef50627cd62a5--
+

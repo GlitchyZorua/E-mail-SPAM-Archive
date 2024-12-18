@@ -1,0 +1,211 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:2314:b0:4a6:b479:dd26 with SMTP id fr20csp331916vqb;
+        Sat, 23 Nov 2024 08:34:18 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUl9X7AU5eR8Flm/zpNH/LmaEc0YUCSW9zE0PjlWdJh8GnF5I7ampTTovO9DCvxNe1xjKPUa6RZaQTUPTgbP2zLxz4WQQ==@gmail.com
+X-Google-Smtp-Source: AGHT+IG5AkUhCZD+TvELuSX4zdHMcDQFCwpNyxyVpEFr2/HDyPXwJcOkQq3pqAIBJRs9GWcll62D
+X-Received: by 2002:a5d:5f4b:0:b0:382:4a1b:16de with SMTP id ffacd0b85a97d-38260b6b627mr6789275f8f.21.1732379657819;
+        Sat, 23 Nov 2024 08:34:17 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732379657; cv=none;
+        d=google.com; s=arc-20240605;
+        b=YrhtWjl3Lg1ikEZEggI6an8HBIfYwdU4U9prMYnxwNfaAGmq5Jp1viaDUoJk7ay1iQ
+         RhEHN4Z+6FLnnlwarFIPrhtNGV3JiIP24l/z0FW6zYUznOHuEonyYkfRcHeMLbCQE1L4
+         aF25AQtKtTkYSo/vtIT7IoJy/BE28MxmtGFJqDEKGb6NF9+2gJ6My3vCl9Lc4GC7mPXD
+         lAzGK7E1zrXnmXozRlK+O8l5KLnnjfxYWKwIkTWPDNU4GiXPrHfoqn0F4rKU+o6jTLfe
+         YRENx9mq8co6CnUPpKyWM1dyeHwoyYutgHN0rji8gJt/17ZrEuGrRlkYbwSmczOhYqDV
+         GeCg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=subject:from:[removed]
+        bh=OE/4VD5GieQ7e2z4FFJ56F+Qlive56HvN15m7cUo8YI=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=gd+qolKySPO0TfsM4YxjKLO3HlcSuoSCfCIbY2/swcoElM+hdlTNFysDaZE1rKBU8e
+         2whUgzkJyCH3N+0EjUWChQ5BIMkRJnLDK1YzR9xwvhI0MPeRZu2zaegVPrQXms900v7j
+         8i/FDl0E2K4qWHehSXCAJaL2/EP5jpmAfWUHIUNpIeto1hBdB60szvlVhlSSqcKwju5P
+         GWOlBF/uSjcOfpd4DsdmO06qeIQumdhoLFCm1sEkPe/lwN1MVPGaOwKXIrc+DdR4HveI
+         P0agz5MCMNRdcfy7+LmdUWbGNQHa0LXMfBS1MaRKk12cJqq3LEmwRaAzD8OvxVc9VvSf
+         O3rA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of [removed] designates 202.162.241.48 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=jetking.com
+Return-Path: <[removed]>
+Received: from smout93.netcore.co.in (48smtpout.netcore.co.in. [202.162.241.48])
+        by mx.google.com with ESMTP id ffacd0b85a97d-3825fd27edfsi2869053f8f.394.2024.11.23.08.34.13;
+        Sat, 23 Nov 2024 08:34:17 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 202.162.241.48 as permitted sender) client-ip=202.162.241.48;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of [removed] designates 202.162.241.48 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=jetking.com
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 3F3EB6C02B9; Sat, 23 Nov 2024 22:03:11 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 894B46C022D; Sat, 23 Nov 2024 21:55:33 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 81A2E6C01C8; Sat, 23 Nov 2024 21:52:48 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 4E5E66C01E2; Sat, 23 Nov 2024 21:49:51 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 989D56C005D; Sat, 23 Nov 2024 21:35:23 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id F208E6C0411; Sat, 23 Nov 2024 21:30:23 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id E838B6C0502; Sat, 23 Nov 2024 21:31:21 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 2D5A46C03D7; Sat, 23 Nov 2024 21:20:22 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id CEED96C0510; Sat, 23 Nov 2024 21:21:43 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 1BD9B6C02FB; Sat, 23 Nov 2024 21:17:03 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 86AC96C0260; Sat, 23 Nov 2024 21:05:26 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 2BA906C0271; Sat, 23 Nov 2024 21:00:24 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id C5E046C05B6; Sat, 23 Nov 2024 20:55:26 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 85DA06C0336; Sat, 23 Nov 2024 20:58:14 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id DCD4E6C02E9; Sat, 23 Nov 2024 20:45:27 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 69E816C048D; Sat, 23 Nov 2024 20:40:26 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 3F8716C01C9; Sat, 23 Nov 2024 20:35:28 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 7C1B76C045F; Sat, 23 Nov 2024 20:30:25 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 6CF276C042A; Sat, 23 Nov 2024 20:25:25 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 35DF56C0AFE; Sat, 23 Nov 2024 20:20:25 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id B154E6C067B; Sat, 23 Nov 2024 20:15:27 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 82D796C046A; Sat, 23 Nov 2024 20:10:26 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 362956C0C17; Sat, 23 Nov 2024 20:14:21 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id DEDDA6C094F; Sat, 23 Nov 2024 20:00:27 +0530 (IST)
+Received: by smout93.netcore.co.in (Postfix, from userid 89)
+	id 80F1F6C0C3E; Sat, 23 Nov 2024 19:59:45 +0530 (IST)
+Received: from smtpinr1.netcore.in (unknown [202.162.231.155])
+	by smtp33-47.netcore.co.in (Postfix) with ESMTP id 23E1D2EDA1E;
+	Sat, 23 Nov 2024 19:54:37 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp33-47.netcore.co.in 23E1D2EDA1E
+Received: from webmail.jetking.com (unknown [202.162.231.2])
+	(using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by smtpinr1.netcore.in (Postfix) with ESMTPS id BD62C3A0A53A7;
+	Sat, 23 Nov 2024 19:54:31 +0530 (IST)
+Mime-Version: 1.0
+X-Intloopheader: 0
+Date: Sat, 23 Nov 2024 14:24:31 +0000
+Content-Type: multipart/alternative;
+ boundary="----=_Part_462_283599416.1732371871"
+Message-ID: <[removed]>
+X-Mailer: AfterLogic webmail client
+From:[removed]
+Subject: Contact Barrister Carlo Palermo Through Email for Your Payment
+ Release
+X-Priority: 3 (Normal)
+X-Originating-IP: 197.211.59.104
+X-SMTP36-MailScanner-Information: Please contact the ISP for more information
+X-SMTP36-MailScanner-ID: BD62C3A0A53A7.A742C
+X-SMTP36-MailScanner: Found to be clean
+X-SMTP36-MailScanner-From:[removed]
+X-Spam-Status: No
+
+
+------=_Part_462_283599416.1732371871
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Attention Friend,=0A=0AMy name is Sonia Gardner, I am a 62 year old U.S c=
+itizen, I live in New York, New York. My Address is 255 West 84th Street,=
+ New York, Ny 10224, USA. I'm thinking of moving because now I'm a wealth=
+y woman, I was one of the scam victims who participated in the Fraud Comp=
+ensation Awards Program in the United States and Europe many years ago an=
+d they refused to pay me. I paid over $32,500 to a scammer while in the U=
+SA. to buy it all for the benefit so I decided to travel to Avellino, Ita=
+ly with all the compensation documents and I was told to contact Lawyer A=
+dvocate Carlo Palermo, a member of the Fraud Compensation Awards Program,=
+ I contacted him through Email and he explained every detail to me. He sa=
+id whoever contacted me now is a fake Pretend, he's the only one assigned=
+ to compensate me.=0A=0AHe took me to the bank to claim my compensation m=
+oney, right now I am the happiest woman in the world because I have recei=
+ved $7,500,000.00 in compensation (Seven Million and Five Hundred Thousan=
+d Dollars). In addition, Barrister Carlo Palermo shows all the informatio=
+n and a list of those who have not been paid and I saw your name and emai=
+l address as one of the benefactors. This is why I decided to email you t=
+o stop dealing with those scammers. They don't have your money. They are =
+just extorting money from you by trickery. I would advise you to contact =
+Barrister Carlo Palermo now for assistance. You must contact him directly=
+ through the personal email address below.=0A=0ABarrister: Carlo Palermo=
+=0AEmail Address: [removed]=0A=0AYou must stop dealing with scam=
+mers who contact you by email and phone saying that your money is with th=
+em. It's all lies and tricks that they only take advantage of you and the=
+y will continue to steal your money until you have nothing to show.=0A=0A=
+The only money I paid after meeting Barrister Carlo Palermo is =E2=82=AC3=
+50. This is for documenting and working paperwork only please note that s=
+top contacting scammers online or via email again. I suggest you contact =
+Barrister Carlo Palermo, he will help you transfer the winnings $7,500,00=
+0.00 in compensation (Seven Million and Five Hundred Thousand Dollars) to=
+ your bank account. Please stop dealing with those scammers all they do i=
+s ask for more and more money to complete your transaction which are all =
+deceitful lies=0A=0ABest Regards=0AMrs. Sonia Gardner=0A=0AAddress: 255 W=
+est 84th Street, New York, Ny 10024, United States=0ANOTICE: YOU ARE TO E=
+MAIL THE BARRISTER DIRECTLY TO HIS PRIVATE EMAIL ADDRESS WHICH IS cp38266=
+[removed] (mailto:[removed]
+
+------=_Part_462_283599416.1732371871
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8" /></head><body><div data-crea=3D"font-wrapper"=
+ style=3D"font-family: Calibri; font-size: 16px; direction: ltr"><br><br>=
+<div><div data-crea=3D"font-wrapper" style=3D"font-family: Calibri; font-=
+size: 16px; direction: ltr"><font size=3D"3" face=3D"Verdana, sans-serif"=
+>Attention Friend,<br><br>My name is Sonia Gardner, I am a 62 year old U.=
+S citizen, I live in New York, New York. My Address is 255 West 84th Stre=
+et, New York, Ny 10224, USA. I'm thinking of moving because now I'm a wea=
+lthy woman, I was one of the scam victims who participated in the Fraud C=
+ompensation Awards Program in the United States and Europe many years ago=
+ and they refused to pay me. I paid over $32,500 to a scammer while in th=
+e USA. to buy it all for the benefit so I decided to travel to Avellino, =
+Italy with all the compensation documents and I was told to contact Lawye=
+r Advocate Carlo Palermo, a member of the Fraud Compensation Awards Progr=
+am, I contacted him through Email and he explained every detail to me. He=
+ said whoever contacted me now is a fake Pretend, he's the only one assig=
+ned to compensate me.<br><br>He took me to the bank to claim my compensat=
+ion money, right now I am the happiest woman in the world because I have =
+received $7,500,000.00 in compensation (Seven Million and Five Hundred Th=
+ousand Dollars). In addition, Barrister Carlo Palermo shows all the infor=
+mation and a list of those who have not been paid and I saw your name and=
+ email address as one of the benefactors. This is why I decided to email =
+you to stop dealing with those scammers. They don't have your money. They=
+ are just extorting money from you by trickery. I would advise you to con=
+tact Barrister Carlo Palermo now for assistance. You must contact him dir=
+ectly through the personal email address below.<br><br>Barrister: Carlo P=
+alermo<br>Email Address: [removed]<br><br>You must stop dealing =
+with scammers who contact you by email and phone saying that your money i=
+s with them. It's all lies and tricks that they only take advantage of yo=
+u and they will continue to steal your money until you have nothing to sh=
+ow.<br><br>The only money I paid after meeting Barrister Carlo Palermo is=
+ =E2=82=AC350. This is for documenting and working paperwork only please =
+note that stop contacting scammers online or via email again. I suggest y=
+ou contact Barrister Carlo Palermo, he will help you transfer the winning=
+s $7,500,000.00 in compensation (Seven Million and Five Hundred Thousand =
+Dollars) to your bank account. Please stop dealing with those scammers al=
+l they do is ask for more and more money to complete your transaction whi=
+ch are all deceitful lies<br><br>Best Regards<br>Mrs. Sonia Gardner<br></=
+font><div><font size=3D"3" face=3D"Verdana, sans-serif">Address: 255 West=
+ 84th Street, New York, Ny 10024, United States</font></div><div><font si=
+ze=3D"3" face=3D"Verdana, sans-serif"><br></font></div><div><b><font size=
+=3D"3" face=3D"Verdana, sans-serif"><font data-olk-copy-source=3D"Message=
+Body">NOTICE: YOU ARE TO EMAIL THE BARRISTER DIRECTLY TO HIS PRIVATE EMAI=
+L ADDRESS WHICH IS </font><a style=3D"cursor: inherit;" href=3D"mailto:[removed]
+[removed]" title=3D"mailto:[removed]
+" id=3D"LPlnk968380"><font color=3D"#cc0000">[removed]</font></a=
+> FOR A FASTER RESPONSE </font></b></div><div><font size=3D"3" face=3D"Ve=
+rdana, sans-serif"><br></font></div></div></div><br></div></body></html>
+
+------=_Part_462_283599416.1732371871--
+

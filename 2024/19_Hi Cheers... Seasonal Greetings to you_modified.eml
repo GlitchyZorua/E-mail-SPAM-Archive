@@ -1,0 +1,137 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:2314:b0:4a6:b479:dd26 with SMTP id fr20csp116100vqb;
+        Sat, 23 Nov 2024 00:34:25 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCWN95Wg1Kkhpb6eJ/ITbr5ZpeCi0m0r8zKf5RShoD2b8F499tZUxFVfFJReIPoevNMEPETfTnHN6Mse0q70TBcyF4I1vA==@gmail.com
+X-Received: by 2002:a05:6214:27ee:b0:6d4:1e43:f3a0 with SMTP id 6a1803df08f44-6d450feb18bmr75391736d6.27.1732350865306;
+        Sat, 23 Nov 2024 00:34:25 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732350865; cv=none;
+        d=google.com; s=arc-20240605;
+        b=dMXYs6YOtBmfmBjoNVzRgGTzbQirkdSDOPFqfb6PCcZxZS4oCsF+XbqtMk2wRzKgpA
+         mGkPJd1HF17sc/a3Vqhs1t0G7r2mPHYHUr6zBC2qfJUzeSWbHQbc/SBhBzdxmoxfloJm
+         m1wRJf018YMQ9CgH1JRQqUKIF7ADgt158mPet9L4U/lWGLUm5Jvr1CxZJe2/1QEQkuyX
+         G8UpZuztxkFk6M5eLsogXEFAyN/8ohJFBRkizBhV/0BXOyzhPx0o3RtwmK/5Car6HbEV
+         QgraJQzFe7Vg2UjcHOspXQ42oQ+7yq2yeHmhxSEimI70Gt4D6cBzatfxayvlSnT0PbIM
+         +O8Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=Bw/uVxC4QNGl5R16EQuFHomYQny/oRivt4scKv3M58o=;
+        fh=rltzVThSvjC4MSwN69v2DYYh2j3W0KUxiTh5ZrbH9+U=;
+        b=WJyz6BTbUMGChWVUNHTL2FG9X67/kAU7hOUPSDtUaM/9vHxNNTvmq4MZf8g0lbHqWS
+         +RXyA4+N9xqhaL62Rh6K/5A3IBFFb4sxlxMw0UTaZt2ZM95cdWnLriba8upciXfMP53M
+         aDxEYHDo0jLSvF1jpFFfflZRMxHEPH75Banm4np6wu0WfxeWMinkiSD1QLAUK5i+Z1hA
+         eaGj6YMhdPWevuN5P7e2IciuawCk2alFW6HGjZV0qO+pS950XCDZ4fbPsKD2sxiHxue5
+         fix5C2Zm6hVKzWNr/xWOLNHq/uw82vQiXyQonQIbybNTr2/ShvLo3x2zKKuJOVq5GsUs
+         8+cA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=mRQMhgwj;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id af79cd13be357-7b5141528b1sor253118585a.16.2024.11.23.00.34.25
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 23 Nov 2024 00:34:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=mRQMhgwj;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732350865; x=1732955665; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=Bw/uVxC4QNGl5R16EQuFHomYQny/oRivt4scKv3M58o=;
+        b=mRQMhgwjEzORm5DjbcKmkjEc5UfiCaiPmr7aZ2DMEgSD3yANM6c13cUH4C6srm+xWR
+         C6cDdmDkZ2QTCRH5+AFezWxpsZDp9DYmVZfaMUJwfEu6fuEYTl9IVFsxtv7bWonr0vj4
+         Ge3Y1e4kW/ktKaOJySL05GxaVSfJyj3flmdjYjl45CrzXRGdYuHQpaRosax4XZ31DOXc
+         4YNlgzIX2UKQGTisbqPklV/XszL1KzoN+UAOxOHbKA8n4P9cC6PZUIU6xvdB00lw4+Mi
+         1ktKGaNUNe/4XB98oq6LxHCCmXuexnWADAlSuK5ANqZHbVzj9Mt5CUrxwt5j1SXmvrdT
+         RKhw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732350865; x=1732955665;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=Bw/uVxC4QNGl5R16EQuFHomYQny/oRivt4scKv3M58o=;
+        b=hlRCyVuMOKcPoZn7VLeZuJHoQIRvBhGUCFV8zxSSjuU/FNqP5JXi8DI11xIYeC+Gp9
+         XRaT7nePB04jhFsbdQL8w33gi+A9yJHhxQ4oQOT4UajU1INCD3+/pk3+THyWV1JtVfsn
+         I9LoBRDvJxIZb1L4gFUtWklWoC5OUOvTvKplrExVqealLHaa+/EKLZHiwUAdh42TMBEW
+         XnwVcAO+yuyTieX77k/PdRU4dyufI6iI76ULAtsuRRNMyQDY/JK2Mu/koalfCM/qCsuF
+         mX531LF3M/4jeM+p21Zl9fxEACTznMZJEVQjTDJgqYHKmDogJtYjh2xHVsMl/rtNBmoC
+         Z7Rw==
+X-Forwarded-Encrypted: i=1; AJvYcCWSLmyNlT6Fu7L42byhR/zz0O8E47fOhJjSkViJIK2kZU6BMtjuyQZQR30BBVhT5rV2ZJDr7WuthXGk5s774oJ7aRjBiA==@gmail.com
+X-Gm-Message-State: AOJu0YyeugaLLgsmTOWI80Wk2SC5b0fXdarbRAHh5iY89uNgW+8hhnz0
+	6wkvrv4nnMyQlDb547U1f4nzvrg7orOsOu9Zxc9vgij4mLxmVOmEnwbmwRKGTHOEt3+m+OHNT9t
+	87JguBKbzlLq21MzvcRO6QFcSnos=
+X-Gm-Gg: ASbGncvmVl7qJ89kIZHvp3hnClKxfpkxC1d5aGYNhlwKNz3+HqKsfUazfbJZsYoQwYq
+	CPiowJSfbyZ7YJgWQrZJDHz0uFeY1iT0QbawfTzX4WRXcCmWjblDrkZYYTThtVVeW
+X-Google-Smtp-Source: AGHT+IHLgkmEj5N04/Yf0AWQCqSDxwqTJSf+biVWNTuKhh40opGs0F/pO9Xhr04iWeQkdeuF2voOFpJETivp5rRbjgQ=
+X-Received: by 2002:a05:620a:284b:b0:7b1:1524:53fb with SMTP id
+ af79cd13be357-7b5144e2869mr562605485a.2.1732350864876; Sat, 23 Nov 2024
+ 00:34:24 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Sat, 23 Nov 2024 00:34:12 -0800
+Message-ID: <CAEDCX2NP=[removed]>
+Subject: Hi Cheers... Seasonal Greetings to you
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000ed6ea00627905d95"
+Bcc:[removed]
+
+--000000000000ed6ea00627905d95
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello Dear,
+
+I=E2=80=99m downsizing and looking to give away my late husband's Yamaha Pi=
+ano to
+anyone who would truly appreciate it for free. The Yamaha Baby Grand Piano
+GC1 model used to be owned and played by my husband who passed away last
+year; the dimensions are 161cm by 149cm=E2=80=9D. It was last tuned sometim=
+e last
+year before he passed. She is about a year old and in an impeccable
+condition. If you or someone you know would be interested in receiving this
+instrument don't hesitate to contact me please.
+
+Warm regards,
+Stella Jackson
+
+--000000000000ed6ea00627905d95
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p style=3D"margin-right:0in;margin-left:0in;font-size:12p=
+t;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">Hello=C2=A0Dea=
+r, </p>
+
+<p style=3D"margin-right:0in;margin-left:0in;font-size:12pt;font-family:&qu=
+ot;Times New Roman&quot;,&quot;serif&quot;">I=E2=80=99m downsizing and look=
+ing to give away my late
+husband&#39;s Yamaha Piano to anyone who would truly appreciate it for free=
+. The
+Yamaha Baby Grand Piano GC1 model used to be owned and played by my husband=
+ who
+passed away last year; the dimensions are 161cm by 149cm=E2=80=9D. It was l=
+ast tuned
+sometime last year before he passed. She is about a year old and in an impe=
+ccable
+condition. If you or someone you know would be interested in receiving this
+instrument don&#39;t hesitate to contact me please.</p>
+
+<p style=3D"margin-right:0in;margin-left:0in;font-size:12pt;font-family:&qu=
+ot;Times New Roman&quot;,&quot;serif&quot;">Warm regards,<br>
+Stella Jackson</p>
+
+<p style=3D"background-image:initial;background-position:initial;background=
+-size:initial;background-repeat:initial;background-origin:initial;backgroun=
+d-clip:initial;margin-right:0in;margin-left:0in;font-size:12pt;font-family:=
+&quot;Times New Roman&quot;,&quot;serif&quot;"><br></p></div>
+
+--000000000000ed6ea00627905d95--
+

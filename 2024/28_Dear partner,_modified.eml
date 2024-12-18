@@ -1,0 +1,123 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:280b:b0:4ab:72de:5861 with SMTP id gw11csp958583vqb;
+        Sun, 1 Dec 2024 09:43:09 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCV2TouyXjfF/bYKqG26nD91ck9om7iZ63rEwa2x2enXZLXsLrE2l0Ec/mgQOHStZdS+BJOT/Bcr/nzkijICxhxEy6uniA==@gmail.com
+X-Received: by 2002:a05:6a00:230b:b0:71e:74bf:6b1a with SMTP id d2e1a72fcca58-7253011ef5amr24805715b3a.16.1733074989077;
+        Sun, 01 Dec 2024 09:43:09 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733074989; cv=none;
+        d=google.com; s=arc-20240605;
+        b=LdgtMxlCiSoBTOvpIUiMShlKJzGUvtN4/GC+pagnpMmG9iSAME8T0mv8mGBKN81972
+         nHiyaCjEKDG+RSGvfVwgKK+AZEvg6XJBxKUART2DULkBdXiScN9eMGAuDGxZIOjDT8FK
+         JU1y2Z/FJ8BEP8dXfUluyHNKRtw8kT+C44HILEhsLa0KEKS4UyUIUYZdi3+T45uOqi9J
+         b6b+w83F/ApWRBbdB2GepCp6zKlwVmYoj1z37nsBrzdhwcUleGztsai+UTOz1be0yN8z
+         gLfM3ej+HLc/4bXc5v1rqC5iTH9LRyVSeEKlbCbpgVrG+UbTlYF7ftG0QpmwaRie4K7U
+         gRDw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=yiyq41sqfKWPQzMSPAHyzwHrQld50o2qR8h+Aff0Dj0=;
+        fh=4LvgLU7uhxidQmwJSoS1jw7g6FWhavAhnrYgAcQFPeQ=;
+        b=DyHDYyjMb9RYk3bfe26wKtK4a7FXmwEXXQRnaRt5YEGz22nzoPiGFURIG2oYSuMYqw
+         joC/cO3q1lkGDS3P3ZplfgKIFsRcFt/JaB4eQhzzIlo/RAZphWZ+Q00NqXocBBxeuuw0
+         7abTDupN6JeTgA/TeZJNItJQomZynLY6AyQX0V8ba5gTdn14925gyJAmB+jszgoYDEVk
+         drLq+PlkFEqXCiNmMen6b4WWq1R1laDizU5kIVqfI6G1dxUH0srntw6Aopjk9Llmd3Y5
+         dI1LITTxlhTW1gDilRDxcofu8hlSXr9t96x5ybGhOTZNhJpOmmZua3JYhGi4ymEUq9Vc
+         TKTQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Peghw8ZR;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d2e1a72fcca58-72541771929sor4420445b3a.3.2024.12.01.09.43.08
+        for <[removed]>
+        (Google Transport Security);
+        Sun, 01 Dec 2024 09:43:09 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Peghw8ZR;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733074988; x=1733679788; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=yiyq41sqfKWPQzMSPAHyzwHrQld50o2qR8h+Aff0Dj0=;
+        b=Peghw8ZRxbGYA8Lp+W57h0ZDwwtYvAUNhXJ6mSQXslx2apejMXe8W7xDvZ7eez3zcs
+         QN0orLlXkcGBdDanRrWKn0hKE3P4RvEEBn1D9opZo1jZ6PQoYPOfo/Nkwlp+ms1kSVIX
+         8DAkH54EQ2ANsCVmnjIkFMg+jakOeBuWsmShe9++rRhHgAhDqAMN6lXB20Kx7YV0xtpw
+         IGkJzB/+7590PSF4TTN1DadvpZpvknzsp+i3yEx+CO20kkxa13p1oOaRmp5EEiUpq0qQ
+         olM8QG+hJsG50UaQJ+zZBWqLewD4DrRmXEMfou2Z7VjCqXJUfnPVfaq4dV1yu2HC4NNV
+         0RDA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733074988; x=1733679788;
+        h=to:[removed]
+         :from:[removed]
+        bh=yiyq41sqfKWPQzMSPAHyzwHrQld50o2qR8h+Aff0Dj0=;
+        b=IVxqmg1LUCzft0UtJYUn2EcW3htIIgtgCspOjs7Hp87DWm7ecCgL60yiJK1AwEikV9
+         f/B0kVnfY8wnP2Ho2S9pk5KruBRVhJE2snaLyTZoR3zlRX9wONazdUQQkyHW+XXI0PkU
+         rF6YMdyej2ewrWCLBAthRoMZxHDJXNdvQZgQjP+GKRsvn+QblzC3IqhMRcYaD0evhGBW
+         8Zl4lHpVSu4u7VrB21xLDX7xdmZl4y1n5z5P6iWTNS3kcMKf/nWfff9SMMc4aISfyZKI
+         A1Oqqh248eVpf0GU4QOfacIIkD5vq2L/feaPh+8g7Os1V7kcga7wh4lOheSz3jUzpDd6
+         LkUg==
+X-Forwarded-Encrypted: i=1; AJvYcCWQ7wh/A6T1d0XvCxZHdl5uS/gNnNgGp+Sm8zRELDnBX6c7YzaiYDBNChtfi6ZfiNvkVpAjjn4HW6oZCbSOMlXp3tjNIg==@gmail.com
+X-Gm-Message-State: AOJu0YwjPNsAGlbwxz43pv4JSxmCMkC5l98QmOzOJSsj0RruhmeWEQJt
+	aE+cx/0NLFDpiLw4lurhvZYD0N4hFdGt+eiv+vgvxSE2mLfNwXsZvl03wfCaZDKxDH6Rbugq475
+	WNS7xk0WKZ32dNet6Rqw8xgCmeAE=
+X-Gm-Gg: ASbGncvMC22iC3UIiTDZcOhvmXVSEEB3WvdNxuObkrdhfuZ6uKsKcGHFH1QnBU+6pXM
+	RvgU0Y02PVv3R4MbyslZMqjyCo4l7VDc=
+X-Google-Smtp-Source: AGHT+IGntuXrGILM7lEUSq+EfnB7DUswKIjCUxVMJX6oD49EUtZyQeW355MafTKUrAVM9Jxzl/ixT8JjCCizwBtzxqU=
+X-Received: by 2002:a17:90b:3908:b0:2ee:a58d:cd8b with SMTP id
+ 98e67ed59e1d1-2eea58dd022mr4672420a91.18.1733074987839; Sun, 01 Dec 2024
+ 09:43:07 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Sun, 1 Dec 2024 09:41:55 -0800
+Message-ID: <CAB_wAu9xHvW3wOy+bufptB5DYENXr=[removed]>
+Subject: Dear partner,
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000004fe1e062838f793"
+Bcc:[removed]
+
+--00000000000004fe1e062838f793
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*I am Mr.Ghazi Ahmed I am working with one of the prime banks in Burkina
+Faso. I have a business proposal which concerns the transfer of $18 Million
+United State Dollars into a foreign account.Everything about this
+transaction shall be legally done without any problem. If you are
+interested to help me, I will give you more details as soon as I receive
+your positive response. If you are willing to work with me, send me
+immediately the information listed
+below.Name=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6Na=
+tionality=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6Age=E2=80=A6=E2=80=A6=
+=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6Occupation=E2=80=A6=
+=E2=80=A6=E2=80=A6=E2=80=A6Mobile Telephone
+Line=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6Address=E2=80=A6=E2=80=A6=E2=80=A6=
+=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6ThanksMr....=
+.............Email: .............*
+
+--00000000000004fe1e062838f793
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><b>I am Mr.Ghazi Ahmed I am working with one of the p=
+rime banks in Burkina Faso. I have a business proposal which concerns the t=
+ransfer of $18 Million United State Dollars into a foreign account.<br><br>=
+Everything about this transaction shall be legally done without any problem=
+. If you are interested to help me, I will give you more details as soon as=
+ I receive your positive response. If you are willing to work with me, send=
+ me immediately the information listed below.<br>Name=E2=80=A6=E2=80=A6=E2=
+=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6<br>Nationality=E2=80=A6=E2=80=A6=
+=E2=80=A6=E2=80=A6=E2=80=A6<br>Age=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=
+=80=A6=E2=80=A6=E2=80=A6=E2=80=A6<br>Occupation=E2=80=A6=E2=80=A6=E2=80=A6=
+=E2=80=A6<br>Mobile Telephone Line=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6<br>A=
+ddress=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=
+=A6=E2=80=A6=E2=80=A6<br>Thanks<br>Mr.................<br>Email: ..........=
+...</b><br></div></div>
+
+--00000000000004fe1e062838f793--
+

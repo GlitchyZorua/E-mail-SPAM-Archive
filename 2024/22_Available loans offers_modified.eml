@@ -1,0 +1,114 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:2314:b0:4a6:b479:dd26 with SMTP id fr20csp1761913vqb;
+        Mon, 25 Nov 2024 17:14:46 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCX9fI3IDIqx92jPSfvzLabdlemnzRfXykAGC1tCz8BQrcu5EQ+LCXCusKl4HXRNllJ8DxQjngeUJYtA0ivL9XuAu+F7Vw==@gmail.com
+X-Received: by 2002:a17:90b:52c8:b0:2eb:140d:f6df with SMTP id 98e67ed59e1d1-2eb140dfe61mr17626818a91.1.1732583686010;
+        Mon, 25 Nov 2024 17:14:46 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732583685; cv=none;
+        d=google.com; s=arc-20240605;
+        b=HRMOE16yfXQYJ2hZWDdAqhhaCS40SGb+/yaX3ng5rOgmKmeM646DV5ViOOUPeBYOuV
+         Zc0I2bCCz7mU/qrbM2WqDI9pgcOApxooc3OgS+bmmgiP64XGJWyNWmwYFwKK8Gj/42Sb
+         j7H7cTAw3LtMFUzyfXSsecbdLeI6u2abMIpqXXlLABS8KnFy9pM9hxvubp8M6OlEuw+r
+         lVd9AkqWBpqGQn5gp7DXayqrmlJMTUAM6vpvgIg+gMzfdLP8TGV6nwSOKx3I7SLhoKL5
+         nNUtCNU4MejyMvQfNSNHsrg4bcJnyw4rOVWCiRasd9dkT+qQZDMMnisXUASjbWpew7I5
+         fpfQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=IMir7tzxW6z5rfsgukLSkaJm+s+2x4MoP+flF311rUM=;
+        fh=EQCCenKZcNuZnM7U4z244tI0gkc/I3UD1Z06DbnnoWs=;
+        b=i2QLKWTsrlrBSkR7TDhGXOLWiatJU5ABwn0wb+wDzTa9s56gg+o/IFNRzii3YTqD07
+         tLLwckCoLxXwa68KLPoXHPzNSWr1RYk6u8FEH+yQfnc564oigpDOt+jD9c+nsoSrxcHc
+         65X5SIl7PRHts6G8KoTFDWnvs841kvKFRvePPRtPUQtAfXSeCdEWDTuFScKAfixXRGWu
+         j5FkvfotMeZE/n0rICW9b4krFw65UMBfv+gdsZlThvVtO4E5j67FDWIZ/sMa+86H6nA8
+         vThNjxQ2tqZlwVeT/SwLL8DPpsMGnfn2gxFAnXZyxr588aIbeQsbhVJsyqVFjdt5AZuC
+         NLvQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=SgH4fIEA;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 98e67ed59e1d1-2ede5115040sor1286617a91.0.2024.11.25.17.14.45
+        (Google Transport Security);
+        Mon, 25 Nov 2024 17:14:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=SgH4fIEA;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732583685; x=1733188485; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=IMir7tzxW6z5rfsgukLSkaJm+s+2x4MoP+flF311rUM=;
+        b=SgH4fIEAMiKuNpzVQ1t4DoiC2quvlZnh7QCAyoFNUhBF66R83dnPGu55EdhJlUTBBc
+         zviKMlXaOjJsk64Xp6L7wjIpeAs/YRDcp8zyJZufnwA83QUT5TKeDvjeNfXdt7iXzRxv
+         jbxd+Ax5BYHAH198AJzwIvlIdmmmJSKdwTxWlpGI2YeeUzKzn8DyY3khaTMJV9bWyv6R
+         YusoOIQCnjqKhtUUxCPm36gMDmL/RMGA+4XJ4Q+Ccn39HPiMJ0IUQ8TP4XdUm8lbZcHd
+         AW3zMGbPECleW1J/kB3tNo3AZScoPyRDF56iDuXFRaG/UCSM//jiYB1yqVTMfcq3hvPj
+         ANSA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732583685; x=1733188485;
+        h=to:[removed]
+         :from:[removed]
+        bh=IMir7tzxW6z5rfsgukLSkaJm+s+2x4MoP+flF311rUM=;
+        b=iiRIzZW4Meyor3gMuKlSrz3o/0O08wy7sbqU1eewcha9xpmczPEVhM9hD6MU1M1U8F
+         ctiq0PcTel3WXBs8kmDgTJfUGueV4yGRO0eX+KCN2zQG6yi8sAwgj081krPYR9qqMPDo
+         sA7srmOYuw8rnqiX0xOjLfvc3VYOAaav6lurDyY7evoW92GbTDVnyI+JJ3pxfV3OKV9/
+         6MtuApp4cJ1zcnentsUPHQCrIkM2g+aO9vr0eIHdBHvTuYDfzITCd0DSF6jaICf0bjLd
+         hTtUrEqyz81UZ5YLyA9EYwZL/lbp599MZvXmcgQT210djVuyb2DocCz3rldRq6RC/s88
+         rpZQ==
+X-Forwarded-Encrypted: i=1; AJvYcCU/+P0z68n+EvWtS1bcnAOkSBFJ+ASPjVHn1SmboHqdnBaGind7G93jO7j5VIUFNrtJ/t/nIwc7xhmJ0++qSvkQE71NcF4=@gmail.com, AJvYcCWXYYjpAW1crXOZhucYsYDyBpgE4y+Cg7Fks2jF7Y5x+7S6vuNqlmkWQWkzuBUuniz8wTQlW2QPhGJVj0oi+1SkOjY=@gmail.com, AJvYcCXCHt7n2m5/yCPVZ7huIBjw/r9rQZ6ZjewQSwyKCm1J9h+O5b9e5nyVYHkUC9U1CpZrQCHb6Dpu//[removed]
+X-Gm-Message-State: AOJu0YwU1Kssi+RT5iLnaKsKxDaQU2PtTSIvMAw7UHm8a2fUbnbrovk1
+	ZA4RrZfEMnYnpGuSCNjZTbRruPs4uYh0QaPH8whaveva9iRYMBe80KuCiIsv0oFB1S/4Ec609Wl
+	32ThkgruTe0fj6+qPspzUvlzJAAM=
+X-Gm-Gg: ASbGncsZGL5KDKIUNFVAlfuiqofakepLTtOO58HZtkEPDjAL7/fwJeN+O22gSrg5T+J
+	AR1FNdhr34K1DD8fd8B0a53YOP8V+IJRRySjrFpKM0V2NRxTDujOqNBY3e5JjdPME
+X-Google-Smtp-Source: AGHT+IE19ONHiWBSW6i+b2/y0047vyH8eZv0tyRrVZBHCacuvF7cBLgI+18c+37g7kFVBL7qhrvz7Txl1Z9W6pJz50I=
+X-Received: by 2002:a17:90b:3805:b0:2ea:aa30:5edf with SMTP id
+ 98e67ed59e1d1-2eb0e024afemr18085893a91.5.1732583685470; Mon, 25 Nov 2024
+ 17:14:45 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Tue, 26 Nov 2024 02:14:33 +0100
+Message-ID: <CABk5W-xr=[removed]>
+Subject: Available loans offers
+To:[removed]
+	"[removed]" <[removed]>, 
+	"[removed]" <[removed]>, [removed], 
+	"[removed]" <[removed]>
+Content-Type: multipart/alternative; boundary="0000000000001dc7e40627c69307"
+
+--0000000000001dc7e40627c69307
+Content-Type: text/plain; charset="UTF-8"
+
+Hi everyone i am so happy that i can't keep this to myself, that is why i
+just want to use this medium as an opportunity to tell you all that i
+finally got my loan of $40,000 from Mr Tony Tek loan finances name Quick
+loans in hours. so if you are in need of any loan you can also contact them
+so that you can be happy too and Quick loans in hours is not a scam at all,
+they are honest and 100% legit, that is why i was able to get my loan. so
+if you also need a loan now, kindly contact them via Gmail on
+[removed] And be rest assured of getting your loan
+amount fully granted to you.
+
+--0000000000001dc7e40627c69307
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Hi everyone i am so happy that i can&#39;t keep this to m=
+yself, that is why i just want to use this medium as an opportunity to tell=
+ you all that i finally got my loan of $40,000 from Mr Tony Tek loan financ=
+es name Quick loans in hours. so if you are in need of any loan you can als=
+o contact them so that you can be happy too and Quick loans in hours is not=
+ a scam at all, they are honest and 100% legit, that is why i was able to g=
+et my loan. so if you also need a loan now, kindly contact them via Gmail o=
+n <a href=3D"mailto:[removed]
+com</a>  And be rest assured of getting your loan amount fully granted to y=
+ou.</div>
+
+--0000000000001dc7e40627c69307--
+

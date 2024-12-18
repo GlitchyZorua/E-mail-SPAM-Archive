@@ -65,5 +65,5 @@ function Process-AllEmlFilesInDirectory {
 }
 
 # Example usage:
-$directoryPath = "$directoryPath\2023"
+$directoryPath = "${PWD}"
 Process-AllEmlFilesInDirectory -directoryPath $directoryPath

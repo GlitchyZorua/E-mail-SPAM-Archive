@@ -1,0 +1,157 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a728:0:b0:4a6:b479:dd26 with SMTP id e8csp572617vqm;
+        Fri, 29 Nov 2024 06:12:28 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCWAJDuI5uo5zT0ea2lbcwtv1Qu3Q989mSDJuXQsGliGaZMQ98TcQW1fqmGzIhX/P3DivmDObKu/j80BURDh61+LXF4pXg==@gmail.com
+X-Received: by 2002:a17:902:f791:b0:212:1426:3291 with SMTP id d9443c01a7336-21501b5902cmr164726845ad.46.1732889547877;
+        Fri, 29 Nov 2024 06:12:27 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732889547; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EOv71/vPOTN4A0tR974Per5+mtxHRlaqOUluo7+oKfR1CHL+hIgWuTXZIecva5mcCg
+         dciBBm54rG1aI4jZgrzgiT/R3eNFOVyRFYl22OcCJEtXPc5S/tTjJNmWpQVKWKw4PfcO
+         263EiSPdCzrNR5ioZ7DdAE+45OrfLaNqvdIHT1SNU11E8lq6QG4Uv+L++I1YCxpcmR3w
+         Ij5q3/3tKMPGGppq2JnXs3v5i7cHm1Yr1yhGUCvIoiLQSEGcseU/5jspxPhfnfN8VZAT
+         8F8iv6U1t6op2tI9NQOTV1yaSYGn5LhrN0m9bQtoMsjb8aB9O9VymH6Yxb8cy0rqzQwt
+         b4eg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=ZwJ8Ynun9lVY5aKZddZl/kXJH+QGNsSJWiIXhDyz7UQ=;
+        fh=1nBPnjEpWazHnPDIA9+bIBfWieEf7gc3tE824iEgsOE=;
+        b=Iph3nWaM7KvZrApf7t9FWsu6gA4H77QX7kFvC33vJ9+m3QOnDVrAOTCsUIjGPQB3KG
+         Vb/KQS/atgAdI4getm5anbOVvj/NSVZCZvlZH+JIEHzOkiqPZ1tHcfcudrDI2WxzqcNW
+         IdbxeO/khbqDweN4QTH3vTm24lgC73ydaWzWeDQ6juUYo+W/aDWAHkNFPGVy2+q/7ZYx
+         12H8lL6uS8VVQyrLDJlNcLPOn8Xek5Y0pOUe3BgTZb+LvjIe0lhVT5DZ/xtRt/Akr2DC
+         6wzbQBko/DrnCsFXqQIPR/y9NDMlCsure+/0Qwc7hhyYyoUnwTgidNCf0PoqNISRhkTG
+         XibQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=lCMatCKm;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d2e1a72fcca58-72541765312sor2778408b3a.1.2024.11.29.06.12.27
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 29 Nov 2024 06:12:27 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=lCMatCKm;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732889547; x=1733494347; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=ZwJ8Ynun9lVY5aKZddZl/kXJH+QGNsSJWiIXhDyz7UQ=;
+        b=lCMatCKmrUzZrTQzgnsUV9WQ98Uu+8nJj1gMeICU18kVfdVP+SJoi6S8WR5LpnBVXT
+         2Bly+wvoZ0LftJqwAyDdrPQs0DkZwcufWno+L/rDXXmdJy1NhNsOks0Wrs0EvypoXJtj
+         k2t5Jum4YLfhdAjsNUpz/Xwn+aKGl3gAW+kcpr1GuUfnlLYH1vCd/pyw63UDccxD5N7D
+         /eu6sv2EuDT11dPTqen1MsIG0JfX+FqtFLnQC9g7UJWa95dPu7gsi9xFIB++HPMmVNZR
+         T8fPn3LY+u2xsEH4U0Yww4orHeRteghpgSTlgFWjo+efZat7TguIHb+64AonPna5NMj7
+         ShtA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732889547; x=1733494347;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=ZwJ8Ynun9lVY5aKZddZl/kXJH+QGNsSJWiIXhDyz7UQ=;
+        b=rzTm3lVUfx4nw3/o9qRlDkQRkNJrt5BYY3ftb6f5wso0AmU+TgIGnlrk0nMow9wYFg
+         9luH8vDOBnUiiXK8S/dT5el1tbBWzm++CHpcjl11cMM1YksLHS4FfEWsflJQX8Kcxua9
+         Ye58+zbOcEUysTo00L7RYDtPyd/PwAFNJTBZA1tgK1h+lXgRgoRadgETnrHOj8fq846u
+         Ggs+IP6UgOCw972YlzUM/nZceHV9dRMEXkBRBaNE24WSX9zz6IxNaovyECb+DvkyhV+c
+         nR/68IvJXgZUvP6YMt/J5R2MJVHl3jnC/micjhpLgjTIMPkMLB9q1p1f3J+W+MO7DEGU
+         XhMQ==
+X-Forwarded-Encrypted: i=1; AJvYcCWrUo5XqIjyTQIs3FEVIcAmQXgfLPI57qGfE2VAl3CwWrV4CFLj7cUf0M8Ekc3R03J/tvbnRllfHwPzLTBBNPMPV1Y49w==@gmail.com
+X-Gm-Message-State: AOJu0YyRbtVpwE/FbI+yaK04W83buz6l3Ru9ocZrUVKD46i0CXxcNli0
+	XrZWGzlNjKVOkY2MLCH3s6xZ1PMf7hV2lnbDNrjh9FoFCADRbcdgPEL1PRo8FmyfGwdgs4ulkXw
+	rIjIQVa889sH3vEm9/1pwqUg+VQc=
+X-Gm-Gg: ASbGncufgM7GiqN95hLssyWPFX1yMmwbBVfxYzDXloIK51wC27DrEJXEtZG/lA3fEjd
+	Afa/+U9SVJ2I1+kcAFUO6OV9wWg/I98Ucdg==
+X-Google-Smtp-Source: AGHT+IGgzHntYNikJE7Lm7XKNTH+r5BOb9aIcKxYQr5pAmGToFlInoexzF5xObo3h3VzvPWyvIOoj3NqXx5j3QY+Hqo=
+X-Received: by 2002:a17:90b:4e:b0:2ea:8d1e:a878 with SMTP id
+ 98e67ed59e1d1-2ee097e3367mr13231312a91.34.1732889546715; Fri, 29 Nov 2024
+ 06:12:26 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Fri, 29 Nov 2024 06:12:15 -0800
+Message-ID: <[removed]>
+Subject: RE:RE:RE: Help has come.
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000ddf96106280dc93f"
+Bcc:[removed]
+
+--000000000000ddf96106280dc93f
+Content-Type: text/plain; charset="UTF-8"
+
+Attn: Dear Fund Beneficiary,
+
+This is to notify you that a case file and payment order has been opened on
+your behalf after going through lists of pending contracts and contractors
+payment.
+
+It is so disheartening that you have been in communication with these
+offices and have also made series of unwarranted payments and still yet
+have not gotten your funds released and in this regard a special office has
+been created to look into the problems of why your full payment has not
+been made to you after all you have spent.
+
+We are rendering our full apologies and want to assure you that your
+payment will be made to you in full 100% as soon as your information is
+reconfirmed and in this regard we will need you to provide us with the
+following details.
+
+Your payment will be processed and paid to you through an ATM GOLD MASTER
+CARD issued in your name and your $10,500,000.00 USD will be credited to
+the card and delivered  to your provided postal address with the Pin
+Number,  to enable you to withdraw your funds from any Bank ATM Machine
+worldwide.
+
+FULL NAMES:
+SEX:
+AGE:
+MARITAL STATUS:
+OCCUPATION:
+FULL ADDRESS:
+DIRECT TELEPHONE NUMBER:
+
+Kindly forward the above requested details to the payment and processing
+officer Susanne Hoyer via email ([removed]) to have
+payment processed and your bank debit card mailed to you for account
+activation .
+
+Thanks and yours sincerely.
+
+Susanne.
+
+--000000000000ddf96106280dc93f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br>Attn: Dear Fund Beneficiary,<br><br>This is to notify =
+you that a case file and payment order has been opened on your behalf after=
+ going through lists of pending contracts and contractors payment.<br><br>I=
+t is so disheartening that you have been in communication with these office=
+s and have also made series of unwarranted payments and still yet have not =
+gotten your funds released and in this regard a special office has been cre=
+ated to look into the problems of why your full payment has not been made t=
+o you after all you have spent.<br><br>We are rendering our full apologies =
+and want to assure you that your payment will be made to you in full 100% a=
+s soon as your information is reconfirmed and in this regard we will need y=
+ou to provide us with the following details.<br><br>Your payment will be pr=
+ocessed and paid to you through an ATM GOLD MASTER CARD issued in your name=
+ and your $10,500,000.00 USD will be credited to the card and delivered =C2=
+=A0to your provided postal address with the Pin Number, =C2=A0to enable you=
+ to withdraw your funds from any Bank ATM Machine worldwide.<br><br>FULL NA=
+MES:<br>SEX:<br>AGE:<br>MARITAL STATUS:<br>OCCUPATION:<br>FULL ADDRESS:<br>=
+DIRECT TELEPHONE NUMBER:<br><br>Kindly forward the above requested details =
+to the payment and processing officer Susanne Hoyer via email (<a href=3D"m=
+ailto:[removed]
+ payment processed and your bank debit card mailed to you for account activ=
+ation .<br><br>Thanks and yours sincerely.<br><br>Susanne.<br><br><br><br><=
+br><br><br><br><br><br></div>
+
+--000000000000ddf96106280dc93f--
+

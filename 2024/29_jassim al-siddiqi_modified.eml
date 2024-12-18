@@ -1,0 +1,217 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:280b:b0:4ab:72de:5861 with SMTP id gw11csp1351003vqb;
+        Mon, 2 Dec 2024 00:56:02 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXAQG5MqIQz99ZG02qKq9qu2lO0WxXrFtWvfBmHZmNVroMQ50mu5nj8jkeeAtK4JMJSZruGAbTR4JkBlcJA7i+sTWEX+g==@gmail.com
+X-Received: by 2002:a05:6102:161e:b0:4af:5cd4:b081 with SMTP id ada2fe7eead31-4af5cd4b2d5mr17890882137.23.1733129762757;
+        Mon, 02 Dec 2024 00:56:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733129762; cv=none;
+        d=google.com; s=arc-20240605;
+        b=erJOz0wVjZmkwgiGO4xd0mMHtMH58XPzERP67phJ6RctQ+oC97Rp/fNeSqJKVIzFcY
+         eeuKLTZ9ZFPaNeN/etDwnM/ygxNSOXVasqZnifMu85kIlx/p5q55q5KTmZUqT7aXdeZA
+         a5KUmcpCEWhmxxmxr/zj91KDOevp8pLBk+TEtN78hlw+9BX54+IzpGf1stGiPJkEUPVD
+         oDlnwIGeueiu0h7NpmvLCpazN++5soXn6TJTEx4jEBKqPj9EISHx5GK7VBwbLZMBLn4F
+         Z0iWek47NNDEGTKC4fUKsoR8wzRzXFsrIpbYmGp4Cl+T3vTBvuUesLJhMMVH8VMWISfJ
+         GfPA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=go8Y+DVrCLxAvuzB04U9bMcf0MMkTk6FeV46jg54kXE=;
+        fh=RrEgX3Qym3O8Wp7uu0qUGzi4Qt2Jna0VXAkm79rwVIY=;
+        b=Ii1Fo+8iZ+0pyJ3UQfqehR+0jAGyK9mA15Jk/tKI5f8wDBKsDD5Agrf2u7V6MqIWsB
+         DWPNsfmDkKhuBRoJa0q0x7rYMzofIqgjedWIQTlyIgSSJ9zxi1KEGsbDutYCrZNA4EAE
+         buJj/ChVIv0Mmc80VcK/wTOjugM0E4qvOQz2nw8eDGUGgLiNuF6BCMKyc00dIsKkx43/
+         S80BjJFwMsFc66wsWm60OjCfYF92+U+Lx+5Q6tMJtQkkeZzbZBu4YNG39RtEmmk2xz6u
+         Lmn0mxibjaYa/OkxnJJWLGEyjyIKEm9wE3MhzepfBPCOQFgm2ApqxjdLLqmcgzxpxW3W
+         VFsQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MEicttH1;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ada2fe7eead31-4af58f0c163sor664943137.0.2024.12.02.00.56.02
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 02 Dec 2024 00:56:02 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MEicttH1;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733129762; x=1733734562; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=go8Y+DVrCLxAvuzB04U9bMcf0MMkTk6FeV46jg54kXE=;
+        b=MEicttH19KwzXfH7EY9RJ+Xqmp/oSq2C8qQpchsl84Vhb1nyOFAAL3y0wuAqiPEM9j
+         nvZta/xbdHfLfWHLh7hEuwvwAUGyjskPfBsGvBpBG/JJM+fZVmPjxTcC2M1RP74776oq
+         gZ4ujGm39dk3Yd7FfEkanOL+1uVwJTrBGDvpC/Ct5ow0dpQ9eNjZnaa+IuOBYELZyB84
+         r274c06dusqJfwzJY7TJzetcwsRBsi1JfDtKoVf+jSHKoIXMZ1AiJezPrHOpIrzxF1dd
+         khMVg7tlQaZJBHCUIzGg1g8Creq2Pmsx4so4pNK9qiDTCfQ6e3uI+M25enXeZrtqt+I1
+         dflw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733129762; x=1733734562;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=go8Y+DVrCLxAvuzB04U9bMcf0MMkTk6FeV46jg54kXE=;
+        b=qWlNG7vty4jvjzuai6clDtCpgS9neaDctwdM+KkIIFY3oDDmY9h3I7K6TWb86hLL6d
+         E2Jtq4mz5i3UefJva+43S0fFslPvWfOiNbNXIVdA8Gj71AXSdXaj2pSGNkdstOBYL8/f
+         i1uKQcgqqZbXVjcojTP2H8OH9AIxPjY8Hamy0vmqpojY5z8CPqH3oyuhP6ASuxOS3S7d
+         qNFi3FrCOZtxSCUwsufj6Uz4gTDqPy4PMfyJkqlBaJH2xAS6DUP12YWloYh9kO2xtoT7
+         KS/A9XnIc0toZ2Ikzua2QTRWWqZx8mMwHyaWUxnosKGJT3Cl/eLLqo1nRk9zOkyQyHO1
+         kmpQ==
+X-Forwarded-Encrypted: i=1; AJvYcCW5qJugDkxsbmpmvbHbS6P8QfqdH2MsIFrqA6VDwtED3D90VVW+k41uFTlXseuJfzf5T5U6xi2h8FubIT9D2F4uXH///g==@gmail.com
+X-Gm-Message-State: AOJu0YzLw7VoAj5ac4ssNiRlO9hQ6+ZZF3qFx6cAgrjGbaY6Euy3Shj7
+	5HX7zwEO05h9HM+LS1Eg0O/lr1W+PnBtd0W4uOJt+tiDRt9Htt8VM1n2UEc+CDUFJhf6AHMbdyj
+	oIuX8JW1UM3qVj2toiQLBvlfPbCQ=
+X-Gm-Gg: ASbGncsN3mHbFzqxBd8ePZmU7o+LwaGr1NihluLIfdf0YVqW3u64TdsH42n7B5+x3aa
+	9jRwt5aooCLskiRL8Ax2/BS4HODkwyVRe
+X-Google-Smtp-Source: AGHT+IGRG/R6yvcrP1Jl3Eytax83z2eBKzZTiwUxUqkvw5wjvgvVWGj0z1uKuYuI3VuI2b2UU/LDW6MCveQwFRhBq0k=
+X-Received: by 2002:a05:6102:f0a:b0:4ad:5dcd:2c44 with SMTP id
+ ada2fe7eead31-4af449931bamr26382902137.16.1733129760740; Mon, 02 Dec 2024
+ 00:56:00 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Mon, 2 Dec 2024 00:55:49 -0800
+Message-ID: <CADa73hZMpMt4Mn5xyNOn2Ed=[removed]>
+Subject: jassim al-siddiqi
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000bd1f63062845b798"
+Bcc:[removed]
+
+--000000000000bd1f63062845b798
+Content-Type: text/plain; charset="UTF-8"
+
+Greetings,
+
+I hope this email finds you well. My name is  jassim al-siddiqi a staff of
+Capital Access Funding (a private Investment and capital firm).
+
+I am writing to you because our firm offers capital financing for viable
+projects and businesses (available investment funds up to US$800m -eight
+Hundred Million US Dollars-, with an attractive interest rate and a maximum
+duration of 15 years.
+
+Given your impressive track record and expertise in the industry, we
+believe a partnership in this venture could be mutually beneficial. We are
+eager to discuss this potential investment opportunity (debt financing)
+further and explore possible collaboration.
+
+We are broadening our global reach to cater to new clients, including
+start-ups, business expansion, new projects, refinancing, bankruptcy, and
+more. We are keen to gauge your interest in learning more about our
+tailored financial solutions and processes.
+
+If you are interested in learning more, please do not hesitate to reach out
+to me. I would be happy to provide you with additional information and
+discuss the next steps. We also offer 1% commission to brokers for every
+successful referral.
+
+I look forward to your prompt response.
+
+Yours faithfully,
+jassim al-siddiqi
+ReplyForward
+You received this via BCC, so you can't react with an emoji
+
+--000000000000bd1f63062845b798
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail-adn gmail-ads" style=3D"border-left:no=
+ne;padding:0px;display:flex;font-family:&quot;Google Sans&quot;,Roboto,Robo=
+toDraft,Helvetica,Arial,sans-serif;font-size:medium"><div class=3D"gmail-gs=
+" style=3D"margin:0px;min-width:0px;padding:0px 0px 20px;width:initial"><di=
+v class=3D"gmail-"><div id=3D"gmail-:fn" class=3D"gmail-ii gmail-gt" style=
+=3D"direction:ltr;margin:8px 0px 0px;padding:0px;font-size:0.875rem;overflo=
+w-x:hidden"><div id=3D"gmail-:fm" class=3D"gmail-a3s gmail-aiL" style=3D"di=
+rection:ltr;font-variant-numeric:normal;font-variant-east-asian:normal;font=
+-variant-alternates:normal;font-size-adjust:none;font-kerning:auto;font-fea=
+ture-settings:normal;font-stretch:normal;font-size:small;line-height:1.5;fo=
+nt-family:Arial,Helvetica,sans-serif;overflow:auto hidden"><div dir=3D"ltr"=
+><div style=3D"font-size:13.3333px"><span style=3D"font-family:&quot;Segoe =
+UI&quot;;font-size:small">Greetings,</span><br></div><div style=3D"font-siz=
+e:13.3333px"><br></div><div><span style=3D"font-family:&quot;Segoe UI&quot;=
+">I hope this email finds you well. My name is=C2=A0</span><font color=3D"#=
+000000"><span style=3D"font-size:13.3333px">=C2=A0</span></font>jassim al-s=
+iddiqi=C2=A0<span style=3D"font-family:&quot;Segoe UI&quot;">a staff=C2=A0<=
+/span><span style=3D"font-size:13.3333px">of Capital</span><span style=3D"f=
+ont-family:&quot;Segoe UI&quot;">=C2=A0Access Funding (a private Investment=
+ and capital firm).</span></div><div style=3D"font-size:13.3333px"><br></di=
+v><div style=3D"font-size:13.3333px"><span style=3D"font-family:&quot;Segoe=
+ UI&quot;;font-size:small">I am writing to you because our firm offers capi=
+tal financing for viable projects and businesses (available investment fund=
+s up to US$800m -eight Hundred Million US Dollars-, with an attractive inte=
+rest rate and a maximum duration of 15 years.</span><br></div><div style=3D=
+"font-size:13.3333px"><br></div><div style=3D"font-size:13.3333px"><span st=
+yle=3D"font-family:&quot;Segoe UI&quot;;font-size:small">Given your impress=
+ive track record and expertise in the industry, we believe a partnership in=
+ this venture could be mutually beneficial. We are eager to discuss this po=
+tential investment opportunity (debt financing) further and explore possibl=
+e collaboration.</span><br></div><div style=3D"font-size:13.3333px"><br></d=
+iv><div style=3D"font-size:13.3333px"><span style=3D"font-family:&quot;Sego=
+e UI&quot;;font-size:small">We are broadening our global reach to cater to =
+new clients, including start-ups, business expansion, new projects, refinan=
+cing, bankruptcy, and more. We are keen to gauge your interest in learning =
+more about our tailored financial solutions and processes.</span><br></div>=
+<div style=3D"font-size:13.3333px"><br></div><div style=3D"font-size:13.333=
+3px"><span style=3D"font-family:&quot;Segoe UI&quot;;font-size:small">If yo=
+u are interested in learning more, please do not hesitate to reach out to m=
+e. I would be happy to provide you with additional information and discuss =
+the next steps. We also offer 1% commission to brokers for every successful=
+ referral.</span><br></div><div style=3D"font-size:13.3333px"><br></div><di=
+v style=3D"font-size:13.3333px"><span style=3D"font-family:&quot;Segoe UI&q=
+uot;;font-size:small">I look forward to your prompt response.</span><br></d=
+iv><div style=3D"font-size:13.3333px"><br></div><div style=3D"font-size:13.=
+3333px"><span style=3D"font-family:&quot;Segoe UI&quot;;font-size:small">Yo=
+urs faithfully,</span><br></div><div style=3D"font-size:13.3333px">jassim a=
+l-siddiqi</div></div></div></div></div></div></div><div class=3D"gmail-gA g=
+mail-gt gmail-acV" style=3D"font-size:0.875rem;padding:0px;width:auto;borde=
+r-bottom-left-radius:0px;border-bottom-right-radius:0px;border-top:none;mar=
+gin:0px;background-image:initial;background-position:initial;background-siz=
+e:initial;background-repeat:initial;background-origin:initial;background-cl=
+ip:initial;font-family:&quot;Google Sans&quot;,Roboto,RobotoDraft,Helvetica=
+,Arial,sans-serif"><div class=3D"gmail-gB gmail-xu" style=3D"border-top:0px=
+;padding:0px"><div class=3D"gmail-ip gmail-iq" style=3D"clear:both;margin:0=
+px;padding:16px 0px;border-top:none"><div id=3D"gmail-:fo"><table class=3D"=
+gmail-cf gmail-wS" role=3D"presentation" style=3D"border-collapse:collapse"=
+><tbody><tr><td class=3D"gmail-amq" style=3D"padding:0px 16px;vertical-alig=
+n:top;width:44px"><img id=3D"gmail-:ej_3" name=3D"gmail-:ej" src=3D"https:/=
+/lh3.googleusercontent.com/a/ACg8ocLA0y092NJcgZhpscjNGrl7nrkiiByuQKnGmiBQjD=
+TaFjvFRA=3Ds40-p-mo" class=3D"gmail-ajn gmail-bofPge" style=3D"width: 40px;=
+ height: 40px; border-radius: 50%; display: block;"></td><td class=3D"gmail=
+-amr" style=3D"padding:0px;width:950px"><div class=3D"gmail-nr gmail-wR" st=
+yle=3D"padding:0px;box-sizing:border-box;border-radius:1px;border:none;marg=
+in:0px"><div class=3D"gmail-amn" style=3D"height:auto;padding:0px;display:f=
+lex;line-height:20px"><span id=3D"gmail-:fh" role=3D"link" tabindex=3D"0" c=
+lass=3D"gmail-ams gmail-bkH" style=3D"border:1px solid rgb(116,119,117);dis=
+play:inline-flex;font-size:0.875rem;background:none;border-radius:18px;box-=
+sizing:border-box;color:rgb(68,71,70);height:36px;outline:none;padding:0px =
+16px 0px 12px;min-width:104px;margin-right:8px">Reply</span><span id=3D"gma=
+il-:fj" role=3D"link" tabindex=3D"0" class=3D"gmail-ams gmail-bkG" style=3D=
+"border:1px solid rgb(116,119,117);display:inline-flex;font-size:0.875rem;b=
+ackground:none;border-radius:18px;box-sizing:border-box;color:rgb(68,71,70)=
+;height:36px;outline:none;padding:0px 16px 0px 12px;min-width:104px;margin-=
+right:8px">Forward</span><div class=3D"gmail-wrsVRe"><button class=3D"gmail=
+-jWOS7-JX-I gmail-jWOS7-JX-I-ql-ay5-ays gmail-LS5phe gmail-s4xHRb" disabled=
+ aria-label=3D"You received this via BCC, so you can&#39;t react with an em=
+oji" style=3D"margin-top:0px;background-image:initial;background-position:i=
+nitial;background-size:initial;background-repeat:initial;background-origin:=
+initial;background-clip:initial;border-width:initial;border-style:none;bord=
+er-color:initial;display:inline-flex;line-height:inherit;outline:none"><spa=
+n class=3D"gmail-bHC-Q" style=3D"overflow:hidden;outline:none;width:36px;he=
+ight:36px"></span><span class=3D"gmail-jWOS7-JX-ank-Rtc0Jf" aria-hidden=3D"=
+true" style=3D"display:inline-block;line-height:0"><span class=3D"gmail-not=
+ranslate" aria-hidden=3D"true"></span></span><div class=3D"gmail-jWOS7-JX-a=
+no" style=3D"left: auto; top: 18px; transform: translateY(-50%); z-index: 1=
+;"></div></button><div class=3D"gmail-ne2Ple-oshW8e-J9" id=3D"gmail-tt-c37"=
+ role=3D"tooltip" aria-hidden=3D"true" style=3D"height:1px;overflow:hidden"=
+>You received this via BCC, so you can&#39;t react with an emoji</div></div=
+></div></div></td></tr></tbody></table></div></div></div></div></div>
+
+--000000000000bd1f63062845b798--
+

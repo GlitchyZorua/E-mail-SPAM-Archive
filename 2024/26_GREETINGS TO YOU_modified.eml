@@ -1,0 +1,117 @@
+Delivered-To:[removed]
+Received: by 2002:a59:af03:0:b0:4a6:b479:dd26 with SMTP id ba3csp1807065vqb;
+        Thu, 28 Nov 2024 09:11:51 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXZXtsxNERMZP2rnDM4Mj+t1tqJKzA9RFSDcXBXjB8tg1RkSSO2+YiqJd5k0O6F80rL0Le75R9Ihn6nwPJB25LYK+RgCA==@gmail.com
+X-Google-Smtp-Source: AGHT+IHzTXnHUnjWh8cEl+Oh13hRup8o9nbZ5YqIfRx+zSmxoNtK1xmo8zFyXM669P9s7y+0hZLR
+X-Received: by 2002:a05:6870:7e0d:b0:297:291c:ad88 with SMTP id 586e51a60fabf-29dc42f5dafmr6927056fac.28.1732813910811;
+        Thu, 28 Nov 2024 09:11:50 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732813910; cv=none;
+        d=google.com; s=arc-20240605;
+        b=VnmBvxL4l2h1Y+5/MgtmsWR26KIgkp8HxF6XzCFvRvzrqDme4p4+JmNaNqW1ow5sUM
+         7mzISsJUmqQmkepruPZCyp4qrY7rtoxf36nw5ShBb4xp/izKWvbDoSOQ7oSZ6XBXwlXj
+         VvRyFDCaDACsdEOmyxOIRSvh4A2jpXb52AV5QtdTyU5wOc+dr916fAj72TQgVfzXU+bj
+         Pv2xetDOYTFZkJmHxR6bj+cwIO4GZf/6Qjj0cw+htEoQJO6iBOmllQYMpQ93ei8nS81C
+         M5Kfj0Ah544gd0dF3oLN0vDs90lUcxN3nQdan5zmGglr1LCEGQS2Yj0ArxL8SmLZvxcR
+         47fQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=thread-topic:thread-index:mime-version:subject:message-id:reply-to
+         :from:[removed]
+        bh=sDOjq3yziV++iEqdMt/zyvqtT+Wu+EHe5hsl5azFxug=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=JraiSMssmY4W5x7zfBLoP2QhYZjdbM1S6cA3B04FaQIkYmbw8+SFLS9zqiptAX3ZM9
+         nsrjZqNCDxo/J4Q5HhzteVVxSpe41uYYVyBRfy3oWefci/ep9ol6i5fXah81OsnjSwEC
+         kwBflfc6aHh7mQJ2JlD0KiZfXYjPZZ2z4rT3Yms1RzoHk1aM04KNHWg4y9x3PG7/F3y0
+         LT5Do+treEWvV0QEdU7P08YLqHzbUulCFRLKtN8FXNMMtLs9TLtq9TYfk88ZWwdHMNCQ
+         td2bv05zOAACIApGEurRLInyFbMlslwYdB7z+6tYp0mOYOk+ck8n5ZBC75KAiWY/W+Xc
+         fNqQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hnhu.gob.pe header.s=46386B96-5E99-11EF-BC0D-FBD37FF4CC91 header.b="Zg9Rom/4";
+       spf=pass (google.com: domain of [removed] designates 179.49.65.43 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hnhu.gob.pe
+Return-Path: <[removed]>
+Received: from hnhu.gob.pe ([179.49.65.43])
+        by mx.google.com with ESMTPS id 586e51a60fabf-29dea1cbc0fsi1033616fac.241.2024.11.28.09.11.47
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 28 Nov 2024 09:11:50 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 179.49.65.43 as permitted sender) client-ip=179.49.65.43;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hnhu.gob.pe header.s=46386B96-5E99-11EF-BC0D-FBD37FF4CC91 header.b="Zg9Rom/4";
+       spf=pass (google.com: domain of [removed] designates 179.49.65.43 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hnhu.gob.pe
+Received: from localhost (localhost [127.0.0.1])
+	by hnhu.gob.pe (Postfix) with ESMTP id 2459A1E6493A;
+	Thu, 28 Nov 2024 12:04:33 -0500 (-05)
+Received: from hnhu.gob.pe ([127.0.0.1])
+	by localhost (hnhu.gob.pe [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id crQeBmmVUNEv; Thu, 28 Nov 2024 12:04:32 -0500 (-05)
+Received: from localhost (localhost [127.0.0.1])
+	by hnhu.gob.pe (Postfix) with ESMTP id AA4151E6493F;
+	Thu, 28 Nov 2024 12:04:32 -0500 (-05)
+DKIM-Filter: OpenDKIM Filter v2.10.3 hnhu.gob.pe AA4151E6493F
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hnhu.gob.pe;
+	s=46386B96-5E99-11EF-BC0D-FBD37FF4CC91; t=1732813472;
+	bh=sDOjq3yziV++iEqdMt/zyvqtT+Wu+EHe5hsl5azFxug=;
+	h=Date:From:[removed]
+	b=Zg9Rom/4T5PAuzZhg3TbmjvMSJaYCXDA6IUbQWc/L7hpjQPfw+oeGwd8TgBEbKsdt
+	 GFuVvm+9QL1tDS7x5CMEbn8A59pOEAvzK64LtHI47eb5DpcGY3buG0JVreT/UzH+iF
+	 cn41/bO53BWO8eCdtoxcf6fVKHQMhfPOBVykmP/vwA5JfQPUuw74MHMzqLtd0PP4vp
+	 M9YJWKGfws00TkxJWuBcq3uPrGNuXrp+HbqJLKBcfg0BC34cy0Rzjg/oJi/q7ikkqJ
+	 BO9QYvQSqKslSAw3KYDTZjiCyDB3NexrE4lOFEK+DNh+gdoJlc859VLkz9uO31phqH
+	 d1aPM20gy+HjA==
+X-Virus-Scanned: amavisd-new at hnhu.gob.pe
+Received: from hnhu.gob.pe ([127.0.0.1])
+	by localhost (hnhu.gob.pe [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id 0rHc0bZpDiMx; Thu, 28 Nov 2024 12:04:32 -0500 (-05)
+Received: from hnhu.gob.pe (correo.hnhu.gob.pe [128.168.0.100])
+	by hnhu.gob.pe (Postfix) with ESMTP id 319F31E648D9;
+	Thu, 28 Nov 2024 12:04:32 -0500 (-05)
+Date: Thu, 28 Nov 2024 12:04:32 -0500 (PET)
+From:[removed]
+Reply-To:[removed]
+Message-ID: <[removed]>
+Subject: GREETINGS TO YOU
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="=_5cee1460-5e6c-4d08-80c3-fdc203e5a43b"
+X-Originating-IP: [128.168.0.100]
+X-Mailer: Zimbra 8.8.15_GA_4522 (zclient/8.8.15_GA_4522)
+Thread-Index: 4Q8D5EKZBhf5m77KO5DHw2MBKUMBJg==
+Thread-Topic: GREETINGS TO YOU
+
+--=_5cee1460-5e6c-4d08-80c3-fdc203e5a43b
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+TRUIST BANK
+214 N Tryon St, Charlotte, 
+NC 28202 USA 
+www.truist.com
+
+GREETINGS TO YOUWe are hereby officially notify you concerning your fund telegraphic, Transfer through our bank, TRUIST BANK to your bank account, which has been officially approved by the management of World Bank Swiss (WBS) to credit the sum of US49.5 Million into your bank account.This fund was part of the lodged Late President Saddam Hussein of Iraq who died on December 30, 2006 at the age of 69 years discovery fund with World Bank of Switzerland, which the Swiss Bank has decided to distribute it generously to help few lucky individuals and the American Government is in agreement with the Swiss Bank to distribute the fund to 700 hundred thousand people world wide in order to help improve their businesses and investment. My EMAIL [removed] Faithfully,
+Mr. Mike Maguire
+--=_5cee1460-5e6c-4d08-80c3-fdc203e5a43b
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style> body {height: 100%; color:#000000; font-size:12pt; font=
+-family:arial, helvetica, sans-serif;}</style></head><body><div><div><div><=
+div><div><div><div><div><div><div><div><div><div><strong>TRUIST BANK</stron=
+g><br><strong>214 N Tryon St, Charlotte, </strong><br><strong>NC 28202 USA =
+</strong><br><strong>www.truist.com</strong><br><br><strong>GREETINGS TO YO=
+U</strong></div><div><strong>We are hereby officially notify you concerning=
+ your fund telegraphic, Transfer through our bank, TRUIST BANK to your bank=
+ account, which has been officially approved by the management of World Ban=
+k Swiss (WBS) to credit the sum of US49.5 Million into your bank account.</=
+strong></div><div><strong>This fund was part of the lodged Late President S=
+addam Hussein of Iraq who died on December 30, 2006 at the age of 69 years =
+discovery fund with World Bank of Switzerland, which the Swiss Bank has dec=
+ided to distribute it generously to help few lucky individuals and the Amer=
+ican Government is in agreement with the Swiss Bank to distribute the fund =
+to 700 hundred thousand people world wide in order to help improve their bu=
+sinesses and investment. My EMAIL [removed]</strong></div>=
+<div><strong>Yours Faithfully,</strong><br><strong>Mr. Mike Maguire</strong=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></body></html>
+--=_5cee1460-5e6c-4d08-80c3-fdc203e5a43b--
+

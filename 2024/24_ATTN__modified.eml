@@ -1,0 +1,160 @@
+Delivered-To:[removed]
+Received: by 2002:a59:af03:0:b0:4a6:b479:dd26 with SMTP id ba3csp160196vqb;
+        Tue, 26 Nov 2024 05:28:16 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVzNXZ0T2gKdyQUQs22uwFk++feApOTlhoZ9tYa2juM/MAraHDi84p7JjIWPBCBvwTPfNmfBsX9AfC5SYtsCrf1Wv1pkQ==@gmail.com
+X-Received: by 2002:a05:6a20:6a2b:b0:1dc:1:3e28 with SMTP id adf61e73a8af0-1e09e5da590mr29839646637.40.1732627696477;
+        Tue, 26 Nov 2024 05:28:16 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732627696; cv=none;
+        d=google.com; s=arc-20240605;
+        b=HVfh7ACn7c+Pj7OsrgOWaGQ+xVWiDbu5gPwHwGtW25hh6YAS+OaYz7178NXSUG4N9g
+         9jX41b2Kr91HU5w+/TsN/He5As2NVHQ/BP6fEYsgsIm8BHFnW4xr/wKSbVdB6pnVQAm4
+         NeQCrk69wcr3SU/L1KAyEjjX2yff3swzz6MdPeTcmhaEL91472dd8POnxES1CBmUidil
+         h1iINkyzTqgqXvjXVqhZkIMK3Cw5r+OCrf0jT19ILlbwrmhcTVyGqDNHBVCIQjflJuHp
+         Y9JRtlfRoik6NRKU72MSe1RN/WGyUQQzU/HuJD+2oyBNqJCWSwYNQ9BEva4eV6JZn9Nn
+         yoEQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=Ge/tYH3G27j9k5KQIj8o9+JeotEfTy+Xj2U9YiLmV0o=;
+        fh=G38Wxf2oX6SAoySzfboe6EgEO+NjtsZpAcXnntdb8qk=;
+        b=ihF4rWrJsmpHxJ6FCTdURAh5xJTWrdKggp37LEUxggYgsRpsxo6gH8E+YCJGdJuX4X
+         OnHgSdPgWZO0TrueHyMqwZUrA0m8XsKDtAUKwmtnuTIKN5FwcJvLD2lklyMVW39A3Znh
+         IkWkdCL4TbTcorkaRs+Mn7PPPZ6I7ngAr753fT/wjQEPqM7O2wlf1LdfNDAPvqarC6na
+         gJuG6Iz1mvQDY1DNF67yIgMMUPH6YGUaoknBLUUJK7oYYi+49Rd1qbk1PLCVdMJHuf78
+         rBNgalql1tRJ++ui4RU3mhULTwdK540tTHPRxl22FYs5HQ0d9BA86KGZzhSAYeWPI3JR
+         Vy6Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=FHFYKnyS;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 41be03b00d2f7-7fbcc3ebc38sor6546441a12.4.2024.11.26.05.28.16
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 26 Nov 2024 05:28:16 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=FHFYKnyS;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732627696; x=1733232496; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=Ge/tYH3G27j9k5KQIj8o9+JeotEfTy+Xj2U9YiLmV0o=;
+        b=FHFYKnySISKqoI2fkEGsxqBEVp6dRDQipivRz1QVjf1XRX5ReWOUB7wa66zDkOjVzM
+         oTvQ7M0UBhRD0S7nS4ZNYl6PpxxBZk969yEi/YZd254xN93LwYveCTlXu2SUWvBKUVyO
+         r7zGij3G/TjNu7NPvtmH3pjF77uFiq/Cq/+nqqosmg8u0kNdIcTW1YlYgwkHGRtpcmKe
+         8gzHBNYlDstsvXEmkXMPiUnQEZr3JdDUAv+sjT3nnCbk99tYJr+UvZefc6GaVurlpdYh
+         TnVG0pWDfru2AAoYRigJTtpFjSKYroY4Yh6aebF5dthCIQhpfmtJKGRsCaNsIY2DyFcc
+         okmQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732627696; x=1733232496;
+        h=to:[removed]
+         :from:[removed]
+        bh=Ge/tYH3G27j9k5KQIj8o9+JeotEfTy+Xj2U9YiLmV0o=;
+        b=JVbgeQHt3fTJZC7LtIk3b8mmRmnRbE0gTnM4xfDO8xk775aOrKfiyCRkwfS7Je/urh
+         geAYZqKV/OI518YZTVNhpJYfsjOPUuIinrGMtQCHB4XsMYjO4nmoWnDaBAJ3bcuA5g27
+         zzkhGh+HXIU0AtVkBeDjOI2lMDd9wI84L6wznsnD9UkH55R8Mi8ZeIc4g2zGpDsHsENv
+         ZKFjHV/FggqkGDDLmGUtWXXMmoB0bHg7KhppiZxY5GVKt/PzTNNEslTFQPr7sxyxrKcN
+         ++DNVmDk4bdRGALgwVh5HdGCUrM+TbE3qhfq4sGmAScjx9kY/vcYNG8Eox+VTEd9TZtd
+         MGjw==
+X-Forwarded-Encrypted: i=1; AJvYcCXV+Um8KJuKu/wGs+3rnM67Yzwr/sZJo3T1yAJ7VN4QWZm/EelAJWM7csEGa1XBwc4HY5xUW0yyWXwneoJhwRhYWBhI3g==@gmail.com
+X-Gm-Message-State: AOJu0YxRVd7qMgYHLEvAoJQoV0JqO22CfXsHac0/49YWinOd+NFGCkML
+	tYfhBlovzoyxO/bAuF3U7B9k3Az9bBg73t+2c475nqNViZc7q2ns7/Wiu19cLdeNcVu0dLrsT03
+	qzcfmB5Sz8sWF5ZERTpMPwg7z93M=
+X-Gm-Gg: ASbGncsDXN+Lw7IgXOt/MhRAT9IUbxK8sqnuA6tE5Di1Py1y4afPn+n+fZ+0uNR+qHn
+	hGEOsrH4Hy8YmjBK7o121vBOXZxUziVqV
+X-Google-Smtp-Source: AGHT+IGmY/xtaTcvAej2ny0ZQH2ts5ijpz0FuoriIownZwtW7XD5/UGKiOJ9xH7g0eyVYkXcFaoP1RggKPffjurZcBs=
+X-Received: by 2002:a17:90b:5211:b0:2ea:83a0:4798 with SMTP id
+ 98e67ed59e1d1-2eb0e12c7dcmr20376965a91.3.1732627695773; Tue, 26 Nov 2024
+ 05:28:15 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Tue, 26 Nov 2024 05:28:06 -0800
+Message-ID: <CAEHHHb+=tM2uneM5R=[removed]>
+Subject: ATTN:
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000055bb6b0627d0d2bd"
+Bcc:[removed]
+
+--00000000000055bb6b0627d0d2bd
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ Dear Friend,
+
+Greetings to you and how are you doing? Please am writing this letter to
+know whether you have received the first Email I sent to you. If not please
+kindly get in touch with me so that I can resend it!
+
+My contact with you is based on a very important subject. I have a very
+urgent business to discuss with you, But the details shall be given when
+you confirm the receipt of this email.
+
+I am looking forward to your urgent reply,
+
+Thanks
+Best regards,
+Mr. Mawu=C3=A9na AZIAMOE.
+
+--00000000000055bb6b0627d0d2bd
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+<span><font size=3D"3" style=3D"background-color:inherit"><font size=3D"3">=
+<font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font s=
+ize=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"=
+3"><font size=3D"3"><span><font size=3D"3" style=3D"background-color:inheri=
+t"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><fon=
+t size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=
+=3D"3"><span><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=
+=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3">=
+<font size=3D"3"><div dir=3D"ltr"><div><font size=3D"3"><font size=3D"3"><f=
+ont size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><div dir=
+=3D"ltr"><font size=3D"3">Dear Friend,<br></font><div><font size=3D"3"><div=
+ dir=3D"ltr">
+<br>
+Greetings to you and how are you doing? Please am writing this letter to
+ know whether you have received the first Email I sent to you. If not=20
+please kindly get in touch with me so that I can resend it!<br>
+<br>
+My contact with you is based on a very important subject. I have a very=20
+urgent business to discuss with you, But the details shall be given when
+ you confirm the receipt of this email. <br>
+<br>
+I am looking forward to your urgent reply,<br>
+<br>
+Thanks<br>
+Best regards,<br><span><span><font size=3D"3" style=3D"background-color:inh=
+erit"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><=
+font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font si=
+ze=3D"3"><font size=3D"3"><font size=3D"3"><span><font size=3D"3" style=3D"=
+background-color:inherit"><font size=3D"3"><font size=3D"3"><font size=3D"3=
+"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font=
+ size=3D"3"><font size=3D"3"><span><font size=3D"3"><font size=3D"3"><font =
+size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D=
+"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><fo=
+nt size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=
+=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3">=
+<font size=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3"><font s=
+ize=3D"3"><font size=3D"3"><font size=3D"3"><font size=3D"3">Mr. <span>Mawu=
+=C3=A9na AZIAMOE</span><span>.</span></font></font></font></font></font></f=
+ont></font></font></font></font></font></font></font></font></font></font><=
+/font></font></font></font></font></font></font></font></font></font></font=
+></font></span></font></font></font></font></font></font></font></font></fo=
+nt></font></span></font></font></font></font></font></font></font></font></=
+font></font></font></font></span></span></div></font></div></div></font></f=
+ont></font></font></font></font></div></div></font></font></font></font></f=
+ont></font></font></font></font></span></font></font></font></font></font><=
+/font></font></font></font></font></span></font></font></font></font></font=
+></font></font></font></font></font></font></font></span>
+
+</div>
+
+--00000000000055bb6b0627d0d2bd--
+

@@ -1,0 +1,111 @@
+Delivered-To:[removed]
+Received: by 2002:a59:af03:0:b0:4a6:b479:dd26 with SMTP id ba3csp1119914vqb;
+        Wed, 27 Nov 2024 10:22:34 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXcHZw29/bqMrADXySb2f2xKB9xvlyApUgzB8lhy86CRZ1Mk4MDqpmotXPL0yxv95UGE/mX6EPhWikO7ehWFotC8GFXwg==@gmail.com
+X-Received: by 2002:a05:6402:26cf:b0:5d0:8f25:2503 with SMTP id 4fb4d7f45d1cf-5d08f252689mr2468212a12.11.1732731753789;
+        Wed, 27 Nov 2024 10:22:33 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732731753; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Fme6NJ/RwAAw6qSBzeZ2OaRSOsvHZb3KUDN24zks+8fdtlYVCYFm4EblDefTdx31nV
+         BVrMWpVbMr5iP+c8eKYLnkiPc+XhEAHZtF8/06qDeJiGIwdoKKFmdM0DsmP9L0LNYD/A
+         V6uvPckgt9RdSbfGabjmtYsDkvEGdAh8+WckEh1TdASg0X76Owf7nRvZlOBYlgObrKZ/
+         Xxgwf0W4GfWQwE+55loirrhMwR8dYaHEGkG0qJmEir1ds75Ob8wSMw+5mv4mWLO876vh
+         9VjUpBP7+t84YuzrspO07e+ld//fkgoep1LM/QqmKPe9dCJCZD0TBtKOcLns/F4zkppU
+         bQDw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=gUckysxJhDWv6m8E31syE1xprzYAOvh9LQAlusZLTy4=;
+        fh=CTNoIkL/6ZcZS1OKcLvIkxflzxW8lItMCa3fGokymis=;
+        b=YLGq1NSEe7aHwcjXUbGDpNsjxgJaD15Iio1xFozXVv7HLwj3VfXn2LUpJ7G3O58ZCg
+         Z6vM8T5tKClrHvhtpVdJ3hmGSJsvGw0UNyBGdYMap+DLW3XzOj0O0I9EYlqtKROu0zix
+         IPpypI18AR7LqGgGh8vLgarzk1ZYixBNoSSiHNfoNV6YmaF7lmKUP9eYDCMT9szpA8PE
+         oTA3vXIZaHBq7Ou1E/9EFlArXUu8D2QJ157gzTwavpcs5+KZbNB8AX2uYnJ93/XvCMow
+         mmKMhUGk8AH9rox0GjJCgQ7jpm8MWL4mdN/40TDdLJ6RPSM+UhWrYc0YjzyR+lKxQiei
+         TX/w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=bddC70DW;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5d01d402af2sor3990277a12.8.2024.11.27.10.22.33
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 27 Nov 2024 10:22:33 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=bddC70DW;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732731753; x=1733336553; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=gUckysxJhDWv6m8E31syE1xprzYAOvh9LQAlusZLTy4=;
+        b=bddC70DWNan1O5+zn2SaHmMBppjmg1l2l0yMZgtquNVXwAKRLRDweCKqELzfxdLQ17
+         7/E/7IXonUV6ZO6PPvmFh3MO4NHlbC+lPMmRRV5jEun45CLaAVM52lphM3zUVae3E/Zl
+         5/8wE2ICmr3IwpTr0O/a/ShBGRSKDmPSBu6mD+iH/8aC9a0poI3/iLNy9C8+ptnV3dSN
+         ETPIa6xydd/6nXAUuvso6MyvZqlM57orB8QxdbduL3MjYDxinu2YZVjJAVIZg/7GXX9t
+         ZdnC/C9ABKiGcV7a5fUgxjW3lCt3MToJkLyTtyvLQCK812VH/GFp7BYGANGs5gCnAd+6
+         7tHA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732731753; x=1733336553;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=gUckysxJhDWv6m8E31syE1xprzYAOvh9LQAlusZLTy4=;
+        b=L8YQVLbgipz2Eju9XeNw88vXK3Gmi+sSUNAUSqqWeMZj6xPdFlCLYmzQam42xMp/mG
+         JhImiCuJla1fO4CNj96O61j/q1vv+Fs3d1AeaToug0xKKyqaRyZgRG8WpLAxJeOW3zru
+         GClovqnMeyBOCfAY+C9LqeZnGcrXqyaLw/elAK6ZhUi33UhyY+J97GcP2IF78NQvCrOj
+         ZcrM3zZwM1ynpwHNtXbp5elaJyZh/vOkSY7S2WIVmy+CHKEEB0Rbra40+APhoD1MwoJn
+         DQWo8hz0fqG/wVcPcXFnAIm1kAif5Zo4wk3HeukU59VYYu8YVOKrXDDl1E34LxtqD79F
+         Babw==
+X-Forwarded-Encrypted: i=1; AJvYcCV820uy2kfcuG1LjT3eisSf4xrt/33v1zhyjB9mIcgVdwZODIzoPgylGN/ATpojTfZ6eARX7AvXJFpy4c4x35D9UWQpgg==@gmail.com
+X-Gm-Message-State: AOJu0Ywj2LxW9OUJVj4nNywId92kacyHkMPf1Il9n3CSM2iF+drWDA+P
+	mjKKrXR1YTNtotk554x6NFQFN95IjquQFQ2zGrTsWqdF4PXujekyPIlUWSDTbXruEwknKKn7HKD
+	fSlI4ZYBGtJShYge/TGv/o9jDOPton1ptc6HrDji0
+X-Gm-Gg: ASbGnctnBQhSZv8yJLO9UXVyksoN7XcONkS0EiplRwaVfCg6GdkKQY+q1LxLwh6Vq8G
+	b6CG7+ml8mJxk5mzxQtnvj7YcDAJA8g==
+X-Google-Smtp-Source: AGHT+IFs8Ew3WPvNvJTfJZcaO7iGadALOWtdYW7ApPPqLmKxU6LTZnHcjejM7LMWjsb0o9JvXkWjk8f8mTVwbhWMkP4=
+X-Received: by 2002:a05:6402:42c6:b0:5cf:b079:68ef with SMTP id
+ 4fb4d7f45d1cf-5d080c5371dmr4474600a12.26.1732731752646; Wed, 27 Nov 2024
+ 10:22:32 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Wed, 27 Nov 2024 19:22:19 +0100
+Message-ID: <[removed]>
+Subject: FOR BOTH BENEFITS
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000009b98330627e90c1c"
+Bcc:[removed]
+
+--0000000000009b98330627e90c1c
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Sir/Madam,
+Can you do me a favor? I found your profession when I was searching for the
+best retirement annuities that can provide me with a steady income during
+my retirement years. The source of funding is assured. I'm intending to
+relocate to your country as an entrepreneur. send me your take to:[removed]
+[removed].
+Best regards.
+Dr. Abu Ghazaleh.
+
+--0000000000009b98330627e90c1c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Sir/Madam,<br>Can you do me a favor? I found your pro=
+fession when I was searching for the best retirement annuities that can pro=
+vide me with a steady income during my retirement years. The source of fund=
+ing is assured. I&#39;m intending to relocate to your country as an entrepr=
+eneur. send me your take to:[removed]
+>[removed]</a>.<br>Best regards.<br>Dr. Abu Ghazaleh.<br>=
+</div>
+
+--0000000000009b98330627e90c1c--
+

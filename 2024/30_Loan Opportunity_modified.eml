@@ -1,0 +1,181 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:280b:b0:4ab:72de:5861 with SMTP id gw11csp1414346vqb;
+        Mon, 2 Dec 2024 02:57:06 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXhCD1OWkbUemE4iM+Lk+jMO3sLz/2BxtoUrzKd4M5qCP8EyUqJp4RKqEusjJzBSDCnvOw1fiUaQtN4BMHQx6D4bCB3hw==@gmail.com
+X-Received: by 2002:a05:690c:881:b0:6ee:66d2:e738 with SMTP id 00721157ae682-6ef371dfbeemr289543347b3.2.1733137026052;
+        Mon, 02 Dec 2024 02:57:06 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733137026; cv=none;
+        d=google.com; s=arc-20240605;
+        b=GN1chexFYLuNjuPIwDqLIFVas5RKa/eLTlPcCrArWVyQfnPUExE8OnTrN9a3GGrUA/
+         RZDiUciJfiiENN30FEvkBXD5Hj9/5ewCVS/2kjyk51kWxJY5R9HU9kMMjvjGefQ1YEY7
+         ogrRixwbKH6xmLbgs9rHQoWOU7gV5AB9GI66c52K0wt8veeATitnht/flWumnKsCdI6C
+         AGXCbFJYIybpxGVOT+gEjikFnfURbkp+cReXi9h8eWzW9OZHHeFxzhaINvIc3OWK25KO
+         LqpkAfNrAPpqVqoDaYW5h7ZY5Ux5N8Oail86NO8Q41mmko7Ag24xT3AJ/ND7wX0fdvGK
+         w5TA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+        bh=5Dlr3xYzhMCOKlN4ZACTgBkEgIzwCRx1i3dT8WdLASQ=;
+        fh=9Rm2C5T2UiJxpGbDOcVbUu0qES3mDrL4Awa1LTiWslc=;
+        b=W6uwhDbG77lOiPSR6XyR7G+EJz3VSNTiTxd3Okd9w9qN0bV14lGCBG+ljpB9pgbkb4
+         tQ67+angjkomdZ07FNsVRnrJhj5KsxIoPBoVQs8JlonW6BPgoaeEkh00vWlLwXR0bJuS
+         ngHtkEc5cwA7pJEfBO/fKGNlFvIxX1E7frASjM49U660ua5VJrko80B2kRpkEtxyczdJ
+         WfnlNf7xn+qdau/flLMfO1iEoXbXzkMb57NpL0TOiM3/c3H/Qet8RUVo3H2W6hrjayXL
+         pQu8lTVy13+6drPA60Hrvywgu4SnEGjbLls8ah2dxYGOWlWCpjs2bFs/Vb+b859UOsay
+         zb2w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WfQ0aMvm;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-6ef4db5bab2sor65146937b3.5.2024.12.02.02.57.05
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 02 Dec 2024 02:57:06 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WfQ0aMvm;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1733137025; x=1733741825; dara=google.com;
+        h=to:[removed]
+         :date:message-id:reply-to;
+        bh=5Dlr3xYzhMCOKlN4ZACTgBkEgIzwCRx1i3dT8WdLASQ=;
+        b=WfQ0aMvmK0Pr7z9Odv7hrJplt6wCYq/n81bfHEXtvm82HW5m0aaRXe9zetdxRA182F
+         oH1M7AHGA6EYw5xvM9qAhCR6NNC28MJ/AU7VTwG+KM2BJEUYfMNPziRJE2W9+vwhg7ak
+         os9FNa29wHufFw1DEhibrxiVYAQP8Gs/O1jz9vAiUOXBZM4dBxSBsnc2lxUtJVm+2Qfz
+         HgINbhBDIa4aXpteaKoMW7wXYXstDtib8h3k9Mz/ZE2HPYTHw0OtuXq3S/g1Nh9G4y1h
+         uQFZp7yJ2nOnEHC5BPJK3j6C/0uu/Bec9YSIPJWMfzG0ddKHZt280Y/V3J3J1PK9TZ7f
+         KfDQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1733137025; x=1733741825;
+        h=to:[removed]
+         :from:[removed]
+        bh=5Dlr3xYzhMCOKlN4ZACTgBkEgIzwCRx1i3dT8WdLASQ=;
+        b=K4OLLgfqXDG35ajWG9FiL1j7bKFqFDLcUHVLrd747lMcYvBbMXURMZlnuTlDfkZiWf
+         fQCGz6YUmEuTFCBRORMR/osUUiJKHMMYsSnphIG9P7pJ2NcqWh+OgSRk4VRpjmfgVeqF
+         E0TfEH5GeMZ9xBpqVPV8lvumwFhy4oV02xJviJdsUapWhgjwZKpDqgRhnWVQy610C+pF
+         JID3jbt54pDw8MPb6QplZOV1XWVwnZ18zJB3Suauy05XIYqqH/bAYqwHMhy2shSHZEgH
+         ermQnaJLJH0WkMuVIRDHN0MRwGGjC7fzuP1jKFTL+vN4Ej5ZMDNyqqijTizampvDzdSv
+         GogQ==
+X-Forwarded-Encrypted: i=1; AJvYcCUGqpo7s2/oDClfww/gH9Lgtej8zJ/35GB3UtSJkM4wpe6HMQsKlHrLSN+XgNtxKyTd2vkW/t/wc03woh6IyufXrS9uFA==@gmail.com
+X-Gm-Message-State: AOJu0YwS/6ToQ7Jl36mpKceO5EDlRd520l3oEavHY4Oz6LFrAZj841DR
+	8GKReu9Ky/me4ipc9tW8575A3wtSumu3V5ZFPtVgEJFyIWpchkyXfYIATgjltGWsdoS3aZSDQtN
+	Iht3irVYnlhUcQdenOMA9ms+JtVc=
+X-Gm-Gg: ASbGncukTa6tShEzXHUNG2/LVQRomxq/aC0/jloeiT1HtBGqXBodkIrvAQ3Hg5SWGIH
+	2RE0eQWJ4VDjzlymGvAJcyI79rCzP350=
+X-Google-Smtp-Source: AGHT+IGri3OzkjkQeiQsAXIJTu1yH1IskJGMAITgWkdHwZVhUm00MfTVicHFrHCYz9+Wn+Qr3WpuNtSZGrEVPJ4pU6k=
+X-Received: by 2002:a05:690c:74c9:b0:6ef:910d:7847 with SMTP id
+ 00721157ae682-6ef910d7e09mr40982307b3.24.1733137025493; Mon, 02 Dec 2024
+ 02:57:05 -0800 (PST)
+MIME-Version: 1.0
+From:[removed]
+Date: Mon, 2 Dec 2024 11:56:56 +0100
+Message-ID: <[removed]>
+Subject: Re: Loan Opportunity
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000c0738b06284768b3"
+Bcc:[removed]
+
+--000000000000c0738b06284768b3
+Content-Type: text/plain; charset="UTF-8"
+
+Hello,
+
+Are you a business man or woman? Are you in any financial mess or do you
+need funds to start up your own business? Do you need a loan to settle your
+debt or pay off your bills or start a nice business?
+
+Loans up to $2,000. Two Thousand to $15,000,000.00 Fifteen Million, We
+offer in Euro, Pounds, and United State Dollars etc. at an interest rate of
+3% over a 1 year to 15-years period to grow your business without no
+collateral no guarantor no paperwork, we offer Personal loans, debt
+consolidation loans, venture capital,business loans,education loans, home
+loans or "loans for any reason!". ( IN WORLDWIDE )
+
+All Replies should be forwarded to Email: [removed]
+
+My Regards,
+Mr. James Lucas.
+Office Located In:
+Il Castoro Supermercati ( Italy )
+
+--000000000000c0738b06284768b3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail-x_gmail_default" style=3D"border:0px;f=
+ont-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-al=
+ternates:inherit;font-stretch:inherit;font-size:15px;line-height:inherit;fo=
+nt-family:verdana,sans-serif;font-size-adjust:inherit;font-kerning:inherit;=
+font-feature-settings:inherit;margin:0px;padding:0px;vertical-align:baselin=
+e;color:rgb(36,36,36)"><span style=3D"border:0px;font-style:inherit;font-va=
+riant:inherit;font-weight:inherit;font-stretch:inherit;font-size:large;line=
+-height:inherit;font-family:tahoma,sans-serif;font-size-adjust:inherit;font=
+-kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;verti=
+cal-align:baseline">Hello,</span><br style=3D"font-family:tahoma,sans-serif=
+;font-size:large"><br style=3D"font-family:tahoma,sans-serif;font-size:larg=
+e"><span style=3D"border:0px;font-style:inherit;font-variant:inherit;font-w=
+eight:inherit;font-stretch:inherit;font-size:large;line-height:inherit;font=
+-family:tahoma,sans-serif;font-size-adjust:inherit;font-kerning:inherit;fon=
+t-feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline">=
+Are you a business man or woman? Are you in any financial mess or do you ne=
+ed funds to start up your own business? Do you need a loan to settle your d=
+ebt or pay off your bills or start a nice business?</span><br style=3D"font=
+-family:tahoma,sans-serif;font-size:large"><br style=3D"font-family:tahoma,=
+sans-serif;font-size:large"><span style=3D"border:0px;font-style:inherit;fo=
+nt-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:large=
+;line-height:inherit;font-family:tahoma,sans-serif;font-size-adjust:inherit=
+;font-kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;=
+vertical-align:baseline">Loans up to $2,000. Two Thousand to $15,000,000.00=
+ Fifteen Million, We offer in Euro, Pounds, and United State Dollars etc. a=
+t an interest rate of 3% over a 1 year to 15-years period to grow your busi=
+ness without no collateral no guarantor no paperwork, we offer Personal loa=
+ns, debt consolidation loans, venture capital,business loans,education loan=
+s, home loans or &quot;loans for any reason!&quot;. ( IN WORLDWIDE )</span>=
+<br style=3D"font-family:tahoma,sans-serif;font-size:large"><br style=3D"fo=
+nt-family:tahoma,sans-serif;font-size:large"><span style=3D"border:0px;font=
+-style:inherit;font-variant:inherit;font-weight:inherit;font-stretch:inheri=
+t;font-size:large;line-height:inherit;font-family:tahoma,sans-serif;font-si=
+ze-adjust:inherit;font-kerning:inherit;font-feature-settings:inherit;margin=
+:0px;padding:0px;vertical-align:baseline">All Replies should be forwarded t=
+o Email:=C2=A0</span><a id=3D"gmail-LPlnkx_gmail-LPlnk399938" title=3D"mail=
+to:[removed]
+m" style=3D"border:0px;font-style:inherit;font-variant:inherit;font-weight:=
+inherit;font-stretch:inherit;font-size:large;line-height:inherit;font-famil=
+y:tahoma,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-feat=
+ure-settings:inherit;margin:0px;padding:0px;vertical-align:baseline">jamesf=
+[removed]</a><br style=3D"font-family:tahoma,sans-serif;font-s=
+ize:large"><br style=3D"font-family:tahoma,sans-serif;font-size:large"><spa=
+n style=3D"border:0px;font-style:inherit;font-variant:inherit;font-weight:i=
+nherit;font-stretch:inherit;font-size:large;line-height:inherit;font-family=
+:tahoma,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-featu=
+re-settings:inherit;margin:0px;padding:0px;vertical-align:baseline">My Rega=
+rds,</span><br style=3D"font-family:tahoma,sans-serif;font-size:large"><spa=
+n style=3D"border:0px;font-style:inherit;font-variant:inherit;font-weight:i=
+nherit;font-stretch:inherit;font-size:large;line-height:inherit;font-family=
+:tahoma,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-featu=
+re-settings:inherit;margin:0px;padding:0px;vertical-align:baseline">Mr. Jam=
+es Lucas.</span><br style=3D"font-family:tahoma,sans-serif;font-size:large"=
+><span style=3D"border:0px;font-style:inherit;font-variant:inherit;font-wei=
+ght:inherit;font-stretch:inherit;font-size:large;line-height:inherit;font-f=
+amily:tahoma,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline">Of=
+fice Located In:</span></div><div class=3D"gmail-x_gmail_default" style=3D"=
+border:0px;font-variant-numeric:inherit;font-variant-east-asian:inherit;fon=
+t-variant-alternates:inherit;font-stretch:inherit;font-size:15px;line-heigh=
+t:inherit;font-family:verdana,sans-serif;font-size-adjust:inherit;font-kern=
+ing:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vertical-a=
+lign:baseline;color:rgb(36,36,36)"><span style=3D"border:0px;font-style:inh=
+erit;font-variant:inherit;font-weight:inherit;font-stretch:inherit;font-siz=
+e:large;line-height:inherit;font-family:tahoma,sans-serif;font-size-adjust:=
+inherit;font-kerning:inherit;font-feature-settings:inherit;margin:0px;paddi=
+ng:0px;vertical-align:baseline">Il Castoro Supermercati ( Italy )</span></d=
+iv></div>
+
+--000000000000c0738b06284768b3--
+

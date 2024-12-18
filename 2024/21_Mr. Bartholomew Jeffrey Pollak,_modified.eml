@@ -1,0 +1,116 @@
+Delivered-To:[removed]
+Received: by 2002:a05:612c:2314:b0:4a6:b479:dd26 with SMTP id fr20csp956001vqb;
+        Sun, 24 Nov 2024 14:40:59 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCW53baPte7BCXUOYIv6SpVXRNlwaD5US5u7zWls5VnJ9X21wOPnuDU9vxUx6VCJ9fPg3d8KRlQWxBQCHtJgRaFQA3VSEQ==@gmail.com
+X-Google-Smtp-Source: AGHT+IEEiKU2rmYjHw1HtUIm9949f1mOmAScPk24h7crCJS+j6fGWYDh85y91HhTdvC25J7E+jlI
+X-Received: by 2002:a05:6000:1a8c:b0:382:3cb8:bd4c with SMTP id ffacd0b85a97d-382604ec465mr9259916f8f.12.1732488058793;
+        Sun, 24 Nov 2024 14:40:58 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732488058; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Dl31LAL2rF6KXb7KoJ3DNI7ubplH46zLekfAuQSRlifYovhBvO3T8vf7mhDnwR9eK1
+         PcTJSWfvZqJvGYlIJ8XrzVjD1X4EVWt84sAyClE8ws6/sreu3L/mVQGqr0TaVJeEqMgj
+         ThlOoFIwq1g+vHfP+5DoP0q0TB2tY++qQeahDFnmTOm7FSq+Saveh3N8meCIc9pFyBx1
+         JRrN6eG22RZSWXoTxOzpWz08T19s7VaOqV/FvTsmAVI83nTTvkIGgTd6XpBa7rAiC+os
+         30KkmelFqqT3tUNBZITbUX/3eboijE3QqPN8WCTh4xrX28GQ5ZbJ+Qh0zydZGO+jBHrn
+         Fm/Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-disposition:mime-version:user-agent:reply-to:[removed]
+         :message-id:date:dkim-signature;
+        bh=ssahPWyST6vy7ERr4IHiK5I3e7BXcZ8RsHc45tyCxA4=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=EQ4exQxUXn762orFykdOGexK4L6BC8/u2Oxh7g/8ZcqYdyRowYLdnq/6hXf9snGnWP
+         xZHbaMwCUqbkJ3W6FwPWWuYsszG8jAg7VOquqzNtZNsXWhRl0vxrZjJPTRayHdAuaGX5
+         tnJIX5xixAoZvgpjOK1m9pRswo5endr2dNtDILTb2ewVWOIZFKutiCPbUo0aHvXTjVqE
+         QJ1GQmDRX3tNtLD3ON6MY34kXTAq0igE2hjAAubHvPloAb6VjcozKC5HDDnd6U9H2mj6
+         xfoL7aEIv+keLChRC/+5VxiPM0Nik+Wr+NxJfqLtq9YxyFd+sbtYJbhXcF2fAVhlG+YC
+         fQ4g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@u-picardie.fr header.s=smtp header.b=HXQ0yDpt;
+       spf=pass (google.com: domain of [removed] designates 195.83.152.7 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=etud.u-picardie.fr
+Return-Path: <[removed]>
+Received: from smtp-out1-webmail-7.u-picardie.fr (smtp-out1-webmail-7.u-picardie.fr. [195.83.152.7])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3825fb59213si4345474f8f.116.2024.11.24.14.40.50
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 24 Nov 2024 14:40:58 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 195.83.152.7 as permitted sender) client-ip=195.83.152.7;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@u-picardie.fr header.s=smtp header.b=HXQ0yDpt;
+       spf=pass (google.com: domain of [removed] designates 195.83.152.7 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=etud.u-picardie.fr
+Received: from passoire-02.vm.u-picardie.fr (passoire-02.vm.u-picardie.fr [10.0.132.142])
+	by smtp-out1-webmail-7.u-picardie.fr (Postfix) with ESMTP id 4XxP0f37XDz4Nj8;
+	Sun, 24 Nov 2024 23:39:46 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at u-picardie.fr
+Received: from smtp.u-picardie.fr ([10.0.132.224])
+	by passoire-02.vm.u-picardie.fr (passoire-02.vm.u-picardie.fr [10.0.132.142]) (amavisd-new, port 10048)
+	with LMTP id kGCzItPtYrOl; Sun, 24 Nov 2024 23:39:43 +0100 (CET)
+Received: from horde-ext-04 (horde-ext-04.vm.u-picardie.fr [10.0.132.196])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	(Authenticated sender: p22305147)
+	by smtp.u-picardie.fr (Postfix) with ESMTPSA id 4XxP0X3Qtxzl9;
+	Sun, 24 Nov 2024 23:39:40 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=u-picardie.fr;
+	s=smtp; t=1732487983; h=from:[removed]
+	 message-id:message-id:to:[removed]
+	 content-type:content-type; bh=ssahPWyST6vy7ERr4IHiK5I3e7BXcZ8RsHc45tyCxA4=;
+	b=HXQ0yDptr1n+9fWOm8VJIXLrA7UzECyIcuW33nd7jHtrjPVx2PVBh8ggatXwi+1S7TScRq
+	JFWbFyZnO0ib9fY0AE+bXSUajbnEY2gNpjimjd83SkqEiroRSx6y6QPmkCUZQPM3Gzcv3l
+	D/F0xilfaFZZNDhFFjo3bakKyyhnfDG4Bgc3Hu98dGr1X7UaJId13nAp5+bsW51DKjTWSf
+	CkXB0deqossIoN9bks2k5s75THduJ1B2BYGtLdkv430D/Aiz0eQhSrj1JBJvmx6LanQzgi
+	EiTo17nhhvwQxZTBnUOZa7yK/LDLa9zwnRmGOpabSXKWbMCpfjFJ9wKd4hqn+w==
+Received: from [102.67.254.169] ([102.67.254.169]) by
+ webmail.etud.u-picardie.fr (Horde Framework) with HTTP; Sun, 24 Nov 2024
+ 23:39:40 +0100
+Date: Sun, 24 Nov 2024 23:39:40 +0100
+Message-ID: <[removed]>
+From:[removed]
+Subject: Mr. Bartholomew Jeffrey Pollak,
+Reply-to:[removed]
+User-Agent: Horde Application Framework 5
+Content-Type: text/plain; charset=utf-8; format=flowed; DelSp=Yes
+MIME-Version: 1.0
+Content-Disposition: inline
+X-Spamd-Bar: +++
+Authentication-Results: smtp.u-picardie.fr;
+	auth=pass smtp.auth=p22305147 smtp.mailfrom=[removed]
+X-Rspamd-Server: passoire-01
+X-Rspamd-Queue-Id: 4XxP0X3Qtxzl9
+X-Spamd-Result: default: False [3.93 / 1000.00];
+	MISSING_TO(2.00)[];
+	INTRODUCTION(2.00)[];
+	MIME_GOOD(-0.10)[text/plain];
+	BAYES_SPAM(0.03)[52.16%];
+	DKIM_SIGNED(0.00)[u-picardie.fr:s=smtp];
+	ARC_NA(0.00)[];
+	FUZZY_BLOCKED(0.00)[rspamd.com];
+	MIME_TRACE(0.00)[0:+];
+	FROM_EQ_ENVFROM(0.00)[];
+	MID_RHS_MATCH_FROMTLD(0.00)[];
+	ETUD_FROM(0.00)[etud.u-picardie.fr];
+	REPLYTO_DOM_NEQ_FROM_DOM(0.00)[];
+	RCVD_VIA_SMTP_AUTH(0.00)[];
+	HAS_REPLYTO(0.00)[[removed]];
+	RCVD_COUNT_TWO(0.00)[2];
+	FROM_HAS_DN(0.00)[];
+	TAGGED_RCPT(0.00)[];
+	FREEMAIL_ENVRCPT(0.00)[yahoo.com,gmail.com,yahoo.co.in,aol.com,optonline.net,libero.it,tiscali.it,outlook.com,yahoo.fr,hotmail.it,ymail.com,yahoo.co.uk,netzero.net,verizon.net,alice.it,hotmail.fr,yahoo.com.ph,email.com,yahoo.it,virgilio.it,hotmail.com,comcast.net,live.it,outlook.it,ptd.net,icloud.com,my.com,wp.pl,live.com,email.it,yahoo.se,sbcglobal.net,uol.com.br,gmx.at,me.com,katamail.com,yahoo.co.jp,att.net,inwind.it,wowway.com,cox.net,yandex.ru,hotmail.co.uk,windstream.net,msn.com];
+	RCVD_TLS_LAST(0.00)[]
+
+
+Hello, My name is Mr. Bartholomew Jeffrey Pollak, an American citizen.  
+Please, let me hear from you, I want to discuss  about my project with  
+you, which may lead us into a possible partnership, I will appreciate  
+your attention to enable me to explain the nature of, the project and  
+I'm sure it will benefit your company and also myself, You need to  
+reconfirm to me that you got my message and available to, share the  
+idea of my project and a possible partnership, After your, response, I  
+will come up with complete details of my project and to, know what you  
+think about it, Thanks for your time and expecting your immediate  
+response  Waiting, for your response  this is my email address  
+[removed], Thanks,
+Mr. Bartholomew Jeffrey Pollak,
+
+

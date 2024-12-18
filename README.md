@@ -1,6 +1,6 @@
 # E-mail-SPAM-Archive
 
-This is an archive of spam that I recieved since 2023.
+This is an archive of spam that I received since 2023.
 
 Sometimes, the information within the header of the email will be stripped off, for privacy reasons.
 
