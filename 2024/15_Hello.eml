@@ -1,0 +1,109 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:2d08:b0:4a6:b479:dd26 with SMTP id iy8csp2576716vqb;
+        Thu, 21 Nov 2024 07:48:32 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVhY+Ph7HhxhqKD3VwyZTCYBI6XTA9pU6Hq48g8FHpvHk1puBHseYtDKSpljbqkZAwiumLPhPMJxI9+7gd3NU3jDBFiiQ==@gmail.com
+X-Received: by 2002:a05:6870:7903:b0:277:a43a:dac2 with SMTP id 586e51a60fabf-296d9b933d9mr7144548fac.17.1732204112357;
+        Thu, 21 Nov 2024 07:48:32 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732204112; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TqFJGbe0DO/DcQwFWgIUMfBAa4bdR9u4oMyLQ28/cjWviCNCiSvFaKjsZHgkJ8Inuy
+         njIXUOMZePRyXTjlF3CQIGULrdXvdoMyJ2k7MLCgs2Jsrdfm8KwhpVPSKPFjENYt24Z1
+         TRYSKzjm7U7zlrKEEDj+eyLpBKqS5XOVYG3/U9MnjLptyvSI5jVe3N23Juh9LT5WxRNV
+         5wQrc13yHo4GJF+/smKkBhjE3ES43wm3h0zez4B2Jmv3jhvAq/FhoaTh+uaKsUWeFLk3
+         XrFWqSifu3sKkH1Xtwamf3oZ+fOZcUC44/0fJVQLu+ZjdUr6bHmcbDl5kuYAdBShPSi4
+         EQ1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=V7HSEw0SMplsvzVNFtSqonhiOfbGz5EWV+LkQ+69PKI=;
+        fh=vubH9K4xqXxl28Y5gqzhUMwCL4JXqfmyAnniqQ9fFS8=;
+        b=DqsqWy3Bowfi0KEWRgJ1eS76tUaaj1r6EhG+FoEuXn4gneRJ2wejF75u61yWtBPaWS
+         9/+tkPc75epBWo74wZe8CgYPjQLyfyuYz9vxmB4gmCq5nx69VGaHxvCrLh9l7KXA069K
+         6OfA02Qh/5y7xLigUdFp1krsyFmvB/psmeZ00sQ/ZZbhL+NhdUU81fgcDK+pq56C+VhM
+         ZKV06BzaiVEU7PEyH7dUdrSaGmcgK3m+TNeDk5g8lb/rx3uCvp8SUhx16RaWVQpPZsTU
+         jfj/XMYYzOiEMuVhmPYczpaWwJ9Pjap1p7pN9lmz0l6yd+saidqYadQ0lWdpOII6gIz/
+         Kc8w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hRZY1l7X;
+       spf=pass (google.com: domain of alexisbrian690@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=alexisbrian690@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <alexisbrian690@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 41be03b00d2f7-7fba7c6b14asor3425876a12.4.2024.11.21.07.48.32
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Thu, 21 Nov 2024 07:48:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of alexisbrian690@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hRZY1l7X;
+       spf=pass (google.com: domain of alexisbrian690@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=alexisbrian690@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732204112; x=1732808912; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=V7HSEw0SMplsvzVNFtSqonhiOfbGz5EWV+LkQ+69PKI=;
+        b=hRZY1l7XkCN9yqGHvcUQwzAMP7HqKf3XIgpoI1weZ96rdCJ5gsneeHeLpDdB/Xdkxo
+         STE0iHDyC5r3pTXUmHaaZ+m17KkI4/5vxiySDvMZ9RugcY51//qiwUGwPri+VE1R4KBq
+         fkcevckWGNsNfcxbKR2N1luuIbvrHuc4gktSYcoYJiy/s+Sm9+wXwBNPmjuM/065ggpH
+         sPlL8OZSvwpe4ypxpo3Vr7eh4RLpveIldegCm4VS0EH1RZ1GR7MMKXa1kZYxpkr9BpbE
+         1+8dIgjBLXPTyQulzcBw6aovUHzlZDJLLFHCH/1OI2nJclfXOQet6DUkGbak+nG06+t+
+         48ig==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732204112; x=1732808912;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=V7HSEw0SMplsvzVNFtSqonhiOfbGz5EWV+LkQ+69PKI=;
+        b=ePjSL9lmVPQQvmTruQPW5+OWILbEzvf95IUMpJagdAua+/GuQLvcXjtM104mYj7VcH
+         fp6KR4NszpJz6ZNDnbxWWzLRKS5myOr0G74oNo0VDT/7EG04WtU5K9KRU+MdE8DQBRbK
+         BFUOI36NV1VnD3cGlRm38q34rzgdZp18XeGkAE5uvlo0JaodJmn6lVisfZXqXxGgGFH9
+         q3psgNb/AciRlnVE79sIbrMUX7xdHxqSebjjK7haJbAh4MKPQAKJnFJIlD23hDN89jIl
+         okmo40zGZcHaTrhSbvFeqGgvGmLOeGWzqw7O92K88xMWEQl74JNAnTrQjPNo+/ATNO9C
+         twjA==
+X-Forwarded-Encrypted: i=1; AJvYcCWxPk+j5NnKJzF/VqWMiF7UoXAb27f5wGz84kof9JItBbCLy5DCGmixQV5wi3nR6ADhuuRD/DIm4uKjVVly+vdkNr3Jkw==@gmail.com
+X-Gm-Message-State: AOJu0YwkNBMaJ4/LibqJilsAZ++NdTXqajMwaWGKB8DCbHjiyOBfNa0q
+	RAMfCBrDkDIDOISYSPXHBTNl4tJ9foaQpDtkASLRMQ9bSpigyvPHgd1xm9bauX7RIlLqof55smU
+	qCMeu8KLdbbw92ozG8GXlZiy6FcY=
+X-Gm-Gg: ASbGnctRgflRchFykk0QtDSAXgPmnGW8leJ3xX/xojJusqaT5XFEqQlUm9snaSg9+8y
+	belMZ+9fFfvLLOT/Gnx2LEqjyHKOtVXg=
+X-Google-Smtp-Source: AGHT+IFLre0kTi82TaG+nOUrHbLYb9/Y81cn/5wau5pkQAxdKHrQeFQCzzeyglGxzWj4gb2FrQ2IhVB20/Q86r9chqI=
+X-Received: by 2002:a17:90b:3ec1:b0:2ea:4e67:5642 with SMTP id
+ 98e67ed59e1d1-2eaca7eb51cmr8591745a91.33.1732204111775; Thu, 21 Nov 2024
+ 07:48:31 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: ok@ok.ok
+From: Jessica E Scranton <alexisbrian690@gmail.com>
+Date: Thu, 21 Nov 2024 07:48:16 -0800
+Message-ID: <CADN=4U_KHP6paKtTNSgD4BGhBHNcTmBH_MZF9Dy5FdHCAAjZVw@mail.gmail.com>
+Subject: Hello
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000c2d10206276e3291"
+Bcc: mailmanthingwhatever@gmail.com
+
+--000000000000c2d10206276e3291
+Content-Type: text/plain; charset="UTF-8"
+
+Hello
+
+I am Corporal Jessica E Scranton, an American soldier serving in the US
+military. I have some amount that I want to move out of ( SYRIA ) which
+might require your assistance urgently, Can I trust you? email me now, for
+details as this mail was sent from a discreet email account.
+
+I wait your response
+Jessica E Scranton (CP
+
+--000000000000c2d10206276e3291
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello<br><br>I am Corporal Jessica E Scranton, an American=
+ soldier serving in the US military. I have some amount that I want to move=
+ out of ( SYRIA ) which might require your assistance urgently, Can I trust=
+ you? email me now, for details as this mail was sent from a discreet email=
+ account.<br><br>I wait your response<br>Jessica E Scranton (CP </div>
+
+--000000000000c2d10206276e3291--

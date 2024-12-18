@@ -1,0 +1,104 @@
+Delivered-To: mailmanthingwhatever@gmail.com
+Received: by 2002:a05:612c:2d08:b0:4a6:b479:dd26 with SMTP id iy8csp3174419vqb;
+        Fri, 22 Nov 2024 04:15:51 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUDa3s0Suz9ubyeZAkrRghrXc7mSDvSpOMhvMrqxV+Q62NNdqzHhcGG3rzV/0teawfS4QrLFA+DzGPJRsfT63jzSyDjpA==@gmail.com
+X-Received: by 2002:a05:6602:27c3:b0:83a:a8d8:4fca with SMTP id ca18e2360f4ac-83ecd141d5fmr225673039f.4.1732277751120;
+        Fri, 22 Nov 2024 04:15:51 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1732277751; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MafWqhhOhUHGpPovH15tEUiIn/zFuLKBz2X06onomHcIjEnCIa1wz+kTIigAUEy2pX
+         w2OQVIcDHFvYm/1/maeRgcWwJjVOOlLleb9hzTMt2hAYJqSadIwfDV26JWo0x4P3oCkq
+         QlVXarlgERUCHw+vDdwpihviOfBXMltsQiELAocMp5KdbJAo11tsQ5aeO0w24cs24Qsc
+         bFWZHdwWmmSI4Qs9LmXiVUiOnbWsSqzhaZ4JQ1kba5zsVsfdLmdIRyWVkNxvhpVrxp6w
+         0HjxvESOCAO77EW5WRW/toOAwDFl/sYH1r9PBUEX23UEBYfSHEkUNFouWwPXLXw1118R
+         teLg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=bq9u59vGBiUH+vr8TR6L4oUDjWzu7P41fRk3vCsEcjA=;
+        fh=BRvOOiEwb4rwCbQgmcyS0TrAxAP0Faz9Wl3D0i0PADE=;
+        b=QysgLj7t/HEMesPnCqTu1BrwcdweLQDHZJGwPlIhxxD/5yVJ9H5Gp9WsYjFXZeKl1W
+         nSZOInE6rObT2SkKtN87BuWG3wfSxEflknRkuJXJ1OxSBOml84yKwc6VneRFHE6frGLU
+         zfDvTL8H2Szk0yeba2ivyWITjU/xcQXU9Q/9jVHcKNoEBlPHasXts719QdBZ8cnNt2to
+         sQGnHxowO4+sYShARgOPdbtfecSQO9sB6/z/yb9CIUQ02nVHiA86ZKVWPjdSCeSMcH/j
+         A07gAzaITEmQJGK8DnzxsUHThBRWSrYv7GAwxiAMtpvQ4u+aB2TIpq9b58MT06wkyLvD
+         CQKA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Ed9Ox8J+;
+       spf=pass (google.com: domain of sjoe30532@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sjoe30532@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <sjoe30532@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ca18e2360f4ac-83ecd4ae017sor52424139f.1.2024.11.22.04.15.51
+        for <mailmanthingwhatever@gmail.com>
+        (Google Transport Security);
+        Fri, 22 Nov 2024 04:15:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of sjoe30532@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Ed9Ox8J+;
+       spf=pass (google.com: domain of sjoe30532@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sjoe30532@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1732277751; x=1732882551; dara=google.com;
+        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=bq9u59vGBiUH+vr8TR6L4oUDjWzu7P41fRk3vCsEcjA=;
+        b=Ed9Ox8J+z+IWJrltf6XWRUq73Dnv6CnbS6M58azX1KyyNHXkRK/D9j7zJnlYuI3F+5
+         kdfnz6z8u+T39Uds28TMDMcpyYbuI0FUPIxIMoXTL730ZVCueqWm3l/zRya4UPm5uEat
+         1wEyoZ1D9fLorKB5A5u6iEGzgQBeco5sY4awzDOpHrHnEauT6eppn+J65W/jJpzs8Xt0
+         yxLEVS+2Pz1ooRjeBroaq+HwsIxmbFjVWJSdqS0Q2DR4GX3l0IG6g8+7vuA6aDeNQiVt
+         GEXEKKC4w7exgGM0a5FMpEn5nv3zad0V8GciwfUWR/GlKWRNFA1PZAybRLruvC18cmCA
+         ArcQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1732277751; x=1732882551;
+        h=to:subject:message-id:date:from:reply-to:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=bq9u59vGBiUH+vr8TR6L4oUDjWzu7P41fRk3vCsEcjA=;
+        b=BKoZ+/8UnpZaNop8UGI9i+y+7X9o6KMd2egjYxNZ8aC+ZMOI25KYAFappuYAg+Yglm
+         lsGCOb3m+Kfmrf8oae2ZrWX+labz+m1cBWar1/72LUEypSELt9F3Z5T8Fdf+97qo1iwJ
+         UjbFZfeketZms70Tv/nOjrhWeC4WsRcXj4fBfDK+fYZcrzCdmOGJuauzPSujiJr+tfTj
+         sAv5S9MkPayHsJUkQWObJXeKFrvk0Ak+4/BIZK6/7WfW540QJXWWOd3cswuTpMjIrmmI
+         uGNQVS0KwE+74VAhNJHTH9DcyQ+sKF9ICnDNK/4sA/czuqiwxrIwu/KCptSWBPk/mJ3A
+         9fig==
+X-Forwarded-Encrypted: i=1; AJvYcCWMpzeLQ7aDit0BjN64BbEXPI+gqJftrmkbw2Z/NCqf9Ho7Y0sTST8R7XZvmPXPe1YAioiW1+zRvaJFNB3kxqfp9066Ew==@gmail.com
+X-Gm-Message-State: AOJu0YwSco6klEkWqJ/Hi3IkbTZ/BlhFupFg/OWMPKtUp6swrrRwIK73
+	erlDJL6jw0kLtK23E3EnAV7r1nauofbJ/I7cJoSPErIpZxGN5mtpzxYqICBBs7QmPzlLjVnmj91
+	v9LHXJuuU9rIVxz2HG/xNNM/Sa14=
+X-Gm-Gg: ASbGnctDyspuFKJhmwaKTSctZyXIkFwpDKqP4Kz/7q5jJnOr/zueBZxIyIgTH0+vno3
+	T+z6qwm8v0tQVym9zvFPmlpWzM9Nh7ZXG
+X-Google-Smtp-Source: AGHT+IHXKWkQo/wbD9Nwjn0pLHjx5Q0wCzwK9J19h/zp1mt+kYqpzWvEgyBYR8FQJgNGw1wjUdilz8gIlqWh+PQtfBs=
+X-Received: by 2002:a05:6602:2197:b0:835:3dfc:5ba5 with SMTP id
+ ca18e2360f4ac-83ec1a4b60emr637831039f.5.1732277750064; Fri, 22 Nov 2024
+ 04:15:50 -0800 (PST)
+MIME-Version: 1.0
+Reply-To: umurumbano0@gmail.com
+From: Umuru Mbano <sjoe30532@gmail.com>
+Date: Fri, 22 Nov 2024 12:15:30 +0000
+Message-ID: <CAH+-Ub5xQwFo7E=m2H--bFE1mBBWg-uBrrD1sxw6_9DQ_7ajBg@mail.gmail.com>
+Subject: Dear friend, I know that this mail will come to you as a surprise. I
+ am a practitioner at law to a deceased Immigrant property Magnate. I hope
+ that you will not expose or betray this trust and confidence that I am about
+ to repose to you for the mutual benefit of our both families. I have an
+ important message for you concerning the death of your relative, and the
+ funds valued at $11.5 million he left behind in Security and Finance Company
+ here in my country Lome (Togo), Contact me at my private mailbox (
+ umurmbano0@gmail.com ) for the full details as soon as possible. Best
+ Regards, Mr.Umuru Mbano.
+To: wwwwwwwww@ewwewewewewewrerwre.zxcxzz
+Content-Type: multipart/alternative; boundary="000000000000f1f71706277f57c0"
+Bcc: mailmanthingwhatever@gmail.com
+
+--000000000000f1f71706277f57c0
+Content-Type: text/plain; charset="UTF-8"
+
+RE..GOOD NEWS.
+
+--000000000000f1f71706277f57c0
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">RE..GOOD NEWS.<br></div>
+
+--000000000000f1f71706277f57c0--
