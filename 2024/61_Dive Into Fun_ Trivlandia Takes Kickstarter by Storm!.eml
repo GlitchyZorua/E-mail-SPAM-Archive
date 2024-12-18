@@ -1,0 +1,925 @@
+Received: from SJ0PR84MB3271.NAMPRD84.PROD.OUTLOOK.COM (::1) by
+ MW5PR84MB1987.NAMPRD84.PROD.OUTLOOK.COM with HTTPS; Thu, 14 Nov 2024 16:11:02
+ +0000
+Received: from BN8PR04CA0054.namprd04.prod.outlook.com (2603:10b6:408:d4::28)
+ by SJ0PR84MB3271.NAMPRD84.PROD.OUTLOOK.COM (2603:10b6:a03:47b::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8137.28; Thu, 14 Nov
+ 2024 16:10:59 +0000
+Received: from BL02EPF00021F68.namprd02.prod.outlook.com
+ (2603:10b6:408:d4:cafe::5a) by BN8PR04CA0054.outlook.office365.com
+ (2603:10b6:408:d4::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8158.17 via Frontend
+ Transport; Thu, 14 Nov 2024 16:10:58 +0000
+Authentication-Results: spf=pass (sender IP is 104.160.65.35)
+ smtp.mailfrom=bounce.getresponse-mail.com; dkim=pass (signature was verified)
+ header.d=buildesk.info;dmarc=bestguesspass action=none
+ header.from=buildesk.info;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of
+ bounce.getresponse-mail.com designates 104.160.65.35 as permitted sender)
+ receiver=protection.outlook.com; client-ip=104.160.65.35;
+ helo=mta-35.gamma.getresponse-mail.com; pr=C
+Received: from mta-35.gamma.getresponse-mail.com (104.160.65.35) by
+ BL02EPF00021F68.mail.protection.outlook.com (10.167.249.4) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8158.14
+ via Frontend Transport; Thu, 14 Nov 2024 16:10:58 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:2438CC11F73175D2F26FEDC1194B512B09C5C064ED459E2E25BE6CEB5222368B;UpperCasedChecksum:B6A255C621B3CA6A08CF6E9D89FC1247ABD494FDA27681355C6F50925CA36317;SizeAsReceived:2217;Count:16
+Content-Type: multipart/alternative; boundary=06d046845ff7c51aff0f24ec67eaa8a7
+Date: Thu, 14 Nov 2024 16:10:29 +0000
+DKIM-Signature: a=rsa-sha256; b=lGCNgNH9oAzo2wjz9B4kT6DqmzFbw3Uonip9FmDaxBL3XzUUpiSMyvICa9OFn5YFfvGjzcWX+DK3eat46+b6Yd39lMylWJ31J7hbL4Mv8qkLkN3869U72WSotC5McBx8D7babRvBnRGmuWyORXt+izw4nbFbfHRh/RXNRTc+GEE=; bh=oV5CpP6EMqx3wyQHPKnn45qDK3MFdU6JfcH/SAx9S0s=; c=simple/simple; d=buildesk.info; h=Sender:From:From:To:To:CC:Subject:Subject:Message-ID:Message-ID:Form-Sub:List-Unsubscribe:List-Unsubscribe:List-Unsubscribe-Post:List-Unsubscribe-Post:X-CSA-Complaints:X-CSA-Complaints; s=8cfe69d2; t=1731600629; v=1; x=1731687029;
+DKIM-Signature: a=rsa-sha256; b=iB5tUnSlcCqCUsFxyjV2JImN0p3TeqKM0yp9ydz8E6Ol7rAVhFK1+sWzzLHhj4T52+dJ1YNE03ARWHJ9PXSUiITpB/wl165f1qttDox6RWcGK688BMdRtMrjWzJO4Wiv7IMfEiGENUtUFMZx+9zVHEbgKBiQUB3DH771Kn7DMw4=; bh=oV5CpP6EMqx3wyQHPKnn45qDK3MFdU6JfcH/SAx9S0s=; c=simple/simple; d=getresponse-mail.com; h=Sender:From:From:To:To:CC:Subject:Subject:Message-ID:Message-ID:Form-Sub:List-Unsubscribe:List-Unsubscribe:List-Unsubscribe-Post:List-Unsubscribe-Post:X-CSA-Complaints:X-CSA-Complaints; s=k1024e; t=1731600629; v=1; x=1731687029;
+From: "Caibengames" <support@buildesk.info>
+List-Unsubscribe: <https://app.getresponse.com/one_click_unsubscribe.html?x=a62b&m=BlZrUD&s=BiFJUes&u=C6Ukb&z=E9pIStg&>, <mailto:listunsubscribe@getresponse-mail.com?subject=getresponse.xserial.s56brHt%2B5SGHVsalo7J1tplwTz7evlPnG95MSur2h4YHwJF0evAem3biw1T6alvkERCEml9nfA6aRaM9G%2BJyualem7OhCSVmcLqdOh8W3nKKP2ZSWMnTSVKSfdCTdWHt6CR2CzZedDAeXXuEjdNczASr0Q%3D%3D>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <getresponse.xserial.s56brHt+5SGHVsalo7J1tplwTz7evlPnG95MSur2h4YHwJF0evAem3biw1T6alvkERCEml9nfA6aRaM9G+Jyualem7OhCSVmcLqdOh8W3nKKP2ZSWMnTSVKSfdCTdWHt6CR2CzZedDAeXXuEjdNczASr0Q==@getresponse-mail.com>
+Reply-To: caibengames@gmail.com
+Require-Recipient-Valid-Since: retrojbot@hotmail.com; Thu, 14 Nov 2024 15:55:57 +0000
+Return-Path: bounce-177226305@bounce.getresponse-mail.com
+Subject: Dive Into Fun: Trivlandia Takes Kickstarter by Storm!
+To: retrojbot@hotmail.com
+X-Complaints-To: abuse@getresponse-mail.com
+X-CSA-Complaints: csa-complaints@eco.de
+X-IncomingHeaderCount: 16
+X-MS-Exchange-Organization-ExpirationStartTime: 14 Nov 2024 16:10:58.8028
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 270023eb-3e28-43ea-17fe-08dd04c6ed51
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL02EPF00021F68:EE_|SJ0PR84MB3271:EE_|MW5PR84MB1987:EE_
+X-MS-Exchange-Organization-AuthSource:
+ BL02EPF00021F68.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 11/14/2024 8:41:35 AM
+X-MS-Office365-Filtering-Correlation-Id: 270023eb-3e28-43ea-17fe-08dd04c6ed51
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 104.160.65.35
+X-SID-PRA: SUPPORT@BUILDESK.INFO
+X-SID-Result: PASS
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam:
+ BCL:0;ARA:1444111002|47200799018|1131999016|56000799018|87000799015|970799054|51300799018|461199028|10300799029|58200799015|1680799051|2700799026|9400799024|9000799047|56899033|1370799030|1290799027|1380799030|440099028|1360799030|4302099013|3412199025|1602099012|2406899039;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 14 Nov 2024 16:10:58.7403
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 270023eb-3e28-43ea-17fe-08dd04c6ed51
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ BL02EPF00021F68.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR84MB3271
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.7069921
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8158.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90005022)(91005020)(91035115)(9050020)(9100341)(944500132)(2008001181)(2008121020)(4810010)(4910033)(9610028)(9560006)(10180024)(9320005)(9245025)(120001);RF:JunkEmail;
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0xO1NDTD02
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ekRmZ3ZQaHFvdzNwRkM5Rzl3UFNyM3QvYlY1ak5MVjArZWl4eWZyK01UWkFM?=
+ =?utf-8?B?dkZHcWNSZVJyM29sSUFlWlVDaXFCNmVvUVVVa2tSY2xyWFZLRFhBbFVCVGZU?=
+ =?utf-8?B?ckx2MDFTQTRWenNFYW14blIzRExHZUROdjR3a0duQlpjanRobENNMkhBSFUy?=
+ =?utf-8?B?aVBPL1JlejFYWklTYURzYVd2WkdnT0RDZVhWNFh1WGhzZTlpamJmN0lVSkpC?=
+ =?utf-8?B?SGN3aWxRNFMvcVR1RWcrVkd3MXhxOUdmZThTSytYcXFWOUFwQUV6b2c5UWRC?=
+ =?utf-8?B?U1JIUDNmbTluMUVndW9BYVRsWi85cEZ1T3R1L2NGank2N0ZsUllDcmtVSkp2?=
+ =?utf-8?B?YVRMSjhoNys2Mzh1UkxnbHJwNHBZcVFxT2VxL1N3aDlwMHpQTWVOcVZ2dk40?=
+ =?utf-8?B?dGRVN0tnWmFXNGhGTjYraGFtdXQwdU1MbTVWMU5kbXJwaUlUb2xCNU40dG5D?=
+ =?utf-8?B?Tmt1K1BlU0NRWGhrUlB0VVRhcnVpN21pZ08zZjVhbDBoS0E0M3grdURkS3ZO?=
+ =?utf-8?B?NzR5R0tyK1pzMTJraytkUERsQ3VjUXVjeEZPVVBiczhJcnNPQU5BbXRWVVUx?=
+ =?utf-8?B?c3poWmtvOWJRN0dPUnBnR1JiZjMwUGxwL3lQRmFUdEI1OHBGUmloaTZ4QTRX?=
+ =?utf-8?B?eDZIVy8rV2xXYVNaWnVWMENZRnJONTM4NWtmYlB3OG53TlpISi92R3dLNUZM?=
+ =?utf-8?B?bXF2WGQ5NkwyQVQxWmdydEMzbGtlRVVrWDF1aHdQZmFadmtNWTI1UnpaRGRs?=
+ =?utf-8?B?Sm94a2M2SzZyZE5OeFAvSTNPeWs3YWZOajg5SkcrV3NYZVJHbUM1eURXdzJv?=
+ =?utf-8?B?RnhEUFVyYVRHaStxeS9jWnlzNHUwZWNmYm9UNEV0NlVyVkN2cS9hQkRLeGNv?=
+ =?utf-8?B?S3FGeDNmN28yKytnV082Wng0SG9YVGRSYldOcktUOGNpc2tyU0UvNUluL2xU?=
+ =?utf-8?B?M2F1WUpHQmNEQzV4T3Q5ZllSMFFOUmQzODhFNmh6YXJlT3YyZzljU0Q1YWJN?=
+ =?utf-8?B?QTNBdVdSN3RlN2NaaldTbi9YdWZ4dDQzSTQvemUzVERWazRQQm1wRFBhVDJy?=
+ =?utf-8?B?K3dCN1Q2UTF2R1I0MkwzYkQyb2xORmZzamE3Sk5yTWtzVk1vbG1RaUl4azFG?=
+ =?utf-8?B?YVNVTzBwd2RhSmNDYWRhbTNvQ3hPQXVyRzJ6Tm9IbnZwSkVIdGpYVXRHWDhK?=
+ =?utf-8?B?K2xJZTlIWEwyTWdIcUdrRHNsQTJZRFNGdmpaR3FkTmxSM3h0OXoreTlVUllV?=
+ =?utf-8?B?KzYxN202amlBdTVnd0NHZlpqNmtnT0RDSnJHRXJQYVdpM29pL1BoYm5KR0s1?=
+ =?utf-8?B?Ym04MFNheG05YmFrTnQwSm5wd2V5Q2tlb2pTSGtOcG1NQWVDM1N3aVN6NlJ4?=
+ =?utf-8?B?UUZ3djR2TFp2aW5rQnBPeEpaS2NDMlJnVllTb2s1RENPQWd6Q2RjTjRTb1Bw?=
+ =?utf-8?B?UGxCb0FxUE81aFMzWjRkV1RZSFhHa1ZGTlV1c2lzL2J0RHNCMUszS2toaGhM?=
+ =?utf-8?B?YW8zVktwblFwQ2tCNFhaeWJpQmVIVk1VbkhMVXRJaFRlTm5kMGZZbFJGV2JY?=
+ =?utf-8?B?ZVVZTUdLZkxjeXpsRnBubk02ak1qZTQ4R3BFc3lLazFYSmVwZWNpS2x2aWRJ?=
+ =?utf-8?B?cnROdUVua3ZNT0UwUzM3b0JVbnQ0eW9jSytHTXZZUVA1WTNWdXZqNlAyTTho?=
+ =?utf-8?B?OTlwN1V4azJ1ZUY5dFZxMERHYTJuR2YxajZXZHV6VTFzMjVYeU1RQzM2aDla?=
+ =?utf-8?B?d3JQTzF3eUt6SlZRVzdMWXhaNVhxY1JEcWNuZElKcjVvR2JIcC8wOG9iREF6?=
+ =?utf-8?B?T2Q1U2tieGVyL1h1ZFl0eVp3NlJhRGNxbXNrMjJQWlBvOHFNUHM0Q1hZUFpm?=
+ =?utf-8?B?RHRSWjNEcVNMNStxdlJNeFFGdEhSVDd3NGR0NVRxWnRMVlpEbEhSRkpzSlUv?=
+ =?utf-8?B?Ui9Pa1ludmdocWQ2VnRFQnhKMzVDWkVhKzFLRnNOQTdTNDN3RnpwcUFrcnJV?=
+ =?utf-8?B?LzhwNkZuTmpvNmV0UWJKT0hYKytPUnhTckhLeGdUOXNRMXNCN1k2S2NtOEhK?=
+ =?utf-8?B?bG9yTlZkbHp6Z0RFazBNYzgrTlgwQnBJRVE0L08wQWh0Znorb1ljTVRsVElU?=
+ =?utf-8?B?QUQ4cHk0RkhhK2kxdjQxdTNZd2hrbFZRdUZocDdzK1o3WjJod05NbHlISXJx?=
+ =?utf-8?B?OU1FRVRRY05Xdk9DanowTCtndXlVZFVCQ0w4SzJiZktVM2JNTEpGUUxsS0hX?=
+ =?utf-8?B?Nmg0Q3JwY04wWStkdkVzRjQ3OG9oQ1IxTitLK0E1bXd1MExjWDIyZHRxS3B0?=
+ =?utf-8?B?Mmx4T2R4Um94YXBrampsbUVNcHM2UGZmbHVJdm9HRU10REVzMjkyQ21HZm45?=
+ =?utf-8?B?K0dhR2FWdndHeXg5R3cvK1ZSckdtNGFsT1diVE5KeDlMVys3Z1NMbUxLTmZ1?=
+ =?utf-8?B?RCtLVnBlSVRUR2QwNC9UV1oyVnF3SWpISmhvN2tSTlRXZjhvWG1hYTAzTXJR?=
+ =?utf-8?B?UTVPQ1dWNk1DbTBsdmJZWGZFTldibnE5dXpMaW5lZkpCbHdIamRLaEp1Z0FQ?=
+ =?utf-8?B?TXJWenlPRVFEOEZZbEk5bGVoaU5QRWluNlRPcTN3L1VwdWtCTGtmYktRZGlw?=
+ =?utf-8?B?aE9leGZxK1QrYTBIMjMvSCtVSnpjUVkwaW1hSzRER3MxdjlhTmZkVUtiWlM2?=
+ =?utf-8?B?RjlSclMxckducFQxcHNoQk9UZldzRUFEcDFQYzJYTzFhaHZlMVVSMVRXeGgw?=
+ =?utf-8?B?VGt4TVJrYnVEWHdJdnVtdUpFeDcxOVpHVTRqQTkzaXZkZVg0UHlXTVBKYkFS?=
+ =?utf-8?B?SXlkeDI4WWNjekM1cDdqdXFSenZOR3NQT1RhLzFWaHFlSWNERmVWSnY3TW1q?=
+ =?utf-8?B?R3BLTkkzRGRiTTc1Q3hobGRNa3FqaDM2akNwaVYyNkN5bHR2UWpPYmxDelZR?=
+ =?utf-8?B?UC9PY2ZtMzB3Q2FIU09CMXEwL1dTdEVJS3JiVXAyVmZCOGZITGsvellKTlRh?=
+ =?utf-8?B?U3pPNHZaa05sZzVIOU5RaWgrWTRhMldPYnhnUUt5cFFzRHNmUXpmUWFNdmk3?=
+ =?utf-8?B?OUtVbmZBVjdFTmNiY09oV3ZYekdQWklySDM3NW1LUVAyZlVRUWVWS1p4dFFn?=
+ =?utf-8?B?d290Y2hURmZpelBtSktGUEZZQnZKamJhUWtzMDcyM1htQUdNWTh1ZEcwdWFj?=
+ =?utf-8?B?Um4xVThrdkY3M2RrUlVoL2U0UDZHTTZmNmEzeXpmaXJSeWpjaE5nMHdnbml4?=
+ =?utf-8?B?S25ManRVRHpKblVYSndCSWZmUjI1SmJVSTF0RVZlUzhheWRkeDdma3FCeW40?=
+ =?utf-8?B?bmM2cnExZU9kbTRuV1Ixc3FNUm5nVHdEK1VrWGFGalA5RDBIWE55cnNYdWYv?=
+ =?utf-8?Q?hl+RIEIEKYxgjhuDxOlo3?=
+MIME-Version: 1.0
+
+--06d046845ff7c51aff0f24ec67eaa8a7
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+=0A=0A[https://us-ms.gr-cdn.com/getresponse-C6Ukb/photos/2633965f-db7b-4e12=
+-913f-cbc1261ef8fe.png]=0A=0A=0ATRIVLANDIA=0AA dynamic fun trivia game for =
+everyone, presented in a unique multi-tiered format=0A=0A=0A=0A[https://us-=
+ms.gr-cdn.com/getresponse-C6Ukb/photos/74b3a447-4eba-4e25-bdfd-41b538160599=
+.jpg] [https://app.getresponse.com/click.html?x=3Da62b&lc=3DzGQwMN&mc=3DJH&=
+s=3DBiFJUes&u=3DC6Ukb&z=3DEMxOGez&]=0A=0A=0A=0ATrivlandia: Conquer, Craft, =
+and Rise to Glory!=0AThe talk of the town is here - your new favorite game =
+is live on Kickstarter!=0ALooking for a game that=E2=80=99s fun, engaging, =
+and perfect for everyone? This question and answer board game has it all ex=
+citing gameplay, simple rules, and endless laughs! Players race to the top =
+of the mountain, answering questions along the way, all while learning and =
+having fun together. It=E2=80=99s visually dynamic and easy to follow, keep=
+ing everyone hooked for 90-120 minutes. Whether you're playing with 2 indiv=
+iduals or up to six teams, it=E2=80=99s the ultimate way to bring family an=
+d friends together for a memorable game night. A perfect gift that promises=
+ both fun and learning for all ages!=0A=0A=0A=0ADISCOVER [https://app.getre=
+sponse.com/click.html?x=3Da62b&lc=3DzGQwC2&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=
+=3DEhrRCou&]=0A=0A=0A=0AClaim your rewards - pledge now and be part of the =
+adventure!=0A=0A=0A=0A=0A=0A[https://us-ms.gr-cdn.com/getresponse-C6Ukb/pho=
+tos/dfd637f8-9250-4bdc-8013-9ce43bea7f17.png] [https://app.getresponse.com/=
+click.html?x=3Da62b&lc=3DzGQwVh&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=3DEVJMJcQ&]=
+=0A=0A=0ABASIC REWARD=0A1 x Standard Trivlandia game including the classic =
+medium level set of cards.=0A=0A=0A=0APLEDGE NOW [https://app.getresponse.c=
+om/click.html?x=3Da62b&lc=3DzGQwJY&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=3DEGv8Vy=
+1&]=0A=0A=0A=0ASTANDARD REWARD=0A1 x Trivlandia games with Classic medium l=
+evel cards included + 2 x card packs of your choice.=0A=0A=0A=0APLEDGE NOW =
+[https://app.getresponse.com/click.html?x=3Da62b&lc=3DzGQwFR&mc=3DJH&s=3DBi=
+FJUes&u=3DC6Ukb&z=3DECbjBta&]=0A=0A=0A[https://us-ms.gr-cdn.com/getresponse=
+-C6Ukb/photos/e73b593a-a127-436e-98d2-676e8e3d4f5e.png] [https://app.getres=
+ponse.com/click.html?x=3Da62b&lc=3DzGQwRg&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=
+=3DEVgiSK5&]=0A=0A=0A=0A=0A[https://us-ms.gr-cdn.com/getresponse-C6Ukb/phot=
+os/7e856cde-d036-4e84-a44f-e76fc2858a8d.png] [https://app.getresponse.com/c=
+lick.html?x=3Da62b&lc=3DzGQwlL&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=3DEFe9Fui&]=
+=0A=0A=0APREMIUM REWARD=0A2 x Trivlandia games with medium level classic ca=
+rds included.=0A=0A=0APLEDGE NOW [https://app.getresponse.com/click.html?x=
+=3Da62b&lc=3DzGQwOy&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=3DEzCDyTB&]=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0AHurry up!=0ADiscover even more amazing and exciting re=
+wards waiting for you.=0A=0A=0APLEDGE NOW [https://app.getresponse.com/clic=
+k.html?x=3Da62b&lc=3DzGQwWc&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=3DEVzEFVF&]=0A=
+=0AFollow us for more updates on our socials.=0A=0A=0A=0Ainstagram [https:/=
+/us-as.gr-cdn.com/images/common/templates/messages/v2/social/instagram2.png=
+] [https://app.getresponse.com/click.html?x=3Da62b&lc=3DzGQwXO&mc=3DJH&s=3D=
+BiFJUes&u=3DC6Ukb&z=3DESk6yDP&]=0A=0Ayoutube [https://us-as.gr-cdn.com/imag=
+es/common/templates/messages/v2/social/youtube2.png] [https://app.getrespon=
+se.com/click.html?x=3Da62b&lc=3DzGQwv4&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=3DEV=
+lvwRl&]=0A=0A=0ACaiben Games, Po box 263 Brisbane Markets, 4106, Brisbane, =
+Australia=0A=0AYou may unsubscribe [https://app.getresponse.com/unsubscribe=
+.html?x=3Da62b&m=3DBlZrUD&mc=3DJH&s=3DBiFJUes&u=3DC6Ukb&z=3DEIkiMpz&pt=3Dun=
+subscribe] or change your contact details [https://app.getresponse.com/chan=
+ge_details.html?x=3Da62b&m=3DBlZrUD&s=3DBiFJUes&u=3DC6Ukb&z=3DEQdTzve&pt=3D=
+change_details] at any time.=0APowered by: https://app.getresponse.com/refe=
+rral.html?x=3Da62b&c=3D0qVfL&u=3DC6Ukb&z=3DEBjESuU&=
+
+--06d046845ff7c51aff0f24ec67eaa8a7
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!doctype html><html lang=3D"und" dir=3D"auto" xmlns=3D"http://www.w3.org/1=
+999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas=
+-microsoft-com:office:office"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle></title><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible" conten=
+t=3D"IE=3Dedge"><!--<![endif]--><meta name=3D"viewport" content=3D"width=3D=
+device-width,initial-scale=3D1"><style type=3D"text/css">#outlook a { paddi=
+ng:0; }=0A=
+      body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size=
+-adjust:100%; }=0A=
+      table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-r=
+space:0pt; }=0A=
+      img { border:0;height:auto;line-height:100%; outline:none;text-decora=
+tion:none;-ms-interpolation-mode:bicubic; }=0A=
+      p { display:block;margin:13px 0; }</style><!--[if mso]>=0A=
+    <noscript>=0A=
+    <xml>=0A=
+    <o:OfficeDocumentSettings>=0A=
+      <o:AllowPNG/>=0A=
+      <o:PixelsPerInch>96</o:PixelsPerInch>=0A=
+    </o:OfficeDocumentSettings>=0A=
+    </xml>=0A=
+    </noscript>=0A=
+    <![endif]--><!--[if lte mso 11]>=0A=
+    <style type=3D"text/css">=0A=
+      .mj-outlook-group-fix { width:100% !important; }=0A=
+    </style>=0A=
+    <![endif]--><style type=3D"text/css">@media only screen and (min-width:=
+480px) {=0A=
+        .mj-column-per-100 { width:100% !important; max-width: 100%; }=0A=
+.mj-column-per-50 { width:50% !important; max-width: 50%; }=0A=
+      }</style><style media=3D"screen and (min-width:480px)">.moz-text-html=
+ .mj-column-per-100 { width:100% !important; max-width: 100%; }=0A=
+.moz-text-html .mj-column-per-50 { width:50% !important; max-width: 50%; }<=
+/style><style type=3D"text/css">@media only screen and (max-width:479px) {=
+=0A=
+      table.mj-full-width-mobile { width: 100% !important; }=0A=
+      td.mj-full-width-mobile { width: auto !important; }=0A=
+    }</style><style type=3D"text/css">@media (max-width: 479px) {
+.hide-on-mobile {
+display: none !important;
+}
+}=0A=
+.gr-mlimage-iuplpm img {
+box-sizing: border-box;
+}
+@media (min-width: 480px) {
+.gr-mlimage-gufths {
+height: 80px !important;
+}
+}=0A=
+.gr-mltext-rvtkdx a,
+.gr-mltext-rvtkdx a:visited {
+text-decoration: none;
+}=0A=
+.gr-mlimage-iuplpm img {
+box-sizing: border-box;
+}
+@media (min-width: 480px) {
+.gr-mlimage-tdkymb {
+height: 400px !important;
+}
+}=0A=
+.gr-mltext-fxbhtp a,
+.gr-mltext-fxbhtp a:visited {
+text-decoration: none;
+}=0A=
+.gr-mlbutton-gcwjco p {
+direction: ltr;
+}=0A=
+.gr-mltext-nkihvj a,
+.gr-mltext-nkihvj a:visited {
+text-decoration: none;
+}=0A=
+.gr-mlimage-iuplpm img {
+box-sizing: border-box;
+}
+@media (min-width: 480px) {
+.gr-mlimage-jdnski {
+height: 149px !important;
+}
+}=0A=
+.gr-mltext-uvumvy a,
+.gr-mltext-uvumvy a:visited {
+text-decoration: none;
+}=0A=
+.gr-mlbutton-suooxl p {
+direction: ltr;
+}=0A=
+.gr-mltext-sdficl a,
+.gr-mltext-sdficl a:visited {
+text-decoration: none;
+}=0A=
+.gr-mlbutton-yogcja p {
+direction: ltr;
+}=0A=
+.gr-mlimage-iuplpm img {
+box-sizing: border-box;
+}
+@media (min-width: 480px) {
+.gr-mlimage-ahcrcg {
+height: 191px !important;
+}
+}=0A=
+.gr-mlimage-iuplpm img {
+box-sizing: border-box;
+}
+@media (min-width: 480px) {
+.gr-mlimage-jcrrvt {
+height: 250px !important;
+}
+}=0A=
+.gr-mltext-jctogi a,
+.gr-mltext-jctogi a:visited {
+text-decoration: none;
+}=0A=
+.gr-mlbutton-jfuwol p {
+direction: ltr;
+}=0A=
+.gr-mltext-aupwjd a,
+.gr-mltext-aupwjd a:visited {
+text-decoration: none;
+}=0A=
+.gr-mlbutton-hslidq p {
+direction: ltr;
+}=0A=
+.gr-mltext-lhbgef a,
+.gr-mltext-lhbgef a:visited {
+text-decoration: none;
+}=0A=
+.gr-footer-owwxyt a,
+.gr-footer-owwxyt a:visited {
+color: #00BAFF;
+text-decoration: underline;
+}</style><link href=3D"https://fonts.googleapis.com/css?display=3Dswap&amp;=
+family=3DRoboto:400,400i,700,700i&amp;subset=3Dcyrillic,greek,latin-ext,vie=
+tnamese" rel=3D"stylesheet" type=3D"text/css"><style type=3D"text/css">@imp=
+ort url(https://fonts.googleapis.com/css?display=3Dswap&family=3DRoboto:400=
+,400i,700,700i&subset=3Dcyrillic,greek,latin-ext,vietnamese);</style></head=
+><body style=3D"word-spacing:normal;background-color:#EAF7FF;"><div class=
+=3D"elem-body" style=3D"background-color:#EAF7FF;" lang=3D"und" dir=3D"auto=
+">  <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:600px;"=
+ width=3D"600" bgcolor=3D"#F2F2F2" ><tr><td style=3D"line-height:0px;font-s=
+ize:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D"background=
+:#F2F2F2;background-color:#F2F2F2;margin:0px auto;max-width:600px;"><table =
+align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"background:#F2F2F2;background-color:#F2F2F2;width:100=
+%;"><tbody><tr><td style=3D"border-bottom:0 none #000000;border-left:0 none=
+ #000000;border-right:0 none #000000;border-top:0 none #000000;direction:lt=
+r;font-size:0px;padding:5px;text-align:center;"><!--[if mso | IE]><table ro=
+le=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><t=
+d class=3D"" style=3D"vertical-align:top;width:590px;" ><![endif]--><div cl=
+ass=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0px;text-=
+align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%=
+;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" width=3D"100%"><tbody><tr><td style=3D"background-color:transparent;b=
+order-bottom:none;border-left:none;border-right:none;border-top:none;vertic=
+al-align:top;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td align=3D"center"=
+ class=3D"gr-mlimage-iuplpm gr-mlimage-gufths" style=3D"font-size:0px;paddi=
+ng:0;word-break:break-word;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse;border-sp=
+acing:0px;"><tbody><tr><td style=3D"width:94px;"><img alt=3D"" src=3D"https=
+://us-ms.gr-cdn.com/getresponse-C6Ukb/photos/2633965f-db7b-4e12-913f-cbc126=
+1ef8fe.png" style=3D"border:0;border-left:0 none #000000;border-right:0 non=
+e #000000;border-top:0 none #000000;border-bottom:0 none #000000;border-rad=
+ius:0;display:block;outline:none;text-decoration:none;height:auto;width:100=
+%;font-size:13px;" width=3D"94" height=3D"auto"></td></tr></tbody></table><=
+/td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso | IE]>=
+</td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if mso |=
+ IE]></td></tr></table><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:600px;=
+" width=3D"600" bgcolor=3D"#3C9B81" ><tr><td style=3D"line-height:0px;font-=
+size:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D"backgroun=
+d:#3C9B81;background-color:#3C9B81;margin:0px auto;max-width:600px;"><table=
+ align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" style=3D"background:#3C9B81;background-color:#3C9B81;width:10=
+0%;"><tbody><tr><td style=3D"border-bottom:0 none #000000;border-left:0 non=
+e #000000;border-right:0 none #000000;border-top:0 none #000000;direction:l=
+tr;font-size:0px;padding:0;text-align:center;"><!--[if mso | IE]><table rol=
+e=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td=
+ class=3D"" style=3D"vertical-align:top;width:600px;" ><![endif]--><div cla=
+ss=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0px;text-a=
+lign:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" width=3D"100%"><tbody><tr><td style=3D"background-color:transparent;bo=
+rder-bottom:none;border-left:none;border-right:none;border-top:none;vertica=
+l-align:top;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td align=3D"left" c=
+lass=3D"gr-mltext-dbljfs gr-mltext-rvtkdx" style=3D"background:#F2F2F2;font=
+-size:0px;padding:0;word-break:break-word;"><div style=3D"font-family:Ubunt=
+u, Helvetica, Arial, sans-serif;font-size:13px;line-height:1.4;text-align:l=
+eft;color:#000000;"><div style=3D"text-align: center"><h1 style=3D"font-fam=
+ily:Arial;font-size:20px;padding-top:13px;padding-bottom:13px;margin-top:0p=
+x;margin-bottom:0px;font-weight:normal;color:#000000;"><span style=3D"color=
+: #2A705C"><strong><span style=3D"font-size: 48px"><span style=3D"font-fami=
+ly: Roboto, Arial, sans-serif">TRIVLANDIA</span></span></strong></span><br>=
+<span style=3D"color: #2A705C"><strong><span style=3D"font-size: 14px"><spa=
+n style=3D"font-family: Roboto, Arial, sans-serif">A dynamic fun trivia gam=
+e for everyone, presented in a unique multi-tiered format</span></span></st=
+rong></span></h1></div></div></td></tr><tr><td style=3D"background:#F2F2F2;=
+font-size:0px;word-break:break-word;"><div style=3D"height:20px;line-height=
+:20px;">=E2=80=8A</div></td></tr><tr><td align=3D"center" class=3D"gr-mlima=
+ge-iuplpm gr-mlimage-tdkymb link-id-94699d64cb8e" style=3D"font-size:0px;pa=
+dding:0;word-break:break-word;"><table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse;border=
+-spacing:0px;"><tbody><tr><td style=3D"width:600px;"><a href=3D"https://app=
+.getresponse.com/click.html?x=3Da62b&amp;lc=3DzGQwMN&amp;mc=3DJH&amp;s=3DBi=
+FJUes&amp;u=3DC6Ukb&amp;z=3DEzfEz0d&amp;" target=3D"_blank"><img alt=3D"" s=
+rc=3D"https://us-ms.gr-cdn.com/getresponse-C6Ukb/photos/74b3a447-4eba-4e25-=
+bdfd-41b538160599.jpg" style=3D"border:0;border-left:0 none #000000;border-=
+right:0 none #000000;border-top:0 none #000000;border-bottom:0 none #000000=
+;border-radius:0;display:block;outline:none;text-decoration:none;height:aut=
+o;width:100%;font-size:13px;" width=3D"600" height=3D"auto"></a></td></tr><=
+/tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><!=
+--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></d=
+iv><!--[if mso | IE]></td></tr></table><table align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=
+=3D"width:600px;" width=3D"600" bgcolor=3D"#F2F2F2" ><tr><td style=3D"line-=
+height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div st=
+yle=3D"background:#F2F2F2;background-color:#F2F2F2;margin:0px auto;max-widt=
+h:600px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" style=3D"background:#F2F2F2;background-color:=
+#F2F2F2;width:100%;"><tbody><tr><td style=3D"border-bottom:0 none #000000;b=
+order-left:0 none #000000;border-right:0 none #000000;border-top:0 none #00=
+0000;direction:ltr;font-size:0px;padding:5px;text-align:center;"><!--[if ms=
+o | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;width:590px;" ><!=
+[endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"fo=
+nt-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-ali=
+gn:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background-co=
+lor:transparent;border-bottom:none;border-left:none;border-right:none;borde=
+r-top:none;vertical-align:top;padding:0;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><t=
+d style=3D"background:#F2F2F2;font-size:0px;word-break:break-word;"><div st=
+yle=3D"height:40px;line-height:40px;">=E2=80=8A</div></td></tr><tr><td alig=
+n=3D"left" class=3D"gr-mltext-dbljfs gr-mltext-fxbhtp" style=3D"background:=
+#F2F2F2;font-size:0px;padding:0;word-break:break-word;"><div style=3D"font-=
+family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1.4;=
+text-align:left;color:#000000;"><div style=3D"text-align: center"><h1 style=
+=3D"font-family:Arial;font-size:20px;padding-top:13px;padding-bottom:13px;m=
+argin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><span st=
+yle=3D"color: #244459"><strong><span style=3D"font-size: 22px"><span style=
+=3D"font-family: Roboto, Arial, sans-serif">Trivlandia: Conquer, Craft, and=
+ Rise to Glory!</span></span></strong></span><br><span style=3D"color: #244=
+459"><strong><span style=3D"font-size: 14px"><span style=3D"font-family: Ro=
+boto, Arial, sans-serif">The talk of the town is here - your new favorite g=
+ame is live on Kickstarter!</span></span></strong></span></h1></div><div st=
+yle=3D"text-align: justify"><p style=3D"font-family:Arial;font-size:14px;ma=
+rgin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><span sty=
+le=3D"color: #2A495D"><span style=3D"font-size: 16px"><span style=3D"font-f=
+amily: Roboto, Arial, sans-serif"><span style=3D"background-color: transpar=
+ent">Looking for a game that=E2=80=99s fun, engaging, and perfect for every=
+one? This question and answer board game has it all exciting gameplay, simp=
+le rules, and endless laughs! Players race to the top of the mountain, answ=
+ering questions along the way, all while learning and having fun together. =
+It=E2=80=99s visually dynamic and easy to follow, keeping everyone hooked f=
+or 90-120 minutes. Whether you're playing with 2 individuals or up to six t=
+eams, it=E2=80=99s the ultimate way to bring family and friends together fo=
+r a memorable game night. A perfect gift that promises both fun and learnin=
+g for all ages!</span></span></span></span></p></div></div></td></tr><tr><t=
+d style=3D"font-size:0px;word-break:break-word;"><div style=3D"height:20px;=
+line-height:20px;">=E2=80=8A</div></td></tr><tr><td align=3D"center" class=
+=3D"gr-mlbutton-dnqbys gr-mlbutton-gcwjco link-id-570052ac01a9" style=3D"ba=
+ckground:#F2F2F2;font-size:0px;padding:5px;word-break:break-word;"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"border-collapse:separate;line-height:100%;"><tbody><tr><td align=3D"cen=
+ter" bgcolor=3D"#2A705C" role=3D"presentation" style=3D"border:none;border-=
+bottom:0 none #000000;border-left:0 none #000000;border-radius:999px;border=
+-right:0 none #000000;border-top:0 none #000000;cursor:auto;font-style:norm=
+al;mso-padding-alt:12px 20px;background:#2A705C;word-break:break-word;" val=
+ign=3D"middle"><a href=3D"https://app.getresponse.com/click.html?x=3Da62b&a=
+mp;lc=3DzGQwC2&amp;mc=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=3DECtThOu&am=
+p;" style=3D"display:inline-block;background:#2A705C;color:#F2F2F2;font-fam=
+ily:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-weight:=
+bold;line-height:100%;margin:0;text-decoration:none;text-transform:none;pad=
+ding:12px 20px;mso-padding-alt:0px;border-radius:999px;" target=3D"_blank">=
+DISCOVER</a></td></tr></tbody></table></td></tr><tr><td style=3D"background=
+:#F2F2F2;font-size:0px;word-break:break-word;"><div style=3D"height:40px;li=
+ne-height:40px;">=E2=80=8A</div></td></tr></tbody></table></td></tr></tbody=
+></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></=
+tbody></table></div><!--[if mso | IE]></td></tr></table><table align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"pr=
+esentation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#2A705C" ><tr><=
+td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><!=
+[endif]--><div style=3D"background:#2A705C;background-color:#2A705C;margin:=
+0px auto;max-width:600px;"><table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:#2A705C;=
+background-color:#2A705C;width:100%;"><tbody><tr><td style=3D"border-bottom=
+:0 none #000000;border-left:0 none #000000;border-right:0 none #000000;bord=
+er-top:0 none #000000;direction:ltr;font-size:0px;padding:35px 5px 0 5px;te=
+xt-align:center;"><!--[if mso | IE]><table role=3D"presentation" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical=
+-align:top;width:590px;" ><![endif]--><div class=3D"mj-column-per-100 mj-ou=
+tlook-group-fix" style=3D"font-size:0px;text-align:left;direction:ltr;displ=
+ay:inline-block;vertical-align:top;width:100%;"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><t=
+r><td style=3D"background-color:transparent;border-bottom:none;border-left:=
+none;border-right:none;border-top:none;vertical-align:top;padding:0;"><tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" wi=
+dth=3D"100%"><tbody><tr><td align=3D"left" class=3D"gr-mltext-dbljfs gr-mlt=
+ext-nkihvj" style=3D"font-size:0px;padding:0;word-break:break-word;"><div s=
+tyle=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;lin=
+e-height:1.4;text-align:left;color:#000000;"><div style=3D"text-align: cent=
+er"><h2 style=3D"font-size:18px;padding-top:15px;padding-bottom:15px;margin=
+-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><span style=
+=3D"color: #FFFFFF"><strong><span style=3D"font-size: 32px"><span style=3D"=
+font-family: Roboto, Arial, sans-serif">Claim your rewards - pledge now and=
+ be part of the adventure!</span></span></strong></span></h2></div></div></=
+td></tr><tr><td style=3D"font-size:0px;word-break:break-word;"><div style=
+=3D"height:40px;line-height:40px;">=E2=80=8A</div></td></tr></tbody></table=
+></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![end=
+if]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><=
+table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cla=
+ss=3D"" role=3D"presentation" style=3D"width:600px;" width=3D"600" bgcolor=
+=3D"#F2F2F2" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heigh=
+t-rule:exactly;"><![endif]--><div style=3D"background:#F2F2F2;background-co=
+lor:#F2F2F2;margin:0px auto;max-width:600px;"><table align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"=
+background:#F2F2F2;background-color:#F2F2F2;width:100%;"><tbody><tr><td sty=
+le=3D"border-bottom:0 none #000000;border-left:0 none #000000;border-right:=
+0 none #000000;border-top:0 none #000000;direction:ltr;font-size:0px;paddin=
+g:0;text-align:center;"><!--[if mso | IE]><table role=3D"presentation" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"ve=
+rtical-align:top;width:300px;" ><![endif]--><div class=3D"mj-column-per-50 =
+mj-outlook-group-fix" style=3D"font-size:0px;text-align:left;direction:ltr;=
+display:inline-block;vertical-align:top;width:100%;"><table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbo=
+dy><tr><td style=3D"background-color:transparent;border-bottom:none;border-=
+left:none;border-right:none;border-top:none;vertical-align:top;padding:0;">=
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tbody><tr><td align=3D"center" class=3D"gr-mlimage-iuplp=
+m gr-mlimage-jdnski link-id-456bf0f41b54" style=3D"font-size:0px;padding:20=
+px 16px;word-break:break-word;"><table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse;border=
+-spacing:0px;"><tbody><tr><td style=3D"width:227px;"><a href=3D"https://app=
+.getresponse.com/click.html?x=3Da62b&amp;lc=3DzGQwVh&amp;mc=3DJH&amp;s=3DBi=
+FJUes&amp;u=3DC6Ukb&amp;z=3DE9vJ94O&amp;" target=3D"_blank"><img alt=3D"" s=
+rc=3D"https://us-ms.gr-cdn.com/getresponse-C6Ukb/photos/dfd637f8-9250-4bdc-=
+8013-9ce43bea7f17.png" style=3D"border:0;border-left:0 none #000000;border-=
+right:0 none #000000;border-top:0 none #000000;border-bottom:0 none #000000=
+;border-radius:0;display:block;outline:none;text-decoration:none;height:aut=
+o;width:100%;font-size:13px;" width=3D"227" height=3D"auto"></a></td></tr><=
+/tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><!=
+--[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top;width:300px=
+;" ><![endif]--><div class=3D"mj-column-per-50 mj-outlook-group-fix" style=
+=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertic=
+al-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"backgro=
+und-color:transparent;border-bottom:none;border-left:none;border-right:none=
+;border-top:none;vertical-align:top;padding:0;"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><t=
+r><td style=3D"background:#F2F2F2;font-size:0px;word-break:break-word;"><di=
+v style=3D"height:1px;line-height:1px;">=E2=80=8A</div></td></tr><tr><td al=
+ign=3D"left" class=3D"gr-mltext-dbljfs gr-mltext-uvumvy" style=3D"font-size=
+:0px;padding:0 15px 0 16px;word-break:break-word;"><div style=3D"font-famil=
+y:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1.4;text-=
+align:left;color:#000000;"><div style=3D"text-align: left"><h3 style=3D"fon=
+t-size:16px;padding-top:16px;padding-bottom:16px;margin-top:0px;margin-bott=
+om:0px;font-weight:normal;color:#000000;"><span style=3D"color: #2A705C"><s=
+trong><span style=3D"font-size: 22px"><span style=3D"font-family: Roboto, A=
+rial, sans-serif">BASIC REWARD</span></span></strong></span><br><span style=
+=3D"color: #2A705C"><strong><span style=3D"font-size: 14px"><span style=3D"=
+font-family: Roboto, Arial, sans-serif"><span style=3D"background-color: tr=
+ansparent">1 x Standard Trivlandia game including the classic medium level =
+set of cards.</span></span></span></strong></span></h3></div></div></td></t=
+r><tr><td style=3D"font-size:0px;word-break:break-word;"><div style=3D"heig=
+ht:10px;line-height:10px;">=E2=80=8A</div></td></tr><tr><td align=3D"left" =
+class=3D"gr-mlbutton-dnqbys gr-mlbutton-suooxl link-id-070bfdbcde54" style=
+=3D"font-size:0px;padding:5px 5px 5px 16px;word-break:break-word;"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"border-collapse:separate;line-height:100%;"><tbody><tr><td align=3D"cen=
+ter" bgcolor=3D"#2A705C" role=3D"presentation" style=3D"border:none;border-=
+bottom:2px solid #FFFFFF;border-left:2px solid #FFFFFF;border-radius:999px;=
+border-right:2px solid #FFFFFF;border-top:2px solid #FFFFFF;cursor:auto;fon=
+t-style:normal;mso-padding-alt:12px 20px;background:#2A705C;word-break:brea=
+k-word;" valign=3D"middle"><a href=3D"https://app.getresponse.com/click.htm=
+l?x=3Da62b&amp;lc=3DzGQwJY&amp;mc=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=
+=3DEIMFBOf&amp;" style=3D"display:inline-block;background:#2A705C;color:#FF=
+FFFF;font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal=
+;font-weight:bold;line-height:100%;margin:0;text-decoration:none;text-trans=
+form:none;padding:12px 20px;mso-padding-alt:0px;border-radius:999px;" targe=
+t=3D"_blank">PLEDGE NOW</a></td></tr></tbody></table></td></tr></tbody></ta=
+ble></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![=
+endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></tabl=
+e><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"" role=3D"presentation" style=3D"width:600px;" width=3D"600" bgcol=
+or=3D"#2A705C" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-hei=
+ght-rule:exactly;"><![endif]--><div style=3D"background:#2A705C;background-=
+color:#2A705C;margin:0px auto;max-width:600px;"><table align=3D"center" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"background:#2A705C;background-color:#2A705C;width:100%;"><tbody><tr><td=
+ style=3D"border-bottom:0 none #000000;border-left:0 none #000000;border-ri=
+ght:0 none #000000;border-top:0 none #000000;direction:ltr;font-size:0px;pa=
+dding:0;text-align:center;"><!--[if mso | IE]><table role=3D"presentation" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=
+=3D"vertical-align:top;width:300px;" ><![endif]--><div class=3D"mj-column-p=
+er-50 mj-outlook-group-fix" style=3D"font-size:0px;text-align:left;directio=
+n:ltr;display:inline-block;vertical-align:top;width:100%;"><table border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%=
+"><tbody><tr><td style=3D"background-color:transparent;border-bottom:none;b=
+order-left:none;border-right:none;border-top:none;vertical-align:top;paddin=
+g:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%"><tbody><tr><td style=3D"background:#2A705C;font-siz=
+e:0px;word-break:break-word;"><div style=3D"height:1px;line-height:1px;">=
+=E2=80=8A</div></td></tr><tr><td align=3D"left" class=3D"gr-mltext-dbljfs g=
+r-mltext-sdficl" style=3D"font-size:0px;padding:0 0 0 32px;word-break:break=
+-word;"><div style=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font=
+-size:13px;line-height:1.4;text-align:left;color:#000000;"><div style=3D"te=
+xt-align: left"><h3 style=3D"font-size:16px;padding-top:16px;padding-bottom=
+:16px;margin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><=
+span style=3D"color: #F2F2F2"><strong><span style=3D"font-size: 22px"><span=
+ style=3D"font-family: Roboto, Arial, sans-serif">STANDARD REWARD</span></s=
+pan></strong></span><br><span style=3D"color: #F2F2F2"><strong><span style=
+=3D"font-size: 14px"><span style=3D"font-family: Roboto, Arial, sans-serif"=
+><span style=3D"background-color: transparent">1 x Trivlandia games with Cl=
+assic medium level cards included + 2 x card packs of your choice.</span></=
+span></span></strong></span></h3></div></div></td></tr><tr><td style=3D"fon=
+t-size:0px;word-break:break-word;"><div style=3D"height:10px;line-height:10=
+px;">=E2=80=8A</div></td></tr><tr><td align=3D"left" class=3D"gr-mlbutton-d=
+nqbys gr-mlbutton-yogcja link-id-b6c6ecd75fab" style=3D"font-size:0px;paddi=
+ng:5px 5px 5px 32px;word-break:break-word;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:sep=
+arate;line-height:100%;"><tbody><tr><td align=3D"center" bgcolor=3D"#F2F2F2=
+" role=3D"presentation" style=3D"border:none;border-bottom:0 none #000000;b=
+order-left:0 none #000000;border-radius:999px;border-right:0 none #000000;b=
+order-top:0 none #000000;cursor:auto;font-style:normal;mso-padding-alt:12px=
+ 20px;background:#F2F2F2;word-break:break-word;" valign=3D"middle"><a href=
+=3D"https://app.getresponse.com/click.html?x=3Da62b&amp;lc=3DzGQwFR&amp;mc=
+=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=3DEV37B2d&amp;" style=3D"display:=
+inline-block;background:#F2F2F2;color:#2A705C;font-family:Roboto, Arial, sa=
+ns-serif;font-size:18px;font-style:normal;font-weight:bold;line-height:100%=
+;margin:0;text-decoration:none;text-transform:none;padding:12px 20px;mso-pa=
+dding-alt:0px;border-radius:999px;" target=3D"_blank">PLEDGE NOW</a></td></=
+tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></di=
+v><!--[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top;width:3=
+00px;" ><![endif]--><div class=3D"mj-column-per-50 mj-outlook-group-fix" st=
+yle=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;ver=
+tical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"back=
+ground-color:transparent;border-bottom:none;border-left:none;border-right:n=
+one;border-top:none;vertical-align:top;padding:0;"><table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody=
+><tr><td align=3D"center" class=3D"gr-mlimage-iuplpm gr-mlimage-ahcrcg link=
+-id-e711d82b2c9e" style=3D"font-size:0px;padding:20px 4px;word-break:break-=
+word;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pres=
+entation" style=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr=
+><td style=3D"width:284px;"><a href=3D"https://app.getresponse.com/click.ht=
+ml?x=3Da62b&amp;lc=3DzGQwRg&amp;mc=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=
+=3DESYiVKg&amp;" target=3D"_blank"><img alt=3D"" src=3D"https://us-ms.gr-cd=
+n.com/getresponse-C6Ukb/photos/e73b593a-a127-436e-98d2-676e8e3d4f5e.png" st=
+yle=3D"border:0;border-left:0 none #000000;border-right:0 none #000000;bord=
+er-top:0 none #000000;border-bottom:0 none #000000;border-radius:0;display:=
+block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13=
+px;" width=3D"284" height=3D"auto"></a></td></tr></tbody></table></td></tr>=
+<tr><td style=3D"font-size:0px;word-break:break-word;"><div style=3D"height=
+:10px;line-height:10px;">=E2=80=8A</div></td></tr></tbody></table></td></tr=
+></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td=
+></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" ro=
+le=3D"presentation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#F2F2F2=
+" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exac=
+tly;"><![endif]--><div style=3D"background:#F2F2F2;background-color:#F2F2F2=
+;margin:0px auto;max-width:600px;"><table align=3D"center" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:=
+#F2F2F2;background-color:#F2F2F2;width:100%;"><tbody><tr><td style=3D"borde=
+r-bottom:0 none #000000;border-left:0 none #000000;border-right:0 none #000=
+000;border-top:0 none #000000;direction:ltr;font-size:0px;padding:20px 5px;=
+text-align:center;"><!--[if mso | IE]><table role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vert=
+ical-align:top;width:295px;" ><![endif]--><div class=3D"mj-column-per-50 mj=
+-outlook-group-fix" style=3D"font-size:0px;text-align:left;direction:ltr;di=
+splay:inline-block;vertical-align:top;width:100%;"><table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody=
+><tr><td style=3D"background-color:transparent;border-bottom:none;border-le=
+ft:none;border-right:none;border-top:none;vertical-align:top;padding:0;"><t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"=
+ width=3D"100%"><tbody><tr><td align=3D"center" class=3D"gr-mlimage-iuplpm =
+gr-mlimage-jcrrvt link-id-33428a6da0d4" style=3D"font-size:0px;padding:20px=
+ 2px;word-break:break-word;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse;border-sp=
+acing:0px;"><tbody><tr><td style=3D"width:250px;"><a href=3D"https://app.ge=
+tresponse.com/click.html?x=3Da62b&amp;lc=3DzGQwlL&amp;mc=3DJH&amp;s=3DBiFJU=
+es&amp;u=3DC6Ukb&amp;z=3DEC8TMhm&amp;" target=3D"_blank"><img alt=3D"" src=
+=3D"https://us-ms.gr-cdn.com/getresponse-C6Ukb/photos/7e856cde-d036-4e84-a4=
+4f-e76fc2858a8d.png" style=3D"border:0;border-left:0 none #000000;border-ri=
+ght:0 none #000000;border-top:0 none #000000;border-bottom:0 none #000000;b=
+order-radius:0;display:block;outline:none;text-decoration:none;height:auto;=
+width:100%;font-size:13px;" width=3D"250" height=3D"auto"></a></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table></div><!--=
+[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top;width:295px;"=
+ ><![endif]--><div class=3D"mj-column-per-50 mj-outlook-group-fix" style=3D=
+"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-=
+align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background=
+-color:transparent;border-bottom:none;border-left:none;border-right:none;bo=
+rder-top:none;vertical-align:top;padding:0;"><table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><=
+td style=3D"font-size:0px;word-break:break-word;"><div style=3D"height:1px;=
+line-height:1px;">=E2=80=8A</div></td></tr><tr><td align=3D"left" class=3D"=
+gr-mltext-dbljfs gr-mltext-jctogi" style=3D"font-size:0px;padding:0 0 0 32p=
+x;word-break:break-word;"><div style=3D"font-family:Ubuntu, Helvetica, Aria=
+l, sans-serif;font-size:13px;line-height:1.4;text-align:left;color:#000000;=
+"><div style=3D"text-align: left"><h3 style=3D"font-size:16px;padding-top:1=
+6px;padding-bottom:16px;margin-top:0px;margin-bottom:0px;font-weight:normal=
+;color:#000000;"><span style=3D"color: #2A705C"><strong><span style=3D"font=
+-size: 22px"><span style=3D"font-family: Roboto, Arial, sans-serif">PREMIUM=
+ REWARD</span></span></strong></span><br><span style=3D"color: #2A705C"><st=
+rong><span style=3D"font-size: 14px"><span style=3D"font-family: Roboto, Ar=
+ial, sans-serif"><span style=3D"background-color: transparent">2 x Trivland=
+ia games with medium level classic cards included.</span></span></span></st=
+rong></span></h3></div></div></td></tr><tr><td align=3D"left" class=3D"gr-m=
+lbutton-dnqbys gr-mlbutton-jfuwol link-id-ebf13422ab7e" style=3D"font-size:=
+0px;padding:5px 5px 5px 32px;word-break:break-word;"><table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-col=
+lapse:separate;line-height:100%;"><tbody><tr><td align=3D"center" bgcolor=
+=3D"#2A705C" role=3D"presentation" style=3D"border:none;border-bottom:0 non=
+e #000000;border-left:0 none #000000;border-radius:999px;border-right:0 non=
+e #000000;border-top:0 none #000000;cursor:auto;font-style:normal;mso-paddi=
+ng-alt:12px 20px;background:#2A705C;word-break:break-word;" valign=3D"middl=
+e"><a href=3D"https://app.getresponse.com/click.html?x=3Da62b&amp;lc=3DzGQw=
+Oy&amp;mc=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=3DEFAbI3b&amp;" style=3D=
+"display:inline-block;background:#2A705C;color:#F2F2F2;font-family:Roboto, =
+Arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;line-he=
+ight:100%;margin:0;text-decoration:none;text-transform:none;padding:12px 20=
+px;mso-padding-alt:0px;border-radius:999px;" target=3D"_blank">PLEDGE NOW</=
+a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></t=
+able></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbod=
+y></table></div><!--[if mso | IE]></td></tr></table><table align=3D"center"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presen=
+tation" style=3D"width:600px;" width=3D"600" ><tr><td style=3D"line-height:=
+0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D"=
+margin:0px auto;max-width:600px;"><table align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"width:100%;"=
+><tbody><tr><td style=3D"border-bottom:0 none #000000;border-left:0 none #0=
+00000;border-right:0 none #000000;border-top:0 none #000000;direction:ltr;f=
+ont-size:0px;padding:5px;text-align:center;"><!--[if mso | IE]><table role=
+=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td =
+class=3D"" style=3D"vertical-align:top;width:590px;" ><![endif]--><div clas=
+s=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0px;text-al=
+ign:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"=
+><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" width=3D"100%"><tbody><tr><td style=3D"background-color:#245F4C;border-=
+bottom:none;border-left:none;border-right:none;border-top:none;vertical-ali=
+gn:top;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background:#24=
+5F4C;font-size:0px;word-break:break-word;"><div style=3D"height:30px;line-h=
+eight:30px;">=E2=80=8A</div></td></tr></tbody></table></td></tr></tbody></t=
+able></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbod=
+y></table></div><!--[if mso | IE]></td></tr></table><table align=3D"center"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presen=
+tation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#F2F2F2" ><tr><td s=
+tyle=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![end=
+if]--><div style=3D"background:#F2F2F2;background-color:#F2F2F2;margin:0px =
+auto;max-width:600px;"><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"background:#F2F2F2;back=
+ground-color:#F2F2F2;width:100%;"><tbody><tr><td style=3D"border-bottom:0 n=
+one #000000;border-left:0 none #000000;border-right:0 none #000000;border-t=
+op:0 none #000000;direction:ltr;font-size:0px;padding:5px;text-align:center=
+;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;wid=
+th:590px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D=
+"background-color:transparent;border-bottom:none;border-left:none;border-ri=
+ght:none;border-top:none;vertical-align:top;padding:0;"><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><=
+tbody><tr><td align=3D"center" style=3D"background:#F2F2F2;font-size:0px;pa=
+dding:10px 20px;word-break:break-word;"><p style=3D"border-top:solid 1px #2=
+45F4C;font-size:1px;margin:0px auto;width:100%;"></p><!--[if mso | IE]><tab=
+le align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border-top:solid 1px #245F4C;font-size:1px;margin:0px auto;width:550px;=
+" role=3D"presentation" width=3D"550px" ><tr><td style=3D"height:0;line-hei=
+ght:0;"> &nbsp;=0A=
+</td></tr></table><![endif]--></td></tr></tbody></table></td></tr></tbody><=
+/table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tb=
+ody></table></div><!--[if mso | IE]></td></tr></table><table align=3D"cente=
+r" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"pres=
+entation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#F2F2F2" ><tr><td=
+ style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><v:r=
+ect style=3D"width:600px;" xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=
+=3D"true" stroke=3D"false"><v:fill origin=3D"0.5, 0" position=3D"0.5, 0" sr=
+c=3D"https://us-ms.gr-cdn.com/getresponse-C6Ukb/photos/da6717a2-5171-4935-8=
+fda-f68102df7573.jpg" color=3D"#F2F2F2" type=3D"tile" /><v:textbox style=3D=
+"mso-fit-shape-to-text:true" inset=3D"0,0,0,0"><![endif]--><div style=3D"ba=
+ckground:#F2F2F2 url('https://us-ms.gr-cdn.com/getresponse-C6Ukb/photos/da6=
+717a2-5171-4935-8fda-f68102df7573.jpg') center top / auto repeat;background=
+-position:center top;background-repeat:repeat;background-size:auto;margin:0=
+px auto;max-width:600px;"><div style=3D"line-height:0;font-size:0;"><table =
+align=3D"center" background=3D"https://us-ms.gr-cdn.com/getresponse-C6Ukb/p=
+hotos/da6717a2-5171-4935-8fda-f68102df7573.jpg" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:#F2F2F2 url=
+('https://us-ms.gr-cdn.com/getresponse-C6Ukb/photos/da6717a2-5171-4935-8fda=
+-f68102df7573.jpg') center top / auto repeat;background-position:center top=
+;background-repeat:repeat;background-size:auto;width:100%;"><tbody><tr><td =
+style=3D"border-bottom:0 none #000000;border-left:0 none #000000;border-rig=
+ht:0 none #000000;border-top:0 none #000000;direction:ltr;font-size:0px;pad=
+ding:5px 5px 20px 5px;text-align:center;"><!--[if mso | IE]><table role=3D"=
+presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td clas=
+s=3D"" style=3D"vertical-align:top;width:590px;" ><![endif]--><div class=3D=
+"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0px;text-align:=
+left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+width=3D"100%"><tbody><tr><td style=3D"background-color:transparent;border-=
+bottom:none;border-left:none;border-right:none;border-top:none;vertical-ali=
+gn:top;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"font-size:0px;=
+word-break:break-word;"><div style=3D"height:32px;line-height:32px;">=E2=80=
+=8A</div></td></tr><tr><td align=3D"left" class=3D"gr-mltext-dbljfs gr-mlte=
+xt-aupwjd" style=3D"font-size:0px;padding:0;word-break:break-word;"><div st=
+yle=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line=
+-height:1.4;text-align:left;color:#000000;"><div style=3D"text-align: cente=
+r"><h3 style=3D"font-size:16px;padding-top:16px;padding-bottom:16px;margin-=
+top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><span style=3D=
+"color: #F2F2F2"><strong><span style=3D"font-size: 32px"><span style=3D"fon=
+t-family: Roboto, Arial, sans-serif">Hurry up!</span></span></strong></span=
+><br><span style=3D"color: #F2F2F2"><strong><span style=3D"font-size: 14px"=
+>Discover even more amazing and exciting rewards waiting for you.</span></s=
+trong></span></h3></div></div></td></tr><tr><td align=3D"center" class=3D"g=
+r-mlbutton-dnqbys gr-mlbutton-hslidq link-id-9d502be36e81" style=3D"font-si=
+ze:0px;padding:5px;word-break:break-word;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:sep=
+arate;line-height:100%;"><tbody><tr><td align=3D"center" bgcolor=3D"transpa=
+rent" role=3D"presentation" style=3D"border:none;border-bottom:2px solid #F=
+FFFFF;border-left:2px solid #FFFFFF;border-radius:999px;border-right:2px so=
+lid #FFFFFF;border-top:2px solid #FFFFFF;cursor:auto;font-style:normal;mso-=
+padding-alt:12px 20px;background:transparent;word-break:break-word;" valign=
+=3D"middle"><a href=3D"https://app.getresponse.com/click.html?x=3Da62b&amp;=
+lc=3DzGQwWc&amp;mc=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=3DEV39hiW&amp;"=
+ style=3D"display:inline-block;background:transparent;color:#F2F2F2;font-fa=
+mily:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-weight=
+:bold;line-height:100%;margin:0;text-decoration:none;text-transform:none;pa=
+dding:12px 20px;mso-padding-alt:0px;border-radius:999px;" target=3D"_blank"=
+>PLEDGE NOW</a></td></tr></tbody></table></td></tr><tr><td style=3D"font-si=
+ze:0px;word-break:break-word;"><div style=3D"height:11px;line-height:11px;"=
+>=E2=80=8A</div></td></tr><tr><td align=3D"left" class=3D"gr-mltext-dbljfs =
+gr-mltext-lhbgef" style=3D"font-size:0px;padding:10px;word-break:break-word=
+;"><div style=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size=
+:13px;line-height:1.4;text-align:left;color:#000000;"><p style=3D"font-fami=
+ly:Arial;font-size:14px;margin-top:0px;margin-bottom:0px;font-weight:normal=
+;color:#000000;"><span style=3D"color: #F2F2F2"><strong>&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Follow us =
+for more updates on our socials.</strong></span></p></div></td></tr><tr><td=
+ align=3D"center" style=3D"font-size:0px;padding:5px;word-break:break-word;=
+"><!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" ><tr><td><![endif]--><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"float:none;display:inline-table;"><tbody><tr class=3D"link=
+-id-5466518e3089"><td style=3D"padding:0 10px;vertical-align:middle;"><tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" st=
+yle=3D"border-radius:0;width:30px;"><tbody><tr><td style=3D"font-size:0;hei=
+ght:30px;vertical-align:middle;width:30px;"><a href=3D"https://app.getrespo=
+nse.com/click.html?x=3Da62b&amp;lc=3DzGQwXO&amp;mc=3DJH&amp;s=3DBiFJUes&amp=
+;u=3DC6Ukb&amp;z=3DEVen9Gc&amp;" target=3D"_blank"><img alt=3D"instagram" h=
+eight=3D"30" src=3D"https://us-as.gr-cdn.com/images/common/templates/messag=
+es/v2/social/instagram2.png" style=3D"border-radius:0;display:block;" width=
+=3D"30"></a></td></tr></tbody></table></td></tr></tbody></table><!--[if mso=
+ | IE]></td><td><![endif]--><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"float:none;display=
+:inline-table;"><tbody><tr class=3D"link-id-61ca03725f41"><td style=3D"padd=
+ing:0 10px;vertical-align:middle;"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" style=3D"border-radius:0;width:30px;"=
+><tbody><tr><td style=3D"font-size:0;height:30px;vertical-align:middle;widt=
+h:30px;"><a href=3D"https://app.getresponse.com/click.html?x=3Da62b&amp;lc=
+=3DzGQwv4&amp;mc=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=3DEBz5CSR&amp;" t=
+arget=3D"_blank"><img alt=3D"youtube" height=3D"30" src=3D"https://us-as.gr=
+-cdn.com/images/common/templates/messages/v2/social/youtube2.png" style=3D"=
+border-radius:0;display:block;" width=3D"30"></a></td></tr></tbody></table>=
+</td></tr></tbody></table><!--[if mso | IE]></td></tr></table><![endif]--><=
+/td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso | IE]>=
+</td></tr></table><![endif]--></td></tr></tbody></table></div></div><!--[if=
+ mso | IE]></v:textbox></v:rect></td></tr></table><table align=3D"center" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presenta=
+tion" style=3D"width:600px;" width=3D"600" ><tr><td style=3D"line-height:0p=
+x;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D"ma=
+rgin:0px auto;max-width:600px;"><table align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"width:100%;"><=
+tbody><tr><td style=3D"border-bottom:0 none #000000;border-left:0 none #000=
+000;border-right:0 none #000000;border-top:0 none #000000;direction:ltr;fon=
+t-size:0px;padding:5px;text-align:center;"><!--[if mso | IE]><table role=3D=
+"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td cla=
+ss=3D"" style=3D"vertical-align:top;width:590px;" ><![endif]--><div class=
+=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0px;text-ali=
+gn:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">=
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"><tbody><tr><td style=3D"background-color:transparent;bord=
+er-bottom:none;border-left:none;border-right:none;border-top:none;vertical-=
+align:top;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"presentation" width=3D"100%"><tbody><tr><td align=3D"center" cla=
+ss=3D"gr-footer-xhepww gr-footer-owwxyt" style=3D"font-size:0px;padding:10p=
+x;word-break:break-word;"><div style=3D"font-family:Arial;font-size:10px;fo=
+nt-style:normal;line-height:1;text-align:center;text-decoration:none;color:=
+#000000;"><div>Caiben Games, Po box 263 Brisbane Markets, 4106, Brisbane, A=
+ustralia<br><br>You may <a href=3D"https://app.getresponse.com/unsubscribe.=
+html?x=3Da62b&amp;m=3DBlZrUD&amp;mc=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;=
+z=3DEJ9rGgV&amp;pt=3Dunsubscribe" target=3D"_blank">unsubscribe</a> or <a h=
+ref=3D"https://app.getresponse.com/change_details.html?x=3Da62b&amp;m=3DBlZ=
+rUD&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=3DEMmk9Ge&amp;pt=3Dchange_details" =
+target=3D"_blank">change your contact details</a> at any time.</div></div><=
+/td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso | IE]>=
+</td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if mso |=
+ IE]></td></tr></table><![endif]--><table align=3D"center" style=3D"font-fa=
+mily: 'Roboto', Helvetica, sans-serif; font-weight: 400; letter-spacing: .0=
+18em; text-align: center; font-size: 10px;"><tr><td style=3D"padding-bottom=
+: 20px"><br><div style=3D"color: #939598;">Powered by:</div><a href=3D"http=
+s://app.getresponse.com/referral.html?x=3Da62b&amp;c=3D0qVfL&amp;u=3DC6Ukb&=
+amp;z=3DEyiEJfF&amp;"><img src=3D"https://app.getresponse.com/images/common=
+/templates/badges/gr_logo_2.png" alt=3D"GetResponse" border=3D"0" style=3D"=
+display:block;" width=3D"120" height=3D"24"></a></td></tr></table></div></b=
+ody></html><img src=3D"https://app.getresponse.com/open.html?x=3Da62b&amp;m=
+=3DBlZrUD&amp;mc=3DJH&amp;s=3DBiFJUes&amp;u=3DC6Ukb&amp;z=3DEClfwea&amp;" w=
+idth=3D"0" height=3D"0" border=3D"0" alt=3D"" role=3D"presentation">=
+
+--06d046845ff7c51aff0f24ec67eaa8a7--

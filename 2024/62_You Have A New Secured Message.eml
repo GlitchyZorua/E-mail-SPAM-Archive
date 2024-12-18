@@ -1,0 +1,378 @@
+Received: from LV8PR84MB3464.NAMPRD84.PROD.OUTLOOK.COM (::1) by
+ MW5PR84MB1987.NAMPRD84.PROD.OUTLOOK.COM with HTTPS; Mon, 18 Nov 2024 15:20:57
+ +0000
+Received: from PH7P220CA0073.NAMP220.PROD.OUTLOOK.COM (2603:10b6:510:32c::20)
+ by LV8PR84MB3464.NAMPRD84.PROD.OUTLOOK.COM (2603:10b6:408:207::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8158.23; Mon, 18 Nov
+ 2024 15:20:54 +0000
+Received: from CY4PEPF0000EDD0.namprd03.prod.outlook.com
+ (2603:10b6:510:32c:cafe::9e) by PH7P220CA0073.outlook.office365.com
+ (2603:10b6:510:32c::20) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8158.23 via Frontend
+ Transport; Mon, 18 Nov 2024 15:20:54 +0000
+Authentication-Results: spf=pass (sender IP is 216.230.254.49)
+ smtp.mailfrom=onesto.co.jp; dkim=none (message not signed)
+ header.d=none;dmarc=pass action=none header.from=onesto.co.jp;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of onesto.co.jp designates
+ 216.230.254.49 as permitted sender) receiver=protection.outlook.com;
+ client-ip=216.230.254.49; helo=amout09.alpha-mail.net; pr=C
+Received: from amout09.alpha-mail.net (216.230.254.49) by
+ CY4PEPF0000EDD0.mail.protection.outlook.com (10.167.241.196) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8158.14 via Frontend Transport; Mon, 18 Nov 2024 15:20:54 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:C8A6C68C407C5435E5102380D93EC21B4260529AB479ED236F87FFA22ED85704;UpperCasedChecksum:1DA90FD955858C06D9642B598C16B4099C2DF5C3AEAF52CE50D851B86F64DF11;SizeAsReceived:1779;Count:17
+Received: from amout07.alpha-mail.net (amout07 [216.230.254.47])
+	by amout09.alpha-mail.net (alpha-mail) with ESMTP id 4AIFKq8W005896
+	for <retrojbot@hotmail.com>; Tue, 19 Nov 2024 00:20:52 +0900
+Received: from webarc05.alpha-mail.jp (webarc05.alpha-mail.jp [216.230.254.85])
+	by amout07.alpha-mail.net  with ESMTP id 4AIFKqYZ3047099
+	for <retrojbot@hotmail.com>; Tue, 19 Nov 2024 00:20:52 +0900
+Received: from amis06.alpha-mail.net (amis06 [216.230.254.36])
+	by webarc05.alpha-mail.jp (Postfix) with ESMTP id AD4E840A26D7
+	for <retrojbot@hotmail.com>; Tue, 19 Nov 2024 00:20:52 +0900 (JST)
+Received: from amis06.alpha-mail.net (unknown [127.0.0.1])
+	by IMSVA (Postfix) with ESMTP id 9DDE5110042
+	for <retrojbot@hotmail.com>; Tue, 19 Nov 2024 00:20:52 +0900 (JST)
+Received: from amis06.alpha-mail.net (unknown [127.0.0.1])
+	by IMSVA (Postfix) with ESMTP id 8837311004D
+	for <retrojbot@hotmail.com>; Tue, 19 Nov 2024 00:20:52 +0900 (JST)
+Received: from sauth12.alpha-mail.jp (unknown [216.230.252.32])
+	by amis06.alpha-mail.net (Postfix) with ESMTPS
+	for <retrojbot@hotmail.com>; Tue, 19 Nov 2024 00:20:52 +0900 (JST)
+Received: from EC2AMAZ-0C43DHH (ec2-18-176-59-179.ap-northeast-1.compute.amazonaws.com [18.176.59.179])
+	by sauth12.alpha-mail.jp (Alpha-mail) with ESMTPSA id 2BD8E11EEEF
+	for <retrojbot@hotmail.com>; Tue, 19 Nov 2024 00:20:52 +0900 (JST)
+From: "JPMchase/Secure Department"
+ <emailonline.fidelity.helpdesk.extention.contoso.onmicrosoft.com@onesto.co.jp>
+Subject: You Have A New Secured Message
+To: <retrojbot@hotmail.com>
+Content-Type: text/html; charset=utf-8
+Date: Mon, 18 Nov 2024 15:20:52 +0000
+Message-Id: <202418111520525247C80CCC$76CE90F68F@onesto.co.jp>
+X-TM-AS-GCONF: 00
+X-IncomingHeaderCount: 17
+Return-Path:
+ emailonline.fidelity.helpdesk.extention.contoso.onmicrosoft.com@onesto.co.jp
+X-MS-Exchange-Organization-ExpirationStartTime: 18 Nov 2024 15:20:54.3517
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4d7eb962-098b-4fa1-3bfa-08dd07e4982d
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ CY4PEPF0000EDD0:EE_|LV8PR84MB3464:EE_|MW5PR84MB1987:EE_
+X-MS-Exchange-Organization-AuthSource:
+ CY4PEPF0000EDD0.namprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 11/18/2024 2:39:09 PM
+X-MS-Office365-Filtering-Correlation-Id: 4d7eb962-098b-4fa1-3bfa-08dd07e4982d
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 216.230.254.49
+X-SID-PRA:
+ EMAILONLINE.FIDELITY.HELPDESK.EXTENTION.CONTOSO.ONMICROSOFT.COM@ONESTO.CO.JP
+X-SID-Result: PASS
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam:
+ BCL:0;ARA:1444111002|1680799051|51300799018|42300799015|10300799029|69000799015|87000799015|58200799015|970799054|9400799024|9000799047|9800799012|2700799026|5101999024|461199028|3025599003|56899033|1380799030|1370799030|1360799030|1602099012|6022199012|4601999012|3412199025|4302099013|440099028|2006899018|6106899015|2406899039;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 Nov 2024 15:20:54.2111
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4d7eb962-098b-4fa1-3bfa-08dd07e4982d
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ CY4PEPF0000EDD0.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LV8PR84MB3464
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.3486433
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8158.013
+Importance: high
+X-Priority: 1
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90005022)(91005020)(91035115)(9050020)(9100341)(944500132)(2008001181)(2008121020)(4810010)(4910033)(9610028)(9560006)(10180024)(9320005)(9245025)(120001);RF:JunkEmail;
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0xO1NDTD02
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?RVR2QmgrUXRyRHV3SEVDcmZLTTM0cERiZWZqc0tva1dDMTFMOWVyMXFzYTRX?=
+ =?utf-8?B?RU9wS1lnNm9Mbmp1dFphSk1KT21KV3g0Z2txTW5NRUxIUFAxRVVITDNDY3pv?=
+ =?utf-8?B?UlM1SWJhbVo2bEkwLzVLTE5hZVRiVFVRYVVpOUgxTGJzdVdHY2w4Y2M4OERS?=
+ =?utf-8?B?YzBTanpnN0o3RWU3TWtPemFTZTAzQ2JYQnJCSUxHaXFWdEhMSnNvc1lnR01z?=
+ =?utf-8?B?YmxqZ2tySXhDNTFHM2ltRk5xbjVGMmV5YjFBcGpJQ2k2a1dTMkMyWGNmNGxz?=
+ =?utf-8?B?QnNSNXN3REpTSThtakJJWlpnWCtJanBsdGNTalFXRFUxbjI0ak5WbWM0S3Fr?=
+ =?utf-8?B?WmVmcmFMYjhpWFFraXBXOFcxY3pWdjRGeEhFNkxtQVdIL2gzZzJrQUt2dDNE?=
+ =?utf-8?B?ZVd6NTN0SUZxaDQyUXNvbGFoclRnSGh4RCtWczkwL1hrWXQxSnZjRzRsWEJX?=
+ =?utf-8?B?Q1BTYnZuazFSOXZjNGd3a29HeEtXWWlmbVIyWi9zeU9uTFNVKzNLWlFsTmJE?=
+ =?utf-8?B?Y1JNcWM4SU14cktUako5V3hUSTVCQUtQM0ZMcC96SVNsNERVbzc5N0NQNzd0?=
+ =?utf-8?B?cVNlVERocWpaSFJBaXpwdHp2NTJ0OWhaUjkrZEZCaEhiRm9zYUhsYlVvR2FV?=
+ =?utf-8?B?N2xMa2N1MG9oL0JxTjZhdjI4QVZlWXN4UUNGVHg0WjFJaURlUXI4RGV1bEsv?=
+ =?utf-8?B?eVVvd1BZeU5RcXp4dUlMYjlsN0RveDUrNzl2QnBURURYOHpMcW5BdG55N3pL?=
+ =?utf-8?B?VjRPcEE1Q3J4TGFJZHloM2NmenBuWFBsL0ZTeGZvSk9JR1BhcmpyYTJ1RTBy?=
+ =?utf-8?B?OVdKd25EeW5JQXIxdFdYQk00WXlEekxwSUdURnVLeDFSa1VSV3IyMWJ5eGZ4?=
+ =?utf-8?B?NGl1c0FyYksxTHAzUWQ0SllCRkhGR2hKVkFSbzFObVNEL2FiN2tyVUpGZVhw?=
+ =?utf-8?B?RDdFLzh1R1c4MzhtdmRXdXd4dU9tYWNwSjJudTNwaUhBaVV2UklEZnpDREJF?=
+ =?utf-8?B?K2dhMGZMcXhPMVpGYzYzei9IZjN4cjQzMklKbVA3cURBNWEwV3htTFpGZzE4?=
+ =?utf-8?B?Qk03aWxYRDdFUXVndXMzb2h5UDN2aUhxSEtENmRuYnVvUDJKRzlUZEZzSTVM?=
+ =?utf-8?B?U25aR2Y3eUoveTVhSnEzaFIyeUxhSkhnRnJmUjFDOWVMaWpEZHVmLzVlcHd0?=
+ =?utf-8?B?T3hwQW5GZ201cEhlVXN4blZ2WEpONmZ1VlZJYWpDSG5XWVBMbWVsZXhXbG1v?=
+ =?utf-8?B?TDRQa00vUHpRSG8vUjgwbVByQS9sZnNrN2c2bW9nZGJlbEtjK3R3SUpsS3VD?=
+ =?utf-8?B?dWp6K1hhV0NaQnVRQitvUHg4WE1JQ2lKT1g2SnNsMDJpN1g3WXN1eTFKa2dH?=
+ =?utf-8?B?Z2ZZTCtrOW1tY0NXWVBYSmZXMk9VZGNRQVByYTExSEpsNXRVc3hhQzJWaWZk?=
+ =?utf-8?B?cDBhbEJkRXgwa1ZQcHFibzJsUHZQL2wyRTRRQWlWM212cFlteGF5UlJTMkkr?=
+ =?utf-8?B?WUpSbDlUVnJVYjZ1L3k4WDNmcHJUVzFaQ1BQYmNWNS84c3VnSmFPYUZSU3Bu?=
+ =?utf-8?B?R3FnSFhnWGQ5bm5HRTNIZUZaaUgxOVdINWtqRXFFYlNzVVVMVEp0dGJQWlNw?=
+ =?utf-8?B?Mi9YZlVxSmtPbjA1TWlESWZrajRLODhQS1QwUnlINWNzNFlqL1FYMDRSZXdF?=
+ =?utf-8?B?T2F1a0M2VFRBVWVkcGlyZ05adFBMQVJ4N2VsN0lkcVhmNmd1WU5Ndkc0TlNy?=
+ =?utf-8?B?MzRtSWNaalVxNFZvbllob20yNURTSVA2TGM3eHBXREd1eUxRWUlRRHFvandJ?=
+ =?utf-8?B?dHRjWnpNczRIZXc5SEthSGZGL2RWZGlWaytwaVEyVXBUbUN4RFlTSXg3Vm5K?=
+ =?utf-8?B?eDgvSG54VFlTbWp4SWF4MDZrNE9vVjZabm43RkI5b3ZwZHExYzFCTDk1dWNj?=
+ =?utf-8?B?czJBdWRUMnNZc3p3WXYzK1B5ZVVWSHhYNldGTmZWaDhydFFuMVJsWU5hWFdq?=
+ =?utf-8?B?ajRNbk9YcFJjUEhyQzVQaXgvQ3g3N3JsQjgvaXc0Kys4M3ErcFpUZGpPNVBq?=
+ =?utf-8?B?NTExY01lMUNRTFp2djI2Zk9tWWNPd0ZsR2dUV2lIUkJsN1IwL1lFVmozZC8y?=
+ =?utf-8?B?emo5R0tQanRXV1ZPZmYzZ3dhTm0xanZzT3FqRGFmdXY5dHRkMjVCcmhKV3dl?=
+ =?utf-8?B?dGJyVlk4bmdqMWtIamJoSHEvNTFQYVREMTh3eG40ZXNWSjBLdElhVE1keWFv?=
+ =?utf-8?B?Skk4MW91VzBHRUxrd0lUU093K2FmV3pNaWp2L1NqTUlNVGhES1hIZTl2M2ht?=
+ =?utf-8?B?RlNJZlFZeG1ZOFpleVl0R21QODkwZm5ETmVRZjdQYUNwOU9RZGl3elh5QUpS?=
+ =?utf-8?B?d3Y0U0t6L0Y5OFpZaytCbzYxbkt6R3lwZ3VQUHBNMExlK0NHRFNZSGNLL0E1?=
+ =?utf-8?B?NWgrWTJyOTZISnA5ZDZGRnVKOUYvdDQ3VTVIaGZHTXRtZC9rWEFUYmlJS0tJ?=
+ =?utf-8?B?cURRSUtGQWdBMng2bWlPN3NrTi9kYWdEMVg4UDZ5T3EveG9aS3Z6Vm1xUVFS?=
+ =?utf-8?B?RTZMODEycVhWUlZpOHgwQkczMHVjeDVFMEMzU0ZRUU91czY4QWlzR1Y5OVBm?=
+ =?utf-8?B?YlZvakxPMG5XcEVKZkQ4Z0l3NmZxV1JFbTNlOXFzM1gyQ2xFZFE3QTcvdFor?=
+ =?utf-8?B?Z3c2eG16ODY4bkVqdE1hZ1hYYlE4VHRZV3B0RHg4NExtOTVLNXlwQ2pvVW0r?=
+ =?utf-8?B?d3A0dGdoQ1RjNGpVNHVwYjgyUXEwYkVjQVZaU1RTbTB2NytjZnVSaTNtT2kv?=
+ =?utf-8?B?QjdKcE1mbXhTMlJwbUcwZlVWc3A2TVJvZDMvMVRUUE5iUGlSWEdUN24vZmRj?=
+ =?utf-8?B?c1BrRjF0SnBPcVBQWmYvdGdDeXdWc3pxZHd3QXB2aVZSYkliM2lTbmRKZ3lR?=
+ =?utf-8?B?YUh0Y0tSTE45emEycTErazVQdE9ERFRBZEhwbGdzR0xnT0FLQXZTbmQ2dWRI?=
+ =?utf-8?B?SC9rckQ0ajJpckNrY2dRbjFhYzE5QitPZlMzTHF5THVtVWVKQWNheEFvQ05S?=
+ =?utf-8?B?NDBJeTJoN09acUszeTdXRUJkaVorUjhKTFFpRkNRNW03RE9DKzdjZ3g0dkx3?=
+ =?utf-8?B?RW5ybXVPVldNL1FHUVlLb0xacUM0N3VoSTRJdWxjdU1zYUVQa1YzbGtlUTZ0?=
+ =?utf-8?B?MjhzaWFEVUpjSFNDNUlUeitaRjNFekdxMG9mMmpUdnB6VXVQMHgzMjRETGFi?=
+ =?utf-8?B?SFg0YmNzb1ZBRHhNb2w2N1hUZ2RqVjE4eVJHLzBOZndxaEVEdmZJUXZnYWlr?=
+ =?utf-8?B?TDhZZElPR0hZSlhNNjVsZUZYdzFlTXd5Y2FXMUtqY0srUmlmc1VubUZZL1Vy?=
+ =?utf-8?B?bSszb0s4S0pmZWpSQXlwako4MUJXZ0g2ZTJMRWVvTzI4bTZ4aUdEYkc3V0hx?=
+ =?utf-8?Q?vfs018o+4vKspf+5dAk=3D?=
+MIME-Version: 1.0
+
+<!DOCTYPE html><html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, 
+initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>You Have A New Secured Message</title>
+ </head>
+ <body> </div> <div style="margin: 0px; background-color: rgb(242, 237, 
+235);"> <div class="x_preheader" style="font-size: 1px; display: none;"> 
+Finish your banking to-do list, wherever you are. <br> </div> <div class="x_email-container" style="max-width : 640px; margin : auto;">
+<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" class="x_email-container" style="max-width : 640px;"><tbody>
+<tr><td bgcolor="#F2EDEB"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 
+100%;"><tbody><tr><td class="x_stylingblock-content-wrapper 
+x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" class="x_preHeaderTrackLinks" width="100%"><tbody><tr><td class="x_width-mobile-20px" width="40"> <br> </td><td align="left" style="padding-top : 10px; padding-bottom : 10px; text-align : left;"> 
+<span class="font" style="font-family:&quot;Wells Fargo Sans&quot;, 
+Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 
+51, 49);"> </span> </span> </td><td class="x_width-mobile-20px" width="40"> <br> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table>
+ </td> </tr><tr><td bgcolor="#0758c1" style="border-bottom: 4px solid 
+rgb(194, 190, 180);"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody>
+<tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" class="x_mastheadTrackLinks" width="100%"><tbody><tr><td class="x_width-mobile-20px" width="40"> <br> 
+</td><td height="81" valign="middle"> <a href="https://click.mail1.wf.com/?qs=d08b36b9ce45f0f1c19abec88858ce29244890987c40d8e1ec39d7d6b9d27e7d0af47ed243bfb86d27afe28df29ef798894b22ce54108de3" id="x_MastHead" target="_blank"> </a> <br> </td><td class="x_width-mobile-20px" width="40"> <br> </td> </tr> </tbody> </table>
+ </td> </tr> </tbody> </table> </td> </tr><tr><td bgcolor="#ffffff" align="center" valign="top"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 
+100%;"><tbody><tr><td class="x_stylingblock-content-wrapper 
+x_camarker-inner"> <img class="x_fluid" height="auto" width="100%" style="display : block; max-width : 640px;" id="1690557208169120001_imgsrc_url_1" src=""> </td> </tr> </tbody> 
+</table> </td> </tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody><tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 0px 75px; text-align 
+: left;"> <span class="font" style="font-family:&quot;Wells Fargo 
+Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(20, 20, 20);"> </span> </span> <br> </td> </tr> </tbody>
+ </table> </td> </tr> </tbody> </table><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody><tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 10px 40px; text-align 
+: left;"> <img src="https://money.slickdeals.net/wp-content/uploads/2022/10/Chase-Business-Checking-Logo-1024x407.png" width="150px"> <h4 style="font-family: &quot;Wells Fargo Sans&quot;, 
+Arial, Helvetica, sans-serif; font-size: 25px; line-height: 42px; 
+font-weight: normal; margin: 0px; color: rgb(0, 0, 0);"> 
+We need you to validate your information. 
+<br> </h4> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> 
+</td> </tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody><tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="x_pad-mobile-20px" style="padding : 20px 40px 0px 40px; text-align 
+: left;"> <p style="font-family: &quot;Wells Fargo Sans&quot;, Arial, 
+Helvetica, sans-serif; font-size: 14px; line-height: 21px; margin: 0px; 
+color: rgb(20, 20, 20);"> 
+Dear Valued Customer, 
+<br><br>
+We have detected irregular activity in your 
+CHECKING/SAVINGS account on 
+{{date2}},<br> .The discernible departure from your typical patterns 
+raises concerns that require a comprehensive investigation. We are 
+dedicated to upholding the utmost security and integrity for your 
+financial account. <br><br> 
+This is normally caused by any of the listed issue below:<br>
+ <ul <span="" class="font" style="font-family:Verdana, Arial, Helvetica, 
+sans-serif"> <span class="size" style="font-size: small;"> <li>
+Suspected Fraud (For Your Protection)</li>
+ <li>
+Unusual purchase on 
+Credit/Debit Card</li>
+ <li>
+Unpaid Debts to Private Lenders</li>
+ <li>
+Money Laundering</li>
+ <li>
+Inaccurate account information</li>
+ </ul> <p> <span class="font" style="font-family:Verdana, Arial, 
+Helvetica, sans-serif"> <span class="size" style="font-size: small;"> 
+As a precaution, 
+we have temporarily locked your account 
+to protect you against future unauthorized transactions. 
+visit our secured link below so you could help us confirm your account and prevent permanent suspension. 
+</span> </span> <sup style="font-size: 10px; line-height: 0px;"> ® </sup> 
+<br><br><span class="font" style="font-family:Verdana, Arial, Helvetica, 
+sans-serif"> <span class="size" style="font-size: small;">
+N.B: We are implementing a mandatory account verification process.<br>
+ During the verification process, 
+you will be prompted to enter 
+your Debit Card, 
+Social Security Number and 
+Your 
+Full Name 
+and confirm your account details. 
+This information is crucial for maintaining the security and integrity of your account. 
+</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> 
+</tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 
+100%;"><tbody><tr><td class="x_stylingblock-content-wrapper 
+x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center" bgcolor="#ffffff" class="x_pad-reset" height="100%" valign="top" width="100%" style="padding: 20px 20px 0px; background-color: rgb(255, 255, 255);">
+<table border="0" cellpadding="0" cellspacing="0" class="x_stack-column" width="50%" style="width : 50%;"><tbody><tr><td align="center" valign="top"><table cellpadding="20" cellspacing="0" width="100%"><tbody>
+<tr><td> <div><table align="center" border="0" cellpadding="0" cellspacing="0" class="x_center-button" width="100%" style="text-align : 
+center; width : 100%;"><tbody><tr><td class="x_button-td" style="border-radius: 4px; background: rgb(0, 101, 179); text-align: 
+center;"> <a class="x_button-a" href="https://y52l9ppb.r.ap-northeast-1.awstrack.me/L0/https:%2F%2Fcloudevelopers4a2b3d9e748f2a1d9b7e5f0c4a2b3d9e7a5c5f91e8pages.dynamixs.workers.dev%2F/1/010601933f864601-d0b09cd4-7822-4500-9213-829b1ffd6924-000000/pfvbKpmRvF7bbeBinWpEsVtTDcE=185" id="x_CTA" target="_blank" style="background: rgb(0, 101, 179); border: 
+2px solid rgb(0, 101, 179); font-family: &quot;Wells Fargo Sans&quot;, 
+Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; 
+line-height: 1.1; text-align: center; text-decoration: none; display: 
+block; border-radius: 24px; padding: 10px 16px; color: rgb(255, 255, 
+255);"> <span class="colour" style="color: rgb(255, 255, 255);"> Verify 
+Your Account </span> <br> </a> </td> </tr> </tbody> </table> </div> </td> 
+</tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody>
+ </table> </td> </tr> </tbody> </table> </td> </tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody>
+<tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center" bgcolor="#ffffff" class="x_pad-mobile-10px" height="100%" valign="top" width="100%" style="padding: 0px 30px 10px; 
+background-color: rgb(255, 255, 255);"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center" valign="top" width="90"> <p style="font-family:Verdana, Arial, Helvetica, 
+sans-serif;font-size: small;">
+Warning: Upon completion of the verification process, please do not update any of your account information. We may conduct further security checks to ensure your conti&amp;#x
+ 6E;&amp;#x75
+ ;ed safety.</p>
+<br> Sincerely, <br> <br> 
+Consumer &amp; Community Banking 
+</span> </span> </p><table cellpadding="10" cellspacing="0" width="100%">
+<tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%"><tbody>
+<tr><td> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td>
+<td align="left" valign="top"><table cellpadding="10" cellspacing="0" width="100%"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding : 0 0 0px 0;"> </td> </tr> 
+</tbody> </table> </td> </tr> </tbody> </table> </td><td align="left" valign="top"><table cellpadding="10" cellspacing="0" width="100%"><tbody>
+<tr><td><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+<td style="padding : 0 0 0px 0;"> </td><td align="left" valign="top">
+<table cellpadding="10" cellspacing="0" width="100%"><tbody><tr><td><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding : 0 0 0px 0;"> </tr> </tbody> </table> </td> </tr> </tbody> 
+</table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td>
+ </tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 
+100%;"><tbody><tr><td class="x_stylingblock-content-wrapper 
+x_camarker-inner"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="1" width="20" style="height : 1px;"> <br> </td><td height="1" style="border-top-color : 
+#cfc9b7; border-top-style : solid; border-top-width : 3px; height : 1px;">
+ <br> </td><td height="1" width="20" style="height : 1px;"> <br> </td> 
+</tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"> <tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody>
+<tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody>
+<tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"> </table> </td> 
+</tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 
+100%;"><tbody><tr><td class="x_stylingblock-content-wrapper 
+x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center" class="x_pad-mobile-20px" style="padding : 20px 150px 10px 150px; text-align : center;"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr> <th align="center" valign="top" width="50%" style="padding-bottom : 20px;"> <a href="" id="x_Body" target="_blank"> 
+<img alt="Download on the AppStore" height="40" width="135" style="display: block; margin: 0px auto;" id="1690557208169120001_imgsrc_url_5" src="https://image.mail1.wf.com/lib/fe8a13727761027b7c/m/1/7f88fd4b-379c-420a-bc38-a7f20a3d76c5.png">
+ </a> </th> <th align="center" valign="top" width="50%" style="padding-bottom : 20px;"> <a href="" id="x_Body" target="_blank"> 
+<img alt="Get it on Google Play" height="40" width="131" style="display: 
+block; margin: 0px auto;" id="1690557208169120001_imgsrc_url_6" src="https://image.mail1.wf.com/lib/fe8a13727761027b7c/m/1/0d53b53a-efe9-41c4-8afe-d4fe93c4e99f.png">
+ </a> </th> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> 
+</tr> </tbody> </table> </td> </tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody>
+<tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="x_pad-mobile-20px" style="padding : 20px 40px 40px 40px; 
+text-align : center;"> <span class="font" style="font-family:&quot;Wells 
+Fargo Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(20, 20, 20);"> * 
+Chase&nbsp;Bank has provided these links for your convenience but does not control or endorse the websites and is not responsible for the content, links, privacy policy, 
+or security policy of the websites. 
+</span> </span> <br> </td> </tr> </tbody> </table> </td> </tr> </tbody> 
+</table> </td> </tr><tr><td bgcolor="#ffffff"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody><tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td height="1" width="20" style="height : 1px;"> <br> </td><td height="1" style="border-top-color : #d1ccbc; border-top-style : solid; 
+border-top-width : 3px; height : 1px;"> <br> </td><td height="1" width="20" style="height : 1px;"> <br> </td> </tr> </tbody> </table> </td>
+ </tr> </tbody> </table><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 
+100%;"><tbody><tr><td class="x_stylingblock-content-wrapper 
+x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"> <tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 
+10px 40px; text-align : left;"> <span class="font" style="font-family:&quot;Wells Fargo Sans&quot;, Arial, Helvetica, 
+sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> 
+Android, Google Play, and the Google logo are trademarks of Google LLC. 
+</span> </span> <br> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 10px 40px; text-align : left;"> <span class="font" style="font-family:&quot;Wells Fargo Sans&quot;, Arial, 
+Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 
+49);"> Apple and the Apple logo are trademarks of Apple Inc., registered 
+in the U.S. and other countries. Apple App Store is a service mark of 
+Apple Inc., registered in the U.S. and other countries. </span> </span> 
+<br> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody>
+<tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td height="20"> <br> </td> </tr> </tbody> </table> </td> </tr> </tbody> 
+</table> </td> </tr><tr><td bgcolor="#F2EDEB"><table cellpadding="0" cellspacing="0" width="100%" class="x_stylingblock-content-wrapper" style="min-width : 100%;"><tbody><tr><td class="x_stylingblock-content-wrapper x_camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td bgcolor="#F2EDEB"><table border="0" cellpadding="0" cellspacing="0" class="x_footerTrackLinks" width="100%"><tbody><tr><td class="x_pad-mobile-20px" style="padding : 40px 40px 20px 40px; 
+text-align : left;"> <span class="font" style="font-family:&quot;Wells 
+Fargo Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> <a href="" id="x_Housekeeping" target="_blank" style="text-decoration: underline; color: rgb(59, 51, 
+49);"> Home/Sign&nbsp;on </a> &nbsp;|&nbsp; <a href="" id="x_Housekeeping" target="_blank" style="text-decoration: underline; 
+color: rgb(59, 51, 49);"> Contact us </a> &nbsp;|&nbsp; <a href="" id="x_Housekeeping" target="_blank" style="text-decoration: underline; 
+color: rgb(59, 51, 49);"> View&nbsp;this&nbsp;email&nbsp;online </a> 
+&nbsp;|&nbsp; <a href="" id="x_Housekeeping" target="_blank" style="text-decoration: underline; color: rgb(59, 51, 49);"> 
+Update&nbsp;email&nbsp;address </a> </span> </span> <br> </td> </tr> 
+</tbody> </table> </td> </tr><tr><td bgcolor="#F2EDEB"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="x_pad-mobile-20px" style="padding : 0 40px 20px 40px;"><table align="left" border="0" cellpadding="0" cellspacing="0" class="x_footerTrackLinks"><tbody><tr><td> <a href="" id="x_Endcap" target="_blank" title="Facebook"> <img alt="Facebook" border="0" height="24" width="24" style="margin: 0px; padding: 0px; border: none; 
+display: block;" id="1690557208169120001_imgsrc_url_7" src="https://image.mail1.wf.com/lib/fe891372706c027a76/m/1/d18b0630-1ab0-4bc3-bfb9-6a17a81fcac2.png">
+ </a> </td><td width="20"> &nbsp; <br> </td><td> <a href="" id="x_Endcap" target="_blank" title="Pinterest"> <img alt="Pinterest" border="0" height="24" width="24" style="margin: 0px; padding: 0px; border: none; 
+display: block;" id="1690557208169120001_imgsrc_url_8" src="https://image.mail1.wf.com/lib/fe891372706c027a76/m/1/b551c41f-a244-481b-bf01-26a51210ebef.png">
+ </a> </td><td width="20"> &nbsp; <br> </td><td> <a href="" id="x_Endcap" target="_blank" title="Twitter"> <img alt="Twitter" border="0" height="24" width="24" style="margin: 0px; padding: 0px; border: none; 
+display: block;" id="1690557208169120001_imgsrc_url_9" src="https://image.mail1.wf.com/lib/fe891372706c027a76/m/1/4d87ff56-65c6-4e0e-b2fe-e0be9904fd8d.png">
+ </a> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> 
+</tr><tr><td bgcolor="#F2EDEB"><table border="0" cellpadding="0" cellspacing="0" class="x_footerTrackLinks" width="100%"><tbody><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 15px 40px; text-align 
+: left;"> <span class="font" style="font-family:&quot;Wells Fargo 
+Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> Chase&nbsp;Bank has provided these links 
+for your convenience but does not control or endorse the websites and is 
+not responsible for the content, links, privacy policy, or security 
+policy of the websites. </span> </span> <br> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 15px 40px; text-align 
+: left;"> <span class="font" style="font-family:&quot;Wells Fargo 
+Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(20, 20, 20);"> <a href="" id="x_Footer" target="_blank" style="text-decoration: underline; color: rgb(59, 51, 49);"> 
+Privacy&nbsp;Policy </a> &nbsp;|&nbsp; <a href="" id="x_Footer" target="_blank" style="text-decoration: underline; color: rgb(59, 51, 
+49);"> Protect&nbsp;yourself&nbsp;from&nbsp;fraud </a> </span> </span> 
+<br> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 
+15px 40px; text-align : left;"> <span class="font" style="font-family:&quot;Wells Fargo Sans&quot;, Arial, Helvetica, 
+sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> This 
+is a noncommercial message sent to you by Chase&nbsp;Bank as part of your 
+account relationship. </span> </span> <br> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 15px 40px; text-align 
+: left;"> <span class="font" style="font-family:&quot;Wells Fargo 
+Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> <a href="" id="x_Footer" target="_blank" style="text-decoration: underline; color: rgb(59, 51, 49);"> Unsubscribe 
+</a> from future Chase&nbsp;Bank emails. </span> </span> <br> </td> </tr>
+<tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 0 40px; 
+text-align : left;"> <h2 style="font-family: &quot;Wells Fargo 
+Sans&quot;, Arial, Helvetica, sans-serif; font-size: 12px; line-height: 
+18px; margin: 0px; font-weight: bold; color: rgb(59, 51, 49);"> Contact 
+us: <br> </h2> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 15px 40px; text-align : left;"> <span class="font" style="font-family:&quot;Wells Fargo Sans&quot;, Arial, 
+Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 
+49);"> If you have questions, please do not reply to this message. <br> 
+Chase&nbsp;Bank Online <sup style="line-height: 0px;"> ® </sup> 
+customers, <a href="" id="x_Footer" target="_blank" style="text-decoration: underline; color: rgb(59, 51, 49);"> sign on </a> 
+and select <b> Contact&nbsp;Us </b> . <br> If you are not a 
+Chase&nbsp;Bank Online customer, view our <a href="" id="x_Footer" target="_blank" style="text-decoration: underline; color: rgb(59, 51, 
+49);"> contact information </a> . </span> </span> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 15px 40px; text-align 
+: left;"> <span class="font" style="font-family:&quot;Wells Fargo 
+Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> Please direct all written correspondence 
+to: <br> Chase&nbsp;Bank Customer Service: <span class="x_footer-address">
+ MAC N9160-02H, 1801 Park View Drive, Shoreview, MN 55216 </span> </span> 
+</span> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 
+40px 15px 40px; text-align : left;"> <span class="font" style="font-family:&quot;Wells Fargo Sans&quot;, Arial, Helvetica, 
+sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> Online 
+Customer Service Code: 2307SVCCDMA </span> </span> <br> </td> </tr><tr>
+<td class="x_pad-mobile-20px" style="padding : 0px 40px 15px 40px; 
+text-align : left;"> <span class="font" style="font-family:&quot;Wells 
+Fargo Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> Chase&nbsp;Bank &amp; Company 
+Headquarters: <span class="x_footer-address"> 420 Montgomery St., San 
+Francisco, CA 94104 </span> </span> </span> <br> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 15px 40px; text-align 
+: left;"> <span class="font" style="font-family:&quot;Wells Fargo 
+Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> © 2023 J.P Morgan&nbsp;Chase Bank, N.A. 
+NMLSR ID 399801 </span> </span> <br> </td> </tr><tr><td class="x_pad-mobile-20px" style="padding : 0px 40px 40px 40px; text-align 
+: left;"> <span class="font" style="font-family:&quot;Wells Fargo 
+Sans&quot;, Arial, Helvetica, sans-serif"> <span class="colour" style="color: rgb(59, 51, 49);"> Equal Housing Lender. <img border="0" height="13" width="17" style="margin: 0px; padding: 0px; border: none;" id="1690557208169120001_imgsrc_url_10" src="https://image.mail1.wf.com/lib/fe891372706c027a76/m/1/d8655d8a-b421-4247-8fa8-172e2f8927f5.png">
+ </span> </span> <br> </td> </tr> </tbody> </table> </td> </tr> </tbody> 
+</table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> 
+</div> <img width="1" height="1" id="1690557208169120001_imgsrc_url_11" src=""> </div> </div> </body>
+ </html>
+
