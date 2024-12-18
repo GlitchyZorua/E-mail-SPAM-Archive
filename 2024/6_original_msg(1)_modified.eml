@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a05:612c:2319:b0:44c:c215:8d87 with SMTP id fr25csp534519vqb;
         Thu, 1 Feb 2024 13:24:49 -0800 (PST)
 X-Received: by 2002:a17:906:7fd7:b0:a35:668a:e9eb with SMTP id r23-20020a1709067fd700b00a35668ae9ebmr2786280ejs.31.1706822688886;
@@ -12,7 +12,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1706822688; cv=none;
          qafYBFKjNb5WhwPRX6u7CkZclPPLhkVlC9It/MbsQYH1/kS9Hj3QiQIHO8fBF+Y2y5Yk
          DPsg==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
-        h=to:subject:message-id:date:from:reply-to:mime-version
+        h=to:[removed]
          :dkim-signature;
         bh=hHJRqQlWG3CQ6HDg26SC7rJUvYCaCoOr1HJ+p4T0A9g=;
         fh=u9jp++cn2mVG+SCkwR2IURtSq8bL1WmLMkPUbi5b3EM=;
@@ -25,23 +25,23 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=EnfT4XfT;
-       spf=pass (google.com: domain of mrphilip2021a@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mrphilip2021a@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
 X-Forwarded-Encrypted: i=0; AJvYcCV7c8XrBm9AeYpXXZFfrdG4LZbfyC0/cIEVyu1l0tSD600xxETMUzNft03ljMquOj1E5qcTwAaBBoW6lkFr2VtXmC+WoiShLifwTzEgmr4=
-Return-Path: <mrphilip2021a@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
         by mx.google.com with SMTPS id z27-20020a170906075b00b00a35da54d390sor156566ejb.6.2024.02.01.13.24.48
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Thu, 01 Feb 2024 13:24:48 -0800 (PST)
-Received-SPF: pass (google.com: domain of mrphilip2021a@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=EnfT4XfT;
-       spf=pass (google.com: domain of mrphilip2021a@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mrphilip2021a@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1706822688; x=1707427488; dara=google.com;
-        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+        h=to:[removed]
          :subject:date:message-id:reply-to;
         bh=hHJRqQlWG3CQ6HDg26SC7rJUvYCaCoOr1HJ+p4T0A9g=;
         b=EnfT4XfTQaCO48UhbfqOCkcvuy8TY85dZqsTtEdnGwJDKAW8+eTH6U44cYkL0ctn2L
@@ -52,8 +52,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          qzOQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1706822688; x=1707427488;
-        h=to:subject:message-id:date:from:reply-to:mime-version
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
         bh=hHJRqQlWG3CQ6HDg26SC7rJUvYCaCoOr1HJ+p4T0A9g=;
         b=O23plKr0B535+G0rmEUJZHI02ZyKkYzX6wx32d1mcFU1UbS20Y0F4qwYsT5AvXHZCS
          Y0iaY0aZgb6UoFpVmgNfGnstEJAimahO/uRsKmCBRhPk5kZrJECaPUVVApAZWVbsifr9
@@ -69,14 +69,14 @@ X-Received: by 2002:a17:906:b283:b0:a36:55e8:ea40 with SMTP id
  q3-20020a170906b28300b00a3655e8ea40mr2397833ejz.41.1706822688182; Thu, 01 Feb
  2024 13:24:48 -0800 (PST)
 MIME-Version: 1.0
-Reply-To: removedfor@privacy.reasons
-From: From Sergeant William <mrphilip2021a@gmail.com>
+Reply-To:[removed]
+From:[removed]
 Date: Thu, 1 Feb 2024 22:24:31 +0100
-Message-ID: <CAEPbMKix9iKb8C-JTj64EN_KwX8o49onTh60e9qKDZB7kuWxwg@mail.gmail.com>
+Message-ID: <[removed]>
 Subject: 
-To: undisclosed-recipients:;
+To:[removed]
 Content-Type: multipart/alternative; boundary="0000000000000618d2061058a056"
-Bcc: mailmanthingwhatever@gmail.com
+Bcc:[removed]
 
 --0000000000000618d2061058a056
 Content-Type: text/plain; charset="UTF-8"
@@ -115,3 +115,4 @@ erica.<br><br>Best Regards,<br>Staff Sergeant William Ronald Lance.<br>Unit=
 ed States Soldier Presently in Syria.<br><br></div>
 
 --0000000000000618d2061058a056--
+

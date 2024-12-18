@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a05:612c:1a:b0:443:debf:37c3 with SMTP id v26csp1236200vqc;
         Wed, 24 Jan 2024 11:40:42 -0800 (PST)
 X-Google-Smtp-Source: AGHT+IECQYWH4OmEyVXz2BcSTXXzRmiKr3JLflCc4JyNExw0JKVSvIfLSYpIiSEn/AbEuGB1R5YL
@@ -14,7 +14,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1706125241; cv=none;
          N+7w==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
         h=thread-index:thread-topic:mime-version:subject:references
-         :in-reply-to:message-id:to:reply-to:from:date;
+         :in-reply-to:[removed]
         bh=2MDIT2MGIeEhXlw9ye2I2kCcT+zI8nzU/DMiNb7QTnw=;
         fh=Fl7fP/keTHwZpW9LeEPbuLUj/o6i+n41Nn4wSHiDzj4=;
         b=Dr933rMTjesJ2qZ5g0CdSlnIKCqLfz9fQ97j6iHrpLaBBwm3H7dNIU2hHbNOIzVZCl
@@ -24,16 +24,16 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
          R7IDNlgE/KidM0yAhmxhY2vw57Unpwoq2qI2Bxqsvk4CRiw6U/c+XRkCvdGQ1mJiHkbE
          GHeQ==
 ARC-Authentication-Results: i=1; mx.google.com;
-       spf=pass (google.com: domain of mr.hiroshiyuda2@mediacombb.net designates 35.164.127.233 as permitted sender) smtp.mailfrom=mr.hiroshiyuda2@mediacombb.net;
+       spf=pass (google.com: domain of [removed] designates 35.164.127.233 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mediacombb.net
-Return-Path: <mr.hiroshiyuda2@mediacombb.net>
+Return-Path: <[removed]>
 Received: from omta010.uswest2.a.cloudfilter.net (omta010.uswest2.a.cloudfilter.net. [35.164.127.233])
         by mx.google.com with ESMTPS id 13-20020a63194d000000b005ca4098bf5fsi12051842pgz.620.2024.01.24.11.40.38
         (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
         Wed, 24 Jan 2024 11:40:41 -0800 (PST)
-Received-SPF: pass (google.com: domain of mr.hiroshiyuda2@mediacombb.net designates 35.164.127.233 as permitted sender) client-ip=35.164.127.233;
+Received-SPF: pass (google.com: domain of [removed] designates 35.164.127.233 as permitted sender) client-ip=35.164.127.233;
 Authentication-Results: mx.google.com;
-       spf=pass (google.com: domain of mr.hiroshiyuda2@mediacombb.net designates 35.164.127.233 as permitted sender) smtp.mailfrom=mr.hiroshiyuda2@mediacombb.net;
+       spf=pass (google.com: domain of [removed] designates 35.164.127.233 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mediacombb.net
 Received: from mcc-obgw-5002a.ext.cloudfilter.net ([10.243.65.104])
 	by cmsmtp with ESMTP
@@ -47,12 +47,12 @@ X-Authority-Analysis: v=2.4 cv=LqqBd1Rc c=1 sm=1 tr=0 ts=65b167b3 cx=a_idp_d
  a=_W_S_7VecoQA:10 a=3D3u3_GVj5rP6Daiq4Ij:22 a=xo5jKAKm-U-Zyk2_beg_:22
  a=nl4s5V0KI7Kw-pW0DWrs:22 a=dHb92Bjuc-bLpAB9Gz7K:22 a=7PlhcU7xGnINJ2miruxK:22
 Date: Wed, 24 Jan 2024 14:40:35 -0500 (EST)
-From: Satoru Ochiai <mr.hiroshiyuda2@mediacombb.net>
-Reply-To: removedfor@privacy.reasons
-To: anonymous <removedfor@privacy.reasons>
-Message-ID: <1296738655.14967482.1706125235220.JavaMail.zimbra@mediacombb.net>
-In-Reply-To: <2086316161.14960353.1706116734503.JavaMail.zimbra@mediacombb.net>
-References: <nuq4llie0iunneuda5te9gva.1625321045669@email.android.com> <2009128713.600725.1687251547345.JavaMail.zimbra@mediacombb.net> <1010476284.1994286.1689128085741.JavaMail.zimbra@mediacombb.net> <1999592754.5876438.1694034157093.JavaMail.zimbra@mediacombb.net> <1352047628.6750181.1695097673149.JavaMail.zimbra@mediacombb.net> <1931082289.10744579.1700488755754.JavaMail.zimbra@mediacombb.net> <1448124820.10745907.1700489379953.JavaMail.zimbra@mediacombb.net> <2086316161.14960353.1706116734503.JavaMail.zimbra@mediacombb.net>
+From:[removed]
+Reply-To:[removed]
+To:[removed]
+Message-ID: <[removed]>
+In-Reply-To:[removed]
+References: <[removed]> <[removed]> <[removed]> <[removed]> <[removed]> <[removed]> <[removed]> <[removed]>
 Subject: Re: : REQUEST
 MIME-Version: 1.0
 Content-Type: multipart/alternative; 
@@ -142,3 +142,4 @@ initial; text-decoration-style: initial; text-decoration-color: initial; fo=
 nt-family: 'times new roman';">Managing Executive Officer of Resona Bank, L=
 imited</p></div></body></html>
 --=_a15fbe81-65c4-4e11-a722-9da0e036d2c2--
+

@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp7504186vqq;
         Tue, 12 Nov 2024 06:53:22 -0800 (PST)
 X-Received: by 2002:ac8:6690:0:b0:463:1561:a0e3 with SMTP id d75a77b69052e-4631561a1d2mr153016891cf.19.1731423201626;
@@ -12,7 +12,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1731423201; cv=none;
          1xomM7VK6DZEKre2iT500PGBRMwbCiAoP6C4jEWou8LzOBY9vQR7SQvbr4zbPzeYeZol
          XUGA==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        h=to:[removed]
         bh=0MARSzcs+DMKreu2q4uJXiN3YDxZO0+Y1hD1ig+E+3k=;
         fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
         b=byTDZGSgZ6W9nN1GEf8VCgd1MwCn9dKGMOTsaN/G+43WmGZFbdjqGXRGkGK1gD8YjD
@@ -24,24 +24,24 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b="Tylh/Kj+";
-       spf=pass (google.com: domain of hazelreed5433@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=hazelreed5433@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
-Return-Path: <hazelreed5433@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
         by mx.google.com with SMTPS id d75a77b69052e-462ff675528sor91608761cf.8.2024.11.12.06.53.21
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Tue, 12 Nov 2024 06:53:21 -0800 (PST)
-Received-SPF: pass (google.com: domain of hazelreed5433@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b="Tylh/Kj+";
-       spf=pass (google.com: domain of hazelreed5433@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=hazelreed5433@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1731423201; x=1732028001; dara=google.com;
-        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+        h=to:[removed]
          :date:message-id:reply-to;
         bh=0MARSzcs+DMKreu2q4uJXiN3YDxZO0+Y1hD1ig+E+3k=;
         b=Tylh/Kj+pr7K0UbmCsQDjuCNXy9SZ+NJgycuRXhVm+B8RHj3aTH69fsj5uSsdA5v7N
@@ -52,8 +52,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          JR9w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1731423201; x=1732028001;
-        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
-         :from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :from:[removed]
         bh=0MARSzcs+DMKreu2q4uJXiN3YDxZO0+Y1hD1ig+E+3k=;
         b=pKrD5MnvbMRUB0ja8UL+0h40bpd+ETPPCcR1dK7vLmtFI0jIFzvBoN8zfah1prOB9O
          z/nVcvmTj+nBUUniEHSdPuAcTPp+PccL/TF/2s/VwGZfx7YuHZHqvblv1J7fNcG7KfYS
@@ -71,11 +71,11 @@ X-Received: by 2002:a05:622a:408b:b0:462:d816:4dd2 with SMTP id
 Received: from 213255398586 named unknown by gmailapi.google.com with
  HTTPREST; Tue, 12 Nov 2024 14:53:19 +0000
 MIME-Version: 1.0
-from: Barack Hussein Obama II <hazelreed5433@gmail.com>
+from:[removed]
 Date: Tue, 12 Nov 2024 14:53:19 +0000
-Message-ID: <CADKbSLXstAU+3Y8CqQz5Hqzt1eFbLEgXfh3v8UvbC8T34t62eg@mail.gmail.com>
+Message-ID: <[removed]>
 Subject: =?UTF-8?B?4pyJ77iPIFBheW1lbnQgUmVxdWVzdA==?=
-To: mailmanthingwhatever@gmail.com
+To:[removed]
 Content-Type: multipart/mixed; boundary="000000000000d8742d0626b86012"
 
 --000000000000d8742d0626b86012
@@ -761,3 +761,4 @@ YWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKGh0dHA6Ly93d3cucmVwb3J0bGFi
 LmNvbSkKCi9JbmZvIDYgMCBSCi9Sb290IDUgMCBSCi9TaXplIDkKPj4Kc3RhcnR4cmVmCjM3NjIw
 CiUlRU9GCg==
 --000000000000d8742d0626b86012--
+

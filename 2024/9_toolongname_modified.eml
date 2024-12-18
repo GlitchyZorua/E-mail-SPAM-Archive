@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp7580698vqq;
         Tue, 12 Nov 2024 08:27:36 -0800 (PST)
 X-Forwarded-Encrypted: i=2; AJvYcCXmccrY5KQeXzLmeHyqfsRVzwL8oc3EJBQral4wsQn1SVAxAzfgQ2EiQWIKA+fWvXDPdeFD4It3SupIpsWqT5ts2pZbaQ==@gmail.com
@@ -13,7 +13,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1731428855; cv=none;
          l0Xot5nJmwqKuYtGrYurO5BN+M/fmOgfqbpUOSOj7E5tcq2tlPTsqWdLenotjt2t4xM6
          fRaA==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-        h=to:subject:message-id:date:from:reply-to:mime-version
+        h=to:[removed]
          :dkim-signature;
         bh=kL5PACdbsjX159UgqnI3MC38aV2uWbY5u5x+i/b8XIM=;
         fh=dIENBoA2lPpswDwNIaumTWfW8kPkTvf1vOVis1lRqXY=;
@@ -26,24 +26,24 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=CagtEQ2r;
-       spf=pass (google.com: domain of ogoo8385@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ogoo8385@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
-Return-Path: <ogoo8385@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
         by mx.google.com with SMTPS id 4fb4d7f45d1cf-5cf03b905cfsor3693048a12.4.2024.11.12.08.27.35
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Tue, 12 Nov 2024 08:27:35 -0800 (PST)
-Received-SPF: pass (google.com: domain of ogoo8385@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=CagtEQ2r;
-       spf=pass (google.com: domain of ogoo8385@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ogoo8385@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1731428855; x=1732033655; dara=google.com;
-        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+        h=to:[removed]
          :subject:date:message-id:reply-to;
         bh=kL5PACdbsjX159UgqnI3MC38aV2uWbY5u5x+i/b8XIM=;
         b=CagtEQ2rbdyKO0Cm32v8UT7pp8ge6Efc8X2jWxtaGGTyAgm5Nph92/WqDi4qg7/8vG
@@ -54,8 +54,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          7N5g==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1731428855; x=1732033655;
-        h=to:subject:message-id:date:from:reply-to:mime-version
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
         bh=kL5PACdbsjX159UgqnI3MC38aV2uWbY5u5x+i/b8XIM=;
         b=eqTgKDZeXZtlh2yh7iypS6N1BJdti7CeiPXkl+5YlcmoSWOSSqS3UesDEajBQOzxsV
          oMwzO767cidveJCMw1QrqprnAuYJ7p0g4lv+4E0Dco2hAwudnEzO/0KhSAlbnuH5snzJ
@@ -72,10 +72,10 @@ X-Received: by 2002:a05:6402:5213:b0:5ce:fc3c:3c3 with SMTP id
  4fb4d7f45d1cf-5cf0a45c690mr15553355a12.28.1731428855012; Tue, 12 Nov 2024
  08:27:35 -0800 (PST)
 MIME-Version: 1.0
-Reply-To: mromararounamromararouna@gmail.com
-From: Omar Arouna <ogoo8385@gmail.com>
+Reply-To:[removed]
+From:[removed]
 Date: Tue, 12 Nov 2024 08:27:23 -0800
-Message-ID: <CABmpzS6L2meX_P2xiPcvcqJBonWNhz09ZT4s2uWcR3CYLhLqNA@mail.gmail.com>
+Message-ID: <[removed]>
 Subject: =?UTF-8?Q?Hi_once_again_Dear_Friend_Please_my_name_is_Mr=2E_Omar?=
 	=?UTF-8?Q?_Arouna=2E_I_from_Burkina_Faso_and_I_work_with_Bank_Of_Africa_?=
 	=?UTF-8?Q?=28BOA=29_as_acting_head_of_finance=2E_I_contacted_you_in_good_fai?=
@@ -93,9 +93,9 @@ Subject: =?UTF-8?Q?Hi_once_again_Dear_Friend_Please_my_name_is_Mr=2E_Omar?=
 	=?UTF-8?Q?fer_of_this_fund_into_your_personal_bank_account=2E_I_hope_to_?=
 	=?UTF-8?Q?hear_from_you_soon=2E_at_mromararounamromararouna=40gmail=2Ecom_=281?=
 	=?UTF-8?Q?=29_Your_Full_Name=2C_=282=29_Sex_and_Age=3A_=2E?=
-To: undisclosed-recipients:;
+To:[removed]
 Content-Type: multipart/alternative; boundary="000000000000db644e0626b9b1d8"
-Bcc: mailmanthingwhatever@gmail.com
+Bcc:[removed]
 
 --000000000000db644e0626b9b1d8
 Content-Type: text/plain; charset="UTF-8"
@@ -125,7 +125,7 @@ will share it at the ratio of 40% for you and 60% for me.Please
 you on how to apply to my bank for the transfer of this fund
 into your personal bank account. I hope to hear from you soon. at
 
-mromararounamromararouna@gmail.com
+[removed]
 
 (1) Your Full Name,
 
@@ -160,10 +160,11 @@ ommission this fund to you so that you will stand as associate to<br>the de=
 ceased customer and claim this fund from my bank after which we<br>will sha=
 re it at the ratio of 40% for you and 60% for me.Please<br><br>you on how t=
 o apply to my bank for the transfer of this fund<br>into your personal bank=
- account. I hope to hear from you soon. at<br><br><a href=3D"mailto:mromara=
-rounamromararouna@gmail.com">mromararounamromararouna@gmail.com</a><br><br>=
+ account. I hope to hear from you soon. at<br><br><a href=3D"mailto:[removed]
+[removed]">[removed]</a><br><br>=
 (1) Your Full Name,<br><br>(2) Sex and Age:<br><br>(3) Country of origin:<b=
 r><br>(4) Residential address:<br><br>(5) Phone number:<br><br>(6) Occupati=
 on:<br><br>Best regards,<br><br>Mr. Omar Arouna<br></div>
 
 --000000000000db644e0626b9b1d8--
+

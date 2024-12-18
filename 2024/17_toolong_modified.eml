@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a05:612c:2d08:b0:4a6:b479:dd26 with SMTP id iy8csp3174419vqb;
         Fri, 22 Nov 2024 04:15:51 -0800 (PST)
 X-Forwarded-Encrypted: i=2; AJvYcCUDa3s0Suz9ubyeZAkrRghrXc7mSDvSpOMhvMrqxV+Q62NNdqzHhcGG3rzV/0teawfS4QrLFA+DzGPJRsfT63jzSyDjpA==@gmail.com
@@ -13,7 +13,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1732277751; cv=none;
          0HjxvESOCAO77EW5WRW/toOAwDFl/sYH1r9PBUEX23UEBYfSHEkUNFouWwPXLXw1118R
          teLg==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-        h=to:subject:message-id:date:from:reply-to:mime-version
+        h=to:[removed]
          :dkim-signature;
         bh=bq9u59vGBiUH+vr8TR6L4oUDjWzu7P41fRk3vCsEcjA=;
         fh=BRvOOiEwb4rwCbQgmcyS0TrAxAP0Faz9Wl3D0i0PADE=;
@@ -26,24 +26,24 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=Ed9Ox8J+;
-       spf=pass (google.com: domain of sjoe30532@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sjoe30532@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
-Return-Path: <sjoe30532@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
         by mx.google.com with SMTPS id ca18e2360f4ac-83ecd4ae017sor52424139f.1.2024.11.22.04.15.51
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Fri, 22 Nov 2024 04:15:51 -0800 (PST)
-Received-SPF: pass (google.com: domain of sjoe30532@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=Ed9Ox8J+;
-       spf=pass (google.com: domain of sjoe30532@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sjoe30532@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1732277751; x=1732882551; dara=google.com;
-        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+        h=to:[removed]
          :subject:date:message-id:reply-to;
         bh=bq9u59vGBiUH+vr8TR6L4oUDjWzu7P41fRk3vCsEcjA=;
         b=Ed9Ox8J+z+IWJrltf6XWRUq73Dnv6CnbS6M58azX1KyyNHXkRK/D9j7zJnlYuI3F+5
@@ -54,8 +54,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          ArcQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1732277751; x=1732882551;
-        h=to:subject:message-id:date:from:reply-to:mime-version
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
         bh=bq9u59vGBiUH+vr8TR6L4oUDjWzu7P41fRk3vCsEcjA=;
         b=BKoZ+/8UnpZaNop8UGI9i+y+7X9o6KMd2egjYxNZ8aC+ZMOI25KYAFappuYAg+Yglm
          lsGCOb3m+Kfmrf8oae2ZrWX+labz+m1cBWar1/72LUEypSELt9F3Z5T8Fdf+97qo1iwJ
@@ -74,10 +74,10 @@ X-Received: by 2002:a05:6602:2197:b0:835:3dfc:5ba5 with SMTP id
  ca18e2360f4ac-83ec1a4b60emr637831039f.5.1732277750064; Fri, 22 Nov 2024
  04:15:50 -0800 (PST)
 MIME-Version: 1.0
-Reply-To: umurumbano0@gmail.com
-From: Umuru Mbano <sjoe30532@gmail.com>
+Reply-To:[removed]
+From:[removed]
 Date: Fri, 22 Nov 2024 12:15:30 +0000
-Message-ID: <CAH+-Ub5xQwFo7E=m2H--bFE1mBBWg-uBrrD1sxw6_9DQ_7ajBg@mail.gmail.com>
+Message-ID: <CAH+-Ub5xQwFo7E=[removed]>
 Subject: Dear friend, I know that this mail will come to you as a surprise. I
  am a practitioner at law to a deceased Immigrant property Magnate. I hope
  that you will not expose or betray this trust and confidence that I am about
@@ -85,11 +85,11 @@ Subject: Dear friend, I know that this mail will come to you as a surprise. I
  important message for you concerning the death of your relative, and the
  funds valued at $11.5 million he left behind in Security and Finance Company
  here in my country Lome (Togo), Contact me at my private mailbox (
- umurmbano0@gmail.com ) for the full details as soon as possible. Best
+ [removed] ) for the full details as soon as possible. Best
  Regards, Mr.Umuru Mbano.
-To: wwwwwwwww@ewwewewewewewrerwre.zxcxzz
+To:[removed]
 Content-Type: multipart/alternative; boundary="000000000000f1f71706277f57c0"
-Bcc: mailmanthingwhatever@gmail.com
+Bcc:[removed]
 
 --000000000000f1f71706277f57c0
 Content-Type: text/plain; charset="UTF-8"
@@ -102,3 +102,4 @@ Content-Type: text/html; charset="UTF-8"
 <div dir="ltr">RE..GOOD NEWS.<br></div>
 
 --000000000000f1f71706277f57c0--
+

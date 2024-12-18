@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a59:a7f2:0:b0:42b:92a8:c8f7 with SMTP id a18csp6582887vqt;
         Tue, 2 Jan 2024 09:00:15 -0800 (PST)
 X-Google-Smtp-Source: AGHT+IF+TjVGZFUhacEPRwo7D5mL+W3DQT1PO9CBePacVyQjf4+Rp37+tYc45yqK8z47VdK8iS3y
@@ -14,7 +14,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1704214814; cv=none;
          U2YA==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
         h=sensitivity:content-transfer-encoding:mime-version:subject
-         :message-id:reply-to:from:date;
+         :message-id:reply-to:[removed]
         bh=paP3qlyMI6KnNaMKGmkQJpNjjGnwohUFHiFZL1DQNkE=;
         fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
         b=AFSAFlhF5iz1l7akD7TAzrYKetdrQgSjD7I85gzsaOfxCkxL8STMPeeVcAt/kyXYd3
@@ -24,20 +24,20 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
          aUj3iJ0y9Ekhd6FtOQjRw4U2nWkXp9kdLhPho0TpfPApGBAWHKtQAC97gBkWkctC91nv
          DXOg==
 ARC-Authentication-Results: i=1; mx.google.com;
-       spf=pass (google.com: domain of ooyama.eiiti@brown.plala.or.jp designates 60.36.166.12 as permitted sender) smtp.mailfrom=ooyama.eiiti@brown.plala.or.jp
-Return-Path: <ooyama.eiiti@brown.plala.or.jp>
+       spf=pass (google.com: domain of [removed] designates 60.36.166.12 as permitted sender) smtp.mailfrom=[removed]
+Return-Path: <[removed]>
 Received: from msa12.plala.or.jp (msa12.plala.or.jp. [60.36.166.12])
         by mx.google.com with ESMTP id b10-20020a170903228a00b001d4c2359a83si1965642plh.298.2024.01.02.09.00.10;
         Tue, 02 Jan 2024 09:00:14 -0800 (PST)
-Received-SPF: pass (google.com: domain of ooyama.eiiti@brown.plala.or.jp designates 60.36.166.12 as permitted sender) client-ip=60.36.166.12;
+Received-SPF: pass (google.com: domain of [removed] designates 60.36.166.12 as permitted sender) client-ip=60.36.166.12;
 Authentication-Results: mx.google.com;
-       spf=pass (google.com: domain of ooyama.eiiti@brown.plala.or.jp designates 60.36.166.12 as permitted sender) smtp.mailfrom=ooyama.eiiti@brown.plala.or.jp
+       spf=pass (google.com: domain of [removed] designates 60.36.166.12 as permitted sender) smtp.mailfrom=[removed]
 Received: from mwebp13 ([172.23.13.133]) by msa12.plala.or.jp with ESMTP
           id <20240102170009.SEJE843.msa12.plala.or.jp@mwebp13>;
           Wed, 3 Jan 2024 02:00:09 +0900
 Date: Wed, 3 Jan 2024 02:00:09 +0900
-From: Airport Vault Authority JP <ooyama.eiiti@brown.plala.or.jp>
-Reply-To: removedfor@privacy.reasons
+From:[removed]
+Reply-To:[removed]
 Message-ID: <20240103020009.VYGR2.12757.root@mwebp13>
 Subject: Happy New Year Dear Beneficiary
 MIME-Version: 1.0
@@ -66,4 +66,5 @@ Lastly, be informed that the reason I have taken it upon myself to contact you p
 
 Best Regards
 Mr. Edward John David
-Personal Email: edwardjohndavid58@gmail.com
+Personal Email: [removed]
+

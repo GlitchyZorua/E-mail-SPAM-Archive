@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a59:b1a8:0:b0:44c:c215:8d87 with SMTP id j8csp1709667vqp;
         Wed, 31 Jan 2024 15:51:53 -0800 (PST)
 X-Received: by 2002:a05:620a:10bc:b0:783:81f3:3a8d with SMTP id h28-20020a05620a10bc00b0078381f33a8dmr1062613qkk.44.1706745113704;
@@ -12,7 +12,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1706745113; cv=none;
          gNAXpQabmQZgSS8q8aqnUX3lxo+gvUDG49x50pJMpi0bQsrDRGdkb4t5rkwBlOPqRv1K
          kpSw==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
-        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        h=to:[removed]
         bh=UASTY6pkcsTA86pMQNvZdjdpBxTQcYT6WDFznBDB5+g=;
         fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
         b=HY+9n/nlu7HcmCi8d8tKWGKW394scNvZglGPwmvdaBsuGxonC7EuITRYwHmq4SsshD
@@ -24,22 +24,22 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=c1i4eIYf;
-       spf=pass (google.com: domain of drandy5422@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=drandy5422@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
-Return-Path: <drandy5422@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
         by mx.google.com with SMTPS id dc6-20020a05620a520600b00783148d33c7sor8911988qkb.18.2024.01.31.15.51.53
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Wed, 31 Jan 2024 15:51:53 -0800 (PST)
-Received-SPF: pass (google.com: domain of drandy5422@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=c1i4eIYf;
-       spf=pass (google.com: domain of drandy5422@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=drandy5422@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1706745113; x=1707349913; dara=google.com;
-        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+        h=to:[removed]
          :date:message-id:reply-to;
         bh=UASTY6pkcsTA86pMQNvZdjdpBxTQcYT6WDFznBDB5+g=;
         b=c1i4eIYfGgUl8oeW7xa2kUV/xEB5gYhZ4xip/kuUK8/SeAvQPaDChK1e9hemU60afZ
@@ -50,8 +50,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          Vdyg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1706745113; x=1707349913;
-        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
-         :from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :from:[removed]
         bh=UASTY6pkcsTA86pMQNvZdjdpBxTQcYT6WDFznBDB5+g=;
         b=A+NRoi/Uozw+++Nl+NM37s4BlO+2Jl2Azjt5zRISpudGsBNc3ffhb81tFSrYPe0ZGU
          QDvXrpVusAsg8yRBL2PPvTHi5KCP7blIHudz7MhWLf3XrswTazL1td8bPfF39HVyArAH
@@ -67,11 +67,11 @@ X-Received: by 2002:a05:622a:54e:b0:42a:60cd:ce41 with SMTP id
  m14-20020a05622a054e00b0042a60cdce41mr4132295qtx.53.1706745113196; Wed, 31
  Jan 2024 15:51:53 -0800 (PST)
 MIME-Version: 1.0
-From: Dr Andy <drandy5422@gmail.com>
+From:[removed]
 Date: Thu, 1 Feb 2024 00:51:38 +0100
-Message-ID: <CA+m-4xvC__pcomcjNbN8zz4+n8UkvgisJgMyr0cbnNOqUZ2=+Q@mail.gmail.com>
+Message-ID: <CA+m-4xvC__pcomcjNbN8zz4+n8UkvgisJgMyr0cbnNOqUZ2=[removed]>
 Subject: 
-To: mailmanthingwhatever@gmail.com
+To:[removed]
 Content-Type: multipart/alternative; boundary="00000000000031bc260610469066"
 
 --00000000000031bc260610469066
@@ -87,3 +87,4 @@ Content-Type: text/html; charset="UTF-8"
 <div dir="auto">I am Dr Andy<div dir="auto">I&#39;m a Psychic and I have an important message for you</div><div dir="auto">Message me on WhatsApp with the number +2348141867175 before it&#39;s too late</div></div>
 
 --00000000000031bc260610469066--
+

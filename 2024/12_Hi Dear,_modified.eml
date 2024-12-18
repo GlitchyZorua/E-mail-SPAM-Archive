@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a05:612c:1e03:b0:49b:3a60:d7b with SMTP id jd3csp2287457vqb;
         Sun, 17 Nov 2024 09:52:37 -0800 (PST)
 X-Forwarded-Encrypted: i=2; AJvYcCWdwJhbnwG3I5kJEApry4c2B1TfRgXnIVLyQ5FoYXHf68gI9HOidql3qWo0sRlfVZLh+UgriulkVskXKhHQ3/AXp9RSwQ==@gmail.com
@@ -14,7 +14,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1731865957; cv=none;
          KXamJCGloIKIf8CMXBxA3xMhFg6wlrVzwiyHrnx4V4TOYTaVyzmof4M5y/d13HMUytpG
          /75A==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-        h=user-agent:message-id:mail-reply-to:reply-to:subject:to:from:date
+        h=user-agent:message-id:mail-reply-to:[removed]
          :content-transfer-encoding:mime-version;
         bh=pahJqNYoxNIYarrL2ZGL0x7pdiViU32vIniTiI/JqaI=;
         fh=Pr2plYkJn0ovdHybgHvE53243CPsqSX0NRPDPDnAMwQ=;
@@ -26,15 +26,15 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
          8nlA==;
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
-       spf=none (google.com: police.dft.iqn.giv58@wmi786ah5.hier-im-netz.de does not designate permitted sender hosts) smtp.mailfrom=police.dft.iqn.giv58@wmi786ah5.hier-im-netz.de
-Return-Path: <police.dft.iqn.giv58@wmi786ah5.hier-im-netz.de>
+       spf=none (google.com: [removed] does not designate permitted sender hosts) smtp.mailfrom=[removed]
+Return-Path: <[removed]>
 Received: from mailout12.t-online.de (mailout12.t-online.de. [194.25.134.22])
         by mx.google.com with ESMTPS id ffacd0b85a97d-3823bd925f1si1738332f8f.803.2024.11.17.09.52.37
         (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
         Sun, 17 Nov 2024 09:52:37 -0800 (PST)
-Received-SPF: none (google.com: police.dft.iqn.giv58@wmi786ah5.hier-im-netz.de does not designate permitted sender hosts) client-ip=194.25.134.22;
+Received-SPF: none (google.com: [removed] does not designate permitted sender hosts) client-ip=194.25.134.22;
 Authentication-Results: mx.google.com;
-       spf=none (google.com: police.dft.iqn.giv58@wmi786ah5.hier-im-netz.de does not designate permitted sender hosts) smtp.mailfrom=police.dft.iqn.giv58@wmi786ah5.hier-im-netz.de
+       spf=none (google.com: [removed] does not designate permitted sender hosts) smtp.mailfrom=[removed]
 Received: from fwd77.aul.t-online.de (fwd77.aul.t-online.de [10.223.144.103])
 	by mailout12.t-online.de (Postfix) with SMTP id EE4C9447;
 	Sun, 17 Nov 2024 18:52:34 +0100 (CET)
@@ -46,13 +46,13 @@ Content-Type: text/plain; charset=US-ASCII;
  format=flowed
 Content-Transfer-Encoding: 7bit
 Date: Sun, 17 Nov 2024 18:52:30 +0100
-From: Sergeant Elizabeth <police.dft.iqn.giv58@wmi786ah5.hier-im-netz.de>
-To: undisclosed-recipients:;
+From:[removed]
+To:[removed]
 Subject: Hi Dear,
-Reply-To: elz23188465@gmail.com
-Mail-Reply-To: elz23188465@gmail.com
-Message-ID: <9a4538a8ceaa3ed1635142a390ff7b99@wmi786ah5.hier-im-netz.de>
-X-Sender: police.dft.iqn.giv58@wmi786ah5.hier-im-netz.de
+Reply-To:[removed]
+Mail-Reply-To:[removed]
+Message-ID: <[removed]>
+X-Sender: [removed]
 User-Agent: Business Webmail/1.2.1
 X-TOI-EXPURGATEID: 150726::1731865951-4DFE1864-63B7FC4A/19/8226003449 SUSPECT MAIL-COUNT
 X-TOI-MSGID: d51c8996-3ba0-4ff3-93d9-cdc915ae90a4
@@ -81,3 +81,4 @@ you but we like to take things gradually. Well, how is life generally
 with you over there?
 
 Elizabeth Mbuma.
+

@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a05:612c:171:b0:44c:c215:8d87 with SMTP id h49csp17138vqi;
         Fri, 2 Feb 2024 15:12:34 -0800 (PST)
 X-Received: by 2002:a25:bcce:0:b0:dc2:50e0:2be6 with SMTP id l14-20020a25bcce000000b00dc250e02be6mr3649499ybm.2.1706915554065;
@@ -12,7 +12,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1706915554; cv=none;
          VCSu77V0N40FgZWFqbxUW3wn3m8q9OPhuvxENbz3EQ1TZL9ibwzfirMpIXwEGIyiFZFd
          jKsw==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
-        h=to:subject:message-id:date:from:reply-to:mime-version
+        h=to:[removed]
          :dkim-signature;
         bh=XK5ndYqID0hXmZyg4OvrYfpTdBNAyFmmi7s25ninHA8=;
         fh=2fLev2vA1qZrbQVllyETuyuG5pLDIHDmYE3VLMHxPmE=;
@@ -25,23 +25,23 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=HOvlSa5s;
-       spf=pass (google.com: domain of uk2lnd018mail@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=uk2lnd018mail@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
 X-Forwarded-Encrypted: i=0; AJvYcCWVzSJYf10S6sb3dsTf508dkTR9errRFZzMVXpYD+O15wBWKeMx+7VzlQdf+xYSz9aw/93cANAERn2hXl/iFobEUa36DPyMushwErRsPXg=
-Return-Path: <uk2lnd018mail@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
         by mx.google.com with SMTPS id 186-20020a2500c3000000b00dc21e437403sor1229344yba.14.2024.02.02.15.12.33
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Fri, 02 Feb 2024 15:12:34 -0800 (PST)
-Received-SPF: pass (google.com: domain of uk2lnd018mail@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=HOvlSa5s;
-       spf=pass (google.com: domain of uk2lnd018mail@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=uk2lnd018mail@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1706915553; x=1707520353; dara=google.com;
-        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+        h=to:[removed]
          :subject:date:message-id:reply-to;
         bh=XK5ndYqID0hXmZyg4OvrYfpTdBNAyFmmi7s25ninHA8=;
         b=HOvlSa5scIVY0S2em7lrz/xlEUWm3ANg5QnFRSzaFLB4MWRTTWb2uLsnbymbGrZT+c
@@ -52,8 +52,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          qfjA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1706915553; x=1707520353;
-        h=to:subject:message-id:date:from:reply-to:mime-version
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
         bh=XK5ndYqID0hXmZyg4OvrYfpTdBNAyFmmi7s25ninHA8=;
         b=ABEyTXcCbKdL8yDZbfhDO+w3+CAuCLEyyqq4WzVRJBZCeLEr45mYoBA9eIX0VqzKD8
          uRlz8w2xxnnfzU7y42TXXROHu6/rchCmG2G89lHzQrpue1Eb2tbJ+xqFh7B/KK+rvlnT
@@ -69,14 +69,14 @@ X-Received: by 2002:a25:b294:0:b0:dc6:e4fc:9b0c with SMTP id
  k20-20020a25b294000000b00dc6e4fc9b0cmr3633011ybj.47.1706915553558; Fri, 02
  Feb 2024 15:12:33 -0800 (PST)
 MIME-Version: 1.0
-Reply-To: redactedfor@privacy.reasons
-From: From Brown <uk2lnd018mail@gmail.com>
+Reply-To:[removed]
+From:[removed]
 Date: Sat, 3 Feb 2024 00:11:56 +0100
-Message-ID: <CAA=ckrW2GA08Ad_oFja+fPhNistJ6X69w8-xM6dnfB_ROPc_RQ@mail.gmail.com>
+Message-ID: <CAA=[removed]>
 Subject: 
-To: undisclosed-recipients:;
+To:[removed]
 Content-Type: multipart/alternative; boundary="0000000000003b467006106e3f51"
-Bcc: mailmanthingwhatever@gmail.com
+Bcc:[removed]
 
 --0000000000003b467006106e3f51
 Content-Type: text/plain; charset="UTF-8"
@@ -109,3 +109,4 @@ ns, so that I can <br><br>make the necessary introductions.<br>Thanks<br>Da=
 vid Brown<br><br></div></div>
 
 --0000000000003b467006106e3f51--
+

@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a05:612c:2d08:b0:4a6:b479:dd26 with SMTP id iy8csp197007vqb;
         Mon, 18 Nov 2024 00:20:14 -0800 (PST)
 X-Forwarded-Encrypted: i=2; AJvYcCUH4UnRjQ2f7fWsT2gvKRzqvlBxjUxHndOE3XrRBzFlCH1jlE/ioEevi9jkmuuHZBkCjk4yIW9Lo6zETRWxsVAM0Xw8Sg==@gmail.com
@@ -13,7 +13,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1731918014; cv=none;
          J/5fZb5f65BSP1pyuh6Dg6FPzWEvBpNhB6taMO6WA3apqR398HZyP4JyBJGtBNgLi3Md
          H55A==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-        h=to:subject:message-id:date:from:reply-to:mime-version
+        h=to:[removed]
          :dkim-signature;
         bh=9gyUm4yGSpb9ZqAKXalMCYSEQNkaVnLHHEHn/nRMKIU=;
         fh=b6xUxo9PAtNrjJA6Nqt447xQPkKqMEggxVcz75dhj84=;
@@ -26,24 +26,24 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=jovyIEO7;
-       spf=pass (google.com: domain of yussufmahamud04@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=yussufmahamud04@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
-Return-Path: <yussufmahamud04@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
         by mx.google.com with SMTPS id af79cd13be357-7b360195993sor225130985a.1.2024.11.18.00.20.14
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Mon, 18 Nov 2024 00:20:14 -0800 (PST)
-Received-SPF: pass (google.com: domain of yussufmahamud04@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=jovyIEO7;
-       spf=pass (google.com: domain of yussufmahamud04@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=yussufmahamud04@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1731918014; x=1732522814; dara=google.com;
-        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+        h=to:[removed]
          :subject:date:message-id:reply-to;
         bh=9gyUm4yGSpb9ZqAKXalMCYSEQNkaVnLHHEHn/nRMKIU=;
         b=jovyIEO7G06u+Wo1A38P4rFjJOg0FrzSia/MeTzMzL1sI1jbP+dJv3/IH5FGEOInKW
@@ -54,8 +54,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          g7og==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1731918014; x=1732522814;
-        h=to:subject:message-id:date:from:reply-to:mime-version
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
         bh=9gyUm4yGSpb9ZqAKXalMCYSEQNkaVnLHHEHn/nRMKIU=;
         b=gEtN+5z/BVAFtYOL1I6EybUXv7/M+/RrGs9fODIHDWmxqq8+uPlQqMIkZ6JOGK635H
          6n3bQOJMWB//sV/SQF1e8MNOmi4Y5KNL6diK2U/ZX/EsuZgW7lfYZjmbGn/oyCZWunr9
@@ -72,14 +72,14 @@ X-Received: by 2002:a05:6214:ccd:b0:6d4:218c:f5 with SMTP id
  6a1803df08f44-6d4218c030fmr16396776d6.9.1731918014111; Mon, 18 Nov 2024
  00:20:14 -0800 (PST)
 MIME-Version: 1.0
-Reply-To: yes@yes.yes
-From: Janet Yellen <yussufmahamud04@gmail.com>
+Reply-To:[removed]
+From:[removed]
 Date: Mon, 18 Nov 2024 08:20:02 +0000
-Message-ID: <CACnbXXJOL3Qcb0MTZea+8aUfZZ26wzXfaL2zB5C4LTh1FUcczQ@mail.gmail.com>
+Message-ID: <[removed]>
 Subject: United States Department of the Treasury
-To: undisclosed-recipients:;
+To:[removed]
 Content-Type: multipart/alternative; boundary="00000000000002e8ae06272b96f8"
-Bcc: mailmanthingwhatever@gmail.com
+Bcc:[removed]
 
 --00000000000002e8ae06272b96f8
 Content-Type: text/plain; charset="UTF-8"
@@ -136,7 +136,7 @@ and accompany you to your bank with their security agency who will come to
 you with the delivery agent for you to go and deposit your $14.7 million
 into your bank account for perfect safety, you are to contact the delivery
 company with your full name, address and telephone number on this email
-address : officenotificationwqa@gmail.com Phone number +1(202) 930-5575
+address : [removed] Phone number +1(202) 930-5575
  make sure you contact them immediately as we have already handed over your
 fund to them for delivery to you together with all your paperwork of
 legality that shows the legitimacy of your fund.
@@ -225,8 +225,8 @@ r complete fund to you and accompany you to your bank with their security a=
 gency who will come to you with the delivery agent for you to go and deposi=
 t your $14.7 million into your bank account for perfect safety, you are to =
 contact the delivery company with your full name, address and telephone num=
-ber on this email address : <a href=3D"mailto:officenotificationwqa@gmail.c=
-om">officenotificationwqa@gmail.com</a> Phone number +1(202) 930-5575 =C2=
+ber on this email address : <a href=3D"mailto:[removed]
+om">[removed]</a> Phone number +1(202) 930-5575 =C2=
 =A0make sure you contact them immediately as we have already handed over yo=
 ur fund to them for delivery to you together with all your paperwork of leg=
 ality that shows the legitimacy of your fund.<br><br>As soon as you contact=
@@ -261,3 +261,4 @@ NDS.<br><br>Yours Faithfully,<br>Janet Yellen<br><br>Department of the Trea=
 sury<br>1500 Pennsylvania Ave., N.W.<br>Washington, D.C. 20220</div>
 
 --00000000000002e8ae06272b96f8--
+

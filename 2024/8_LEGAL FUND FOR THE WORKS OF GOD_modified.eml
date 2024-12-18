@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a05:612c:1e03:b0:49b:3a60:d7b with SMTP id jd3csp208068vqb;
         Thu, 14 Nov 2024 01:29:48 -0800 (PST)
 X-Forwarded-Encrypted: i=2; AJvYcCXqPZa1/pCYu45Wb0r5QHWL+Za8WSefMd77QUawjWv61NQ6IhaGPIYvlmxegW+LWoT1TL2Eq3G31l+oz6YPOgHEFyEkbA==@gmail.com
@@ -13,7 +13,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1731576588; cv=none;
          2F+NJDOd1vVIydrDXyCZKRVMjLFBaNDv9hoIUFUsBVr6JQEqOLiS687K0WBI7s6gWncO
          hq6A==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-        h=to:subject:message-id:date:from:reply-to:mime-version
+        h=to:[removed]
          :dkim-signature;
         bh=GK8+Pw+ZA37usicikJ8XhtgEdbin5KAroaiVaeoISXU=;
         fh=qW9S+nrP98A2L4JV9wzkJdKz9DyzW7zlr7ehh2S2jyY=;
@@ -26,24 +26,24 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=UCbm1tl9;
-       spf=pass (google.com: domain of daveruth861@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=daveruth861@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
-Return-Path: <daveruth861@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
         by mx.google.com with SMTPS id 38308e7fff4ca-2ff59865a8csor1523671fa.7.2024.11.14.01.29.47
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Thu, 14 Nov 2024 01:29:48 -0800 (PST)
-Received-SPF: pass (google.com: domain of daveruth861@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b=UCbm1tl9;
-       spf=pass (google.com: domain of daveruth861@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=daveruth861@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1731576587; x=1732181387; dara=google.com;
-        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+        h=to:[removed]
          :subject:date:message-id:reply-to;
         bh=GK8+Pw+ZA37usicikJ8XhtgEdbin5KAroaiVaeoISXU=;
         b=UCbm1tl9QQruaboUTuK02ccXZDSApG0rop6gB2I3h2yLBtqjt+S3kGiKp2w09VwWdI
@@ -54,8 +54,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          /uJw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1731576587; x=1732181387;
-        h=to:subject:message-id:date:from:reply-to:mime-version
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
         bh=GK8+Pw+ZA37usicikJ8XhtgEdbin5KAroaiVaeoISXU=;
         b=dbB0zm+CfFZA45Uy3sSoFpYm1UGKVTyXSZ0ez5TkGUzCshy+7Sj+bGCKJCglNhbdnX
          4nu7HRTvPa/ow1peWaGOQwh2z0ePH4KxhKA2E5LKhIHiMgxEVsm6Wq13F600GyJGeu3+
@@ -72,14 +72,14 @@ X-Received: by 2002:a05:651c:24b:b0:2fb:cc0:2a05 with SMTP id
  38308e7fff4ca-2ff5908049fmr6391481fa.37.1731576586874; Thu, 14 Nov 2024
  01:29:46 -0800 (PST)
 MIME-Version: 1.0
-Reply-To: removed@nowhere.com
-From: Ruhama koenig <daveruth861@gmail.com>
+Reply-To:[removed]
+From:[removed]
 Date: Thu, 14 Nov 2024 10:29:32 +0100
-Message-ID: <CAMapZPr6e+Bc_m0hnvBgLg+XmEyMdHRrOgUwNvfY1PEOkaqKPw@mail.gmail.com>
+Message-ID: <[removed]>
 Subject: LEGAL FUND FOR THE WORKS OF GOD
-To: undisclosed-recipients:;
+To:[removed]
 Content-Type: multipart/alternative; boundary="0000000000005cb9800626dc17a2"
-Bcc: mailmanthingwhatever@gmail.com
+Bcc:[removed]
 
 --0000000000005cb9800626dc17a2
 Content-Type: text/plain; charset="UTF-8"
@@ -157,3 +157,4 @@ tion and your phone number.<br><br>Warmest Regards,<br>Mrs.Ruhama Koenig</d=
 iv>
 
 --0000000000005cb9800626dc17a2--
+

@@ -1,4 +1,4 @@
-Delivered-To: mailmanthingwhatever@gmail.com
+Delivered-To:[removed]
 Received: by 2002:a05:612c:1e03:b0:49b:3a60:d7b with SMTP id jd3csp2097230vqb;
         Sun, 17 Nov 2024 02:42:22 -0800 (PST)
 X-Forwarded-Encrypted: i=2; AJvYcCXNIypdLWqxdH6yw3Vv/TyV6GSDXX8vO3ZZTCRlvCPpVyyNUPjlTHEqs5x+MCC+jwex+VN/HZK/d9dsuChmdmoFytsOoA==@gmail.com
@@ -13,7 +13,7 @@ ARC-Seal: i=1; a=rsa-sha256; t=1731840141; cv=none;
          PpKlVNsYpqvJPxmo6fQgUb8JTPjLB84VnnJkwaCGSGyiT/0tp/Vf2wD9+71Qxxb6JrOQ
          7arg==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-        h=to:subject:message-id:date:from:reply-to:mime-version
+        h=to:[removed]
          :dkim-signature;
         bh=cI/DfwN86L86T/wIL/YWXgrSiaaYcC9/EAcynj4Nwm8=;
         fh=9lhqXy/75BmwCShqai3jP/2XFXoaEZZfsP36citbFjc=;
@@ -26,24 +26,24 @@ ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b="RPWg/P8E";
-       spf=pass (google.com: domain of suvosakar363@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=suvosakar363@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
-Return-Path: <suvosakar363@gmail.com>
+Return-Path: <[removed]>
 Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
         by mx.google.com with SMTPS id 2adb3069b0e04-53da650f509sor1357064e87.9.2024.11.17.02.42.21
-        for <mailmanthingwhatever@gmail.com>
+        for <[removed]>
         (Google Transport Security);
         Sun, 17 Nov 2024 02:42:21 -0800 (PST)
-Received-SPF: pass (google.com: domain of suvosakar363@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@gmail.com header.s=20230601 header.b="RPWg/P8E";
-       spf=pass (google.com: domain of suvosakar363@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=suvosakar363@gmail.com;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
        dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
        dara=pass header.i=@gmail.com
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=gmail.com; s=20230601; t=1731840141; x=1732444941; dara=google.com;
-        h=to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+        h=to:[removed]
          :subject:date:message-id:reply-to;
         bh=cI/DfwN86L86T/wIL/YWXgrSiaaYcC9/EAcynj4Nwm8=;
         b=RPWg/P8EKNiRFLAeWNRPvVq/zrgzfclZPRcyvJd3KcO7Jn0PFu50GsN93llV45up9n
@@ -54,8 +54,8 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
          HRiw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=1e100.net; s=20230601; t=1731840141; x=1732444941;
-        h=to:subject:message-id:date:from:reply-to:mime-version
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
         bh=cI/DfwN86L86T/wIL/YWXgrSiaaYcC9/EAcynj4Nwm8=;
         b=AW7SpzsoF5CE37bCuasHQzokNFe1HWb7RBEmotc900GXVaUkRuW7H0lYtn6hqKmaQp
          U4UYhvn19DNR6ICwguXpoT9hht5kv4bqSMnMqfd4Mcaq+jR0L5PsJMMRVgDTMPGFykD6
@@ -72,14 +72,14 @@ X-Received: by 2002:a05:6512:3407:b0:53d:a866:9f36 with SMTP id
  2adb3069b0e04-53dab2a723emr3575998e87.34.1731840141147; Sun, 17 Nov 2024
  02:42:21 -0800 (PST)
 MIME-Version: 1.0
-Reply-To: no@no.no
-From: Managing Director <suvosakar363@gmail.com>
+Reply-To:[removed]
+From:[removed]
 Date: Sun, 17 Nov 2024 02:42:10 -0800
-Message-ID: <CAEq4kGUzweyrNVUsFemm2RzRqR+vH91BfwKUa5atJdiDUdLyzw@mail.gmail.com>
+Message-ID: <[removed]>
 Subject: Re: PAYMENT
-To: undisclosed-recipients:;
+To:[removed]
 Content-Type: multipart/alternative; boundary="0000000000006bc564062719749a"
-Bcc: mailmanthingwhatever@gmail.com
+Bcc:[removed]
 
 --0000000000006bc564062719749a
 Content-Type: text/plain; charset="UTF-8"
@@ -174,3 +174,4 @@ unt directly from Barclays Bank, and a copy will be given to you for you to=
  filipo,<br>Managing Director,<br>Barclays Investment Bank</div>
 
 --0000000000006bc564062719749a--
+
