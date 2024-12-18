@@ -14,7 +14,7 @@ Or this: https://www.youtube.com/watch?v=0ohnFQ0WN7k
 Please let me know via the pull requests.
 
 # Notes
-
+- Sometimes, email addresses are redacted for privacy reasons
 # License
 
 Permission is hereby granted to use this archive without restriction.
