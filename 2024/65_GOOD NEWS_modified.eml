@@ -1,0 +1,194 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp1598063vqq;
+        Sun, 3 Nov 2024 07:44:14 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCX8Rml/ogEhR9Pd4I9h4pO1JMHnD8QOGGBMdDYEHmczBe0Z53f56p2VcI6seZ7rkJ+C9u7REOu00qwZj+No00cLwKn0nw==@gmail.com
+X-Received: by 2002:a17:907:d2a:b0:a9a:4e7d:b0a1 with SMTP id a640c23a62f3a-a9e6587e1e9mr793424566b.49.1730648654537;
+        Sun, 03 Nov 2024 07:44:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1730648654; cv=none;
+        d=google.com; s=arc-20240605;
+        b=f9dK7mcxURR58g0MA9ZcD9eUKCH0eiKzExhdEEUCpwUH+yYlBlihkH+huWC8X+7ZhT
+         FLcp1G9TY6mkfLfol1JMjEpBoHS39LNm593BBSfRBBCa4hGZ4BsO1ut1kY9hujy0a+qy
+         wmdGY5N7v+HFnIGlfHW4UJNSRp3Y4LBuNmnoUCyskEj8GO2IlBh5DmLCzGnHFavQAtuZ
+         JMRzniaZqyr92NTYcyOvhH9akkiRB0eZSDBk2s+tQmhpjsqMCRURPNaIwvoQkjH+PD/u
+         Gc8s2g1gCa33ytAsgmseJeeOg/p45zoaq5YDkq+cT+/qcL6h2ScxlhMZ6/UaAP2MtCZH
+         5LHQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=g/rq+yDaR1MO7fiDCqkEr7Y+nlN34WL3mEOkqTjdq/A=;
+        fh=DZ/aupwCIjwNT54CfEFMy2WgIAjMuibLqROM/h6wKxg=;
+        b=VhpjrhwZmKGWmRpityA1VH6SVXlZWpeCAtpPuyrUqHGkP2uIVj50eQL9ycSxw12XSs
+         XmkPltkVwD0pDdNALFrtJirHWALwVvBPxT0RrUuhYhzrHB/8Unn0Tm0wqS0arnrxoVM9
+         uD9fnjN64I0J5kSenFS7+dEn3aXMZCPwrTJ++hPdzU23gI/MCOqLZg9oYdClb8v1T2ua
+         y+lO44YIF6gowTVlJhM8khWdu3DEHBzMB27dWqNnVkz3Qto6Q7wsR18IYJzuXGGNiyvL
+         XAGs8ixVPs/AgzaUhAIgXJWSNNShdFYkpZ0hG8SVTokRM/heKQsp+QFRjWLY8Tsa7qN2
+         DhAw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=dvKScEio;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-a9e564d7d70sor343702566b.11.2024.11.03.07.44.14
+        for <[removed]>
+        (Google Transport Security);
+        Sun, 03 Nov 2024 07:44:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=dvKScEio;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1730648654; x=1731253454; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=g/rq+yDaR1MO7fiDCqkEr7Y+nlN34WL3mEOkqTjdq/A=;
+        b=dvKScEioPAEvvDBSswYNx9NGyyoRgfZzCLq9R7TMfFYVBaz45YBG4FH+FToUc/nZrC
+         QvtaOXXSvOHkhJnoZvlGiBicyMq/UIPqX//eydVZBrnN73WGb+tQauclTke/GkPVv3Ud
+         z2T9RpljFar9dcbQylqbp8E10FISV1Bl28R9o4MolSV2hsCWdgSDEnchwidjYeNXQGzI
+         tl3bm/Z/olIOx9zQ8SYnkX15FWy3hZkmWjAuFJBH5Xh5Ryu6QuVfP3eunWU/f/LAdoeg
+         AACo9l4/IPy4Z5imqQeAHbvppyP3cLM3U9ZFr90dA8bWiZNsohYf0Zt2ERerhFSU9LwU
+         l2bg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1730648654; x=1731253454;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=g/rq+yDaR1MO7fiDCqkEr7Y+nlN34WL3mEOkqTjdq/A=;
+        b=s8PfwAD36rrSnVIBWvGcoFKPPakooHdM9ugYSYwvzAN4jYONzzltBZcSHkErPA+Af7
+         Mxzee0YasUKcGALJACXNjn384IV4/VuzcsYK/H2daDzXuWyQ6U8vFIWq2FxXB4q9ui1k
+         3ROPp9W3j4dqD/5WOhJJAciAo4xLelIn+VAK1SDmi8gecKQVX1jaTZ9sWRLsKxeQmp5H
+         nKjvIC13oZLP7Jbve4OYMNYCALDcfnmXKuz1EGiYkCq/OlZQMVu3u4Trwi3h8Em4ichL
+         5ftE5mBA/aO2McHi02E6yd0aW+56LH9kgcqfJzW4qG9iIREZUFbUZftuZN9fsjM5D/TK
+         +20Q==
+X-Forwarded-Encrypted: i=1; AJvYcCV34PFATXHPtzLPe22cWSLxCLAGW3rjATEuj7U3oPGdS5TA8uP0Jh9z7l8m63kUL6b7LNrKn6x0D/5amcw6sA9dpX53tw==@gmail.com
+X-Gm-Message-State: AOJu0Yy0vjXjIBam/XDWos+z/iWhG1GJWwJBFy08Jqe0YtlsfzBizi49
+	m1iIHSTneValCv24UCAFH5HNJRglciPgosEvx+jBOwLlo6JlHk0Pm+vp+U6KBhocZlObhCM0Pty
+	fAijHcwUXIRXjIGwUN3HU6gvi+NY=
+X-Google-Smtp-Source: AGHT+IGcdwr4a5knZ9xtzzni5vUX7AFBu6/wCJoPW1ZlXDcuRaD0S7G/2l72//dO9h9cbfnr9BX1VN67LH20zY8hPWc=
+X-Received: by 2002:a17:907:97d6:b0:a9a:673f:4dcc with SMTP id
+ a640c23a62f3a-a9e6557d76amr865616866b.22.1730648653141; Sun, 03 Nov 2024
+ 07:44:13 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Sun, 3 Nov 2024 16:44:01 +0100
+Message-ID: <CALa60ejLZnUqRb608NqMV36Sa=[removed]>
+Subject: GOOD NEWS
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000033a2700626040a43"
+Bcc:[removed]
+
+--00000000000033a2700626040a43
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+IRREVOCABLE COMPENSATION PAYMENT OF $3,500,000.00 million US Dollars
+ VIA ATM VISA CARD
+ or online banking transfer.
+
+ ATTN: BENEFICIARY,
+
+ (IMF) International Monetary Fund. We have been able to track down We
+ are alliance with economic community of West African states (ECOWAS)
+
+ We have been working towards the eradication of fraudsters and scam
+ Artists in the world, especially Western part of Africa With the help
+of United States Government and the United Nations we have been able
+ to track down,
+
+ Many of these scam artists are in various parts of West African
+ countries and they are all in our custody in the countries that they
+ are apprehended.We have been able to recover so much money from these scam
+artists,
+
+ The IMF Managing Director have agreed with United Nation Anti-crime
+ commission and the United State Government that all the money
+ recovered from the Scammers to be shared among 100 Lucky people around
+ the globe and they are all in Government custody now,
+
+ They will appear at International Criminal Court (ICC).This notice is
+ been directed to you because your email address was found in one of
+ the scam Artists file and computer hard-disk while the investigation,
+ Maybe you have been scammed; you are therefore being compensated with
+ a sum of $3,500,000.00 US Dollars valid into an (VIA ATM VISA CARD
+ or online banking transfer).
+
+ Even if you are Now-dealing with these nonofficial directors of the
+ bank or any department always requesting Money from you, you should
+ STOP your communication with them and forward the details,
+
+ So that we will help and recover your fund, peacefully and legally.
+ Since your email address is among the lucky beneficiaries who will
+ receive a compensation funds,
+
+ we have arranged your payment to be paid to you through VIA ATM VISA CARD
+or online banking transfer and deliver to your postal address with the
+ Pin Numbers as to enable You withdraw a maximum of $5,000 day. Your limit
+can be increase to any
+ amount upon your request.on each withdrawal from any Bank ATM
+ Machine of your choice, until all the funds are exhausted. The package
+ is the parcel will deliver the right to on your doorstep over there in
+ your country,
+
+ Don=E2=80=99t forget to reconfirm your following information.
+
+ (1) YOUR FULL NAME.
+(2) YOUR RECEIVING ADDRESS.
+(3) YOUR TELEPHONE NUMBER.
+(4)YOUR PROFESSION.
+(5) YOUR IDENTIFICATION CARD
+
+Best Regard,
+ Abebe Aemro Selassie
+INTERNATIONAL MONETARY-UNIT.
+ Director of the African Department,
+
+--00000000000033a2700626040a43
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">IRREVOCABLE COMPENSATION PAYMENT OF $3,500,000.00 million =
+US Dollars<br>=C2=A0VIA ATM VISA CARD<br>=C2=A0or online banking transfer.<=
+br><br>=C2=A0ATTN: BENEFICIARY,<br><br>=C2=A0(IMF) International Monetary F=
+und. We have been able to track down We<br>=C2=A0are alliance with economic=
+ community of West African states (ECOWAS)<br><br>=C2=A0We have been workin=
+g towards the eradication of fraudsters and scam<br>=C2=A0Artists in the wo=
+rld, especially Western part of Africa With the help<br>of United States Go=
+vernment and the United Nations we have been able<br>=C2=A0to track down,<b=
+r><br>=C2=A0Many of these scam artists are in various parts of West African=
+<br>=C2=A0countries and they are all in our custody in the countries that t=
+hey<br>=C2=A0are apprehended.We have been able to recover so much money fro=
+m these scam artists,<br><br>=C2=A0The IMF Managing Director have agreed wi=
+th United Nation Anti-crime<br>=C2=A0commission and the United State Govern=
+ment that all the money<br>=C2=A0recovered from the Scammers to be shared a=
+mong 100 Lucky people around<br>=C2=A0the globe and they are all in Governm=
+ent custody now,<br><br>=C2=A0They will appear at International Criminal Co=
+urt (ICC).This notice is<br>=C2=A0been directed to you because your email a=
+ddress was found in one of<br>=C2=A0the scam Artists file and computer hard=
+-disk while the investigation,<br>=C2=A0Maybe you have been scammed; you ar=
+e therefore being compensated with<br>=C2=A0a sum of $3,500,000.00 US Dolla=
+rs valid into an (VIA ATM VISA CARD<br>=C2=A0or online banking transfer).<b=
+r><br>=C2=A0Even if you are Now-dealing with these nonofficial directors of=
+ the<br>=C2=A0bank or any department always requesting Money from you, you =
+should<br>=C2=A0STOP your communication with them and forward the details,<=
+br><br>=C2=A0So that we will help and recover your fund, peacefully and leg=
+ally.<br>=C2=A0Since your email address is among the lucky beneficiaries wh=
+o will<br>=C2=A0receive a compensation funds,<br><br>=C2=A0we have arranged=
+ your payment to be paid to you through VIA ATM VISA CARD<br>or online bank=
+ing transfer and deliver to your postal address with the<br>=C2=A0Pin Numbe=
+rs as to enable You withdraw a maximum of $5,000 day. Your limit can be inc=
+rease to any<br>=C2=A0amount upon your request.on each withdrawal from any =
+Bank ATM<br>=C2=A0Machine of your choice, until all the funds are exhausted=
+. The package<br>=C2=A0is the parcel will deliver the right to on your door=
+step over there in<br>=C2=A0your country,<br><br>=C2=A0Don=E2=80=99t forget=
+ to reconfirm your following information.<br><br>=C2=A0(1) YOUR FULL NAME.<=
+br>(2) YOUR RECEIVING ADDRESS.<br>(3) YOUR TELEPHONE NUMBER.<br>(4)YOUR PRO=
+FESSION.<br>(5) YOUR IDENTIFICATION CARD<br><br>Best Regard,<br>=C2=A0Abebe=
+ Aemro Selassie<br>INTERNATIONAL MONETARY-UNIT.<br>=C2=A0Director of the Af=
+rican Department,<br><br></div>
+
+--00000000000033a2700626040a43--
+

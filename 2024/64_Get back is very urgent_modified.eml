@@ -1,0 +1,63 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp941373vqq;
+        Sat, 2 Nov 2024 01:20:38 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXv92KKS90OygugYaNLbUfj4DrpygTLDg6UCgciLcjdkegcnb8cKBbrnF4+ii/J+o/WSCzRz9q7h/It1TscHJxJjrTcqg==@gmail.com
+X-Google-Smtp-Source: AGHT+IFsO0+51ckpyW1q0nU3VDWe9/vgKz8+uJZVpMIFgshBhUTtz8ApdZWLVU4GFuMdjgMKCIXt
+X-Received: by 2002:a05:6a21:920d:b0:1d9:275b:4ee2 with SMTP id adf61e73a8af0-1d9a840a30fmr35548942637.24.1730535638242;
+        Sat, 02 Nov 2024 01:20:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1730535638; cv=none;
+        d=google.com; s=arc-20240605;
+        b=WyK05ahy4BerkN4dfcs9Szgfogdiv246AHG2XEUEULY9ojsl7BUZqZMzIjSeT9PD3s
+         QZuy6GWEkHVGgz0Ge4C3oqyBAoPuHs0HspapIhPNMd9O7o2ERkvI8jKvezV3duvy9Bp5
+         vqLVjP5wG2RB1sm2x67JN/bNovHbU3M6y75xiYw4rFvKkhFc3wyupF5ENVozM0//Ry53
+         sz7MRAzfH2ECwcks6w0J5F9qdFq+CFIEhSAKaa0vcnq3uBGBahmFPQ1F5VTZoeH+8QMt
+         nzOcnE4b+elA1ke5WIImD5qkoZKfVGbqdSNv0qX3xIFd+HKXq4DqKqGEPW35JaTh4+HP
+         68+A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:content-transfer-encoding:content-language
+         :accept-language:message-id:date:thread-index:thread-topic:subject
+         :from;
+        bh=WZy1W+SylrIj38ZRNXRMNcbIiKLAl9NyQfwSdlipUaY=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=IkPPFvTrQ9IzHt20vuM6F0ozqGtvQK2IDPziVc3Doqvvi8TrfxDDrg7Bt66nlJv/9a
+         vB+5SahIdZIBN3u0ZqTtX2RvSglT3q4B+CC31xz+ts5sJwDLNEnafqBXY2mgWBBjKO7M
+         wPgbz7rxU8mkVAGZCtPd6ZaXZUQJZ6N6IlDKvcmu8DbL3AXW1bBPly9zYeLbFJVkddfk
+         wVMwT5ZAZ2KIRvPWAqP0j/s7LnpMQsQ00TX0ecO4PeAl0R1O/EwGaO44pwv3/X4i7MVc
+         8DORWdqL2a8RRzVrJTpCu6zbLlk4Hg6DZKCuO0FNpnSCxbWALIsklkiYri5CTJcQ1Xxo
+         PuRw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of [removed] designates 203.184.217.71 as permitted sender) smtp.mailfrom=[removed]
+Return-Path: <[removed]>
+Received: from mail.brightfuture.com.hk (mail.brightfuture.com.hk. [203.184.217.71])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-7ee45d41dccsi6158548a12.835.2024.11.02.01.20.37
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 02 Nov 2024 01:20:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 203.184.217.71 as permitted sender) client-ip=203.184.217.71;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of [removed] designates 203.184.217.71 as permitted sender) smtp.mailfrom=[removed]
+Received: from BF-HKG-EX01.brightfuture.com.hk ([fe80::907e:7d9f:bcea:538a])
+ by bf-hkg-ex01.brightfuture.com.hk ([fe80::907e:7d9f:bcea:538a%19]) with mapi
+ id 14.03.0382.000; Sat, 2 Nov 2024 16:20:36 +0800
+From:[removed]
+Subject: Get back is very urgent
+Thread-Topic: Get back is very urgent
+Thread-Index: AdstABdcQKRk+EYwTUumLeDSsvUKEA==
+Date: Sat, 2 Nov 2024 08:20:35 +0000
+Message-ID: <[removed]>
+Accept-Language: en-US, zh-HK
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [197.210.53.138]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+
+
+
+Hello, I have been trying to reach you, Is this email still active? I have =
+something important to discuss with you. Please get back to me via this ema=
+il :  [removed]  ASAP. Cheers, Michael JJemba=
+

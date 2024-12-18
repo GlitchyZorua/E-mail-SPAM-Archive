@@ -1,0 +1,162 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp2114740vqq;
+        Mon, 4 Nov 2024 05:49:47 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFXSQK9kujBLXUffDWy9ec7iPxTtF8QVlXHPT/Bz9cFVdSs1x9SaDY0fGx5m9bjrjh1WARB
+X-Received: by 2002:a05:6358:9385:b0:1b5:f95a:5a67 with SMTP id e5c5f4694b2df-1c3f9ef228bmr1309533455d.15.1730728186748;
+        Mon, 04 Nov 2024 05:49:46 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1730728186; cv=none;
+        d=google.com; s=arc-20240605;
+        b=S0y4vzw45Y5eNLxCKq+msHon2nw1Rx3804R7da5CISv+5Pv4lDH1EepxgiqkgoBau5
+         HQ/GGW7VHGB3zXr2LOEUzQslkcaCmY2FTFdtLGTxmV/EaKZtk9Igj2CsBOree5HMszXg
+         /2R9JT8FAc9G4D+WztIdf3mv2BpSdeEEhCKKATnGK0hhA5GkWWH12SB/xmcPOZQyA9ZN
+         ZA4XZAkgMMX6uxx5Y4NTlh3VMN7egn2dn9zeKOXOfgqbJgdm74nW4j2rkGnl0Zz+M4nt
+         mzT/dDrhZEuW6snR8qC4ecnE4EQ+3vUV1/ygyGcWiACl5h96NOoK+o0GmacWeyigCnHs
+         OtsA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=references:mime-version:subject:message-id:to:[removed]
+         :dkim-signature;
+        bh=qSH/8h0Ler6x3A3bndmHgaEmv7YFhiAphYlVTGXZf6s=;
+        fh=CCyaa74qj7D7ZdNjnUHNPt9NlolrqMjOuj/AsYq+ZV4=;
+        b=UBk4zyTKwc6jveMT/QaVpiQmfcpYKmXnwfx7JCxAj1Y1qLYPBgUHLGMh/lDHBJCIMG
+         cTcLWeM8AA+DpmF2aEsF0+XlADglirr2D9UlmmmV8TQq7p75d3sBLSPkbREkAbRN7A+A
+         7yf0TN2hMGu4CIXxMggSESgMEeMmhkuIJQoEyJhkpjJFMBeUK6ok60dG5alBl7CY0OkO
+         eW5IBPetYl+MXbsW10On0pLuxONbuffeSqPGg1ndpKj+v78Cuy1aPA6ZB/9dRgXvhlzG
+         hJxCPbolWWgYMSF+0H4BsSx9toZghD73FJXNOAKGhVA3Ku4d9rOVfOxrQx3pEDKCWkbc
+         k4cA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=BjEJ2bO8;
+       spf=pass (google.com: domain of [removed] designates 74.6.135.83 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <[removed]>
+Received: from sonic318-28.consmr.mail.bf2.yahoo.com (sonic318-28.consmr.mail.bf2.yahoo.com. [74.6.135.83])
+        by mx.google.com with ESMTPS id d75a77b69052e-462ad277766si114563441cf.695.2024.11.04.05.49.46
+        for <[removed]>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 04 Nov 2024 05:49:46 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 74.6.135.83 as permitted sender) client-ip=74.6.135.83;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=BjEJ2bO8;
+       spf=pass (google.com: domain of [removed] designates 74.6.135.83 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1730728186; bh=qSH/8h0Ler6x3A3bndmHgaEmv7YFhiAphYlVTGXZf6s=; h=Date:From:[removed]
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1730728186; bh=mLezVUHlyY9x1ROIbZs5y47HxFLxHTaCJrEfE7Y0GM6=; h=X-Sonic-MF:Date:From:[removed]
+X-YMail-OSG: XIXSKtgVM1lgdXOAR8cXmq3ip.VulzPdFKwkat6Nadzf8ZOKehx5KDxECj_iz12
+ 9Lmb.SCDc17uylrtGtKsKIl335zJB15EKjDxJxO8zlp6QibaR_0tQ3iebz.HODxCCYRIt3Gd3YGi
+ GFuTqfq92maJSWbCqPLN5kCvYTcD4YZ.h4Bwbd5pcZ7TbZ4WUJ36X.TDqC1GvwtpeKsaImxawsK6
+ UepsDQJOVFGc5NmlvvEVH150oaynz11IYCqQC7VDnzCKARiS3wAIyvuENR1EudnMRDqqM6USjBGA
+ wVQ9jyrIc8ENfAPmTrO9rPgPfzFp1eSMvYNFIxTZ4k_VTzHHMXx.WRl5vzMYcvNd.QWsDep7LWLR
+ v6HZtEAXohobe.SLKK4NOMZYk_nE3TpKfNgkA83GDHQz60F3sAMfViZFgiW1ed6D5mEAZ5i1L7K1
+ W.vNaBZZJq.E2l7xr.yASYWL0TdS53uXybVwl0Gj0OsepMUTVk.RpqaB90wuEBOQDsODni3hiqZc
+ tFB4sPS0BQdqmO7h2mcNryyaCwDxlxpUo70J4zMMCXsrg.001h4dD7Z4XtyVxSLzvRWelY4JKCrj
+ 8.qah9N7mZl0f2miFkwB2mRs8RTIjBYmmg2WQmNrRgpRPESrx3GN8.dWevjQXQ4XzC07nXCbsbjv
+ e5NiR3KDLhw9drJKT3FDFbH9OEnDwXyi9BJXpuuhV411HbpBavfZdevu36NxkBehxeBW6H_zxGPd
+ WD3sQX7tYtL6Kr4yKDtQyHHdLqUIYsjTsFwwWwRALXIotI4sCnJDhZhqpJMSQCl6Y2Mb42xY_S0V
+ 1P1yk5cTyt5tX34cWz3K.FJaMXwwH7osStMwa9QdJ7uafkFN95vcQi5DLKFxvIjoXFZY0dThhzFy
+ PCLGjjo.vMXNUYdnF_QmHrNfncb5FMTJQx8R28_umt59C5LeOofJo4G6JicpJ3x6szGD6aN.Uipf
+ WDFTLVWmCwPiUyzxkwmQ9WGQxBbxpVxFZhYsGvzNdez8S01KfTqpqCZoAozdZuA.G5VTauLNcIB4
+ XbbYeOpIsMEipgbA7vaoiycj.MvGpEgT3_z4OjxmZbGGS2Yy.xnSz6IrMszQs4sPwzKEGimzpnVu
+ Kc1tyM5w2bWbaqLV4Mf2HSpOED_0DAR0mCJWbcr9FMc9CmFqADphZ0BX2z1h1w8u3.IBmORBvBHM
+ njoeLeXO8l9PZrsAckiQFMwIpdsnX755ofODv_49h6lqPCySWHow1PZGns_K3loDPRh_RYksboZ3
+ i2Mc4.UjXUz2Z3AX1D_qQx5fcvS6CmzFh2YqLcNDwly6XlQhOsCwBJkS.Bc.HZYvfdudSvrREgHk
+ eLLVH0I3Uq80ZeHP.8sTkweZlTgMCPjlt.ChrGXHOq58SIXymAOKAiu3fli.1QEE5ltEAEimxfFg
+ P4fXUSCsxj9CMHhuV0dqAbNTW1gVYbtaR269OykHu8s2ceXvtyhpqw_u1HdCdyV7EQ0BEJVx6W6V
+ kK2rUDLNhXMiZ2oAyEh59OuKHApLEZ4JniJh9wrBiQ7ALQGkwVU6UcUX2HenuHNTeeIZvi0Os5Jr
+ r3_onJ_0bR48sfs9wLkhe.elKW04_miNxgl6Z5s8o1TE8V9rW0bEnw_i9WZSOd.xIY_jx43yDj2X
+ iIaHk7lmxxTlQX.5GU.SVr8jfSYrJl3RMeHfxKAe7dfjaOBhk5GtCPkKjhgxOpzjQ82.JEULYjvn
+ NlFU8ih4eGmGq6HOw6_u_WyTfduj_Y7tyqcFqmxoXnQyySA5XKw1HqeoNS9u2UR4Wv.lM2Asl7Tx
+ wN5KyuQI8w12pC02mnfDDn2MKxMxKpzoZGS3K.dgIGm5t2R_cR0oEIhwmWtYoDgSfeI91mEN7pux
+ UXNcoVXRToa3b1XKchRn2q8r319CrQbCC232LfUKPxNC7qGqz1M6o3r3YSl0R2LaupP4prrZKxI.
+ _4CGuOLd8xa7yaCO1RAVXlOaPIFAW6UBujHAQcXqsA8lADGuGkHz3ZeN3bzMw6NS1BYDXB6MtXQ9
+ RjRvZGmGasMhbMbN07Q2KIW6tvyWu38wLR9fYMSRIpH9L.egPN0RbEZtf42gbDiEa2C0fz3J0TGa
+ xXe_aXkdN1wAACm1w5ple1fk1F6Mfvnm2GC3JTrWULv7026Syk4w3XvPlf9o2zFTNSw._V5p368z
+ E7tgguAIB1xt5lN.yQzQt7I8Mpr8sr_Zhb21t8tdPjdTGZPUP_EK81mpQeO03YJhWRCCK1jcEYiJ
+ UxK1IGadGo2zDrA--
+X-Sonic-MF: <[removed]>
+X-Sonic-ID: 87086a5a-96de-492f-bf4d-2b099009c479
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic318.consmr.mail.bf2.yahoo.com with HTTP; Mon, 4 Nov 2024 13:49:46 +0000
+Date: Mon, 4 Nov 2024 13:49:41 +0000 (UTC)
+From:[removed]
+To:[removed]
+Message-ID: <[removed]>
+Subject: REF: YOUR PRIZE SURPPORT PROMO
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5353325_1993692062.1730728181119"
+References: <[removed]>
+X-Mailer: WebService/1.1.22806 YMailNorrin
+Content-Length: 3766
+
+------=_Part_5353325_1993692062.1730728181119
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+=C2=A0Sir / Madam,
+
+We aredelighted to inform you that you have been selected to receive a huge=
+ amount ofmoney in the Covid-19 national empowerment support Promo
+
+To receivethe fund, kindly email us your Full name and Mobile Telephone Num=
+ber only for confirmationat:=C2=[removed]
+
+Congratulations,while expecting your confirmation
+
+Yoursfaithfully,
+
+JennyCruz.
+
+OnlineCo-ordinator. =C2=A0
+
+
+
+Disclaimer:
+
+This communication (including any attachments) is intendedfor the use of th=
+e intended recipient (s) only and may contain information thatis considered=
+ confidential, proprietary, sensitive and / or otherwise legallyprotected. =
+Any unauthorized use or dissemination of this communication isstrictly proh=
+ibited. If you have received this communication in error, pleaseimmediately=
+ notify the sender by return e-mail message and delete all copies ofthe ori=
+ginal communication. Thank you for your cooperation.
+
+
+------=_Part_5353325_1993692062.1730728181119
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html><head></head><body><div class="ydpcd39b579yahoo-style-wrap" style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px;"><div><div dir="ltr" data-setdir="false"><div><p style="line-height:150%;background:white"><b><span style="font-size:11.0pt;line-height:150%;color:#222222"><span>&nbsp;</span>Sir / Madam,</span></b></p>
+
+<p style="line-height:150%;background:white"><b><span style="font-size:11.0pt;line-height:150%;color:#222222">We are
+delighted to inform you that you have been selected to receive a huge amount of
+money in the Covid-19 national empowerment support Promo</span></b></p>
+
+<p style="line-height:150%;background:white"><b><span style="font-size:11.0pt;line-height:150%;color:#222222">To receive
+the fund, kindly email us your Full name and Mobile Telephone Number only for confirmation
+at:&nbsp;</span></b><b><span style="font-size:11.0pt;line-height:150%;color:#C0504D;mso-themecolor:accent2">[removed]</span></b><b><span style="font-size:11.0pt;line-height:150%;color:#222222"></span></b></p>
+
+<p style="line-height:150%;background:white"><b><span style="font-size:11.0pt;line-height:150%;color:#222222">Congratulations,
+while expecting your confirmation</span></b></p>
+
+<p style="line-height:150%;background:white"><b><span style="font-size:11.0pt;line-height:150%;color:#222222">Yours
+faithfully,</span></b></p>
+
+<p style="line-height:150%;background:white"><b><span style="font-size:11.0pt;line-height:150%;color:#222222">Jenny
+Cruz.</span></b></p>
+
+<p style="line-height:150%;background:white"><b><span style="font-size:11.0pt;line-height:150%;color:#222222">Online
+Co-ordinator. <span>&nbsp;</span></span></b></p></div><br></div><div><br></div><div class="ydpcd39b579signature"><div dir="ltr" style="font-family:Helvetica, Arial, sans-serif;font-size:16px;"><div>
+
+<p class="ydp46545cf6MsoNormal"><b><span style="color:#4F81BD;">Disclaimer:</span></b></p>
+
+<p class="ydp46545cf6MsoNormal">This communication (including any attachments) is intended
+for the use of the intended recipient (s) only and may contain information that
+is considered confidential, proprietary, sensitive and / or otherwise legally
+protected. Any unauthorized use or dissemination of this communication is
+strictly prohibited. If you have received this communication in error, please
+immediately notify the sender by return e-mail message and delete all copies of
+the original communication. Thank you for your cooperation.</p>
+
+</div><div><br></div></div></div></div></div></body></html>
+------=_Part_5353325_1993692062.1730728181119--
+

@@ -1,0 +1,162 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp406570vqq;
+        Fri, 1 Nov 2024 06:11:29 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVQGYkk+eAa9b/AofXURuxgRd99W0e8jvUrmTRF0yu1dPuPXnV28qlZ8G39X2p7TP8smNaTNTDc8Fn5HdQRHA7lbF5OXA==@gmail.com
+X-Received: by 2002:a17:907:3d9f:b0:a9a:5e3a:6423 with SMTP id a640c23a62f3a-a9e3a573902mr962792566b.10.1730466689049;
+        Fri, 01 Nov 2024 06:11:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1730466689; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Ssz1JvpCYR0hYbjad68Gg+QPzWboGKQFVtRdaTdShf50QwU3tW0Y38aQTJesQIF2Z2
+         Ro3wR9Akl1IGjsSsQ4H1BPGN5EX1lBp3dcNsqplfrq1qUGNQL+kBmI8saYG3u7QauSi4
+         0QAp98+xEz2f2B+UsXaDObFXe5bWVLSRSEow7k/J5Lt6bm4ZkEODtb+642Uj2z0/+dsD
+         DxxcInuREtG7EIroXPXcFCq5Xcy26lJjXp8tjWIKsUfPOTHzDbPC4Rf8bwjSKHFR8pvd
+         iJ18y8ceURrDKDOprjzd2erR38HmtXgl1Wy2/D7UphLtLWVNQrNZRthlVKXZzJl3f4bW
+         JzGA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=wEtO/k3O+rtiEX6KsdKB01vHPgQ+vM45q50ou7y19Es=;
+        fh=v1Kp87tJDvGX5ieQAABles3YSe5hayev/Fm89DTNaR4=;
+        b=TuMDLHZSfw592qLOhExYNnIV60sZDDl9rEojWEIu9g7sq/M5gnmaA4zjdBa2U03NS6
+         oaInIrzOnKWGBS53unORaudXdlaAOlPHypvT3jccSE/kZI9jsPEwgDtzqiJADiv/P+pS
+         4s0Zk49pQccm6OaetP+i5H0FJCfz9r4hTtc0dh0B6cmxQ/2zOJKVLkd30Uh3gqbjIXDF
+         tOVP9lvnJB8T3CS+HRm9BziUg4xJJYin6+AsGmEh8wx8iFZ/pxdNrl4sb1GV5gX6c6Ew
+         g+gLtvFvyF1b9G7GQa0GFsIqs9OC0gCRK8KceLWxJJrZpMYLgdqFwHV5IAcNd+m/HL8N
+         0CKQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="Q6513+/i";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id a640c23a62f3a-a9e56598bedsor174522066b.14.2024.11.01.06.11.28
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 01 Nov 2024 06:11:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="Q6513+/i";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1730466688; x=1731071488; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=wEtO/k3O+rtiEX6KsdKB01vHPgQ+vM45q50ou7y19Es=;
+        b=Q6513+/i1NyRt1ZHFcWo/IaZ86wM0Sb8yjN2+VdsOVRL0DUP1CUe/oTQpd39K+1r/T
+         2ko8aMlCWEhJuCWWuJfqg2WF0uLzQpKny7ruSaLWz7KF3EoBASuMq4JE8p+46RvsJsW6
+         Y6cVh5PQIhBVZM/AgUjrd7ej+uOY2SdLvbJgbFMsRwu+RxWixLoxbo/a5jwuo51Cc6eq
+         6TvqKhFPOdNPz8LGpLqPe//oAvLaDuso3nn1F8GhK6Zo2V3E5kj2m1w20G+X1cGFEfBW
+         xvPUYsXzJOFlNiVApqABOvH3paGisXGwgP8SOmALnHHePqQSrast58cH89qon05fmsZN
+         t+wg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1730466688; x=1731071488;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=wEtO/k3O+rtiEX6KsdKB01vHPgQ+vM45q50ou7y19Es=;
+        b=OqPPT2jRWAlhcgsn+Az/p73y3K4/t6hvHk5DX6sSqRzCJxdJbx4HTlgbEPxEzgdu+F
+         RcEB9kvtrnp+tgDINKEtSuioIEHomRzL9SMEqFsV46bLcQ5kjjvdEChlH9fowMo4A8s9
+         GSDwo2fCo6xmfl1vJVZ/hHX7uLwQYVCcW3N7C6h7ncrI4i8sD6KdC6VKx063Wr9qhx/T
+         lM9vv2WpZVlnVN2V//8AUmQqu6TnPk1V9EyOsULiAbOSIH+VkTwyRySpiwiNXXDN2LIj
+         5CX8tCuERiEHy0SsOsLnl2qYzQ5qcAL0YLsAwA8va0UcWKyreNFAYlUKo5WNUCv+oxnN
+         tTHw==
+X-Forwarded-Encrypted: i=1; AJvYcCXf6vf6SCsxY2NEuNGgu8QjY9X3ek6SPQIM98XNjjhY1P0FF8KMgBFga1CUaWKcXEIVyjkl0ZBuYu6+UlLc6VwJlOBxOA==@gmail.com
+X-Gm-Message-State: AOJu0YyqXGBGMjBCnIP0VXKbEoQjpcaE1suq1Ctg9vglRpHhenCdZtET
+	j80UG1N3lycb5ARJq/wi/wgrOJx7OqbjZJvG/sMl3h01gQ8Q4eHFMO1aOY/EzmMftWqfwFtxM0O
+	C2h/DzBJWfmphWp5QkVu9spMta6k=
+X-Google-Smtp-Source: AGHT+IF293hz9h+EW6kueVerezzYzZcXKf+Lu0D9KLtiDHSKpf6XZPiZ+md5zlLS0+Btc86/U/jv9qzTs/ljSfmJxP0=
+X-Received: by 2002:a05:6402:2344:b0:5ce:b82f:c4bb with SMTP id
+ 4fb4d7f45d1cf-5ceb82fc944mr3319789a12.25.1730466688200; Fri, 01 Nov 2024
+ 06:11:28 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:ab4:9c44:0:b0:277:321f:644d with HTTP; Fri, 1 Nov 2024
+ 06:11:27 -0700 (PDT)
+Reply-To:[removed]
+From:[removed]
+Date: Fri, 1 Nov 2024 06:11:27 -0700
+Message-ID: <[removed]>
+Subject: good day
+To:[removed]
+Content-Type: multipart/alternative; boundary="0000000000003f12f30625d9acb9"
+Bcc:[removed]
+
+--0000000000003f12f30625d9acb9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Good DAY
+
+Dear Friend
+
+Please
+
+my name is Mr. Omar Arouna from Burkina Faso and I
+work with Bank Of Africa (BOA) as acting head of finance. I
+contacted you in good faith and I am optimistic that the success of
+this transaction will go a long way to uplift our financial status in
+no distant time.
+
+However, one of our deceased customers from Malaysia abandoned the sum
+of $11.7 million in our bank since 2021, and according to the financial
+act my government has every right to confiscate funds in unclaimed
+bank account/unattended after 3 years, it=E2=80=99s in this regard that I w=
+ant
+to commission this fund to you so that you will stand as associate to
+the deceased customer and claim this fund from my bank after which we
+will share it at the ratio of 40% for you and 60% for me.Please
+
+you on how to apply to my bank for the transfer of this fund
+into your personal bank account. I hope to hear from you soon. at
+[removed]
+Profile image
+[removed]
+
+(1) Your Full Name,
+
+(2) Sex and Age:
+
+(3) Country of origin:
+
+(4) Residential address:
+
+(5) Phone number:
+
+(6) Occupation:
+
+Best regards,
+
+Mr. Omar Arouna.
+
+--0000000000003f12f30625d9acb9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Good DAY<div><br></div><div>Dear Friend</div><div><br></div><div>Please</di=
+v><div><br></div><div>my name is Mr. Omar Arouna from Burkina Faso and I</d=
+iv><div>work with  Bank Of Africa (BOA) as acting head of finance. I</div><=
+div>contacted you in good faith and I am optimistic that the success of</di=
+v><div>this transaction will go a long way to uplift our financial status i=
+n</div><div>no distant time.</div><div><br></div><div>However, one of our d=
+eceased customers from Malaysia abandoned the sum</div><div>of $11.7 millio=
+n in our bank since 2021, and according to the financial</div><div>act my g=
+overnment has every right to confiscate funds in unclaimed</div><div>bank a=
+ccount/unattended after 3 years, it=E2=80=99s in this regard that I want</d=
+iv><div>to commission this fund to you so that you will stand as associate =
+to</div><div>the deceased customer and claim this fund from my bank after w=
+hich we</div><div>will share it at the ratio of 40% for you and 60% for me.=
+Please</div><div><br></div><div>you on how to apply to my bank for the tran=
+sfer of this fund</div><div>into your personal bank account. I hope to hear=
+ from you soon. at <a href=3D"mailto:[removed]
+[removed]</a></div><div>Profile image</div><div><a h=
+ref=3D"mailto:[removed]
+gmail.com</a></div><div><br></div><div>(1) Your Full Name,</div><div><br></=
+div><div>(2) Sex and Age:</div><div><br></div><div>(3) Country of origin:</=
+div><div><br></div><div>(4) Residential address:</div><div><br></div><div>(=
+5) Phone number:</div><div><br></div><div>(6) Occupation:</div><div><br></d=
+iv><div>Best regards,</div><div><br></div><div>Mr. Omar Arouna.</div>
+
+--0000000000003f12f30625d9acb9--
+

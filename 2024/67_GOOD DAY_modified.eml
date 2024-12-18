@@ -1,0 +1,134 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp4512143vqq;
+        Thu, 7 Nov 2024 11:24:47 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVElv3L2mF/ehP10H0visI3Onhd82nQpDgw3bZPQ/mdZ0k9MggXYmE8Hwvjgp1YRgA+IWnDsM1ZCNG/lRP0k9cc8jZGVQ==@gmail.com
+X-Received: by 2002:a17:902:e5c6:b0:20c:6392:1a7b with SMTP id d9443c01a7336-211834e1063mr633825ad.2.1731007487199;
+        Thu, 07 Nov 2024 11:24:47 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731007487; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MDPXhzIw6VK8i2Wxm2Zc3c4kGllnJsriMOGFJVdq1WEk26RhcXfJgboeWxzApGyiMu
+         twogU+Azi7l6qP6yjbyAWiJQysKQ++n2Bu2Xp8jrP+gqBEiwL2e0cIxXyQoRA7RnBJcM
+         v8Qeal6VefnKIg5VqRwkLTCh2wsHPf0TkCG8bCm3WrDGL5eNW0lyJ5pUKEY4ynLCrUgb
+         73hTN1c5l9X4QVAQ17WL7mAMOBCvVjDkGT9zG1yq6kcnUTxqcuTZE99dT+4195OMRc2E
+         f1iWk8Kyi0K3lZ5uLOtnyb9r9F0XounqAVTsSlvFj2HGYk/dBsgZU+0v7xkJe6Y315k1
+         uucA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=PACX1dtjw9e806DOttsm16lQn5ud7gbeSbT4O/PKahE=;
+        fh=Z/o0NViyzgLmrtIzfTPXgx2PXjJMk683SAe26iD6h8Q=;
+        b=LobZh66BPi919OTli5b5OAW2Xu3D5zSFhdxJqzabQS65kRMKxD87J0nyDhB4DV2zkM
+         a1u2fxdJKNRgO6Dw3gxynzfaJ1p2R6EAO1fUaB2Obw6dfhGXxVfHXRiBz3LN30WpRobO
+         c837x0pux0/SjZWqEs2eBX9He6rcEcb7JTjoQX2Tb+Z4noGd3+yqYfJHsNtZHRJh7cHQ
+         iSNw4L4cVYFms9h3xgv69g42hPfNPfn5VIRX2PKBl5CP4y1WG5LaVO05sG2YRf8geMM0
+         6wqbM6dxBT7HQ/guCC5U2yqo7tL/1TutXlr6KaxDOrXpDPZ0cK6iob7Jf2TPlMOxAsD9
+         FgbQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=SviddOZu;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 98e67ed59e1d1-2e9a6c7bb49sor2260852a91.3.2024.11.07.11.24.47
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 07 Nov 2024 11:24:47 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=SviddOZu;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1731007487; x=1731612287; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=PACX1dtjw9e806DOttsm16lQn5ud7gbeSbT4O/PKahE=;
+        b=SviddOZuH9SUym0bounDJRLDS9DX3Mh9tPRgphs/DlU5NkrFiFGsHvJvnjd9P8TW4J
+         rHIiq1cpPmmwJO7tzG7VC2QmItzLP96P2J3UN2p8XCm7MI2ObgWB/xmX6JAe7Xl2QYMk
+         4woKtGf1ZulAczB/mdGltT/uKOAWsQUg2yXlUSYoyLP4q+ZOVcR5f5z/7e9dk9BssTMZ
+         JWuRjsNEz4QLNPxtEay4dyf4XPPyWP36ZJZQ6/+VgwUF4oiVxs8lEICxHGQiTDPIByMK
+         vPtGq+4g7X2Fvwi9WMXWIBiZ9o9N+erzW92UEf30YguDvS0UYSIpnA5wG9wJOABPGUC7
+         0oMA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1731007487; x=1731612287;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=PACX1dtjw9e806DOttsm16lQn5ud7gbeSbT4O/PKahE=;
+        b=qmXfgdfYiaXbMN/bAxZRNsu2pphrq4EzYamKdhCpaUzc6YFgwGbHKVIkZFHN2Ft3br
+         XwARnri4knD2FoDoJGomYz+hQg9FedCGZnDtzx/LVoV1zU07lbZBjCCrFhoi7HCf0O4Z
+         o84BNOGDXNRnaCPKTNfqPlHqHOFYxxhd0bpOwJXMEhmCdDXK1XOSz7OrAdwipDYMuHku
+         emn6Jl2DnYzt+Z2iHFh9fzX6URDYwqFLzNancKho1r7WyFaq8nnodrJC1me3+2Oynfcq
+         D+qTLAPWR7x+M/C84Y/dDzT/RJtUF14GQj9b++rcWtBSc5ltx/LcBd8Vz6fP5zHqzrIV
+         BuRQ==
+X-Forwarded-Encrypted: i=1; AJvYcCURFOkztC+7WUlUO47arHYoTHq6p+xaCmQWwxzkdN6Wv3riri0OpYmjtHPerfLbjSBE5AGtz4YxeebHooPBYqKE7dAAag==@gmail.com
+X-Gm-Message-State: AOJu0Yw8mM9us3iwPTYELri1CX7RFD9PVgw2mNdlZYj1Tn7R5ZB4AICg
+	gj4DOActXoQfxqU4CvMOrnJ7N1FaixW6KX+5UNbIG8TIht5QTZFOmzlhRnAUXt8oBqs5LGCgZKD
+	Xx8S6xCDD3AeNcekDanz2BtOmnTk=
+X-Google-Smtp-Source: AGHT+IGmkEAHgZVuPmjiDUeX2leBOG8skFGbJdo5sOp8QtmvKAcDS0ixRfpNzbA8ZL30pdL3UXql2Nt9O6vCnrSgzA0=
+X-Received: by 2002:a17:90b:270c:b0:2e5:5e95:b389 with SMTP id
+ 98e67ed59e1d1-2e9b1791ed3mr354983a91.35.1731007486529; Thu, 07 Nov 2024
+ 11:24:46 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Thu, 7 Nov 2024 11:21:56 -0800
+Message-ID: <[removed]>
+Subject: GOOD DAY
+To:[removed]
+Content-Type: multipart/alternative; boundary="000000000000569b9406265796b5"
+Bcc:[removed]
+
+--000000000000569b9406265796b5
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello.
+
+If this message intrude into your privacy or cause you any inconvenience, I
+sincerely apologize as that's not the intended purpose. My Name is Collins
+Brown, I am a branch Manager of a Bank here in UK. It is my duty to send in
+a Financial Report to my head office at the end of each year. In the course
+of the last year 2023 end of the year report, I discovered that my branch
+in which I am the Manager made excess profit of Four Million Two Hundred
+and Sixty Five Thousand Pounds (=C2=A34,265,000.00.). which my head office =
+are
+not aware of and will never be aware of. I have since placed this fund in a
+SUNDRY ACCOUNT. As an officer of the bank I cannot be directly linked to
+this money, this informed my contacting you for us to work together so that
+you can assist me and receive this fund into your bank account in your
+country for us to share. But more importantly, I do not want the bank to
+know that I am working directly with you in this transaction as that could
+risk my job. I will give you full details if you are ready to work with me,
+I want to reassure you that there is no risk involved and your safety is
+guaranteed.
+
+Sincerely,
+Collins Brown.
+
+--000000000000569b9406265796b5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello.<br><br>If this message intrude into your privacy or=
+ cause you any inconvenience, I sincerely apologize as that&#39;s not the i=
+ntended purpose. My Name is Collins Brown, I am a branch Manager of a Bank =
+here in UK. It is my duty to send in a Financial Report to my head office a=
+t the end of each year. In the course of the last year 2023 end of the year=
+ report, I discovered that my branch in which I am the Manager made excess =
+profit of Four Million Two Hundred and Sixty Five Thousand Pounds (=C2=A34,=
+265,000.00.). which my head office are not aware of and will never be aware=
+ of. I have since placed this fund in a SUNDRY ACCOUNT. As an officer of th=
+e bank I cannot be directly linked to this money, this informed my contacti=
+ng you for us to work together so that you can assist me and receive this f=
+und into your bank account in your country for us to share. But more import=
+antly, I do not want the bank to know that I am working directly with you i=
+n this transaction as that could risk my job. I will give you full details =
+if you are ready to work with me, I want to reassure you that there is no r=
+isk involved and your safety is guaranteed.<br><br>Sincerely,<br>Collins Br=
+own.</div>
+
+--000000000000569b9406265796b5--
+

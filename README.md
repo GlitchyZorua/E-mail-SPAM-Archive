@@ -10,7 +10,11 @@ Or if you wanna see how i got inspired by Scambaiting, I got inspired by this vi
 
 Or this: https://www.youtube.com/watch?v=0ohnFQ0WN7k
 
+# Find any duplicates?  
+Please let me know via the pull requests.
+
 # Notes
+
 # License
 
 - Permission is hereby granted to use this archive without restriction. 

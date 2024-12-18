@@ -1,0 +1,243 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp1902151vqq;
+        Sun, 3 Nov 2024 21:34:08 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVonVUcLL1HtQau6l0PRqCxw2uee4wxuNZbZZyTmaH64A2m/pvA+twikoYt5/A/Ra9sdvsKv4LPNMajCnwGFO4HpPRiiw==@gmail.com
+X-Received: by 2002:a05:690c:b:b0:6e3:fb4:9333 with SMTP id 00721157ae682-6ea3b96aa99mr207691017b3.28.1730698448558;
+        Sun, 03 Nov 2024 21:34:08 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1730698448; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NU+mCkySecmaKgme2UEW6bCDzKwl6dy4yoirYmlj1sWC6aD78t/cSHUNivsmr6XMj4
+         KeV4fsPlnYhmaDzC0weour4P/xDF3TkehL8j7FY/NzXAzQlesssD9lQCIjh7LZSFBjqB
+         JGD3igOh/N5Ua+Zk9HXoVJ3m7GSZWMQWxlZ3opBnQM1jUWSIeQAM+pilcLAGu7QUjIlE
+         kMEuHl5jHCYN6FUCY+am7O638wvrwiD/CCePdt/s/gp00xg+Ieq98xSYKRx0Ch90SjZP
+         ta+886POkdfiGiD8ES2lGr2LSQscp9QD5UiOhDzUjmkl0Nu7ZfJmWOrkC/1nrGyCEa4O
+         Q5oA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=lkdqi0wnMZSdoq8QtFbc2rxw5QzANX3zRLJ1YY/vTSw=;
+        fh=a9ccjvBZcG+6ou9G20ELJsp0vNP4WHnoDfyapeyoRqQ=;
+        b=C3uM/4A7Ba4ZRqDEtAlpQGe6jU0mWIYZ+ngmjmE1qu5fbExhX0VkYPKXIDSXJJgvOG
+         G0KhMTI5SRDWFwEdSD9YUF/aAAFTDR0/1FXKl61OyQ+aX5w26q5uEaC6FCHOMMSqB5p+
+         NgR5ZPb+ylIHgaqzqq9QpNH+DYo7K6h4w/pL8/WJry8lh4zwxpfPuZWeOYGiJYjhQT8e
+         6KP4EjQIVe+x19YGl+dMaW6DPYOK48AtFJWJVArYe9DShQ0mafczFF4WLzF/8wigqeQ9
+         a02z56vu3CeWLQtbs4tnindwO3PSbgFVec+vrunCNn6q2NKK3JIjQqFgSAbafRumjGUV
+         M/sQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=RxETOlAt;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-6ea55cb8c64sor66989147b3.12.2024.11.03.21.34.08
+        for <[removed]>
+        (Google Transport Security);
+        Sun, 03 Nov 2024 21:34:08 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=RxETOlAt;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1730698448; x=1731303248; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=lkdqi0wnMZSdoq8QtFbc2rxw5QzANX3zRLJ1YY/vTSw=;
+        b=RxETOlAtS/APOv0ZpXpGhN8fVV0kyHakv6hcYxUQJk5jmhtuswzJixVwZHpF1UR5fQ
+         Ty+3mfOMtqRc1BfzET4MLZs8TfidA3vO1jWZ0PlFBIGkoQYTfJEeuLpmgVoUXrU619bq
+         JPZG/KLfzZV9uAVdenhA+08O4RzGieXqkVolwKUrsM4fyAXJcFbg69sfVxsZmsO3ripp
+         ohgXqCxcYnOTz22TawrKS5nPOBdlogqgTr8pOzdDFYu4Z3/XN8OofRz46FntZefpkEeG
+         5Q0u81oG1KzHu9dE8H5Mu21CDktD8jilj1FGpO2uiJlwx7orIDF9Di/ClHP3k6+2re2C
+         050w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1730698448; x=1731303248;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=lkdqi0wnMZSdoq8QtFbc2rxw5QzANX3zRLJ1YY/vTSw=;
+        b=o+LMPWlSZ1Cmth6+Wit6WlqUCn7l+8Q3wXEkfaZuVm1vN7X+Y4pyWo1KIJfjH8ekDT
+         fQ/QsMSmEwrQtSZ6QDQykjxwDvZ7pKLmciZxvKmwm00J8DtKYL1ItIdDXS0hBKAx5F/c
+         qGOVxK8OUi1ZOnmQiPs9qV/mbB4fRH49N6dAuSGqxZfyqcGb4eUYObORd1emYMAelkcN
+         yPcUy92BArG7Tf+Y/XkewMnfgOdoQCtkpDieqQgjAkz5NjBqKWNXYeh+/N0IktUAmLK3
+         EM6lchSeeVyNxuJX1LC2ihbNcLefCVKD16DAip6o32LQ7burcUJyxc2yFK+OlJPg2nzf
+         KLJQ==
+X-Forwarded-Encrypted: i=1; AJvYcCXN51ua/FTFYi9Yv1KWPlvCtlCNLE0Ym9bQ3jCs3NDa+/TqD0F1xMQ4Finem5CTXOuQ2fe6D48/eFx4TLIHEBKMD6CPUA==@gmail.com
+X-Gm-Message-State: AOJu0YzyvK0DtuxISD+dFBiMz0L9n8WtJkY8Ip4g/unpg38RNHW1eS6b
+	nl689jqUJmksJEHmfd7SSUCXNJXnUzh5EYgUbK9z3qpglFCJwictZ5aM8m4E/zzPhkIyld4jTao
+	W9JWkEMmMP5aYhLE/t2frvDE7S48=
+X-Google-Smtp-Source: AGHT+IHCz0OYT0GX72YJ72rMZSI7BVPl+1DFixMqRj9cAAhCMO6JJxirkz24XRYGu3VN5CeFCa1jugsnSQ3ji3URnSs=
+X-Received: by 2002:a05:6902:2485:b0:e1a:e74a:d910 with SMTP id
+ 3f1490d57ef6-e30cf433dbdmr16785475276.30.1730698447846; Sun, 03 Nov 2024
+ 21:34:07 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Mon, 4 Nov 2024 05:33:54 +0000
+Message-ID: <[removed]>
+Subject: I NEED YOUR URGENT ASSISTANCE
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000032870f06260fa2da"
+Bcc:[removed]
+
+--00000000000032870f06260fa2da
+Content-Type: text/plain; charset="UTF-8"
+
+*I AM MRS. DONG YUE AM THE MANAGER OF LA CAIXA MADRID BANK I NEED YOUR HELP
+TO TRANSFER AN ABANDONED SUM OF 15 MILLION DOLLARS TO YOUR BANK ACCOUNT WHY
+50 / PERCENT  WILL  BE YOUR PART NO RISK INVOLVED IN THIS CASE CONTACT ME
+FOR MORE DETAILS IF YOU ARE INTERESTED.*
+
+
+
+*1. FULL NAME:*
+
+*2. YOUR AGE:*
+
+*3. SEX:*
+
+*4. NATIONALITY:*
+
+*5. COUNTRY OF RESIDENCE:*
+
+*6. TELEPHONE NUMBER:*
+
+*7. YOUR MARITAL STATUS:*
+
+*8. YOUR OCCUPATION:*
+
+*9. SEND TO ME YOUR PICTURE:*
+
+*I AM MRS. DONG YUE*
+
+--00000000000032870f06260fa2da
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">I AM
+MRS. DONG YUE AM THE MANAGER OF LA CAIXA MADRID BANK I NEED YOUR HELP TO
+TRANSFER AN ABANDONED SUM OF 15 MILLION DOLLARS TO YOUR BANK ACCOUNT WHY 50=
+ /
+PERCENT=C2=A0 WILL=C2=A0 BE YOUR PART NO RISK INVOLVED IN THIS CASE CONTACT=
+ ME
+FOR MORE DETAILS IF YOU ARE INTERESTED.</span></i><i><span style=3D"font-si=
+ze:11pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quo=
+t;"><span></span></span></i></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">=C2=A0</span></i><i><span style=3D=
+"font-size:11pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-s=
+erif&quot;"><span></span></span></i></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">1.
+FULL NAME:</span></i><i><span style=3D"font-size:11pt;line-height:115%;font=
+-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span></span></i><=
+/p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">2.
+YOUR AGE:</span></i><i><span style=3D"font-size:11pt;line-height:115%;font-=
+family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span></span></i></=
+p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">3.
+SEX:</span></i><i><span style=3D"font-size:11pt;line-height:115%;font-famil=
+y:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span></span></i></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">4.
+NATIONALITY:</span></i><i><span style=3D"font-size:11pt;line-height:115%;fo=
+nt-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span></span></i=
+></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">5.
+COUNTRY OF RESIDENCE:</span></i><i><span style=3D"font-size:11pt;line-heigh=
+t:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span><=
+/span></i></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">6.
+TELEPHONE NUMBER:</span></i><i><span style=3D"font-size:11pt;line-height:11=
+5%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span></spa=
+n></i></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">7.
+YOUR MARITAL STATUS:</span></i><i><span style=3D"font-size:11pt;line-height=
+:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span></=
+span></i></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">8.
+YOUR OCCUPATION:</span></i><i><span style=3D"font-size:11pt;line-height:115=
+%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span></span=
+></i></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">9.
+SEND TO ME YOUR PICTURE:</span></i><i><span style=3D"font-size:11pt;line-he=
+ight:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></spa=
+n></span></i></p>
+
+<p class=3D"gmail-yiv0513111268msonormal" style=3D"margin:0in 0in 10pt;line=
+-height:115%;font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;"><i><span style=3D"font-size:20pt;line-height:115%;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;">I AM
+MRS. DONG YUE</span></i><i><span style=3D"font-size:11pt;line-height:115%;f=
+ont-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><span></span></span></=
+i></p>
+
+
+
+
+
+</div>
+
+--00000000000032870f06260fa2da--
+

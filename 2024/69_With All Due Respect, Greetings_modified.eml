@@ -1,0 +1,119 @@
+Delivered-To:[removed]
+Received: by 2002:a59:a3aa:0:b0:49b:3a60:d7b with SMTP id w10csp2095594vqq;
+        Mon, 4 Nov 2024 05:18:23 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUwMp/UVmtmpboKFGOexNUTYTdbhVYb/eacXxT3ShzAN/Pn1Wutg/e/r8V0zoUMKVe143sxs5NgOlYJ3GJJy5eoQAAE0g==@gmail.com
+X-Received: by 2002:a05:6512:1106:b0:539:8b49:8939 with SMTP id 2adb3069b0e04-53c79e913efmr7385366e87.41.1730726303321;
+        Mon, 04 Nov 2024 05:18:23 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1730726303; cv=none;
+        d=google.com; s=arc-20240605;
+        b=hQyiUo3TmUDNrTBH36ZwsQ3X/vWJzP0pXxCShW+nqWQIbBijWHfuSEbZNaQsvbSd3D
+         VNZRxq/zAvLum0gVuJbgC4pNS8NhSsGnTXyt7LlAuGBlnZx9ls/fSDTPeN3OREIIxUb0
+         Ylb+x3Wu7nYX33vht0zb53aOLPE+/pjruzT5C5MrniuNcMpZ7vQ4IG4KpwhcfZVi/tNB
+         euFcn4XfF5ARBXeNlgcvTXRAG7Rbzl6srx1Z0nwtnrC6AqsarAsK6jvBAcFcbWTyi3qr
+         kjkwRCvTFvdBHgvsPqnDHxaL1II9TpVk9bb/oNW38rJzv3eJOcDZYsjOtxwIqzDzILMb
+         Edzw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:[removed]
+         :dkim-signature;
+        bh=fdW6k2ow8FRKwXMNssdqg+LkLw6hByU6ATiWmHFRc0E=;
+        fh=tfMPswgan9T2Iako8rOWy6ehbtpU4pEzIBPprcBtTTQ=;
+        b=WoPmjE5JN0u/FtvWH2ZrJ8DcH2rZVhgR3L5cZvyKP0JU+FAhC7or+GrKFksxGAyFxv
+         zEKTGjfZd2Y4UYSR1WOyu1aaPICos9/KS5bdJf/8tqQeWOQt8lxqwOG2IZqcZLnuqCjF
+         j1vfMWShuqnQUj0u2CKiNL90G5Z4l1Q6cNF9t8kb8JMTPDzuvFgRN67C6crOYmfcmec9
+         M/Hb2x5P6iurUJVj1tac5MwrMoN2nM3uD0C082dV1UnQ+o+eVffPqMX63fA79HLGlXSP
+         OylqoJ1wyUZQQ4f0jgmFkvD8Bjd29g7l6FB0hSqrVK2TJTY0UIj/OQ7hGdgASjhZErTU
+         OomQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Gfhfn55C;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 2adb3069b0e04-53c7bdd1b54sor2063732e87.29.2024.11.04.05.18.23
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 04 Nov 2024 05:18:23 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Gfhfn55C;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1730726303; x=1731331103; dara=google.com;
+        h=to:[removed]
+         :subject:date:message-id:reply-to;
+        bh=fdW6k2ow8FRKwXMNssdqg+LkLw6hByU6ATiWmHFRc0E=;
+        b=Gfhfn55CEOS2gM7K+4ZQAybsMQflARPxEvjJW1BOmPKMmVGKeGZaMuqRMa00sjI5Hw
+         OBWK+fbS2/UhtUvJ/9h4VcSZtR5qD07gjteOzY48AL5csxsR1oInjGN7HM32MksiWRDO
+         K66hl78a9QeklL+IWY3tmGc+UVeSR/XsN1qQ/WoQZoVBCR0aU2NDRCU9Xhy4p5e3Mhl6
+         VVyuwFnU34NTrQGRvuR33koVJMoICPN3YwfupLWcNh18g43EpHKx1q/Y+3htZfGitV0A
+         txlAOz/8AUTVl5bHjR3qRZXU7pzC1DyoLg31nWDFvWXq9kg+UCaftuxbstw24DsJkYx4
+         jsMA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1730726303; x=1731331103;
+        h=to:[removed]
+         :x-gm-message-state:from:[removed]
+        bh=fdW6k2ow8FRKwXMNssdqg+LkLw6hByU6ATiWmHFRc0E=;
+        b=KWV7jleoMg+hFR2yAUeTglAxNcTrU9ii/i2Vpnqod7/9QyrCyYSUyOD1yfe97qJQtB
+         Z4Oms9HwfvaujwmyR3U/KEwBlj9+WrqIW1oEgfZ7Fzep+r3TzZ0btm0/2kyIEk8ejn0b
+         BozDkgz68HUozXUSdtkFkZHu0GnbmRJThI9ak+WKIjrt/WZOIZyIwsjff15MvP3FLFK/
+         9hV5qldPOn+W4lFkl4boCqxKZL4A8TVEUf2vEAuVF41RWrSyccNagkQUlPeYSNAWI1ld
+         fv/GFRgflEfRfY01rEoCwziZKEF0OohxUPBCuudVJ9EeJ/U0NIFemvhVoPLeLWF35eGi
+         Grug==
+X-Forwarded-Encrypted: i=1; AJvYcCX6LLaOWXTxpEbN+Zf4nSt7EY/8rUWPb/xv/nnvVWADz40MQrsxbIa1QlOWljnkmDLdG5ZkjMXyrIoD9cI04V6mwPe8PQ==@gmail.com
+X-Gm-Message-State: AOJu0Yy3dKcqYWQ/uso/0wzVFr4ZtW7XO7o0bN78ISNfokP6OCPIK9sA
+	4Za/O70i77ZTnbkTJYKp9kCwwXXUCP58onDsLotxm6zI++Xfc16M4aNepQ+ImYOT2laprFbRdGi
+	3dLrNG28Mg0vVp2x4m0dVgZSiaPI=
+X-Google-Smtp-Source: AGHT+IFIdMfSBsoX12bAtjcw++vvp+WAz/r6qCVJsM2/OVByWHxixs95tEfqgtOdk9+6/a5tRcXvbKCznyu5YODfKlk=
+X-Received: by 2002:a05:651c:2229:b0:2fb:6027:7c0a with SMTP id
+ 38308e7fff4ca-2fdec4ca559mr82362341fa.8.1730726302115; Mon, 04 Nov 2024
+ 05:18:22 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:[removed]
+From:[removed]
+Date: Mon, 4 Nov 2024 14:18:09 +0100
+Message-ID: <[removed]>
+Subject: With All Due Respect, Greetings
+To:[removed]
+Content-Type: multipart/alternative; boundary="00000000000070f2bd0626161e07"
+Bcc:[removed]
+
+--00000000000070f2bd0626161e07
+Content-Type: text/plain; charset="UTF-8"
+
+Hello Dear ,
+
+How are you doing? If you have a minute I would like to discuss
+a vital proposal with you for your kind consideration.
+
+Please contact me back at your earliest convenience.
+
+Thank you and please stay safe.
+
+Best Regards,
+
+Miss. Katheleen Turner
+Email:--  [removed]
+
+If you don't find the email in your inbox,
+please check your spam folder, do to network
+inconvenience
+
+--00000000000070f2bd0626161e07
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br>Hello Dear ,<br><br>How are you doing? If you have a m=
+inute I would like to discuss<br>a vital proposal with you for your kind co=
+nsideration.<br><br>Please contact me back at your earliest convenience.<br=
+><br>Thank you and please stay safe.<br><br>Best Regards,<br><br>Miss. Kath=
+eleen Turner<br>Email:-- =C2=A0<a href=3D"mailto:[removed]
+m">[removed]</a><br><br>If you don&#39;t find the email i=
+n your inbox,<br>please check your spam folder, do to network<br>inconvenie=
+nce<br></div>
+
+--00000000000070f2bd0626161e07--
+
