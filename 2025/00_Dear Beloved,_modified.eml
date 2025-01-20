@@ -1,0 +1,136 @@
+Delivered-To:
+Received: by 2002:a05:612c:c0e:b0:4ab:cde1:8319 with SMTP id is14csp1983222vqb;
+        Mon, 20 Jan 2025 05:32:51 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVTw8G2bpVKnixamrmuMGLjVs9o5JgwQtMNDTijLyoKcrWhifxSMELqH48MoKOwmhlMtAjwI/bCofiR6b7aGYQ3HnrgNA==@gmail.com
+X-Received: by 2002:a17:907:969f:b0:aae:c159:9e10 with SMTP id a640c23a62f3a-ab38b43bc13mr1307487166b.42.1737379971671;
+        Mon, 20 Jan 2025 05:32:51 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1737379971; cv=none;
+        d=google.com; s=arc-20240605;
+        b=fvNN1q4xRRriOjT7ua+qvUggmcKZWUdOlDnDRStmbwU79rUH7ZMe4Je2nanMlxMGz1
+         MGC4jhiN/gflVqMrWUBI33sPVR8CYPHp1yNx0pOMCP4sjjoATuNahT/Hq6TvPnovC9f+
+         9/ziwe6wzCwcprKt/7YSy/0EegVPR/ARrwDW1TsZFOgUhIXiME/xbu7hzGiG6TAyjv34
+         u64qwtbovIoBiv7sWAEymZaDPkApLZuPvs1SwDeXyTz7HsnV2dyVt/aRa2FzkHxXIhdX
+         wc9aapUxTTawaeMfvJtfAsfluqcOGoZJGP9hTT0Gpc/gv/2zb9c9aXiJsXWd1vjo0MPc
+         O2Fw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=zD2Cq6egMlZHTTD0N0KpV/dQ1uuD0OT4BHBK1UD6LQ0=;
+        fh=b4rytBBzcJKP5e8u3/Ac5t0djWTsPfzsruODBUNit2A=;
+        b=N9PWHb0mO6XNVCcYbl1livPnYZhnEQYk//j9WtCgQthso6kzAdJsCf0n9S3FQAlAB6
+         oWsMFbASt4kFoCNeeH7trf+rQ/vadynUPzefkXr7b0kR9vp2x7YXaXTe8y7a8bXKxELy
+         BtSSCtbrkCY7TdCpd7j1fLOo+5Hr29u/MbK0ee9xKnLrzG2Dp70Ka7ZCfy8G2u4McvnG
+         cjjztPR+1Kr6OjTFwN0YrnSU/hlH1ZG4DqCchyUo08q0xDGBFuRBZ+NBwjdnsdjXVCkX
+         ia8NsTHJTbPwneWnRKxV1MQ3vlsnBUMQ1MXc/8Ngdb53FN2mcTQxhKYJDe3J67IGgdVE
+         qsXg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=SQBJJ4BT;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ab3849ee97asor354010066b.0.2025.01.20.05.32.51
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 20 Jan 2025 05:32:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=SQBJJ4BT;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1737379971; x=1737984771; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=zD2Cq6egMlZHTTD0N0KpV/dQ1uuD0OT4BHBK1UD6LQ0=;
+        b=SQBJJ4BTwKRCD3smtHIH8xcyic8HmI1ON/it5joDF8d+Qu9OiQnp40vNduGrX+FV8K
+         bITHDa3l8nG4MyNYfv8M3rFLsjohXUz56182IbQeI2ianV/CepGwx17bYzBIVPPQPtsu
+         3Kv4rnU+iX5MIAo1jFhlv8eGiq29eoNfIWsDHg9zFpCmsJq6fu/a3Liv4SCAu3QKCH2d
+         Cgsovu+5hrXZWDy6lHht+1mezY7U/NY35esZditabup2c6iog4FmAZfm3GOY4j22M0HI
+         lsglwiTpCGHPrF0ZfzZN4KiRoWbT57GAHekDqGeuZALnGlK6Q8VJVPMaoWN2cDh1SPW3
+         628w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1737379971; x=1737984771;
+        h=to:
+         :x-gm-message-state:from:
+        bh=zD2Cq6egMlZHTTD0N0KpV/dQ1uuD0OT4BHBK1UD6LQ0=;
+        b=YEPAxgyKPi+0urc7WVBVpNxOndhOLnIXMnjmmow5vM9AeDwILMLO4Y+uEobxEhuJod
+         SXitZPEcFCYIN+CshhLFiPz6UPEtyGIjz9E5easW9ObObGlkUT8ypnbrN5E4PSHNhrqd
+         etkBUqLTNUdbmP9tZq86c8JyNoWExkvHBNLR6FJ3ZAw9Wvh2IR/F3+DlvRI0SBxndmeM
+         knCK1SaboWiTov8TP6hRdiRldc2e71NTldMDF4WvCtGKfoncmoVkzLOejwyM36EAn5gQ
+         hA0MUq7nfafQ5UaU/L2fTfMkkt5mkL94ElT1V3Xh1lKFtLMZMXeRY/vKzRrec5lIgCNF
+         fyFQ==
+X-Forwarded-Encrypted: i=1; AJvYcCV9jyvd5DQwBj8AGLjAiqtOvO1SZI91a9ao4McAxGZQ8WcTMvafDYPJgFaIR6qIS8g5s5xV//RQ7waAAtKsuCW4SIZaUQ==@gmail.com
+X-Gm-Message-State: AOJu0YzZexaF8BR7Yk6Ow1VGz/6yUxay9E+kVmUlo+NHwAoKH4YdjRrI
+	zqIEq7HO0BtW7+Pzx6ISqM+PSPPaLCzdJ2bBBdclI2vPe5NOHEvrSRqBDGbJ9RXG6zGbBkpu156
+	5de4HvM3VVm2rGW6pVY3dYhxrfyQ=
+X-Gm-Gg: ASbGncuWUNS4xAVJtL+bI9/P5nLikZrz1E8JXy1fzp3z5K3kM59vkSM2gk8yp+1uby3
+	JlK+gTMxlNh8yjQe4p800tDnXsXCCy4EIcqIfwo2uO5ORo+zpjtYL6w==
+X-Google-Smtp-Source: AGHT+IHdvlYJBQ9fF9j9Zk1eAoZhPx9up7HhHRdfUk1WdrUPbBjPbcHDyy/+p9NMxxSDybEemqQpQlTqpNC/e6RDkRc=
+X-Received: by 2002:a17:906:2313:b0:aaf:17d:803f with SMTP id
+ a640c23a62f3a-ab38b4c6ad6mr1140884766b.51.1737379970777; Mon, 20 Jan 2025
+ 05:32:50 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 20 Jan 2025 13:32:06 +0000
+X-Gm-Features: AbW1kvaptsqpc4FRGOM_gguAQ3GPlEV554nfEBlCPTC5mcP0r1aJTxTwb3TlSFY
+Message-ID: <[removed]>
+Subject: Dear Beloved,
+To:
+Content-Type: multipart/alternative; boundary="000000000000ff8bbb062c234b8e"
+Bcc:
+
+--000000000000ff8bbb062c234b8e
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Beloved,
+I am writing this letter to you with heavy tears in my eyes and great
+sorrow in my heart. I am Mrs.Rose Williams. A widow to the late Mr.Morris
+Williams, I am 63 years old, suffering from long time Cancer of the breast
+for a long time.
+From all indications my condition is really deteriorating and it's quite
+obvious that I won't live more than 2 months according to my doctors. I
+have some funds I inherited from my late loving husband Mr. Morris, the sum
+of  US$7,500,000.000 (Seven million Five Hundred Thousand American dollars
+)) which he deposited in a bank here and I need honest, truthful and God
+fearing person OR muslim that can use these funds for Charity work, helping
+the less privileges, and 30% of this money will be for your time and
+effort, while 70% goes to charities.
+1) For the sick, less-privileged
+2) For the Widows and the motherless babies
+3) Orphanages or Charity Home.
+
+I look forward to your prompt reply from you for more details.
+Please try to contact me immediately through
+my private email address ([removed])
+Yours sincerely
+Mrs.Rose Williams
+
+--000000000000ff8bbb062c234b8e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Beloved,<br>I am writing this letter to you with heav=
+y tears in my eyes and great sorrow in my heart. I am Mrs.Rose Williams. A =
+widow to the late Mr.Morris Williams, I am 63 years old, suffering from lon=
+g time Cancer of the breast for a long time.<br>From all indications my con=
+dition is really deteriorating and it&#39;s quite obvious that I won&#39;t =
+live more than 2 months according to my doctors. I have some funds I inheri=
+ted from my late loving husband Mr. Morris, the sum of =C2=A0US$7,500,000.0=
+00 (Seven million Five Hundred Thousand American dollars )) which he deposi=
+ted in a bank here and I need honest, truthful and God fearing person OR mu=
+slim that can use these funds for Charity work, helping the less privileges=
+, and 30% of this money will be for your time and effort, while 70% goes to=
+ charities.<br>1) For the sick, less-privileged<br>2) For the Widows and th=
+e motherless babies<br>3) Orphanages or Charity Home.<br><br>I look forward=
+ to your prompt reply from you for more details.<br>Please try to contact m=
+e immediately through<br>my private email address (<a href=3D"mailto:
+[removed]">[removed]</a>)<br>Yours sincerely<=
+br>Mrs.Rose Williams </div>
+
+--000000000000ff8bbb062c234b8e--
+

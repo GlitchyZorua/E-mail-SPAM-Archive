@@ -1,0 +1,326 @@
+Delivered-To:
+Received: by 2002:a05:612c:c0e:b0:4ab:cde1:8319 with SMTP id is14csp283044vqb;
+        Fri, 17 Jan 2025 03:25:14 -0800 (PST)
+X-Received: by 2002:a05:690c:397:b0:6ef:8c41:dee0 with SMTP id 00721157ae682-6f6eb686944mr14285137b3.20.1737113113816;
+        Fri, 17 Jan 2025 03:25:13 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1737113113; cv=none;
+        d=google.com; s=arc-20240605;
+        b=A+XtUqBHewhNeXWUhQbZ7u7trgQcR10ZRvRjXuLxm7OnD/xpkgbA0ojlCOEsfPI1gY
+         H/KyEPHkiFMFHfrwm3B81GjMH47MOjuODPkREFuddqrT8rrsBU6FpPb/yqmlwIA3i9UT
+         /O5EVCgnC8AGKculykGxixPe6r2ZQcD+gO8QhrZW8cxCfB39uCagGw5CyxgFuTwHjUKF
+         HI8Q4pW6xXGix09FbUuQIIe5L9riE5RpY58Rcq7eE0uMsOXnwfhaeHoSg6GT9vxXCqQS
+         6+LAnqhEJdtLg07CUFzL0vIqGel5E8DNQ4VBL5GIplP2NQCc/MtIuNz+ALDntNbW7jxh
+         9t1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=h7li5DS6xyAwFbSnHJq3x0fpcsqVpqUIXe6E5X3eNs8=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=Uari5jZt7SIg6KG60DQoNIgV7/PlNBHG0kPkUTjZBWDVBy/Tmp+V3ePxW4n+iP2BVp
+         Gl0k2Z3/JL9ttQJ5FkdgA7nlmPZ7u8rdEY5K7Hs5DVEo5ozO/54eyBJaOqejw2tz4tmr
+         uf/GJx49yoxysUyHULVDe6j+7OyTyx3/53z6gZNAejdd1M1d540POxzDKpz8Ps7IGkxc
+         IeWiZD+8fG1VMyZDk0Ylfb85GPkFoY/JY9tmg/robBdnf1xgkKyMSyKGpBSLgzHpU0y7
+         0JyfLQssrkC1mscy9SfN/wgqquSGC2oovITne/75OguBeSgiLTVXQ8pb8rpHgfpirPx9
+         WVnQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WvnvnTrP;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 00721157ae682-6f6e63b4cb5sor13390887b3.3.2025.01.17.03.25.13
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 17 Jan 2025 03:25:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WvnvnTrP;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1737113113; x=1737717913; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=h7li5DS6xyAwFbSnHJq3x0fpcsqVpqUIXe6E5X3eNs8=;
+        b=WvnvnTrP+U++8Bl+eSL0mPMwBpIwSObYkqbiIntXGT0jb+V2FX0b6utvZzkkamihHP
+         4LL0vD44vTUKYRaX9ItTm0VaDyI2ggLNOTP4mUFzV3U5DaKBly5YBBXy7iIgYLzYwogN
+         DwKK72OP5o1MZOHaFca9qwPv51hrFLrHNGJGM13yktslSRfOjcSEaJKwwNQ0sGYIMTjJ
+         dICJJ2fQC4aFHkhtkq1/40otooraw3NJuom11Y01p9ZsdmddnQkODbMeD+R2xQGkuR4E
+         D2zTWA4C8/ymBBaDe5i/ND/m3QLXe/t4LO3ViMMc4vjL9CkXJy4ydRSDyX6cDNpmIQ0o
+         C4VQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1737113113; x=1737717913;
+        h=to:
+         :from:
+        bh=h7li5DS6xyAwFbSnHJq3x0fpcsqVpqUIXe6E5X3eNs8=;
+        b=a+lInn3FMFIuOFlkKN9NKrPxprjMlNXUa+jJTNVgfIC5+ci6cgUiW75CmN1p09C4sm
+         qnf+5LxKGcK1WJ+pNw45RtODPeEX0L3uqr5jCvLVj+11ezGtBE9z6wWO0Hkx7kKHzZye
+         7g9SxjQIsYzPffsbW4723HbLsU3opNQFxDDRuzuDB7X8jj9bdqeH92Ah28T0yCVkiK7F
+         Vw3Kxdw9yTX3Vyt58Q4kyWz4UzzAMKUQ9xMAHCY++WVinjhwglATS62Y5H/zqZmaWjXb
+         dw65zhP56+xQp4ERP4r1DhU63koJu5N+tW7t28an4xm7xzc94Y6h6b2TEj8TTA1EDcCT
+         fDew==
+X-Gm-Message-State: AOJu0Yx1gPmrGw7/nA0wZPTl/rwX6mKd9TfL9KW+Au7Wc7jB3rBL9eYm
+	9DzufN2jsmLLel4xb9cZjkij55YDir6QwrAkR+eeJ6AZiBSf5lP3n/bQuaWNMBPKlH35iB0f3Qg
+	b9iHyWD8lxgr+RnR/6X35p4bKBbxiEUu9KrT7xg==
+X-Gm-Gg: ASbGncv/YpPFWW9ymNsJeQqsGD41Q1zMblMf2FyYj833agkLuyzv6ZIhtP1trkcvq98
+	OXsf/DlRgAEzlXpgX3cNIuKX5EoEoCAgOy+Gk6H4=
+X-Google-Smtp-Source: AGHT+IHI4Xr1PD4eZDvGa7Jrl9k0lYMfmMyuzor62YvIR9CxEIiJpHLx7gzBRHty0qfMY+HyNPQfmZmwzoOSOValLl8=
+X-Received: by 2002:a05:6902:20c9:b0:e57:44de:aba9 with SMTP id
+ 3f1490d57ef6-e57b10634cemr1142640276.17.1737113113300; Fri, 17 Jan 2025
+ 03:25:13 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Fri, 17 Jan 2025 03:25:02 -0800
+X-Gm-Features: AbW1kvYenfiAGElQV471TqfkWFCRwh_Siz0PvL2fBWIb0rD7clZz1iFZGFFGW6s
+Message-ID: <[removed]>
+Subject: Attention To This Good News!
+To:
+Content-Type: multipart/alternative; boundary="0000000000000d9a9d062be52a25"
+
+--0000000000000d9a9d062be52a25
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*[image: ECOWAS - Wikipedia]
+<https://www.google.com/imgres?imgurl=3Dhttps%3A%2F%2Fupload.wikimedia.org%=
+2Fwikipedia%2Fen%2Fthumb%2F9%2F9c%2FECOWAS_logo.svg%2F1200px-ECOWAS_logo.sv=
+g.png&tbnid=3DNhq_xs_r17yQiM&vet=3D10CBIQxiAoAmoXChMI6IHmu9DbhwMVAAAAAB0AAA=
+AAEAc..i&imgrefurl=3Dhttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FECOWAS&docid=
+=3DKpKvoFIDhRtTKM&w=3D1200&h=3D1247&itg=3D1&q=3Decowas%20logo&ved=3D0CBIQxi=
+AoAmoXChMI6IHmu9DbhwMVAAAAAB0AAAAAEAc>[image:
+OP-ED | The African Union is set to join the G20: how can it make the most
+of it? By Ivory Kairo - African Newspage | Reporting Africa's Development]
+<https://www.google.com/imgres?imgurl=3Dhttps%3A%2F%2Fwww.africannewspage.n=
+et%2Fwp-content%2Fuploads%2F2023%2F03%2FAU-logo.jpg&tbnid=3D4q7TgrrflVYfpM&=
+vet=3D10CBUQxiAoA2oXChMI6IHmu9DbhwMVAAAAAB0AAAAAEBY..i&imgrefurl=3Dhttps%3A=
+%2F%2Fwww.africannewspage.net%2F2023%2F08%2Fop-ed-the-african-union-is-set-=
+to-join-the-g20-how-can-it-make-the-most-of-it-by-ivory-kairo%2F&docid=3DVx=
+O-FE2HM3eW9M&w=3D1591&h=3D769&itg=3D1&q=3Decowas%20logo&ved=3D0CBUQxiAoA2oX=
+ChMI6IHmu9DbhwMVAAAAAB0AAAAAEBY>From
+The West Africa Economic And Finance Affairs Commission*
+*Address/ 1st Floor, Espace Marie Stella, CEN-SAD Zone, *
+
+*Route des P=C3=AAches/ 081 BP 7273 Postal sorting, Airport-Cotonou *
+
+*Republic Du Benin.*
+*Website:https://www.ecowas.int/institutions/the-commission/
+<http://www.ecowas.int/institutions/the-commission/>*
+*Email: [removed]
+<[removed]>*
+
+
+
+*Attention To This Good News! *
+
+
+
+
+
+
+
+
+
+*We the Authorities of the West Africa Economic And Finance Affairs
+Commission are hereby to officially announce to you that your long awaited
+Contrat Funds of $5.5M.USD, Which was converted into an ATM Card has
+officially been Approved to deliver to your nominated home address as
+urgently as possible in accordance with the instructions from the US
+Financial Crimes Enforcement Network after our last meeting held on Monday
+13th Of January/2025.However, The ATM MasterCard Package has been deposited
+with the  FedEx Courier  Express Delivery Company and We have paid for the
+bills for the delivery,  So you are hereby advised to quickly contact the
+FedEx Courier Company Diplomatic  Agent  Mr. Raj Subramaniam who is in
+charge of the delivery on this below:Contact Name: Mr.Raj SubramaniamEmail:
+([removed] <[removed]>)Phone# +1 251
+266 8728FedEx Company Diplomatic Agent.*
+
+
+*Please, I want you to kindly provide to him your current details of
+delivery information such as this listed below:*
+
+
+
+
+
+
+*1. Full Name :2. Address :3. Nationality :4. Direct Telephone #:5.
+Occupation:6. A Copy Of Your ID*
+
+
+*To enable the FedEx Company Diplomatic Agent to deliver your ATM
+MasterCard package to you very successfully and avoid any mistakes during
+the delivery process .*
+
+*Thank you And I look forward to your immediate complaint on this directive
+details.*
+
+*Best of Regards:*
+
+*H.E. Dr. Omar Alieu Touray *
+* <https://www.ecowas.int/people/h-e-dr-omar-alieu-touray/>*
+
+--0000000000000d9a9d062be52a25
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div dir=3D"ltr">
+
+
+
+<div><span style=3D"font-family:tahoma,sans-serif"><i><b><font size=3D"4"><=
+a role=3D"button" style=3D"height:175px" href=3D"https://www.google.com/img=
+res?imgurl=3Dhttps%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2F=
+9%2F9c%2FECOWAS_logo.svg%2F1200px-ECOWAS_logo.svg.png&amp;tbnid=3DNhq_xs_r1=
+7yQiM&amp;vet=3D10CBIQxiAoAmoXChMI6IHmu9DbhwMVAAAAAB0AAAAAEAc..i&amp;imgref=
+url=3Dhttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FECOWAS&amp;docid=3DKpKvoFIDhR=
+tTKM&amp;w=3D1200&amp;h=3D1247&amp;itg=3D1&amp;q=3Decowas%20logo&amp;ved=3D=
+0CBIQxiAoAmoXChMI6IHmu9DbhwMVAAAAAB0AAAAAEAc" target=3D"_blank"><img src=3D=
+"https://encrypted-tbn0.gstatic.com/images?q=3Dtbn:ANd9GcTFd3uWsBgkbanGkyb8=
+Kneq1iCFuGFFgIo-l9JYMZzMUcm70f2Xk1v4kMA5ruRsHSDGM3c&amp;usqp=3DCAU" alt=3D"=
+ECOWAS - Wikipedia" style=3D"margin-right: 0px;" width=3D"127" height=3D"13=
+1"></a><a role=3D"button" style=3D"height:81px" href=3D"https://www.google.=
+com/imgres?imgurl=3Dhttps%3A%2F%2Fwww.africannewspage.net%2Fwp-content%2Fup=
+loads%2F2023%2F03%2FAU-logo.jpg&amp;tbnid=3D4q7TgrrflVYfpM&amp;vet=3D10CBUQ=
+xiAoA2oXChMI6IHmu9DbhwMVAAAAAB0AAAAAEBY..i&amp;imgrefurl=3Dhttps%3A%2F%2Fww=
+w.africannewspage.net%2F2023%2F08%2Fop-ed-the-african-union-is-set-to-join-=
+the-g20-how-can-it-make-the-most-of-it-by-ivory-kairo%2F&amp;docid=3DVxO-FE=
+2HM3eW9M&amp;w=3D1591&amp;h=3D769&amp;itg=3D1&amp;q=3Decowas%20logo&amp;ved=
+=3D0CBUQxiAoA2oXChMI6IHmu9DbhwMVAAAAAB0AAAAAEBY" target=3D"_blank"><img src=
+=3D"https://encrypted-tbn0.gstatic.com/images?q=3Dtbn:ANd9GcTTzAzBFRSvnZ70A=
+6p6m5pJ7ggL2cwJelBt3VpzsBV3Mx62fBceVWFd9oQce0k3PbmYS-s&amp;usqp=3DCAU" alt=
+=3D"OP-ED | The African Union is set to join the G20: how can it make the m=
+ost  of it? By Ivory Kairo - African Newspage | Reporting Africa&#39;s Deve=
+lopment" style=3D"margin-right: 0px;" width=3D"303" height=3D"144"></a><br>=
+<span style=3D"color:rgb(153,0,0)">From The West Africa Economic And Financ=
+e Affairs Commission</span></font></b></i></span></div><div><i style=3D"fon=
+t-family:tahoma,sans-serif"><b><font size=3D"4"><span style=3D"color:rgb(15=
+3,0,0)">Address/ 1st Floor, Espace Marie Stella, CEN-SAD Zone,=C2=A0</span>=
+</font></b></i></div><div><span style=3D"font-family:tahoma,sans-serif"><i>=
+<b><font size=3D"4"><span style=3D"color:rgb(153,0,0)">Route des P=C3=AAche=
+s/ 081 BP 7273 Postal sorting, Airport-Cotonou <br></span></font></b></i></=
+span></div><div><span style=3D"font-family:tahoma,sans-serif"><i><b><font s=
+ize=3D"4"><span style=3D"color:rgb(153,0,0)">Republic Du Benin.<br></span><=
+/font></b></i></span></div><div><i style=3D"font-family:tahoma,sans-serif">=
+<b><font size=3D"4"><span style=3D"color:rgb(153,0,0)">Website:https:</span=
+><span style=3D"color:rgb(106,168,79)">//<a href=3D"http://www.ecowas.int/i=
+nstitutions/the-commission/" target=3D"_blank">www.ecowas.int/institutions/=
+the-commission/</a></span></font></b></i></div><div><i style=3D"font-family=
+:tahoma,sans-serif"><b><font size=3D"4"><span style=3D"color:rgb(153,0,0)">=
+Email: </span><span style=3D"color:rgb(0,0,255)"><a href=3D"mailto:
+[removed]" target=3D"_blank">ecowasauthoritynational=
+[removed]</a></span></font></b></i></div><div><span style=3D"font-f=
+amily:tahoma,sans-serif"><i><b><font size=3D"4"><span style=3D"color:rgb(0,=
+0,255)"><br></span></font></b></i></span></div><div><span style=3D"font-fam=
+ily:tahoma,sans-serif"><i><b><font size=3D"4"><span style=3D"color:rgb(0,0,=
+255)"><br></span></font></b></i></span></div><div>
+<div><span style=3D"font-family:tahoma,sans-serif"><i><b><font size=3D"4">A=
+ttention To This Good News! <br></font></b></i></span></div>
+
+</div><span style=3D"font-family:tahoma,sans-serif"><i><b><font size=3D"4">=
+<br><br>We
+ the Authorities of the West Africa Economic And Finance Affairs=20
+Commission are hereby to officially announce to you that your long=20
+awaited Contrat Funds of $5.5M.USD, Which was converted into an ATM Card
+ has officially been Approved to deliver to your nominated home address=20
+as urgently as possible in accordance with the instructions from the US=20
+Financial Crimes Enforcement Network after our last meeting held on=20
+Monday 13th Of January/2025.<br><br>However, The ATM MasterCard Package=20
+has been deposited with the =C2=A0FedEx Courier =C2=A0Express Delivery Comp=
+any and
+ We have paid for the bills for the delivery, =C2=A0So you are hereby advis=
+ed
+ to quickly contact the FedEx Courier Company Diplomatic =C2=A0Agent =C2=A0=
+Mr. Raj
+ Subramaniam who is in charge of the delivery on this below:<br><br>Contact=
+ Name: Mr.Raj Subramaniam<br>Email: (<a href=3D"mailto:
+ail.com">[removed]</a>)<br>Phone# +1 251 266 8728<br>FedE=
+x Company Diplomatic Agent.</font></b></i></span><div><span style=3D"font-f=
+amily:tahoma,sans-serif"><i><b><font size=3D"4"><br></font></b></i></span><=
+/div><div><span style=3D"font-family:tahoma,sans-serif"><i><b><font size=3D=
+"4">Please, I want you to kindly provide to him your current details of del=
+ivery information such as this listed below:<br></font></b></i></span></div=
+><div><div><span style=3D"font-family:tahoma,sans-serif"><i><b><font size=
+=3D"4"><br>1. Full Name :<br>2. Address :<br>3. Nationality :<br>4. Direct =
+Telephone #:<br>5. Occupation:<br>6. A Copy Of Your ID</font></b></i></span=
+></div><div><span style=3D"font-family:tahoma,sans-serif"><i><b><font size=
+=3D"4"><br></font></b></i></span></div><div><span style=3D"font-family:taho=
+ma,sans-serif"><i><b><font size=3D"4">To
+ enable the FedEx Company Diplomatic Agent to deliver your ATM=20
+MasterCard package to you very successfully and avoid any mistakes=20
+during the delivery process .<br></font></b></i></span></div><div><span sty=
+le=3D"font-family:tahoma,sans-serif"><i><b><font size=3D"4"><br></font></b>=
+</i></span></div><div><i style=3D"font-family:tahoma,sans-serif"><b><font s=
+ize=3D"4">Thank you And I look forward to your immediate complaint on this =
+directive details.</font></b></i></div><div><span style=3D"font-family:taho=
+ma,sans-serif"><i><b><font size=3D"4"><br></font></b></i></span></div><div>=
+<i style=3D"font-family:tahoma,sans-serif"><b><font size=3D"4">Best of Rega=
+rds:</font></b></i></div><div><span style=3D"font-family:tahoma,sans-serif"=
+><i><b><font size=3D"4">H.E. Dr. Omar Alieu Touray <br></font></b></i></spa=
+n></div><span style=3D"font-family:tahoma,sans-serif"><i><b><font size=3D"4=
+"><a href=3D"https://www.ecowas.int/people/h-e-dr-omar-alieu-touray/" targe=
+t=3D"_blank"><img src=3D"https://www.ecowas.int/wp-content/uploads/2022/08/=
+H.E.-Dr.-Omar-Alieu-Touray-President-of-the-ECOWAS-Commission1.jpg" alt=3D"=
+" style=3D"margin-right: 0px;" width=3D"191" height=3D"156"></a></font></b>=
+</i></span></div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+--0000000000000d9a9d062be52a25--
+

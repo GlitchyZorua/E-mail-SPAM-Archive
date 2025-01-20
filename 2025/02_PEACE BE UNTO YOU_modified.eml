@@ -1,0 +1,163 @@
+Delivered-To:
+Received: by 2002:a05:6402:240b:b0:5d4:322f:18f6 with SMTP id t11csp3011579eda;
+        Wed, 15 Jan 2025 08:37:03 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCWtFaX0tvejzysmQgTizqy8nIOvbWsFYrghQVi2P3A2JX07iigA7dg98h4X6nnvPeeuSirmrDcMgf4Nf5ZJdimwRb4rsQ==@gmail.com
+X-Received: by 2002:a05:651c:1543:b0:2ff:c67f:5197 with SMTP id 38308e7fff4ca-305f457bb85mr100184931fa.13.1736959022936;
+        Wed, 15 Jan 2025 08:37:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1736959022; cv=none;
+        d=google.com; s=arc-20240605;
+        b=aqXAyIUQi0IdWfDdK86GWnzg6OMLyOHNCTg/7cseYlFWg3JhqrsxH5B+wMdCzar71a
+         AbSbdituVAzEldPS75aoLiV/LUaiwNeNOyk3tB0e9hB0J05B4VtgIIzaymM0gVdy7Qy6
+         GjjhFpw1XQW/TzOYF4elgtwQazGUsrEgWJi0vveIH94aOVrMWz9gExzYQt2DMxi2Jxhn
+         /aZf4kf0bPIwGGlNJQrG2RXRLF+FwvyEr0TKPF3N0Gbhi+0IIoX95UtQSlfN1FSvK0LL
+         b0G98lTDXxLjcyINd8eLlKalsFbVhvBY+VCPmvs/tk07W24yXwfeAV6Y5LGp2fS68tnA
+         kGXw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=+ItzNoK3MeOKyK3fUFrGr8omutjZq72jk1vbyGiJ5rQ=;
+        fh=ENOsbpRCpkK2GcHigIE4UUFan+rtUDHTZ8cxzEQYmhA=;
+        b=Uf7tQyaschmBx7dD0gZp2YgrrQ0/5H9oqvc57ED+j9QBL/+u67RW+dJCYgymn1luR7
+         T1HZsrKeJ0rTDugjTYceXXhIUvIQueMT9S2oAXr8u11XmMf6fpcn+a/G9go8p8jx3tPp
+         3ANeWl1si62jQsSKcN6kHGU/fRbcC8u57JUXJBAkFtPFVwFAI1ImKgC2WWV5JNjetTX7
+         UxiKgjgbasVD6chRNd1kAwSU+VvltUWe4PzGKzYbhSC6hoDZ9Fs6jcWRwaNBO+GCEKd7
+         rNqeylZxTehrlMFpQUXY4wxPhzUfuClz/BPVfTZ0zJSjgyxoh+DyMUaUAVIJAl9SAxzQ
+         OAcA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=JNNNc4Gu;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 38308e7fff4ca-305ff0fb458sor30168331fa.2.2025.01.15.08.37.01
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 15 Jan 2025 08:37:02 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=JNNNc4Gu;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1736959021; x=1737563821; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=+ItzNoK3MeOKyK3fUFrGr8omutjZq72jk1vbyGiJ5rQ=;
+        b=JNNNc4Gug5cOV25hVffP6QFQvuWOtH23J64C50li1JVqegpdfRvoSR1Y4GXmfj1/TW
+         PaJXZ9MSZctOo4lQpaJ6k1mUfZEavsjNF0CVLmD11/qlQT5WgvsJ4LV5Dl9fX4yokwqz
+         T0j0Z2WQfTeWGikDfrrETkXFt1Wa2qRU6IPW+ggB0nOuqx8MwwoQ1u4U1oki0JV6PGPW
+         7zv1Nw1ZQtt1zbZwJqa2uPNyNCbwSPKqvKD3OdsATvAgZYg1fFoFl0qrquAz92iMvxEJ
+         CzQ7RhW4yN+BLIKHw6wv3tV7Irgj1zycOlIqqY82ZEnW6dt2qaKjAvyYSGPYlJ26xojR
+         Ko2Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1736959021; x=1737563821;
+        h=to:
+         :from:
+        bh=+ItzNoK3MeOKyK3fUFrGr8omutjZq72jk1vbyGiJ5rQ=;
+        b=opsQ9T7Wjl5phzw3rUcWs0MyfxdvRnFBxaXcB4EleQJ41OHp7nugU+oBNzr0FawNz8
+         e3DkFESeViRP1mF9Qadb5oCvQoNV06hMwigXW+kVRE4Z51gvBauRMRrufe1mOQ2qOihV
+         UKTKs3uTIBfoKyb78PnzpjCIu9BrDUhtH5BfZwj9XUsIZTXYoUtwv1wrtN+rubnibPlF
+         B2tkaZYWm4r5icNYfX0er0gDJwa/cJV9Vn15A6bOUTRcATFwN8L83VIHMJRAqykQH3kc
+         x4j8HDGYTw/STuG7CnC2hEGXOWF4xFWxPNhtWItrqpsQ9LAPxt+hvy2PGDwWOyPXzoZv
+         dKcg==
+X-Forwarded-Encrypted: i=1; AJvYcCV9QjW6ulndhgtDlX52vd65sA+DbpUTsx/gjy1o1Jg633B9Ei+Yihmqr6aaOFmFFk2cLvGJzwBVYaDhVPj3XdRrgx823Q==@gmail.com
+X-Gm-Message-State: AOJu0YwvaGqyJItQUT5J0/kVezER9ViKh973dBBDTLk8pkVqRuj14wZW
+	xQVOW5FZOoAfqTtedNvdPGzepaJqjGm+uuBzvuX3HREZc4me5Y1wkAo9STNw31E1enSFimFziDY
+	o9GQZebsIeRxv4fnFviGr+Vk3iqs=
+X-Gm-Gg: ASbGncsBgFH4CcMPbP1r/3ZSkU5KQLXkFVQYbTaFaoV3sIzNL5oCBtQWWh5RHF7Y1+b
+	I7EnFEGmYTlSbuncPeyfhnkb4Vq5zKQVM0IhptlDs
+X-Google-Smtp-Source: AGHT+IEEJo+noJIPWb16xng1z488mxzkiK3It9GOnsSzCx5x69GgNnl5fA2y/Exu3/C2vaJp46IoHCmFzsLlqTZ8z4I=
+X-Received: by 2002:a2e:be8a:0:b0:302:1b18:2bfa with SMTP id
+ 38308e7fff4ca-305f45b25e8mr105138921fa.23.1736959021210; Wed, 15 Jan 2025
+ 08:37:01 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Wed, 15 Jan 2025 17:36:50 +0100
+X-Gm-Features: AbW1kvYyoBxoAi4RbK2dOICfZU5L8StQLHbkydbMjLmhGXSjOgI8ogeCLOORWzU
+Message-ID: <CABp9osJyp_psvBLcwZrdys1aJapSAm=wmLDd4v3yoM=[removed]>
+Subject: PEACE BE UNTO YOU
+To:
+Content-Type: multipart/alternative; boundary="00000000000072e4bf062bc149b4"
+Bcc:
+
+--00000000000072e4bf062bc149b4
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello dear Friend,
+
+How are you doing, I come in peace and peace shall you see, I hope that you
+will understand the importance of my message, I came across your contact
+from my search for an honest and God fearing person that will continue to
+expand my vision, my name is Dlamini Khumalo, am from South Africa before
+relocating to London, United Kingdom in 2007, we had a family shipping
+company before my husband passed away in 2003, Am sick now and have been
+suffering with Leukemia since 2014.
+
+My health condition is not improving, the doctor invited my lawyer because
+it has reached a critical stage, and I don=E2=80=99t have much time left. i=
+s a
+devastating news and it is hard for me knowing that I have just a little
+time left to live, unfortunately my marriage didn=E2=80=99t produce any chi=
+ld,
+After the doctor=E2=80=99s medical pronunciation that my time is limited,
+
+I strongly desire to reach out to the destitute and less privileged in your
+country and some other countries, but I would prefer to continue this with
+the assistance of an honest person like you to build a charity foundation
+in your base for the remembrance of my family. I have a sum of
+$7,500.000.00 (Seven Million Five Hundred Thousand US dollars) in a bank. I
+want us to use it and establish a less privileged home and help the orphans=
+.
+
+I will give you more details and guideline in your next mail if you are
+interested to work with me, please I want you to think about this before
+responding back to me, I have informed the bank about my decision and I
+have all the paperwork of the deposit documents, I will present you to the
+bank as the beneficiary, but i want the foundation to be named after my
+family.
+
+I want a sincere response from you. If you pray about this, I will give you
+more information in my next mail.
+
+
+Peace be unto you.
+ Mrs.Dlamini Khumalo.
+
+--00000000000072e4bf062bc149b4
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr">Hello dear Friend,</div><div dir=3D"ltr" =
+class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"lt=
+r"><br>How are you doing, I come in peace and peace shall you see, I hope t=
+hat you will understand the importance of my message, I came across your co=
+ntact from my search for an honest and God fearing person that will continu=
+e to expand my vision, my name is Dlamini Khumalo, am from South Africa bef=
+ore relocating to London, United Kingdom in 2007, we had a family shipping =
+company before my husband passed away in 2003, Am sick now and have been su=
+ffering with Leukemia since 2014.<br><br>My health condition is not improvi=
+ng, the doctor invited my lawyer because it has reached a critical stage, a=
+nd I don=E2=80=99t have much time left. is a devastating news and it is har=
+d for me knowing that I have just a little time left to live, unfortunately=
+ my marriage didn=E2=80=99t produce any child,<br>After the doctor=E2=80=99=
+s medical pronunciation that my time is limited,<br><br>I strongly desire t=
+o reach out to the destitute and less privileged in your country and some o=
+ther countries, but I would prefer to continue this with the assistance of =
+an honest person like you to build a charity foundation in your base for th=
+e remembrance of my family. I have a sum of $7,500.000.00 (Seven Million Fi=
+ve Hundred Thousand US dollars) in a bank. I want us to use it and establis=
+h a less privileged home and help the orphans.<br><br>I will give you more =
+details and guideline in your next mail if you are interested to work with =
+me, please I want you to think about this before responding back to me, I h=
+ave informed the bank about my decision and I have all the paperwork of the=
+ deposit documents, I will present you to the bank as the beneficiary, but =
+i want the foundation to be named after my family.<br><br>I want a sincere =
+response from you. If you pray about this, I will give you more information=
+ in my next mail.<br><br><br>Peace be unto you.<br>=C2=A0Mrs.Dlamini Khumal=
+o.<br></div></div></div>
+
+--00000000000072e4bf062bc149b4--
+

@@ -1,0 +1,132 @@
+Delivered-To:
+Received: by 2002:a05:612c:c0e:b0:4ab:cde1:8319 with SMTP id is14csp1842195vqb;
+        Mon, 20 Jan 2025 00:32:34 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHaXwVgmAPP0Lf8zhUzCmFUmJITMUQVF2hoHIkBik+pobkWeFXWuFrnRVp1x+R3pZm5Y3m4
+X-Received: by 2002:a05:620a:43a4:b0:7bc:ded5:888d with SMTP id af79cd13be357-7be63210578mr2028205685a.1.1737361954108;
+        Mon, 20 Jan 2025 00:32:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1737361954; cv=none;
+        d=google.com; s=arc-20240605;
+        b=iagDTJkQpm9yGych1mB7Hwoo8tPi4P88NJk6s8F95+nwCwAzBzALscMjyJAw6XOLxW
+         z46KVYdrRvJSnIYaPzccOqd3mW6AiFYKiuUhHi6Ojr1tCKRGr+U8KIoz6gq+ago8n3VK
+         kfxltVV2/Vb4LntrnnMFJteRxYEFo7RDvR4j8XLpa4yor85YUJ6vp3Z9NgqpIbCC9YD+
+         lOni3mqRnI6EM8/T/KcCsVon4vV5Vs1ZjQfQa46EKYoLA6WQPQH7AYilUaZZTrmSYrnW
+         9w+5GK5KbPj8rv9irKizTyudgYo4nF0P6OGvKXXZufOwgccGcppbbQs/z25gRV9kiIlu
+         PwYg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=references:mime-version:subject:message-id:to:
+         :dkim-signature;
+        bh=TR+A4GII2NUO5ZrVrU9vpwztYhqgiiPMUuAygvUU6vk=;
+        fh=CCyaa74qj7D7ZdNjnUHNPt9NlolrqMjOuj/AsYq+ZV4=;
+        b=DNTEyAvGaXDc/QM7mIHAQQBoWfZwd2CkzSVdbXagdeReAKSwtPbA/Yuvj13Djh3PrH
+         AwaBaYOuaBvjGKygXLLmPrzuleZxevcRjJ4B7t22X6dh7C0AXVO5e7fXGCJxTSMMg2Xl
+         i55pDetDTu+gO4UVAGp/+7a1FYuDXxnPvq5ldh8t4AcsXtI6fsLTi7XRkwQmsY0j5EQJ
+         2CuTdjY96cl+uv0wKvOcKNVAI7zn/eAYu8tfTr++i/f4MFMXuHrc5sWKUsaFOYLwhVyw
+         2T9C/R79RK3HwfLTH7jApDo386+BPBajPcWBsLtFSt/Z0t6seYSJ60OPRz8sHFQ5CqQG
+         YUQA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=Nm8yE5zI;
+       spf=pass (google.com: domain of [removed] designates 74.6.128.206 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <[removed]>
+Received: from sonic320-25.consmr.mail.bf2.yahoo.com (sonic320-25.consmr.mail.bf2.yahoo.com. [74.6.128.206])
+        by mx.google.com with ESMTPS id d75a77b69052e-46e10458ae8si87229571cf.415.2025.01.20.00.32.33
+        for <[removed]>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 20 Jan 2025 00:32:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 74.6.128.206 as permitted sender) client-ip=74.6.128.206;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=Nm8yE5zI;
+       spf=pass (google.com: domain of [removed] designates 74.6.128.206 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1737361953; bh=TR+A4GII2NUO5ZrVrU9vpwztYhqgiiPMUuAygvUU6vk=; h=Date:From:
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1737361953; bh=peFvP7YCLVcd/7Gjw/1PvuRQ97+b3vt94d1XvHF775v=; h=X-Sonic-MF:Date:From:
+X-YMail-OSG: N5RMe5gVM1m3IYJDOtGgLPnKLdSHGV3U0VfqGp0mfGpMniGf3Kz7AWP0w3x7Y_H
+ FC1IWFO46ZyJzbGqmSrGAimh6ojucMXqIZUZ.ePsDBDWzZcboNPNBJ0H864FJoq0VW9V6MUQv72Y
+ ZTudiwWM3ISus3rwgovw3YWRDMVEoO2X5Qtph_v0Zvab2Y0JDe5LMpwnpPqR1VhlqSDHEBsfxFGA
+ ddGFANhHyO38KAZqRBrDQN_IuZqviHzmzYJadO_l1vqtUomz7sTihuuUnhD6Vs1UnFBc5.jtpRtB
+ fUQg9XJs7mMrwS5YVkllLNuDr_0gBE.ihhl4V5FIOwOu5D4Smasy5JBGB4mwAsANYPYwtT_ePlQv
+ 1jV3v4FH5JXlbwzeRTABk6mxUmKSlP75a77d.j5kvpJF7eI6XziM.vXXkx4xaQqs_9wmI4RpqTI_
+ oJtlrv23q6ykuJ5Jq4x989e0Rs2JCBBjMJveUOJSR7H57j7ewmclQzpnJpKIyrbq9aWQnomoWhfZ
+ ztlHIdRqRYXEjgYgsXrk8B64658CnkmH4GOwmlb6Nzyhlp3mNGywpVxzSENlMg.7dOM8QuBdWa0_
+ fvFFLN6J3eopsXxDaHJoiXFpf4enVRCRmzWe5e63PEwzkoVkMNkYZP50XxSRpGjpl.z5KOsQHJyX
+ Cn4pzJx2GRPgXd3OUc8Wp5O3nY80cWrBkO97Spo.VwFjL9YxD901Xq_VX5ROx8.sZPNINRSGkDoJ
+ C.QYXc7qESSk5rEqcx3u0wtnXNmpNWjl3pR7RMbsZ9Y595aU5tR8hWbbA8b7xCmn23FRkLKLDW84
+ 5iqcKB9Fwrnkr8_aUjCdFecDj0C6jyAFk5MjCmXgj1ryNZoGRhUHyTf5o3buOwM.0T60lkCudCeu
+ v6eS1YY5.SlZbK3Sm3GvW7eFYW6iCeFpPPymBuQ9evtKVPzikOyTEMKtS2avbI3VZID_QJ6QtwS9
+ iQD.Quk.MKcUenv4wn9GUG0B_Zbdw5JsN58KttukOvbGYDSJmVMTFkTw4f_ccs0f9WTSSwVQO5rj
+ xU0gpXsowU.VBiGjznBTaCgTnA13XaMRznQw.9py9YYwrFBeNewsd1cZ.yjm3OAOksEkQEywWN1C
+ 7fb3lE8MAND8qffhIjBxqc4Wo14.hfoEM8x6zHjKd1z0oj0FcForSXwRbYYEDvK4ZXdT3Ce61ciX
+ qb3wautCUmIMgnWIO94DGHWMxGX2INZP2yfyDwEeh6eqhoC7uIY86NMwlIiavrniUIGTlt4.ZMEV
+ p86YX4MMON4W2sTK_8sGQsPPyiD3Gxga3AEB1AtVy33vQPktXiAgJt_d2IGLbrwVUoTxUjQ_TCit
+ oHJvauQRp1uNwXe6Wo4ew9XSE9cfEeOmuSOwRT.DdoyTyPOeZIf5XCxsUvhSIa4y67Lic0bYOZXs
+ hvdunQc.j4dtTY0eN_BAciorOu11T6R8Ggk_TJKdCQ9xrgrJYRb8neP5fAxgzuVcixXcXq0h386k
+ P0hvbssL_zzt70CrarviBj_lkAcjKEYXQYPaSavSfDkJ61IvEv7fZ9Y45NKFyDeb2FQyfMHdTD3r
+ VUO_w4gLocw_ZrpMJhe0Df3V7uViZmMia0i.laUqwy6i24Q_VTdJvvnArMcP3XDdCwgd5rtomG_f
+ DU38Mqzyw9lGETMuENcCrI9ZddcCeP4bhTAUnRrW810tM1Y9iyKQ_g0x1hVkvhFwz1CLvQjcLchP
+ SUpYu2plYik1zxlizK5sJR03QC8nSyuxP8bhvYuMJuHIhlDWjXS7n4ootouFUtjevEJOdMQuYj10
+ jZeShYaLyQX0a2ZMeGK2e3CPZrAytfSc2Nsu96TPRE7J5kRNSxiGh6I9TDJ9e1FVQmT51Utnj5AY
+ xc01MmS.P1GKBT9IMYRr7xUKxTdzM5jVZKA5bLAGtOQfkgNObLtht4i9k4hsfZjlqldfuDCPg_xQ
+ .5qEQwIaH9x0xAwQf8yikoeTNkdcDByRUS9J_BPqOrsZNzRii6fdyP8c4VhCBec_TWTLuQaRHLAW
+ iacNz_rkz.KP1N_rQ5aM_uF7YWmiifcS2zR2BNoNjnma6CsMXbsWBoYLpgqHzxZM_z3tYVM5IQyi
+ SVil6vWbVXyRtKBwJztwElK4ZEKO7f7rfvHNlnmczW8J26IfunDk9zUnYeyUKDaY0GkU5h9RidOg
+ 5NuvwsJC3V5QvqcN7cP_5JFnSurdgfSDSZelFML2y
+X-Sonic-MF: <[removed]>
+X-Sonic-ID: 5acb99c4-4eec-4413-8437-4d392ad8d024
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic320.consmr.mail.bf2.yahoo.com with HTTP; Mon, 20 Jan 2025 08:32:33 +0000
+Date: Mon, 20 Jan 2025 08:32:33 +0000 (UTC)
+From:
+To:
+Message-ID: <[removed]>
+Subject: Please get back to me.
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1087938_2136508993.1737361953411"
+References: <[removed]>
+X-Mailer: WebService/1.1.23187 YMailNoble
+Content-Length: 3529
+
+------=_Part_1087938_2136508993.1737361953411
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Dear David Edwards,
+May I humbly introduce our investment platform to you. We are an investment brokerage firm and financial advisors. We are advisors to a global financial platform with a number of VIP clients who have commissioned us to find or locate lucrative investment-friendly economies where their money can be well invested. We also have Loan options for all types of credit inquiries with a very low interest rate. I followed my instinct to contact you after studying your profile and experience online.
+We plan and would like to invest part of our customers' money in the economy of your country, hence this email. We hope to count on your advice and guidance on any lucrative business investment in your country and, if possible, you can become the investment manager.
+We are thinking about investing in real estate projects (development and sale of real estate), productions, mining, construction and hospitality or any other viable sector in your country. However, you are free to provide advice on other profitable sectors of interest.
+If you are interested, please let us know immediately so that we can hold further discussions.
+Thank you while we look forward to doing business with you soon.
+
+Regards,Ijeoma Adiele.
+------=_Part_1087938_2136508993.1737361953411
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"ydp1313561cyahoo-style-wrap" style=
+=3D"font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px=
+;"><div id=3D"ydp1313561cyiv0841408808"><div><div style=3D"font-family:Helv=
+etica Neue, Helvetica, Arial, sans-serif;font-size:16px;" class=3D"ydp13135=
+61cyiv0841408808yahoo-style-wrap"><div><div style=3D"font-size:16px;font-fa=
+mily:Helvetica, Arial, sans-serif;"><div>Dear David Edwards,</div><div><br>=
+</div><div>May I humbly introduce our investment platform to you. We are an=
+ investment brokerage firm and financial advisors. We are advisors to a glo=
+bal financial platform with a number of VIP clients who have commissioned u=
+s to find or locate lucrative investment-friendly economies where their mon=
+ey can be well invested. We also have Loan options for all types of credit =
+inquiries with a very low interest rate. I followed my instinct to contact =
+you after studying your profile and experience online.</div><div><br></div>=
+<div>We plan and would like to invest part of our customers' money in the e=
+conomy of your country, hence this email. We hope to count on your advice a=
+nd guidance on any lucrative business investment in your country and, if po=
+ssible, you can become the investment manager.</div><div><br></div><div>We =
+are thinking about investing in real estate projects (development and sale =
+of real estate), productions, mining, construction and hospitality or any o=
+ther viable sector in your country. However, you are free to provide advice=
+ on other profitable sectors of interest.</div><div><br></div><div>If you a=
+re interested, please let us know immediately so that we can hold further d=
+iscussions.</div><div><br></div><div>Thank you while we look forward to doi=
+ng business with you soon.</div><div><br></div><div><br></div><div>Regards,=
+</div></div><div style=3D"font-size:16px;font-family:Helvetica, Arial, sans=
+-serif;">Ijeoma Adiele.</div></div></div></div></div></div></body></html>
+------=_Part_1087938_2136508993.1737361953411--
+

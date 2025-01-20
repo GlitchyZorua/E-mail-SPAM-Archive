@@ -1,0 +1,139 @@
+Delivered-To:
+Received: by 2002:a59:ab06:0:b0:4ab:cde1:8319 with SMTP id m6csp3169639vqo;
+        Wed, 15 Jan 2025 07:22:43 -0800 (PST)
+X-Received: by 2002:a17:907:9691:b0:aaf:ab71:67b6 with SMTP id a640c23a62f3a-ab2ab73c487mr2787800466b.31.1736954563259;
+        Wed, 15 Jan 2025 07:22:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1736954563; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EcTLy7Hc4WC3i7ENvcxEkPDF2UgXpZS3P49j8kV87nSKg2TnUHpvZqV3J6sNWSLiuf
+         lS8lFc1VSk+ch5ifEKLnB8FJJ/pk7PuLtkK8oxehIVZBFkCDb9NryehCVX8b7lL5QceB
+         6O5SBgBKxMHnO3m0SR1EQLVQTNcCLAIWrfxF3+2fDCxUMMs/ROWXmADt3jOQQyH8fVYd
+         jNYzLl/eds6mFFlZ6auZ5h7il1DCMmMJDcJOgyEY+pdOgqaILvffGF0X++H0ie7/Cpd8
+         5G9jPOIfmZbnoH+5dZEN7Tzvb+sQ7PhW/w3XJ+W65/hY4TZtvEvAUTyEEfqqHkCTmvKK
+         8LPQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=B1SgWiTicjhizPNF70Upwj0CrgCVbB1GOBIEnsVYNvE=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=WIQtGbQcIrG5c5wl2obK6Ox7x3uKO7WK7HiVs7KeYKo4vIerV9CzbFlbWxVAyet36m
+         uu8uY5eC6i3dXojULmiXu2is6+MlZGBCjB9Pfsgkvz81GPzvq7uPxPxSqfJfzIJx6mLd
+         Vw5o36gWkq3GEEIIZ6SE1fQtTOtsgtTn1lgFA7u6FcLKXjL60Ankpv/EuA3hhbS9VU2e
+         Hc8tZFVJoURAfrmVtz0Hq+CxU8LgTn6iw1McCGRW/mn+tUWFHu6JymJHDqjxz7iX8ZHB
+         s5jlJvt6QfX9UVnFepPbkZ5Db97Lw8k2zu0KSR59piDYEj0oAsJnw6cq0y1cY2ETP7an
+         CjnA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=mGblAuKF;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ab2c906438bsor694711966b.2.2025.01.15.07.22.43
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 15 Jan 2025 07:22:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=mGblAuKF;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1736954562; x=1737559362; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=B1SgWiTicjhizPNF70Upwj0CrgCVbB1GOBIEnsVYNvE=;
+        b=mGblAuKF5ilqp4eKYDcLFnPs91UWvlqoscW+cWqBvOLSPf3hTLoihx5ccZFNvLV40M
+         C5o0FmWa+/BJJxFdf2fTcF0tc0nu5j/VH2m/cH/BlCKAtBjS8Z3NMlXSNjq5v7p+D57G
+         GgBRS/IdgTEYvo+AJqlAKICx/nd3a3gPfPuE+vHL6OzltpXH3Rrh+C0Hgltn/AwwzXJi
+         eW42pkXRKYUXO4sTbc4JAUL8+Ze8sf4E38zt8R0hlq6prpOcKXzWsJCjT9scJ9tvoI2w
+         BFeKJrMfJoofB4L950bfKcDSIhj0Bu2Es7XwgQGujGgbd24ozs7Y80jUbZNiDzuDhC2M
+         iCmQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1736954562; x=1737559362;
+        h=to:
+         :from:
+        bh=B1SgWiTicjhizPNF70Upwj0CrgCVbB1GOBIEnsVYNvE=;
+        b=uewWMWpj2BAK+Zqb39XFGOdqYTY5kgaliLlXV38UwH4uOcfA4L95NPGeS+Rm3WiSzW
+         BPMcD5X9GgD3o/D10Yv3NWZJgkSF34lhF7pYNKPjsIqGEhpMy1KG/aT6S9dpGRxUNxnY
+         lA1knfTyfwcmO3c+1IsdqfGh5bKf8DZ3Hxh9Z+LVL4ToTLAoIf/11b8Pizz60ifsnU5b
+         5U16uveYRCN4YHyiiaecHmViR1meiIhvo9hXINBcxUN56Jo3Ny4nHdxbnOt16fXjylEA
+         Ue4459x0C2WOSeIbF0FAE+/SNBo1SVY5DKqRSCI5wLi6TJL5hXs34HifX/3jmLLI6ZOq
+         WMMQ==
+X-Gm-Message-State: AOJu0YxHTJlii+gSYX54J55+00N4LQoLO+FXuzD/abXhYgVVezFKa4pt
+	PkYkRiRmDLcuF2NllJ0RG8x2cmcR9izSzUGj+6DfLUVPjh6ZtVG+Gsa37tZAUGb2hK5VYShUedy
+	Exgko76M5k9MDRQccKcp3mNnXZ5cQO5HePdk=
+X-Gm-Gg: ASbGncultU/QAkj/a7+fyk3rY51zNMHefrNmqgydbEV/fJl6L5I/2Mo+Qg/ru10H+tv
+	xM6JnsyLDN0l07fOn2IneoEB1EVZm9wkFMVqdeQ==
+X-Google-Smtp-Source: AGHT+IFpBsOhguFNMm73o0RCRdnFFeF5I06FIHBtHUKXHbbqfvFFw/919DBQhgSlUvySmDS/Or6zFB8eB0EhMbb9CPg=
+X-Received: by 2002:a17:907:3d8b:b0:ab3:6308:96a9 with SMTP id
+ a640c23a62f3a-ab363089cd6mr4252166b.25.1736954562231; Wed, 15 Jan 2025
+ 07:22:42 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Wed, 15 Jan 2025 15:22:30 +0000
+X-Gm-Features: AbW1kvbr7sIPkkezqDvoxnWYpp3xDyAcEzYktxfPIxXAHM8L55HbCkbdEShOFj8
+Message-ID: <[removed]>
+Subject: Carrie J. Troy, ,Reply Me
+To:
+Content-Type: multipart/alternative; boundary="000000000000ac4c89062bc03f5c"
+
+--000000000000ac4c89062bc03f5c
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Carrie,
+My name is Mrs, Elizabeth ,married to the late Anthony Simpson, I am
+suffering from Cancer of the Pelvic.
+
+I need to pass the rights to Next  of my family Trust that contain $
+24.2Milion to you because Iam sick and hospitalized here in a healing home..
+
+I will give you more details and direct you on what to do through a
+Consultant that  i have appointed,
+
+My reason for writing you this Letter is because my Husband I have no child
+and so we want you to use this money in our names for the less privileged
+and the needy through a  Project.
+
+I want you to assure me that the fund will be used and for the people as I
+may explain to you in details as I receive your response..
+l wait to receive your reply today through email:
+[removed]
+God bless you
+ Mrs,Elizabeth A. Simpson.
+
+--000000000000ac4c89062bc03f5c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div id=3D"gmail-:333" class=3D"gmail-Am gmail-aiL gmail-A=
+l editable gmail-LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body=
+" role=3D"textbox" aria-multiline=3D"true" style=3D"direction:ltr;min-heigh=
+t:295px" tabindex=3D"1" aria-controls=3D":3g9" aria-expanded=3D"false"><div=
+ id=3D"gmail-:33i" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-LW-a=
+vf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"textbox" ar=
+ia-multiline=3D"true" style=3D"direction:ltr;min-height:295px" tabindex=3D"=
+1" aria-controls=3D":3dj" aria-expanded=3D"false"><div class=3D"gmail_quote=
+"><div dir=3D"ltr" class=3D"gmail_attr">Dear Carrie,</div></div><div class=
+=3D"gmail_quote"><div style=3D"height:396px"><div style=3D"height:396px"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div>My name=C2=A0is Mrs, Elizabeth ,marrie=
+d to the late=C2=A0Anthony Simpson, I am suffering from Cancer of the Pelvi=
+c.</div><div><br></div><div>I need to pass the rights to Next=C2=A0 of my f=
+amily Trust that contain $ 24.2Milion to you because Iam sick and hospitali=
+zed here in a healing home..</div><div><br></div><div>I will give you more =
+details and direct you on what to do through a Consultant that =C2=A0i have=
+ appointed,</div><div><br></div><div>My reason for writing you this Letter =
+is because my Husband I have no child and so we want you to use this money =
+in our names for the less privileged and the needy through a=C2=A0 Project.=
+</div><div><br></div><div>I want you to assure me that the fund will be use=
+d and for the people as I may explain to you in details as I receive your r=
+esponse..=C2=A0</div><div>l wait to receive your reply today through email:=
+=C2=A0=C2=A0</div><div><a href=3D"mailto:
+om" rel=3D"noreferrer" target=3D"_blank" style=3D"text-decoration:none">Mrs=
+[removed]</a></div><div>God bless you</div><div>=C2=
+=A0Mrs,Elizabeth A. Simpson.</div></div></div></div></div></div></div></div=
+></div>
+
+--000000000000ac4c89062bc03f5c--
+

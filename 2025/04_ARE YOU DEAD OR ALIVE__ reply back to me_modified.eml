@@ -1,0 +1,259 @@
+Delivered-To:
+Received: by 2002:a05:6402:240b:b0:5d4:322f:18f6 with SMTP id t11csp3269148eda;
+        Wed, 15 Jan 2025 17:17:48 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCW6uexi+RPZdLEkewtCkZskc642PcQnX9qEm7yBJTHIbRu7pq2QWexc3Yi+f9unmvzjWuXiCiGtqD9p+5FHjRnrtRpMsA==@gmail.com
+X-Received: by 2002:a05:6102:151d:b0:4af:5f65:4fd3 with SMTP id ada2fe7eead31-4b3d0d84e76mr25943176137.6.1736990268377;
+        Wed, 15 Jan 2025 17:17:48 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1736990268; cv=none;
+        d=google.com; s=arc-20240605;
+        b=VdxHZQtGitb/VFuVp8KcF5Fxkpfw7nW6SaLFz8JOJAW+CxejI8pixII7c2rIQFS0zU
+         bzN7lM77F6crwUYukJesGUeH7PsQUTSRGLTDi4QfYu111kwbvBiNspWbxr2D9iF5Our3
+         kfkp+5r7qZ83FOw+YO+enikdrjZSqHB9C9Tb9mcaeR2ilJdFz8BYsQn1FYOLyvLnl+3r
+         xQBsknrfsRKgGpklXf5MIdwAXZ6YoogilbgE8ndxfsUcBaZxb7tw2vAbsZQMH7x/RTVf
+         zmXlgHNfgUu6iaUxqy9X4vwH0RANZAh6tXbKJ3cMsi9J2VuTSvOHGfGozKFLCg5cOxle
+         JMog==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=x2ZGwncaazHJwEMg30vyfjyUWZyw9OZ6CFQzYmE1YvY=;
+        fh=tJtNZGDN+fJj3uCaJYEyjaZsTLYAmSsuW/q+CPiAQUg=;
+        b=Fw5OSR4lEZ2I7l/j9eVSlRw7w1HHmmdTMQRm9GFGasmqC7ntPKgs9MqsfTelD/tUGL
+         x+H8lGGGKy0QnccI3X67g73a/FmkffW7sg9d3EoVBmDZ3PEU1AfGyS1rQN650Mp53+2o
+         pSlG1cCWlzL27pGdIAAq7lHPjxAsQUkwgHo647oXPxYI7TRY+nbRHaE0AyLkx0eaPt/u
+         GKgiEgSnxFVaLWwcw5lzsVYY9QqNTYOKFDSN9+TdszSMjYzMsFpHUTqlByHP4JqgCcmy
+         t2J+uE9h2CE7+XgZf65BuawGp+IN7PVBAbZYmxayS9/SHzrlOGEAAoVeVvwzA/9WUXFl
+         Fmyw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OsVKSt10;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ada2fe7eead31-4b608f23153sor1686905137.1.2025.01.15.17.17.48
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 15 Jan 2025 17:17:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OsVKSt10;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1736990268; x=1737595068; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=x2ZGwncaazHJwEMg30vyfjyUWZyw9OZ6CFQzYmE1YvY=;
+        b=OsVKSt10aUKunafwuIQSco+KxzfjFnZBCcnJsBv1T4KHYU1u8pFktzyI1/md9WnxSL
+         fOjf4fY9TlXmFDCd2011nivXUBnwrxUyuKhBtM0MJ5IsuDzcuxAS0Tfuv+kNdffCWg71
+         Wk0ksKumgt1oNZB3KtuwWi2SMgQnvI8GN/UZRzDYzbcaCXADpTIY/DWxe2SwJm0DSKtr
+         S3JcpKDIew6tYDEoguV1qSFNydZ9YzoDapsenChBMpvFl1Tht9o6b3B7U2mEc4G9Q4OL
+         DA/ZwLcVhTN4IJRInNCWPeGnRvqcFPUicOc6NHtW3eF2My5Y3OZ2BWUkgir49i49HxBi
+         q3zA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1736990268; x=1737595068;
+        h=to:
+         :from:
+        bh=x2ZGwncaazHJwEMg30vyfjyUWZyw9OZ6CFQzYmE1YvY=;
+        b=bu+aKDW40i6ktYO7+DHAQsR/9csOxjMF8qpdqWGwQIAl9IigEjdrb960Dc9u/A967y
+         8DluHiHnXoHkL+s5++S71rY7rhqlbuQZ+OAfHtp3dTG5WTWm6qcpmD2Kr03y5Pj7tqdk
+         mhMC9JZy84ACoKYQqdbqpCfP3Ss2XBKJ9nke/HGobAuq6NaTAKEY1sn5uFo9zGbZ25i8
+         OJ0LilS1FI1vkFykAuYHQ2TxwCE+yntW4Hx2J7OV0tqi2Bt6ComTR/xB8sumQu2sC9NV
+         isu/w8RqWdu6y6gnwgjv1Leu/XL0wxRCHeUASo9dONsQe6BVAe1Z2httyZE8ZSYUEJGv
+         YiwQ==
+X-Forwarded-Encrypted: i=1; AJvYcCVSuyLKGFBanvxqfyyKMwoxBHR+PzINs7V4qYz8uRVdk8Qx2INy0E4yzhusOAxVwD84md4vMUbxyr6Mk02N3AKy4J79Kw==@gmail.com
+X-Gm-Message-State: AOJu0YwJmZGZI9Ru13tpFar9Tgbia/OL9ieSEySyqQvXYnE13BmZinFj
+	sOeSo6Ie3eDKexvCl8Gm2BXJRMhKuPi2mAzp6za0c6r7S7KnGfid3FHiOuuSQAFGsafcocHT0Vy
+	7wt9C7GYqLW+WUExvdAREzXPyLyU=
+X-Gm-Gg: ASbGncv7OmckTS9g+p3/4UqPuXxDGqWYATZ1AAqsYSrcMo7hTLBgTAAUa+GDeYAuqMe
+	KpmxhtAKcu7w5omHTg7irMMoQqHkLO4/5AWCkb1F0
+X-Google-Smtp-Source: AGHT+IHOC/+5ywVTMPGLhm6/iSIZFbNYN6VfMZJ4bRjAcGAJkZ1pBm8KfF5Pg6XnYYPgfdMEKAZWWoi9M3ZY2imtLqE=
+X-Received: by 2002:a05:6102:f11:b0:4b2:543f:b454 with SMTP id
+ ada2fe7eead31-4b3d0e8d3famr25711523137.21.1736990267866; Wed, 15 Jan 2025
+ 17:17:47 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Thu, 16 Jan 2025 01:40:08 +0000
+X-Gm-Features: AbW1kvaNBb2ZqlsPvGwgCzEzswQ3CCNGgmPvQ8OvZhWJNCwJOc2V1NszWnDeIFI
+Message-ID: <[removed]>
+Subject: RE:ARE YOU DEAD OR ALIVE?? reply back to me
+To:
+Content-Type: multipart/alternative; boundary="000000000000e5088f062bc88fbd"
+Bcc:
+
+--000000000000e5088f062bc88fbd
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+GOOD DAY TO YOU MY DEAR,
+
+    WE HAD A MEETING WITH INTERNATIONAL MONETARY FUND AND FEDERAL
+GOVERNMENT OF NIGERIA/ BENIN OVER YOUR LONG OVERDUE CONTRACT PAYMENT AND
+WE AGREED WITH THEM THAT YOUR FUND SHOULD NOT COST YOU ANYTHING BECAUSE IS
+YOUR MONEY, WHICH WE FINALLY REACHED AN AGREEMENT YESTERDAY THAT ALL THE
+PAYMENT WILL BE  PAID VIA ATM SMART CARD WHICH IS THE SIMPLEST WAY TO
+TRANSFER HUGE AMOUNT OF MONEY TO AVOID COST OF TRANSFER AND OTHER STATUTORY
+DOCUMENTS, WHICH WE STRETCHED TO HAVE A STRONG AGREEMENT OVER THE PAYMENT
+THAT WILL COST YOU ONLY $195 USD FOR DELIVERY OF YOUR ATM SMART CARD VIA
+UPS OR FEDEX DELIVERY COMPANY OR DHL DEPENDING ON YOUR CHOICE.
+
+I WANT YOU TO READ BELOW CAREFULLY,THE NOTICE BELOW STAND AS CAUTION BEFORE
+IT IS LATE. FOR YOUR CONSIDERATION, YOU MUST BE CONSCIOUS OF THIS
+TRANSACTIONS, AS I WILL SOON CONCLUDE THIS TRANSACTION WITH YOU, LET THIS
+STAND AS A WARNING BEFORE YOU IN CASE YOU RECEIVED ANY E-MAILS OR CALLS
+REGARDING TO THIS FROM ANY INDIVIDUAL, OFFICE, ORGANIZATION AND BANKS
+CLAIMING TO BE ME.
+
+HOWEVER, BE INFORMED THAT THE PART PAYMENT, WHICH IS 3,000.000.00 MILLION
+U.S. DOLLARS HAS BEEN LOADED IN YOUR ATM SMART CARD AND YOUR FUND WHICH IS
+IN TUNE OF 10,500.000.00 MILLION U.S. DOLLARS WILL COME IN BATCHES OF
+3,000.000.00 MILLION U.S. DOLLARS  AND THIS IS THE FIRST BATCH OF YOUR PART
+PAYMENT.YOUR PAYMENT WOULD BE SENT TO YOU VIA UPS OR FEDEX, BECAUSE WE HAVE
+SIGNED A CONTRACT WITH THEM WHICH SHOULD EXPIRED BY DECEMBER 31 2024.
+
+BELOW ARE FEW LIST OF TRACKING NUMBERS YOU CAN TRACK FROM UPS WEBSITE(
+WWW.UPS.COM <http://www.ups.com/>) TO CONFIRM PEOPLE LIKE YOU WHO HAVE
+RECEIVED THEIR PAYMENT SUCCESSFULLY.
+
+tracking number
+Web : https://seaprimeli.com
+Tracking No : SPM847754
+
+MOREOVER, THIS IS ANOTHER PEOPLE THAT RECEIVED THEIR
+
+PAYMENT THROUGH FEDEX WEBSITE (WWW.FEDEX.COM <https://www.fedex.com/>).
+RICHARD AUDRY =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D 869713119185
+GARY METIER =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D 871363130860
+MARK STUBBY =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D871363116168
+
+NOTE THAT YOU ARE NEEDED TO SEND US SOME VITAL INFORMATIONS SO AS TO ENABLE
+ME FACILITATE A SPEEDY PROCESSING AND RELEASE OF YOUR DELIVERY SINCE IS THE
+ONLY $195.00 USD THAT IS KEEPING YOUR ATM SMART CARD.
+1. YOUR FULL NAME...........................
+2. CONTACT ADDRESS ........................................
+3. YOUR AGE............................................
+4. OCCUPATION..........................................
+5. PHONES AND FAX NUMBER..................
+6. COUNTRY...........................................................
+7. YOUR   ID....................................................
+
+YOU=E2=80=99RE ALSO EXPECTED TO FOLLOW MY DIRECTIVES TO AVOID DELAY IN RELE=
+ASING
+YOUR PAYMENT BECAUSE YOUR PAYMENT FILE HAS ALREADY BEEN MOVED TO THE
+DELIVERY COMPANY OFFICE FOR PROCESSING AND VERIFICATION.
+CONGRATULATIONS ONCE MORE AND WE EXPECT YOUR DETAILS SOON.
+
+contact this email address BELOW:
+<below:[removed]>
+
+[removed]
+
+BEST REGARDS
+UNITED NATIONS.
+
+--000000000000e5088f062bc88fbd
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div style=3D"color:rgb(0,0,0);font-family:Arial"><font fa=
+ce=3D"Verdana">GOOD DAY TO YOU MY DEAR,=C2=A0=C2=A0=C2=A0</font></div><div =
+style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">=C2=A0<=
+/font></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D=
+"Verdana">=C2=A0=C2=A0=C2=A0 WE HAD A MEETING WITH INTERNATIONAL MONETARY F=
+UND AND FEDERAL GOVERNMENT OF NIGERIA/ BENIN OVER YOUR LONG OVERDUE CONTRAC=
+T PAYMENT AND=C2=A0 WE AGREED WITH THEM THAT YOUR FUND SHOULD NOT COST YOU =
+ANYTHING BECAUSE IS YOUR MONEY, WHICH WE FINALLY REACHED AN AGREEMENT YESTE=
+RDAY THAT ALL THE PAYMENT WILL BE=C2=A0 PAID VIA ATM SMART CARD WHICH IS TH=
+E SIMPLEST WAY TO TRANSFER HUGE AMOUNT OF MONEY TO AVOID COST OF TRANSFER A=
+ND OTHER STATUTORY DOCUMENTS, WHICH WE STRETCHED TO HAVE A STRONG AGREEMENT=
+ OVER THE PAYMENT THAT WILL COST YOU ONLY $195 USD FOR DELIVERY OF YOUR ATM=
+ SMART CARD VIA=C2=A0 UPS OR FEDEX DELIVERY COMPANY OR DHL DEPENDING ON YOU=
+R CHOICE.</font></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><fo=
+nt face=3D"Verdana">=C2=A0</font></div><div style=3D"color:rgb(0,0,0);font-=
+family:Arial"><font face=3D"Verdana">I WANT YOU TO READ BELOW CAREFULLY,THE=
+ NOTICE BELOW STAND AS CAUTION BEFORE IT IS LATE. FOR YOUR CONSIDERATION, Y=
+OU MUST BE CONSCIOUS OF THIS TRANSACTIONS, AS I WILL SOON CONCLUDE THIS TRA=
+NSACTION WITH YOU, LET THIS STAND AS A WARNING BEFORE YOU IN CASE YOU RECEI=
+VED ANY E-MAILS OR CALLS REGARDING TO THIS FROM ANY INDIVIDUAL, OFFICE, ORG=
+ANIZATION AND BANKS CLAIMING TO BE ME.</font></div><div style=3D"color:rgb(=
+0,0,0);font-family:Arial"><font face=3D"Verdana">=C2=A0</font></div><div st=
+yle=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">HOWEVER, =
+BE INFORMED THAT THE PART PAYMENT, WHICH IS 3,000.000.00 MILLION U.S. DOLLA=
+RS HAS BEEN LOADED IN YOUR ATM SMART CARD AND YOUR FUND WHICH IS IN TUNE OF=
+ 10,500.000.00 MILLION U.S. DOLLARS WILL COME IN BATCHES OF 3,000.000.00 MI=
+LLION U.S. DOLLARS=C2=A0 AND THIS IS THE FIRST BATCH OF YOUR PART PAYMENT.Y=
+OUR PAYMENT WOULD BE SENT TO YOU VIA UPS OR FEDEX, BECAUSE WE HAVE SIGNED A=
+ CONTRACT WITH THEM WHICH SHOULD EXPIRED BY DECEMBER 31 2024.</font></div><=
+div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana"><br=
+></font></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=
+=3D"Verdana">BELOW ARE FEW LIST OF TRACKING NUMBERS YOU CAN TRACK FROM UPS =
+WEBSITE(<a href=3D"http://www.ups.com/" rel=3D"noopener noreferrer" target=
+=3D"_blank">WWW.UPS.COM</a>) TO CONFIRM PEOPLE LIKE YOU WHO HAVE RECEIVED T=
+HEIR PAYMENT SUCCESSFULLY.</font></div><div style=3D"color:rgb(0,0,0);font-=
+family:Arial"><font face=3D"Verdana"></font></div><div style=3D"color:rgb(0=
+,0,0);font-family:Arial"><font face=3D"Verdana">=C2=A0</font></div><div sty=
+le=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">tracking n=
+umber</font></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font f=
+ace=3D"Verdana">Web :=C2=A0<a href=3D"https://seaprimeli.com/" rel=3D"noope=
+ner noreferrer" target=3D"_blank">https://seaprimeli.com</a></font></div><d=
+iv style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">Trac=
+king No : SPM847754</font></div><div style=3D"color:rgb(0,0,0);font-family:=
+Arial"><font face=3D"Verdana"><br></font></div><div style=3D"color:rgb(0,0,=
+0);font-family:Arial"><font face=3D"Verdana"></font></div><div style=3D"col=
+or:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">MOREOVER, THIS IS A=
+NOTHER PEOPLE THAT RECEIVED THEIR</font></div><div style=3D"color:rgb(0,0,0=
+);font-family:Arial"><font face=3D"Verdana"><br></font></div><div style=3D"=
+color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">PAYMENT THROUGH =
+FEDEX WEBSITE (<a href=3D"https://www.fedex.com/" rel=3D"noopener noreferre=
+r" target=3D"_blank">WWW.FEDEX.COM</a>).</font></div><div style=3D"color:rg=
+b(0,0,0);font-family:Arial"><font face=3D"Verdana"></font></div><div style=
+=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">RICHARD AUDR=
+Y =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=C2=A0869713119185</font></div>=
+<div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">GA=
+RY METIER =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=C2=A0871363130860</fon=
+t></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Ver=
+dana">MARK STUBBY =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D871363116168</f=
+ont></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"V=
+erdana">=C2=A0</font></div><div style=3D"color:rgb(0,0,0);font-family:Arial=
+"><font face=3D"Verdana">NOTE THAT YOU ARE NEEDED TO SEND US SOME VITAL INF=
+ORMATIONS SO AS TO ENABLE ME FACILITATE A SPEEDY PROCESSING AND RELEASE OF =
+YOUR DELIVERY SINCE IS THE ONLY $195.00 USD THAT IS KEEPING YOUR ATM SMART =
+CARD.</font></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font f=
+ace=3D"Verdana"></font></div><div style=3D"color:rgb(0,0,0);font-family:Ari=
+al"><font face=3D"Verdana">1. YOUR FULL NAME...........................</fo=
+nt></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Ve=
+rdana">2. CONTACT ADDRESS ........................................</font></=
+div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana=
+">3. YOUR AGE............................................</font></div><div =
+style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">4. OCCU=
+PATION..........................................</font></div><div style=3D"=
+color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">5. PHONES AND FA=
+X NUMBER..................</font></div><div style=3D"color:rgb(0,0,0);font-=
+family:Arial"><font face=3D"Verdana">6. COUNTRY............................=
+...............................</font></div><div style=3D"color:rgb(0,0,0);=
+font-family:Arial"><font face=3D"Verdana">7. YOUR=C2=A0=C2=A0 ID...........=
+.........................................</font></div><div style=3D"color:r=
+gb(0,0,0);font-family:Arial"><font face=3D"Verdana">=C2=A0</font></div><div=
+ style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">YOU=E2=
+=80=99RE ALSO EXPECTED TO FOLLOW MY DIRECTIVES TO AVOID DELAY IN RELEASING =
+YOUR PAYMENT BECAUSE YOUR PAYMENT FILE HAS ALREADY BEEN MOVED TO THE DELIVE=
+RY COMPANY OFFICE FOR PROCESSING AND VERIFICATION.</font></div><div style=
+=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana"></font></div=
+><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">C=
+ONGRATULATIONS ONCE MORE AND WE EXPECT YOUR DETAILS SOON.</font></div><div =
+style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">=C2=A0<=
+/font></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D=
+"Verdana">contact this email address BELOW:<a href=3D"mailto:
+[removed]" rel=3D"noopener noreferrer" target=3D"_blank"><br></a></fon=
+t></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Ver=
+dana">=C2=A0</font></div><div style=3D"color:rgb(0,0,0);font-family:Arial">=
+<font face=3D"Verdana"><a href=3D"mailto:
+ner noreferrer" target=3D"_blank">[removed]</a></font></div><div=
+ style=3D"color:rgb(0,0,0);font-family:Arial"><font face=3D"Verdana">=C2=A0=
+</font></div><div style=3D"color:rgb(0,0,0);font-family:Arial"><font face=
+=3D"Verdana">BEST REGARDS</font></div><div style=3D"color:rgb(0,0,0);font-f=
+amily:Arial"><font face=3D"Verdana">UNITED NATIONS.</font></div></div>
+
+--000000000000e5088f062bc88fbd--
+
