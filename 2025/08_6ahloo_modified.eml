@@ -1,0 +1,160 @@
+Delivered-To:
+Received: by 2002:a59:b530:0:b0:4b7:94ae:128c with SMTP id k16csp1855986vqi;
+        Mon, 24 Feb 2025 05:36:02 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCX70SK7E3NFal8o/UoeBKXpNT8MkIYI78XzUvnVAgSprB5hnG+y14EERiYXzUBfWhTb3UxE5kiKPmLd7NK2kylLsUgsCA==@gmail.com
+X-Received: by 2002:a05:6a20:2585:b0:1ee:aa76:231f with SMTP id adf61e73a8af0-1eef3c8a924mr24285576637.18.1740404162273;
+        Mon, 24 Feb 2025 05:36:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740404162; cv=none;
+        d=google.com; s=arc-20240605;
+        b=OZYjEk+MIwPyKO3a3MGdvOLxX9dlKQBip5I58B9ZbLNpYpDS/UXOUfhM+QDSziuxVb
+         hB1HcPXHff9O+scONRavf/50RNeUN0RgzJYK2t9zZeIWLspE49T2sdr1tlS9GSMZgVHi
+         A52QOD8h/FWWE4nd20SL9QEBzzOKueB+jAqZf+DPufxz/noEufH9jCD1QnusIz/UzuuD
+         eDtPik/rdewOgng6+1yUUlkH62G5ee+W8k6SIugGYUcBBx66/jrf/ZY2qvkAdQrA/3OZ
+         g3qr0pDNBzn5mOdh5n0lumuqN9w2oKgH0OwSmXQFUpTsoAXQKNJlwzQSsPbem9VsMXWu
+         BZYQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=8qPp1mww+HBjFEjzJGyKDmrV+gJfVSnFRyuTtAmK5cA=;
+        fh=4XbhK9UbUitM+B0aG8lKIRX07ueNPN3gXFVi86RG7Ls=;
+        b=ihs2WHqoDobDqSpj5uVCVyFlrzlxXApqtQQ8An7uu6IglnpuLxxeHFjfgTOQIT794J
+         gbY/ADpLMvv3mnwmHRqN232yOFxKNTx42gBLtnh8z4wnLgF0WEhfbHPNiVkcytDYvgNT
+         tRSoi0HMJu2LOMl0cw0xAKC+jngMrKFHU8108bVOfdsw0SGVVhTPawxD5PhLOK5BMe42
+         vMoO7G3o/omIq1pVKZbR9POREKNHZrAAnrS0aB5npYVbY6Ak9XD7he2MeasPvsV2unlW
+         Y3nDPYLnBvkNhrq+DmroM7kfDvGYMWK1spamnd3ChOaxqkD2vymB+Z8hT8JyxHiI0dwj
+         t5FA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=We3U6Jaj;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 41be03b00d2f7-add5d06c0fbsor13566645a12.4.2025.02.24.05.36.02
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 24 Feb 2025 05:36:02 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=We3U6Jaj;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1740404162; x=1741008962; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=8qPp1mww+HBjFEjzJGyKDmrV+gJfVSnFRyuTtAmK5cA=;
+        b=We3U6Jaj8/w9frEIlTgknM2WbPFZuuN7+wKe+jcIBZk6KoZAIc+a4Kqmre0guleyD6
+         3LzUtxQHW6Wn25npo7eKBh7ARNHUvCnwE3+2ubc36FPKwggNqkeh81FKmfi7m9J9Gt7Z
+         13IU9LFK0FtCOHpCbl9hUE6ches1MksnripOSogp2AEClJMnyTIK53VXsjqmX2EWoLN9
+         XhOBngM7NJ5mfbKHhcvmEgS/a0MDKnBl8RGARRWLAjEAw7JPeAQ6+IGSxdttZW4cD1NZ
+         x7aY4K8lIyeFbKhzJg/G6OTUb1eMXU/NEsoM9QDZ1mip0q0DkKYvXGvaZ0bjJjtPk/Kp
+         ECbg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1740404162; x=1741008962;
+        h=to:
+         :x-gm-message-state:from:
+        bh=8qPp1mww+HBjFEjzJGyKDmrV+gJfVSnFRyuTtAmK5cA=;
+        b=dRzmlOeGlpINDa79YDY35HFiuc4/GpD++RZUfP5R2lybpWwOn6Km0Ma0BqoY4T2Wqf
+         krwfdHm2yKmZoZirAHWNbV2ZtveQ9E98sQvESQ9ViLEtnL1lEk1xl97FPnXbJZaNgmEV
+         b6VJhg7lFxwOvPoyNWbyVdmEsszW0BgiB77p8Jdnq0L3j4U0FPguWZaMsnCx3P7Gf/6V
+         Y+Z/6lEH6uIZ6QqWvx0UDUAGvf3RPvQEynB78hTfWPbXz08sn87x0OoG7YCzjX+07JXu
+         sxt2gRhD041fRhlnaEJvR3KmdlBcFbIajeSV7bE/eBky9UzxNXDCmIYmDWHvWY8phymQ
+         ZQBA==
+X-Forwarded-Encrypted: i=1; AJvYcCX4R8bNoe7Q/SFwze6v44vEugdsEHEuRmRouEFwuCBxTMJrZms+FAYb2p7kZO5lgKuDKAwi2aYTtiXodLXNeK2q5mjRmA==@gmail.com
+X-Gm-Message-State: AOJu0YwlmClQGlwrH6F+H7AoeLzPODV2voGzAvUzlRTnPMZN8boa8GmV
+	ZmZGc13EyRLB8zj3EiWBqIwCjfpjew7ygs2bd951O3C50B11UMZoVULelJ8dT+aj3VkZjQJCK3q
+	A6uuwIYYMUVVVk6DTAW3hPlueY21zoEgF7x7lGw==
+X-Gm-Gg: ASbGncvkM8rKsvwDG9k8hOrvYXLiX8b6PmyBXR6Cq6+hUHwp6EOMmHdESf9KxZRdvn2
+	to8ra59FMvpBETWgb2aMGznQxw0xqZIdbhbqsoDN5t9iP3Y6pQbW662R1MI3YC+9unuYFlPnB7i
+	DyPVizxV8=
+X-Google-Smtp-Source: AGHT+IEEeo1ZGH6B5tfmZx01DhOispzLDNgpbtRs35Y9G3UIEMv/T5wqJ98eRvfTRztr5JJGCZMRilo+pxWB3AmEyew=
+X-Received: by 2002:a17:90b:5202:b0:2ee:e518:c1cb with SMTP id
+ 98e67ed59e1d1-2fce789de87mr24391613a91.7.1740404161504; Mon, 24 Feb 2025
+ 05:36:01 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 24 Feb 2025 06:35:48 -0700
+X-Gm-Features: AWEUYZnaL_6HFxawKb36RK9T_Z73QV4Dd-yzqhwovw879haPzoor4KSxHKcYR9I
+Message-ID: <[removed]>
+Subject: URGENT: President Trump Needs Your Support for Elon Musk
+To:
+Content-Type: multipart/alternative; boundary="000000000000cff013062ee36b54"
+Bcc:
+
+--000000000000cff013062ee36b54
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Patriot,
+
+
+This is your President, Donald J. Trump. Our great friend and visionary
+entrepreneur, Elon Musk, is facing unprecedented challenges from the
+radical left and mainstream media. As someone who has always stood for
+innovation and American greatness, Elon needs our support now more than
+ever.
+
+
+I am calling on my most loyal supporters to come together and show Elon
+that we have his back. Your generous contribution will help us fight
+against the unjust attacks and ensure that freedom and innovation continue
+to thrive in our beloved nation.
+
+
+Please donate $50, $100, or whatever you can afford to stand with Elon Musk
+and defend our American values. Make the amount in Apple Gift Cards and
+send it to my email quickly.
+
+For further information, please call me, Donald Trump at:* +234 807 644
+8550*
+
+
+Together, we will MAKE AMERICA GREAT AGAIN!
+
+
+Sincerely,
+
+
+Donald J. Trump
+
+--000000000000cff013062ee36b54
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap">Dear Patriot,<=
+/p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap"><br></p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap">This is your P=
+resident, Donald J. Trump. Our great friend and visionary entrepreneur, Elo=
+n Musk, is facing unprecedented challenges from the radical left and mainst=
+ream media. As someone who has always stood for innovation and American gre=
+atness, Elon needs our support now more than ever.</p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap"><br></p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap">I am calling o=
+n my most loyal supporters to come together and show Elon that we have his =
+back. Your generous contribution will help us fight against the unjust atta=
+cks and ensure that freedom and innovation continue to thrive in our belove=
+d nation.</p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap"><br></p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap">Please donate =
+$50, $100, or whatever you can afford to stand with Elon Musk and defend ou=
+r American values. Make the amount in Apple Gift Cards and send it to my em=
+ail quickly.<br><br></p><p style=3D"margin:0px;text-indent:0px;white-space:=
+pre-wrap">For further information, please call me, Donald Trump at:<b> +234=
+ 807 644 8550</b></p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap"><br></p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap">Together, we w=
+ill MAKE AMERICA GREAT AGAIN!</p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap"><br></p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap">Sincerely,</p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap"><br></p>
+<p style=3D"margin:0px;text-indent:0px;white-space:pre-wrap">Donald J. Trum=
+p</p><br></div>
+
+--000000000000cff013062ee36b54--
+
