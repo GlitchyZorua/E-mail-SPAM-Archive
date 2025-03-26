@@ -1,0 +1,134 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp3349421vqb;
+        Wed, 26 Mar 2025 07:23:51 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCV9eloZDL09EOdDFQTmc4AV6qy6RJX0ADxcuvkhR1yfxy6KiccKsV5vCCVq5VsXN+N+tB1a9ggJy45SFGbkpZo6xyIYEA==@gmail.com
+X-Received: by 2002:a05:6102:ccd:b0:4bb:eb4a:f9f2 with SMTP id ada2fe7eead31-4c50d4d2729mr14690307137.9.1742999030805;
+        Wed, 26 Mar 2025 07:23:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742999030; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kszk91CS20y2Kv6jJyWn5lcA7xXqIRqydCJUcEmISbJHelLFUE9SyUhsGc3zDbRHHk
+         1uCtpFNm+fMDUWZ5pSSxpJgsRgIQbBxDG0ND0K9d/WLviRRS/pCz4LHcDCQbOeaFKNBe
+         GDOb4e4isjucMZJp0xcxdlICRq1mFPsFhxki9WunoHfwRSsPCn2Yr9Ilb1hK0I5RhbkV
+         XD3R3E756uPLxyVwwUDt/wwzw3+QtzbmFzhqJdLPd2R+bhEQpSwTV6A+3bLYfPRxRXEm
+         guYP4PkB0ImNXRe8rg6kRPa2koYpcZq5Yl/VtBuepk2Z6l/2zej80k0BjJW0H4GtmyfK
+         DVgQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=puOCie/N2IJG8ymF3b23JRflhtg4J6orYfaEJC2rIlY=;
+        fh=BqKEObEzMhNppcdJnQ80wJVSqQptW4hoaQEGIXGJmow=;
+        b=MU6XQ8zr2RmzOelRxLnchpiTgB//gXYiTPZ4bJcn4HUul3usksLBsvQ+P/mwMRlTiA
+         pe8auwDX3Z4wrkMv5CGKXr5TwwjZBhvx1HyNFJvPCS4WYIQvCQ0ZuNUDPln67J0nR76N
+         orRkBFO73WxZZn/XGnZ0KJXG+uDxawBLQco248+AzigXnyH0Aeonin7UZOX4dPfMOmZ6
+         4sh2aUfIUtBv0ppw8nu8c8Yo/Is2T40kCqdEP4VGBpvGHUd3M04xfMEMXTFWkuijPZ0/
+         fXdW980rGtVjk630nXZtHNmHhoBtoZsuFq9zNOYWgsa6u5qcKSTsKtrikgSqvx3gf+V8
+         VX4g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=lnVS+1W9;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a1e0cc1a2514c-86f9f4689d1sor1155505241.4.2025.03.26.07.23.50
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 26 Mar 2025 07:23:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=lnVS+1W9;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742999030; x=1743603830; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=puOCie/N2IJG8ymF3b23JRflhtg4J6orYfaEJC2rIlY=;
+        b=lnVS+1W996X1vtLkydmr9HW/WSPgfZ5yqrRG330jMgBv9T/bJzY6PtBm9KnHYk6t3o
+         gUynh6BRfYVlJohf20vjRMWJAT2i7Hpz+Vm2WfK4MD2huIZPj0f5cfMkCvqyH/6c3MmD
+         fDBa19dnokS2njkDE2VbqFspRXmOWL9DJK52vh4N2NmBuFS9w1RNnp9TduevnihE/BAk
+         oW+4qqmX4I9eP0o4BFb4FwZUsetn5ZFLZjVzQhy43RbGQlAMHE7n13wdn0Bblq6PMyIs
+         sP1PISPAfS1nJYDV40shTOSd6M/E9y2V9hJjx7hhbYUIYdrtqV9tlpTGt/q8TDJsQSq/
+         W2lg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742999030; x=1743603830;
+        h=to:
+         :x-gm-message-state:from:
+        bh=puOCie/N2IJG8ymF3b23JRflhtg4J6orYfaEJC2rIlY=;
+        b=KgoR/nr92L71rrz47q5PZZ5RG0RyoXgUOU89+SYKbJJtzwonW6PHPRRPFijMYolJVQ
+         I7qb48PQmvpyOwzxCGitt5kLPoUVdss0itIDrKc4sSmNttIaVhMnfp1iSLejOwHzMSA/
+         wWobfoqoSQQdLys5qwJhnaVYFKMleGTi2Al4KCADRC6p4ZRYSDVRjBz6GfU977MGi0uE
+         QjmXY7yAdcCn5GmScMnXWlSZu9MrH4L6N20JZn4dGmLUWkgoMvD+OLy+cfwfLWC1qBcN
+         fcNeopi43Aw80ZtWcdLlFxph594MyyncIlLalYT51B7LFR0pie8ev3SG/qV94tpC6nRf
+         fb8g==
+X-Forwarded-Encrypted: i=1; AJvYcCVjsZAy1Uc6IUXwCzEkbvXLqBOw833GEWtEvxULxmO1w5l0fjRwaYMIn+BBeu7twNbJRyYfrRsMUXh5D1oOoPvU6/O7KA==@gmail.com
+X-Gm-Message-State: AOJu0YxfUk+0DxyqsM55iAmPR5QclxHxEjGJ5lmTbR7vQWreKl6BSuJ3
+	rF0VQRSSOYu0Pf8uC132fk1iQJ4pjVDx7inLrQm13ljOcYJ3wE5FLD2f705OqZshz0NENgezMag
+	FvmM0nUiYwQiYKkgHOzwTM5mQ2vs=
+X-Gm-Gg: ASbGncsEe3lCD0hY/TFZe2uv3TSCvrXWek8/T+PHtlkLJcQBivKjt28xHP6tHQWHUIb
+	YkzgJw+u7YTuLqMETQY8wLBsdEV6zaCtJ4fFHRzBlwNsEjGilePV+Mx6oSKbTHqlOKfTwPyBVO3
+	0BuaTVRPXe9xS1YNIb8dZ5pohwNw==
+X-Google-Smtp-Source: AGHT+IG02+1SzxL9a7nlDprld2Gsm/dB61AKNIS3IQHJ5NmBXR7S93y9xMARfmpv+UGimz7Vyyaqdg2cOFPufJZi/iI=
+X-Received: by 2002:a05:6102:54ac:b0:4c1:9526:a635 with SMTP id
+ ada2fe7eead31-4c50d62702emr16145340137.17.1742999030034; Wed, 26 Mar 2025
+ 07:23:50 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Wed, 26 Mar 2025 07:23:36 -0700
+X-Gm-Features: AQ5f1JroLQlNlMYcJHrN8qLhDdHbf32pbSU8XJp0AB2WMyEGKUuIKF8jxkQArNo
+Message-ID: <CACmeW2ukPukAc9pasfKBAfe9ZT-27fSWfcSh9=+ok=[removed]>
+Subject: Attention
+To:
+Content-Type: multipart/alternative; boundary="00000000000007798606313f966c"
+Bcc:
+
+--00000000000007798606313f966c
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Friend,
+
+If this message intrudes on your privacy or causes you any inconvenience, I
+Sincerely apologize as that's not the intended purpose.
+
+I am one of the senior staff of Rabobank, here in the Netherlands. We have
+an amount of money to the tune of Fifty million United States dollars
+(US$50,000.000.) only, floating in our Bank that we can re-profile for our
+mutual benefit if you agree to cooperate with me.
+
+This is just between You and me, and we can split the fund in the ratio of
+50/50%, as I do not want to be greedy. You will be the recipient and I will
+show you how we can execute the transaction successfully. There is no risk
+involved and it will be a hitch-free transaction.
+
+If you want to work with me, kindly indicate your interest in doing so and
+I will give you the details. This is strictly confidential and must not be
+disclosed to a third party please.
+
+My Regards,
+Samuel G,
+
+--00000000000007798606313f966c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr">Dear Friend,<br><br>If this message intru=
+des on your privacy or causes you any inconvenience, I Sincerely apologize =
+as that&#39;s not the intended purpose.<br><br>I am one of the senior staff=
+ of Rabobank, here in the Netherlands. We have an amount of money to the tu=
+ne of Fifty million United States dollars (US$50,000.000.) only, floating i=
+n our Bank that we can re-profile for our mutual benefit if you agree to co=
+operate with me.<br><br>This is just between You and me, and we can split t=
+he fund in the ratio of 50/50%, as I do not want to be greedy. You will be =
+the recipient and I will show you how we can execute the transaction succes=
+sfully. There is no risk involved and it will be a hitch-free transaction.<=
+br><br>If you want to work with me, kindly indicate your interest in doing =
+so and I will give you the details. This is strictly confidential and must =
+not be disclosed to a third party please.<br><br>My Regards,<br>Samuel G,</=
+div>
+</div>
+
+--00000000000007798606313f966c--
+

@@ -1,0 +1,325 @@
+Delivered-To:
+Received: by 2002:a59:bc64:0:b0:4bf:d2e8:882f with SMTP id t4csp594841vqy;
+        Wed, 19 Mar 2025 16:39:54 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCU6Il9ft4z+dIp4Rf/FR/84K08Jy2aTNDRFLPIEl91IKlUhJjOkdDT0Wnuo0EKw+l25a7l+PZk6g9+8yC5kLEK/iXjEMw==@gmail.com
+X-Received: by 2002:a2e:a589:0:b0:308:e956:66e with SMTP id 38308e7fff4ca-30d72669124mr5267211fa.0.1742427594681;
+        Wed, 19 Mar 2025 16:39:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742427594; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ZosfOKk83A3DtEW8eA9S8xPQdn+abTNbPRFfu2KxDa5ZEWIBwlU0MU8EfyPchOuwxM
+         v2/f5zy2k0P5h0IFdzCcms9FHoQ2YKpn5AYwFzzWVaMAI8c069B+cAhD1SNKZvuybw+u
+         6eml1DCvhaSX0kpYamuuwjTnOXiI96CE3Z4jdg/7rDlEXGCJ7Kn8gblj3ZCzkmfcmPId
+         M5K4PShCn5UBgV0JX/W21r/jQec0kkyunwpnxg4cG5XzE3UK1saYjYD3H3o375nhJ1Iz
+         4BQj0dMvU++5ey6AizJsBcyzwxpbzZmd30gXQSLXI9Nkw8oaxNh05zmOMiTEs8q+jVmt
+         qpGA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=0VS2OHOG+dbyfNTe9ooCgEd7emdz+LrBnG8J0Uy9hWI=;
+        fh=CMtwtZDOaZ6WYx42upNWjlHcoTLPnvNr7lZmhL06kTc=;
+        b=EakAlIfdzbD5w4bR3ljj+B9N/tfjZw2rLozwAuhtpIUg4SBqEHF0AVdYZR0U3DMguS
+         htKiDL8K4NWt7pRkNf+kflNb9VtVrfxNtmf+pUCCJ3zmKvTFauLQca2P0Bm/TNZnC8WY
+         dx/nPlQBqkeBABWm0b61970gIn/DWP/BSqICLT89X2yX2EXogQtzG8s9sWbuBUFYJYFH
+         y0vXutGmxrAFgKIZZspz18vdnD50XPHRRk0XoshAkLqb4tmC+hoC+4GwnBIeAFa3Dq6C
+         Bls6nSXaMScSE8F1DUhJ3ENnF4VtRy2mEneWztq1BBM14QoM705eq73gPjcGY1dIESic
+         5flA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=dQ217yjM;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 38308e7fff4ca-30c3f0f1a98sor23574891fa.2.2025.03.19.16.39.54
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 19 Mar 2025 16:39:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=dQ217yjM;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742427594; x=1743032394; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=0VS2OHOG+dbyfNTe9ooCgEd7emdz+LrBnG8J0Uy9hWI=;
+        b=dQ217yjM0giN41zBE5hqXSQcU3FSY8ZFCt16oh/vdS8aJ82G0kmWQZ6Hihpj6J7xJU
+         v5V0Lbpp+5b3A51piZ1OeNoCxAPu3W4OFFwURFAP9qHeo6Gu5pN39KghW7u+lZgnM15R
+         yhBFM8Zh32qjM51HaDse8Xd3Ol0oG5XXoqyBWJQinwDWYOGXBvAGcNpjRyJDshbMnNC0
+         neKfLsFte8bxd0Ts7US78MEthQlw61/mX4947O8ZCgBZ5XcBKDxCKKY+qMsy3ju56Nu+
+         mamncklXlduXXS7APC6gDA2PDErLKpMu6JuNexVjsMCf30lF+k2rd7ec0ftp9Unl53LH
+         DILQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742427594; x=1743032394;
+        h=to:
+         :from:
+        bh=0VS2OHOG+dbyfNTe9ooCgEd7emdz+LrBnG8J0Uy9hWI=;
+        b=rH2PIiFX/czcLUq6EuB7zYTQ0XO0sPcjlqZJPEq3YmUeFuENi1YbiIZGAkDndX2kPn
+         WmGPHv+Cy4EMmh8wUllmQ2zUoZbmT6DY3mipZc0Ryiy1Un03a/mKRX9tYs7gJB9Aw2Rt
+         CQCJSCauO6IyDqFDGsczHfNLN1G7puAgi++3uYgbRiEWYD5+5bjTqfliTXXy5iXhe+zw
+         Bz3qVpfLyUCfpGFshOxcmLjKvCqfsZHh8YULD+OZ/Pud83nNfncVhP42BK+eZGgDavFK
+         wONGQuq/qcMf5qF9JQRjXqLQYg8wiOscoj0fRgmX3as/zq4A3Wo5xUWRHEZRZfFdJCR9
+         eFSA==
+X-Forwarded-Encrypted: i=1; AJvYcCVet+c89vtkqHvvyc7sqQQnPxjzhFm73f+I4xUNHZJPOcn+U6QmMfpOLVv/92Lock101qfRnjWW3j4mPBuK7mv/6+oi7A==@gmail.com
+X-Gm-Message-State: AOJu0YyQMeq9oWjm2i7OQ6jk7eIryOwUIuwS4qQ7vGUPJ+4fERxcDCm7
+	0xYalxcgjAzGVks/F8/eP99VzKwncI+/Bo8DBFbTeiTLduU3VNPBEkdvl0IzXOkZUrwPpp6rfX+
+	+r68U2eEXurs6yCBH4AvPNdrh3XY=
+X-Gm-Gg: ASbGncsVSGNS9ITq3VazfQhkNkPZ5mp3dni16teJsXDXgO4pjJ6LTekK7NzxFBLvUHX
+	scO1HvOPl3Nc8VEfccD13a5yTGhUrcEQGkrTnjNjb4nSSCH1sh/wYXTkTfPXe1X6zChIde2Q3tD
+	4WDVFs5uV+e9PRV6YjmstnIXao6tNG
+X-Google-Smtp-Source: AGHT+IGwY6qE52Afvv1/vPyOUDZmLNOWy0tDAITKq6QPsteAa+JKpPI4O7sXNtMvQvw7M0iUMCn5emd+9rQqOmwXXC0=
+X-Received: by 2002:a2e:bc01:0:b0:30b:b908:ce01 with SMTP id
+ 38308e7fff4ca-30d6a48d932mr7912011fa.9.1742427593838; Wed, 19 Mar 2025
+ 16:39:53 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Wed, 19 Mar 2025 14:38:53 +0300
+X-Gm-Features: AQ5f1JrHdS2dEWtC_H9FeUYekI8nX8MZGODxTl81sGCl5u2rF_dXv1Ec5sHNlg0
+Message-ID: <CAA=[removed]>
+Subject: Investment Funding Proposal
+To:
+Content-Type: multipart/alternative; boundary="000000000000c717560630ba891c"
+Bcc:
+
+--000000000000c717560630ba891c
+Content-Type: text/plain; charset="UTF-8"
+
+ Greetings Dear Friend, I hope this email finds you well.
+It's a pleasure connecting with you and I hope you are having a productive
+week.
+I am Mr. Donald Wilson a Financial Consultant, I represent the interests of
+wealthy investors and private lenders that provide funding and offer
+business loans nationwide.
+
+We have a mandate with private money lenders and investors that invest the
+majority of their funds into Profitable Investment Opportunities. These
+Investors are ready to invest in your country through you, as an investment
+manager in putting funds into projects that can guarantee cash flow and
+good investment profits.  We provide working capital and funding solutions
+for investments to individuals, businesses and real estate investors
+nationwide, as we have funding and lending options no matter your
+Investment strategies.
+
+Equally, we are ready to work with brokers, financial consultants and
+consulting firms in their respective countries. We're ready to pay you a
+commission reward for referring quality clients and investors.  Please feel
+free to reach out to us for more details and onward communication via,
+
+Email:     [removed]
+
+Looking forward to hearing from you.
+Yours Faithful,
+Mr. Donald Wilson
+Private Financial Consultant.
+
+--000000000000c717560630ba891c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+<div dir=3D"ltr">
+
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+
+
+
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+
+
+
+<div dir=3D"ltr">
+<div><div>Greetings Dear Friend, I hope this email finds you well.</div><di=
+v>It&#39;s a pleasure connecting with you and I hope you are having a produ=
+ctive week.<div>I
+ am Mr. Donald Wilson a Financial Consultant, I represent the interests of =
+wealthy investors and
+private lenders that provide funding and offer business loans nationwide. <=
+br></div><div><br></div><div>We have a mandate with private money lenders=
+=20
+and investors that invest the majority of their funds into Profitable=20
+Investment Opportunities. These=20
+Investors are ready to invest in your=20
+country through you, as an investment manager in putting=20
+funds into projects that can guarantee cash flow and good investment=20
+profits.=C2=A0 We provide working capital and funding solutions for investm=
+ents to individuals,
+businesses
+
+ and real estate investors nationwide, as we have funding and lending optio=
+ns no matter your Investment strategies.<div><br></div></div><div>Equally,
+ we are ready to work with brokers, financial consultants and consulting=20
+firms in their respective countries. We&#39;re ready to
+pay you a commission
+
+ reward for referring quality clients and investors.=C2=A0 Please feel free=
+ to=20
+reach out to us for more details and onward communication via, <br></div><d=
+iv><br></div><div>Email:=C2=A0 =C2=A0=C2=A0
+<a href=3D"mailto:
+[removed]</a>
+
+
+
+</div></div><div><br></div><div>
+Looking forward to hearing from you.
+
+</div><div>Yours Faithful,<div>Mr. Donald Wilson</div>
+Private Financial Consultant.
+
+</div></div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+--000000000000c717560630ba891c--
+

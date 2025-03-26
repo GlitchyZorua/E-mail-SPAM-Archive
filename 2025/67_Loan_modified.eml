@@ -1,0 +1,112 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp1303307vqr;
+        Thu, 6 Mar 2025 01:23:25 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXfdG1ZVIfnJNrEvzeNHxsoamYM4VpyFMwkP+hbuxFvjvqDW4p645f/QRi2daCt4PFdSGz7M0apuEf+AOu9p1nswUZfOA==@gmail.com
+X-Received: by 2002:a05:620a:880b:b0:7c3:97a8:901e with SMTP id af79cd13be357-7c3d8e2f907mr816626785a.14.1741253004792;
+        Thu, 06 Mar 2025 01:23:24 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741253004; cv=none;
+        d=google.com; s=arc-20240605;
+        b=AmJqRKH1yoHpSDPL7tezu79J1q/tdsfHwD/SoxARFCQMwtK0v1p2iCgE8umDsjrvPe
+         8WS+zdBI4Mi9nAdF2mXb4MAlhQBZRczEd3XDCj2PyGxOsq1Fa1XEBsj6IIU3gLLX/SJO
+         pHA4Q8vThNzCitGqEsKLPOF5LsSX7DDir4lllY0s48914qhvtMMaYrBlkOEPV4vc8cH3
+         bkFyUo4pZQ15qxazBiX2uGTD4KIQKWne+V3LcELhhrbQm1w9S73WUIlAneV7p9VMuvFC
+         1xQxTKx51i/9Dbnf5dTv/a9zm41M0IMOn95lxK7v8SONOMC8OYBbnJlyPVQMUy5XWBUt
+         hgyQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=K0eM3zaO/Io/3ENuIWMMr8/LgyZNe0su0FwBJAcVbAs=;
+        fh=sTL9p9/Ggg0PSRBUX/KCXIayOLhCZW0/lIfYWs/rht8=;
+        b=QD7vG4lzbX5NiG0iQ9Am0MHpyDHrkSIATruNgMHPTSbWKaRPwHjRTZlhtLwqPXGSBN
+         PbTRxyRIyCXfYibibAhBITiNRlGDNYWC89xYd6QEe1DWyaCa42p4LtfzNk58xRCVOEMD
+         ojV6Xw8+wOuOZtqiVv/Zs3vDy2tLKZpausJyXyoaD65/2UBqCwxnEyX0QzNHjR0baXQo
+         kbrMt5t9krQ1RdXRK2MelFq18foZCyy7ivOyxkIJPqzXoE9NiGkKqsIqJTEaUjgjLOGk
+         ylf3UUcbcbt/Kqa5W8OgoFDeAkcidDrss1/YB+I2gK3y4yJYJ9zpP7dwol4TFMUPcLOw
+         uDkg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WDOU1Wf7;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id af79cd13be357-7c3e5381574sor116379385a.5.2025.03.06.01.23.24
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 06 Mar 2025 01:23:24 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WDOU1Wf7;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741253004; x=1741857804; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=K0eM3zaO/Io/3ENuIWMMr8/LgyZNe0su0FwBJAcVbAs=;
+        b=WDOU1Wf742SHTlNHlZTCwdpPurApLVhiehtOnFVJzW5UiCU4Sq6zwDgpHuaFbd8yiP
+         Ee50whVj6HhIkhyIOBu1iEoEPW6y8VA/5AsgjoG1m2NPekMX81XbINwD03nnA3vtunMu
+         6WfEij8WdzwpMip3IhDYeN6zwVjCnph9EgDxxNccXktuM8ICEJjT7MeTcpxhYec3T9D6
+         KIVrmdG0lsUAUaALNRYn1zn3g9dkVBjamRu1SOuVOwP1ODy9cyP8GABr+QKja6Bho3oU
+         8G0BtzPix65psPtN3ag6/UyHrV1fcdcpUblmVyEZn6Pzy2b1/lYaTPnGSvPDtJVECkT1
+         7ZpQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741253004; x=1741857804;
+        h=to:
+         :from:
+        bh=K0eM3zaO/Io/3ENuIWMMr8/LgyZNe0su0FwBJAcVbAs=;
+        b=cP7JNo7RX4BaljupenPbarvstocxjwqCKPB0p7gS2+fDA2WCN7vd2RFCJ972RVUBya
+         ckbbiyDg01zWlLXkWBf+HN0S0DH+dOBJJMB2PqPTYAudABnhCi9J3NrnWV3bFMKxyuhg
+         gIp8TtBORNE5KLcSYJdopwkbUWEBGlkoF0HdBYBan/AbAEzn5o/xg4SM8BN3Bur6c4V3
+         dyfDT9/3mSmWW5MZttkzkJ6RzOQyO4KziV4jNsi4KWXLG1WngbiajfZYGDTGp4UNTZDR
+         hcdO6pebkVsByiONizBSzXZZMVapJ+ehwoqU6kqs0YIVgBUVhiLilK7vbpT1T+qFrUEc
+         DW4w==
+X-Forwarded-Encrypted: i=1; AJvYcCWsiB2Gc2xkwisTSLM0spsq80W1ceftlmKnPcVQZiL21isgbTaqKLVCgQeHzloiy4S96St24QE9j9HrrM7JIAqQoTcfxw==@gmail.com
+X-Gm-Message-State: AOJu0YzBYiFKoil7sYLLLEKmYJTWZaWn5v9jQ2WXTSC+tQzmvs/vp+N5
+	WA4tF+GG/OyZJ/9tQYdhOhUxjNtDbN/SlmZzGGu33+gM2K2yOD3oBirZ4Y58UcLsijy4wf5gxDU
+	A5xB/GrWKM120U0+v8Vz8mWHP8aM=
+X-Gm-Gg: ASbGncsxD7gbZOGui2OXt4CDRrGz+femf0YhhgaJ98JBVJGpOAJgQMVhsXPIkQPs2qx
+	4O1508tgdYvg97uFPYgrFF5xpwOa+V73C8pv6fxi1GnfBNkm6kvumQ7QvJSRWYgW+U+cKI8t/4U
+	JqvLD7k85hyp86DtL07FP5KrXP
+X-Google-Smtp-Source: AGHT+IHYyAzi/QscuJrguHfm1kI9hQBkKb0uLH7CaZ/5SOU3vqeRp6QhfVvb7/iTdA5lvPYUh2v0F4V46MJN0VzQtS0=
+X-Received: by 2002:a05:6214:2308:b0:6e4:3eb1:2bde with SMTP id
+ 6a1803df08f44-6e8e6cfc19bmr106277426d6.19.1741253004218; Thu, 06 Mar 2025
+ 01:23:24 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Thu, 6 Mar 2025 03:23:13 -0600
+X-Gm-Features: AQ5f1Jrffy-Skn-xDlKMTTKBptNFZICY2TZ1qmbm4iuxuLc9QLMYJ5HM2BKovVY
+Message-ID: <[removed]>
+Subject: Loan
+To:
+Content-Type: multipart/alternative; boundary="000000000000c7d85b062fa90ec7"
+Bcc:
+
+--000000000000c7d85b062fa90ec7
+Content-Type: text/plain; charset="UTF-8"
+
+Are you in need of financial advice or require Business or Personal Loans,
+Second Mortgage Loan, Home Purchase Loans, Debt Consolidation, Home Equity,
+Personal Loan, Gambler's Grant, Mortgage?
+
+You can contact us online today and apply for a loan by replying to this
+email address:  [removed]
+
+Regards.
+
+David Lindberg.
+
+--000000000000c7d85b062fa90ec7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Are you in need of financial advice or require Business or=
+ Personal Loans, Second Mortgage Loan, Home Purchase Loans, Debt Consolidat=
+ion, Home Equity, Personal Loan, Gambler&#39;s Grant, Mortgage?<br><br>You =
+can contact us online today and apply for a loan by replying to this email =
+address: =C2=A0<a href=3D"mailto:
+[removed]</a><br><br>Regards.<br><br>David Lindberg.</div>
+
+--000000000000c7d85b062fa90ec7--
+

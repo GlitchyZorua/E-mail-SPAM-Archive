@@ -1,0 +1,124 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp2600139vqh;
+        Mon, 17 Mar 2025 14:25:02 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXwN9M+I2mdCLVgJ9b3yqHz5R7sdQwXF47HoDEbc0LVfeuH9Ion0L6z8fzUl5QSoJ/yh5WW7DWvM09OD3EIxNTCz40dQA==@gmail.com
+X-Received: by 2002:a17:907:d84d:b0:ac3:8a3a:e924 with SMTP id a640c23a62f3a-ac38a3afaf2mr177793066b.39.1742246702707;
+        Mon, 17 Mar 2025 14:25:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742246702; cv=none;
+        d=google.com; s=arc-20240605;
+        b=M5XCvaDEusX5mg/VZFRbdaYcrvZIKF/MmPRMgtpljAeoBgJR0OXLO4d5cBgvysP71j
+         8dZyRFxoE8pLuGDCceh/SSaDnQIiZJfNswvORlvFWA2QzNTUijaoe7FUPyLj8B/Ken/0
+         3ME3kPVjFruKogrMPxxZErtghCu97Hm8ch1nXYEdo99OVre+78niPRAsIMcM/zEyuRwz
+         icabhwsbNThVsK+XVKs1xRJ+ldFUb3BwnNM+cenlp/Cvvv/tnP6kFir3bAAAUdCRZnH4
+         G1Ee8kihr1JGGcz2OT6QVK+8UzG99kLP9R0BP6btO8r5Hh1WdYgGg7gkxGP7EAW68ls/
+         Tfdw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=CDbVUdxOGrhu5tBRE47fBrT5MhUudSxz1sgbI80mlKo=;
+        fh=O+l3qQOpIoOEwhhuVIzUq9JVsoDfvkjShXqc9oyNnSs=;
+        b=CeeX9IaENe5v1/jM4OwPsrKFcAaCkYxJzdTEWV/+fWNBA0gt+S9QDzdCuOt4bObRcK
+         fusR7U71tYImVpmvsomKAzRa3nUT1+d3yq5EbJagHb6TTef7S/LhAglvr9OzODmVNed7
+         347rZbX0ru17nDbNE0G+ZLG8YAt5UTTB9GVwN6UVT5wRfCnMvXCmeDFa73Y3I21hswPT
+         qoyjZlSFD3w/tegvlcR5NzLOqaMCl6MYdqwAI6eKV2pLerLRJmbY0f2qyrW7AkXEOibc
+         mLwifjPrhIWSMcC6BTVkFA9lpbFngPbOdHi84HH/9nvbMrqBCTmS09RrGgPIpYhZVpk0
+         BIeA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="m/89UKT9";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac3149d6d07sor546100366b.13.2025.03.17.14.25.02
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 17 Mar 2025 14:25:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="m/89UKT9";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742246702; x=1742851502; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=CDbVUdxOGrhu5tBRE47fBrT5MhUudSxz1sgbI80mlKo=;
+        b=m/89UKT9/GrLNPEvJdwwTA8v6DOzBNF3GGtvfCb7EY+bP00AVVLmuAP2K36EBKCe3j
+         sfsOXOtdaRfATDJ9K/Xxo/6QoNXjIkgaFq+yBLgqMLu6JHt6NF0wqiD8yc63H0SCVjzS
+         tAmFSZBeczoyD2UiAEujpW6sCzCXL/4DNeGnrPu1QC/hgqCSGr+ouZAWN/by4AeDCfLR
+         PRStoKAAleTJR92zc5HBUDB53t/M616RmfTYiTXwgg13wpzh2pxrxNz2gLDseC/x+9Gs
+         uw8fel3w0UlVNx1rgMuG0iGs07FJF760yrbNDQzV/scPy8DO1f+iuBeeXMjiCtseqEEQ
+         tXLQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742246702; x=1742851502;
+        h=to:
+         :x-gm-message-state:from:
+        bh=CDbVUdxOGrhu5tBRE47fBrT5MhUudSxz1sgbI80mlKo=;
+        b=UEdX8PUdqBXAZMUhAZbgpjI/mtWRvneCAyXTVcNNxhRKrDhGU5Ta/O3i87A7GumdJ0
+         +ajpG1OBQGcd4Ib4AW8HK4eztE6qS8kqViJPzeb4DnrEweEjUTvIYXq5zIogoiE5C9IP
+         0RYHlUA5DN9r+kXzacQNA0xWJLPakTP8RAlofMF5oPT6Pi0bz1tSG0xZV+xxrw0bwn3e
+         XfvzOb6VLBsA1ku/qS93DPO1a0+FGjttwoyXTLfcs4vA5KOtnkiVjusE/8ZRIKo5piO+
+         LfFowl+S2TfJybr5E+mMqahUioWTv2dx576nhVoIvWrp6h+SLbHVBzMiCYnFyBNps935
+         y1pg==
+X-Forwarded-Encrypted: i=1; AJvYcCX3ZqIPkXYszb8O83ndBuTa3k97gWOtQKQ3MkEMgfHRJJDUMrQhXOb6Z8p46DFUogEVYecLrH3N6yOSQm7oftjeAKjDXg==@gmail.com
+X-Gm-Message-State: AOJu0YwKdAt1UNil+0471O8ypauF4FmAkPV1T/p1RHUvI4ilUcxSC1Kr
+	3S+RZ4fkCqxj0hfVxwu1KDxtHQ+eYHXrrt82WsCBbvVBAbEBkVUGJ0we9Ni8KzZzSsrmyYn23b3
+	GsTeoW1bTosM9SDpkjEMqdgMJukA=
+X-Gm-Gg: ASbGncvud31aZ6rrttgxtA5e0wBoPFeq9J6bP/G739/MPPczyoW5SAuPxntiJU0POAF
+	hV+klVhiMDkjoWCQdvSczu4I3ONjEZ/1FPJXbQwbxbuFOPGsusCpr9yeiml8RM57apEcCEUNc3P
+	IDrYxNFcVpn1Cw8FgDTnnN4qeGGG0=
+X-Google-Smtp-Source: AGHT+IFTJIG4UsXNRg/TqZ+kSYgcyF0ahBlMcvKBQaiWEXEm3s82qudvVSec9Zyvz6cKq86Gn+mxGFGU5D7zytZQXUw=
+X-Received: by 2002:a17:907:6ea3:b0:ac3:1740:cb75 with SMTP id
+ a640c23a62f3a-ac330273dd7mr1232172166b.19.1742246701436; Mon, 17 Mar 2025
+ 14:25:01 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 17 Mar 2025 14:24:50 -0700
+X-Gm-Features: AQ5f1JqVlJorhsdQ1QOyCnGItrsP93KcGrZjdfxaONhynlUlRQvZ5q8VURXpTJY
+Message-ID: <[removed]>
+Subject: CONGRATULATIONS TO YOU
+To:
+Content-Type: multipart/alternative; boundary="000000000000c01a710630906bf7"
+Bcc:
+
+--000000000000c01a710630906bf7
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+
+
+
+
+
+
+
+
+
+
+*My Dear I hope your save i am Mr. Greg Gani, the director of the Bank of
+Africa. A compensation fund in the amount of $6.5 approved for transfer to
+your bank. Forward the following details to ( [removed]
+<[removed]>FULL NAMEADDRESSAGESEXOCCUPATIONMARITAL
+STATUSTELEPHONE/FAX NUMBERCongratulationsBOA*
+
+--000000000000c01a710630906bf7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><br><span class=3D"gmail_sign=
+ature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_signature" data=
+-smartmail=3D"gmail_signature"><div dir=3D"ltr"><b>My Dear I hope your save=
+ i am Mr. Greg Gani, the director of the Bank of Africa. A compensation fun=
+d in the amount of $6.5 approved for transfer to your bank. Forward the fol=
+lowing details to ( <span style=3D"color:rgb(0,0,255)"><a href=3D"mailto:
+[removed]" target=3D"_blank">[removed]=
+m</a></span><br>FULL NAME<br>ADDRESS<br>AGE<br>SEX<br>OCCUPATION<br>MARITAL=
+ STATUS<br>TELEPHONE/FAX NUMBER<br>Congratulations<br>BOA<br></b></div></di=
+v></div>
+
+--000000000000c01a710630906bf7--
+

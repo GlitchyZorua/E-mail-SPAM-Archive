@@ -1,0 +1,155 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp2660757vqh;
+        Mon, 17 Mar 2025 16:59:16 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWlhI3U6k7ngRusOLCbxvbb1ePYDfUJJFAwT8P4AuZoNDk4GNuevJv3xIsPL3IZIGLhYv41JhNutOwfZdTy7IDkEZENDw==@gmail.com
+X-Received: by 2002:a05:6808:3c92:b0:3f6:a86e:721a with SMTP id 5614622812f47-3fea17bf79dmr1107785b6e.1.1742255956589;
+        Mon, 17 Mar 2025 16:59:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742255956; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MHp05yhn9ikvWC/tczTtCzV+ryWuAZUEUXqa6MkLtmYciy5StxmRrAcPxTDsOzcIHn
+         h35rRsXJaSWI/IoWmgITxWVKAkxmlKZZJTR87CN10Jd/w9d87u/+EJBS2f7PEP3YOoUo
+         GGs2GVWb/H+lr8G5mv5wNF06LyEN266d7FnTRpDXLgaST9+AmDYOj0t/kFtiiviyg4V2
+         NlANxrVjGfgNhAGP1/eEsfb5sBLeOuU74qrPuYuz+jkuo8wwSt8eNE++nEMgPgBE5o4J
+         kCcrsrNsnasbsLjLS5koJ5QVHBCexvvYsnttLeOrae2DOS4OKJLWcE6Zl/eTKz+aDSbS
+         x6DA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=wJytDptbo4PkjijFz0aLT+W3DmcxTzoaOe17I7p5ewU=;
+        fh=8S1BmsoUkOeDmMDho97b221KF7i1aYZTzJmiO4xZwaA=;
+        b=dXy+FWinpxowGqO8iIQjx2XAWeDN6d7b+slANtIqGNmKxnQL0R6ctsBlD2NPtnb8Ag
+         b5TFrNIKqzlo7J3fZXhmNz/t1e+rMId2APaKf0aTQRg4GIlT89t3C/JxOHXLAGUCjj8i
+         92QvrEJaziz/XggVgHpZRwh/IwGDSTSo/cJoOfy797dJVJ8zSGeAFC284S6+H8Q76FKI
+         TJhyb2BxGmrtxbHbxriF9gs8R1Ky4QESCFtdgQBbB1gf2AdHmfdkS1ZQlWTXMXifyPoo
+         VqIPywCGYbNd8ebfHuvUq2J1yHjJnfuKhDUVXPTQoiWuuBmGramrqaD11MsW4CcLuZnK
+         pEgg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KivihrlM;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5614622812f47-3fcd22fa279sor3112837b6e.0.2025.03.17.16.59.16
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 17 Mar 2025 16:59:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KivihrlM;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742255956; x=1742860756; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=wJytDptbo4PkjijFz0aLT+W3DmcxTzoaOe17I7p5ewU=;
+        b=KivihrlMoy/TrK+ot1KmZsiBhJUuGvCHbTE+nNVcy2U/weqN2yh86I5QrkWBDwv7Qq
+         kbgrqQU6qjwQPWgriKQlrZGqzO/vgOCm6EGKVunXnl8+trCiE2k8fAhd/8fLimd0Sq7A
+         XxHe417j5le8PBV6fNa7aOP144ZJKxvRIDwhnESnR1xE2eKc6AYh8Dumj+ce6/PJfXGU
+         CAMhdZrZePOMmuvHpi2I0NZ7GhhnTcmyqjhp9KSIGykQqajuOcglu4Q+JClG5YP2crhQ
+         7xXOWnwsmAPPcUF5kZa2Uboh/DhyqrgchKLYmQe04a6C7keGdzNdWMvSFRMI2MY6M98d
+         QN7A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742255956; x=1742860756;
+        h=to:
+         :from:
+        bh=wJytDptbo4PkjijFz0aLT+W3DmcxTzoaOe17I7p5ewU=;
+        b=wqP1UON6Pf9LOnXPdqAfyadeVKr3H6FKTox94nJwB8IhaYKKPw0aZtKZx21OJVJxw6
+         E6dNkiXXsz5FX7fmpwpagVdKSSNgsTNjziNsAvzt4O0nR1HW9kwGQlYLohrMgzXVJozN
+         ZBm4JLe9vIfQqN+w9t2xjSQOWLxAobGR3dPEyHUnhUgaPLuI5rUHV0aIJB2YD1194fgB
+         R3+UhWWiKNn5gbAaHl8l8uB3BVHGKFny7CcNsD6gXplerIQShKDSIiLro+tsN1hDmp2J
+         gVb/Yk6dFPrlQyROX7G3qKrkzLRO1w5ZqQr1ESTwLNvUu/2tSVW9k75CXc8EngFQyslQ
+         +d8g==
+X-Forwarded-Encrypted: i=1; AJvYcCWVNcTO6rHSoCBqvABgUyAcYpbRnBoFOAcsj+9PJLbxVMkKykQ5h4sWyuveMo8DR1uc30v83K0lTfL3m+zccNOClqQhbA==@gmail.com
+X-Gm-Message-State: AOJu0YyDGhGuF8M+naTvcAUVjq9eGl6hJ21MxyFOLf9ODFWxLCIs42fb
+	Ro6PSSIfgPeUyQkEyc0n9y/Yvfi5shUwL6WMqy2aKIYvrVCk5qWjFZs0+CLHrC/NpEogFF69K84
+	9fm2hlRdgPb95trg4HcntUm0EiC0=
+X-Gm-Gg: ASbGnct9DatSoKNbLzbc5HGgwh9TmTGkTdx4mlpVvSMl29FjfaOVe0HlfX+j0JTD7ud
+	lbmOQX/CspRb+JNeYv0r5lcrr9QJNMwANam5A5YCZ8uBlqWzquMUaO7Jp+d7iVZK3BgEIG4fWsy
+	P5BTAtdl7oshUBId2sE5Y9TCkugRLgSm9gpRiJ
+X-Google-Smtp-Source: AGHT+IEfL41rJElOGJy1Th0MiqTT4Wh/xugHCHE8bgcq6/4DpR49MYqj6h6umyoWS9L6suqwYQQcY8tHq7n/9AqC1iU=
+X-Received: by 2002:a05:6808:1312:b0:3fa:d6d4:8160 with SMTP id
+ 5614622812f47-3fea17f3029mr845715b6e.10.1742255956005; Mon, 17 Mar 2025
+ 16:59:16 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Mon, 17 Mar 2025 16:59:05 -0700
+X-Gm-Features: AQ5f1Jp_vrcfIgumgaAVvduMKZv9vOhg2m3-RLcfkUAokSUAd4PhRE8jqL10omk
+Message-ID: <CAP51T6efta1BtWvw7D_WJ=-_tirsaZRVgW0xy_kCrid+aUz=[removed]>
+Subject: Dear Friend,
+To:
+Content-Type: multipart/alternative; boundary="0000000000005d9bfd06309293f8"
+Bcc:
+
+--0000000000005d9bfd06309293f8
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Friend,
+
+I got your reliable contact from your country=E2=80=99s Chamber of Commerce
+Directory and further explicit investment information about your country. I
+am Marina Lucky, A retired Financial Consultant.
+
+I had a client but because of his extended royal family history, which were
+disseminated by the international media after their trial for financial
+mismanagement and impropriety of US$14.8 Billion Dollars of which their
+private companies were later confiscated and dissolved by then sultanate of
+Brunei including many business documents that were destroyed and of which I
+was the company's International Financial Consultant.
+
+ Furthermore during this unfortunate period my office managed to dispatch
+the sum of Two Hundred and Fifty Million United States Dollars (US$250,
+000,000.00) in cash under special arrangement into the custody of an
+Investment Bank here in the United Kingdom with the company Name and the
+deposits are still valid till date.
+
+Hence I seek your good assistance to partner with me so that we can
+retrieve the funds and invest it into any profitable venture in your
+country for our mutual benefit because based on my present predicament; I
+do not have the capabilities to handle the transactions alone. All you need
+to do is to contact the Bank where my office deposited the Money as my
+Representative/Partner in business and request the firm to transfer the
+funds to your Nominated Bank Account for further investment in your country=
+.
+
+Please I count on your absolute Confidentiality, Transparency and Trust
+while looking forward to your prompt reply towards a swift conclusion of
+this business transaction.
+
+Sincerely,
+Marina Lucky,
+
+--0000000000005d9bfd06309293f8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Friend,<br><br>I got your reliable contact from your =
+country=E2=80=99s Chamber of Commerce Directory and further explicit invest=
+ment information about your country. I am Marina Lucky, A retired Financial=
+ Consultant.<br>=C2=A0 <br>I had a client but because of his extended royal=
+ family history, which were disseminated by the international media after t=
+heir trial for financial mismanagement and impropriety of US$14.8 Billion D=
+ollars of which their private companies were later confiscated and dissolve=
+d by then sultanate of Brunei including many business documents that were d=
+estroyed and of which I was the company&#39;s International Financial Consu=
+ltant.<br><br>=C2=A0Furthermore during this unfortunate period my office ma=
+naged to dispatch the sum of Two Hundred and Fifty Million United States Do=
+llars (US$250, 000,000.00) in cash under special arrangement into the custo=
+dy of an Investment Bank here in the United Kingdom with the company Name a=
+nd the deposits are still valid till date. <br><br>Hence I seek your good a=
+ssistance to partner with me so that we can retrieve the funds and invest i=
+t into any profitable venture in your country for our mutual benefit becaus=
+e based on my present predicament; I do not have the capabilities to handle=
+ the transactions alone. All you need to do is to contact the Bank where my=
+ office deposited the Money as my Representative/Partner in business and re=
+quest the firm to transfer the funds to your Nominated Bank Account for fur=
+ther investment in your country.<br><br>Please I count on your absolute Con=
+fidentiality, Transparency and Trust while looking forward to your prompt r=
+eply towards a swift conclusion of this business transaction.<br><br>Sincer=
+ely,<br>Marina Lucky,</div>
+
+--0000000000005d9bfd06309293f8--
+

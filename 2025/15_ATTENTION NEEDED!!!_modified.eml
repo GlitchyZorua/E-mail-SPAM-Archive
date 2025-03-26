@@ -1,0 +1,119 @@
+Delivered-To:
+Received: by 2002:a59:d6ad:0:b0:4bf:a213:be56 with SMTP id de13csp293284vqb;
+        Tue, 11 Mar 2025 16:30:37 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXFQY0FCjH/IoMF9jzt+lk8zRhVUsT69Q9iiQAyJQO2h2ZBDKYmRSn2/BcapptrUMzmln51einUYAzIEXemHbwF+aMScQ==@gmail.com
+X-Received: by 2002:a17:907:9691:b0:abe:fdfc:47d6 with SMTP id a640c23a62f3a-ac252a4db20mr2179220966b.23.1741735837188;
+        Tue, 11 Mar 2025 16:30:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741735837; cv=none;
+        d=google.com; s=arc-20240605;
+        b=jXu7hLAuB+7QZVvi8j/vmRaznmtEr2iLInWB/g/PQQlL82UM29HXzi1MuDG06kHhga
+         t3WJLuQQMM1Av+y/nBZn3xD2JOHFMhDaqlqjqJTaRDgyC/FCZlfUYm8wkkzUGIOMtH4v
+         3nYVmtxP7pIcjck3I1U8/b7XXOFHYpZyEFLdFV4QrZ5kDZV1MRNipwl3mUFMXB514tfd
+         S/9VLEEG3WvrTIAfclgfhG6Qtb7zktuEFKAmfq+mwmaBp3azT/zXTV/ndnD/rJfb0Yol
+         mdoIPPUxYtYX7AzyPKZmorxHJ/2WL8x6S+wGW8Wf/VINtpFUgSRr8OmdUUybOFo2rda6
+         h0lg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=XedqgxLNvETUTMl++Px1SbMv3e+BPyKM+d7bEDdrwvg=;
+        fh=4PcbuR7PN8W8XadjcQNGBKv2Kbj1sBE4XJkD2lpgcd8=;
+        b=MtWTY+ntr0rE15zvv4G/6gQ4zwYQ+Qo/o47IP7qOINkq2KJphLkRcJ0MEc7eQP1DOR
+         xiT6uUIlOvAMLmwSkU4+mIWYnVasWXZrclUmtQbqmplEg207gIT+alUJYStUqA1pIqJy
+         RcSFMjfo66j80C2Td8PbOSlrTf76z85HqYLK0i1iTUKzjHHP5ggJ10I/3LO7SrfwWBF6
+         aeXIdrnS5O5s3HMcfhWKj72Au9/Hb99DllUdtgwDBWysBvVGLBnAutsedFx2vLGTnJHt
+         gj+ZpMz68uMtLXNQPxCRYeAlpJ0yiCCr+Eby7WJy5ef/+FeksbqLjQ84UkT2HmtsnbGx
+         yJYA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=UtOQCpKF;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac296943eb1sor336572066b.16.2025.03.11.16.30.36
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 11 Mar 2025 16:30:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=UtOQCpKF;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741735836; x=1742340636; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=XedqgxLNvETUTMl++Px1SbMv3e+BPyKM+d7bEDdrwvg=;
+        b=UtOQCpKFJdhzVsFUYS71ZSJK871Rn/hhJm6VwDA3XSUNEtqyBGido87lnuq7yRrZWJ
+         /Z1/j6p52wWgi2Qkk4ZuInWsJNQwzDcO4JvxIEPiYxUQ4Z/25Pmu5yTyaTfKnA3+wBt2
+         lsvatXRKuFMP7Q0OiEezjTSfdvTm9h0Ku4rJDxpb/c7jXPtLnVqkmf0TPcuoXKebeubC
+         xxhfr6aqW6siufAFjuN2W/iCeURmBrl4VBejR5b0l0MqTWZSsrXzHukEDhsYhUgOSDPT
+         dDyaIX5H65rHBhBF1Em3gD7OUc8XOor0V6VKFKq3d3oiOisnm9OE4oVoMvoiR4P8i4lR
+         DnKw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741735836; x=1742340636;
+        h=to:
+         :from:
+        bh=XedqgxLNvETUTMl++Px1SbMv3e+BPyKM+d7bEDdrwvg=;
+        b=fpK4X8O3dmzGTjpOVOHO32xV069x5rkOPt9N7/NepOJMLyng2uIv3iE8l890NuHQwh
+         HPcoGZhxSQI/6p1bWZ6yJzxbWfb7RiJkXFAPIxQ39XeotcdRN4PWkhPIQJEq2d2itWSD
+         ZFPoIQ6+oH9xWS+Xg6E2c0h+TZvExUF/vW4N2+eo5kHX8NxG2BS0l7R6qSMm6I70By6b
+         uKuee5Xspsj2JFz1UbDERhgtNBwlSkWH6OxyUzZ75/Ycs4OPHAOZX8x51KMKcpWKVzfL
+         ZvG8yyjh1h0V835YAOQiEI+9Kkx4xFGoT8t/XtUMIsTkdnT/Oo9ka8tAVuy4WT8XIeVx
+         WwpA==
+X-Forwarded-Encrypted: i=1; AJvYcCVNJUuUofkN3AlkZUkV0UXVc7pROV8qW7gxi2lE4lP/lXLi2aDheEQxe6ZIufD4BF2xVnHDUo2NHKBPlS6mctgkHI85+w==@gmail.com
+X-Gm-Message-State: AOJu0Yya6lPmGjSycLApUm0vPGTu2LJKPoLlvLzDAYv/JyACNGKd34OK
+	8OVi7vU5lIHUpu/NmjHZ4Z4z/eSBPoUa2K6Oojq0UXyN61MfMA1OBDsJWR55u/XAdClNx8xWLzb
+	qDG0cdJuMXE1vWsGWV7kVieEWEKI=
+X-Gm-Gg: ASbGncvN56L8iDLpTu7SuVetyCwa5b59lvJXYtd5yJab0j/Q/vQ1Fv0ydXmTOWOHIs1
+	f5YhdCYeYH+O5hJa5ZG4IEHFxQn8F9iBVC5+042XXW4ROeioyAXVat2O/oApiCwZOmCprQGpjXh
+	w/+sKE5mnUS+cQ+lbglpg/Z5POQA==
+X-Google-Smtp-Source: AGHT+IHhaP5xFurJDt/DOfp9HTeYNLSshzcGYNGrBkcFS837KeTDlXbl0h1inTyTJDxw98b7N8lOBN14kDE91AJYQqY=
+X-Received: by 2002:a05:6402:520c:b0:5e5:bfab:51f with SMTP id
+ 4fb4d7f45d1cf-5e5e211ad2fmr25872130a12.0.1741735836451; Tue, 11 Mar 2025
+ 16:30:36 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Wed, 12 Mar 2025 00:30:25 +0100
+X-Gm-Features: AQ5f1JrBhpOnP2rkzXnr0wcVzCwppbmMEyZ4K21WiStu4cbr3zsXO1v1pWR6T5U
+Message-ID: <[removed]>
+Subject: ATTENTION NEEDED!!!
+To:
+Content-Type: multipart/alternative; boundary="000000000000d30f4b063019791d"
+Bcc:
+
+--000000000000d30f4b063019791d
+Content-Type: text/plain; charset="UTF-8"
+
+Hello
+
+Sir/Madam
+
+You share the same name with our late Singapore gold marchant worth 30
+million USD, he died without any next of kin. I contacted you since you
+share the same first name, so i can present you as the next of kin. for the
+money to be released to you as the next of kin. If you are interested in
+this, revert back to me for more details.Kindly reply to my private
+Email:[removed]
+
+Ms. Sheema Khaja
+
+[removed]
+
+--000000000000d30f4b063019791d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello<br><br>Sir/Madam<br><br>You share the same name with=
+ our late Singapore gold marchant worth 30 million USD, he died without any=
+ next of kin. I contacted you since you share the same first name, so i can=
+ present you as the next of kin. for the money to be released to you as the=
+ next of kin. If you are interested in this, revert back to me for more det=
+ails.Kindly reply to my private <a href=3D"mailto:
+ail.com">Email:[removed]</a><br><br>Ms. Sheema Khaja<br><br>=
+<a href=3D"mailto:
+iv>
+
+--000000000000d30f4b063019791d--
+

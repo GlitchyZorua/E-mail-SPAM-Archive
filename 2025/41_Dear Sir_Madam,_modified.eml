@@ -1,0 +1,145 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp212793vqr;
+        Tue, 4 Mar 2025 08:18:52 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUOZors7BnM9GGr2t+o5r0SIWvrKPcnzjFW2DCL6H86vqujTYRmzZzV94vxiZDnZLEazSJjqkQbjDjMp7XxrNj8sEafUw==@gmail.com
+X-Received: by 2002:a05:690c:74c9:b0:6f9:7a38:af5b with SMTP id 00721157ae682-6fd4a0618d6mr241819637b3.13.1741105131933;
+        Tue, 04 Mar 2025 08:18:51 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741105131; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MmNswQS3rCiKW49sv07D7VLdsavYAKwY5nljL+LPxSc/Y6AQP0GSb8m24+zq/AdA6s
+         cAc4WTXiUamqXQYBQ7WWWqZ7jInLk6VENYaHzMpOLPOfZ216ycF/MVk9HL8VhbxB0xAy
+         QZf5XtOxzCGXzKofb7m0gtpULcut/9PvIHmCjXn9eyYJGG9xoseV48btVP6XNOFWTGGA
+         TbBZS09tSeO288jvOo7aHsaQwOGlOv9hi9vQgt+seZ1lhL3F5Y+kEvUGMl6rRMbgHUKu
+         I/xwQTHaHrTFj1Lmm1WSgXUVSPEsbeeeZf6FTFi/bG11cTeH+GNmR6haxtcFBec0a5/2
+         mnwQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=1M3/aqg+wwwdyEYKbV5isag6KkJZ0A2n5Pdx5zqmNbg=;
+        fh=sOVdwB9+/xZpIXKR53/HIV6RWdhKSdMa1aPOTE9FAXk=;
+        b=VlOfu8XCW55R5Vi87GZyZmBcssghJrojIzArkkZ6ptx1uXqUEx5uEKeJXohQ732dd+
+         c561sBEamxWimnnqGiBCVtiEJxK2r9VHCunguL0Pd9ZC9jKbFm3T2YqX9sqJxqAGYRkA
+         pWG4yDl5CstzFkz02LcJLfjVhRtlQ+95U5mm4CNPulRmFQY0uBkPZTvKMdekxCUc6UK1
+         lJpmvLUgK45S8zZSUkZ27oXk4PyQemlZ8cSe7M+Pv/ril6a5lBzFWFdNV9TOQAI+Z90F
+         C0Enh/BkchrAupSAy/PSzYOLjEwEuKlQubqru6VFzMmdAqqUWJDxVmSRR48UN38uLhVE
+         CwAg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=RY+ZG5cj;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-6fd3cbc3ca3sor71669887b3.16.2025.03.04.08.18.51
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 04 Mar 2025 08:18:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=RY+ZG5cj;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741105131; x=1741709931; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=1M3/aqg+wwwdyEYKbV5isag6KkJZ0A2n5Pdx5zqmNbg=;
+        b=RY+ZG5cjkrSXy4zV/6nK4Y5Qy8FJpLoTjdwthl1YJ8jL4OaDf+c+dzzoGjJINq7lyA
+         lrg4TxYb6cFhmkur1eDjzAlMRLhQ94aJhztveNfQAhWnqQWZzrU+V2jqB+oujo/fmZuG
+         UMXD6Egu0PQduO+mhS91pHb7lARMo9z9yxUClMAXbNU+isTnUvTYLsZFQcsAQESjkZOo
+         uxwhud+QdK/um7gkEZXUirIP30We5vDseo3tv82g62O6d1ib7c6svUPEhSoz5kFrhRkT
+         tBy9lJyM/CY21ALWL546y4hNnQWEto0u/3zkqJhWhUC0SxuVuCg9DKxgll8aNAdylXu2
+         39vA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741105131; x=1741709931;
+        h=to:
+         :x-gm-message-state:from:
+        bh=1M3/aqg+wwwdyEYKbV5isag6KkJZ0A2n5Pdx5zqmNbg=;
+        b=xEzcPku683jRycqfc5adpg4P9JDnLpX9/UPwKknPSZzvPM0GtYs240jzlIMwnfSWpp
+         280+NKydggJXP7lJm6OSC03NrMwssBHji7QfO1jc4aD3azrKp58ecC7neSZrCdSdhMmq
+         nj/+zqQBqkQrNJnn1OW15swOb97MPBdzSXc8AogFwIOTg0Tfj2TcMKu1LKsvULfQ8NgG
+         cTmaOLfmaFCYb5LhIAAiXxQNIz2k7p/R7/i5O0dEmFHoT24eSBhauUCRmGnlFnTfN457
+         X1gLIHkF62z6Dk16Njcm3CTf9+Zo7SATKEOK6NBCBzgMoXVx8diDFYcEWmrpn9PKJhMd
+         ZGDQ==
+X-Forwarded-Encrypted: i=1; AJvYcCVfl6D/xpGW57kslP90dEy3gAThR9rX7iJ6sujsUlHq8GAt3cwmtF4ZcXBHqdqeu7wfG9UD/3hpwpueYau3/zboA4GPQw==@gmail.com
+X-Gm-Message-State: AOJu0YypUePLgeB12mNJldCn8X9TL2ont4/RINz/XKPTnct5GxLGHHy3
+	5/hc9tCHV8vI4thC9spfjTFn5mf5hf58EwCkMxgDRbrkM4wRNsCIojOqqWdmygqPukj4msLORk6
+	pkw7ztXux9Qe4rmuwrh8ibgFRvHE=
+X-Gm-Gg: ASbGncvr2ToYHsLq/jhvqAaXo+gbLNcLrjfcRU75S9zftu6fA4xN/x0qhEzBRL1DvXa
+	sg4n68F25UOPj3izsuEiaJnW2KA8F8tWJf77Wrcq+3Zdg2O+rBU4Xaf6WAtBoXAEBodwbm8+Zv7
+	evumTESLlXf7weltSAci2k+hHgOYs6
+X-Google-Smtp-Source: AGHT+IFYt1eQ0x1TYqWv+gB+D3l0+1UVMxGU/fo/KfITy7/c/8yJnXTk8Hb65ynletQb3Rta/cbqQi0t7sFuaEPFlT8=
+X-Received: by 2002:a05:690c:4801:b0:6fd:1d9c:bd6a with SMTP id
+ 00721157ae682-6fd4a03a63emr222392387b3.3.1741105131392; Tue, 04 Mar 2025
+ 08:18:51 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Tue, 4 Mar 2025 17:18:42 +0100
+X-Gm-Features: AQ5f1Joqd7HZ6wvIKOaXbkRxLboJZVz946w4KpoYplE1o_C05eJUNp8h0qj-Wqg
+Message-ID: <CADyxTxBEF9VOCZtPZOZ5e_O1a4OwLNjfB7UZPNKEbnOTDp=[removed]>
+Subject: Dear Sir/Madam,
+To:
+Content-Type: multipart/alternative; boundary="000000000000df98a5062f86a0b4"
+Bcc:
+
+--000000000000df98a5062f86a0b4
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Sir/Madam,
+
+It's my pleasure to inform you that your name appeared in the list of
+beneficiaries not yet received their approved fund. Due to over delayed and
+inability to claim your approved fund, in this regard you are among the 6
+beneficiaries approved to receive a compensation sum of USD10.5M [TEN
+MILLION FIVE HUNDRED THOUSAND US DOLLARS ONLY] as approved by debt
+reconciliation department of United Nations (USA).
+
+Your fund has been approved and an ATM card has been programmed to be sent
+to you via your address to enable you withdraw per day $20,000 USD until
+all your funds are withdrawn by you or direct bank to bank wire transfer to
+your nominated bank account. You are requested to contact Mrs.Awa Zoundi
+the transfer department and Legal Defense with below information who is
+in-charge of your payment to enable her to forward your Card to your
+address.
+
+Mrs.Awa Zoundi
+EMAIL; [removed]
+AMOUNT; $10,500,000.00 United States Dollars
+Your payment reference code Number; MTM/PTF/0041/25
+
+You can send to her your full name, home address, telephone number and
+your payment reference code. Do contact her now to avoid any further
+delays in your payment or your bank details. Have a nice day.
+
+Regards
+Alawuba Oliver
+
+--000000000000df98a5062f86a0b4
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Sir/Madam,<br><br>It&#39;s my pleasure to inform you =
+that your name appeared in the list of beneficiaries not yet received their=
+ approved fund. Due to over delayed and inability to claim your approved fu=
+nd, in this regard you are among the 6 beneficiaries approved to receive a =
+compensation sum of USD10.5M [TEN MILLION FIVE HUNDRED THOUSAND US DOLLARS =
+ONLY] as approved by debt reconciliation department of United Nations (USA)=
+.<br><br>Your fund has been approved and an ATM card has been programmed to=
+ be sent to you via your address to enable you withdraw per day $20,000 USD=
+ until all your funds are withdrawn by you or direct bank to bank wire tran=
+sfer to your nominated bank account. You are requested to contact Mrs.Awa Z=
+oundi the transfer department and Legal Defense with below information who =
+is in-charge of your payment to enable her to forward your Card to your add=
+ress.<br><br>Mrs.Awa Zoundi<br>EMAIL; <a href=3D"mailto:
+.com">[removed]</a><br>AMOUNT; $10,500,000.00 United States D=
+ollars<br>Your payment reference code Number; MTM/PTF/0041/25<br><br>You ca=
+n send to her your full name, home address, telephone number and<br>your pa=
+yment reference code. Do contact her now to avoid any further<br>delays in =
+your payment or your bank details. Have a nice day.<br><br>Regards<br>Alawu=
+ba Oliver<br></div>
+
+--000000000000df98a5062f86a0b4--
+

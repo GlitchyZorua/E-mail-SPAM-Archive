@@ -1,0 +1,136 @@
+Delivered-To:
+Received: by 2002:a05:612c:4d06:20b0:4bf:a213:be56 with SMTP id ms6-n2csp553229vqb;
+        Mon, 10 Mar 2025 09:02:37 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCU43vXkHa7E5DmkKU+2Mk0wdVPg5dy174HhH4KDqmPtU8B6hCMq/LtDdNHU/aoYbjQfYioWPf7OZ+7gOGOI51o/g10AVQ==@gmail.com
+X-Received: by 2002:a17:902:ce0a:b0:220:cb1a:da5 with SMTP id d9443c01a7336-22428c075e3mr262699955ad.40.1741622556743;
+        Mon, 10 Mar 2025 09:02:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741622556; cv=none;
+        d=google.com; s=arc-20240605;
+        b=WaHNQSl3be2sTTTYZUSGZtBgZZosxPtLd8MFLngGoD9xvvfPvgDWcc6BaFbcH+ON2o
+         e2b2nVetfG3zbhJvjPeRoJylgzrCJqXWKXwPog1TuSbNfuqJ4VdvrO18UZzfNx40ERJR
+         2ZDR6E24EifXQ4DjFd5nh4q3ZSs6aeHclxD//uOsMUnOTZcKtmFAGTA0GxjkrvfHkaV+
+         R91ONXUgjdT4x7KGVxCVJIxpw2fQ6jYomJNmxUACyemEgl0XVQRPLplz0huQ6/Wdsqgb
+         xDfb0wRDJrdlCLBZo5Su09b2ISR9ukjza2XS+J1iQOzmzV2lQoeQP1Ic6Dw55Ize9a5g
+         fk9g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=dJlaMMGqZC+96aDPkHyTYd4vmRMRz2xwT/2KEz4qpY4=;
+        fh=uP2iLEtN52NX+M6VM3kCytUB9zeL32+eMMexyxwrwQI=;
+        b=YGMzF8+mnsElhECt7GoiK1j9gKC7Vtv/b8zOIhaIbbmm4AzfEY1SxDHyHzJLi5wfjA
+         uk/gznQkbnu5R5mseVJVjp944eKKkXUxMashAlm969lzmFscaPYm7QeuB4XhgUAJ474P
+         xbi1IplQ8r17/V3h7Wh0qqRmPAN23LobkYbrwFjbZKCDsLcPC6FjI56ShxP5qMPQahN0
+         MZHgvPolGQxx96rVTouTFpkGsASpp9aNfRVcZvvNylfacqQe7XZ5bqwS6w1T/V+sPbv/
+         9E/wJABwqZQMy19AfoHm/m2/h/lBq/6hTGHN0JBSLj95C4gp+4L2EUhK89/LtHRB0bfr
+         AghA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=aFW0dIn9;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d9443c01a7336-22410735f4csor67519315ad.0.2025.03.10.09.02.36
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 10 Mar 2025 09:02:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=aFW0dIn9;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741622556; x=1742227356; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=dJlaMMGqZC+96aDPkHyTYd4vmRMRz2xwT/2KEz4qpY4=;
+        b=aFW0dIn9gyoA0c7mGbailWnnfo9oL4Ru+gtUAgFWNA4tbjZByvXg62Q6sVQLojGKKf
+         ZhLUGIfxJxD0gfoMr9O7TwIzDSQ2GZem85Jile9E6CHkMnhpyu7zEM15j0yHKKkWjWy/
+         tlnKAZUcYOoViNgY6w2LAPz9BNkQw+o/cZu45bT1I9SzDx7HiY/T8hn+CX3B66maAy5y
+         5WxKnd5WKJWNKxR07YweOmqQY4UI4VIj/auPGy+o0hCh15xRL2NcPQqp825LPtqsrl2T
+         qEEjCvzZLWcvV6lbPbvBgOJTsHNhi1KVPUFmvX5+HgJPUt4Q34Ckf5k/kel5IjHCD0pR
+         7SoA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741622556; x=1742227356;
+        h=to:
+         :x-gm-message-state:from:
+        bh=dJlaMMGqZC+96aDPkHyTYd4vmRMRz2xwT/2KEz4qpY4=;
+        b=tImbj//BX6wIiFCWlv3b2DIRVji8zLHDZQNRxEo1oP3QPsubKNWgywFruW2gskJyeC
+         7G6n45KgUk8DxQXKHx67aJYpSSFcpKe4fsS6OSuD0g8JhATOmBojPgW0KvJAsdHz6lgF
+         f0sKUUiqsHZVhC9Poqq8dXGTn58X3KyHOH7RPtWvlEkm+0MyxgMlH59ZWYVkjot4a8qv
+         ix3+zBGF10Ymu58PgW4Fn76drW75DsfIfr6ylHa8YrXSol5qMuHkSfLLJBsr93p+nFYz
+         6bIw5BrDPdM5y/4SHUe0J22F/e4jW2ERe7CqKDCx3OtgOrrL2R1HZrtBSpr4yCq3UugR
+         io9A==
+X-Forwarded-Encrypted: i=1; AJvYcCXYkY3Bcm59U1qunm1Og+8dd4WqP8iyZ4Ww9aeOTxJFJwllegnXGOmFJIfyb5qL01dBzXAwLM24qk+keVEs3xXpIPOD2g==@gmail.com
+X-Gm-Message-State: AOJu0YxqQaioA8FCllCWOryiXcrVUv/LuGrxSnZ+8A9Cqt+dZGRKEGcG
+	NUuxkgDdgmdqMJzbfm+KcrsDIkcT4FstbelwLCsddsDqKPLVTSjTMa0b8poTW11rQ8pPXct4ulN
+	239UXtO8nSVZoDiEMKhNXfm79vQU=
+X-Gm-Gg: ASbGnctTySfKwmtxBfzAoHcRmetOt5AKBemvPx2fKqw/OgWcsnjisrpHw+1T6c1i6m5
+	ROIST1hOCXhjOjKMU5K0yO4OW0Gv/cMsl7WelXnFxzsndiMzVcNlWevCq/fJv1hlAxgC5kQcyV8
+	XJqtkByXAlxy2qM6YaY8Jego+tnQ==
+X-Google-Smtp-Source: AGHT+IGBMFZZOxsDn/QjqHuHhWeJZwbsZJ5vEBR3Cf54nGGgdpxjRtFNatEqnXE6Ef18nnSXgI0fQh0LJZ5+DCLZWdc=
+X-Received: by 2002:a17:902:e812:b0:211:e812:3948 with SMTP id
+ d9443c01a7336-2242850b42amr224701995ad.0.1741622556256; Mon, 10 Mar 2025
+ 09:02:36 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 10 Mar 2025 09:02:16 -0700
+X-Gm-Features: AQ5f1Jp8128Y3Wrd5vhYKGcRKAIFVn6Ptc6STYjKsL1vktmKk3wxW38DPHz3Gcc
+Message-ID: <CADZh+gK2HS-2Ux6CkMtnJVfqThd0=QOUhc5JUSR=[removed]>
+Subject: Private Financial Consultant
+To:
+Content-Type: multipart/alternative; boundary="000000000000cc75d6062fff192a"
+Bcc:
+
+--000000000000cc75d6062fff192a
+Content-Type: text/plain; charset="UTF-8"
+
+My Name is Mr. Mather David,
+
+
+I'am a Private Financial Consultant, I have a client who has an interest in
+investing in your country into a joint venture he has funds available meant
+for investment
+
+The client main interest is in the area of the following: Civil
+Construction, Real Estate Developments, Hospitality, Power/Energy supply,
+transportation, Mining, Education,Oil and Gas,
+
+I will be happy to inform you that my investor will be glad to meet with
+you one on one if you are interested in this offer.
+
+Looking forward to be hearing from you.
+
+
+you can reach out to me with this Email-[[removed]]
+
+
+regards,
+
+
+Mr. Mather David
+
+Private Financial Consultant
+
+--000000000000cc75d6062fff192a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">My Name is Mr. Mather David,<br><br><br>I&#39;am a Private=
+ Financial Consultant, I have a client who has an interest in investing in =
+your country into a joint venture he has funds available meant for investme=
+nt<br><br>The client main interest is in the area of the following: Civil C=
+onstruction, Real Estate Developments, Hospitality, Power/Energy supply, tr=
+ansportation, Mining, Education,Oil and Gas,<br><br>I will be happy to info=
+rm you that my investor will be glad to meet with you one on one if you are=
+ interested in this offer.<br><br>Looking forward to be hearing from you.<b=
+r><br><br>you can reach out to me with this Email-[<a href=3D"mailto:
+[removed]">[removed]</a>]<br><b=
+r><br>regards,<br><br><br>Mr. Mather David<br><br>Private Financial Consult=
+ant</div>
+
+--000000000000cc75d6062fff192a--
+

@@ -1,0 +1,158 @@
+Delivered-To:
+Received: by 2002:a59:bc64:0:b0:4bf:d2e8:882f with SMTP id t4csp947335vqy;
+        Thu, 20 Mar 2025 06:49:38 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXmrbH+AHNjqV04Gb51hWpAhURSzkDg9iY1YEzuon7fcRjWzHknS+LyAjVdJ0f72ZDjtj9s4MN3cP9XTSLnf5ebfMxZhQ==@gmail.com
+X-Received: by 2002:a05:6102:6ce:b0:4c1:86bc:f959 with SMTP id ada2fe7eead31-4c4ec639cd0mr5920175137.8.1742478577910;
+        Thu, 20 Mar 2025 06:49:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742478577; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kEG8cGf1LmhWeWjutEnFapSbDUIjnIj5gb0XYUw72fdNZkzU9Bv16GCeXGqE0Ya9aE
+         ZK9x6uDBZ2RDGoxH2t9Gwx05j45QDpa9/FbRAfPVjLhiGw4XMr2rgI3TcSvZDawnFMK7
+         mCcAXbBj7iazlMyRLAJTugTmcqolwKhvcCLI0nURPPnUT4YcIBQF2NYqlUug1CpnUqwc
+         Ybk3P2Z48Hs8ke+83lQJnSj/4VQ3H47gzZNeyjKgSOii47XW1aBzEDWRMtNZqV53+2ct
+         lp5YKezagr29Cy4dH4tpOra+VuZeGRbfFJMrN6/78RRPRB1InWxzcCqOIT6r8ejklR/z
+         cDBA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=nimAHjl/mRlNFh+j8IvO0Lj1tAWOTxWnRpg1x+se6lA=;
+        fh=CkoDjDkoCygQG0CXY6XHP3e4HIn3SsIIXPMNZ2PxgsI=;
+        b=YCy3xVzZiEVKs0FDoAlb57Jv9aBPGx8GrBMlJQAZ2BJrKSauDB6dd1CGUJxdRd9hpf
+         LUmDCwIDC/ZWlHKuVz7KcX3JMDDw4SxglgUygLgrXIZOEVEbWHD71nHLMb+ilP55aqJz
+         lMGGfAXCjjiDpfBKxLsEvpSQCy/qdwrBIxC/7ZR9Iw0nRCgAaWkU95E+z4Pb/mhQbjJi
+         RWAtFcYYXZuXX9TJrGrty7Ytzq+527CVFHbjr/WKZRRf5yCib0RqkBSYQg4TwDaxARCf
+         KwCrZU60/xRgOYglN2YcfKjSCFJyukFn9MjrZp/MerZG7xSBshILAQ2o2/Z5d9cC1rGg
+         HYeQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="KSh/FoNw";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id a1e0cc1a2514c-86f95e08d70sor127603241.6.2025.03.20.06.49.37
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 20 Mar 2025 06:49:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="KSh/FoNw";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742478577; x=1743083377; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=nimAHjl/mRlNFh+j8IvO0Lj1tAWOTxWnRpg1x+se6lA=;
+        b=KSh/FoNwD1T9z105xMOV1EtKfDQgzkQm6cBTKjsRrj6KHlJn8buWohAU0zFYmIwXXQ
+         SnUqGNNlgGXHRziP27BwSR7w3oJlrDd1TxVJOCRoeFjq5wfr092keMCh0breROGHbRQR
+         eGXtX4q7BUnvm2QE2ffsTLp8B1wKiuxXaP2jvxGfIY8rZdcO7P0L2+gJZwVKqYKS2IK9
+         YVBhkWFJcKdt+bFPSwOYy8S8fmqe+oQ5oTyVK9v2kD1bpJTed0Iv6TLHx2Avody25zFU
+         c7TwLMzKEQ6lsHT9vD1z9+SXZPc3K0xTt1JUjTiPvQrD6Fu9UiZOtsPshVGUP0G7QSGJ
+         FrqA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742478577; x=1743083377;
+        h=to:
+         :x-gm-message-state:from:
+        bh=nimAHjl/mRlNFh+j8IvO0Lj1tAWOTxWnRpg1x+se6lA=;
+        b=O5JHiNnZtfBI3XDytQ7Fu+CvUhu1NJdo7hNKe9RE/2KtSFm1CiabZobk+uftlOas7d
+         VJnQ0a30WpRSKIdAWnaiQjkreytTVn62jUd15Vcb0JOZslZPVCauwo5NEb/C7FiTfPIA
+         b9X5g5Gpo4+3dfd72Z/qJUn+PWjPmdFazBbmntLRy/0PNEbR7UWxcZqqJL9R0rOm8d8c
+         pDaScDRD8RvIC0clJcphvLWPRw9YMYKxOcSnOxm3RlWZtYLkcGqr3r8ifX8tMvfPxDPb
+         PJ5f+P5JdHt4eJktFrlAgIGHGK6B+C/+uDnLx3H3vfkr6QcBi9kx6TLVRe50TiEfS81j
+         eUJQ==
+X-Forwarded-Encrypted: i=1; AJvYcCU3XD0QBX4VOZXloopPw2/e4MmUmntbrtdm2mUosyWPIkQp50eL8u7CWe9+AFsZjzUJ1Af4YQGNBhSwZVflHxowAw/HGg==@gmail.com
+X-Gm-Message-State: AOJu0YxaX+TrmAlkELpXNCscs3UOf5nB1hu2146P1zwQtxhMKGPO1Y6b
+	hAP1pgxPwRevUvmnzPb4Uf/aT7WtndtSspmlinninbGglqjUOQA9doIZeruuEE6jNyEinaIp/tE
+	mKFWuR+z+1CIL3FZKD3LNyOe6AS4=
+X-Gm-Gg: ASbGncvwEH9L6QTd/KgUkiz/6fj9gJWUZbBsdVRu+XuWZarMZzlFBuLScO2hvm0CxTc
+	G69xbASk8KixSG6dhN+g4dbMxB55ovql8OSaHI6OrfSgPe13Yb7GmPkF+xEv6gbMF9x5OUIkF+N
+	OjmpZqsDNrJeb6ucEIQepgZw/bRYU=
+X-Google-Smtp-Source: AGHT+IFyuVKQiEZfc3foV630R4W4tndOBCGceQi82VG30imzvKUVcTBtPOAsCnPJ5PGdyOwg2AvH7gNQ3c9uwb74X4E=
+X-Received: by 2002:a05:6122:8c03:b0:520:5a87:6708 with SMTP id
+ 71dfb90a1353d-52588febfb7mr5493293e0c.0.1742478577302; Thu, 20 Mar 2025
+ 06:49:37 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Thu, 20 Mar 2025 14:49:11 +0100
+X-Gm-Features: AQ5f1Jr2QidmPtNsAwsCL3IvdXykDHp6RhY4aT2UJJrT42WhTIAcJy_UPj5ySpg
+Message-ID: <CALF=[removed]>
+Subject: Act As The Next Of Kin To Mr. Alan Williams
+To:
+Content-Type: multipart/alternative; boundary="000000000000a105340630c66837"
+Bcc:
+
+--000000000000a105340630c66837
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Friend,
+
+How are you today? I am Desmond Lawrence, an assistant finance security
+officer working in Treasury & FX Dealing at FTB Bank Cambodia. I am a
+British National and I live in Cambodia. I need your help and support to
+transfer the sum of Forty Million Five Hundred Thousand US Dollars
+US$40,500.000.00 from the Treasury & FX Dealing at FTB Bank Cambodia, to
+your bank account in your Country. You will be rewarded with 50% of the
+total sum for your partnership and I will come over to meet you in your
+country, for sharing of the money, immediately the money is transferred to
+your bank account. Can you handle this?
+
+The money was abandoned by a late customer Alan Williams, a British tycoon
+who died with his family in a car accident on 20th of October 2021. The
+money was left unclaimed in the Treasury & FX Dealing at FTB Bank Cambodia,
+for safe keeping without a beneficiary.
+
+You are to stand as beneficiary of the unclaimed funds, to enable the
+Treasury & FX Dealing at FTB Bank Cambodia, to facilitate the fund release
+and transfer to your bank account. I need your personal information and ID
+to re-profile the funds with your data, to enable the Treasury & FX Dealing
+at FTB Bank Cambodia to transfer the sum to you. The whole process of the
+transaction will take not more than 10 days to successfully complete the
+fund transfer to your bank account.
+
+I will send you more details about the transaction as soon as I get your
+response, to enable us to begin the transaction. I look forward to hearing
+from you soon.
+
+You can reply me back on these email:  [removed]
+
+
+Yours Sincerely,
+Mr.  Desmond Lawrence,
+
+--000000000000a105340630c66837
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br>Dear Friend,<br>=C2=A0 =C2=A0<br>How are you today? I =
+am Desmond Lawrence, an assistant finance security officer working in Treas=
+ury &amp; FX Dealing at FTB Bank Cambodia. I am a British National and I li=
+ve in Cambodia. I need your help and support to transfer the sum of Forty M=
+illion Five Hundred Thousand US Dollars US$40,500.000.00 from the Treasury =
+&amp; FX Dealing at FTB Bank Cambodia, to your bank account in your Country=
+. You will be rewarded with 50% of the total sum for your partnership and I=
+ will come over to meet you in your country, for sharing of the money, imme=
+diately the money is transferred to your bank account. Can you handle this?=
+<br>=C2=A0 =C2=A0<br>The money was abandoned by a late customer Alan Willia=
+ms, a British tycoon who died with his family in a car accident on 20th of =
+October 2021. The money was left unclaimed in the Treasury &amp; FX Dealing=
+ at FTB Bank Cambodia, for safe keeping without a beneficiary.<br>=C2=A0 =
+=C2=A0 =C2=A0<br>You are to stand as beneficiary of the unclaimed funds, to=
+ enable the Treasury &amp; FX Dealing at FTB Bank Cambodia, to facilitate t=
+he fund release and transfer to your bank account. I need your personal inf=
+ormation and ID to re-profile the funds with your data, to enable the Treas=
+ury &amp; FX Dealing at FTB Bank Cambodia to transfer the sum to you. The w=
+hole process of the transaction will take not more than 10 days to successf=
+ully complete the fund transfer to your bank account.<br>=C2=A0 =C2=A0<br>I=
+ will send you more details about the transaction as soon as I get your res=
+ponse, to enable us to begin the transaction. I look forward to hearing fro=
+m you soon.<br><br>You can reply me back on these email: =C2=A0<a href=3D"m=
+ailto:
+on.me</a><br><br>=C2=A0 =C2=A0<br>Yours Sincerely,<br>Mr.=C2=A0 Desmond Law=
+rence,<br></div>
+
+--000000000000a105340630c66837--
+

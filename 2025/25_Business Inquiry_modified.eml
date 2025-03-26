@@ -1,0 +1,347 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp2781217vqh;
+        Mon, 17 Mar 2025 23:10:50 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AJvYcCWcpUYw5DIHh28GqvpXnnz02fMOvZaIuqLxzfGUsgGagMvbyr93r1eSV9LWSxGwgY4GDeI7ey90s6YBKvECZkaKG1Y8xw==@gmail.com
+X-Google-Smtp-Source: AGHT+IGEWJoLHpsufJMWlWmldnpM2/Ye8eLzPXUqAZT/iJENVLHehduT9KNc11q6kZqNgrkZooMT
+X-Received: by 2002:a05:6e02:3787:b0:3d4:341a:441d with SMTP id e9e14a558f8ab-3d483a32c7amr128954945ab.10.1742278250679;
+        Mon, 17 Mar 2025 23:10:50 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1742278250; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=GMY7gNkgUL+WAaQxnQIIerQQQdh4BEc1CpeZHWzAA+Cq8xTfIKohWBmyxz6jprIXmk
+         3Dp+Z/tmIB5W1VMuU28dp4sCmUvAGOWSDpKA2T8HRm7bH8CzGG4xN7xaa7ibzUv/D+zz
+         LLFyKYHnuwFqdF9EHznQs/Z0iDq2aV+zs5OxeKJXCYW8lD0DbZVsCl5DnloMJk4Y+6V4
+         bqhs4RTP+QPO1mISEp1JxSvMyEvBX+s+wSjrVyUGj4FyupspZNW8zSq6+fLw2AeNh1/H
+         yyxKJutz9nSp5mfXNkaPHssF9Rk/8fObqA7idwIRzII5XWUSUrdaIQeYuEEQOA2+hyBP
+         2uTg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:msip_labels:content-language:accept-language
+         :message-id:date:thread-index:thread-topic:subject:from
+         :dkim-signature;
+        bh=itfGtMlRqYOdQSG4U6XYxyY3XjozpLVNhc+SSMjGK6s=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=Pq/yI/f5cuYCuzmMMzfy7sOeoMKSXOnKMtFEZjrw4mRULjqCjgRc8v/xTuj4n4fs3N
+         fI6934KJxS/uhWqHJoymX/Zy0xHeZQ1EbpM7sNXJRIs6xXYYzxrpVYhRbQLA8xASeaKP
+         7KGhdcSdoMTM/Bpae2wG3sQ8+flnyfx/JLP1mPCGkYTghSaPfodOus5BhQ1lXNCmyDzn
+         /5iZEOS8k6MgDm2bW2FPcN9Yd9ePSV/87M1VKNqoxdT8LwnF3GRqJGzrMkE+CI/og+ix
+         o0qUkSl2iGfOlNoeTA6BBhraGvcCI/aD50lLSF+Y3fLQ0MIvgtcDIqnTYQMqyArCytpS
+         eaFQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=orGe9n4E;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of [removed] designates 2a01:111:f403:2e08::829 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+Return-Path: <[removed]>
+Received: from EUR02-DB5-obe.outbound.protection.outlook.com (mail-db5eur02olkn20829.outbound.protection.outlook.com. [2a01:111:f403:2e08::829])
+        by mx.google.com with ESMTPS id 8926c6da1cb9f-4f26381206asi11093157173.128.2025.03.17.23.10.48
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 17 Mar 2025 23:10:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 2a01:111:f403:2e08::829 as permitted sender) client-ip=2a01:111:f403:2e08::829;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hotmail.com header.s=selector1 header.b=orGe9n4E;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of [removed] designates 2a01:111:f403:2e08::829 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hotmail.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=XQUNsw2qp6IBgYCY3+4TCdSvRtejtnrpSnXjL31woTRhqyFf6xgULlk7y1jCJBnS7yxPhssyaBFNtma+a9YuDCRgC+UuPDKKeSJpUvfcucDX1pT6AzjlzSfmipHFwt/t8w4S5hOkglmLtYjNdKmwaRMeQZU1V3AsDElTZfE9nG3qd/gTX/BL21xIoXI5c1Bw9qkaEnERCxFM8ydS2eL7f79LWC6Yt5/rChnt3V+0aaVyCvgg8Encyg3GNVUSxOI5+LY41telBaVy+RfQ8nldQXQkU5BKQSN5qr7T1nyG0ZUUpqLb4o8oUsuX8/EzQl5uMb0GFY45nyyb6spjrPaD7g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:
+ bh=itfGtMlRqYOdQSG4U6XYxyY3XjozpLVNhc+SSMjGK6s=;
+ b=yrmLrZnwPLZbCPrMv7U4JzuCGS5jnxM0/kuFoqrLXKuo84bkU1n/vjpF5726Trd8VGVb86L/XXdgQTnPt9N4d+aBwfk73ewsO20dnz9KgTmikkrjgTFCZ7wMrzeoJ0ydPOHUMpvj0V05bsLuN3F1nrcpX7WBTdXsMP9Su/M6mKjF4LTcUVKqUM6xi83Yw9+c5yMZfaNMO5NhDKMXT65Qegjlc1BVJrkgnbuDCNbkLH0HmI33e5rBITbociyPfaAEA4YSbSum4gBy2wdrp05f0+VUnF3FcoW92ge0N4sVAo4RcuGDt1lvQ52EaEBU54iIsFoiFgwmfyfL80TmzDWDow==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:
+ bh=itfGtMlRqYOdQSG4U6XYxyY3XjozpLVNhc+SSMjGK6s=;
+ b=orGe9n4EbO9ZV0/KNe0k19Fl8wTgKvBWAVR01m9cqnHpp2W+5HyRTqV51pM/i9aK6vtQEhtWbknFPBJGJGVg4fSk8Uwu7T2JZ0fcadYUmpDpNM+9UCMQ+hlMrHaYrLfQe1YLO0l2HHKWNHYQ0kjOfybZUmMrnOhpylZ2v7f8gK0VBxSHyNz1lwjwyzv4YiaxHblb+DVviV3Fmr8CxmoWQYOGo6HX2IACGkouVUoWkY3Fk0l+Uuwfdv38bAsHGIEfOUr/UzcthNjmf6vB8C5wNEuaLMpICEgcAEExruh5JGb+9dfr2LfaxRNzX8q/lMkrj/wH7RhDIQvuQ9ZxJfaynQ==
+Received: from AS2PR08MB9737.eurprd08.prod.outlook.com (2603:10a6:20b:607::21)
+ by GV2PR08MB8271.eurprd08.prod.outlook.com (2603:10a6:150:b8::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.33; Tue, 18 Mar
+ 2025 06:10:44 +0000
+Received: from AS2PR08MB9737.eurprd08.prod.outlook.com
+ ([fe80::9e67:96b4:ae8a:6f63]) by AS2PR08MB9737.eurprd08.prod.outlook.com
+ ([fe80::9e67:96b4:ae8a:6f63%4]) with mapi id 15.20.8534.031; Tue, 18 Mar 2025
+ 06:10:43 +0000
+From:
+Subject: Business Inquiry
+Thread-Topic: Business Inquiry
+Thread-Index: AQHbl8xLl07mDoZ0j0+kM+D6SaKtNw==
+Date: Tue, 18 Mar 2025 06:10:43 +0000
+Message-ID:
+ <[removed]>
+Accept-Language: en-GB, en-US
+Content-Language: en-GB
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: AS2PR08MB9737:EE_|GV2PR08MB8271:EE_
+x-ms-office365-filtering-correlation-id: 9aca810b-1700-4db0-dbfe-08dd65e39de5
+x-microsoft-antispam:
+ BCL:0;ARA:14566002|461199028|12121999004|8062599003|15030799003|19110799003|8060799006|7071999006|15080799006|7092599003|6115599003|10035399004|3412199025|440099028|12091999003|102099032|34005399003;
+x-microsoft-antispam-message-info:
+ =?iso-8859-1?Q?ELPtRPdYUYIPetVoH9LQkmTCoiGmD3G/+W9LBkQAKkd3ByXFD8rrGSebDE?=
+ =?iso-8859-1?Q?cutR3JIexaICd5FM/rHRoQgD+rU5S0WWxUG4q9Mbmd6LYGII+xLyHD2uf/?=
+ =?iso-8859-1?Q?6V2b6HVWJW6BNDkAUmomi+ROMlPjpbg/aCkbmkGJDfNkSLYJbRBUmj9/GD?=
+ =?iso-8859-1?Q?y+Dg7+qbFJggn2Awog48w643l6cVIFXqg1qNbGqVZOLXVzCK3R946MLQUj?=
+ =?iso-8859-1?Q?weRIDIOMJUn5USMSSqzeoz3Kk8d4jv7ffw84grDe2cmGUdsiq1GVDQ2toh?=
+ =?iso-8859-1?Q?dA/TmcxkH+LSYKiNNIj9nQjDo7oTR0QoGi1qNlSISOAbwpjkOEkYeX8TRJ?=
+ =?iso-8859-1?Q?QqV9Me/7frAIa6lrJBJ/FgkUCOp6gusyMGQu+u1bgnaLwe8r+coOsco5Ln?=
+ =?iso-8859-1?Q?+BCyerBTmdhJ6k82THqLszmj/rDw11KJCK2lOmDOAznae+ffOtsVNhapo8?=
+ =?iso-8859-1?Q?oXvhWv13zI3A5d39mj/13NfHXwJZQwcSVyY4puDl/fOcFSSd8KvVnoN0kF?=
+ =?iso-8859-1?Q?OovHBu3OYMbLUhHLwiULnGHYoO9DZs8p14mZVP35cbMu2DUTnfRl0z78Y9?=
+ =?iso-8859-1?Q?eNI3IJAe1umdMkI2C2Ltipv12EybU3h75gnmBN3er+zjnP2/jnRFijOOs5?=
+ =?iso-8859-1?Q?08WXCeMW8uYgTeOS0HVztrBzqaAbEGPLSqkLX3qfXlReOzWAYVN8s5j5+L?=
+ =?iso-8859-1?Q?PgEjTQ9aUAPFdatol1rqe3MNkfKSSUoBSNhg89vCEVi1GGi0tIOLEa+XDR?=
+ =?iso-8859-1?Q?7ZJ1QNHrVf777r5EztapfljcfUbGcDvtNGOkGV8vQjUMsDGWY/eRgCJWr5?=
+ =?iso-8859-1?Q?Eve8qko6wtLiCun1IPGh5+vN4cPZIqrmTTuTFD6F1s9FVeYwEsPd0p5ESG?=
+ =?iso-8859-1?Q?PR9EvcGLIP2EqhTMCNPjzExuRHSEsSNHp4jRmiIBUvQlEJplWd7vZabTj2?=
+ =?iso-8859-1?Q?wJsgnmBzyok2Px1REber+SQaVO+pxiOu2+Oej0Zrt81IA3alC8+Psu314d?=
+ =?iso-8859-1?Q?qpni0lcCt713BnNDfIxGDCdMpUMxfpLnmSJgmzgsgOvrn1bNYz2tTaFbWX?=
+ =?iso-8859-1?Q?beqNyZN3fgLfxYR5haHKS+o+/cSzSZ4OuOj+JShoZXJsuLrw97fRHGDSr6?=
+ =?iso-8859-1?Q?bI19kHtAvpXrgqWHsI9X77IoiB+aJqTwDHMdvFKcVk+LuHL80DJv/lkQF+?=
+ =?iso-8859-1?Q?rX4h0meWjhLVDDHoCGFdtKGoQMXImWMd5aBKYG7Xj3O5QVhxJGONWAZuW/?=
+ =?iso-8859-1?Q?U2WWap6FSV0lvdHxsw7y2lPeNDf30ANhuRNdQ724FFPpDe4ZrFdD2sgGFw?=
+ =?iso-8859-1?Q?MhggomNwhx8rW3DxdT35FvBwFync4nWfihISmA+6y8b/D3CHiXek5869Zl?=
+ =?iso-8859-1?Q?t0rNSyyzrDKA/ZppIVAw0M02eYXWoW9A=3D=3D?=
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?6Pbez0CvFpei+6T9ndT7EFU461GhxHuuHw2zOJ4kDC9yS3gKyOMxWteowa?=
+ =?iso-8859-1?Q?8PeiSyCei76p1olIueZkvDiZiMp7RYlHSxQwZJqsg4ickjtiR+I0Ftssr6?=
+ =?iso-8859-1?Q?YwD58glajnoluYwD3ydpvEi74qFDANqGgdShdikNuFX1lin+GI0zDl5p2q?=
+ =?iso-8859-1?Q?V1+5HMtFUXLmeOi3fHR2h+qETO0OLtz+jT3DCqUQmNcnEMjlkyJ1p4IMS5?=
+ =?iso-8859-1?Q?jlzFb47RxorKSNedJwHB01IKHkgd89vzSwLHaIsdoLg/FGwqzBEOcG16ct?=
+ =?iso-8859-1?Q?mRv9P9QI8QdhvuVUhqebO9RilFGi4eL0i8K7N0+ttoLufBSE+luEDfPqjz?=
+ =?iso-8859-1?Q?rAqnG7699opcJHgADYGYbnz1O+ubDGa+vMcY3v95gymD1Cbl1a9H8UKax2?=
+ =?iso-8859-1?Q?G64aecNqYVxNAgBJ8x8uJDq98d1XsEZi0yCHGpguarxhhzq0dG5GJGmkk+?=
+ =?iso-8859-1?Q?UDnMwS9TenW9McO+WiyIjk4/EDqSGmZuDckDWcvPXM7qrxzBm4Ob3NyMcy?=
+ =?iso-8859-1?Q?D026A3H0Jux5TTiVZyXFuqBaZO3DYlKTikuKFJbzzqIq0AP9c1IoKk+jvk?=
+ =?iso-8859-1?Q?O5fx+bnoDjfM9OoAvYapAhih/p/9tsFa0BxHpGQshNBwHBlhWfkGpqBFU6?=
+ =?iso-8859-1?Q?iWAjcg3BPf8kakNHa8G/707RoKeVDsPvgadFW5jEgQKC0G0qLwlR0NF2Ep?=
+ =?iso-8859-1?Q?RGYIdDanLWgY/lnM0ba/6lzUWPBgCTMa8NK28Cq4zJKyeJ0BNDVbwKLjNn?=
+ =?iso-8859-1?Q?hD/OWFWmZis5U2BtceZj3+SRuPCN4y2UE3r6FfEV0cpRDgubpAfjqZu0Zk?=
+ =?iso-8859-1?Q?qfdQvh81okyBjpRhEnkLgnJNkn4UdrJ028dM5z7KKLE3YARWrBB43PfdqB?=
+ =?iso-8859-1?Q?kIScmsaaD7jUCpnU1Tw7OTW2lEde3XZy9kyPv4ihU0J8xVwrJztOZpbecs?=
+ =?iso-8859-1?Q?SjEG7C8sd8eoOf3wWAEeSGp+cle7xxhMTpb6H+XepW+oUoyzn781A5z8D2?=
+ =?iso-8859-1?Q?lZ1PFrsFI5YPDVuGpA+pGnqbW/1Dp+jxP5gqKIU+zSPgz57YBdzB8HbmYt?=
+ =?iso-8859-1?Q?fumKFHiAKXGTr50pvlDjkxyHTH5FxlTXkjJIVcp02GW0q8ZHLaJFZi2ULh?=
+ =?iso-8859-1?Q?enNbFnZPdm8FrIiIT1kiz3Ur8eW6sn1JxnsB5jJ8YXTFIrZC/RLRsxw2bK?=
+ =?iso-8859-1?Q?uDCh5pgX3LyPLjrOHYdIu10WXO1U2svL4bbdY3tUoEvQqw5pgmAm7mFr9L?=
+ =?iso-8859-1?Q?K1AqHzVrFyQwJ9NWOC6JNIf/pvZFwiVPYt0Oc9CMjznIvPm7gDlMoDLxsv?=
+ =?iso-8859-1?Q?VyOZDZY4ptQf0pJhIbyVvJOKABAYN+CN56RRfldVIK4RuKw=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_AS2PR08MB97379E5386AC41A74C09E633B5DE2AS2PR08MB9737eurp_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-7719-20-msonline-outlook-de33f.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: AS2PR08MB9737.eurprd08.prod.outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 9aca810b-1700-4db0-dbfe-08dd65e39de5
+X-MS-Exchange-CrossTenant-originalarrivaltime: 18 Mar 2025 06:10:43.7019
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: GV2PR08MB8271
+
+--_000_AS2PR08MB97379E5386AC41A74C09E633B5DE2AS2PR08MB9737eurp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Audit Department
+International Banking Department
+Ecowas Bank for Investment and Development
+www.ecowas.int
+
+Sir
+Subject: Requesting your cooperation to receive (US$10,500, 000.00 ) Ten Mi=
+llion Five Hundred Thousand Dollars inheritance funds into your bank accoun=
+t.
+
+I am James Demba, a senior staff of the ECOWAS Regional Bank. I am contacti=
+ng you to solicit your cooperation concerning our customer Walter Hook whos=
+e entire family were victims of the devastating 8.9-magnitude earthquake th=
+at triggered tsunami through Kesennuma City in Miyagi Prefecture Japan on F=
+riday 11th March 2011.
+
+Walter Hook The (deceased) has an account balance of (US$10,500, 000.00 ) T=
+en Million Five Hundred Thousand Dollars and about twenty five kilograms of=
+ alluvial gold deposited in our bank's custody until the unexpected tragedy=
+ in Japan that wiped out the family. By privilege of being Walter Hook's pe=
+rsonal account supervisor I have his file in my possession and I need your =
+sincere cooperation to transfer these funds to a safe bank account in your =
+country because the (deceased) presently has no next of kin to inherit his =
+estate here.
+
+I do not want to declare these huge sums of money as unclaimed funds which =
+will just be forfeited to the government, and as a staff of the bank I cann=
+ot personally claim these funds.
+
+We will successfully wind up the transfer of these funds to your preferred =
+bank account within ambit of law as business associate to Walter Hook the (=
+deceased) through a transparent legal documentation in your name, is rest a=
+ssured that this transaction is 100% risk-free by virtue of my status in th=
+e bank and also my vast experience in the banking sector. I look forward to=
+ working with you for the successful swift transfer of these funds to your =
+bank account.
+
+As a seasoned bank do not ask many questions on the possibility or success =
+of this project because I know how to go about manipulation of the bank Dat=
+abase to effect needed changes in your name. Upon successful completion of =
+these into your bank account, I will come over to your country and meet wit=
+h you personally so we can share the funds 50/50 equally.
+
+Regards
+
+James Demba
+
++225 0503 4010 24
+
+--_000_AS2PR08MB97379E5386AC41A74C09E633B5DE2AS2PR08MB9737eurp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Audit Department</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+International Banking Department</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Ecowas Bank for Investment and Development</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+www.ecowas.int</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Sir</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Subject: Requesting your cooperation to receive (US$10,500, 000.00 ) Ten Mi=
+llion Five Hundred Thousand Dollars inheritance funds into your bank accoun=
+t.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+I am James Demba, a senior staff of the ECOWAS Regional Bank. I am contacti=
+ng you to solicit your cooperation concerning our customer Walter Hook whos=
+e entire family were victims of the devastating 8.9-magnitude earthquake th=
+at triggered tsunami through Kesennuma
+ City in Miyagi Prefecture Japan on Friday 11th March 2011.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Walter Hook The (deceased) has an account balance of (US$10,500, 000.00 ) T=
+en Million Five Hundred Thousand Dollars and about twenty five kilograms of=
+ alluvial gold deposited in our bank's custody until the unexpected tragedy=
+ in Japan that wiped out the family.
+ By privilege of being Walter Hook's personal account supervisor I have his=
+ file in my possession and I need your sincere cooperation to transfer thes=
+e funds to a safe bank account in your country because the (deceased) prese=
+ntly has no next of kin to inherit
+ his estate here.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+I do not want to declare these huge sums of money as unclaimed funds which =
+will just be forfeited to the government, and as a staff of the bank I cann=
+ot personally claim these funds.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+We will successfully wind up the transfer of these funds to your preferred =
+bank account within ambit of law as business associate to Walter Hook the (=
+deceased) through a transparent legal documentation in your name, is rest a=
+ssured that this transaction is
+ 100% risk-free by virtue of my status in the bank and also my vast experie=
+nce in the banking sector. I look forward to working with you for the succe=
+ssful swift transfer of these funds to your bank account.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+As a seasoned bank do not ask many questions on the possibility or success =
+of this project because I know how to go about manipulation of the bank Dat=
+abase to effect needed changes in your name. Upon successful completion of =
+these into your bank account, I
+ will come over to your country and meet with you personally so we can shar=
+e the funds 50/50 equally.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+Regards</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+James Demba</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
++225 0503 4010 24</div>
+</body>
+</html>
+
+--_000_AS2PR08MB97379E5386AC41A74C09E633B5DE2AS2PR08MB9737eurp_--
+

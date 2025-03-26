@@ -1,0 +1,168 @@
+Delivered-To:
+Received: by 2002:a59:dcc6:0:b0:4bc:e395:821d with SMTP id eh6csp2384733vqb;
+        Sun, 2 Mar 2025 23:36:26 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXaUwJ88zIBj5TvTRRMTEjeXAnSrdupL5RaHWN8RJ94u133/Xnm7SowO6IllceG/lvlhIonUGPYBPr+Iyc2J/kV2e0DHw==@gmail.com
+X-Received: by 2002:a05:690c:4b8c:b0:6fd:3f9e:b7d6 with SMTP id 00721157ae682-6fd4a074751mr168255177b3.19.1740987386333;
+        Sun, 02 Mar 2025 23:36:26 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740987386; cv=none;
+        d=google.com; s=arc-20240605;
+        b=PUD6SXPxEWrUVM3rwMFer2Kk8oXE9UgOTRUQoVrxyGlL1OAx5qyBEOx27TtdEaW0qF
+         mflzU94id+bJiS8Mc45se/kkNBCU5AHbGnxCzuRdaawrgvyPi5yOTE7GsZRtnV2U7tIr
+         Cmsn8v4heHCSDEa2bP+IBnFKW4RSg2mKl+pReqGicZrR3QxxhCK6XyDJlLCW6lUhGOST
+         WJ+VDpypkGta87DO3QKW70BEPR46qZi/ClLdEcN/blZOHnOHyUVQpouDDltISLjKTvbL
+         UX+FiCDPOgWDKaiXZTx3nistOWhrscNeGM8+7t391BttHprVhrbl75ZOcKNwO2yfUA78
+         JSlQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=b0eiLZmjGygE79D6MmgCsadPSxCDhsE1Ce8j+G5JdQ8=;
+        fh=je/oqdv/ox2ikvica8Qxjym4nIs5oYDjx12N/RDflLk=;
+        b=XxA/RV3k3w/331UB9K07sMdCBY8BDToaKMXn5l/pAvdg9wkrXc7UqVwsnNaQ+PLQnT
+         B1swif5ZJ4+/QDMttcgqhn+4X1wTiA3am3YPx2X9dDbThQGGXp2TFmJ4ye8Y0VZfpKuF
+         z4wl5TXBsxEu2cm7QGec1UMg+KRo6ini+eEiDH66Px+fZxUpkLRp1xBMOFwpL7OJ8qat
+         6TJXcQg+1VYzYpyrbEqwRFnMDoUm3r++QuyOBoObm4J+V+idh1++obliB2rvgOkxmp0J
+         Ni1BVsoA5ZCpwr/EJlrRVbYEueDkKuAvEYz0zofc84E3ClicWuqkvAAq92y43z9uyaaA
+         afPw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=cFx8dojO;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-6fd3ca673f0sor50407737b3.7.2025.03.02.23.36.26
+        for <[removed]>
+        (Google Transport Security);
+        Sun, 02 Mar 2025 23:36:26 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=cFx8dojO;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1740987386; x=1741592186; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=b0eiLZmjGygE79D6MmgCsadPSxCDhsE1Ce8j+G5JdQ8=;
+        b=cFx8dojOpqvk7hixWIQYkCDKQ/EN2uRJ9NGQWLMGjHxDqbcth3zvZr/+K9wIo/V64G
+         yWYK4/AvEd1X4XV+md6Ns5ZjH0KULr5MMhgJO56to3wLnNFHOYpHWZEPqIA2X6HRanId
+         GJ3l4ntJ/wMYOR6fkkP//M9wAS9jspzAZWu2e1rISEOyQN2pHa1wzlRpPz6/my2g+gW0
+         WmV3RTDrqPwvgVlUt7TAtmJS5R+q9CtX1K/IGiC2uS6gs58hV2bMLFQ+VXxedpCvp2h0
+         xRseC2yZiDcKApFd+RozACsWRI3vkuL9S3czZAUPe/UD9hyOHKDEkTP0QMxdaGuZYtje
+         MThw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1740987386; x=1741592186;
+        h=to:
+         :x-gm-message-state:from:
+        bh=b0eiLZmjGygE79D6MmgCsadPSxCDhsE1Ce8j+G5JdQ8=;
+        b=w7ZcSha/aT6PCd1MgCVZF1z/kaffl3b3NjtAvr8ZwY1TWXx5GPqldlSnrMS4hae+80
+         q9w8lYLeg2sRw2U7SEPKEDSnuHM4QgSlmmUIeSkqgsRUy6gVpkEEig8SBEzcB6XNd0fo
+         GWuBoL7wSu+c+ZhEKS/N2SgDKIcvkEiWDPkDGyRAs4B8UFU+JseXfx9pevFJ4L7e20Kn
+         waz5ADW5o1wJKzFTFLwSccsktrfNRfo6qHqu+ooUwp4Xuf9xI+Jma+aFDRe+xp3hmS6t
+         L+O58OHIbChqkOs7s+n/eGNcbWr14PEgLtwOtWWVu6l4RhkM5tyXmphWEL/HUpuHDn55
+         SF0w==
+X-Forwarded-Encrypted: i=1; AJvYcCVtweQxi8jYdNnGva14/swGO7dzNDz67W64cVPsZFIeDVMpI0seXDQc01HHO/TM3ZvHiPx2/gShMZwVgaWBmJVhW1eJ/Q==@gmail.com
+X-Gm-Message-State: AOJu0YzdqFer4SX4vzQrCaHME6fPAcxm5Zn70azvuURz05IkwI09rxzy
+	Iaz41K9zTwbxCUKL/KRRpvr/PCrnk1htu+n+Z3rGL8GpBa7MKqC5mHLjTN8JuK5IIwTTWbewjvf
+	B8r4wXZntxlgE0wJjUYJuaV5CzJA=
+X-Gm-Gg: ASbGncvwt9jWp4Q6kUlHD59lA9kBJWfIbIerjUogyRrHUCPfBVQvHBaAqdOPKmZKn7u
+	Ychzmjz7jeqpZod7HpCm41YXSNhSLJUl3jwGZ8r8r6egVCpmGxykuWXYkpYD1DYT/KabRBQW9Sl
+	2fEsLQGOax8tnbLWiGcgxedkcQHA8=
+X-Google-Smtp-Source: AGHT+IFYBdKCpLfNpFpGjKclQYY4EtU2HY+38M4166zFIKmOJRqcM1AP/AWhphg/mA7JKjpscVaJDEGa9gnQsn1o8zo=
+X-Received: by 2002:a05:690c:7248:b0:6ef:a4ec:f698 with SMTP id
+ 00721157ae682-6fd4a01fd77mr158366577b3.3.1740987385843; Sun, 02 Mar 2025
+ 23:36:25 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Sun, 2 Mar 2025 23:36:14 -0800
+X-Gm-Features: AQ5f1JpynpV9uZp6jLpGDvego4eCQofMudQMo_pPUynyMfMKSxkscmkRXU8i02A
+Message-ID: <CAJC3fNa8eQFUF=[removed]>
+Subject: Good news,
+To:
+Content-Type: multipart/alternative; boundary="000000000000b116a0062f6b36f9"
+Bcc:
+
+--000000000000b116a0062f6b36f9
+Content-Type: text/plain; charset="UTF-8"
+
+ FROM THE DESK OF
+BARRISTER EMEKA ANI OFR
+EMEKA ANI LAW ASSOCIATES
+SOLICITORS AND PUBLIC NOTARIES
+TEL: 234-810334084
+
+Good news,
+
+I got your contact to the paying bank which your compensation payment
+is over due valued $6 Million USD, which in your ATM card  and here to
+ask you have you abandon your fund can you inform me what is the
+problem so that i can know how to assist you as a law maker i we help
+you to receive your fund if you co-operated to me , sorry if you are
+not the rightful owner of this fund please do not reply .
+
+
+BARRISTER EMEKA ANI OFR
+EMEKA ANI LAW ASSOCIATES
+SOLICITORS AND PUBLIC NOTARIES
+
+--000000000000b116a0062f6b36f9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+<div id=3D"gmail-:1cc" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-=
+LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"textbox=
+" aria-multiline=3D"true" style=3D"direction:ltr;min-height:280px" tabindex=
+=3D"1" aria-controls=3D":227" aria-expanded=3D"false">
+<div id=3D"gmail-:1cz" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-=
+LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"textbox=
+" aria-multiline=3D"true" style=3D"direction:ltr;min-height:280px" tabindex=
+=3D"1" aria-controls=3D":1vr" aria-expanded=3D"false">
+<div id=3D"gmail-:1hj" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-=
+LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"textbox=
+" aria-multiline=3D"true" style=3D"direction:ltr;min-height:280px" tabindex=
+=3D"1" aria-controls=3D":1pb" aria-expanded=3D"false">
+<div id=3D"gmail-:1d9" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-=
+LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"textbox=
+" aria-multiline=3D"true" style=3D"direction:ltr;min-height:280px" tabindex=
+=3D"1" aria-controls=3D":1hy" aria-expanded=3D"false">
+
+
+
+FROM THE DESK OF<br>
+BARRISTER EMEKA ANI OFR<br>
+EMEKA ANI LAW ASSOCIATES<br>
+SOLICITORS AND PUBLIC NOTARIES<br>
+TEL: 234-810334084<br>
+<br>
+Good news,<br>
+<br>
+I got your contact to the paying bank which your compensation payment<br>
+is over due valued $6 Million USD, which in your ATM card=C2=A0 and here to=
+<br>
+ask you have you abandon your fund can you inform me what is the<br>
+problem so that i can know how to assist you as a law maker i we help<br>
+you to receive your fund if you co-operated to me , sorry if you are<br>
+not the rightful owner of this fund please do not reply .<font color=3D"#88=
+8888"><br>
+<br>
+<br>
+BARRISTER EMEKA ANI OFR<br>
+EMEKA ANI LAW ASSOCIATES<br>
+SOLICITORS AND PUBLIC NOTARIES</font>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+--000000000000b116a0062f6b36f9--
+

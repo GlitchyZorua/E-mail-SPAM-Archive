@@ -1,0 +1,102 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp6652vqr;
+        Tue, 4 Mar 2025 02:19:33 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUPmKDs0p7DHNjLdHM6E9kGWX2r+Evw3YJY9tn+K546klD6cEVIvYNFRStgBXIVA7yKSGyfHcDUhsgEQ9CAesQXCf21MQ==@gmail.com
+X-Received: by 2002:a05:690c:7484:b0:6e9:e097:718c with SMTP id 00721157ae682-6fd4a088fb2mr250336197b3.6.1741083573534;
+        Tue, 04 Mar 2025 02:19:33 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741083573; cv=none;
+        d=google.com; s=arc-20240605;
+        b=h9LZ01/YRQOu7SuoB7nsM6OZtQusuti2i3MSM+y5NROE1Y6iRr+SkX6Fuer8YNBxzR
+         Iolgdi+NWXsNWGpGaCDlX6kkhEQ69Saj5hCdm7juVoBNkHT5bq9y0QX4biiG8G8gxXQ1
+         1TB0pGuEB9grDI6trZ8+Qwl3zIh8fkgHekaIGKrGvBmy7C+jI1uzcT3e5mKyRslloQ+T
+         j+hL0UUJ+svD3I2O/rK1D7wcMKr2THhKU2sTVVodOjAyw3ZNF7cDkME3MRtch5AQ6PoS
+         VGjB2dydjNuh8QBdWkKn0QvpP1274XE/OSlrlT0ZP48oK6+zmtSaoNmvISFZgAbne1hc
+         TB3g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=blkoFoxP2PqGztgbW2FfRXxkT4EC2QArn5X1r8VZUEA=;
+        fh=gM+qZP1BstpzZMnvLaYdtdJUwIZgug3/CZjkY9QqTno=;
+        b=G413OpfdGRsvtEJetUB5qsvgsOG/354E8WizYjDqsZcx/nR7pKHwLxdwjLX5DGoE+n
+         q3jN501HPq9xR+WwSGu0oJHMD09qf394DQUUe90oD7a3D1NngeNb20PPK74jf9NpGqCC
+         2ardsv/hShO68Fd1oWJE0vZVhXKomxbF4g8ARa9P1lZJ9f8AKj7eFushIqPWCSts3HRW
+         uYCkaZ0zXO2OJi/QpLDEB3dO8KAVRU+LwrwsJC5zUIjrG/7EBRVl17lxTg9imjTtYbRI
+         XaMp1V8cdKEHD/7p439qNIlWu9O6QcgyNtZn2sD2D4itoz8IXZejXgYU8i/dDJN2t6zd
+         XeWQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="KI3I/l6a";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 00721157ae682-6fd3cb9f3f1sor67693967b3.14.2025.03.04.02.19.33
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 04 Mar 2025 02:19:33 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="KI3I/l6a";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741083573; x=1741688373; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=blkoFoxP2PqGztgbW2FfRXxkT4EC2QArn5X1r8VZUEA=;
+        b=KI3I/l6aOR6rZzRGaWOTvk0fJ1agdDSYBd6fOwNw7vkyHtqP0HROCcvPNwJ7OgPIqI
+         UsPndR9Bu+3iJQIjUg2H3C/EZ8cQFb6jOyliuDn1Ze4YfoWEEGqd4NY6zJgEN/NvKQ7i
+         IunaW2u9xUzNFBnTbMPGHSyIHHVRX+XTC7njcKRikwaSQWueIjzHPhN9yQ5buZwpPYts
+         qVROF7gE5D4AtALF/q0rE7Ch51tNu1J62GvFIUF1D68b7DwzEqDWSKXH9ZOfe53DwX7x
+         Bb5q6c2WN0TBFdBWcAMbsgy17PBUsPqvUUhY9OxGn42GK+8uzXNKu3gAZQ4BcFeT21Lf
+         X0Jg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741083573; x=1741688373;
+        h=to:
+         :from:
+        bh=blkoFoxP2PqGztgbW2FfRXxkT4EC2QArn5X1r8VZUEA=;
+        b=neoWo1eMKFoiNS//77dgV1UZWLpDuCzyt7xh7KAhMYV/nfu5479cWPGFGI7LbmiQ50
+         FREO+82SH5xNjcckEmDERjNku/bdDIwPHWwfmIyHRDaV5SxHz7MSt5EtcAo8qgYO6nrN
+         gFmAnskPxM4lUv/Y+vORncTTFOdnup9pJUo0gw2dyaONz415TJ3hfYDIb8D0Sp8wDiGO
+         UY+tfygeHCd4Az10klwbhyQ/q53lCc3qguZnz8ACNVR2gwYcuH/0GKq3YTN3O3M6KD98
+         iZVXTGnwWq1XF8gHWlYuPCJCZDQl6ma5jzgGYs6NnV1B0pR6R4yYIP4ROkztmJnbUwA8
+         dgnQ==
+X-Forwarded-Encrypted: i=1; AJvYcCU2gyi9R/MCPCQDl33vKpPjnkt78RuewkMg/5gSYSnKM2UhEK8IVtwoxZZgYmXAvP/jPR09cwhg8VcY/R7WKZyryVPxwA==@gmail.com
+X-Gm-Message-State: AOJu0Yz9my5YabhBtlRqbgO1wFsIt2HyT3+WokUledGY5tSZvov5ANhS
+	tOBzVmX9Garfd/jU/KkQkl12x8IW0P8A0CtaTC+y9lgBDvDk0iqhQrDmP6xWlTYhEB0XfyRfAd+
+	vqZeaTcyYIhuhzjDMPxZ+qkTvBcg=
+X-Gm-Gg: ASbGncuwspgddPMYfl94332Vu60qs5rmXacEPw4rS9JMxcUWDtncHyivN9s1ieWJxXI
+	Y9cox4NfA5+DFa4BIqZkI4YTcrMyngRao6Lidp37A/GfhVrmUlrauBnkcJnCES/DeJLJrAlFW/o
+	/NZTkIO9AHEqeoivvBYIMdaPs96pA=
+X-Google-Smtp-Source: AGHT+IGZnJR3yefWnQRz3F1quqGyIRPlYOmdqnPHn06VAhLTszydQ/uwdfcwvteMXUO3Ciy5hlGRgi+ltMrEWDYSQ4g=
+X-Received: by 2002:a05:690c:6f87:b0:6fd:3d37:99ce with SMTP id
+ 00721157ae682-6fd4a0fba3emr214215457b3.17.1741083572514; Tue, 04 Mar 2025
+ 02:19:32 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Tue, 4 Mar 2025 11:19:22 +0100
+X-Gm-Features: AQ5f1JoLYVNdadns9ar7gjlO5u2Sq2uVV6O8QhkCvc3095-B3XHCy2SPf_n95rY
+Message-ID: <[removed]>
+Subject: RE: Claim the Funds
+To:
+Content-Type: multipart/alternative; boundary="000000000000dd3d7d062f819be9"
+Bcc:
+
+--000000000000dd3d7d062f819be9
+Content-Type: text/plain; charset="UTF-8"
+
+Hi, i am ready to claim my funds!
+I prepared 10.45 Ethereum to send but you never returned to me?
+I have been waiting for weeks!
+
+Best Regards,
+Janina
+
+--000000000000dd3d7d062f819be9
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Hi, i am ready to claim my funds!<br>I prepared 10.45 Ethereum to send but you never returned to me?<br>I have been waiting for weeks!<br><br>Best Regards,<br>Janina</div>
+
+--000000000000dd3d7d062f819be9--
+

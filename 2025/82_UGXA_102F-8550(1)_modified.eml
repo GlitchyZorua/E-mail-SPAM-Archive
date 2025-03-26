@@ -1,0 +1,124 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp2644608vqb;
+        Tue, 25 Mar 2025 06:49:51 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUCcbMG/uMYd7mSM7ICz3ATjKHr5G0jsZyn6BZyYULyzYw+T6IZPgCSDIGRiSpbndISxVAImV9fTYNoxptYxUnMbtNx1g==@gmail.com
+X-Received: by 2002:a17:902:e550:b0:223:54e5:bf4b with SMTP id d9443c01a7336-22780d8a5d9mr282021675ad.25.1742910590738;
+        Tue, 25 Mar 2025 06:49:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742910590; cv=none;
+        d=google.com; s=arc-20240605;
+        b=eMvp+2IACJsmSXqhVJ8vi5wfc71SvP+hUpXbWlxapcCwm/AH4OLH0TiPCJn/pyiJEa
+         ZkGu86SxUZhDpAc6DJ37OY4IbMH1iA76aJEpDEGP0A7dSrmBJnbu2wtl5eFw5jL42nHn
+         h0n95s1M8khkZ1s2tZOBeul06XR+MBpRB8TfGyHBPjofUOb9do/d0WqHlbGDbekCcLFJ
+         Hvsq18wC2KS8qh7Oe5aUXLlKYnz9eeaPup71914yMe+fyQLaKa+P+Ssb9KXA/Q/nUdZs
+         LIr1+NsyQTEdgn0WJV6Ft2RYai+a675tO9Xaz2A7q5NXqc3CalL0qaYmNj9ai6bsL1O0
+         2vmg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=rJzB8AkFb72+GPtEtG8wlQeSn3apgmH+xatSJ+/FuEI=;
+        fh=oNGaqwrJhpJ4WBHIy0+ZXS3ARV3B5WE6Aa+IDj0jAPM=;
+        b=c04eaOG0gQRNNhQvhPieVyX6tuCvKk04WY8cAv24xKFIKmVIgsrpugyYkJOjfDxkd2
+         biKhFANq+e6ZfP3mqzbBB3dgMjgvRKCy86xDOQkATTstA3Wp5+TUtoXZx5KDCHtLdKj8
+         WDT7ANC6C/lm7aiWen0fgYGVdn+6r13s6Jox2jb/jTfeyr08zddt3K0+4LqobHtMqYB7
+         pBZsiXCreg1eTKqstaIKoMYyTHIxqItkTuSfFxdJNdiCiK9g4tdl7t6tZcBavPNed1qf
+         qQeT9fMKorGcRawl/XKnrTm9LicuKlWhMx5qIe0QMcZKUwtJMlU3ZX+Yf/N53hXJkLem
+         NhHg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=YClgYYoD;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id d9443c01a7336-22780f2b719sor58546235ad.8.2025.03.25.06.49.50
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 25 Mar 2025 06:49:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=YClgYYoD;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742910590; x=1743515390; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=rJzB8AkFb72+GPtEtG8wlQeSn3apgmH+xatSJ+/FuEI=;
+        b=YClgYYoDGu/nVojGFZyPvDLXynFGLy+xnU33NFa1fNqxteG2t1Q+BIABUDPTZEfcmh
+         k4urksXFH23o4vv6yxtcDYCXtP6Tm5x2aEuI4q8z5d4XfGFAjQ8u8w6tbeklyRVNnBy2
+         g1MWfJ9GYv+SCohFoXO5yzH70msYZl6ynGt2HbQ1R3c/vfeS3YRJjbUcI6bK0q4cXv1M
+         sR4JxVLx13ZQlEyIgFQLataHn60jFrnUmpen404Z2DHoikCVXAQSqfU2vOXRvYa12bnz
+         yBkZMnIMXVT4YZuI1AsAW/Pmm9AHN/VgQbyRGc75ZDLQKevhBiylfFWqUX4IWHmDHeZ4
+         nyBg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742910590; x=1743515390;
+        h=to:
+         :x-gm-message-state:from:
+        bh=rJzB8AkFb72+GPtEtG8wlQeSn3apgmH+xatSJ+/FuEI=;
+        b=I6JcEF87/KI2/6LXARUMbw3sB7vXNwa0bM1Tm1EcfldwpPRXd8MdPYEzURI1Nsy9LM
+         qgSKOAEJNcPgJmzWD3CT/8Qevm4PSvVG4zWkfoitfmAi9hygVl0MMa8+CRKkrZ4D0vGj
+         Vpj+u10YGYjSZpWOmxP1fzd3TDglRJqNf+Kd/CKd+VrxBPTrLTvwlX5J+YgjPPt8aj5i
+         FeEMSDCusDu8oLogmcU1gTkIYh/qNTuJhhS+uJL9dF7sV8y2HZ1eB4FCLvzo7CrwB9C3
+         oyGx/McdSXbYT5dbWLDMdID9vwdmV74+Rh+zFxW+/gGppj8HUQnJHFAr5Ckss8p00BnE
+         mZOg==
+X-Forwarded-Encrypted: i=1; AJvYcCWSEVCRvWzrdpw2n7eY6sL1clU83KsixZ1L9j7rMElBMsqYORIZw0LJDO+cIxl9ozbhcSMPZkvTS+W/K2UO1X3rUmvUSQ==@gmail.com
+X-Gm-Message-State: AOJu0YwyjUhgKjLI8j4fa4JoTTtO0si2zz0xcV3BP6FPREtEhnYj/5oc
+	JNf0XjmCkEhhm8Ivoniz2lKpshbJZ/zhKhbc5/UBbWQo/mdtZe4qPjuh6hOe0OjTJTWiKLa49UD
+	h9440pruQ5EFMvD7DVWOi5uvUQcE=
+X-Gm-Gg: ASbGnct9B3fP3q8Rz+XcIWCmJ7d5UT9F+/UgTMZV58OciPmSYHQ8N/oSnCPza6gvb/T
+	T+EeLQhJe3c7TCss62d88eTgF8HFu5F7zE9Rkn9QJod8IhoaRoBvxUDXVgsuUL3nMjyuCeysisu
+	F80ncZhANzL/9OKRoSVvYKjQEItuRdQF/Ov/HPTA==
+X-Google-Smtp-Source: AGHT+IGFk3ay8LCccDQtS3ydMPyw/EfzL/bGEHMGKbjax7sqyBGLMlR92Trci30Zrz3Xm13M6OCuTLB/NSXKQzX82h4=
+X-Received: by 2002:a17:90b:4a03:b0:2f9:d9fe:e72e with SMTP id
+ 98e67ed59e1d1-3030feba6cdmr30829118a91.16.1742910589827; Tue, 25 Mar 2025
+ 06:49:49 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Tue, 25 Mar 2025 14:49:33 +0100
+X-Gm-Features: AQ5f1JrKoX0Z67C2t_IBbOZaulLAPjiGbjdtaqtPjN4ghJapXjvUDVcJQPjS0Vg
+Message-ID: <[removed]>
+Subject: UGXA/102F-8550
+To:
+Content-Type: multipart/alternative; boundary="00000000000095057a06312afe2e"
+Bcc:
+
+--00000000000095057a06312afe2e
+Content-Type: text/plain; charset="UTF-8"
+
+    First National Bank of America
+    Dept Credit Services
+    Foreign Payment Issues
+    241 East Saginaw Street
+    East Lansing, MI 48823
+
+   Outstanding Overdue Payment  ( US$870,000.00)
+
+    Attn:Beneficiary
+    How are you? This is to inform you that your     FUND is ready.
+
+Part Payment of Seventy Thousand (US$70,000.00 ) will be paid to you first
+through an ATM CARD
+Contact our Representative for guidelines.
+                        [removed]
+
+--00000000000095057a06312afe2e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br>=C2=A0 =C2=A0 First National Bank of America<br>=C2=A0=
+ =C2=A0 Dept Credit Services<br>=C2=A0 =C2=A0 Foreign Payment Issues<br>=C2=
+=A0 =C2=A0 241 East Saginaw Street<br>=C2=A0 =C2=A0 East Lansing, MI 48823<=
+br><br>=C2=A0 =C2=A0Outstanding Overdue Payment =C2=A0( US$870,000.00)<br><=
+br>=C2=A0 =C2=A0 Attn:Beneficiary<br>=C2=A0 =C2=A0 How are you? This is to =
+inform you that your =C2=A0 =C2=A0 FUND is ready.<br><br>Part Payment of Se=
+venty Thousand (US$70,000.00 ) will be paid to you first through an ATM CAR=
+D<br>Contact our Representative for guidelines.<br>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <a href=3D"mail=
+to:
+il.com</a><br><br><br><br><br></div>
+
+--00000000000095057a06312afe2e--
+

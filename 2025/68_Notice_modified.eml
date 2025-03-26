@@ -1,0 +1,247 @@
+Delivered-To:
+Received: by 2002:a59:bc64:0:b0:4bf:d2e8:882f with SMTP id t4csp1103294vqy;
+        Thu, 20 Mar 2025 10:22:42 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AJvYcCVX3Vg2ahdU3thZsEjywX5epi5uGxEMz9ifDKcntUzDFik42YeghjUZSihgRrypqGmmt2beKG1dxWH/VZmtrHZLsaxUzw==@gmail.com
+X-Google-Smtp-Source: AGHT+IGrI32tc+p2upkIYFb7fy0F1wd4E+l1mVraov2HEx1mpkQMoSdl/feDtR5rztTBmT+r8id8
+X-Received: by 2002:a05:690c:340b:b0:6f9:5a36:577d with SMTP id 00721157ae682-700ab2833c8mr51441807b3.9.1742491361798;
+        Thu, 20 Mar 2025 10:22:41 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1742491361; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=Zk0tZC72cVddLNBZ4YiRq+7ki+5O0jPRfqa3Bm1o9SFNUVzrb2SkpcOwBIJx7mpbC/
+         zJcgRj+ugTvwSLdOBYJFU6UKgLEN40wORRubbrI75OOxfAA6lCUCaR00rkaSspi6VQaR
+         939uTswYJrRbO5N4uV8/xi92ANPXlTJeZr98tK0DAvZHYKsAPtD19+5H8WxNtvffsdhk
+         Z4HWuenjGKI01Xd7f8UKU8kjqaOWlI/vNLEP0wXpXxUP3XNZ18n1jVGIYcguN08W9Fsk
+         9/DfWM7VjRsJoFKFollJNzM4b8ruxCuNOXkIzyKd9ze+57jykjyIiTtdgxA2DDBJpg6t
+         IjGQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:msip_labels:content-language:accept-language
+         :message-id:date:thread-index:thread-topic:subject:from
+         :dkim-signature;
+        bh=QjZ6bQwdnuPylPVNHawh0S5QJMUmG/EBMd9TuEI+fus=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=kxrXp3qf59gcA8axBfLnCdD2kLgbJuLcYb/3kZh9AOF7Pvf7W+0ayXNVG3rl9OHnaJ
+         yOrIn1J6yl+6+ktMbaqHfVtpMyv+62tmQcqrsiKhxdn52SSyrj6oxXsFdJ9Sl/RbS0FJ
+         CiHGsJt0+uH62xBE95MNmPz+K2jvW1wJIWaWjL2+KFbjfwYw7q63vG4KBe5RtVUGBA0b
+         01cqVjQ8rq9gaGJ7E217uZeaxlujCt55qBhe1FJLf6uJzc9MyBtWJlPEoPlR1iAlwZFR
+         9oHf5+5dqPSb9Xh+t47CNxxfuAXeEnIV8iYzgh/3bHQtjOVVrwoXfr661K9a/9je9mdW
+         A69Q==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@etec.sp.gov.br header.s=selector1 header.b=ZL13jLM5;
+       arc=pass (i=1 spf=pass spfdomain=etec.sp.gov.br dkim=pass dkdomain=etec.sp.gov.br dmarc=pass fromdomain=etec.sp.gov.br);
+       spf=pass (google.com: domain of [removed] designates 2a01:111:f403:c003::3 as permitted sender) smtp.mailfrom=[removed]
+Return-Path: <[removed]>
+Received: from CP4P284CU005.outbound.protection.outlook.com (mail-brazilsouthazlp170110003.outbound.protection.outlook.com. [2a01:111:f403:c003::3])
+        by mx.google.com with ESMTPS id 00721157ae682-700ba83336fsi881377b3.265.2025.03.20.10.22.41
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 20 Mar 2025 10:22:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 2a01:111:f403:c003::3 as permitted sender) client-ip=2a01:111:f403:c003::3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@etec.sp.gov.br header.s=selector1 header.b=ZL13jLM5;
+       arc=pass (i=1 spf=pass spfdomain=etec.sp.gov.br dkim=pass dkdomain=etec.sp.gov.br dmarc=pass fromdomain=etec.sp.gov.br);
+       spf=pass (google.com: domain of [removed] designates 2a01:111:f403:c003::3 as permitted sender) smtp.mailfrom=[removed]
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=W8+2nBUFCNVT1lxvPmBDBqsE9Rwdo+VUl9vDEKiRIMeZI2IgpKLn7ho4uoXO0m99lYEHUZIVZJA5GzQCGqFHc+6dhIa7YeJfDd3DWCof1Bbe6S1X2cRtInciXUTl42GslZdVS90BRAfX2r30oRpcQJuRhWMazh6fl56pKaBOI+3lsc3whdJlVceBT2M62aSGupsrc58P17jaQ5Xd4MoMCV2vA9RzBj/iys3B++CCz5Xkgz6of6+Fl7pECGNs+luIftZLqOqfx/PcH7BEffaBQ4IlU7BDXJxA9yze4nijh0JLcTSYtL8IgOciP4wD4/HGoIiPYs3HWZ/6qfHoFBgklQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:
+ bh=QjZ6bQwdnuPylPVNHawh0S5QJMUmG/EBMd9TuEI+fus=;
+ b=upErMA8HWtq2MsLSiQttsu4S1LlhRfZxK0J5eO/ngD+64qIbg4S5yKRv6lnBMYgLwP30LrAix9KR0Ko7OwA99NATiwfCaQt9DP9pdPmAo7G6NTErpv2hZnAB2QgrX5eV0IOpTxwz8Zvd/JOhqqAYLIpm30QjuQ+u6emBwrDTiiA7c+FUJl7wW0uDuxrzd/SbhBNsTZHaTJJ6usTX2BA0SBPPov4Xej0fEIvEXFZPKiecRQoqM1/5DIEB7ehA/Q2cF01qdnuAWnINWbsLUS7AzOwcWgr/zqkOMW6rC4HByOT5WRa1GY1ORRC4UnNGBtSNg8XlInrP0tFEBdH7PPQ2Ew==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=etec.sp.gov.br; dmarc=pass action=none
+ header.from=etec.sp.gov.br; dkim=pass header.d=etec.sp.gov.br; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=etec.sp.gov.br;
+ s=selector1;
+ h=From:
+ bh=QjZ6bQwdnuPylPVNHawh0S5QJMUmG/EBMd9TuEI+fus=;
+ b=ZL13jLM5qV1AL+RcsZTEPq4baYYMbGCEOKNmuW+evfKIExY3JAKrb+tvGDbXYiUTHQw/XmMOmjLZ/zH7rox81SYS44/1GtZnKDgME+u5q/QGiBpNRl/SbqaQ8ZZE7DKXXmVrCId2rdtnaaqZBmzLHy4mnFNpV5jXNG9kMN3XfPCgs0FPzq0f6uD0msYUdlEjcCR/eQpoT4LlKxjGKVcQEiGL0UDEn/C6gTH6svdpJUdgfPJJnLVgKC2ajF/NDz9epz9croIDIkQ3PIUHuZTsFBDQc3SZ9ZEnD4RVrzqvWTevznqEZ0eNfGVj37IbKtB1TtXDb1J5eIV9bHDvy+VmHw==
+Received: from CP4P284MB0993.BRAP284.PROD.OUTLOOK.COM (2603:10d6:103:8b::12)
+ by CP8P284MB2194.BRAP284.PROD.OUTLOOK.COM (2603:10d6:103:1e0::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.34; Thu, 20 Mar
+ 2025 17:22:36 +0000
+Received: from CP4P284MB0993.BRAP284.PROD.OUTLOOK.COM
+ ([fe80::5fd1:372b:1983:cba2]) by CP4P284MB0993.BRAP284.PROD.OUTLOOK.COM
+ ([fe80::5fd1:372b:1983:cba2%4]) with mapi id 15.20.8534.036; Thu, 20 Mar 2025
+ 17:22:36 +0000
+From:
+Subject: Notice
+Thread-Topic: Notice
+Thread-Index: AQHbmbxeC0igatQ2vUSeotZqhqv+vQ==
+Date: Thu, 20 Mar 2025 17:22:36 +0000
+Message-ID:
+ <[removed]>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=etec.sp.gov.br;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: CP4P284MB0993:EE_|CP8P284MB2194:EE_
+x-ms-office365-filtering-correlation-id: c056fbec-9c76-4d4e-8125-08dd67d3cef2
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|366016|7416014|376014|1800799024|8096899003|27013499003|38070700018;
+x-microsoft-antispam-message-info:
+ =?Windows-1252?Q?WHKTBqpEDHN85mlKylcOz1PTKplwtyjJ5IWgmrrkLd1f+9u47MgEJoW6?=
+ =?Windows-1252?Q?YU/yXGt493ziGOBzDSJqwiDGv2OsKsZnbmrt4KBzwJbzAp987c74fMy+?=
+ =?Windows-1252?Q?Vdm11PKIwMQ1u97RpxjI96yMYAzDU1UfNwAs9wFnKI1Rh/U9TqErgFd5?=
+ =?Windows-1252?Q?oH3w1DmNM0IdmRpp2A7j9BFIzl0bEx/h83OemKMd4B3XhSoG5mqvE8yQ?=
+ =?Windows-1252?Q?eshU1pC+mDPD3/X8/g8B7oMf6V8f+azM2tBo8uQ1HRFT/KieCG39+3KP?=
+ =?Windows-1252?Q?HAEC/9kbVzBr6EWulGjy/VHeLc9PB/KMedeIAm3iUhOlkUFtOzB5sg9j?=
+ =?Windows-1252?Q?PldOdZdpWWKJsmauaVOPDGpOsc7TKVY11WFzWavx6HGU9d6DQU/lHAzZ?=
+ =?Windows-1252?Q?8xnYCAJuD7biwHutE+oNJ31LPqYYYER+K0kdUjHdiv7qoZobKIPuchxW?=
+ =?Windows-1252?Q?WM4jKHIXgwxbalWrrXtoi9fAv/slMUxxGgPCDguqbB2BNbcoVeLNlRFK?=
+ =?Windows-1252?Q?LgTnhWV93EMKVbP5BEEvGvX7B3gcr9j2lLAJQpV7dsBmwNU08EU+X0sF?=
+ =?Windows-1252?Q?XfvBFT22y1sV7EXfJoFjlDde+HRObN5c6qmY2AkmDDd4VQcKbFn9nMSb?=
+ =?Windows-1252?Q?ZUob+dw2aQS1Upej9YtTqv6BoUW4PZscG/B8a+x1PPXzIlb4eBAGHfqU?=
+ =?Windows-1252?Q?I0rc/tGHMYqH4whShNlQ8sD8dTLUiRYc87NLXNQ7EdCBDJ/heG6BltPq?=
+ =?Windows-1252?Q?awkr2MJxm3OaapxixHrnl9mcPwhAFCr1OCIHl1xEyGLQo5TaUmHhEJR3?=
+ =?Windows-1252?Q?wbtC78m/fIvc3sbNbdxnyUNkmaeNK5fXxRWSfPWhYmKjSyzb3oew2JjT?=
+ =?Windows-1252?Q?cUEC0y9S7yvCM9hfwQlLm2E5rsV+PvMmUv6SfEKB+xiTT0gHDUTrQs2t?=
+ =?Windows-1252?Q?+7/RYFEPvx8F49bP4+VESnihNOyrEskDRJIMx4pxy+exXdeMsV+slaP2?=
+ =?Windows-1252?Q?2m3M5+LhgkiNQLi18zNYMzQNhYXK+oNvZEmpTEUJXfa5LbYDaXyo43zD?=
+ =?Windows-1252?Q?zC3Q97TnvGfBC7oDVb1dLR85U7m5wkWuHKzCU4g0cShrodnAdIQOzs6R?=
+ =?Windows-1252?Q?AAhw4MhlIykxU+/1n/zj4Re0IX28LTIv7ixKtxfuOT832fcktffwIR5L?=
+ =?Windows-1252?Q?rDZdp/LPfVtYVQA1miTnaIkr0jNyFkVM7O6VClIewobaMugPzsdbSwJw?=
+ =?Windows-1252?Q?xUYh0mbtvI0jBNHIyuvcRWzbKIV1Svsdivv6A4WEGvIBwkxiHGMqIv//?=
+ =?Windows-1252?Q?4Pzx5uIK8wol01TCoO1lBtIALvu46fohIu+LDX2fSJlfDSnFgOWtkcn6?=
+ =?Windows-1252?Q?qZGRx08IrLXB8Fd8y/hvo4Nq+FvnoFrOzPmBmlogSMplK20ced/thhkF?=
+ =?Windows-1252?Q?6bkcESZnude7GGqP5FFC8H8kr1wAFlBCH1GuNG8OYHaWzz3TmaJYILip?=
+ =?Windows-1252?Q?fc6SXGLJM/KV3KOHO92v+bcfSu+V2M4D0CaORuyrUmK3UPr2RKquE7DD?=
+ =?Windows-1252?Q?WrgiBX0KhLz41nWD?=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:CP4P284MB0993.BRAP284.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(366016)(7416014)(376014)(1800799024)(8096899003)(27013499003)(38070700018);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?Windows-1252?Q?cZpuf+1wUv+whjUCR1rUhqa+KApDLFR7x0Eagr6BTlZu73ZiprDBWL3W?=
+ =?Windows-1252?Q?Ki+Kyk/4Fq6zVINRstpr2ozSRndauRhIGpwguqYSPpp8VevZY0H99zPT?=
+ =?Windows-1252?Q?4G7iJmq6XWcIh53w0C4ONekAXsJxYlFiidTrg+RA2RpBcc3OlOqci/fA?=
+ =?Windows-1252?Q?u5lrelnLyzP3JGYtbLZ2otPZU7p1GannpcTySx2RIzCsRT28L3El6kR5?=
+ =?Windows-1252?Q?BzXZLwQzBMPzk9naKf/dxbMk4Fg0Z7Q9QfyTws3UumTjMYZuckssZfho?=
+ =?Windows-1252?Q?nWd+W9jKZ3WXX2JEZmNR93UrPQ9sJK8GZxocqIk18m0qilbWiiPB+rdn?=
+ =?Windows-1252?Q?D+ZeLitF+JRRj1XyoU+ayniy62xO3hFbE3pexhL+tx3nLZJx5y2gW/rk?=
+ =?Windows-1252?Q?7kaj7MIlS/O+Vii2ErbsYbzpZfuefbn940lgsHknGYIEoqN5FqK/LlMA?=
+ =?Windows-1252?Q?MfEzidueSF8TyxD67IYQX0kLKjznVLQI6/+SMTlc8TbYHaNuxWkVRJb6?=
+ =?Windows-1252?Q?9xl3TVYv+6UUNO8VZ8pyuO1NRb8HrLTnP0lFle2S3m2XY+m2FU4jlI8J?=
+ =?Windows-1252?Q?xPW2wjNmeS7SP1KpzgQzX9kbDOv19iMm+ukTowNT76R2oF4h6LcZ9oEx?=
+ =?Windows-1252?Q?LHNhVLovIItdYYidVCqDyJ7tXreC+2rLaoCfKB687OnMK3JpgiUQyBpN?=
+ =?Windows-1252?Q?jIKMsYqcjKZ++FqDnFHW/E7RakDRBAThHs1qM7rW7RVTz6TPpxlY8QnU?=
+ =?Windows-1252?Q?9fiM/YkRGvdxIhfjbpBlPR3rED83d/F5ogfVJcSSOogkuDZ2xiUzSVQ5?=
+ =?Windows-1252?Q?wTa7Hl3qaNNihRIghOITdXG854WJTvAvSjOnmKh2pqjFF+FXVf66DmUA?=
+ =?Windows-1252?Q?BXHhNtM/gASAcl1NsOHpHrhFv5gw5TAURQDHgmmCdXspJWs4lZtptPVY?=
+ =?Windows-1252?Q?P0XXkqV6PGtr5rKAcwy4NIwb+7TJrtVUpzav0gD5Sbhcm1TiEir/eT6N?=
+ =?Windows-1252?Q?ZQ1c6qWq6iFYm15jYuSSW1yXowp1uElSY/6TXinMwmnWvrnHyL/cTKaq?=
+ =?Windows-1252?Q?Mf/L6bHbf6xTXfBfKsz3bU/Oc//TmScVwMDSw5WhypfHdJfKJHqP/qDj?=
+ =?Windows-1252?Q?v6n2mCsn2any/7kQeo/ig3BS5GEAsYkNhwhBOI16gogFv8P1CmRqticL?=
+ =?Windows-1252?Q?WfhWhvBCuYpXjrnMFF+bZtI5T5ipafAa7J7ihzxW+Lm/j5ub9UtQBXI9?=
+ =?Windows-1252?Q?eVwzj6kMvbRXRITd8DnUBZUq9KwE+exZabzCGg3ajj/jYh39V/ZYjWny?=
+ =?Windows-1252?Q?wz3gHBe+Y8o/RCbSRG6yFXNQQqzTym6fpiHs4hkhKOs3R2lD3UVaaU4g?=
+ =?Windows-1252?Q?G+6485aEzM9Qe79BFBbF3ADZ7AR/jERApdVW1p/RX1L1x4L1fuBKb4zP?=
+ =?Windows-1252?Q?RpPjiW+sgK4SrwlIaE6TW7BU30k+1QubkVDJZTbICdOFs70Cbc43jk9i?=
+ =?Windows-1252?Q?hM8x2fb868fTVs2rKJsYEcBMVYlLIoLx1CdqWv0mBgBt3QrJsl1sqvyk?=
+ =?Windows-1252?Q?pufrmaVhLkIByW93iXtxdRT6rVeubC/riZu6cYlkZmDgXqj0xIN4/YgM?=
+ =?Windows-1252?Q?+DtA8goS2Ad6XYmBJteQ7j165xk/pbpVrjtkWIFNZTMSHgTkoE/Mhzz2?=
+ =?Windows-1252?Q?WB55cmNV/m1Nxeo1l09gdvXpaFFoudeXR7EMVU16WOjrdo9H0k28Tw?=
+ =?Windows-1252?Q?=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_CP4P284MB099388EE31F5E75DE3E308179CD82CP4P284MB0993BRAP_"
+MIME-Version: 1.0
+X-OriginatorOrg: etec.sp.gov.br
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CP4P284MB0993.BRAP284.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: c056fbec-9c76-4d4e-8125-08dd67d3cef2
+X-MS-Exchange-CrossTenant-originalarrivaltime: 20 Mar 2025 17:22:36.3824
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: ed38466c-b641-437d-9ae9-d801b829fa94
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: hiGF6kYo83XzKAw2vJLYpiSUqwDmFEEnOYXJ9Ec5IhA4Z9MOMsMY2jfZqsLm8jN0Je31VkollFBawdZJXhdMPFwNoQs5j1s6PV+grkOWdkMjeQ2ZzJ1vcPbfcQA0f/2+
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CP8P284MB2194
+
+--_000_CP4P284MB099388EE31F5E75DE3E308179CD82CP4P284MB0993BRAP_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+I=92m Rafael Martinelli, the Public Relations Officer of the Becky Bell Cha=
+rity Foundation. Becky Bell, who won the $754,550,826 Powerball on February=
+ 6, 2023, is donating $4.2 million to four individuals worldwide to show ap=
+preciation, and you have been selected as one of the beneficiaries.
+
+For claim details, please contact Brittney Madison, personal assistant to B=
+ecky Bell, directly at [removed]
+
+Only responses to this email [[removed]] will be ackno=
+wledged.
+
+NOTICE: THIS MESSAGE MAY BE DELIVERED TO YOUR SPAM FOLDER DUE TO POOR NETWO=
+RK COVERAGE. PLEASE TREAT IT AS A MATTER OF URGENCY.
+As informa=E7=F5es contidas nesta mensagem e em seus arquivos anexos s=E3o =
+destinadas exclusivamente ao (s) endere=E7o (s) acima indicado (s) e podem =
+conter informa=E7=F5es confidenciais. Se voc=EA n=E3o for o destinat=E1rio =
+autorizado a receb=EA-la, favor retorn=E1-la ao remetente e depois apag=E1-=
+la definitivamente. Nesse caso, =E9 proibido por lei qualquer uso ou divulg=
+a=E7=E3o das informa=E7=F5es.
+
+--_000_CP4P284MB099388EE31F5E75DE3E308179CD82CP4P284MB0993BRAP_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"font-family: Garamond, Georgia, seri=
+f; font-size: 16pt; color: rgb(0, 0, 0);">
+I=92m Rafael Martinelli, the Public Relations Officer of the Becky Bell Cha=
+rity Foundation. Becky Bell, who won the $754,550,826 Powerball on February=
+ 6, 2023, is donating $4.2 million to four individuals worldwide to show ap=
+preciation, and you have been selected
+ as one of the beneficiaries.</div>
+<div id=3D"Signature" class=3D"elementToProof">
+<div style=3D"font-family: Garamond, Georgia, serif; font-size: 16pt; color=
+: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"font-family: Garamond, Georgia, serif; font-size: 16pt; color=
+: rgb(0, 0, 0);">
+For claim details, please contact Brittney Madison, personal assistant to B=
+ecky Bell, directly at
+<span style=3D"color: rgb(200, 38, 19);">[removed]</sp=
+an></div>
+<div style=3D"font-family: Garamond, Georgia, serif; font-size: 16pt; color=
+: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"font-family: Garamond, Georgia, serif; color: rgb(0, 0, 0);">=
+<span style=3D"font-size: 16pt;">Only responses to this email [</span><span=
+ style=3D"font-size: 18pt; color: rgb(200, 38, 19);">ms.brittneymadison@out=
+look.com</span><span style=3D"font-size: 16pt;">]
+ will be acknowledged.</span></div>
+<div style=3D"font-family: Garamond, Georgia, serif; font-size: 16pt; color=
+: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"font-family: Garamond, Georgia, serif; font-size: 16pt; color=
+: rgb(0, 0, 0);">
+NOTICE: THIS MESSAGE MAY BE DELIVERED TO YOUR SPAM FOLDER DUE TO POOR NETWO=
+RK COVERAGE. PLEASE TREAT IT AS A MATTER OF URGENCY.</div>
+</div>
+As informa=E7=F5es contidas nesta mensagem e em seus arquivos anexos s=E3o =
+destinadas exclusivamente ao (s) endere=E7o (s) acima indicado (s) e podem =
+conter informa=E7=F5es confidenciais. Se voc=EA n=E3o for o destinat=E1rio =
+autorizado a receb=EA-la, favor retorn=E1-la ao remetente
+ e depois apag=E1-la definitivamente. Nesse caso, =E9 proibido por lei qual=
+quer uso ou divulga=E7=E3o das informa=E7=F5es.
+</body>
+</html>
+
+--_000_CP4P284MB099388EE31F5E75DE3E308179CD82CP4P284MB0993BRAP_--
+

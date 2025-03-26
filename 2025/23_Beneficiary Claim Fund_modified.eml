@@ -1,0 +1,181 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp581778vqh;
+        Fri, 14 Mar 2025 02:47:15 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWUSsmH4LIl9dNyYzKPHVAXqNS0skIx8aMi8MdSvMHnKJza1k6UAtM57EPZhpO+qHxNZnqWkxNNhwNrM7zk4sJh0sfgGg==@gmail.com
+X-Received: by 2002:a17:902:e5d0:b0:223:5e76:637a with SMTP id d9443c01a7336-225e0a64736mr24875255ad.23.1741945634853;
+        Fri, 14 Mar 2025 02:47:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741945634; cv=none;
+        d=google.com; s=arc-20240605;
+        b=UM0e0x+5gl+ps5wtm8mGWKmslGpMVzhvz8LIoZhfO/FyNdhtfFRZsgynlMUn6l2DGH
+         CFsZX/XRzBXI1nYpg3ZmWZzo99wvqLb+aV4nHl5SycFF5bxBiUD10F+an6vLzt4ojQX3
+         x3NeKBS5E8OBHNQrI80cCosmFzdLI8cy3XOCw06BhKweBmAibdUnakHIbqtfhVfpBKH7
+         t11XUawetZiGJR+7Gs4VSW2v2r00SMOOczlzFN5AeiGSuxNP1T779OzNhLTxPzLSJfBR
+         3RxjvA/RDjGBvxBOZhyMWHM6b4vnrybTirhaTX53Jv013xgcImj5utB8/qYZfUgdF3sT
+         AW7g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=lZtSwXaDETqV28UCEPQggbN5nPST23AOQweMPYTETmo=;
+        fh=IQPmkmi36JWzIlx2GyFBEYx7hQpRqk18INDWmiBA9HQ=;
+        b=OO7bxSnngtOsxVc1HWmwr+S166Rfs0Q11i8C3iceqIFP0RP+O+2w/rX0T8rKQ7Ff3j
+         7RUunZ8UGWG8saTs3K99hpnCDFiDK6/WTs0Db5qKfbgrufLSU2ujCMJkg/AecXrQqxTO
+         8Ibo15IdmR7p2O2sF4wne3yoVVmM9EldHIPc7tTMI2dEZId0MA3yEPso8Q1pVWTLE8t9
+         ohAdbTv0ji//QcRN6pkLORQRS5DC7AfLw+DB37UC0ne1ybEkV90q14szy5cUyIc/pn9G
+         8h7MUWf1Ni7q9K/CQiQdg1JTbSuLgkkD2ZDfiyuHQYaw36OaRwKOCQjZ5z6fWoLQs1dp
+         /KVQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=W7pmeESR;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d9443c01a7336-225c6b2c58fsor24012565ad.14.2025.03.14.02.47.14
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 14 Mar 2025 02:47:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=W7pmeESR;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741945634; x=1742550434; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=lZtSwXaDETqV28UCEPQggbN5nPST23AOQweMPYTETmo=;
+        b=W7pmeESR2JUoVVS0sBj8yU3krIZqpEBnjC6teidBfXiuW/LMYbOxclGPb8oXFlLq9y
+         1KAD2DnRLLBuYxmBVdTbISOhGlgFVXdbi9gPsSMuvv1wTuxIyGpe59CeGD3QYXXfHo6H
+         19iORR2x9Ms5nmbrpuvrFA+1fuTezN0W0npsX6Iochg+m3+YORmMixUps6qj/tqjY/ud
+         h+ExaHj0EBl6WydwF6YMBnvHVhmwmFBDr+mjAGeAVkV0abvAgTNk9GKkDLjw8G4/RSJB
+         FI5fmIRWFFmmgDX6/SeOy2MjaATTwV94ckUkXQDejivdhsaT7YjVhq9BGGgsuAKGyQbp
+         NRCg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741945634; x=1742550434;
+        h=to:
+         :from:
+        bh=lZtSwXaDETqV28UCEPQggbN5nPST23AOQweMPYTETmo=;
+        b=MfgRSkUzVorr7uPxvalPhe0DRNvnBo+LuRciHtkYsky0gplRucbn6H6GKEyezNj8NE
+         u74/Ky1FoH0pzmHMpT81gdaZLMqogimEb+T/Ezq5WeGBDPD1DhLRap9oZ2yTdt9bGbGI
+         Sv4g6CJltSW+KPUwQXGExP1NBbMEIcPBFZdLwJguhv2DB5LaQpOeIhZ6CkpLWUW7KNFf
+         LctkqG5mY+pk+OygvEp1uvoOLnKNcp8p5qFPxZcuArOnzQjKCQnJqRT+39IhksuP6EDi
+         OIR8ADmQOgfi18YLPedmYpZNBQopGVQ/KKUC2jQRiiAnvD9SFkrQfTC7tp2LCa9aAWtN
+         T/1A==
+X-Forwarded-Encrypted: i=1; AJvYcCW+uojETErWXCbBIVbQwnB5VJrkuuyI80fJ0NZH86nfVjvjIdTw+/WTKzSCqOluk+jiMzgnTtGBgfGZ6O+C8skh9AeRPw==@gmail.com
+X-Gm-Message-State: AOJu0YxqKMf3rb7tl5NA0rF76hPsKJ2M41clPRZPU5M++0ESjv6acG0k
+	1fzPD27JRmnezQcxFCXBLuoGDyscjwEqDedPaAspREpXv9W5fJl0e8fwkSTZL5EeuDVJn+DDX0S
+	CGyJdK6Mw2i2uxkGIQEc2MW83soI=
+X-Gm-Gg: ASbGncuSgGYexDVB5s0i+6nVDLXXBOxvcJ+ytumz/12htVRM1z7vLeHV/REK9pKIw+m
+	Zdd6Ekl065EgYYVPOv9SwgxmrWSjL8rDoAqY0mds48JyhHdNL6KRCoq7lyAPu8WqQBOx1EsZYZT
+	uqvl/+Yy74aIfhoD6Ig4+acqY+his=
+X-Google-Smtp-Source: AGHT+IFnhg5OIT9QcAYQr2+8zoy6zCsbzTzW29WCyUIsKgQZUG0H6oYSjSvbc2u8ieh9Crk86IN/L99Ms21egcAyacU=
+X-Received: by 2002:a17:90b:274a:b0:2fa:e9b:33b8 with SMTP id
+ 98e67ed59e1d1-30151cef768mr2819827a91.18.1741945634327; Fri, 14 Mar 2025
+ 02:47:14 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Fri, 14 Mar 2025 02:47:02 -0700
+X-Gm-Features: AQ5f1JqpFHqF-EDMA04cxaXb_CQ-ptSN0N1e-JvU-qFyDnAZ3TAJy-HK2DcL1q4
+Message-ID: <CABAveYuqbcQ=[removed]>
+Subject: RE: Beneficiary Claim Fund
+To:
+Content-Type: multipart/alternative; boundary="000000000000c0945306304a52f2"
+Bcc:
+
+--000000000000c0945306304a52f2
+Content-Type: text/plain; charset="UTF-8"
+
+1600 Pennsylvania Ave NW, Washington,
+DC 20500, United States
+
+
+    Executive Office of the President
+
+
+Attention; Fund Beneficiary,
+
+After going through the Federal Reserve Bank and other banks payment
+records here in the state, your name and information was discovered among
+the beneficiaries who have not received their payment despite all the
+inconveniences and financial commitments you have invested towards the
+pursuit of the fund, and while verifying the reasons you have not received
+this payment, we could not find any genuine reason why your funds have not
+been released to you. Hence your file confirms that you have fulfilled all
+necessary obligations regarding the fund release.
+
+Now we've been prompted to intervene on this matter based on the series of
+reports we have received from various beneficiaries
+locally/internationally, and since our involvement in this payment
+dispensation, several beneficiaries have received/confirmed their funds in
+their various private bank accounts. We assure you that yours would never
+be an exception once you follow our directives, hence we are dedicating
+100% assiduity in making sure that all affected beneficiaries received
+their payments now.
+
+Therefore, for further assistance on this subject, contact us by email
+below for our commencement and more information and directions.
+
+Note, immediately upon the confirmation of the above required information
+from you, we shall assign any of the leading banks here in the state to
+execute your fund transfer with immediate effect and forward the report
+file to us for our confirmation. Be rest assured that this fund release
+would not exceed 48 hours upon the receipt of the above information from
+you.
+
+Contact Person:
+Ms. Katie Johnson
+EMAIL: [removed]
+[removed]
+
+Awaiting your urgent response to this mail.
+
+Thank you.
+
+Jerome Powell,
+Chair of the Federal Reserve of the United States
+For; And on behalf of the
+Executive Office of the Presidency
+(GOD BLESS AMERICA).
+
+--000000000000c0945306304a52f2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">1600 Pennsylvania Ave NW, Washington,<br>DC 20500, United =
+States<br>=C2=A0<br><br>=C2=A0 =C2=A0 Executive Office of the President<br>=
+<br><br>Attention; Fund Beneficiary,<br>=C2=A0<br>After going through the F=
+ederal Reserve Bank and other banks payment records here in the state, your=
+ name and information was discovered among the beneficiaries who have not r=
+eceived their payment despite all the inconveniences and financial commitme=
+nts you have invested towards the pursuit of the fund, and while verifying =
+the reasons you have not received this payment, we could not find any genui=
+ne reason why your funds have not been released to you. Hence your file con=
+firms that you have fulfilled all necessary obligations regarding the fund =
+release.<br><br>Now we&#39;ve been prompted to intervene on this matter bas=
+ed on the series of reports we have received from various beneficiaries loc=
+ally/internationally, and since our involvement in this payment dispensatio=
+n, several beneficiaries have received/confirmed their funds in their vario=
+us private bank accounts. We assure you that yours would never be an except=
+ion once you follow our directives, hence we are dedicating 100% assiduity =
+in making sure that all affected beneficiaries received their payments now.=
+<br><br>Therefore, for further assistance on this subject, contact us by em=
+ail below for our commencement and more information and directions.<br><br>=
+Note, immediately upon the confirmation of the above required information f=
+rom you, we shall assign any of the leading banks here in the state to exec=
+ute your fund transfer with immediate effect and forward the report file to=
+ us for our confirmation. Be rest assured that this fund release would not =
+exceed 48 hours upon the receipt of the above information from you.<br><br>=
+Contact Person:<br>Ms. Katie Johnson<br>EMAIL:=C2=A0<a href=3D"mailto:
+[removed]" target=3D"_blank">[removed]</a><br>=
+<a href=3D"mailto:
+a.com</a><br><br>Awaiting your urgent response to this mail.<br><br>Thank y=
+ou.<font color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888">=
+<font color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"><fo=
+nt color=3D"#888888"><br><br><font color=3D"#000000">Jerome Powell,<br>Chai=
+r of the Federal Reserve of the United States<br>For; And on behalf of the<=
+br>Executive Office of the Presidency<br>(GOD BLESS AMERICA).</font></font>=
+</font></font></font></font></font></font></div>
+
+--000000000000c0945306304a52f2--
+

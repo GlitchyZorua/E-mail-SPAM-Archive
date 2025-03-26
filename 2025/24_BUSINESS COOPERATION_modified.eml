@@ -1,0 +1,164 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp1862689vqb;
+        Mon, 24 Mar 2025 03:17:41 -0700 (PDT)
+X-Received: by 2002:a05:6102:8005:b0:4bb:ce42:40e3 with SMTP id ada2fe7eead31-4c50d5c551amr9066681137.17.1742811460803;
+        Mon, 24 Mar 2025 03:17:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742811460; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ZgftTw7KBlzxNiIwZTCoWEYOiLmo69fPZhi6UONbIywCuqCxk4Ts71eOhd+pvYcwyJ
+         1b5s8XGWkdMdn1152deYJoPaSCcYa/TvOrIkerERov8sKWowEPaOQ3ls0DZXT7pTcQ9C
+         zXC/fhk1uZFBiB/dAHiqNESVw5gmAop9yuzhzxqfTI0AOAieYHDUxk3HZasi//G/UPgh
+         BcbwLI8N6xoQzxMauANObJ6cJwKwSeZLwx8oHrTeSTpUEtxv0QchCwLNQpj+U6+gtcOG
+         R5DRzvEpuEeZAivcHE2zoIz9blFECO+IT2sw4CubCrAmAhVIKFzGR5mOY2qX7Z52Lctu
+         9mMg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=8h/ZUiZy3U5zOrEOkQ8/DgpIbASgDwHhgPXxFpjn58c=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=FXsOF3Zfs/VtMEMok7Uhj0+9XhE6eeSE+vkC4HqvjjnberpOuyg+wVogqJrwi0W/Hk
+         Z7zxISYJDIFx35Zm4Li0XOo5cEIufVrZZmaIxr7/WyA3KABiC5RRPlSRAEPqWfGakExT
+         jMGVAwZ/0zQfKo1dAtPQtJsVeIR5J3OlEOCwZFtL18IswvYM2jN2ped1r3wt0jjhHKpC
+         rnaw4Zc6eLMtOwfprHwNKSh6hfSGLAuVlownGiHpHcrr6ZfjFazllNqh45tlTKfkdK2V
+         /Cv6vl5YedcOXpQGyUJVx0GuVsn9U9KXlgHxdCjdL/VJxswdKSvKOnMXxvvAP24uuHFL
+         53qg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OXyM9Ut9;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a1e0cc1a2514c-86fb7b44dc1sor100447241.0.2025.03.24.03.17.40
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 24 Mar 2025 03:17:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=OXyM9Ut9;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742811460; x=1743416260; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=8h/ZUiZy3U5zOrEOkQ8/DgpIbASgDwHhgPXxFpjn58c=;
+        b=OXyM9Ut9LIrIWYZyQwMCsGnu+L181MDCy2DBjft5cEsXl24x/AK2DtU/XyTNWW93fA
+         GY8baa6m2X5imHiLeY4tZEssrP+GTP71u3GmymATdoAyz7cCFOgU2hxnDmD3nbU/BG8m
+         q6L/TNGK/7jLbN8G0XDNnR/nR585f08SJiBPD4zT+QW/YZfQNXnXomNSbtEgKyYIGO3u
+         yltaJ3Vu8aI3FqWHoLTmdBLP+uWvx6Kqlhcsvpf2WIGcAVHVG5EX7wPHcpkBMR9K/4yj
+         m6MumXi8IuRI3iz0pU4EtiusU2HZ6z8CUW9vXLvVk26A0MAZjZHHuYc9li42xCnkcNjD
+         UpxA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742811460; x=1743416260;
+        h=to:
+         :x-gm-message-state:from:
+        bh=8h/ZUiZy3U5zOrEOkQ8/DgpIbASgDwHhgPXxFpjn58c=;
+        b=lm4Y/+KFM0YTmB9bKCiRG/4opQhJtj9Vll7h9OyBX1a0UeJ8Q0RDSpuaUb0fpba9A3
+         jOymC1fZDJ3n7ch424QG0uD4bCwQgzFLx3GX/BtO9XmIL8m0tEfOZtNRR3DyBGMXcHML
+         P0LIxs8/u03nH74r69PVRHvB/IBvZ2bv+PauNk89qVF2YsFffjib2Y5AveSzcalvH6u4
+         n++cqo+RXonO7hMDRbhQRVv3UBXlJLbMR17tMGfdGfY0HTy++VkmLteQ+Yp+IunCY86u
+         JhNgRlkjr2zw4u7dBPqlG/779bHWAZCTpT5gSra3gYUF6Kml1ZV6dggQyFpmAlEeGdwJ
+         z8jQ==
+X-Gm-Message-State: AOJu0Yxw7+1EWKc5BMzxYiVwjoPCekQujvVi6y2KnTuOCMmuRhh/0Thf
+	Wog3x3yXsNLf6e5+ilOX5U9UhK+P+8HqIqKV4OhiF6Mu8JiCWCGNd3guT+n//HaM2G4krB7nj0i
+	p+QuxN1znNgnkoLIa9G2yr59LxOnrUnTCJb29ug==
+X-Gm-Gg: ASbGncty5kqRincIN9Uop78b+bRhbiAsdBq0K/vFdsw6kZhKi/63GD3tYsgVuLNR2EQ
+	h69vmahOoKkJvT4d5qlDkdvSpqORAx1LJBhDYShsF39El26SuNXTSpkist9Q3n6j+OyStnhe7xw
+	U9XbjWVxrATwZjRGMWZ6FbUWoHDg==
+X-Google-Smtp-Source: AGHT+IHC22qrw/CHu8G/Xe1f1ZwxcnDTvfI2hAHqL5yB9u1Q71oIfqP4cS8/Dz9APuoOX3eZWJ5Kgfz+HkJpVTRvccY=
+X-Received: by 2002:a05:6122:3207:b0:516:20fe:d5d8 with SMTP id
+ 71dfb90a1353d-525a84c21f0mr2122997e0c.2.1742811460032; Mon, 24 Mar 2025
+ 03:17:40 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 24 Mar 2025 11:17:30 +0100
+X-Gm-Features: AQ5f1Jp71_Ix_npN76wnEqh85znU975mig-RWtUkBT9AW3I1irD8bSX7QufHcCU
+Message-ID: <CAN=zqL9y+TVWV0bYwZST=zWqdrbCgOQ7kX4689U=[removed]>
+Subject: BUSINESS COOPERATION
+To:
+Content-Type: multipart/alternative; boundary="000000000000fc5e65063113e9ac"
+
+--000000000000fc5e65063113e9ac
+Content-Type: text/plain; charset="UTF-8"
+
+GREETING TO YOU'
+Good day! my name is cathy moyo the widow of mayor rossma moyo of zimbabwe.
+this might be a surprise to you on where i got your contacts, i got your
+contacts through search on line from the south African trade and
+industries,so i decided to contact you for a business assistance,i'm an
+investor and interested in establishing cordial business relationship with
+you.
+i urgently await your reply so that i can furnish you with more details.
+yours faithfully,
+MRS.CATHY MOYO
+
+--000000000000fc5e65063113e9ac
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;">GREETING TO YOU&#39; </span><span style=3D"font-size:10pt;font-fa=
+mily:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"><br>
+</span><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,&quot;serif&quot;">Good day! my name is cathy moyo the
+widow of mayor rossma moyo of zimbabwe. this might be a surprise to you on
+where i got your contacts, i got your contacts through search on line from =
+the
+south African trade and industries,so i decided to contact you for a busine=
+ss
+assistance,i&#39;m an investor and interested in establishing cordial busin=
+ess
+relationship with you.</span><span style=3D"font-size:10pt;font-family:&quo=
+t;Arial&quot;,&quot;sans-serif&quot;;color:black"><br>
+</span><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,&quot;serif&quot;">i urgently await your reply so that
+i can furnish you with more details.</span><span style=3D"font-size:10pt;fo=
+nt-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"><br>
+</span><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,&quot;serif&quot;">yours faithfully,</span><span style=3D"font-size:10pt;=
+font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"><br>
+</span><span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot=
+;,&quot;serif&quot;">MRS.CATHY MOYO<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;line-height:normal;=
+font-size:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><spa=
+n style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;"><span>=C2=A0</span></span></p>
+
+<h2 style=3D"margin:10pt 0in 0.0001pt;line-height:115%;break-after:avoid;fo=
+nt-size:13pt;font-family:&quot;Cambria&quot;,&quot;serif&quot;;color:rgb(79=
+,129,189)"><span style=3D"color:black"><br><span></span></span></h2>
+
+
+
+
+
+</div>
+
+--000000000000fc5e65063113e9ac--
+

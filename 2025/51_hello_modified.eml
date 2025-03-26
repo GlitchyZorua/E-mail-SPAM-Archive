@@ -1,0 +1,164 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp760956vqr;
+        Wed, 5 Mar 2025 05:26:18 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVwIfgbVs9tCQi6OtowvHEoP2VkfabA6rql/fKPAvtUjoeHAB9YHau1rnIyp4E4jxQe/2YaOj8hggfBvo3vzhZRGY3tQA==@gmail.com
+X-Received: by 2002:a05:6e02:170a:b0:3d3:cfac:ce2d with SMTP id e9e14a558f8ab-3d42b996236mr38302205ab.21.1741181177821;
+        Wed, 05 Mar 2025 05:26:17 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741181177; cv=none;
+        d=google.com; s=arc-20240605;
+        b=h8t4y1JaoIiOL4nV+jUBm7Ow3mgaBv9oIgzT2/ia4a8fFvDnGEr4zw2JsRprl86W5s
+         d1A4QEGxnKs6X/tReq0CkiXL0Rv8ibze18oTTTTrKQMM++MhkTuQTTdcnwmVr5T/bJLS
+         4DpSgTOm8mz7NaICPqV/tXjow7Fb/31MyUwyOCPceJakqBaQa2QFM2zAZSETeRJekPht
+         LG2iuV+vbYoqsaWmCyn0XAnj846FipZYAelX94RjHkeitFO0FuReQp6dN3ygwxq8gL89
+         lZf9yx/d0d99G2nvKHe5CbJAY1d7BaIBxR99P/W4tNIRDzv61ZJwdK5f3Ml+JjXtmeeG
+         EdOg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=YiGJRN7P3eKhLJ2jCSeTw2zmOgyz1sMW+SI1nnL54mg=;
+        fh=QTWUeKnXMqIex6R8nBMFguc5wpz5q/G3qo14y1P6eLc=;
+        b=EP5nvn2+uUCGjU9awfVRwcm3AU51kSbjrbhi+XrLaeqEc97wn3Xmn0MD8JONnpMC4X
+         tkScr1rb2lK0180vr1RRSg7JktvTZEaA3Brbn+PiT3DoyM/SG2a3voorBqdDyU5sUtD8
+         B3759kM2X1jOUaD3gU8mUp+abHwt9W2C16a/aDVErhRb+A/Zw/LsIWN6nCEh+ti3PPSa
+         HjNf35VNIZgTFprwC1oqbrauuU6N6ZWD4QR2qjwlhVBhn1dbMRczLJXBGIXzc5M0kDgf
+         8AE2+API/L0DxOImRj+Lxc90Xdef022nHmLJFhs738XcG2/7WTinFDnYaKpvVvQJDdUp
+         jLVw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=XA4nXzCH;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id e9e14a558f8ab-3d3e4e6e42esor83279535ab.2.2025.03.05.05.26.17
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 05 Mar 2025 05:26:17 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=XA4nXzCH;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741181177; x=1741785977; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=YiGJRN7P3eKhLJ2jCSeTw2zmOgyz1sMW+SI1nnL54mg=;
+        b=XA4nXzCHvvyQk5SpO3m+MVhKM9vfVCQc9wvoHC6rkWYHOzylKVSHRsmIHqsW5Vm575
+         Hfxy1B46fLFIiKJHroWGd3pa6gTcHC8cCYyLqkqSjbYh1RGehB/0DYaylMJ/G/Smwid9
+         jSlsZO+VlPZ7b6codaes0x2cvjyLzR9chr09Gx7P42VS+BRdBIc0LpkdxW2uvAvQ7Ugk
+         RSrnRTmeqJKTnER9oQ4SV527yHi1Fb+7gooY587M59aIUqH5BvppnBDeNwPb3EJPFexB
+         pjk5Jo5RLIX/0CRcQ+MfGMUJV3YwHXA7DR4GOfAi2K5WNHvcNvLpgPNGbczhRxi8jJ/m
+         sI7A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741181177; x=1741785977;
+        h=to:
+         :from:
+        bh=YiGJRN7P3eKhLJ2jCSeTw2zmOgyz1sMW+SI1nnL54mg=;
+        b=l3Wwe8k6hfnRRecpid/IgJOgzzpE/poS2DBEAahH+VW4P9ViK9+KGcG/U+asuXJIIf
+         AFDV7LF7qsHhnSplR4Jh+f9SC49QugoFAUNieluss2E5JhOBmJG42iiy4FK5jscBdn8a
+         bEKoPmOfigFUNAjzUcmax+ZBnR9XtShA60gA8JkSGXokb0fEqrzfICdI9St3YlW0VTlb
+         hqipmhzPytshs2+rFzi/aR02+qEOQtMj4it0yE9jbKTbzri2EtUVWVFcUGznsnIxrxZb
+         3Kotvyq4XkS2qzEfJPSzT8wNlGcOkZqEuDPn3LNTx1gVmQBTj8NdW8YVs34wQjBKRqNe
+         Dxsw==
+X-Forwarded-Encrypted: i=1; AJvYcCW+2GVQsvtLA+F1jG9N78BSOLmcRJMUhoP3OWK1YACyOWbLThJfbspJGy+SNJs1YvE+5r7V5jqcIn4M/u9r6ctZOGvZGQ==@gmail.com
+X-Gm-Message-State: AOJu0YyfdjAF5NfS/vRbVY6Bp+3Rmyn6XuruiYhTbdOgtkhfn+Bl+Qyy
+	F8Y931HZRS+GX+prX3sDD8sHRlinJec/sba0vfrbhYcfOcPXMlNpJ9JstjmM8yJRui20AAdWREb
+	EunpY/MKFNrFEhJQq7+541nM92BA=
+X-Gm-Gg: ASbGnctKxBaz366PqqzsaqhzoL9PPdPtaB7vxf3E9KFuY2K2f3AVBkV8JNMho5mksWG
+	iKnP89qJ/++j5GoMq1b+PsfDSwcqf4+4KMdujL8ivCTZX9sxqTwjWd347CLX4rt3pXtrZ1bXk+4
+	xv335IY7i/dMBAwnO5yTGbngsmb5E=
+X-Google-Smtp-Source: AGHT+IFBre1Oj5jyU2J2x/gN0OxKEBurH3ijaWq1Cj2V2OAo966IOaViekWwr+0WStWr12zt//RN5bGyb295W49cZIA=
+X-Received: by 2002:a05:6e02:3a08:b0:3d0:4c9c:965f with SMTP id
+ e9e14a558f8ab-3d42b995fbcmr32421885ab.20.1741181177367; Wed, 05 Mar 2025
+ 05:26:17 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Wed, 5 Mar 2025 14:26:01 +0100
+X-Gm-Features: AQ5f1JrtdZhE7WdUoM6Ns4EGtdQgqTXfrdmq-NEX7gJw4-WAeThUkn02p2wa7-0
+Message-ID: <[removed]>
+Subject: hello
+To:
+Content-Type: multipart/alternative; boundary="00000000000091177c062f985565"
+Bcc:
+
+--00000000000091177c062f985565
+Content-Type: text/plain; charset="UTF-8"
+
+Hello
+
+I am Jenny Boo a solicitor at law. I am the personal attorney to a national
+of your country who used to work with oil and Gas Company here in West
+Africa.
+
+On the 21st of April 2015, my client, his wife and their three children
+were involved in a car accident, all occupants of the vehicle
+unfortunately  lost their lives. Since then I have made several enquiries
+to the embassy to locate any of my clients extended relatives but could not
+find any.
+
+So after these several unsuccessful attempts, I decided to track his last
+name over the Internet, to locate the Surname that matches his family name
+hence I found you.
+
+I have contacted you to assist to repatriate the Inheritance left behind by
+my late client before they get confiscated or declared unserviceable by the
+Nigeria bank where this huge deposits were lodged. The Bank where the
+deceased had an account valued at about USD$5.2 million dollars has issued
+me a notice to provide the next of kin or have the account confiscated
+within the next twenty one days.
+
+ USD5.2 million dollars can be paid to you and then you and me can share
+the money. 60% to me and 40% to you, I have all necessary legal documents
+that can be used to back up any claim we may make. All I require is your
+honest cooperation to enable us see this deal through.
+
+I guarantee that this will be executed under a legitimate arrangement that
+will protect you and me from any breach of the law. Please get in touch
+with me by my email and send to me your telephone number to enable us
+discuss further about this transaction.
+
+Best regards,                                        Barrister Jenny Boo
+Esq.
+
+--00000000000091177c062f985565
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"auto">Hello</div><div dir=3D"auto"><br></div><=
+div dir=3D"auto">I am Jenny Boo a solicitor at law. I am the personal attor=
+ney to a national of your country who used to work with oil and Gas Company=
+ here in West Africa.</div><div dir=3D"auto"><br></div><div dir=3D"auto">On=
+ the 21st of April 2015, my client, his wife and their three children were =
+involved in a car accident, all occupants of the vehicle unfortunately=C2=
+=A0 lost their lives. Since then I have made several enquiries to the embas=
+sy to locate any of my clients extended relatives but could not find any.</=
+div><div dir=3D"auto"><br></div><div dir=3D"auto">So after these several un=
+successful attempts, I decided to track his last name over the Internet, to=
+ locate the Surname that matches his family name hence I found you.</div><d=
+iv dir=3D"auto"><br></div><div dir=3D"auto">I have contacted you to assist =
+to repatriate the Inheritance left behind by my late client before they get=
+ confiscated or declared unserviceable by the Nigeria bank where this huge =
+deposits were lodged. The Bank where the deceased had an account valued at =
+about USD$5.2 million dollars has issued me a notice to provide the next of=
+ kin or have the account confiscated within the next twenty one days.</div>=
+<div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0USD5.2 million dollars =
+can be paid to you and then you and me can share the money. 60% to me and 4=
+0% to you, I have all necessary legal documents that can be used to back up=
+ any claim we may make. All I require is your honest cooperation to enable =
+us see this deal through.</div><div dir=3D"auto"><br></div><div dir=3D"auto=
+">I guarantee that this will be executed under a legitimate arrangement tha=
+t will protect you and me from any breach of the law. Please get in touch w=
+ith me by my email and send to me your telephone number to enable us discus=
+s further about this transaction.</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">Best regards,=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 Barrister=20
+
+Jenny Boo
+
+ Esq.</div><div></div><div dir=3D"auto"><br></div></div>
+
+--00000000000091177c062f985565--
+

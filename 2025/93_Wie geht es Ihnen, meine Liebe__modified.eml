@@ -1,0 +1,137 @@
+Delivered-To:
+Received: by 2002:a05:612c:4d06:20b0:4bf:a213:be56 with SMTP id ms6-n2csp308663vqb;
+        Mon, 10 Mar 2025 01:56:53 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVXxTsVrnkwRQkqYKPfb+uEV+6u8EzJxGpkVGIR2ixjaXV6BHIUAqXy/bsRXH/3WUwTskBQLukkpbZBofZVRv9Jr0boWw==@gmail.com
+X-Received: by 2002:a05:6102:d8e:b0:4c1:a448:ac7d with SMTP id ada2fe7eead31-4c30a54d408mr6336659137.10.1741597013180;
+        Mon, 10 Mar 2025 01:56:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741597013; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MNV+7SrPX65CwY+XYIhK12+VEyZw/a37EX4OcG2zGAxi+2N1lQntz6Y5JtsFQgHjYP
+         2yFD4IFmg02g+nHwHItYQDN3msYTfNFyKmSKd3gyPkeZosr4j+0jNFdGksIQyUXVlHki
+         ZOlFUAEvvvsHAowNApDiYFSN6FIZSnjj2Enr82i6WUFDcu6VnSqQP7iz8KCvf8z1KUkS
+         p+DdCjv2VARALkXRkXp6sEKBiDcxnMvZvLyOJkEK8IUN8AURdIpOANR4Rk41JLbvPOGa
+         AAKmURv+jBAiMWJeGXGiKrKpHkZlmbPLvEP3iDIOXbPpELtyETznQQf1RQpFFpX7Eo7Y
+         K6tw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=XrS1Taq+wiOFEsPCqtJ0emwgYcrjIerBwLUm95vYjUs=;
+        fh=DsECg++bI3ifAzGMtTkNXAfZktGNJAIoiogpNtTox08=;
+        b=adqlwSqF0doGHBRpfpvmbkG437o94gKmrwrcP4+93FIgZqogSKO1UQ7xv3S6+suGqd
+         mI21G3re6j6i/StCeTDa2TYgIMiEnEjHxHjC6K6DJnOdWyTtq+mLLsdnKqeZaHxTi6rp
+         aajAKzihoSZkay3z7FNN+Dl2A+SJ2tK36tdP42yOjphOQ1X+j4y/9JbdBlPYtYtGt5NW
+         2P2QAUKxe1cCgnyoOoGAupbzO3qLPsFdYL1F6+di2xEAnA9zkFIhVCsgxzOue+JUcu5i
+         OZktR5fYPeVNjJsAzQgA6VtsnOuEkcurfh97WZL12h8QTTs7aYQT1169MkKR/Wly16Dd
+         rE9w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sakaeoschool-ac-th.20230601.gappssmtp.com header.s=20230601 header.b=UNtSP9c+;
+       spf=softfail (google.com: domain of transitioning [removed] does not designate 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ada2fe7eead31-4c32d79f724sor337538137.8.2025.03.10.01.56.53
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 10 Mar 2025 01:56:53 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning [removed] does not designate 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sakaeoschool-ac-th.20230601.gappssmtp.com header.s=20230601 header.b=UNtSP9c+;
+       spf=softfail (google.com: domain of transitioning [removed] does not designate 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=sakaeoschool-ac-th.20230601.gappssmtp.com; s=20230601; t=1741597013; x=1742201813; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=XrS1Taq+wiOFEsPCqtJ0emwgYcrjIerBwLUm95vYjUs=;
+        b=UNtSP9c+NuO5xAXf7jF5lZi+zBSrAYK8dxzWwpzRthJcY/89+z0hB/QnQtlTzHZjQS
+         LahkagREEb7hc0jRZrjW9SbLgwg4eZjayo9wY3LgkejbVIgURgAgMJA9Rp3G6gsu7R9V
+         YYvoT+fTII7+84ehYQQHd1J1gaJZF8yJfz+DUZOyqr4kRUQ43Xf/TZ0DvZpDkEZPOuBp
+         irprax0hQNfFdg0OtpgrJtaaUv7SNXEutoH5SbLOJRLbb8X4mkFo2IqPguKCdvMX9+ZT
+         nIx9fO0D1vz3WsIhmBkJqE2JM8SEqCNewXHA2EjSoPUA3gzBtju2kJJlWu40FDO/I/bm
+         gsag==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741597013; x=1742201813;
+        h=to:
+         :x-gm-message-state:from:
+        bh=XrS1Taq+wiOFEsPCqtJ0emwgYcrjIerBwLUm95vYjUs=;
+        b=FV5NoUdR0nMSvJwT4Ag99VQmXCglyBYqp1IgkYRyG9UtT7hseWuscb2TeoChC5EVXm
+         BUdD97LTW/I+Vu5R8798DPuDtrZaoC5A61cbpqyphxqVNZgHTeXNnLFotCKwVBQN8FW/
+         /SeHGko56I25hg364iyRhL0KDmkItKoxvB9hr++S4I8dfVPrab0YLSELmUim2CDowfVm
+         aLxSrhdHJbIPdnsXE+8hjS0OfApXU9h2PgwnjTlJJwb4W87/a32Bj+ed57kUHmi5KKTc
+         aXK3XLGBBO9mraDU06jOzlL452fjObu57+M57uKsjOlXEe70C3lEPuAzTPm0kmkGLi5W
+         bJeA==
+X-Forwarded-Encrypted: i=1; AJvYcCVRJJ1kUcu03kB2MGlOmhLdJ9czG4YNcpIyn82w3d6/27jr6bOG+KGNxPDTz4HbDjYavoJYHjdJZ63+CxDg2AAaN270aw==@gmail.com
+X-Gm-Message-State: AOJu0YxLXc2b/dZbhL1Lnyb4Z9jKekCxgiQS0AyqAYIpcnCzB2F7pp80
+	OxTx3qVmC5MU3wPuJOJHQChPXKu+k89JBFjlEXEcoQOaFLoKP2+i15VEM+ioDDIAX4SeasbCF3U
+	LbOiCrLULXmg80ws1QN3gZHYaeE3J8Rkbf5mCrg==
+X-Gm-Gg: ASbGnctxUMwFIL2JtnMwyI9TPY+nUKv6QNW9mmav/GuRgwbjwYVw6I+ebMUOm/zrQdc
+	kZKo8PiWw/6IxkdQUnDteQaB1+nxsFeEIxyMXr4GhTXNwzlKO0LsYRsnKtF7vj8qzSjeVUQQkhu
+	ezTlau6sCpNArF2XXdA6CyjKPy6GQ=
+X-Google-Smtp-Source: AGHT+IFKe5eo5blsWV2Xv7b5DIwk+xhOJzDJHqIDCk+adm73cW6BYI6n5A9sQAVpICWSqXCa0wrHQOoUQhA8z6e6r9M=
+X-Received: by 2002:a05:6102:41a8:b0:4c1:924e:1a2a with SMTP id
+ ada2fe7eead31-4c30a6ab60bmr6846003137.25.1741597011771; Mon, 10 Mar 2025
+ 01:56:51 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 10 Mar 2025 08:56:31 +0000
+X-Gm-Features: AQ5f1JpxAFPx0wyJLZZwV3dE-FQ-sZTKh5E-OySg3o4my6YohqCStxNlrAdSgjw
+Message-ID: <[removed]>
+Subject: Wie geht es Ihnen, meine Liebe?
+To:
+Content-Type: multipart/alternative; boundary="0000000000003a9ebb062ff9273c"
+Bcc:
+
+--0000000000003a9ebb062ff9273c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ Wie geht es Ihnen, meine Liebe?
+
+Mein Name ist Frau Caroline Kowan. Ich m=C3=B6chte mit Ihrer Hilfe f=C3=BCr=
+ Bildung
+und die Benachteiligten spenden. Ich schreibe Ihnen bez=C3=BCglich meiner P=
+l=C3=A4ne,
+im Gedenken an meinen verstorbenen Ehemann,
+
+Rt. Rev. Luke Kowan, zu spenden. Ich m=C3=B6chte f=C3=BCr Bildung und die
+Benachteiligten spenden und bitte um Ihre Unterst=C3=BCtzung. Wie Sie viell=
+eicht
+wissen, leide ich an Dickdarmkrebs. Laut meinem Arzt habe ich nur noch
+wenige Wochen zu leben. Bitte, ich brauche Gebete.
+
+Mein Ehemann hat sein ganzes Leben lang die Bedeutung von Bildung und den
+Benachteiligten betont. Ich glaube, er h=C3=A4tte gewollt, dass ich das mit=
+ dem
+Geld mache, das er f=C3=BCr wohlt=C3=A4tige Zwecke hinterlassen hat.
+
+Mit freundlichen Gr=C3=BC=C3=9Fen, Frau Caroline Kowan
+
+--0000000000003a9ebb062ff9273c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+Wie geht es Ihnen, meine Liebe?<br><br>Mein Name ist Frau Caroline=20
+Kowan. Ich m=C3=B6chte mit Ihrer Hilfe f=C3=BCr Bildung und die Benachteili=
+gten=20
+spenden. Ich schreibe Ihnen bez=C3=BCglich meiner Pl=C3=A4ne, im Gedenken a=
+n=20
+meinen verstorbenen Ehemann,<br><br>Rt. Rev. Luke Kowan, zu spenden. Ich
+ m=C3=B6chte f=C3=BCr Bildung und die Benachteiligten spenden und bitte um =
+Ihre=20
+Unterst=C3=BCtzung. Wie Sie vielleicht wissen, leide ich an Dickdarmkrebs.=
+=20
+Laut meinem Arzt habe ich nur noch wenige Wochen zu leben. Bitte, ich=20
+brauche Gebete.<br><br>Mein Ehemann hat sein ganzes Leben lang die=20
+Bedeutung von Bildung und den Benachteiligten betont. Ich glaube, er=20
+h=C3=A4tte gewollt, dass ich das mit dem Geld mache, das er f=C3=BCr wohlt=
+=C3=A4tige=20
+Zwecke hinterlassen hat.<br><br>Mit freundlichen Gr=C3=BC=C3=9Fen, Frau Car=
+oline Kowan
+
+</div>
+
+--0000000000003a9ebb062ff9273c--
+

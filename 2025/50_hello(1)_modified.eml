@@ -1,0 +1,149 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp874343vqb;
+        Sat, 22 Mar 2025 01:55:20 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVq/xRSiero8XtIObfbICXYceQ9vUaFzh8DjBzRdsXEZRnVnVB0q8eQxi9bNIID3WeAmP6Z/6WEGh4zO6qYo76oKhugAA==@gmail.com
+X-Received: by 2002:a05:6a20:748f:b0:1f5:889c:3cbd with SMTP id adf61e73a8af0-1fe4343713cmr10814939637.35.1742633720522;
+        Sat, 22 Mar 2025 01:55:20 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742633720; cv=none;
+        d=google.com; s=arc-20240605;
+        b=LX4yUAHuZbzCjN4FywArzL1RFf7qeTZaG80VCu026Hji3lTZTtCkLK/0TQnx6Js2um
+         op/SwH7MX8nGcSAetj1UutaT3+s2V/vNDJnHe12NY7yFdTZZ3BPXWbZZbc/svIyjyfLD
+         8zLlUbCoU/UwA3PNireHIsIEG0UBa3x490ZYcQbTvn0ZfgKxwmXz1n/+lug5gqwvjpk5
+         cgAEKYLupXyuS3paHFhC1suJYYJT0CYhWgxT1he7CldcRIjARa0ghf6XAkhS2PWmG8Q7
+         55PlAiVQx4aggzGWh4OJ6HxXqJq+irBBwr1klpdiL5qyj45xpC1xuiaRtt8c/ggF19t3
+         dRVA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=IzMJqhlc7VCPV+xRVHFd2hxeXcKqRQa/Wi0AhWePcR8=;
+        fh=Jyk25Jo5/5LZcMG+4HqzYgG+FRKVbJDvYro0CU667Ds=;
+        b=ICBo6ThHkMyHx7M8DF7FTocmNm6IsDXE9c9mZyuT8g5MwUVAoSzPJD3D3fHN2a9CiI
+         i5ENFeOBYg00GA/w8bSALquXXP42q1vuYZNtmfwW/cki7ma/WN71ZJVZ/IKmDqbJMuP+
+         45PA5xeWNqGNRMsYumcLbPuBwZGohyb+jv2C0razXDkgxK9C4YGBqKwI5ieQkImkbYan
+         HAdxcSsCkTwSWdIp0VUNB/lsDWQ8xlba+e1spnSzl7tVwiw4Vkepv3zBlkVNWqj9Co5i
+         e50JSoYZjkzWi5J2exGN3aSVoO8YiNuvAfsymm7XsPDRKreEwi1ZzwbqCmCZ+EXpRmy6
+         OicA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ch7ukv8h;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 41be03b00d2f7-af8a2a6d94esor2728098a12.3.2025.03.22.01.55.20
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 22 Mar 2025 01:55:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ch7ukv8h;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742633720; x=1743238520; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=IzMJqhlc7VCPV+xRVHFd2hxeXcKqRQa/Wi0AhWePcR8=;
+        b=ch7ukv8h359h8g0D+gVHuS2k7gmPbIRb7G3JajaYZZa4Aj2XlR5uBekdn4wCDNHqxk
+         XTDRkBYZZd5DVDmL9e0skdAGj8OUausKQ2gWNwdS2l29DM/msmSXEpHM+KNYhJr97Kjt
+         Egf/lUdz7uQlmX6Q5/hImKLAUB6ZsXGOayqNZ0HJBGr6NeyBUTcbnu+QKL8JlWUUvTvz
+         wWxOsk6y3ZuVb1OkzdVxEOrJ/qmw6hY+Z9YcGnM5D1CsLq44D7T8yLLltqPXKzvx/qab
+         h0owrFILLXGdcE8M3NLrFrTwN3p57ngPraheFbdwBaHbFc5DqrGieTkiaC3PDBTDc6zu
+         MfFw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742633720; x=1743238520;
+        h=to:
+         :from:
+        bh=IzMJqhlc7VCPV+xRVHFd2hxeXcKqRQa/Wi0AhWePcR8=;
+        b=kyMGoJLEsz0qq6ySFnnUBdb1jaFxCZ0n2SCsaBdtVV1D7Q209K8oXw/OmIAZl3CeKX
+         q6+b8uLtg5cADiUD0t5ipeJHycV+zXtE6ifRUrXx5pYIsD7yloidBO4vX436PNTjHzgw
+         mlJ2FRLcspb1PEVbUeZXKtnCjiY9RdyXEIpFK3NZ5WfFfR2ic32VXJafoPkCVi1goB+q
+         KjF1SkS0ttCWOJCNmIk/hxNL2NtKrxve6htZ96YvEyEEbw6Ke9aZkkYRVlYmhsm60X44
+         dQIgb7r9C+s5ghHe1Js/QZg0zIFDgtJw0lyJkEai3o+1ScA72ohtJmJdc361mF21dLex
+         ZKMQ==
+X-Forwarded-Encrypted: i=1; AJvYcCWGkAIagjbn2PBmAvy3BF8v0VbNtiCVYVL2SwPn29DIgQwzFvNztIKtDXLX1Qq09VrL27XviQGCP1wXtCa0qaMAKu4gbg==@gmail.com
+X-Gm-Message-State: AOJu0Yykw7FCG92zRcH1ZY9Z1Nw9gHUzKjkajHSwo2voURmbiNJdwset
+	r2Wlb52bPYz4aIej/VqyOsOm6U/MSmILGmkccpXEyndLHCLXWaIpE3AwLwcDdfPqDfN5A9ZHOPb
+	g3QTvDBv+4oxIgZ5eFJu42FsTg7U=
+X-Gm-Gg: ASbGncuXLyixlIt8VPWADHyrAj57MKBkQG5UHP3kvsBOsOtkSBSaNdLJUxZwuCFYY07
+	uRTVhMtLGnKTXHHAiePmZ3xyifcLCiUKxunKEcuVMKEOMiTD6u9qsTSbfnRGPQvAlC/PtyEneIC
+	VBPyYRtqq4/BpLEUBWkFCpgAEnAGuM+GnX/BDIiiGN9CbYC9gpW+mBaYo0qRM=
+X-Google-Smtp-Source: AGHT+IFJqEsqFBTW4oyAyhs/x18UYNPEIYSt7glHT8LEJ8w3N0xwcalsomAhM6cdOiPlLYaczlbNH8ctcoFXZLgWc+E=
+X-Received: by 2002:a17:90a:e70d:b0:2ee:5bc9:75c3 with SMTP id
+ 98e67ed59e1d1-3030fe8399emr9070616a91.5.1742633720006; Sat, 22 Mar 2025
+ 01:55:20 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Sat, 22 Mar 2025 09:55:09 +0100
+X-Gm-Features: AQ5f1JryB9rHBgppYYJCI7K7EziWXd-eaZKfGde3_8LKW5tFW06dQQfUdqFl7Qo
+Message-ID: <[removed]>
+Subject: hello
+To:
+Content-Type: multipart/alternative; boundary="000000000000dad0ec0630ea8787"
+Bcc:
+
+--000000000000dad0ec0630ea8787
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Friend,
+
+You might find it so surprising to hear this, though it is indeed a very
+long time, I am very delighted to contact you again after a long period of
+time since last year 2024, I remember you despite circumstances that made
+things not work out as we expected then. I want to inform you that the
+transaction we're doing together finally worked out and I decided to
+contact you and to let you know because of your tremendous effort to make
+things work out then.
+
+Meanwhile I must inform you that I'm presently in the UK, for numerous
+business negotiations with some partners. With my sincere heart I have
+decided to compensate you with $2.5 Million Dollars for your dedication.
+Then on our transaction, you tried so much that period and I appreciated
+your effort. I wrote a cheque/check on your name and deposited it with Togo
+Courier Delivery Service Company, as soon as you receive it, Kindly let me
+know.
+
+Right now, Go ahead and contact the Director of Courier Service Company and
+send them the below information of yours as to enable them to post your
+Cheque.
+
+Email, ([removed])
+Contact person Mr. Johnson William.
+You are to forward to him as follows below.
+
+Your name........
+Your Address.......,
+Your Phone number......
+
+Mr.michel
+
+--000000000000dad0ec0630ea8787
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+<div dir=3D"ltr"><br>Dear Friend,<br><br>You might find it so surprising to=
+ hear this, though it is indeed a very long time, I am very delighted to co=
+ntact you again after a long period of time since last year 2024, I remembe=
+r you despite circumstances that made things not work out as we expected th=
+en. I want to inform you that the transaction we&#39;re doing together fina=
+lly worked out and I decided to contact you and to let you know because of =
+your tremendous effort to make things work out then.<br><br>Meanwhile I mus=
+t inform you that I&#39;m presently in the UK, for numerous business negoti=
+ations with some partners. With my sincere heart I have decided to compensa=
+te you with $2.5 Million Dollars for your dedication. Then on our transacti=
+on, you tried so much that period and I appreciated your effort. I wrote a =
+cheque/check on your name and deposited it with Togo Courier Delivery Servi=
+ce Company, as soon as you receive it, Kindly let me know.<br><br>Right now=
+, Go ahead and contact the Director of Courier Service Company and send the=
+m the below information of yours as to enable them to post your Cheque.<br>=
+<br>Email, (<a href=3D"mailto:
+">[removed]</a>)<br>Contact person Mr. Johnson William.<b=
+r>You are to forward to him as follows below.<br><br>Your name........<br>Y=
+our Address.......,<br>Your Phone number......<br><br>Mr.michel<br></div>
+
+</div>
+
+--000000000000dad0ec0630ea8787--
+

@@ -1,0 +1,169 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp3068974vqb;
+        Tue, 25 Mar 2025 21:15:22 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUj7uOvQHN3VctrCo7/0TUFhBolZTSNu8Nt5/NHdZVgEQOBPZyb+t7w8AajiifnIyUdo6R7YadmS67Q/Hu2LDO7CNK+YQ==@gmail.com
+X-Received: by 2002:a2e:be25:0:b0:30b:b908:ce1e with SMTP id 38308e7fff4ca-30d7e2a76e7mr51976191fa.29.1742962522562;
+        Tue, 25 Mar 2025 21:15:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742962522; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ebsW7vPo4CfqRmSKoAT11S+pOhko5pB7S8DjrccVq7HVQ6UN2xzJ0/EccLAhCU9djW
+         sNRC6/5iGt/zKF/LtrCfILnZX2HCL5Hyi3HSpw42cNlXsgBzGLzn8KHLFeMAPyThRJ7O
+         Ig+2E7fIANB1zk1yGoDUyBpmMTXyZyquoTRS85cW8beIHbEqLL3T79BBWSU73qqk1YCY
+         LX8MjzuNMAKhk1GKwRyXUDLqaukTXBiML01d5LynSeRBq1lV54SAPgJ+41a5foxcGtc6
+         N2EDfM9sNxv1J2gNhBKqeoLviKGqu62bzUrdzDxLDy8z6tblXeajwrDhQMO4aDeRAMgi
+         0hPw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=udYfeIuP1ZxxSDMq66Z0mZpT4rkG0oPOqnzSRqEhOpc=;
+        fh=6rwWiasNUenPfJFx6TPLZmZaxfOh3CeDAJTGs6QIr7w=;
+        b=Wzk4mLa9aH0Ex4fPhdDWeRfRf85nCL7LbxRtt9ank9fKWBoPz+8LaUW57jywHdpRIo
+         PPu0e0qRveWMf+RiVlt8IZTpT+2r+2r1uYy74dNEVEZoXlkfWAorbGzGI1fxIMqTXnne
+         ygLnDzBXbMLGHSdPWQCG4yEAvWvVI2mRjzH3tyNSadOcoz1eYG5sybO8XNcz28dAFoft
+         XzkMxyn0UELpD6JpiZ9to9GpCfBWCa2JEoUqzFeIxFbCE6RgRvWDzC5yHe8Ep7QeDEgA
+         7U530TZJn7kQlhepCg/hKKVyBgThJfL5vRGekiv3Ks26aWiDES5OSlAHYXwKJ8rL1N3n
+         cMig==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=YdUGdpoR;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 38308e7fff4ca-30d7d85cf3bsor22062921fa.13.2025.03.25.21.15.22
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 25 Mar 2025 21:15:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=YdUGdpoR;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742962522; x=1743567322; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=udYfeIuP1ZxxSDMq66Z0mZpT4rkG0oPOqnzSRqEhOpc=;
+        b=YdUGdpoRI38bSZO6lbYgXLH/05O8bKvulHUA3gj0S3448khzd/0hWJkTwXvKJLakSR
+         JA4s0vGnEqWC8OW6brp3RCYJ1zUM00rzV/BEFJcSGBGJMNgpjxmUr2WolgHm4HZ6QPx/
+         DLlMHq3tTwUa9TApZlXe9Fvrp+M9Me7251cK3dkKpoJxKe0wolPzhetutKs86/CMkR+P
+         F/4hp+x8t2IBZS+z/ByZtPKGlWLwL0axHwi0g9C/fl3VeJYKvqsKb5yKc6IVV2gzXEqr
+         L+Kji2Jy79ZqVEvYtJUJFEwl01D5BF7AEn46OUkcEBaF4xVwrkegudIWwGIj3qMxZhSl
+         zHgQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742962522; x=1743567322;
+        h=to:
+         :from:
+        bh=udYfeIuP1ZxxSDMq66Z0mZpT4rkG0oPOqnzSRqEhOpc=;
+        b=TPQTkRszbspZ9PifkSG3qhLKYQRWtjW5i88NDS+qMHlt7UzlXV1cVRgnXkGSUPXJbG
+         0u/BLTTN6hhsyOF7iLjUDAqeKdT34ezRccn21wIoYXUmGg8myUDVS1eLTvQYLVwdqcm8
+         HmKNOQesRnjU3ilJxrdoDFQYbRRNEcYygPZSSZN9OSCbeyvL00jC7m4+VjXB9ibIFkqP
+         JwVy2VpfRKI8ufNbHyNQUwH3+UWY8BvfBAv4YDd/bs2vAhRx2FCg2JU+cvONVOYuF/B0
+         4VR5RfGB76uZgzFo00I36L5OYLQ38HH7KACVL92PhjmO22ep4NosFiCcPrYYUBvmFFdt
+         I2bA==
+X-Forwarded-Encrypted: i=1; AJvYcCVLAiNsLr0dcoVMCFaS5sHZQ8MdIsHR5vryk/4QtgRstPlldFVNAsaTff/NmWouLF2y39AwJlbe5UvhlPFC68xQ7VzgJA==@gmail.com
+X-Gm-Message-State: AOJu0YwBRK8fAdtd2Hu55Rsh7SFFlFqRNbOf7IudVYH1Oe6UtBhVzpbv
+	LIFbAkI/j68hyYa+HC8ZlsTNdJoxGJ0RU8DWGpHSbEKNFaoBzEAG6eFSNNnAYwY29TO219ogO01
+	N6xHLG7YWeC6LW2VqBsoDDnGo3Is=
+X-Gm-Gg: ASbGncsYsgIw0AgYhCloMcr/kmJN+QCCglD/+kUGKpqyfAZNMvxLWmcE1sR0/vX5RtT
+	QRQlHjuuJzbvguqspUi7hedTuIqS2jkv8WvJNFt3Trm8DC9sm3/g59FkhSepIc5j/ZF8ZczQfk6
+	c+UzyGTNPCHP++ZrCDsOUanCqeqgt9
+X-Google-Smtp-Source: AGHT+IEyIFbj/4inFXzm8URMZ0Wx0PHgY6sinJVqzxszYvz+vC7cYWZff9zNI6mHm4FY726obaT/YnaNG71q8LSAPbU=
+X-Received: by 2002:a05:6512:3e26:b0:545:2950:5360 with SMTP id
+ 2adb3069b0e04-54ad648eba1mr7190633e87.22.1742962521455; Tue, 25 Mar 2025
+ 21:15:21 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Wed, 26 Mar 2025 12:15:08 +0800
+X-Gm-Features: AQ5f1Jqos345aPYgWB_9n6xGH6xjPBwLV4XqCceByxT1XS4keeJDw96giHKg_cg
+Message-ID: <CAOz4MuKmLpZaDA=[removed]>
+Subject: UNITED NATIONS COMPENSATION
+To:
+Content-Type: multipart/alternative; boundary="000000000000f2c503063137154d"
+Bcc:
+
+--000000000000f2c503063137154d
+Content-Type: text/plain; charset="UTF-8"
+
+Compensation Funds Payment Order Via ATM Credit Card/Cash Payment Or
+Telegraphic Bank Transfer.
+
+This is to inform you that we have been working towards the eradication of
+fraudsters and scam Artists across the World with the help of, European
+Union (EU) and the International Monetary Fund (IMF) and Federal Bureau of
+Investigation (FBI) Under the supervision of American Embassies all over
+the world.
+
+We have been able to track down so many of these scam artists in various
+parts of the World and they are all in custody and will be charged for
+Criminal/Fraud.
+During our investigation, we have been able to recover so much money from
+these scam artists. The United Nations Anti-Crime Commission and the
+International Monetary Fund (IMF) have ordered the money recovered to be
+compensated to the victims under the supervision of the United States
+Embassy for various countries of victims.
+
+This Email/Letter has been directed to you because your email address was
+found in one of the Scam Artists file and computer hard disk during our
+investigation, you are therefore being compensated with the sum of
+$1,500,000.00USD (One Million Five Hundred Thousand United States Dollars).
+
+The United Nations Anti-Crime Commission and the International Monetary
+Fund (IMF) have instructed to pay out all the compensation funds to the
+beneficiaries, payment will be monitored by the United Nation office under
+the supervision of the United States of America Embassy of the various
+victims' countries.
+Kindly contact this office with the following information stated below:
+
+1. Your Full Name:
+2. Address:
+3. Your Age:
+4. Occupation:
+5. Cell/Mobile Number:
+6. Scan copy of your government id card
+7. Country of nationality
+
+Thanks for your understanding as you follow instructions.
+Yours in Service.
+Mrs. Maureen Dereck
+Public Information Desk
+United Nations office.
+
+--000000000000f2c503063137154d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><div>Compensation Funds Payment Order Via=
+ ATM Credit Card/Cash Payment Or</div><div>Telegraphic Bank Transfer.</div>=
+<div><br></div><div>This is to inform you that we have been working towards=
+ the eradication of fraudsters and scam Artists across the World with the h=
+elp of, European Union (EU) and the International Monetary Fund (IMF) and F=
+ederal Bureau of Investigation (FBI) Under the supervision of American Emba=
+ssies all over the world.</div><div>=C2=A0</div><div>We have been able to t=
+rack down so many of these scam artists in various parts of the World and t=
+hey are all in custody and will be charged for Criminal/Fraud.</div><div>Du=
+ring our investigation, we have been able to recover so much money from the=
+se scam artists. The United Nations Anti-Crime Commission and the Internati=
+onal Monetary Fund (IMF) have ordered the money recovered to be compensated=
+ to the victims under the supervision of the United States Embassy for vari=
+ous countries of victims.=C2=A0</div><div><br></div><div>This Email/Letter =
+has been directed to you because your email address was found in one of the=
+ Scam Artists file and computer hard disk during our investigation, you are=
+ therefore being compensated with the sum of $1,500,000.00USD (One Million =
+Five Hundred Thousand United States Dollars).</div><div><br></div><div>The =
+United Nations Anti-Crime Commission and the International Monetary Fund (I=
+MF) have instructed to pay out all the compensation funds to the beneficiar=
+ies, payment will be monitored by the United Nation office under the superv=
+ision of the United States of America Embassy of the various victims&#39; c=
+ountries.=C2=A0</div><div>Kindly contact this office with the following inf=
+ormation stated below:</div><div><br></div><div>1. Your Full Name:</div><di=
+v>2. Address:</div><div>3. Your Age:</div><div>4. Occupation:</div><div>5. =
+Cell/Mobile Number:</div><div>6. Scan copy of your government id card</div>=
+<div>7. Country of nationality</div><div>=C2=A0</div><div>Thanks for your u=
+nderstanding as you follow instructions.</div><div>Yours in Service.</div><=
+div>Mrs. Maureen Dereck</div><div>Public Information Desk</div><div>United =
+Nations office.</div><div><br></div></div></div>
+
+--000000000000f2c503063137154d--
+

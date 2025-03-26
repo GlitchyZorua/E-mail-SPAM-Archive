@@ -1,0 +1,119 @@
+Delivered-To:
+Received: by 2002:a05:612c:4d06:20b0:4bf:a213:be56 with SMTP id ms6-n2csp826964vqb;
+        Mon, 10 Mar 2025 18:24:14 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXoGjDcgUjVjeE9wI5TCNI9e11DzoWJfBaBtdkJsh5lpP+wXcrLRDubpHbVbbRChogdFF8HD0J0bidvbLap8wtzX2MU1w==@gmail.com
+X-Google-Smtp-Source: AGHT+IFuRnY+8wZk6p7p0eZzA92xb9yj0c/JT4t0I2b7VNpIS4CFIKYR6RwvF00HgtNf6E17mf8y
+X-Received: by 2002:a05:6871:220b:b0:29d:ca24:c044 with SMTP id 586e51a60fabf-2c260f93d3fmr8268418fac.8.1741656254543;
+        Mon, 10 Mar 2025 18:24:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741656254; cv=none;
+        d=google.com; s=arc-20240605;
+        b=CGlwtHwQ+5blrylqbg29a7o83cekaqRxD0RuFgOieW5CgHROfI7WImysfol52l6gGq
+         XexfKkNK+HIDD3wCYWrmzXc3H073Ki3kPD9yyPMHnagFFNlun6A8KZYVgzuozybMLtlh
+         jyanZQhQICvNVuW4qrGUoOGNDc1/1DCa7EFcday3s8LA/yqv8p4RcQ3A35IQqaHPMX83
+         TZDANt4JRF6vsza817X3cHJl65ubFar+mwZLyfM4PNJzoEkcuGH+LRShw+7dJ532gnsp
+         1UHPqxcmlD97v9YyB1Bgk+ifnCRGyjkugrJpcqZ4NJcBtezAwW3jgnXgpr8rxg9yLsBc
+         E1eQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:subject:to:
+        bh=xrmTkbwj/7S+zjgSQ1035KoQ4q01qzmn7QARoS3RbxY=;
+        fh=vxZ9t5RV7ytOx38cTHX8q24tjn4t1QvhqJgk/dXeW/U=;
+        b=hswVuURa+4G7kgg05Rxuuh2/qUonc4C14F6477s4q8QEsnYwpNQzsVgK5OBladg/Pq
+         lz1jNEPCulI1hsCchy6WodySW2MniWA96lUaZsdPz7eNwOciBGhUtiIXS5sZO//g6G5X
+         2XlasSQ7TWtUqod4124E0y6eGDaact3N3f6bPDtHOi96TjauBn+AO5Q0lJisRG7sotqs
+         Mi5O+2M6nV3UX0N0h9NbF7KZ97PnyFKfbfY8xWiljZAo0+Ob5xGBVE7FXbjGYNEadCK/
+         XSqiR9fAJPljmsI14Ybaz0YPWWhiGwo8Aa2joYtHmdRE1XOOT8Ni4tY+BQ7qyMnx8RtI
+         7kIw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@au-east.atmailcloud.com header.s=202306 header.b=INzSkPNH;
+       spf=pass (google.com: domain of [removed] designates 103.150.252.187 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=optusnet.com.au
+Return-Path: <[removed]>
+Received: from omr-waratah-01.pc5.atmailcloud.com (omr-waratah-01.pc5.atmailcloud.com. [103.150.252.187])
+        by mx.google.com with ESMTPS id 586e51a60fabf-2c248db19d7si7143977fac.228.2025.03.10.18.24.14
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 10 Mar 2025 18:24:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 103.150.252.187 as permitted sender) client-ip=103.150.252.187;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@au-east.atmailcloud.com header.s=202306 header.b=INzSkPNH;
+       spf=pass (google.com: domain of [removed] designates 103.150.252.187 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=optusnet.com.au
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=au-east.atmailcloud.com; s=202306; h=MIME-Version:Content-Type:Date:Subject
+	:To:
+	PNHS2bC0LLkZ2OK3/5cwNRB9uDgy8gGQc/wmneIfm/NsIjIh+7U9T4dCEQUoASb1VyZRnGS85kvH4
+	g6p2fXDi66Esm2pFZviWOxRyhju7ecy0P0u04HejzSIQfXXhDS3Ye9AZSs/Ni3ql73xXGQVxE2LKZ
+	ZzRc8gDgsWYGoy1RYnGVn6sqqje9XmBPRQkEXcdKXDbcEcsrLJx/eZZPCY1XZx7xhQKumvR9tB7un
+	5WpQUB/vQgugEf3qlgf1TWaWB2GxlNfC1TkYZdGob8RM7iPNQ5jgZx1C8wkZt1GvQvxeO4IitXweM
+	1RKoZO/fnPDF5KKFHuQMFE0BJVP1w==;
+Received: from cmr-waratah-wm.internal.pc5.atmailcloud.com (cmr-waratah-wm.internal.pc5.atmailcloud.com [192.168.10.1]) 
+	by omr-waratah-01.internal.pc5.atmailcloud.com (Exim/cmr-waratah-wm.i-0cc2adea2ff8b0c97) with ESMTPS
+	(envelope-from <[removed]>)
+	id 1troLf-0000000019d-3fg1 ;
+	Tue, 11 Mar 2025 01:23:59 +0000
+Received: from webmail21.syd.optusnet.com.au ([211.29.132.170] helo=localhost)
+	 by cmr-waratah-wm.i-0cc2adea2ff8b0c97 with esmtpsa
+	(envelope-from <[removed]>)
+	id 1troL4-0000000FzjH-19hk;
+	Tue, 11 Mar 2025 01:23:25 +0000
+Message-Id: <[removed]>
+From:
+To:
+X-Mailer: Optus 7.4.0.0
+X-Originating-IP: 104.117.181.101
+Subject: Becky Bell's Gratitude
+Date: Tue, 11 Mar 2025 12:23:11 +1100
+Content-Type: multipart/alternative;
+ boundary="=_91bb384a5639c7898e6e2b1a2c42644f"
+MIME-Version: 1.0
+X-Atmail-Id: [removed]
+X-atmailcloud-spam-action: no action
+X-Cm-Analysis: v=2.4 cv=frIXZ04f c=1 sm=1 tr=0 ts=67cf908c cx=a_idp_f a=NIeLNGl2lFAxaD6479zB7Q==:117 a=NIeLNGl2lFAxaD6479zB7Q==:17 a=4yjHUBVA_VsA:10 a=Vs1iUdzkB0EA:10 a=RSmzAf-M6YYA:10 a=i2yllnXfAAAA:8 a=UqCG9HQmAAAA:8 a=gXlOTzOzzHKSm2vRHNsA:9 a=QEXdDO2ut3YA:10 a=58dBgtzhrrwA:10 a=zZCYzV9kfG8A:10 a=g84cHk6kwDShp05sNvMA:9 a=xm384JXkYD1YjLFk:21 a=_W_S_7VecoQA:10 a=Xr1g94qywaokGmf_ZuzI:22
+X-Cm-Envelope: MS4xfL6I4E+KjXhX81qaPtKoIvDmXGdCLb37TwdcRTn9QC6cxlnHeNZEBRyTJSmQXEj2B9SZVknrCMAhrSO41QEa2lWcZ5VlEJGD7y+pW1cAFQTSiPGHWpEH lmW7mqMJT5FlLF9z8hxcxOTxAi7fkxLMGq6XPHZbtdnDxoy+1hjF3uL/vLsX0ITKLv0KHuJ1/a9BCg==
+X-atmailcloud-route: unknown
+
+--=_91bb384a5639c7898e6e2b1a2c42644f
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+=0AI am Brittney Madison, personal assistant to Becky Bell of Auburn, wh=
+o=0Awon the $754,550,826 Powerball jackpot on February 6th, 2023. As a=
+=0Atoken of appreciation to God and her family, she has chosen to donate=
+=0A$4.2 million to four individuals worldwide, and you have been selecte=
+d=0Aas one of the beneficiaries. For claims and further details, please=
+ do=0Anot hesitate to contact me directly via email;=C2=A0=0Ams.brittney=
+[removed]=0A=0AVerification visit ;=0Ahttps://www.auburn-repor=
+ter.com/news/wa-lottery-reveals-auburn-woman-as-winner-of-754-6-million-=
+powerball-jackpot/=0A=0AOnly responses sent to this email { =0Ams.brittn=
+[removed]=0A=C2=A0} will be acknowledged!=0A=0A-------------=
+------------=0AEmail sent using Optus Webmail
+
+--=_91bb384a5639c7898e6e2b1a2c42644f
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"font-family: 'Helvetica Neue',Helvetica,Arial,sans-=
+serif; font-size: 12px;"><br><div><div><div><font face=3D"serif"><span s=
+tyle=3D"font-size:16px;">I am Brittney Madison, personal assistant to Be=
+cky Bell of Auburn, who won the $754,550,826 Powerball jackpot on Februa=
+ry 6th, 2023. As a token of appreciation to God and her family, she has=
+ chosen to donate $4.2 million to four individuals worldwide, and you ha=
+ve been selected as one of the beneficiaries. For claims and further det=
+ails, please do not hesitate to contact me directly via email;=C2=A0</sp=
+an></font><font color=3D"#ff6666" face=3D"serif"><span style=3D"font-siz=
+e:16px;">[removed]</span></font></div><div><br></di=
+v><div><font face=3D"serif"><span style=3D"font-size:16px;">Verification=
+ visit ; https://www.auburn-reporter.com/news/wa-lottery-reveals-auburn-=
+woman-as-winner-of-754-6-million-powerball-jackpot/</span></font></div><=
+div><font face=3D"serif"><span style=3D"font-size:16px;"><br></span></fo=
+nt></div><div><font face=3D"serif"><span style=3D"font-size:larger;">Onl=
+y responses sent to this email { </span><font color=3D"#ff6666"><span st=
+yle=3D"font-size:19.2px;">[removed]</span></font><s=
+pan style=3D"font-size:larger;">=C2=A0} will be acknowledged!</span></fo=
+nt></div></div><div><font face=3D"serif"><span style=3D"font-size:16px;"=
+></span></font></div></div><br><hr>Email sent using Optus Webmail</body>=
+</html>
+
+--=_91bb384a5639c7898e6e2b1a2c42644f--
+
+

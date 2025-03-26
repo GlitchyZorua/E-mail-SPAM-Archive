@@ -1,0 +1,129 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp2215461vqb;
+        Mon, 24 Mar 2025 13:21:07 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUWFh5vuYkuHQeYcnD7pdzPmCZddaqNmqjBLOFAIIqoNutbWy7FaFj9U7JiH6cUeWkGSscks12adXz46zCe9s70DRz5zw==@gmail.com
+X-Received: by 2002:a2e:b890:0:b0:30b:bb45:6616 with SMTP id 38308e7fff4ca-30d7e2ba230mr54818041fa.29.1742847667076;
+        Mon, 24 Mar 2025 13:21:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742847667; cv=none;
+        d=google.com; s=arc-20240605;
+        b=fuTOHTo7FYDTBVB3iHui5o7KHLvLiYmqU50eeZK3Ef3HnBy6MnfIX/l/Gj1AWr+6y/
+         sPnE3Kdgp7z7KOYR6Rq+gLL/tNNh1IlSqjhYJp9mtgHeD5VFFzT47aexZ0yW59ssItzY
+         ceYlmNUeXJW3Wn5m938RoESQUnkgOnSubVl3flBgQf9omzCXvy7S3Fa4d3IFKH7EJ4oA
+         YhgXQTwJjMcg1ASbVHV/MyJCVSk+8D/O2qyeTXnfzEubRF7ojxZaYbdL+/OJEioHvNk9
+         AL8629hZaUtW3rDM+ohSPZ1rQsqxLecx7jP0u8RRqoveTtsD0N0NHJ6kf5TDzIia0wI7
+         p0gA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=6MzZmTaG0+6ZaYCHnVgBN3GL5U0gghlQg9vsMuXAuiw=;
+        fh=cxrBWNwuxYlW99LSTE+0zgzl84Ffw4UpdFhpFdq+Nk4=;
+        b=iTtnC+7a30O6cDfsrqqGuBEQe5c59Cz1Bexs99Apg9tY557UIku8V3i3FojWrKCCD2
+         0CsLYZBx/RXwFPNkZd0Y6xEUGZF7419uJ7H0UAknanQ7JpPyIWBeXFEKfulrbiqfXF9I
+         ctfpcM6HkN6OiSiUDnasN4o3itB7tTzvrQ4/REqGL2U3Ob3lZHIyiUQA4r5XTyz4ZDsb
+         /0sgGuYYFPEeQL2Y0Zt84FS9qs4pYdlI5IWQio1ujt3XvEY6RypvEoY3bUWhP4FlnI99
+         p5L0k41RFcK88dnat76hfnnwzLWCb4fyblGcpQn4gNv3zOhwDDHr8Bq26sZC/sKnpe7v
+         DKAA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=duTX7g19;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 38308e7fff4ca-30d7d656348sor13131061fa.3.2025.03.24.13.21.06
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 24 Mar 2025 13:21:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=duTX7g19;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742847666; x=1743452466; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=6MzZmTaG0+6ZaYCHnVgBN3GL5U0gghlQg9vsMuXAuiw=;
+        b=duTX7g198SDj2ONhXV14zSFvBVYowHKF3Pznaz1IyQWeuZPgT1lTuewg9GixCaO/dw
+         6AzK1IHm+6D4cpcGoBWdGdG8MMyAI8vPbMxgsUhSrjN0IKxb16FwcNmk41H/DXzQhGjB
+         A9yq8ePcLW06OkaP9REToXz5+Wy/+ZCT/iHBoKVdOlgLq+nLCp/zqP/6IV3sOXxhieN0
+         7TXq5QCCv484BGPgnwHsIhDc7YVYPDXgPHP0Zh5ma5BVb10E8hBWvNszx9HcfBexOadd
+         lgy9+P1fArj05AZc2hUeIg/JwrcVFZgOqbDbsqAwHvcgUP14sLO6vpnE7wFdhMTZ/ng6
+         z8LQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742847666; x=1743452466;
+        h=to:
+         :x-gm-message-state:from:
+        bh=6MzZmTaG0+6ZaYCHnVgBN3GL5U0gghlQg9vsMuXAuiw=;
+        b=haZW4k3lqdA76y7OW4mWr3dHbABJDEwIZshaTdBQyxmMydhQDOptG8ATyE7BidiOdd
+         Yf7Xy41ASgGPTPpkjgnaWqP/xdADahP9h19e0dA7AwkuNp9FobG+aPG/gAgdI5iFx4jH
+         lkh4Kd1czwdbzYjtCBTzsbL1jwz1CJYV3lVRQFZZAYWoz5mDgsGHYdpLn1B1rPqwxGuc
+         cEpZhSjSZWHUA0GPXrg6xY+pxWVK9Z6hIbqz0HVAZHxM7/t+e3R4LRwITYbXlrb7oWrs
+         jhbasukv12w0DFlmGkI7aDoeZ7fxUIwnfah82H43S6j5BkLbxuL11ZgUzSHQyKWcaPlA
+         fInA==
+X-Forwarded-Encrypted: i=1; AJvYcCUxLBqR0tTMqkaEXgO8rlSHQpEqxvjmRuFLS9lQxptH4O8KxnEH+jfXqOQZyfjtR8xjSHXc50ukhEPkjU7hr8rdaIf7vA==@gmail.com
+X-Gm-Message-State: AOJu0YyqDR1vEUr06Dqwu5LoeUc54MbanrtMCQj7QmqzRugnKXBMdNlb
+	20PNWWgTNHfVZ/ijatADj/Yd2yvIdHxts5LI/jFEspI/otgqlNaMEGWWdtOKq7hxffMQEqQJ4xA
+	adEfBAWpMbcWBdTq8PyYwCRFq8uE=
+X-Gm-Gg: ASbGncsbszXuoYYO9v5km6FHTTafTp348B6vv4SNro1D+pKGl3Bjdn8NxbRVkvmn6N6
+	iEdCXE48pzn1Vhjd+Csz9kSxuU6ThSgJVvLcOGS269gJ2ao05oLD7HoZwYeO1BJ0EKIXCZe6WvN
+	1DgSP4Y+yUlxK2HyVb589U5xsUXn/oxJLNIclv
+X-Google-Smtp-Source: AGHT+IGQhnt5UqxJauYTVtm5QkxuFqagU+xCAPyErgG1ohgV834tDXmrOG+LMJpUZFXd928YtC2Re1sjoC2ekv2iJBY=
+X-Received: by 2002:a2e:7817:0:b0:30b:fca2:6ac1 with SMTP id
+ 38308e7fff4ca-30d7e23c2aemr49430621fa.22.1742847666098; Mon, 24 Mar 2025
+ 13:21:06 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 24 Mar 2025 14:22:08 -0700
+X-Gm-Features: AQ5f1JoXQIMS-934Ziz-R1i1sDsLFE4HULVvXdZYWB8mqM1k6X4_GpgXawwPfW4
+Message-ID: <CAE3Cd=[removed]>
+Subject: Endowment
+To:
+Content-Type: multipart/alternative; boundary="000000000000091d7706311c58ab"
+Bcc:
+
+--000000000000091d7706311c58ab
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+Good day
+03/24/2025
+
+Due to your diligence/success in your endeavors,
+
+The E U in conjunction with Wealth Management Services has decided to award
+you a total Grant Sum of $10,800.000.00 USD as a Grant of empowerment in
+your business.
+
+For further inquiries; please reach out to the Grantor
+
+Mr. Fredrick Smith
+Email: [removed]
+
+Yours Faithfully.
+
+Mr. Patrick Craig
+Zonal Secretary
+W M S
+
+--000000000000091d7706311c58ab
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><br><span class=3D"gmail_sign=
+ature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_signature" data=
+-smartmail=3D"gmail_signature"><div dir=3D"ltr">Good day<div>03/24/2025<br>=
+<br>Due to your diligence/success in your endeavors,<br><br>The
+ E U in conjunction with Wealth Management Services has decided to award
+ you a total Grant Sum of $10,800.000.00 USD as a Grant of empowerment=20
+in your business.<br><br>For further inquiries; please reach out to the Gra=
+ntor<br><br>Mr. Fredrick Smith<br>Email: <a href=3D"mailto:
+ive.com" target=3D"_blank">[removed]</a><br><br>Yours Faithfu=
+lly.<br><br>Mr. Patrick Craig<br>Zonal Secretary<br><div>W M S</div></div><=
+/div></div></div>
+
+--000000000000091d7706311c58ab--
+

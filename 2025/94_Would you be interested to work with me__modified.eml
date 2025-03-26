@@ -1,0 +1,144 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp625133vqh;
+        Fri, 14 Mar 2025 04:18:21 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWR4WQt669XbzS8BA6H8r/8c6vCjiz+kkwL3FxMGyBuyZ5fQ8OHwj0tDZL3zXLTustWHrnbcVsSQKdVHx5QsjhLtG6ahg==@gmail.com
+X-Google-Smtp-Source: AGHT+IF4VWqre2OJF1KT8QYEgEBQfJc/S4TXxgPnI9oZNfUpChGcepN53drQ4Ym6nst230JPEO7a
+X-Received: by 2002:a05:620a:1924:b0:7c3:97a8:901c with SMTP id af79cd13be357-7c57c923738mr280061185a.53.1741951101166;
+        Fri, 14 Mar 2025 04:18:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741951101; cv=none;
+        d=google.com; s=arc-20240605;
+        b=CseHN8SPtC1uPj79SeUUBPigKwoCdw/3nhjW/Cjejk9erujbh8F/ABFoC/Cs13nx3+
+         dy4KaHcv/xxEoMyw9JDpDwuVs9IOMKPgitGy9QAJGYTmhgRXICN8aQt5gBauVIETLW5o
+         JiwPE7u4/SmTmDzw2qoyhqkZy/GktB0gIdFWTep1NtGS0wnCywurk/jdsWBFhkxdg8Hs
+         s5UB1UjN/ejESAVzu0++wSZYPZy98hVB8jJO+h0NcJrqmfWOWdjSV1wlQFVj/AKT0suj
+         zdPyCAxPe3jF9hbCD3AYIDQ1zsMPfg5j6TzGuxvU1iRQO795FN0yZLQA22fov2BsTDpW
+         1B9A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=references:mime-version:subject:message-id:from:
+        bh=4un3rqCRIFo3/cr+oYiIl3A5U7BCjcSYT8XUKQBBE6E=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=Ya5wiW7DR+vhbotZxmWclUlHbV5tr2RrCJ0mnmKaXQZo22Qfe87xa2bTY+WeyX7W4b
+         ZRVosnNq3IHvCpP8jq/60lExqR3RSU9uZDzNQ8jxvcrHB21FS6YgfSz7eycrsseGO4fA
+         bebYRhl4zWTx2WZv9txECceqzeyTLOF62wyQ374G4cVM7BWVBJbXpVi1EuXq10gZsneY
+         WHkkjkt1Ftr90ZpZ5b7TGxZapMCFjw+ULQG9Fh2/AM9PkaX+GIEt5HDxJesvDYE8iIS7
+         kl4ZF+F3tlGdb1mMXRT3T+jYwwMrJN5ItoPbLtb2EhhQBp+E35K3KpoMAi8IBS2CEUA0
+         K/bQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=oO1y+hWd;
+       spf=pass (google.com: domain of [removed] designates 98.137.66.175 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <[removed]>
+Received: from sonic317-49.consmr.mail.gq1.yahoo.com (sonic317-49.consmr.mail.gq1.yahoo.com. [98.137.66.175])
+        by mx.google.com with ESMTPS id af79cd13be357-7c573b96a62si379657685a.192.2025.03.14.04.18.20
+        for <[removed]>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 14 Mar 2025 04:18:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 98.137.66.175 as permitted sender) client-ip=98.137.66.175;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=oO1y+hWd;
+       spf=pass (google.com: domain of [removed] designates 98.137.66.175 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1741951100; bh=4un3rqCRIFo3/cr+oYiIl3A5U7BCjcSYT8XUKQBBE6E=; h=Date:From:
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1741951100; bh=dImi8lSVpYGT/wg0eN9TAHhUkN9JnRWuj9pOKpDTv9U=; h=X-Sonic-MF:Date:From:
+X-YMail-OSG: zTlajf0VM1kHSCM7aOnvZwZMEOKGYAp9wfiyhmEd99_TrEkd98FKuchETFyKgLp
+ xwhLPGTKCGdFHplOFacX68wfyqbnvZhaWhZIK6.jWCdLStN4piAswP6FoUaWl4IgnOe43kP.i1sf
+ jRo9f54oQzwDY8YzGmN.QXlZ514zZie0MfTtZUbGtV5LCYEuBWCnacHKr2sMnGYFVpyjdz3iLcpt
+ IPOB8V.Ze3EcRJer.JLQmUU19pkt2q1yWZLOfBG8_b2iL83qVqwDIH1aBJkNbHRjwVmqwqjeUxRk
+ 6.QdLZUHb630dY7i1DXmFqpOAHTHDoZLeoPmU385QomOu13evlm4y9E0iW1QFZrVAIrUb8NU59aV
+ drt.EB7R19AWVW.bqdxrLEr5ZErQENOpX.0jDcBOnDWW.Xcm7oGG2S8z5n1jb9lJ8451gWhgQCz2
+ y7kA3pmsmxUHoeDZrZLX4xGCF8afnYpK500mbwphmuVl9imthT1Q5.RgrHAs.mGAm.NNRs_TiGlv
+ eCp4MCXD6c14Gst.O01cWjUaprmplCRbXEIGgTU5TgxKLtZg1lzYPeciBm1fsXhlEGJbLEgOS51p
+ ZxSuOdX651qGlGoTzLMCysXM.omhEJvV_U5pNZ_t3ADRePCLJGzsqJnu0vCXnmdXAR5xFbU5x6IG
+ eu6S5yQRgdcfo7WV_zqCiFpG7R9kuWLz914lnv5OzkBhnwX7pTAomBK4Vw6.0GkLCA67j8b6a57l
+ 6WULV19sTa_H6bS93cIbhcjZponZRzbK0rp6eoWfLGpfaEqMD2PJyKWjVd1aqF6gwOi3Rc1QLkTx
+ ZmfWlCV5XgJfpaclw8yj5i0A_mfUP4qW4VKkUxN.NxbsRjnDKJppboZrhwxuhhEL_QI9GaDvq0XK
+ _CbexPVNqSyax.dTyndoE4ZPHuIsPSDRbPIS7wi7lt99is50AJqhAMCkw.ITEZa5Hf6rDBg8Z7sI
+ GfJ3da9KiL6PDzRCC78l3BFNktSi.p.iAmM0jbLo095sCUywZgqrJ3VZcX_GJefw9pxnqGgXmlpN
+ ZTLa2p9RmspRb2gVxHjwZosZ48CjaBwSrwhnI1BN550je7Th8wxcD3ZU_K49_eNCVI5ai0ufamfp
+ 52vAUzVjdaggXvnDGylJ0GJWsc4e1gv66rvnBNppkv2MiOqEjgTvVUq0G6H4tcIrAI1pMnSgBs7K
+ 4O0tzn0QvZ863BNQeIbci4ijEs0_hBrMy.IVlWi28Z4D4uTiwlaq63TMGb5s3jdAG0pDv9gkeJxP
+ JxJN6l8WzrrwdP3utDG4q2ecRXenqSuAamaiBJCFsnZPrZ1hKowXoixSFn7_N3NqTiySVCOTLoEe
+ sci8pwL_Hn8uslKQfBgfB_8hU0WVT_9Vba6Ryf0.V1.ULwcxE7gHVsgcm6Nk3KSuQ3xzsTzODY2T
+ YHnE2bwNj1JAX3e.AJKYZlQErKesN.pQe3XnNqHKxzN.qyzbqZyz.khxgfu2pH1fV3Z2QuQOYXoy
+ CLt2oPANW26VE11vWEoRxPtvy0g.WzFqUiBNE01MjXUCzykxqnqhgweA5bee_APK6hXdH3Rrip4U
+ .Htb6PTfL9vjl6V2_aaiZqbAkui_kInI8v_UYC0Y4RVZnarlcP.8iAmzHZtFHrfjD0SRlbPQefRx
+ 6CED7hiw4APKOXqfpwGIVszQaVtJyfdpnz9IqTufDTorio_kdJrb40jzlqm1swGWuT18LWRxFzpe
+ 5QOGTEjCYFE.VcevH0m7M3.j.XHHEDY_OUquLgJN9ypgd71WfYRfn1NszLViohJfRRNIeQ0toZfr
+ 05QQWRa4LDxt73t0qK73171aZmjXv_u1KI8i3eOn74ULap9T97_tLdEtMBCwcdPj4JuxjQDaXlPC
+ S3D9O106tpFIKTX05Nr2zRYnDwaIFlsVIHVsXNdRjpew9wZY1ZgypuKFdvaO14XhamFpHE80zRUQ
+ 7TxlEdQNuZLVRS6bMy8uW.pLZph9si.yOwffdA82n8NLpog_FthBawc5Uwqsj1P6QEgGlD5IYITs
+ LtTGtJvCUJL.Dd5srNIC0ofHjAwK7a0UwisPJDOfl2P4vQ9ApWOV3VxJSydHZYTRWOFEGNLE4WH6
+ INzPHOMvZtVSmiUyUL2mRryrkvC.OEf4ruqroOvzjvQhO95PLFQbWr4QIQlofrWAqcYU.JbCEkNy
+ _sjRlfCv1FLPrZQgnqLicdeXXGCi8TVDSx5Xg4MFIZg9UENWwJxT2UJ4phz7wp7EXP4a5KZqYIA_
+ IFM_iK5pmFIREXGoEBISGinDXuXc9sBjFo1cQLl5VaeqCfGSnLKFw3ldpbA5M_nCRPwUMXqSbzy3
+ owV9s.Q--
+X-Sonic-MF: <[removed]>
+X-Sonic-ID: 4cfad94a-dad2-4ad1-b960-8f150425c6c5
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic317.consmr.mail.gq1.yahoo.com with HTTP; Fri, 14 Mar 2025 11:18:20 +0000
+Date: Fri, 14 Mar 2025 11:16:18 +0000 (UTC)
+From:
+Message-ID: <[removed]>
+Subject: Would you be interested to work with me?
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3466597_182165918.1741950978816"
+References: <[removed]>
+X-Mailer: WebService/1.1.23435 YMailNoble
+Content-Length: 4809
+
+------=_Part_3466597_182165918.1741950978816
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+Greetings!I am Mr James Adentwi Bruce, the Executive Director, Wholesale Banking at Access Bank Ghana PLC.I got your email contact in my search for a trusted partner, who will assist me with this confidential business proposal.Mr. Charles Donovan made a numbered time (Fixed) deposit for twelve calendar months valued at eighteen million US Dollar (US$18,000.000) in our bank.
+Upon maturity, I sent a routine notification to his forwarding address but got no reply.After a month, we sent a reminder and finally we discovered from his contact employers, (National Mining Corporation) that Mr. Charles Donovan died from an automobile accident. On further investigation, I found out that he did not leave a WILL and all attempts to trace his Next of Kin were fruitless.
+I therefore made further investigation and discovered that Mr. Charles Donovan did not declare any next of kin in all his official documents, including his Bank Deposit paperwork. This sum of US$18,000,000 is still sitting in the Bank and the interest is being rolled over with the principal sum at the end of each year. No one will come forward to claim it.
+In accordance with the applicable financial Law, at the expiration of Four (4) years, the money will be diverted to the Treasury Account of the Government if nobody applies to claim the funds.
+Consequently, my proposal is that I want you to stand in as the next of kin to late Mr. Charles Donovan so that the fruits of this man's labor will not get into the hands of some corrupt government officials.
+Upon your response, I shall then provide you with more details that will help you understand.
+Please observe utmost confidentiality, and be rest assured that this transaction would be most profitable for both of us because we shall share the funds as follows; 35% for you and 65% for me.
+Please, do include your phone numbers in your return email for effective communications.I am waiting your urgent reply.
+Best regards,James Adentwi Bruce
+------=_Part_3466597_182165918.1741950978816
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"yahoo-style-wrap" style=3D"font-fami=
+ly:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px;"><div><div>=
+<br></div><div><br></div><div class=3D"signature"><div>Greetings!</div><div=
+>I am Mr James Adentwi Bruce, the Executive Director, Wholesale Banking at =
+Access Bank Ghana PLC.</div><div>I got your email contact in my search for =
+a trusted partner, who will assist me with this confidential business propo=
+sal.</div><div>Mr. Charles Donovan made a numbered time (Fixed) deposit for=
+ twelve calendar months valued at eighteen million US Dollar (US$18,000.000=
+) in our bank.</div><div><br></div><div>Upon maturity, I sent a routine not=
+ification to his forwarding address but got no reply.</div><div>After a mon=
+th, we sent a reminder and finally we discovered from his contact employers=
+, (National Mining Corporation) that Mr. Charles Donovan died from an autom=
+obile accident. On further investigation, I found out that he did not leave=
+ a WILL and all attempts to trace his Next of Kin were fruitless.</div><div=
+><br></div><div>I therefore made further investigation and discovered that =
+Mr. Charles Donovan did not declare any next of kin in all his official doc=
+uments, including his Bank Deposit paperwork. This sum of US$18,000,000 is =
+still sitting in the Bank and the interest is being rolled over with the pr=
+incipal sum at the end of each year. No one will come forward to claim it.<=
+/div><div><br></div><div>In accordance with the applicable financial Law, a=
+t the expiration of Four (4) years, the money will be diverted to the Treas=
+ury Account of the Government if nobody applies to claim the funds.</div><d=
+iv><br></div><div>Consequently, my proposal is that I want you to stand in =
+as the next of kin to late Mr. Charles Donovan so that the fruits of this m=
+an's labor will not get into the hands of some corrupt government officials=
+.</div><div><br></div><div>Upon your response, I shall then provide you wit=
+h more details that will help you understand.</div><div><br></div><div>Plea=
+se observe utmost confidentiality, and be rest assured that this transactio=
+n would be most profitable for both of us because we shall share the funds =
+as follows; 35% for you and 65% for me.</div><div><br></div><div>Please, do=
+ include your phone numbers in your return email for effective communicatio=
+ns.</div><div>I am waiting your urgent reply.</div><div><br></div><div>Best=
+ regards,</div><div>James Adentwi Bruce</div></div></div></div></body></htm=
+l>
+------=_Part_3466597_182165918.1741950978816--
+

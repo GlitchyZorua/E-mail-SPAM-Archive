@@ -1,0 +1,148 @@
+Delivered-To:
+Received: by 2002:a59:dcc6:0:b0:4bc:e395:821d with SMTP id eh6csp2918860vqb;
+        Mon, 3 Mar 2025 17:37:34 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVDY0W5bggEzUo82WRhHoTtRI/0yPOqX3lSu0UEkppdl3GvR4wi0Hck44ftB++YXLzPUzWBoCrlaOhUKK++4xIUPNcm5w==@gmail.com
+X-Received: by 2002:a5d:5f4f:0:b0:390:f394:6274 with SMTP id ffacd0b85a97d-390f394636fmr11836442f8f.52.1741052254219;
+        Mon, 03 Mar 2025 17:37:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741052254; cv=none;
+        d=google.com; s=arc-20240605;
+        b=iav1kAW/kGOiapEAAilKvNl4BM/cnX8W2cbqU73gQw+h1GUwVwLems8YPl//19TS13
+         b19rONBfPeL7NgOx0XZtMYAm7ECnSJLS03MgHWnShx1fD1P6fEC5dP1Ig+oxJBuCTV6I
+         rXklyqOjBYKbm5puHdGHGayJLbiJRHrsNpufHTUGcpctpe3mH/VPDvsEenvFZ0L5JHrE
+         rISl2e2sEbuwIpUiRYjbAQuFNb9MVp/7B8RZhEiVf2xmnza7BFs7dehZN5wagpT051S0
+         PR2hM9V9DIb/S/2U7hq4LDJqz+g0B+2SyMAcwzsI3T79NgQPygG8kL8pk8rKczdMVVHx
+         zmEg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=m/Tsls+Rcbb1C8LwrT7U2IbjSButoldbyNvJHMDbHwo=;
+        fh=kAHFgUJTYNVgVDHje5cpY7misxHkzlCtEwJjCzHdWOQ=;
+        b=NQOkQzXVV86PtFvDCp2vJJm4nqSj5DMT9ZnIApguvaNyM+w5FBQyNo434vTl/CUvGz
+         Jl6uxCDnSVMQ1RoTf5CvKuvE8lpYR/P2WvUYxa8338HjR5T02PWcCz9GrAqYKEnjANfX
+         DfRszcV1Nyl9TeOsOT4B6Q66WHPXo2Y6lWD7KeZ62hwFga62t90bawmaCwKOHCQ2JYVC
+         yFDFUocjtKOB0cemmI5E3E2FDgreDiGqgIZVfox9zmw9X0rKKoTcIUG+AfnRhi1H0Bwe
+         o9oa5ibTpGwpTKgAJOe1Wsj84PwL2EfQUpXdCMkiXpSZfaRZLOxEGYTQrhCIvcfuSNah
+         cRRg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=NPP2oPCy;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ffacd0b85a97d-390e494bfb7sor3822708f8f.5.2025.03.03.17.37.34
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 03 Mar 2025 17:37:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=NPP2oPCy;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741052254; x=1741657054; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=m/Tsls+Rcbb1C8LwrT7U2IbjSButoldbyNvJHMDbHwo=;
+        b=NPP2oPCyGjmc+AKvtaM0qpSASPDJccjlKSYnN/abd9mbHRJECcGtrulmnXkiosDDUb
+         RNMHuEhLE7ZpvgwTRJMCPAyF7xwx+uQByxaqwXNaOI7Ntji/7i0HV34f3QCz7DjYfb11
+         QogxlsNsjbrSrj5n96DFGeAHT4X3ZwMKX9H4quDH/DVxJ2AkMA1SO6EYjZ1njivEHMZY
+         OxvO9YC89+42ZPcnm6ljokQsyGvFKKjLunKbe1QEwoSwj2Lsy+wTL8bnzb6rxhAfnrGR
+         /cOfyUpQBuOCnlVbBf2obrAhtBS7ZJTaCJgmIw7liI346JP3HmW8thrIwWx76rytV9df
+         NjTg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741052254; x=1741657054;
+        h=to:
+         :from:
+        bh=m/Tsls+Rcbb1C8LwrT7U2IbjSButoldbyNvJHMDbHwo=;
+        b=qyFnvtA1sKH3mUl2uoMwhO6OCuK+niX26VX6JEhvmXflWsBiK6CGxx6dbnYa6GOq/r
+         Mt4WwmewfNJWA2E2xa84f6sI9SbbvAidQzMY3ghV3rl0JRfhVeILfU2a1lZBIbJN1Woh
+         xfOVc3g6WgpsAk3gn4cD0YgiTxebmxmZB8SX2LIK66SXi6tN5CW5m+1Y1BEylRFwgHex
+         9QZG89prYMt+m03BPTuShe3DMuoF6ktPjYskQDtn4gkDU6nNWO+PFKGx9D5Q73ohKstG
+         dsqgHkZ2VkoBRwpj0a88PMEDQrK0vtQLeyuR6av9s6jfgK+Pt5uPcHGg9e9OoJkbmsuw
+         ZLeA==
+X-Forwarded-Encrypted: i=1; AJvYcCXbbtmGunKYA6fk8xWxIGriXg3pdxKfVFOYLY8SSqBRZgQ9gIuVr8HoBJV34PpL5HVbJnAyU0CKeYHuyAKIzHKeOSBSZg==@gmail.com
+X-Gm-Message-State: AOJu0YwhLSDLerOhf+gd7mme1vFrocIPNrfNOt+1DpgbgH82IAxg7u9M
+	vx4AIz/tQ+v2T4jcRWr7j9nIHapLi9hqd2K3bOEXJb/XIoWDCTwVmyDjLuBcgYtLqd7HrA94m1d
+	kZFIcYtCZKO5hOuh9Uf8VIilmTac=
+X-Gm-Gg: ASbGncvUDTcfUgFy2bqXSFMl78fG1ErgUhsLVyNYmAPUUfJvZUZdgvED60QUPgnWzLm
+	MsuZ5unnUIKTfU8aHNVOWZX2MHULqKiXfn8AQDs5yVrZUdIeZzat/XNd5bAtkj+uAsfUUwDOy0K
+	6NGmXrKwzQ4OtMpBLOdTqdIoq965M=
+X-Google-Smtp-Source: AGHT+IFTIcZwLlCOiaL4e02/mCGaB3KfO8mQufrKl8qA3/WFsOb3ygmJsbI74VTPbon/4H+kZBhMFzUxELaueXX32co=
+X-Received: by 2002:a5d:59a7:0:b0:390:f88c:a6a2 with SMTP id
+ ffacd0b85a97d-390f88cacb6mr10803394f8f.39.1741052253471; Mon, 03 Mar 2025
+ 17:37:33 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Mon, 3 Mar 2025 17:37:20 -0800
+X-Gm-Features: AQ5f1Jq46sLLLvNu3mDYf5iffGnlp6-RKoW0U8g5yh23ytNnXhMXpbD9YVSE0CM
+Message-ID: <CAPBu_K7ZLuX8N=[removed]>
+Subject: CANADA MEXICO USA 2026 FIFA WORLD CUP
+To:
+Content-Type: multipart/alternative; boundary="0000000000001a891e062f7a51e0"
+Bcc:
+
+--0000000000001a891e062f7a51e0
+Content-Type: text/plain; charset="UTF-8"
+
+CANADA MEXICO USA 2026 FIFA WORLD CUP
+
+Dear Lucky Winner/Email Owner,
+
+CONGRATULATIONS!!! This is to inform you that your email address emerged as
+a Winner of an amount of US$1,500,000.00 Dollars, (One Million Five Hundred
+Thousand United States Dollars) in the NORTH AMERICAN FIFA WORLD CUP 2026
+GAME PROMOTION Draw held in (MEXICO CITY)For you to receive your
+US$1,500,000.00 Dollars (One Million Five Hundred Thousand United States
+Dollars).This award was sponsored by CANADA , MEXICO & USA Government to
+mark the first time ever the World Soccer event to be hosted by three
+Countries
+You are advised to contact our Canadian FIFA regional Headquarters claim
+agent as stated bel
+
+Canadian FIFA regional Headquarters OTTAWA Canada .
+Address: CANADA SOCCER 237 Metcalfe Street,
+ON K2P 1R2 OTTAWA Canada,
+Claims Agent: Comrade Henry Madison Batistuta
+Email:      [removed]
+Tel: +1 403 770 9253.
+WhatsApp: +1 403 770 9253.
+Forward the following information as stated below to Mr. HM Batistuta.
+1. Full Name:
+2. Address:
+3. Age:
+4. Occupation:
+5. Mobile Number:
+6. REFERENCE NUMBER: WCD19752026
+
+Yours Truthfully,
+Mrs. Felicia Gabjong Moon
+USA WINNING NOTIFICATION OFFICER.
+
+--0000000000001a891e062f7a51e0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">CANADA MEXICO USA 2026 FIFA WORLD CUP<br><br>Dear Lucky Wi=
+nner/Email Owner,<br><br>CONGRATULATIONS!!! This is to inform you that your=
+ email address emerged as a Winner of an amount of US$1,500,000.00 Dollars,=
+ (One Million Five Hundred Thousand United States Dollars) in the NORTH AME=
+RICAN FIFA WORLD CUP 2026 GAME PROMOTION Draw held in (MEXICO CITY)For you =
+to receive your US$1,500,000.00 Dollars (One Million Five Hundred Thousand =
+United States Dollars).This award was sponsored by CANADA , MEXICO &amp; US=
+A Government to mark the first time ever the World Soccer event to be hoste=
+d by three Countries<br>You are advised to contact our Canadian FIFA region=
+al Headquarters claim agent as stated bel<br><br>Canadian FIFA regional Hea=
+dquarters OTTAWA Canada .<br>Address: CANADA SOCCER 237 Metcalfe Street,<br=
+>ON K2P 1R2 OTTAWA Canada,<br>Claims Agent: Comrade Henry Madison Batistuta=
+<br>Email: =C2=A0 =C2=A0 =C2=A0<a href=3D"mailto:
+">[removed]</a> =C2=A0 =C2=A0 =C2=A0 =C2=A0 <br>Tel: +1 40=
+3 770 9253.<br>WhatsApp: +1 403 770 9253.<br>Forward the following informat=
+ion as stated below to Mr. HM Batistuta.<br>1. Full Name:<br>2. Address:<br=
+>3. Age:<br>4. Occupation:<br>5. Mobile Number:<br>6. REFERENCE NUMBER: WCD=
+19752026<br><br>Yours Truthfully,<br>Mrs. Felicia Gabjong Moon<br>USA WINNI=
+NG NOTIFICATION OFFICER.</div>
+
+--0000000000001a891e062f7a51e0--
+

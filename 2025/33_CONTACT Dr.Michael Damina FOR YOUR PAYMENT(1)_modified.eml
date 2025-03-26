@@ -1,0 +1,129 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp761543vqr;
+        Wed, 5 Mar 2025 05:27:24 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUzZq5UPGfadmatCWSsW5gmUgifg5dvHmyUScoQjZurn59PT8OGNxEBPWlPpv1Ubb496+7I9aBcnNiEc3krl9wBM4qKfA==@gmail.com
+X-Received: by 2002:a05:6000:1f8e:b0:38d:e33d:d0eb with SMTP id ffacd0b85a97d-3911f725e9emr2597450f8f.9.1741181243779;
+        Wed, 05 Mar 2025 05:27:23 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741181243; cv=none;
+        d=google.com; s=arc-20240605;
+        b=XjI63mvzsGtCFlbSrA6eaJ8ayfBWDS5RB3vDkh4mmcNtoiO5Au2vfqS7QfHj4M7As1
+         i/Ugzc/rDlVBdcN3YckpAwvEJ8QvKFpJ+j2oKlqK5ptR9kM3okRIbZ5p6VIhFXGAoFxi
+         kRRxgRK5WXNh6qrZ3N3cYD2nOLxLcRjevedDTTH4kUFp6u8JVEzz9Icd+xwPYqf5RSSu
+         bQntbqdaeoJtbEbcgj9/Zikyib5HkGLg2KeQKoYWnyL9vsAe3wk7TNbXi29AkgTAbycY
+         Jsp+4Za16RT8Jow0b578sf+/91Rnpksxwe0CziqilWX00l1rrPJUnamu0NyhlbtzkZvl
+         9CGQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=KG1vOEbZcVDuNtDMws6hgwG1duAYw8JSeIfqo6OtSH4=;
+        fh=C3dPAqOfBDnwQ1FBSf8CpEl/w4wJoswR82+2YBtsYCY=;
+        b=ki96d2luIYqAfq0lWa1l+6oSyqsSYpT9yZZNhK6R2nHe+05lJSnG9fCPnsdNuu5UN0
+         D9DKrsAIePzm7YpB/uuzg0kolSDP9jr5S8sz92ZNBlI/xJ5tZzSR+o0itj6fb9jR1y1V
+         zm00+zgDZK2P/hhbtmAm/cmOZjXS/Zs744qE9vhxD3lLhAPp+KeUkm00veOCCYOisOEs
+         44Oc3BYzYE+03tdja6NgvnmnMeqOY6Ed1oeSz9mN4tRt4665erk90x8flt3geGwNoYRB
+         FTBYswSJjLXs63b6A51jbN3c2cgsua4pVKQbJsRiCGyOIyTX793ub5gzxZkV3V/1+59N
+         WThA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DM1PvqU+;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ffacd0b85a97d-390e487d867sor6823289f8f.9.2025.03.05.05.27.23
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 05 Mar 2025 05:27:23 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=DM1PvqU+;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741181243; x=1741786043; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=KG1vOEbZcVDuNtDMws6hgwG1duAYw8JSeIfqo6OtSH4=;
+        b=DM1PvqU+oUqPBtUPucuGDoJq12A/7MrFnvTXMJwLmRzYzgfT0tHIz53SlEJVFnPp9r
+         kr33u9VCum78XL67HJZHZBadv9Ehm/Rn97y4D4JNO+OnOE0b8+7daK/slsDilYFnNBJW
+         jqGvaPSS0TJLLIk1TcyhUXjj6mQTl84o8sY6swQKyTcbHmhQqos60eGGx+s7QwhAKLGC
+         PSq2CFjMbRhbSZkRCWwwqhTzsahdlj249g8GDyOK7o4JDQIpDlaKWnRef8REbA2wwsb7
+         gIC/MznF7l1MPyddUF7/7E7lUms4VOZpGPckJ6sgR8P1JW7N17ywaYrOlE93j/BMUoF7
+         CFOA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741181243; x=1741786043;
+        h=to:
+         :x-gm-message-state:from:
+        bh=KG1vOEbZcVDuNtDMws6hgwG1duAYw8JSeIfqo6OtSH4=;
+        b=MuGRJL093Hv6JDiR2UptMCh8a90O3RE4PWEdk7ZMzumenwErq8qFN9I2gf+Fu3eSVy
+         d0m7/VIsQUwzDIX9VOYQYnR68UYsvuCwDDMaxmfZur/Qq6T4321VcQdK4gptuQiGoC1D
+         jFw/uJwU4Kht8OTTSCd9diEd7Qu65bbP5QPHcBr+DLhQUAXB/LhWJEQu9fyzoXJO/a3K
+         cVt2Ukw566uTRmBDbEreHlLiwlCyyNOXt8wsjWfhvzyLyc6B7RV1XAd12rCtHUD8Ig4Y
+         OQuLzJZ6g9852p2cKHLJvkmSEJnsgB4E0F4kf1dZklCzrJAg3uqebknXmbDuYcAZxSge
+         BVQQ==
+X-Forwarded-Encrypted: i=1; AJvYcCUf8apI3LANyjAJBPDiHGPQneE8gEy54ZaKUWuQtpMTHmQLQDAmlLOkX5gWfYWOZn2k3iH0WMzCJHtITuXU83/hp8QYsA==@gmail.com
+X-Gm-Message-State: AOJu0YwFFER/DbOoS5oCgBfPPeyHDAr8TrXbKR60tXuyjd21YzfojjYy
+	9OJduFbQgZKKsDg7tv4Ap6GgNrzcXrRcxgZ2rvVNav5/4C0LxUBSn/AQPhEq1bzPMTD8HLU8e2y
+	DrVGcRVytfLAZ4dha37y7K/yzAAY=
+X-Gm-Gg: ASbGncu1QZaGuJGIF55qFUANktwrdZhGyl8aTYQ4wOdkmNWORFM13pOHsTX/5q3Rydy
+	a8oULEb3nUueL5R+OzQqbqPJjOZYhnUm7lUNBx9zdPgCvENSyK1JS6z0ZJIQcjB6d5cbwM6ebx/
+	HzhqPZ6/dg+XigNZnK1+qRTiYoaF0=
+X-Google-Smtp-Source: AGHT+IEEzK4m86MkOJofLMovEF/lESzXFT8BGgrvA0v4bjgbxxiIxBBV6qEu4IfHY0h5A+BJu7aFFBLrpnX63RDndSs=
+X-Received: by 2002:a05:6000:1f82:b0:390:f75e:f815 with SMTP id
+ ffacd0b85a97d-3911f7543a6mr3068527f8f.23.1741181243068; Wed, 05 Mar 2025
+ 05:27:23 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Wed, 5 Mar 2025 05:26:38 -0800
+X-Gm-Features: AQ5f1JqiBIEVnQtwANb0raTr0Za87hCB3jN0NPnnBeASlHbe274K7Po_lJpx1Jc
+Message-ID: <[removed]>
+Subject: CONTACT Dr.Michael Damina FOR YOUR PAYMENT
+To:
+Content-Type: multipart/alternative; boundary="0000000000007b9a0d062f9859bc"
+Bcc:
+
+--0000000000007b9a0d062f9859bc
+Content-Type: text/plain; charset="UTF-8"
+
+Attention My Dear,
+
+Your first payment of 5000 Is about to be sent today through money Gram
+transfer You are advised to Contact Dr.Michael Damina with your full
+information.
+
+such as
+
+Your name..............
+Your country...........
+Your phone number............
+Your adders............
+
+To enable him to send your First Payment of 5000 today.For more information
+contact Dr.Michael Damina, Telephone number: +22968930642. Email (
+[removed]) he will keep sending you payment until your total fund
+is Completed 2.7 Usd.
+
+Best Regards
+
+
+Mr Simoua Aban
+
+--0000000000007b9a0d062f9859bc
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Attention My Dear,<br><br>Your first payment of 5000 Is ab=
+out to be sent today through money Gram transfer You are advised to Contact=
+ Dr.Michael Damina with your full information.<br><br>such as<br><br>Your n=
+ame..............<br>Your country...........<br>Your phone number..........=
+..<br>Your adders............<br><br>To enable him to send your First Payme=
+nt of 5000 today.For more information contact Dr.Michael Damina, Telephone =
+number: +22968930642. Email (<a href=3D"mailto:
+[removed]</a>) he will keep sending you payment until your total fund is=
+ Completed 2.7 Usd.<br><br>Best Regards<br><br><br>Mr Simoua Aban<br></div>
+
+--0000000000007b9a0d062f9859bc--
+

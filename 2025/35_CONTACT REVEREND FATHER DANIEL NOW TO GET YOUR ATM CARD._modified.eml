@@ -1,0 +1,174 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp3338419vqb;
+        Wed, 26 Mar 2025 07:08:25 -0700 (PDT)
+X-Received: by 2002:a05:600c:1ca0:b0:43c:fd72:f039 with SMTP id 5b1f17b1804b1-43d58c9a7b1mr185442565e9.11.1742998105351;
+        Wed, 26 Mar 2025 07:08:25 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742998105; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ZOQ6bwZFpJjhE72WyI0KZ3dch9+5kT1UB1kXC3I6HYnOVudoJCBTcxMmfcDosQF8wx
+         WxAIY4ON7D97I+4R6XmSfKspF8QrfnsLrCppBhS1HBCb+fMbfR3Klq2bwrS7C0E/NZOC
+         8N+dGLBMlBXgxnFDQKnLBJrA4sVrk4AuZ2B7Qk2xl9m+YkaN4/rq1iU0bCOF+cMF2mgH
+         xGI/IzAwiP98/Ngi1K4QXNCBJAK6sslKzJ+25G6kLz4CTgODwizJCZeTvZ2VhKD/GVfT
+         KfE4PBGt/0Fn/T+dqiraYEDzZmtyY8DpleLhN7I6Dt5HTqvfIQxfKp6/XYkZnVBnw5Ie
+         uPag==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=XMZU8SPMBfpL0a4B7dFEN47oNhV5vRzfi3T9ULmGkic=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=RVAQeG5xgVxmRCCMtOrcuRiyA9sWFZRnzeDl59eJnGPOpDHLQ3SdrRuMT2UPkN5MyO
+         dxtckLDauo0xSpohc12DqfDiUdplO0ZCJv2Xb6cX6HgFHGenPEIDvWdjcqkLrmXFC9eT
+         8fEIpoHBdt+QxqE/ps9ilYG0/PC9envetvoyBGORHK4ZuYtFut/n5k7A+fKUFNyfJNgQ
+         IzVp6KYwRI/lsO8Mj40/qePY5oKaGtwRrxHZ2gnTbDO9He9NGxc3QI00zw5ooD1FxJZ2
+         K1zS6lV+RuNVDH9KquBIIX2V/wAOLM31VKuz1YOkrATe8Hf0bZ0hPu0q1riLYu89LSuu
+         limQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MUNZEyR6;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-43d4fd78915sor47057385e9.11.2025.03.26.07.08.25
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 26 Mar 2025 07:08:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MUNZEyR6;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742998104; x=1743602904; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=XMZU8SPMBfpL0a4B7dFEN47oNhV5vRzfi3T9ULmGkic=;
+        b=MUNZEyR6ljElioW7638D8v1XbIFxxRNgh99s5nc1tx3aJROQx0kBMthrIEcVpvxTiw
+         SJFe0AmNCqFCafXsiP5msy+0K1AGayrpCGdC1Ac1J+RjKRiy4QVNnZ3q+jKudhGnGK60
+         LL608RcVo6BvzFEfP9lfJ3dtevyQ4ITpDaX0PeOLUqTzMOtBzZR0c4GyZXw63gbDsA+A
+         hl+6rUscwNgWeg/4g6ZPHkwO1JKNN7IzQ5VeqD6wvdiLFNjj6LP8C3fcksOC29vv8J5H
+         vX+C2u55d5Pmscx3i5/gitORD1ZFjBEWjA4F4CKrc2wlVFw1e/X3zFhQnT0eJBrZZBro
+         Nrjw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742998104; x=1743602904;
+        h=to:
+         :x-gm-message-state:from:
+        bh=XMZU8SPMBfpL0a4B7dFEN47oNhV5vRzfi3T9ULmGkic=;
+        b=A+AepgWWRigfJLFlPqALRCgvfq2a72uMqAx/S/g15e+v0OLF720kSDtRdZoShBMVMy
+         ZT2HaMw/bbInJSvZ6KU4/ONPJfhpnu9iEp+Pzu0a8uhuilwAcuXzu++TlU+hsy7/GzwF
+         DZVKQLgpXx4eQoyeTL7zXnsVDPqygaxk2fdCwPoY55wKNham8gNDiUhYQEBQfyRbHi71
+         byQcrjNbcIqolNCHuK7he1rET5fooyE9PPXIZudG+pYiaNg25aoY9DD3M6RKaWZNx+NX
+         V9UHg2al250F9Kp4F7I6hlR7heBG5wt7lvmEVmn+nni6CeS9k23AjhsEuAtV6NU1ptd2
+         +F4g==
+X-Gm-Message-State: AOJu0Yy4IvOCDl9IWATjZ6LfTVE9CMbmyRjHW+JTkpxj1d0Gzdtico7m
+	ElBblg8nqEa5GmTTJetDHZxjjQtAL4xOEB0r7WyjL1TXq7fLfRSg6UvTDxeOoOOAHrZp1xJb6/D
+	WDTBEjP6vH6q/pR7/c4elHzjObPSLOC97
+X-Gm-Gg: ASbGnctYO47YebfpUtnaOsIqTmjIy2QtNU3L/KgtKvl608A+mqR8S/EcAZp50TwKXl/
+	XEbUjk01tAjP1My5dGXkvm/NwxrsGaFPkmaamymLhoOMLl658rGlOoMoGtYL/XpvDFKYywLfRNN
+	ShNw36/AEp0NY467M5LJsNaUJM7nF0U4uzQROK++UW6KFtEihktTgMFHt10t8=
+X-Google-Smtp-Source: AGHT+IEzi36QJ30ZR4nS+j25o9i4HHDV74Ye4tbOSnt2J5MMlxKOCxhDeY0XVZMWhnbnDqKao/zge1jnHWZlvQqd+04=
+X-Received: by 2002:a05:600c:154a:b0:43c:fa52:7d2d with SMTP id
+ 5b1f17b1804b1-43d50a37825mr199609765e9.20.1742998104116; Wed, 26 Mar 2025
+ 07:08:24 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Wed, 26 Mar 2025 14:08:11 +0000
+X-Gm-Features: AQ5f1JrujZmgaNJRXao0Ayg7HoZ7ntZbpisRDCTKUvlv7as8ExE6YepkHBVXl84
+Message-ID: <CAF+Dp_LQpP0=62VcH2xxje8QqSyZX+A7=[removed]>
+Subject: CONTACT REVEREND FATHER DANIEL NOW TO GET YOUR ATM CARD.
+To:
+Content-Type: multipart/alternative; boundary="000000000000d7146206313f5e4d"
+
+--000000000000d7146206313f5e4d
+Content-Type: text/plain; charset="UTF-8"
+
+*Attention Carrie,Sequel to non reply of our last two letters to you, am
+re-sending the message once again with hope that you will respond
+accordingly.The British High Commission in the Republic of Benin, Ghana,
+Burkina Faso, Cote d'Ivoire, Great Britain and Nigeria has received a fraud
+report against you and other British, American, European, Malaysian and
+Japanese nationals. The government of these five West African countries
+whose citizens were involved in these fraudulent activities have
+established a committee to compensate all victims of the fraud due to
+pressure from the UN and the international community. This compensation is
+in categories below:Category A: $3.8M (Three Million Eight Hundred Thousand
+United States Dollars).Category B: $2.6M (TWO Million Six Hundreds Thousand
+United States Dollars).Category C: $1.6M (One Million Six Hundred Thousand
+United States Dollars).Category D: $500,000.00 (Five Hundred Thousand
+United States Dollars).Category E: 120,000.00 (One Hundred and Twenty
+Thousand United States Dollars).Meanwhile, your name and the names of other
+fraud victims have been sent to this committee for compensation. All
+affected victims received their compensation via ATM CARD.However, your ATM
+CARD was among those reported as unclaimed under category (D) and we would
+like to advise you to follow the instructions of the committee below to
+ensure that you get your ATM CARD for immediate use.The ATM Card has been
+issued on the basis of the email address/name which is alleged to have been
+defrauded/cheated in the past and has been confirmed by the
+government/committee through Western Union Money Transfer and MoneyGram
+assistant. Any victim who did not confirm their own ATM CARD is presumed
+dead and their next of kin do not have access to their information, so they
+were unaware of the ongoing compensation funds. The total amount credited
+to your ATM CARD is only $500,000.00 (Five Hundred Thousand US Dollars).We
+recommend that you do everything necessary to ensure that you receive your
+ATM CARD without further delay. You are assured of the safety and
+availability of the ATM CARD. Please note that you should further cease
+contact/communication with all bogus lawyers and security companies that
+have defrauded you in the past.Contact Reverend Father Daniel Komi with the
+information below,NAME: REVEREND FATHER DANIEL KOMI.EMAIL ADDRESS:
+([removed] <[removed]>)Call him now, he will hand
+you the sealed ATM CARD. Please include your information as stated below to
+allow them to reconcile the file.1) Your full name..........2) Country
+..........3) Home/office address:...4) Profession ..............5) Age:
+......6) sex...7) Direct cell phone / whatsapp number....SincerelyRobert
+DewarChairman of the Committee.*
+
+--000000000000d7146206313f5e4d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><b>Attention Carrie,<br><br>Sequel to non reply of our las=
+t two letters to you, am re-sending the message once again with hope that y=
+ou will respond accordingly.<br><br>The British High Commission in the Repu=
+blic of Benin, Ghana, Burkina Faso, Cote d&#39;Ivoire, Great Britain and Ni=
+geria has received a fraud report against you and other British, American, =
+European, Malaysian and Japanese nationals. The government of these five We=
+st African countries whose citizens were involved in these fraudulent activ=
+ities have established a committee to compensate all victims of the fraud d=
+ue to pressure from the UN and the international community. This compensati=
+on is in categories below:<br><br>Category A: $3.8M (Three Million Eight Hu=
+ndred Thousand United States Dollars).<br>Category B: $2.6M (TWO Million Si=
+x Hundreds Thousand United States Dollars).<br>Category C: $1.6M (One Milli=
+on Six Hundred Thousand United States Dollars).<br>Category D: $500,000.00 =
+(Five Hundred Thousand United States Dollars).<br>Category E: 120,000.00 (O=
+ne Hundred and Twenty Thousand United States Dollars).<br><br>Meanwhile, yo=
+ur name and the names of other fraud victims have been sent to this committ=
+ee for compensation. All affected victims received their compensation via A=
+TM CARD.<br><br>However, your ATM CARD was among those reported as unclaime=
+d under category (D) and we would like to advise you to follow the instruct=
+ions of the committee below to ensure that you get your ATM CARD for immedi=
+ate use.<br><br>The ATM Card has been issued on the basis of the email addr=
+ess/name which is alleged to have been defrauded/cheated in the past and ha=
+s been confirmed by the government/committee through Western Union Money Tr=
+ansfer and MoneyGram assistant. Any victim who did not confirm their own AT=
+M CARD is presumed dead and their next of kin do not have access to their i=
+nformation, so they were unaware of the ongoing compensation funds. The tot=
+al amount credited to your ATM CARD is only $500,000.00 (Five Hundred Thous=
+and US Dollars).<br><br>We recommend that you do everything necessary to en=
+sure that you receive your ATM CARD without further delay. You are assured =
+of the safety and availability of the ATM CARD. Please note that you should=
+ further cease contact/communication with all bogus lawyers and security co=
+mpanies that have defrauded you in the past.<br><br>Contact Reverend Father=
+ Daniel Komi with the information below,<br><br>NAME: REVEREND FATHER DANIE=
+L KOMI.<br>EMAIL ADDRESS: (<a href=3D"mailto:
+[removed]</a>)<br><br>Call him now, he will hand you the sealed ATM =
+CARD. Please include your information as stated below to allow them to reco=
+ncile the file.<br><br>1) Your full name..........<br>2) Country ..........=
+<br>3) Home/office address:...<br>4) Profession ..............<br>5) Age: .=
+.....<br>6) sex...<br>7) Direct cell phone / whatsapp number....<br><br>Sin=
+cerely<br><br>Robert Dewar<br>Chairman of the Committee.</b><br></div>
+
+--000000000000d7146206313f5e4d--
+

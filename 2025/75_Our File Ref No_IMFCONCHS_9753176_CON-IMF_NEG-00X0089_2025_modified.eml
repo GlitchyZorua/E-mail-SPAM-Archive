@@ -1,0 +1,240 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp1874770vqb;
+        Mon, 24 Mar 2025 03:46:41 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXv1lg8AspNZMKCXcRYwBRJbny2/0b18IMN8yOnpJrdUAH5yl0KetrmS5FexAbcK1W2BHidrcEohEts046Bwcd6cfY1sg==@gmail.com
+X-Received: by 2002:a05:6602:4013:b0:85b:3827:ed06 with SMTP id ca18e2360f4ac-85e2ca33995mr1280237539f.4.1742813200839;
+        Mon, 24 Mar 2025 03:46:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742813200; cv=none;
+        d=google.com; s=arc-20240605;
+        b=jIL6Xn1yzMtgcbHg7cKE/CqbNZGHCpByPmTuZsgSicVQ2WMlTFHLBgMPA2mQEeC300
+         gaNg+TDZp2PGxiOdC3staJ6Oc4nAS1YpdIRDqZuaZ0FUy1IJQoMVBKQWgOv2CH9/nOwm
+         JW9FU/G6ld39fPvbGiRej9pXngVGHDwEyW0GrnuOcRG8a5OEJxIuak1NQO5l+m2wnI/C
+         p5oLP3+bydNEVJS5xnhOb4fj0lit7UtTQAzqttAiGVqL0rH2GckZZOqNAWfyO+afe+Zw
+         yJGhEhSTIQgPp1M3sklJDNAydCc/nXTvsU5oSbTglWByvRDco/GCidnRv+WVNRx1SHQJ
+         2ozg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=4wVY222cCj3GocV5J22rz8SJyIV31q9xnifT9kHDMDY=;
+        fh=dhZe43GwDwLnetlbFBwaljGERtFxrgcgVEv8PnJA9u0=;
+        b=AK9lNJRyzI2AtI29ruvKtCCBqKt535/MaLjpHIFz1/JgNxSrZLuKPy/uRxdrq75812
+         0uodLgBc7bsDg4x9ZrXJlZM7CrgcL2JLxClRpSr+B/jng7mk/KVuI3SU1lLM2jCPX/PK
+         TW7WtuGKhhr5n5y/R/J+YEvOYRuuNxeFa7rBP8njWuXVQYC6FxIq6NyfeA0UUrtIPtAh
+         vZ1fiRLJO1/RTCct0n/1JusRKr7NmWSnxyP82qaDIFXeYKsxNhWZmut8eg740me5RlwC
+         nhuyWZtYU7bumQ8fzf+PncBNEbV5j04VroHm4Wz809RUQJ8RkBhlUSHBKO3dLsn4/iYh
+         Q0MA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Bb6rnqdE;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 8926c6da1cb9f-4f2cbebe7a8sor2603866173.10.2025.03.24.03.46.40
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 24 Mar 2025 03:46:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Bb6rnqdE;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742813200; x=1743418000; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=4wVY222cCj3GocV5J22rz8SJyIV31q9xnifT9kHDMDY=;
+        b=Bb6rnqdE1sQ5kFlOgWlqgVrK/bLOEgmzHK7Q2KEZDjpSfGGq2pYXYNtOJA3mMNG7Ef
+         VlYa+30kRabEOdaTuXhycl6mkpljVlP/RzUHfN/+fO5IOg5aJgXO5/mMSaJATMIbgsYK
+         J5cHHNwSCr2PaCzldnZbpHFpFZsDj+aT6uyCantmJldmNzMLXO3cbW8HLJB4u7Kc7OjU
+         0M1nqft6njFITV6jbwnivo6ntGGpaYw8Y/BNbL9bV5LeVCPSNXcmFoZbkc1ZDcbP9cYI
+         n2ntEI53WAtQTm+zaKsLrYNQRhksx1p7ebVoH9zFebcboetMstQgaqhr5hOOXvGUZITe
+         VKBQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742813200; x=1743418000;
+        h=to:
+         :x-gm-message-state:from:
+        bh=4wVY222cCj3GocV5J22rz8SJyIV31q9xnifT9kHDMDY=;
+        b=WvpSYRlC5PfR+bVVqRf41NUYPG9LB7qzp0NAFuSheUN/I6h5ekebHYZ+a9fX7xCEWr
+         FqKlFXzAv0q81UhwpARWbdGBC+DoZ9O4ZqLLnx+mpRI5rwlLZnZmKLmUz6v2YKtHxYqG
+         NA+5pWpkwV55/Qd+fFgAKDl8x6/WAOB/pm7CN2mkbxS6N2NJSjpx+acN5xSxeCu2VwaE
+         qjsMyhfk5KQ4UIugnpCkipb8vM83e5XC+4u1KqF3/GK6OluDGwaTNskjn3nsLNXX3ynK
+         bvbCWoxd5sU5/gpcDQ4vCOppIP3zasF6PvmSZfhsD8yvB2aMQaJ1X6qS+peSueYVIMvW
+         jovA==
+X-Forwarded-Encrypted: i=1; AJvYcCUOPQYHRdrBnPpQYkppkp4Ha8EVpSbeAlPTBu+rb8PA4Ml2mE6sOs455258JvFGx1xUXF6n3LtRxEIcDhbmHrBht8EkBg==@gmail.com
+X-Gm-Message-State: AOJu0YyegYhHJZtqmOt8WUs+5JKS/0iS5BgtlKrKrgMaGwkZdlDf6lxV
+	bQ+1HizBv4zCharNTMfdJe+/jQu4H1Q9JmPeXoEQoxmIhrb/EvxdGvp8JCAmA4eYblOCwBy5Xhd
+	JzN2PWZCXnDJUH2GLmGvtMIAX4ok=
+X-Gm-Gg: ASbGncuYqHi1H/DYdA7YvIcxHCOI5GoN9h/m2rVZkrkuKEIzji3lUP0YE7gYWqSjJmm
+	szPMM8XKttaW+XpxS4pHJihZXeb9ccBEce+Efmbix6xPqbAXUy0ALdv4m5no965N23mbKQV206q
+	cMvuFG7GS+zWqbtuiQxDpPo+cW0ZY=
+X-Google-Smtp-Source: AGHT+IE4P7yd2+eVyTK/F8VFbUAzyNSVAHTp3e03oakKSd//kkFkH9buxjlpt12sc5bb6fBrhXoroJcfEQMK3ekQDrQ=
+X-Received: by 2002:a92:c264:0:b0:3d4:6ff4:261e with SMTP id
+ e9e14a558f8ab-3d59603c620mr103160405ab.0.1742813199946; Mon, 24 Mar 2025
+ 03:46:39 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 24 Mar 2025 03:46:29 -0700
+X-Gm-Features: AQ5f1JphMBLbb5HyEI6_Ls2Mwgi0oJDhw8y5KZgSB4_bH4zt6eB1AzoBdvvunUk
+Message-ID: <[removed]>
+Subject: Our File Ref No:IMFCONCHS/9753176/CON-IMF/NEG-00X0089/2025
+To:
+Content-Type: multipart/alternative; boundary="000000000000b15dd606311451e3"
+Bcc:
+
+--000000000000b15dd606311451e3
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Our File Ref No:IMFCONCHS/9753176/CON-IMF/NEG-00X0089/2025
+
+Attn.
+
+We are very sorry as we are not supposed to get to you via Email,but
+due to the urgent need,we have to.
+
+In recent research we found out that you have an unclaimed overdue
+inheritance funds from United Nations entitlements
+grant payment that has been due for payment for a long time,we were told
+that you have made several attempts to claim this fund but all to no
+avail.
+
+We want to officially notify you that your funds valued at
+(US$10,500,000.00) being payment for your overdue inheritance grants
+from United Nations entitlements has been programmed to be transferred
+to a Bank Account in the USA, following a series of documents tendered
+by your Representative Hon. Daniel Asinya, and your Attorney
+Barrister John Swatz, of J. Swatz & Associates as FedEx could not
+deliver to you the draft issued initially on your behalf due to wrong
+information on your address.
+
+They have presented a \"Power of Attorney\" duly signed by you in
+which it was clearly stated that due to some inevitable circumstances
+beyond your control (ILL HEALTH) that you will not be able to finalize
+this payment yourself, thus appointing Mr. D.L. Nielsen to act on your
+behalf. All transfer documents have been forwarded to the office of
+the Minister for Finance for final endorsement and are mandated to be
+concluded in a few days from now.
+
+As a matter of urgency, we need a re-confirmation from you if the said
+Man and Attorney are your True Representatives before we proceed to
+issue the final payment release order.
+
+Find below the account information they have presented for the transfer
+below.
+
+A/C Name: Daniel Asinya
+Bank: JP Morgan Chase Bank,
+1 Chase Manhattan Plaza,
+New York , NY.10081
+Bank Routing #:021000021
+A/C #:227863934766.
+
+You are advised to contact UTB Bank,Lome Togo immediately you receive
+this Email and reconfirm to them your personal information as required
+below to enable them update your payment file before bank to bank wire
+transfer of the fund to your bank account.
+
+1:Your Full Names:
+2:Your Residential and Office Address:
+3:Mobile/Fax Numbers:
+4:Current Working Status:
+
+Below is the contact of the Bank.
+Name of the Bank: UTB Bank Togo,Lome.
+Adresse : Bd du 13 janvier, Ny=C3=A9konakpo=C3=A8
+BP 359 Lom=C3=A9
+T=C3=A9lex : 5215 et 5270 UT BANK LOME
+www.utb.tg
+
+Contact Person:
+Foreign Remittance Unit,(UTB)
+Rita Lookman
+Email:  [removed]
+CC:
+
+Respectfully Yours
+
+Kristalina Georgieva
+Director, IMF.
+J. Edgar Hoover Building
+601,4th Street,
+935 Pennsylvania Avenue,
+NW Washington, D.C.
+20535-0001, USA.
+
+--000000000000b15dd606311451e3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div id=3D"gmail-:nc" class=3D"gmail-Am gmail-aiL gmail-Al=
+ editable gmail-LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body"=
+ role=3D"textbox" aria-multiline=3D"true" tabindex=3D"1" style=3D"direction=
+:ltr;min-height:234px" aria-controls=3D":1va" aria-expanded=3D"false"><div =
+id=3D"gmail-:mq" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-LW-avf=
+ gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"textbox" aria=
+-multiline=3D"true" tabindex=3D"1" style=3D"direction:ltr;min-height:234px"=
+ aria-controls=3D":1lz" aria-expanded=3D"false"><div id=3D"gmail-:nd" class=
+=3D"gmail-Am gmail-aiL gmail-Al editable gmail-LW-avf gmail-tS-tW gmail-tS-=
+tY" aria-label=3D"Message Body" role=3D"textbox" aria-multiline=3D"true" ta=
+bindex=3D"1" style=3D"direction:ltr;min-height:234px" aria-controls=3D":1co=
+" aria-expanded=3D"false"><div id=3D"gmail-:mp" class=3D"gmail-Am gmail-aiL=
+ gmail-Al editable gmail-LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Mess=
+age Body" role=3D"textbox" aria-multiline=3D"true" tabindex=3D"1" style=3D"=
+direction:ltr;min-height:234px" aria-controls=3D":13d" aria-expanded=3D"fal=
+se"><div id=3D"gmail-:m5" class=3D"gmail-Am gmail-aiL gmail-Al editable gma=
+il-LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"text=
+box" aria-multiline=3D"true" tabindex=3D"1" style=3D"direction:ltr;min-heig=
+ht:234px" aria-controls=3D":u2" aria-expanded=3D"false"><div id=3D"gmail-:m=
+d" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-LW-avf gmail-tS-tW g=
+mail-tS-tY" aria-label=3D"Message Body" role=3D"textbox" aria-multiline=3D"=
+true" tabindex=3D"1" style=3D"direction:ltr;min-height:234px" aria-controls=
+=3D":oq" aria-expanded=3D"false"><font face=3D"georgia, serif">Our File Ref=
+ No:IMFCONCHS/9753176/CON-IMF/NEG-00X0089/2025<br><br>Attn.<br><br>We are v=
+ery sorry as we are not supposed to get to you via Email,but<br>due to the =
+urgent need,we have to.<br><br>In recent research we found out that you hav=
+e an unclaimed overdue<br>inheritance funds from United Nations entitlement=
+s<br>grant payment that has been due for payment for a long time,we were to=
+ld<br>that you have made several attempts to claim this fund but all to no<=
+br>avail.<br><br>We want to officially notify you that your funds valued at=
+<br>(US$10,500,000.00) being payment for your overdue inheritance grants<br=
+>from United Nations entitlements has been programmed to be transferred<br>=
+to a Bank Account in the USA, following a series of documents tendered<br>b=
+y your Representative Hon. Daniel Asinya, and your Attorney<br>Barrister Jo=
+hn Swatz, of J. Swatz &amp; Associates as FedEx could not<br>deliver to you=
+ the draft issued initially on your behalf due to wrong<br>information on y=
+our address.<br><br>They have presented a \&quot;Power of Attorney\&quot; d=
+uly signed by you in<br>which it was clearly stated that due to some inevit=
+able circumstances<br>beyond your control (ILL HEALTH) that you will not be=
+ able to finalize<br>this payment yourself, thus appointing Mr. D.L. Nielse=
+n to act on your<br>behalf. All transfer documents have been forwarded to t=
+he office of<br>the Minister for Finance for final endorsement and are mand=
+ated to be<br>concluded in a few days from now.<br><br>As a matter of urgen=
+cy, we need a re-confirmation from you if the said<br>Man and Attorney are =
+your True Representatives before we proceed to<br>issue the final payment r=
+elease order.<br><br>Find below the account information they have presented=
+ for the transfer below.<br><br>A/C Name: Daniel Asinya<br>Bank: JP Morgan =
+Chase Bank,<br>1 Chase Manhattan Plaza,<br>New York , NY.10081<br>Bank Rout=
+ing #:021000021<br>A/C #:227863934766.<br><br>You are advised to contact UT=
+B Bank,Lome Togo immediately you receive<br>this Email and reconfirm to the=
+m your personal information as required<br>below to enable them update your=
+ payment file before bank to bank wire<br>transfer of the fund to your bank=
+ account.<br><br>1:Your Full Names:<br>2:Your Residential and Office Addres=
+s:<br>3:Mobile/Fax Numbers:<br>4:Current Working Status:<br><br>Below is th=
+e contact of the Bank.<br>Name of the Bank: UTB Bank Togo,Lome.<br>Adresse =
+: Bd du 13 janvier, Ny=C3=A9konakpo=C3=A8<br>BP 359 Lom=C3=A9<br>T=C3=A9lex=
+ : 5215 et 5270 UT BANK LOME<br><a href=3D"http://www.utb.tg">www.utb.tg</a=
+><br><br>Contact Person:<br>Foreign Remittance Unit,(UTB)<br>Rita Lookman<b=
+r>Email: =C2=A0<a href=3D"mailto:
+[removed]</a><br>CC:
+[removed]">[removed]</a><br><b=
+r>Respectfully Yours<br><br>Kristalina Georgieva<br>Director, IMF.<br>J. Ed=
+gar Hoover Building<br>601,4th Street,<br>935 Pennsylvania Avenue,<br>NW Wa=
+shington, D.C.<br>20535-0001, USA.</font></div></div></div></div></div></di=
+v></div>
+
+--000000000000b15dd606311451e3--
+

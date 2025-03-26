@@ -1,0 +1,108 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp1496139vqr;
+        Thu, 6 Mar 2025 07:28:01 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCX5t9S4Ub0C5qIdvo+vqM1jcpO53PGB11lmO2oCxqDYqjvtlwZuzNNs0AlAbey19gMWWm+8SNArovF4Zvf97DObMvClLA==@gmail.com
+X-Received: by 2002:a05:6000:1acc:
+        Thu, 06 Mar 2025 07:28:01 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741274881; cv=none;
+        d=google.com; s=arc-20240605;
+        b=JhiTO0accaGGp98gy/GcrH68V6ZNpnnV9ZBwuIZTTMF73x1DvrSO2zm4akGNGBxZst
+         nbYkNLCFHr3MdIdWoTVxjynU2zk/DT7SmfsiK7RKxrCtsUKnW296andlvIAcaFkO54oL
+         QamMWg/moLFoZMvmUJtqjEWqwr9eyZ20Pynvx57o/alM1FKlHaI7AW5gIWg1BaYRBes9
+         fjWkYri5HJTqFnIC9J/3JzkkKV7sYS1f6ZpwNaG2LxNpDK54EaxNn8xyHzn4T+Zlwy29
+         v+yv3/i920c+nW8DM6kAkuzerfF87QoHP9KUY0KMxqSD+Bbnn32Pq7bqM6RudJxtF9ij
+         ECJA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=44zV5YCKfOOZuUUrH2pISYLjhGOFr9VZqvArKQPAWxw=;
+        fh=6vVoD6VK+tqmeY1p1hTwqSi1CMHzq31VOGAPCapeyyc=;
+        b=SOVeRFc/XOqAM7Cfa8kq3O5POPqvX1wUlazZILdAK7yVSWCsH07HqTjmu5DHrhue7f
+         dwe+cU3tQnj8c3zopCXXqaHTv6Is8MeBT+Adm07alTsd3LDqUIQG5ARmxqz0vDiN4Rme
+         98a9LxgtbUasQzQdTYsd9E2I1rHCfQfsnDVbhv+ZKMuA4zXBH2OsYaUa6BJEr05RohFK
+         4qccNn6YXDGotr9Vzqcqbc4fps/cePKa7VwXjSLxEWvYSgDuRP/Yrz0VAA+qatdI4sUW
+         6wOWHCv3sdzrTmalGy+8gvY9o6vkTRBvFmyNQFITpPte+Q4bYNlwxTc4RaqS0NPA2JDE
+         g0ZA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=jg4fnbLv;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-43bdd955cb2sor6017565e9.9.2025.03.06.07.28.00
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 06 Mar 2025 07:28:01 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=jg4fnbLv;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741274880; x=1741879680; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=44zV5YCKfOOZuUUrH2pISYLjhGOFr9VZqvArKQPAWxw=;
+        b=jg4fnbLvBCnueJFoC+9wrW74oGCd53roeTXyhZH2K5fATWXrh9GYMLfciv4DaX3Jz9
+         JpQgFREZhtEY32bc05cS3uig2bCGe8w1/KkJtC47ksTHj2jToHGug6S1SH/jsvQ60KEX
+         nmseX3W4JKlAlI0r2T1xpAwJx3xvoIyQMcIi7hvH8THxuxyrhLZoawtiZn3dSdxrtM5l
+         h3h2f7D/k+deBAuM+5n0hJJd58AbsBsKfdeWQcN73kohwKDh7wYrWhPZDzLXu7yErLeH
+         BtwfBbUytvNAhKIYCSKbdfMpiGyjJ+MVZEhnrNyUj3pf7I1mgi42DJjtDA6ioV8UgSzt
+         Drtg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741274880; x=1741879680;
+        h=to:
+         :x-gm-message-state:from:
+        bh=44zV5YCKfOOZuUUrH2pISYLjhGOFr9VZqvArKQPAWxw=;
+        b=RP2wUOtvAxtpvwpNggXY595vYjPV9vS9WSdMPY/B5BRvrcHOmbTATKl6LDT90A24TR
+         TFgvYIeW36TPo/5JHF5Hptl23+XcPi3bmHfI7TWyQ8E66mu8PqKSEDSfb4Q3FJS5uB2g
+         JLrXIXJ/R+NpCi9HF05bW4Xi7ofuR6xwcLmw85htNTEFDEocqcX9xvy7hVxiSfG8Bxiq
+         bi3dpLmXlors9HpoYwj09RUxx9iqL/HbFi8fFNLKcxRzuhaasQnH0so+qsNMC5fFeWVz
+         PhUzMCYKXM1H9M8JuOYrgfBrANljnxvl9ANdxuHmzlMjasBQeRS34wpmCKWuPiuHUUfd
+         Xgyw==
+X-Forwarded-Encrypted: i=1; AJvYcCVDrkg5iXeDoA8FWy6dcregB+RlN2HXB/loIHvruMZXiELnyIIOCyT1YfZrQfayxIvbyoBnTLrq/mvzwBZrvKnCqYSzfA==@gmail.com
+X-Gm-Message-State: AOJu0YzQGG/SJeBKbswryjQ7qXEs+sDKpTruGQGR52lJW7X7nKgpQ1xj
+	SKZXtgPI46rLtYSiSnqKzLYbByzH3sf+Sv1l6bV27gElsx2A21k82q34s+BItgnM07C7mSx3elG
+	ki53W9po/ISLDyXcctEtyL9UOazI=
+X-Gm-Gg: ASbGncuZBI2hI4GYNgHnkuhtpyjk6iKaETaqBer6KpelkJA3cxbCaEaN1JuALUaeLkE
+	9R7q51ML1ZEovEorGvR89xadurKkVwViQlk9KRkqoiHOpGQkRVeWQsEgQUeBiNCWUzlbZyt/gv3
+	LBzgTRbW0lCte1lrpoFFCnLOUoDQ==
+X-Google-Smtp-Source: AGHT+IE/2HFk6E9Ocd2gcHVaiQvk3iy8mY6lCI9CM6NLNSp42+bKqyobv47zI3jg8UYl8etNSS38iZSU1lxBiwCPa6U=
+X-Received: by 2002:a05:6000:4012:b0:391:2c67:797e with SMTP id
+ ffacd0b85a97d-3912c677cabmr1963693f8f.53.1741274880313; Thu, 06 Mar 2025
+ 07:28:00 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Thu, 6 Mar 2025 16:27:48 +0100
+X-Gm-Features: AQ5f1JpY1tBpSstalEwlq2UE34rOsSjxabkgJKxyxEHHegeRrcSGNnGnjGPL6sg
+Message-ID: <CAD=x8k8uUHhHJEqAPJy6yF40XsD=[removed]>
+Subject: ATTN...............
+To:
+Content-Type: multipart/alternative; boundary="000000000000b293e6062fae26e6"
+Bcc:
+
+--000000000000b293e6062fae26e6
+Content-Type: text/plain; charset="UTF-8"
+
+Hello dear
+Hope you are doing well. I wanted to reach out to you one last time. If I
+fail to hear back from you, I'll assume the timing isn't right to explore
+the transaction, please feel free to connect with me for very urgent
+information.
+Johnson Emmanuel
+
+--000000000000b293e6062fae26e6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello dear<br>Hope you are doing well. I wanted to reach o=
+ut to you one last time. If I fail to hear back from you, I&#39;ll assume t=
+he timing isn&#39;t right to explore the transaction, please feel free to c=
+onnect with me for very urgent information.<br>Johnson Emmanuel</div>
+
+--000000000000b293e6062fae26e6--
+

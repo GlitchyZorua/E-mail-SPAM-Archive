@@ -1,0 +1,180 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp1937067vqr;
+        Thu, 6 Mar 2025 23:30:12 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCWwUQHNOI+UGUIKeIkDRXkCZUFIk6QoSWN6ujuxgO+wL7h5oByiGCFwsAyLbbEFXj8G0LGUudR61S3/UQ5T1CRp4syOVg==@gmail.com
+X-Received: by 2002:a05:690c:4807:b0:6fd:3367:d743 with SMTP id 00721157ae682-6febf2e814emr36711957b3.14.1741332611873;
+        Thu, 06 Mar 2025 23:30:11 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741332611; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BbH2qkof/IJaUq/wOBsxZHiSSN6nQVKpRq88ejNYxRUk8+QWEcqTFLCPQQhLo2/+7g
+         2TejEPZ//gGkTzXzYNZnK+j2G3e9p7+ibMRJ+hMUzIZuf7erxXgrWaf6OBZGl77qyNdw
+         Me7u7D7MDOP1beC5DmjICZ3LxsMvKNKfSbUt8hJw+VSAJLwk6L17P+J00oju/0D8zBvv
+         VY3ufe4hVQYQXzOWIHr1wH1/dOrR2A2qaH/iSjrm6ip1eZeSYvtcgRGx1n5m7UYBSV9a
+         tcLeiGwd9PdD43eZZnoSUsYoFoPBJyjz2mLRvYbliyRIQszbxnGjKbPU/WQAc+M8YBrJ
+         LYXQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=013lj9A5ntwslvhF6il5wLw2ye8in5WP6n1xnuBxUO8=;
+        fh=CJXHyr72O29uypHrYJ6uaXJ+CBQgUCoGYqxQXaCIR7k=;
+        b=aOMKSfPdIAbksY9SSyALP6lfHUqrt3MbbCu5d3xWWKVL1uLVTYCQyUZR1q7Z1LpA91
+         nabnkHtC8vK9h7uZLfqcwUdbHM07Sk5ePBGS2tqL989TxN8g0qFpoZsBNMjvaSYfmuKf
+         WelGlnYg4ywVRdu3SQSSx+ebxMCnt65FU+4N5uZeroTBWOeV6w/yMiA/zgKKvEW02XDQ
+         jJiEnzTjblUKHIXlyQJZGcUg8Ao1rX0mrMSGImtXJfatPkI1HCJDqBICzIqfaFahCu8u
+         bhrT155GAccL8O1vdZ9Cw2zt3x6qvZdAJYLBctlxDBNFZMjqRySterMj4lqfNPlTJBQi
+         me9A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=NvpXguq8;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-6feb2bf7abasor19762117b3.14.2025.03.06.23.30.11
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 06 Mar 2025 23:30:11 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=NvpXguq8;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741332611; x=1741937411; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=013lj9A5ntwslvhF6il5wLw2ye8in5WP6n1xnuBxUO8=;
+        b=NvpXguq8Z1fF80OxbS5JWnblvAkqvqbcbAIDIWzqSIw/ioI3g4oMdg/HRyOu6Y6e7o
+         INqNGxh5Wb49rqLpkPpPZ3cJ6YpIy9g34MUFvMYsEj5RjhvCi866Vbx4kbFxRwpFuWXk
+         okm08ts3Xq9YsnXIfF0xDK+WwlofPWAO6cpQuuhuHeC9/U8mwlF/2YyutAa/y28/SYnt
+         vNwjB8xz6qOWPKm/yPgXnC9Vms6lYwxBt+NlOmxToPOfOw7UHC+jKhNsm4i/KQTGPloL
+         EPTmKkdWIaT9B/KNFT9U5vNShEK0Y82/+RsS04nMxICIVW1pt7OXfOiqWnWpIVeuUoHi
+         NR/g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741332611; x=1741937411;
+        h=to:
+         :from:
+        bh=013lj9A5ntwslvhF6il5wLw2ye8in5WP6n1xnuBxUO8=;
+        b=vfLdERwHoOI7vK58Xk0Nwsf8OXQcDCwI/+rAG4N6nuH2LkKhZd7QYSZcbExIdezD0L
+         J3eLGHsaxBgqHKQbmWLZZ5xNLPG+sOZ5HdQ9mfQVJbz9MFuajExhuPBFoHuFYfRcfMbR
+         kzFiQnn+v3Zwl1Qu/6WQoAMIQEv5MW+PGqkT1TiTWcIhCa3HY/agrvdhsAmZk36TB+J+
+         eFvo1hpJm6lAj2EQ5fM531DU9h6GcdD59ImA0ZMqmaoCaqHtsiF9/uROlWeXhHQeBjr9
+         Sk4tsrqeKaW9YTzFyMPx6f6McRpM3XxElTJsbFlPK3QKoceU6b9KHujSBDGkqs2z8Mva
+         ph+Q==
+X-Forwarded-Encrypted: i=1; AJvYcCVSTkgVLaxDKwB0KK/84EOtz25eQwUXSHtuA06QeWgzyGKttToPU/wMkQ2MzivF13Rc3UgP4ZGemxgnCeW6aG4OrS07KQ==@gmail.com
+X-Gm-Message-State: AOJu0YyUQ/24yviqyYiP1B4xvJm+89Bxdama+rc8Z3l+h+7Q2skLQHJm
+	NgTn/yKL0xwrRp0BdOs59FA/2YtXk70nobPNaTGlRo1nyfDav5m8QGCDmYc3swZdIoJphoj7X3m
+	RwpGy31Iw+7ce/nC5/GCiMtW2dtI=
+X-Gm-Gg: ASbGncvkh+p1IwHt8lUEfagZBtuuefzXUb0k9SeoVpH/YNGaQQiQTlLE8X3KxhsrLKe
+	8zwSAEW3VZQVrKFEbtzmq52dVzA2PFVG9iRz0UDMdOJKVo0HAZlhAoP1rsNNR9ZGidnS4twUbdB
+	Ju3wqILXJcuGr+t60hpQonAbOTVMw=
+X-Google-Smtp-Source: AGHT+IFyCdES7yC11lumoI2iADc2JfjKMy6yTg1AunWCdWz4yx3sadfIvsMJWWOJsXolttE9xHrxH6hdjGH8TouASsw=
+X-Received: by 2002:a05:6902:250b:b0:e5d:b7d8:ad3b with SMTP id
+ 3f1490d57ef6-e635c168f8fmr2621053276.19.1741332611427; Thu, 06 Mar 2025
+ 23:30:11 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Thu, 6 Mar 2025 23:29:57 -0800
+X-Gm-Features: AQ5f1Jr6vE9eNvm5myI3CPkiotjv2pJ00q48lPsLfPHoWK-btw8Zbrn4x3Hznqk
+Message-ID: <CAFLAi_Gvip=[removed]>
+Subject: FROM DOGO JUSTICE I NEED YOUR ASSISTANCE
+To:
+Content-Type: multipart/alternative; boundary="000000000000bd7454062fbb97d5"
+Bcc:
+
+--000000000000bd7454062fbb97d5
+Content-Type: text/plain; charset="UTF-8"
+
+*Dear Sir,*
+
+
+*My name is  Dogo Justice, I am writing to inform you of my inheritance of
+Twenty Five Million United States Dollars  presently in Zenith Bank Ghana
+LIMITED,the funds are genuine and it has no criminal records.*
+
+
+*I am contacting you so that you can help me receive and invest with the
+funds in your country as my beneficiary,I will give you %25 of the funds if
+you can help me receive and invest with the funds in your country and also
+help me relocate from Ghana to your country for onward investment and also
+for me to further my education.*
+
+*I am seeking your help because I am young and I have lost my parents and
+the inheritance is the only thing I have left and I don't want to invest
+the funds here in Ghana or Africa for security reasons.*
+
+*Kindly respond to me with your details, so that I can send you more
+details on how we can move forward.*
+
+
+*Full Name:..........................................*
+*Phone Number:..................................*
+*Home Address ...................................*
+*Passport Scan Copy:...........................*
+
+
+
+* Thanks for your interestyours is always Dogo Justice.*
+
+--000000000000bd7454062fbb97d5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>=
+<div><div><div><div><span style=3D"font-size:large"><b><span>Dear Sir,<br><=
+/span></b></span></div><div><span style=3D"font-size:large"><b><span><br></=
+span></b></span></div><div><span style=3D"font-size:large"><b><span>My
+ name is=C2=A0 Dogo Justice, I am writing to inform you of my inheritance o=
+f=20
+Twenty Five Million United States Dollars=C2=A0 presently in Zenith Bank=20
+Ghana LIMITED,the funds are genuine and it has no=20
+criminal records.<br></span></b></span></div><div><span style=3D"font-size:=
+large"><b><span><br></span></b></span></div><div><span style=3D"font-size:l=
+arge"><b><span>I
+ am contacting you so that you can help me receive and invest with the fund=
+s in your
+ country as my beneficiary,I will give you %25 of the funds if you can=20
+help me receive and invest with the funds in your country and also help=20
+me relocate from Ghana to your country for onward investment and also for m=
+e to further my education.<br></span></b></span></div><div><span style=3D"f=
+ont-size:large"><b><span><br></span></b></span></div><div><span style=3D"fo=
+nt-size:large"><b><span>I
+ am seeking your help because I am young and I have lost my parents and=20
+the inheritance is the only thing I have left and I don&#39;t want to inves=
+t
+ the funds here in Ghana or Africa for security reasons.</span></b></span><=
+/div><div><span style=3D"font-size:large"><b><span><br></span></b></span></=
+div><div><span style=3D"font-size:large"><b><span></span></b></span></div><=
+div><span style=3D"font-size:large"><b>Kindly respond to me with your detai=
+ls, so that I can send you more details on how we can move forward.</b></sp=
+an></div><div><span style=3D"font-size:large"><b><br></b></span></div><div>=
+<span style=3D"font-size:large"><b>Full Name:..............................=
+............<br></b></span></div><div><span style=3D"font-size:large"><b>Ph=
+one Number:..................................</b></span></div><div><span st=
+yle=3D"font-size:large"><b>Home Address ...................................=
+</b></span></div><div><span style=3D"font-size:large"><b>Passport Scan Copy=
+:...........................</b><br></span></div><div><span style=3D"font-s=
+ize:large"><b><span></span></b></span></div><span style=3D"font-size:large"=
+><b><span> <br>Thanks for your interest<br>yours is always<font color=3D"#8=
+88888"><font color=3D"#888888"><font color=3D"#888888"><font color=3D"#8888=
+88"><font color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"=
+><font color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"><f=
+ont color=3D"#888888"><span style=3D"color:rgb(136,136,136)"><br>=C2=A0Dogo=
+ Justice.</span></font></font></font></font></font></font></font></font></f=
+ont></font></font></span></b></span></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div>
+
+</div>
+
+
+</div>
+
+
+<br></div>
+
+--000000000000bd7454062fbb97d5--
+

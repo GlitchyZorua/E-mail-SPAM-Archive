@@ -1,0 +1,227 @@
+Delivered-To:
+Received: by 2002:a05:612c:2d52:b0:4b7:94ae:128c with SMTP id iz18csp175222vqb;
+        Tue, 25 Feb 2025 04:43:35 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXMVaNp7/48iEaPeRSfsUNjL2YTsZJaVj3YOJS1xaCOHYDxQKDcBB/glW/au5ouTPauU1fh76pm0DYkypKWADmH0MxpTg==@gmail.com
+X-Received: by 2002:a05:6830:d0f:b0:727:40af:165e with SMTP id 46e09a7af769-7289d179ed3mr2270409a34.17.1740487415461;
+        Tue, 25 Feb 2025 04:43:35 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740487415; cv=none;
+        d=google.com; s=arc-20240605;
+        b=gIaKHA0wSwghKgRQvjI8yEKRaciBTs5RxfT7gS08fVFyZmkIc2MPuKOIs3nl4mtFTx
+         zg/q8Bw5IW7qaK8Ksbxa17v1gBTsxqt48IcSqipeiaqaYMkKfWqYSHs0UMDrZEKcDCnU
+         nk4skgOFlJEVa1FygdTRkdL//hVG7sjl3Xw4eANz/IKFH4YDEC1vNs0hY3icoF8AleFN
+         UWp/EdyCPmoEuR46s9qHP5i7iDwX1zURStxG5P9PR+5x0Si1RTxWQNxy26R3a+BQ4FXQ
+         bj9EbcvPEFzg23fVMGo5aJZfSTmKlR1fztiwTVN8wPhFJE5zrMxRoxDa1hSiMjhKsiY5
+         xp4A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=Km9tV41Ygp9VMLgD0Nuy+0hAsS7i/atx9HTLLWfkd5E=;
+        fh=RmulDwg6BH+GrBeAPxK2CG2ktORZx4c2dTS4cfidmTo=;
+        b=GrqxQF1BE1Q6mo54q/I5qFL0qryxoS+ZByAYnYyPPqNX0vNG/QjXq7Vmvn/EllE0Og
+         Jlln9OyYopQlpSZctN1x/i/OkeJDeEDsNGYDtS5AwW+QhyvmFV1KlXnY7yNWHVAfbb0q
+         6P5sxClnUVeha6HMF+VHLSEGRFWb451pTtOsAtIf45T+YPZbzwLBJRvbwSrDp99/IP80
+         sCWjs31FwgPRhIwhUaAQg1MA2Q9+uO6nqWyPfeytomkN+GCTC8lpK2BO3aTxJjkxXTLH
+         ptLAg9eZBvh1nploX76obw17h14rcMtPJofnbCnKWUuQBK0NIr0BOzOpN+U7V4VFCJqd
+         t8CQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CtbuzWf7;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 46e09a7af769-7289df55a31sor420872a34.17.2025.02.25.04.43.35
+        (Google Transport Security);
+        Tue, 25 Feb 2025 04:43:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CtbuzWf7;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1740487415; x=1741092215; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=Km9tV41Ygp9VMLgD0Nuy+0hAsS7i/atx9HTLLWfkd5E=;
+        b=CtbuzWf7Pnh71Z6me63lAqM/bDuVwM7xbhxpJGvaenkhfIUkSb4pVXPwtncJWdRiTg
+         jX0V0mM4jVYXRwQreNBR5nbSUN74CsBy3Z3ZHLDCN1QGaCL+0AcmMt44mkcYrD4Y790S
+         +Imjz0iQCw5plKi0OCcN72rvtOAo+f5ObJ2uxxZp6ShONp2UbfRkcpkJdrS2rLJYJG9J
+         X+0Z8+KdAVbExpoJmjmEUdWv+UqveLp7WXCNQW/BGuRbSAqRkq4AKbyMVxPzEp0WEJkp
+         YkQVLDiOSZXJeDCvOZKf73fzOiC0fb4diuOPsSJUtSQYJKuBZl7iFAZS1kk4+coqMGLY
+         ZUaQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1740487415; x=1741092215;
+        h=to:
+         :from:
+        bh=Km9tV41Ygp9VMLgD0Nuy+0hAsS7i/atx9HTLLWfkd5E=;
+        b=v67dfYnrDa+M/7N4XN2pk3KF1hQQeXwrWBzORFi+YNwoyGpMnM+0pmyz1E71Q6jYZa
+         HYZcUS9XEiRDQLugJcytcmKfQN+u8s6bwcbEjrzmtEBcSPqQE+AWJo0gMmF1tIVcKOnT
+         hvZJdwv7FVCI3XdnIbdGy5bSo0lu77bEKXLvMPqdphUazpmyOzvRCpZnjLZs/PtJIMt7
+         mtSc415b87fvU26dQLbubSc2yv2AgCX/tNxIiXWxL6RAKf5vaVB7qNPqEXRemawsHI55
+         lghKIy53WyEqwr64EnNJutplIQRDZFh7cS/jKmyvbgKbRnxX8Ig5dJzk7teJfDK8LrVL
+         zk2A==
+X-Forwarded-Encrypted: i=1; AJvYcCUuvrycXmLs9NrfVosCcIHlYuN6sDCBKC/lNhCnTX3j5pQK2XqUWe9A670OTIQpJ5aWiCZkTVXtvbhIxQ==@gmail.com, [removed], AJvYcCXuBOUKXFXAO7BHYadjP+5vBf5Hv9kYFfDIhcya8zXD1LNLHx0TosS9xaOq6fH1kZ8FrapLrGO+LTt0vr3uJ9xrRKi2TFQ=@gmail.com
+X-Gm-Message-State: AOJu0Yx9K6oHlQf9AR4ZHoCHKK0yZkU0eCtb8ljHJE+3vhXEo+7log21
+	jjL+uZHu792cgQXK9oG2v3BiKhmx8zXf180DpeDsAtfgiFUVcUFXq1tenjOzbFr0I1eEsU4ZSf7
+	1RnUUwJPfKW4ALvF/ziAJCFEr/MU=
+X-Gm-Gg: ASbGnctyRf6v1VnxTtV+sn6vm3S1YDEgngbbKxheMYx5X7mEtc61pxvE3BHLe6G1Ijs
+	iMI3re1zZUqKFrp6gd8v//zfs52zWH8i+W+exS1jM0B073Z67Oj/Lq6QFVwv3Zgu6dymZ/yRitf
+	vt4BVJt2k=
+X-Google-Smtp-Source: AGHT+IHkahuokqx+2USCiIUCz/4kgckvWhGZNbC/AGQs9zZbZ+A/kAj0FCN+P4zE641vjwi4WjpJJALE4hzNJ4ZRwS0=
+X-Received: by 2002:a05:6830:3905:b0:727:26e7:eed0 with SMTP id
+ 46e09a7af769-7289d0f5f87mr2074434a34.11.1740487414369; Tue, 25 Feb 2025
+ 04:43:34 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Tue, 25 Feb 2025 06:43:22 -0600
+X-Gm-Features: AWEUYZkwCYOL1OvQoHUOeHa__y2Y2dqvsHTfUW7wrhoYHiRjwE8s6aS4xUn5twI
+Message-ID: <CAEmhT7E0_bMbM3bQ-p=mR812j9eD_o5uS=[removed]>
+Subject: FAST MANIFESTATION AND SPELLs
+To:
+	[removed], [removed], 
+	[removed], [removed], 
+	[removed], [removed], [removed]
+Content-Type: multipart/alternative; boundary="00000000000011d906062ef6cef8"
+
+--00000000000011d906062ef6cef8
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+thank you so much DR Muse  for restoring back my Broken marriage for 4
+years of total separation with my lovely husband cos of her mistress who
+use a spell on him to abandoned me and our kids. i have contacted so many
+casters online several times but be scammed. i saw a testimony on the
+internet of one Juliana testifying of your good work, i contacted you which
+you assured me just 28 hours for an instant result. Sir just same 28 hours
+as you promise my husband came back home begging for forgiveness to love
+and cherish i and the kids forever, am so happy and thankful to you  DR
+Muse ,,,I am So Happy and Excited because as i am writing this Testimony,
+My husband is madly in love with me again.      1. Love Spell
+
+2. Bring back your lover
+
+3. Money Spell
+
+4. Divorce Spell
+
+5. Court Case Spell
+
+6. Pregnancy Spell
+
+7. Cures to any diseases (Cancer, HBP, Diabetes, Herpes, Etc.)
+
+8,GET A CONTRACT/WIN LOTTRY/RECOVER UR LOST JOB
+
+9.SPELL TO SPYWARE DEVELOPER{TO RETRIEVE MESSAGES OR EMAIL IF YOUR HUBBY IS
+CHEATING ON YOU. spell to get back ur scam money
+
+10, TO KNOW ABOUT UR FUTURE OR CHANGE UR FUTURE TO GOOD,
+
+To inquire about his services or to make a request on WhatsApp  =F0=9F=91=
+=87=F0=9F=91=87
+
+
+Contact Dr.Muse
+
+WhatsApp Chat:+2349045757790
+
+--00000000000011d906062ef6cef8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">thank=
+ you so much DR Muse<span class=3D"gmail-Apple-converted-space">=C2=A0 </sp=
+an>for restoring back my Broken marriage for 4 years of total separation wi=
+th my lovely husband cos of her mistress who use a spell on him to abandone=
+d me and our kids. i have contacted so many casters online several times bu=
+t be scammed. i saw a testimony on the internet of one Juliana testifying o=
+f your good work, i contacted you which you assured me just 28 hours for an=
+ instant result. Sir just same 28 hours as you promise my husband came back=
+ home begging for forgiveness to love and cherish i and the kids forever, a=
+m so happy and thankful to you<span class=3D"gmail-Apple-converted-space">=
+=C2=A0 </span>DR Muse ,,,I am So Happy and Excited because as i am writing =
+this Testimony, My husband is madly in love with me again.<span class=3D"gm=
+ail-Apple-converted-space">=C2=A0 =C2=A0 =C2=A0 </span>1. Love Spell<span c=
+lass=3D"gmail-Apple-converted-space">=C2=A0</span></p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">2. Br=
+ing back your lover<span class=3D"gmail-Apple-converted-space">=C2=A0</span=
+></p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">3. Mo=
+ney Spell</p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">4. Di=
+vorce Spell<span class=3D"gmail-Apple-converted-space">=C2=A0</span></p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">5. Co=
+urt Case Spell<span class=3D"gmail-Apple-converted-space">=C2=A0</span></p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">6. Pr=
+egnancy Spell</p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">7. Cu=
+res to any diseases (Cancer, HBP, Diabetes, Herpes, Etc.)</p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">8,GET=
+ A CONTRACT/WIN LOTTRY/RECOVER UR LOST JOB</p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">9.SPE=
+LL TO SPYWARE DEVELOPER{TO RETRIEVE MESSAGES OR EMAIL IF YOUR HUBBY IS CHEA=
+TING ON YOU. spell to get back ur scam money</p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">10, T=
+O KNOW ABOUT UR FUTURE OR CHANGE UR FUTURE TO GOOD,</p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">To in=
+quire about his services or to make a request on WhatsApp<span class=3D"gma=
+il-Apple-converted-space">=C2=A0 </span>=F0=9F=91=87=F0=9F=91=87</p>
+<p class=3D"gmail-p2" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;;min-he=
+ight:15px"><br></p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">Conta=
+ct Dr.Muse <span class=3D"gmail-Apple-converted-space">=C2=A0</span></p>
+<p class=3D"gmail-p1" style=3D"margin:0px;font-variant-numeric:normal;font-=
+variant-east-asian:normal;font-variant-alternates:normal;font-size-adjust:n=
+one;font-kerning:auto;font-feature-settings:normal;font-stretch:normal;font=
+-size:13px;line-height:normal;font-family:&quot;Helvetica Neue&quot;">Whats=
+App Chat:+2349045757790<span class=3D"gmail-Apple-converted-space">=C2=A0</=
+span></p></div>
+
+--00000000000011d906062ef6cef8--
+

@@ -1,0 +1,136 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp1316096vqh;
+        Sat, 15 Mar 2025 07:00:42 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUSoK/HdDGPWiXf6CVGQJs1ItGy/+piNGHnHhLYGqgC2BYuvDmd4PkSxza1lbme+OeCVXR4mhp440utBj23EZ6scRPFHA==@gmail.com
+X-Received: by 2002:a05:690c:a98:b0:6ff:1d6f:38af with SMTP id 00721157ae682-6ff45ef4b98mr71265867b3.4.1742047242320;
+        Sat, 15 Mar 2025 07:00:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742047242; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ccIISCWwxBcsHwwRYE6kVpcEi0F1VPiefx4vmWcWPdaRdSKCkHdRihrTmr8pKtpGom
+         j6bMO6s+LfhREV37CtInIxp7tGJVebQ9uOWMHh2Y+2jNY9Zuons/R7sFXYqJACVApbqI
+         MqioKc5SPOkjyY/ucZPtp0THrHLpBVBTr8FFplMt4WgfL4VG8c75FqOlGhPigRvcXQF8
+         0k0C5keEB18220GVw4xGahADqZ8BlEx4Y7wCfsn++8BuhB9XUlQeZ/31cWkgfNbIvqwZ
+         dSODdrNJwhvoMmHwo3mqQPv2tC9aquqrnSJINUqIC+MZTJmu9wb3VoJGgyc4U/uVc6f1
+         b8XQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=vRbR+rWSMzfNVHWH7Oso5MehIA7JsYK03wDDDLSaJCM=;
+        fh=WdvlGPf1pcS/xhX68PXzFPRLYlQhQPiSBD38vEpyx2Q=;
+        b=Z4Z1uI63Ub9USHVAzo9pyXxy9NB7mbWwRpwvtk9nuOvtivyr0VBkIDZYEqM2WnVCdt
+         j7e4xbJjsSMoEX9YjUJgkOdQzLEmELsgyX6LZlSKoLxSEvMx1g94yglwCdmiUw53dKER
+         ZFvlVuszG48uL763H51gKC+PM7GZ6RUIRgm9xkFdTdT5NKWD02X664I4R3jmnCh5OOXg
+         Ne8wCQ5WhuOtGR9G7AT3wRC7O01Kjc2VOEhu2C6/qhWM1n/Peayj0B/Zxmm746X1pNPN
+         ctiuZVG/S+M0z/0uaP4DAoOWNsqsAKkosloby89MtXN7j0WL1ap1MYvYs3godfwMeSRa
+         5Fzg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=fphAHjj8;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-6ff32b46fb8sor31313577b3.12.2025.03.15.07.00.42
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 15 Mar 2025 07:00:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=fphAHjj8;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742047242; x=1742652042; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=vRbR+rWSMzfNVHWH7Oso5MehIA7JsYK03wDDDLSaJCM=;
+        b=fphAHjj8kgOWM/HfJ6pvASRGn0zD4eYVwq0I+wH6VNmJ8Zdlnh9owgrPb7x+5qqRtp
+         zrvViMHOOSuXeIevwHiov/ObS7j+bNqw4jKCf1TZbg/qCWlezmxfnznNIgZpceycB4He
+         udHyy5HWUA84MRPgN8tCAR7yZXfZVn/3OCFjsHk/KS5+EZE7Vp38LPVG7BrWJFnZYHDQ
+         akfneObtABz78ty/49GjPnybhrtWN29ur6c9BKg5Zf46g7NYIimYcXv7vBpequKHm2EL
+         6dtUv9UAFmzQe18J1eYzBzJQ7Lq0oyo3GYoB8IrXK/z4+cqHX74GRzC8wy7AV5vMf0/9
+         jLQg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742047242; x=1742652042;
+        h=to:
+         :from:
+        bh=vRbR+rWSMzfNVHWH7Oso5MehIA7JsYK03wDDDLSaJCM=;
+        b=QnVwA5ltykgXPS3Kplh8iuuc7JnqhLY2L9fNAHLs44vTJRJH6Ez7ML177BgdHml+rY
+         rZdsxxW99tL4m3JaGmbcnZ9nMR/zBkOvla66hFe1PH4Uq1R6XMZnYiljlY0U7Jvs1eR6
+         7BCVtXop3KvNf4slZkv0K4RURHSOs95Zb6On9ixLnKa94xoK71I5PvMl0GBU7vzexVV1
+         OguoSOarSGjZPUE2DLyhshRLq0PDbbFDYb+pmhjOIoShaA46C/o89SwvG7jdjI8UT6bP
+         K4cnC4kGPkGUXNO9c2rC7nK2QY3Z6pbmRayiS4TOJoGv2oG6cx6vexYs4c7kXAuJuoAa
+         BBww==
+X-Forwarded-Encrypted: i=1; AJvYcCWo6JGqDhSm8VLBoOz+Phcq8n8OBda0EBTZSiDlFq5ZTGV9tz8PhHyp3jdZE86ErwPBIEjtdhd6F5XNHM/Zko+Yo44xDA==@gmail.com
+X-Gm-Message-State: AOJu0YyTufkJQVh+HD1yK72WFqlWr18KTNgQS5Q6ZbxEgOK10dna6EPl
+	HCDVDXD6wemUJZjP36oK07ltfgjZdqLxySPlv7JRoLZcCJZjvClXQm+s+hi5UMbvZf0GZPl6DU5
+	u9Z/pHRGKd+Y6HZRrVMiCxJwLKAU=
+X-Gm-Gg: ASbGncusR9jsZNR54Zw6kD/pySCTPqqJeFIoqB8GjVjqapdrGhJPajoLkmtaWxMpXNy
+	8Wfxq2LHJiNesN6alljgEWRtJWaysts9bXAbbqTBOvuCr/9u9oWZhxVPRMy1uOpBI8B/+7acCO1
+	smNVRNK0y3UyrOsHLDkZSqc/Q4loI=
+X-Google-Smtp-Source: AGHT+IGAdNbuqSDg/QquMGW7idq+GqgR8B7kV48kNlwd40KGNrEUiDIfQBxhg3HiUT2TFBZkIHFTur81eCZv24xjIpk=
+X-Received: by 2002:a05:6902:2213:b0:e63:cf48:3b8d with SMTP id
+ 3f1490d57ef6-e63f65b6fb2mr7553465276.30.1742047241688; Sat, 15 Mar 2025
+ 07:00:41 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Sat, 15 Mar 2025 14:59:21 +0100
+X-Gm-Features: AQ5f1JoiStnrj6JXQjudE8dmP4GYojsI7VqXsn-3TmjA_pxTjQFv-hbL_hgfHN0
+Message-ID: <CAC2qKMF2CXD=[removed]>
+Subject: 
+To:
+Content-Type: multipart/alternative; boundary="00000000000005dcca063061fba4"
+Bcc:
+
+--00000000000005dcca063061fba4
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimado beneficiario.
+
+Quiero compartir con usted este acuerdo confidencial y esta oportunidad,
+con la esperanza de que podamos trabajar juntos para lograr el =C3=A9xito y=
+ el
+beneficio mutuo.
+
+Mi nombre es Peter Grahams, abogado de profesi=C3=B3n. Le env=C3=ADo este c=
+orreo
+electr=C3=B3nico una vez m=C3=A1s, en relaci=C3=B3n con la transferencia de=
+ cuatro coma
+cinco millones de d=C3=B3lares a una cuenta en el extranjero. =C2=BFEst=C3=
+=A1 dispuesto a
+ser mi socio? Por favor, responda con su confirmaci=C3=B3n o sus comentario=
+s. Si
+puede cooperar y concretar este acuerdo conmigo, p=C3=B3ngase en contacto
+conmigo con urgencia.
+
+Le garantizo que esto se ejecutar=C3=A1 bajo un acuerdo leg=C3=ADtimo que l=
+o
+proteger=C3=A1 de cualquier incumplimiento de la ley. P=C3=B3ngase en conta=
+cto
+conmigo para obtener m=C3=A1s detalles si encuentra que puedo ayudarme.
+
+Atentamente,
+Barr. Peter Grahams
+
+--00000000000005dcca063061fba4
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Estimado beneficiario.<br><br>Quiero compartir con usted e=
+ste acuerdo confidencial y esta oportunidad, con la esperanza de que podamo=
+s trabajar juntos para lograr el =C3=A9xito y el beneficio mutuo.<br><br>Mi=
+ nombre es Peter Grahams, abogado de profesi=C3=B3n. Le env=C3=ADo este cor=
+reo electr=C3=B3nico una vez m=C3=A1s, en relaci=C3=B3n con la transferenci=
+a de cuatro coma cinco millones de d=C3=B3lares a una cuenta en el extranje=
+ro. =C2=BFEst=C3=A1 dispuesto a ser mi socio? Por favor, responda con su co=
+nfirmaci=C3=B3n o sus comentarios. Si puede cooperar y concretar este acuer=
+do conmigo, p=C3=B3ngase en contacto conmigo con urgencia.<br><br>Le garant=
+izo que esto se ejecutar=C3=A1 bajo un acuerdo leg=C3=ADtimo que lo protege=
+r=C3=A1 de cualquier incumplimiento de la ley. P=C3=B3ngase en contacto con=
+migo para obtener m=C3=A1s detalles si encuentra que puedo ayudarme.<br><br=
+>Atentamente,<br>Barr. Peter Grahams</div>
+
+--00000000000005dcca063061fba4--
+

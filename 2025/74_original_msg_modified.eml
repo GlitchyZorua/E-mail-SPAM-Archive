@@ -1,0 +1,125 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp2454703vqb;
+        Tue, 25 Mar 2025 00:38:51 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWNWIS858zPFLE5S1sJYYkHnQlBspcJIidSOK/5Gkb6gElJ5Tw6VdhqUg673nvBlXHoUlaognI7filEzbtov4WmpIWcBA==@gmail.com
+X-Received: by 2002:a05:6512:1152:b0:545:2f9f:5f6a with SMTP id 2adb3069b0e04-54ad647e35cmr5198979e87.14.1742888331387;
+        Tue, 25 Mar 2025 00:38:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742888331; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ByQKC80G9TH4iK+8oj/aWf0VjKE1xI7cl/2L+RuHZyHUeQMsLRffRphPWqzYHbGJau
+         wum+aeqNUhFhLd3MWGewuZeRTO8BRa3KK8OsZ+cVSVmuJmU4c5/UJ9QcMm1Klm4C+TN7
+         ItSZzKfAYtMlldrLV64V+2ozRvFy4ROiIFaTmE/AxsbwV6WSsg78LE7F2uZaIldWLPyB
+         BgjUSxQonem8kMw8PsiWrQC9vHJusCt3vAW3j9G2UOpSZx4GVAYWX3vJWGA0sER7QpRY
+         UksWAShu2SBr1ZN2LNdo/VjqlltZiajvbSvP/3KgLnp+FzzyrvIBw05duuY3ABLW445s
+         8Vlg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=bWgW1BFjJeFAirfcAqiEMD2FB+u3v5rqVAHukn912kc=;
+        fh=OEpGBa5BD7mhdRLLUW8JjhteFdK7GyLA6v2XZFo1PdM=;
+        b=bgeJdliTR58qh0wqzVWreGk+yj7jqDzip9L/iYw8QJTOXvyAbBjvvmJ7y7XdDbbC0r
+         8Q/5zN3xX80E/tUepfHGcuPYGHxq+3NF6YA2Zss0EDr6saApG94l10NKYy3i+pI9+FwG
+         ozBPcDjNz8sa3bGIKKb0Hl8JVXJun+4Jy+mu8BE5j/++yH7p8+ygiVokf8+LNWXWSPOX
+         8VjFvFRyLRKURjqM7R5lrevYA/d1B5rP1y6Z1kf3HndTAu1Is+4HvrBtOPIbeCjciuUm
+         T7eQdDX+EWHq+IIv5yz0UJOfHopec1O4KjZNtr49rvENNRRN5vAGI6XJNjqJJm/Rqj1X
+         FqJA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=VdyhTipu;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 2adb3069b0e04-54ad64918a4sor828509e87.16.2025.03.25.00.38.51
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 25 Mar 2025 00:38:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=VdyhTipu;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742888331; x=1743493131; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=bWgW1BFjJeFAirfcAqiEMD2FB+u3v5rqVAHukn912kc=;
+        b=VdyhTipuVnQrNR58a7NCYw2x+gIwWkxdLs63gBPL6eFmVbImpYMatsM/jcDKFgQhcp
+         JiIJJedQwQx5y2GduJ0LrvuKgChWN08qUDO+wbtmmQAJYg9fAj54QIlI4wjkEaqGFyD2
+         I0mzXYiMi8wIbfnWEQJtB1sfH1dbmvMhyUHR9u09R+Dctc42t+/K479CPZ2FyCJ/ypMP
+         F3WW6yeAbmp2/50W+Mm100zECdYXGH2GZuixYPsw1LvR0E/Wvfa4P56seDHv1Uhlk6l2
+         RcgrnU9lhw7uVYea7INyeZ2NLqZD7zdI5UxsPl5mUJcO7phRy34KyWnJA/6i+uatwOE8
+         9UZQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742888331; x=1743493131;
+        h=to:
+         :x-gm-message-state:from:
+        bh=bWgW1BFjJeFAirfcAqiEMD2FB+u3v5rqVAHukn912kc=;
+        b=DDU+6lpuFWVZRDEdmMGewVXxJytAxUKZQW6chKIh00rsZm+7oWAdqPj34Mve158eG5
+         trvewCD1tsVGhfpC12h+5zkrCiA2peqdVJNpCoBpe7Vnd8njyHntdIdXv+pKc2aEQvKq
+         lCzMYQPlnSEss84a1RmWH+lfKw9xYlF2jhC0R7tcj610GQ66H+CuPKFOqw4ZWAlLeVae
+         JH1W37zYQJnLhN4FrSO/lbUNNiRpBGmDzu8Gvv9yeK1NeadiWjTUdyl6g3Qda+KxHUmD
+         WVmimyzAG5AHxXlFmnuaR1F2UPtnKLs4ZNAMdEc+FnpH9zFaRV1qrZc6np4a+SbJafn3
+         vZug==
+X-Forwarded-Encrypted: i=1; AJvYcCU9NlYqiWIO0Axw0hayi3FJOK4IBylbYbwVnE1ORYQSBggXZceEcXa2Q2dtYkDD0yyab4hS4A5tq8348j45p9LlcI4hCQ==@gmail.com
+X-Gm-Message-State: AOJu0YwJdUQawtPbKG5GU+HTD0bv0jMBd2EEDLgHIgW0LNyBpp1BYCUo
+	1uGIzXZvUMkSuI/tHuTKpMLfN0BeCgXqRbWZ+NRdX//re1jGstwdKpiEv0OqY50Cid686Ms+mr6
+	5EwPuO8u+I8OHtaQYYlIpqOg8Tog=
+X-Gm-Gg: ASbGncvuI424vmQ16WnUkbFEJL8s5pyuVZ5rzWuwnJghWv5mV/tomuMcMqIlyvqUlLP
+	quPRmG9fcnKOQr4vlZGWQsaRrUzk6q5aY2yzAp5oTZlesSHU45uOP5vttFB++/6u5pdSC9j4ZLr
+	Ae/uepSC2WLRXJWqdmtG2RifVL
+X-Google-Smtp-Source: AGHT+IEOGJbx1r9Q75MM0nnIpGbulldQBQvuY5WVD7RxrrPD9QnBOKpl5nD/8JL2tozlEJYWI9Gt8vrY03DCLjfWlgM=
+X-Received: by 2002:a05:6512:ba9:b0:53e:39e6:a1c1 with SMTP id
+ 2adb3069b0e04-54ad64fc7abmr5951948e87.43.1742888330175; Tue, 25 Mar 2025
+ 00:38:50 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Tue, 25 Mar 2025 09:37:39 +0200
+X-Gm-Features: AQ5f1JpMkMp8NJ-_CVRP4_vOcQSActePLZwSp6JDPM1QJ1ST82cGFNB1XzkOKoE
+Message-ID: <[removed]>
+Subject: 
+To:
+Content-Type: multipart/alternative; boundary="000000000000cdad37063125cf48"
+Bcc:
+
+--000000000000cdad37063125cf48
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Unit 2 Tolpits Lane Watford,
+WD18 9RN United Kingdom
+
+Attention: Beneficiary.
+
+You have been approved to receive a compensation fund of =C2=A3 500,000.00
+British Pound as one of the scam victims who qualified for the 2025 annual
+program organized by Camelot National Lottery Group United Kingdom. Your
+reference numbers are: XVX189298. Send your full name and address,
+reference number, mobile number, occupation, age. to the following email
+address: [removed]
+
+Faithfully,
+Mr. Andrew Caswell
+Gambling Commission Chief Executive
+
+--000000000000cdad37063125cf48
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Unit 2 Tolpits Lane Watford,<br>WD18 9RN United Kingdom<br=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0<br>Attention: Beneficiary.<br>=C2=A0<br>You have b=
+een approved to receive a compensation fund of =C2=A3 500,000.00 British Po=
+und as one of the scam victims who qualified for the 2025 annual program or=
+ganized by Camelot National Lottery Group United Kingdom. Your reference nu=
+mbers are: XVX189298. Send your full name and address, reference number, mo=
+bile number, occupation, age. to the following email address: <a href=3D"ma=
+ilto:
+ly,<br>Mr. Andrew Caswell<br>Gambling Commission Chief Executive=C2=A0</div=
+>
+
+--000000000000cdad37063125cf48--
+

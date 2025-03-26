@@ -1,0 +1,117 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp1415003vqh;
+        Sat, 15 Mar 2025 10:28:28 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCV1n1OmOMnoMdY+lL8Z6DKTjCQ2LXnNIJDGWbjHJPoFFDtIpDV5UiA5E4t4qKI+ZbfhelOBO8AfeK4S1KMwRQmJZlho1Q==@gmail.com
+X-Received: by 2002:a17:907:7241:b0:abf:7a26:c480 with SMTP id a640c23a62f3a-ac3303f6803mr818370266b.36.1742059708586;
+        Sat, 15 Mar 2025 10:28:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742059708; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BH0D3yRz3vQMEM15AhKJoDRcmfkb3dgUuV25pWe9tDq2nm+PKyE21yHM20wFAnKsvg
+         uoSrJv09+xJjtbdohVXqzvXlStlsTBWFtZFeNESvbE3zj1hLprZezbFJT6nHE5Jc35gM
+         Z00jzH23L1c0K1DJ3U3HOVElFid+HNnEJCdoC7I8Xy7VbXLwvZA2/5o4XrMzDd9Qwz/n
+         bgkp53rU1CJZr/ulJzSeyVLR+hEy36RErog3DDHrRSkdyioc3gEAu6NfFep5mKeJoh4r
+         rHozCknMt8a4wVAt70wr1un4NQoiN/fx5uOFmzOpfYjc4TOf8tI7RLHsp85Ne5yPiTvL
+         IU5Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=N8U5FBCYfmXDt7BfPK5T8sdzqjoZaJmfs7UwGuFU/uE=;
+        fh=qfHNKQULE3Vh/wBE//GnKFcv2Qoa37DLxOgxm5sA/Qc=;
+        b=cLKeYOVBgxiHmqWDTrfWIw2tsfgwFBK0AclMX+vcUF4GHOgN1XOOyBJ9lWJHLrekfs
+         jZTwzMC6KnU9f71xoRA4Up5T3ltKwy4MNzBCBGzTFMIW7SC9HXdMBrONF6aGU8/or5pc
+         ZWjjjauAaKPkvNOYDdlHeBIX+aSiblBQHprqtZpueWGLSfbU7bVFdOx7m62uktQaO76a
+         b4Fbgp5lz+Dcgt9mvz6LJ1kAQa7zoJ/wVmunUWIwa9wPKAGqZTlnb2IqNvajAJv72/BK
+         IYh262tYfDfWdo4mBHjrMzKG0U9eIWrwyiHgQ1Q+HHY7z9a8apK8UrQJ7T8vxQ8ETEXs
+         hzVA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="i/Zpy308";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac314a4d06dsor238921666b.16.2025.03.15.10.28.28
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 15 Mar 2025 10:28:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="i/Zpy308";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742059708; x=1742664508; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=N8U5FBCYfmXDt7BfPK5T8sdzqjoZaJmfs7UwGuFU/uE=;
+        b=i/Zpy308i/yy95sEnVp1N7rgezwcosDt0vlRADePD0q+DSKn7avp4Bca7K+ibpVutk
+         QYNiKqK9PJTJleVWnUouJjGcrUYkCnppO8gT6XEWKgFwPnJjficC3uldkBoJhbJKKJoJ
+         EyNiWAHwEljOwATFS1zvRsvA63Xfmak7Q6j32FGC7nNzyOLO+4mRKcJZj8vCI9M6DhGT
+         iAhO/yiuaBk7vEi2Zqxs5hLxxWnn3h/Hi/DNIAWy/Mj1VD8iELdZPJfgCTQ/lX+UwiS/
+         mqOWNXSXz1hyqFl+8hQ5hVaOZ5kUIlLmiBuIqTN1yMveLjNgwIJ+KL89I5tGmj9/A7/E
+         FaBw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742059708; x=1742664508;
+        h=to:
+         :from:
+        bh=N8U5FBCYfmXDt7BfPK5T8sdzqjoZaJmfs7UwGuFU/uE=;
+        b=U8zyT+Yec9fltUVDANoZJ2iQuz13dpIEKlx8A7N6cNGX0mO3QJmoIQjZ65Fjt0MDev
+         fWn1wWXw6i75vvMd0BAkLuASZB2hd6+EQxAdzyyg0Y8d2pR8LjGIdFXTYcdE3D8Qt5Rf
+         g7eEVDBvdVDIPvOoPjAdNIXYL+rhNRhq/f5CDFbDxslelRvUn73bddmK6OtENeNTF4lV
+         w4D0nYXo4N8tmuM4kHMtKpsTCI+zqUb5qbp5T6BdsJrFp7kMj+B54PAtP423G9ogwB1S
+         bAG7LwIgHScDY1E/R4JnCNqqcer7nKLqqZyWzR4Xmjy9b4avzMJBI7LyeioLABKsnlp7
+         npbw==
+X-Forwarded-Encrypted: i=1; AJvYcCUebexEHOtv2YKWQsz/JEcnFwKatxtA6nNlzXvNby94MEsEP+PL3/5MC31jr+htvi110VArpLdkjw1oQAxSU2xxJMn2Rw==@gmail.com
+X-Gm-Message-State: AOJu0Yy59RzZKIbuRr1j6No4Qm+YOWW9wpIjkfRmxI87KA58YWA6P0yt
+	IO7TQZkqXE5Twiso9+V+bcZHWAUDtMsQVDzzzwyNDtua+86g/OUlSPw6l8w5LxltokVwyH38YvT
+	bMqOCTBM68HCASi48i4/+YmowIlU=
+X-Gm-Gg: ASbGncv30hpTrJl7mOPLrAPr3CATVaOqdUZ4cIaKlhIrHhdeWzSK1m600xq7NSIB5dI
+	D8o8T3+Wufy7+HHFqpV29l22Xz1bhx2YvGI5di3burjVMnsQGvdvpPudalCqxciLQreY0+xrdgR
+	zNktKTkF1nxRQkmNCT6N6VJEpj0y0=
+X-Google-Smtp-Source: AGHT+IHcDCt/s1OhmIHnA492mo5RHmi7nfQlUglrq6k+LfBkRjGqNLYbKYtlxBz9lVYEHuE90BoZebXv1u3ZV+hg0iM=
+X-Received: by 2002:a05:6402:27cc:
+ 4fb4d7f45d1cf-5e8a051ffd9mr7082604a12.25.1742059707469; Sat, 15 Mar 2025
+ 10:28:27 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Sat, 15 Mar 2025 18:26:44 +0100
+X-Gm-Features: AQ5f1Jp-ljNkOKKPj8-6dBjxQQFJKH7g6ezdbZX4lR8H3D9r3aLZy8IsM2gxRlA
+Message-ID: <[removed]>
+Subject: IMPORTANT YOU READ NOW..
+To:
+Content-Type: multipart/alternative; boundary="0000000000000a955f063064e2a0"
+Bcc:
+
+--0000000000000a955f063064e2a0
+Content-Type: text/plain; charset="UTF-8"
+
+*Attn:I, Mr. Luis of Vanquis Bank London, after a long meeting based on the
+search for a reliable and trusted person within your zone has been mandated
+to reach you and find out if you can be of a good tool to receive certain
+amount of money that has been here for a very long time, which after some
+findings we discovered that the owners are no more alive.We shall provide
+every document cover to make sure it shall get to you without stress and we
+shall at the end close everything including the account used in
+transferring it to you as well as your receiving account to avoid
+traces.Waiting for your acceptance message, so that every detail can be
+forwarded to you immediately.Yours sincerely,Luis Mark.*
+
+--0000000000000a955f063064e2a0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><b><i>Attn:<br><br>I, Mr. Luis of Vanquis Bank London, aft=
+er a long meeting based on the search for a reliable and trusted person wit=
+hin your zone has been mandated to reach you and find out if you can be of =
+a good tool to receive certain amount of money that has been here for a ver=
+y long time, which after some findings we discovered that the owners are no=
+ more alive.<br><br>We shall provide every document cover to make sure it s=
+hall get to you without stress and we shall at the end close everything inc=
+luding the account used in transferring it to you as well as your receiving=
+ account to avoid traces.<br><br>Waiting for your acceptance message, so th=
+at every detail can be forwarded to you immediately.<br><br>Yours sincerely=
+,<br>Luis Mark.</i></b><br></div>
+
+--0000000000000a955f063064e2a0--
+

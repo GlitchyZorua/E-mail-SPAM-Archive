@@ -1,0 +1,115 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp187949vqb;
+        Thu, 20 Mar 2025 23:45:18 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWbddbgJA7DS0xKcQdsoiesAtedZDcJNz+bFP+THa8T96mGJwkG5ruCdLdW4LiZpZYEcYZXFxnWoKKpi6eMiviqdHUFEw==@gmail.com
+X-Received: by 2002:a05:651c:212a:b0:30a:4428:dead with SMTP id 38308e7fff4ca-30d7e2a227dmr7248001fa.27.1742539517973;
+        Thu, 20 Mar 2025 23:45:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742539517; cv=none;
+        d=google.com; s=arc-20240605;
+        b=K97Hpr4icrKs1g5kSAU5IBQj3J+JXABgX4l+UZYVP9gIHrQzS3vGVjvEIehKbo7u3a
+         tBzEeku7xylm385x8RsoSDX/MvtPUyW4/6vm64BBOf61t1Cc6qHYpASb0gSLO2mgxiO8
+         JjygTxz1CUz/cBYBgoUYTVn7gu9nne7GUBCafSB3q2cuH5GN8PSeWctK4MKdyZXgJhfH
+         GXurLxc4vQzvta8vcElpO/RcDoT+UAfqjaCOeH6arc2qCkGsnHOpqKa9bvMaJ9FRe1Rl
+         D1BdTeKyDBjEy6r5XUcCFepcS7iXuo576C2eMRWoAGIcDJyGKCxnjniMbykueoHZY3Ce
+         0fXg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=4UFJ1ZOYaDhpXMaVsStWy7H0SRY5DIb9apzAIyGzulU=;
+        fh=CQHAEaunOb6/KCSha4uP3M21cNyLbIJ7/2ZR7v0EM4k=;
+        b=b5PnZo4G2pw8z1553jC3dVnbFWQ8FnGoNxr09eoycSPpOvFPJ+wTVQ/fbIglEccEld
+         Fr47OYkSV9hDw/12ucVv8ccPNoc7C+bq4sUwxMMEYcbEM1ym+d6uZGA26k4nl+jdI8SS
+         QVxmHHeIfMfYdzk1qigceWMc8wMJSdd4A8yeTBN34JqHBSeSt9FqA93l3mqbjQEGk3Rr
+         YB/lZ24RyKVy9bkeMQzGrp/IOg6unFt46pWc6r4sHQF4EGTzTcmxDz51hsWmm6Qglo66
+         du+iVbxcIhKr2ALyNHQJSSpxurdvKSHv0jd8YPvpSoYuVlv2eA5sLlkI93kNevbuDbUU
+         TiqQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="D7cXjlU/";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 38308e7fff4ca-30d7d80c37dsor1736451fa.2.2025.03.20.23.45.17
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 20 Mar 2025 23:45:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="D7cXjlU/";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742539517; x=1743144317; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=4UFJ1ZOYaDhpXMaVsStWy7H0SRY5DIb9apzAIyGzulU=;
+        b=D7cXjlU/Q4bVOqQIaOsh8+82ALuE89FQcc3jq+SDVyiJHjX9Vqabj8ZXOxmNSKAilL
+         KZvoMDXyw80rPouTEj7sL9Eix60ypCkylXwQcSV6qotuW6kI5R8XNDYTmWNv63JdMItf
+         ZB5amPg67GcZNMw18CwsVZivt8Cbj01m6oRgPuORo41aPpmvH6MuRehx0RQkihQo7IJo
+         6xH5+MuNNhsd05xmYs+YO7QmNFwPy6EzkqVvS+C708952wRgV8mOcSIyrFPLeCOl4d8F
+         xGJCW5t3QZVgoWLwaKqIQu2gzxpmUd9QxEofG30uM+IJfOUkjr6G2KhEzbi93AwXrCnj
+         prcA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742539517; x=1743144317;
+        h=to:
+         :x-gm-message-state:from:
+        bh=4UFJ1ZOYaDhpXMaVsStWy7H0SRY5DIb9apzAIyGzulU=;
+        b=vv2E7qFSlOf/+GHEUdeYfm/9pGcc8KhW5EpAWLlP0biaiceimjuvG9GcABAEmYnnAl
+         JGDBns84IPcZiVH8UDK0PJZI/66QiBNEs7NPeHJ9hD0FyWywYzLuzQdOKGv3iJbEoLE8
+         O8+fxl48HhSAyNSozDCaSDG3N/WxzJGq9LGWJjEHxEiPWJxFSH7zSZQm2lp3X/2nuVrL
+         /mY7qk5xL62LboNNDIbeZERqbqPhgcrdX1tqX8JPl9joy6zZLsUFyt4MzDvchRbSI5AP
+         JVGzq8DKYMHfDHkXY7XtbfviGI7dhbsWkOgZ2TaWwb+S0NKRtA6yYGiSowm1gfaFA/r+
+         8mbQ==
+X-Forwarded-Encrypted: i=1; AJvYcCW+8Ubm0vdv8gG/8DwPUS7Z9LqsjKQmWNku7RiOOXXrNEuprf3zUXOu1n/i96aZAaDKVfzJz127rsjK2aVFA/QqBRQ76w==@gmail.com
+X-Gm-Message-State: AOJu0YwoXbJSNaNDai259DoP2Ay9E2t7pIxLSWJKHl7g68F4I9/qO8gk
+	zIgS8lY2DkTL/MPaiIryvacoNWQ5nA0ZDyQVs6ikdGrSGseCTGakHwU3Ksco30ww7uE40d4yw+M
+	/vLbqX8hZyXP85L825l48MNzja54=
+X-Gm-Gg: ASbGncvcI0ZktbZGyXfWgwlWmHcNz4pH9yfBnBL2rf13o663yYZgcYUnu6W4EM4dZbH
+	NyO6uHaGV7/DTfBQTi4YJUawphSJBnlNcUexa6bZ2lR/g4+G019ph4Kyfj91fjr6E8KjkxhO8Xv
+	87eBdeg2xsEqIwOSc9s5jitrNHPQ==
+X-Google-Smtp-Source: AGHT+IEDQZ3XAmM8Jw60VZjzygm/zidiRoOrA89JIzZcNEbY0NsYomsoNAIIjZuxb9vR7D2NOGk0buvdXKfujsInNKk=
+X-Received: by 2002:a05:651c:b2a:b0:30a:556f:8858 with SMTP id
+ 38308e7fff4ca-30d80374480mr2046631fa.10.1742539517131; Thu, 20 Mar 2025
+ 23:45:17 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Fri, 21 Mar 2025 20:45:42 -0700
+X-Gm-Features: AQ5f1Joym0NPtTpx3LiiC6c7jHaQ4xBz-3mVW-geETB9ugibArxtOTPRO2HzpCI
+Message-ID: <[removed]>
+Subject: I am Mr. Mark Bill,
+To:
+Content-Type: multipart/alternative; boundary="000000000000ed02650630d49801"
+Bcc:
+
+--000000000000ed02650630d49801
+Content-Type: text/plain; charset="UTF-8"
+
+Good day to you, I am Mr. Mark Bill the former CEO of the LllC which I sold
+to the global oil tool. I seek for a good and profitable investment project
+around your location that I can invest with $250 Million.
+
+I will be grateful if you can advise me on any good and profitable
+investment project around your location.
+
+Best regards
+Mr. Mark Bill.
+
+--000000000000ed02650630d49801
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Good day to you, I am Mr. Mark Bill the former CEO of=
+ the LllC which I sold to the global oil tool. I seek for a good and profit=
+able investment project around your location that I can invest with $250 Mi=
+llion.<br></div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr"><div><br></div><div>I will be gratefu=
+l if you can advise me on any good and profitable investment project around=
+ your location.</div><div><br></div><div>Best regards</div><div>Mr. Mark Bi=
+ll.</div></div></div></div>
+
+--000000000000ed02650630d49801--
+

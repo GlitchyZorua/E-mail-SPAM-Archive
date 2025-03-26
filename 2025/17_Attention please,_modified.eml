@@ -1,0 +1,240 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp404320vqr;
+        Tue, 4 Mar 2025 14:13:32 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXT3ncvIc5KqyrqypSw9v9dZ+J3yqwLyD08OpbXGPWAbW8iSBzrNlSH5h1EVy8DJL32Gsh7gH+sTfRzQQ2HwJ01/j3ugA==@gmail.com
+X-Received: by 2002:a17:907:7f17:b0:ac1:ea6e:ad64 with SMTP id a640c23a62f3a-ac20d92d63amr82420466b.28.1741126412259;
+        Tue, 04 Mar 2025 14:13:32 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741126412; cv=none;
+        d=google.com; s=arc-20240605;
+        b=HhdSF7uYO2gxAycdpijSyQHfokPUTBg6Ag6S42dKaajVMLQ9GfpkWBsUwJOmLmfnLg
+         DujqcYgLIZXr+RjgUPkXecZA6GNQol0rQEwbFgKXWhz67Juu/JfuT/Xoy0FkBqEhmYHt
+         27whU90yqfylgL/bavOqN/bb6EbOb70WbWiSlOJnBj8acayc90Qi32uro2QpHQsZJZVY
+         TbR3EOoROG6MYEcmuCeDGDOUnSpxmxly8ReFJNvjmU8jWcI44+0fQlxNLSbWmj+rnIqn
+         4on0SRhNu2om/pl/1Ce7+DrbDz76dCO8sAyQpyYlQRtljD7+Az2Mi7IVw7wwzxwy/2xH
+         K6xw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=hWdR++vTg+rPOZP+fsA0d6nKCqcXJlMCJEjDSzKstKQ=;
+        fh=5S6IfYblPXkSSlL3GYYI11tv6A9MALU3uESV1jhZZvk=;
+        b=Sq8hUNpucu4tdi+lZXceTgXGPHxyk8IHc/6X55l62X8WqGJisuK/MehzpfiN4islH7
+         UgB4E1ZXjQ6jc4yvTwVMi/fJx16NdtVqmTfRkYSGhemWgk9fbO05U7VkPrYoHiAtt9xt
+         M5aM7uzzwxZ+CpKD7m/nHKE2DxBP9GmZ46zSBEP29dE0F3G1MTCpSbILejDyyx80j6Yl
+         bgA5KCtqyiE3sNffYyrpwvMQtXeO2cKH2mHtjIDKEPAsu70DLFUbtbgbi6ucwV6YuoJx
+         BTG9hkAK9KBa6/hRorVYweLYkxKe6doUWvt7CRnkJ2kw5DhywJOQvhygO1st5mg2/+hD
+         OBxg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=XIO4GC4p;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac1d895f231sor311492266b.8.2025.03.04.14.13.32
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 04 Mar 2025 14:13:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=XIO4GC4p;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741126412; x=1741731212; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=hWdR++vTg+rPOZP+fsA0d6nKCqcXJlMCJEjDSzKstKQ=;
+        b=XIO4GC4pYJJDX706lTiSb3V0Aus68u8fdXKJzaxLhji31zXd5GIYnegIhkhh7Eb+uL
+         P3AHA04Hd0jLiUleBFFHNHSSgph26H5wiqqsLoGdYYkTKMAM3FsXAkHD0w3dVS/JkC29
+         E4p9NPMFyaaKXmWwVfp0176uYfzK+gnE45BU8J3mb5qIwsbOXShDzeyPiwEey8j+/6aN
+         2AxJnEuvvSRwitkty6But/vjYGgo+GYVl6fnB6rgLLgWSYspFmaaqSDkTgclqZk31nvc
+         RumDZgh7r8HzpLhhPjEuwWcYtZDizA2aTJV9A+wFnGKpLXGHVK64SJ9XpboPWk5AY4eU
+         Ng9Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741126412; x=1741731212;
+        h=to:
+         :x-gm-message-state:from:
+        bh=hWdR++vTg+rPOZP+fsA0d6nKCqcXJlMCJEjDSzKstKQ=;
+        b=jAzNz0GvxrUHkAM1Q5tcH9VtypuFcgLpiiNyao0BD3naDuWnLmu3Fn7VQ3HNjUn6IN
+         O0YLEp85o0RSm6947mz1uvig1v0OYLgvmS7nd+HLsft3TUiHV2sDykhCMRRFBBS8p3N0
+         UIuv8jo5JF481EKgKzWs4qSxTOmcr3xxisFdY21HI5PHMSj7Dhx69nMer3SbvFMxJEXL
+         kIT9SER4dHvXVyz3O7oY0rmtrQhRaWOABPSlW6Ckqg5+++cGQujmI3XwGqak8eNe6wzc
+         T2Jq8YjrG+iWLo40KKtO7I0+RScxyhxmo6eVO59xzaF2DdNLa/O28qjxwxkmiDGsx5Tp
+         Q8HQ==
+X-Forwarded-Encrypted: i=1; AJvYcCWytHibQbNNYXyNV7KKQXERbEDggkz4kVFzuTtwkIp1ivH+A3RSNGm3NaTtP1PJ+3wJj7ya/fXo6rEejG2zlhT0um8XQA==@gmail.com
+X-Gm-Message-State: AOJu0Yx3OBPA7zUln9sTJZGaUxjALMkgAPAHtbnnUnayAWBOReAJ92rW
+	R0dI5JtVbdzGGAC8HhPvm056TbRWRltomz1+QBNV1kNaveJk82dukqXhULxt+xALeOKrRKcotKO
+	um9FDFWa7XfVb8mS761utrvWgJAg=
+X-Gm-Gg: ASbGnctQvfOwkE3iQ8qnVz+WRSoO5OBV1ZOV1bl9G/kHhGJf+gbfjyhymbOjp+QlaFs
+	yioAtP1NAc/uTwoLo4rsAj2Oku3Yw+deoE+aGfQTXgp4pqsEd0uW1n57IEEE2DcrPybkeaaJvfg
+	wDFv/60gqcCUkMltAz6fUIapYUWg==
+X-Google-Smtp-Source: AGHT+IH+1MSczmcdQR2+nU57roQtfvEMJnKPEwj4qDD5h2Kiwuz3jbPGOVWmqrUFBG9kiTVvLD58QdgkXqv4Ku8aSHI=
+X-Received: by 2002:a05:6402:40cf:b0:5de:d803:31f3 with SMTP id
+ 4fb4d7f45d1cf-5e59f4c4630mr574733a12.21.1741126411529; Tue, 04 Mar 2025
+ 14:13:31 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Tue, 4 Mar 2025 23:13:27 -0800
+X-Gm-Features: AQ5f1JoHC_6fb6OAWwPOr7N20VcJDNdZVpJRZrI2SROF6yjItbg2DxoBDWZ0E3g
+Message-ID: <CALvDiW+1m1mhw0U1VMBcTE7d9QP=[removed]>
+Subject: Attention please,
+To:
+Content-Type: multipart/alternative; boundary="00000000000044b6a2062f8b953f"
+Bcc:
+
+--00000000000044b6a2062f8b953f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+REF No: P.T/5092220.G.D17/X
+
+BATCH No: 5 1 0
+
+TICKET No: 4 0 0 1 4
+
+                                                                   AWARD
+FINAL NOTIFICATION
+
+
+
+We are pleased to inform you the Results of the SPANISH SWEEPSTAKE
+LOTTERY/INTERNATIONAL PROMOTIONAL PROGRAMME held on 22ND DC. 2024. and
+result was released lately on
+
+20TH Fabruary 2025 by 12.41 am,
+
+Your Name was attached to the Ticket number 40014 with reference numbers
+P.T/5092220.G.D17/X which consequently won in the 2ND Category. You have
+therefore been
+
+approved for lump Sum pay out of =E2=82=AC 3.187.500 (THREE MILLION ONE HUN=
+DRED AND
+EIGHTY SEVEN THOUSAND FIVE HUNDRED EUROS) in cash credited to this batch
+N=C2=BA: 510 This is
+
+from total cash Prize of =E2=82=AC842.395.000 000 (EUROS) shared among
+international and national winners in the difference Categories.
+
+Therefore your winning fund have been deposited in your name with our bank
+and will be released by our paying bank after clarifications of your data=
+=E2=80=99s
+and submission
+
+of the required documents to our paying bank. And remember that Government
+Tax can not be deducted from the winning amount because of the insurance
+bond policy.
+
+Due to the mix up of numbers and names, we ask you to keep this award
+notification confidential out from public notice until your claim has been
+processed and your
+
+fund remitted to your designated possesion, as this is a part of our
+security Protocol to avoid double claims or unwarranted participants taking
+advantage of this
+
+programme by un-authorized participants. All our Beneficiaries were
+selected through international chambers of commerce with purchase of
+Spanish product goods and
+
+commodities from Europe,Australia, Asia, and America as part of our
+INTERNATIONAL PROMOTIONAL PROGRAMME, which we conduct once every year. We
+hope with part of your
+
+prize, you will take part in our next Year high Stake International Lottery=
+.
+
+To begin your claim please contact your Processing Agent MR, FELIX ACANTARA
+the foreign services manager of GRUPO EULEN SECURITY AGENCY . on Tel: 0034-
+602 589 793
+
+Email: [removed]. for processing and remittance of your
+award winning fund to your designated possession of your choice. Remember
+that all fund must be
+
+claimed not later than 20/ 04/ 2025 After this date, all Funds will be
+returned to Ministerio de Economia y Hacienda as unclaimed fund.
+
+
+
+NOTE: In order to avoid unnecessary delays and complications, please
+remember to quote your Reference , Ticket and Batch Number above, in every
+of your Correspondence
+
+communication with your Processing Agent. Remember you have to pay 10% of
+your wining fund to your Processing Agent after you have received your
+fund. Furthermore
+
+should there be any change of your Address, do inform your Processing Agent
+as soon as possible. Congratulations once again from all members of our
+staff and thanks
+
+for being part of SPANISH PRODUCT PATRONIZERS .
+
+
+
+Yours Sincerely
+
+DR.IGNACIO FERNANDEZ
+[removed]
+VICE PRESIDENT
+
+AUTHORIZED SIGNATURE
+
+--00000000000044b6a2062f8b953f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">REF No: P.T/5092220.G.D17/X<br><br>BATCH No: 5 1 0<br><br>=
+TICKET No: 4 0 0 1 4<br><br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0AWARD FINAL NOTIFICATION<br><b=
+r>=C2=A0<br><br>We are pleased to inform you the Results of the SPANISH SWE=
+EPSTAKE LOTTERY/INTERNATIONAL PROMOTIONAL PROGRAMME held on 22ND DC. 2024. =
+and result was released lately on <br><br>20TH Fabruary 2025 by 12.41 am,<b=
+r><br>Your Name was attached to the Ticket number 40014 with reference numb=
+ers P.T/5092220.G.D17/X which consequently won in the 2ND Category. You hav=
+e therefore been <br><br>approved for lump Sum pay out of =E2=82=AC 3.187.5=
+00 (THREE MILLION ONE HUNDRED AND EIGHTY SEVEN THOUSAND FIVE HUNDRED EUROS)=
+ in cash credited to this batch N=C2=BA: 510 This is <br><br>from total cas=
+h Prize of =E2=82=AC842.395.000 000 (EUROS) shared among international and =
+national winners in the difference Categories.<br><br>Therefore your winnin=
+g fund have been deposited in your name with our bank and will be released =
+by our paying bank after clarifications of your data=E2=80=99s and submissi=
+on <br><br>of the required documents to our paying bank. And remember that =
+Government Tax can not be deducted from the winning amount because of the i=
+nsurance bond policy.<br><br>Due to the mix up of numbers and names, we ask=
+ you to keep this award notification confidential out from public notice un=
+til your claim has been processed and your <br><br>fund remitted to your de=
+signated possesion, as this is a part of our security Protocol to avoid dou=
+ble claims or unwarranted participants taking advantage of this <br><br>pro=
+gramme by un-authorized participants. All our Beneficiaries were selected t=
+hrough international chambers of commerce with purchase of Spanish product =
+goods and <br><br>commodities from Europe,Australia, Asia, and America as p=
+art of our INTERNATIONAL PROMOTIONAL PROGRAMME, which we conduct once every=
+ year. We hope with part of your <br><br>prize, you will take part in our n=
+ext Year high Stake International Lottery.<br><br>To begin your claim pleas=
+e contact your Processing Agent MR, FELIX ACANTARA the foreign services man=
+ager of GRUPO EULEN SECURITY AGENCY . on Tel: 0034- 602 589 793 <br><br>Ema=
+il: <a href=3D"mailto:
+/a>. for processing and remittance of your award winning fund to your desig=
+nated possession of your choice. Remember that all fund must be <br><br>cla=
+imed not later than 20/ 04/ 2025 After this date, all Funds will be returne=
+d to Ministerio de Economia y Hacienda as unclaimed fund.<br><br>=C2=A0<br>=
+<br>NOTE: In order to avoid unnecessary delays and complications, please re=
+member to quote your Reference , Ticket and Batch Number above, in every of=
+ your Correspondence <br><br>communication with your Processing Agent. Reme=
+mber you have to pay 10% of your wining fund to your Processing Agent after=
+ you have received your fund. Furthermore <br><br>should there be any chang=
+e of your Address, do inform your Processing Agent as soon as possible. Con=
+gratulations once again from all members of our staff and thanks <br><br>fo=
+r being part of SPANISH PRODUCT PATRONIZERS .<br><br>=C2=A0<br><br>Yours Si=
+ncerely<br><br>DR.IGNACIO FERNANDEZ<br><a href=3D"mailto:
+gmail.com">[removed]</a><br>VICE PRESIDENT<br><br>AUTHORI=
+ZED SIGNATURE</div>
+
+--00000000000044b6a2062f8b953f--
+

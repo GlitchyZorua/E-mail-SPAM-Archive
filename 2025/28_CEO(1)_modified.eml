@@ -1,0 +1,112 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp1496238vqr;
+        Thu, 6 Mar 2025 07:28:10 -0800 (PST)
+X-Received: by 2002:a05:6000:2108:b0:391:2954:de27 with SMTP id ffacd0b85a97d-3912954e0e0mr2515061f8f.45.1741274889850;
+        Thu, 06 Mar 2025 07:28:09 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741274889; cv=none;
+        d=google.com; s=arc-20240605;
+        b=PFkxxCqMrRupoGt4zHrRrB6OOqzGKBB+2rexERPNFMlUGXXY7JLiCFTGVqVDJlQ1v+
+         kW4bHfMyKou2dPciynOMJNv1C9YbdwcsZlJuvx2BVe2MydWIyTDEBeOccDB9gQYTSr8L
+         idwo8LDXyQ2aHIfZlCcUfmyHXxgiZFTpJ23V0a0sUmS5lsyLVTf3Cg4iR4VaxXU0SPs3
+         Xe71i3dlykUyeBPXhOKv114Bids15HdXNL4/NHoPLudE+6Z1XgiDlsPXAgF0wYA6bUZb
+         Qj8gTSt4FJ5YrTwmIZwzSDxquzgM+Mp40f+1levARO9dNigGoviZi/hQSaW1Y30SUCPD
+         1EGg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=WFeHykwUAaXMBluxU9B7ltgJ/w81dHTcQcGsAkaKbAE=;
+        fh=Li2m3pwh71Vnnj2ZFLkQH+gAV+FcgXHl/XDM7fCkyRA=;
+        b=SkBkIW6cQZHO2L7bM60rn+eiNErf1jwfyu0QsZcrr2qEghdTS6OUf7iTFyos5PsxPv
+         sr68EUsmoNs+UUJeFyONoUYPKd5MiRlX19btqQ5wMR8IFItDBbBFtU8tpAeAFTQeEsJU
+         hH8Q3Wd4NEqhCDF0fH7bdrdrnblQ9Mw8E2oji4kv05Qkav80HMAmgG+MoXkM0FisfsC0
+         sjSr7eERsokIStBiYcti4VKraCwu+hdQquqGir3lYriT0AZ9cpS8go7Y3Nz6G8T73KRv
+         UWr+yCivtezF/Bkl/qChpVM33j39XfZUZCtgBqmbuH5JQbl4dV+7lo0bdZ3i0cIbYghG
+         lqFw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CWyYIfHy;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ffacd0b85a97d-3912bfe02fcsor559345f8f.2.2025.03.06.07.28.09
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 06 Mar 2025 07:28:09 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CWyYIfHy;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741274888; x=1741879688; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=WFeHykwUAaXMBluxU9B7ltgJ/w81dHTcQcGsAkaKbAE=;
+        b=CWyYIfHyuyKed+NicAF2ExnkHeI9ma+GCoKTxp9r9o3Nogzaj2E8cSqcEVlPUdOURz
+         IVSBL818IWfZyGLurYLEeQiE/FFDXq0Yli9Aviw95E7m4sH4Qb7JUaSHECvzbxY/F3lc
+         PbdzWL5uL19oDohzHZmDd0GhshykrT7yb+CTFLT5Bd0RSDMW8n/NQtOftJwibJewbko+
+         GArg/JA5Vs3jt8IunDJJn/AVC4Bx5wnCJSDXTITZ1ZgItrvLiuFY01GqTcw/PCeqxRt3
+         D/XxiYrV6KjTkFOqpVAJJ9d8cCyu6mPDGHZO1NTYPzpNiuStUZihA7AisCySJxaUphCn
+         UAyA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741274888; x=1741879688;
+        h=to:
+         :from:
+        bh=WFeHykwUAaXMBluxU9B7ltgJ/w81dHTcQcGsAkaKbAE=;
+        b=jFMAcZA8QU18DB9hSvNuv8mKt8coNd73Wdh9F6C62uHzClSLBGQNTqzuBIEUEna4Tc
+         HhVBvCV6PVcNWmndHBWP1BeVoQAWYFWkTnecHKsMOpAxtePbIzYjJTBUZZL/hdQ7m1pn
+         1kJVxfi12hOxVkzAK9ttpMJAiLl86f3vIYGwzLiHqzXV11ULknuL4H0bg2uFL8pBfbk3
+         r9mgGbrnbl/S0fQ7UwViruIM7tHWuPSIDbVBZ0luwnbMNyCaLgcklAlhO2JoulH5siRJ
+         6h14kcL7auqh32iH//29E6uvwxVyHm3KFZebrmeSD9gX4k8GqhVjC+ilA2OmpJMpmHxn
+         +o+g==
+X-Gm-Message-State: AOJu0Yx02LRFR3Pcr0qiCfnfEwCIWyI7US7N6Q0ISGbssXHGZKnmMBex
+	rSFumrKVApmeD8w9cMRCVm2db7krxJ582c1XT+WjcqQMDCkGe4ND9RWIAh1CR0urNSY7uTHZlvI
+	ITprFg9BQjzFkvUR+2u/jOeZUAhDdScF+
+X-Gm-Gg: ASbGncsA7FQk1FykYrY94nSyKsg51hk+RJ7XvnM4lpUx5zp4DSgTxO/L5hcxt9erlX8
+	Dt/CCejJ5b51j26JzKguPeLTwWoTYevu75lDX2L8ZSAB3+acVIlGV5ss3C+Lm8LMZxxzB4QUbBp
+	4R8dHzIEFRpZMrWr4UG1N2sweiWw==
+X-Google-Smtp-Source: AGHT+IEGNWCTB9oyi41guvYxiosvLpg9xIunecgyp1RrQUtmqc/4iMDUT4aNzngpZUUbPb/MmNAz2V+xfmmKoDXPXn8=
+X-Received: by 2002:a5d:64e9:0:b0:391:2192:ccd6 with SMTP id
+ ffacd0b85a97d-3912192cd5fmr6426053f8f.39.1741274888433; Thu, 06 Mar 2025
+ 07:28:08 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Thu, 6 Mar 2025 16:27:53 +0100
+X-Gm-Features: AQ5f1JrCK1sOfQBStVP0pEhob1Rs8El5kWVRTU1eN3UwZ_QxnBJ1BR7km3N4erQ
+Message-ID: <CAPDmd=s2rAt_34KaaxBwpXSomyM3EZ+m5y+P7_nkRVXS=[removed]>
+Subject: CEO
+To:
+Content-Type: multipart/alternative; boundary="0000000000002e768c062fae2753"
+
+--0000000000002e768c062fae2753
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello, I apologize for this message. My name is James Entwistle and I have
+been living in Madrid for 8 years and I currently live in France. I have a
+serious illness that condemns me to death. Of course it is throat cancer. I
+have =E2=82=AC700,000 in my BBVA bank account to give to an honest and trus=
+tworthy
+person so that they can help the poor. I have a business importing car
+accessories and I lost my wlfe 4 years ago which affected me a lot and I
+could not remarry to have children. That is why I would like to know if you
+are willing to take advantage of my offer of =E2=82=AC700,000.
+
+--0000000000002e768c062fae2753
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><span style=3D"font-size:12.8px">Hello, I apologize for t=
+his message. My name is James Entwistle and I have been living in Madrid fo=
+r 8 years and I currently live in France. I have a serious illness that con=
+demns me to death. Of course it is throat cancer. I have =E2=82=AC700,000 i=
+n my BBVA bank account to give to an honest and trustworthy person so that =
+they can help the poor. I have a business importing car accessories and I l=
+ost my wlfe 4 years ago which affected me a lot and I could not remarry to =
+have children. That is why I would like to know if you are willing to take =
+advantage of my offer of =E2=82=AC700,000.</span></div>
+
+--0000000000002e768c062fae2753--
+

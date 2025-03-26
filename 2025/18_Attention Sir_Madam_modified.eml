@@ -1,0 +1,146 @@
+Delivered-To:
+Received: by 2002:a05:612c:6918:10b0:4bf:d2e8:882f with SMTP id mr24-n1csp633862vqb;
+        Thu, 13 Mar 2025 04:07:57 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWsjTXFDTeaVrn/O1TqIyjpJ1WqAPN3e4FrP9VQm4dufQXywF/YGpva9tx58Wb/EotIWN9uNQK1FCQg1Cg609h96nUYOg==@gmail.com
+X-Received: by 2002:a17:907:1b0a:b0:ac2:4bf1:44bc with SMTP id a640c23a62f3a-ac252fa0593mr3816832466b.41.1741864077247;
+        Thu, 13 Mar 2025 04:07:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741864077; cv=none;
+        d=google.com; s=arc-20240605;
+        b=JHhg2AG/OaTrBPfTK0Z7H/1XsHO2moLkXz8TtjIRoI7AH671AQHWIUBcDNsC7+r1E7
+         WgAK4cUzghZAJ6HD1rJwo2o/+oj5b3fVD9WSL9/1RDHrIQsMUH0cHsXHZXtRvHpTx0mH
+         XsznDfNpzxwvbWj9pBKJxV9PeRfRBAcvmAKrJipEsWsidKzO04G6TKzb6JwobGK39NOI
+         kmHZLoImelV56pmk9CujCGo/XYV7jX0lmO+GBKw57I7s4tHoVoD+pZaWiNr0LUXfcMT3
+         HXkJc+7h/iPFX3FHFlr49rc92yRoAhsX3ohe1aLJ5Yh0ZQZH7t+uRwvm34o6rRpLtwhW
+         9i+A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=V03Q2WkRNPiw+pQSzFacGpwcixoGo1aI3YNMnUXiOXg=;
+        fh=amTdmjySGebVAKItIrEHpy5ppH/9ur5szKezkiEz+tI=;
+        b=b7rNcIv030DP+e1qYMihQhe81A8/Na1NGhW06Nz5ej7f5sTqFgBKbpUEUfkTYoTUH/
+         T1w+mptckZbm9dmg9NjCtw9fhNy+cJqv+RFaLmmb8GplWtS6mZhXZIqRbEQ3Zsd8C9af
+         TqE0dEllCE7aR6aCNXIlXmfWVpg47mpTypAI2qmFQiqYF5yCm9AWFBtPGiTH5gtiu9iH
+         qpUNFYw+s40Cp7/SVk3FoCogeSel/KWu2gAdkdvc75dzXpDEx9dBui1tj1AWuTiFclJi
+         w7CiPQTWVRm9f4XrUCCkxbrMYxtgxkU/rJa084TGpykhxbUspBHgiBHPKKvI0A48jmuM
+         GxFQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=P4qn2n4A;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac31456bea7sor55141266b.8.2025.03.13.04.07.57
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 13 Mar 2025 04:07:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=P4qn2n4A;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741864077; x=1742468877; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=V03Q2WkRNPiw+pQSzFacGpwcixoGo1aI3YNMnUXiOXg=;
+        b=P4qn2n4AZumExA0b50/bB41xKbtHQgAIrqnSxgD3KpGhw7QpuZfTwYl6R02hL8IDLi
+         x4BPy/WHH/FTvcZkig/h6FJxoOIdI6G/7hWGsE68+cAnOF1pWQwGVRS6NZV41v26Besb
+         WoAhtHetFKjcbQobo3L2jQ4Y4Rm/XmeeKE5uRObNY3yCTBevT2gytRQyhGpqwtZKoJrV
+         mTZm5hLzcwDo8aA0N0hHWMkpdRxNgJYg/VKWEG9OtcPrvA3pvVu6pCJiY/DLVwZwrk2I
+         rAb2oEr0cXqk3iTHq6OEmvIXoc/iLE0sCvSO8cIM/8vfWPKghh8d6I+3eVvSfTQHQpSd
+         IIAA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741864077; x=1742468877;
+        h=to:
+         :from:
+        bh=V03Q2WkRNPiw+pQSzFacGpwcixoGo1aI3YNMnUXiOXg=;
+        b=G1zH/DAcBnjP0tCgn72TcYfrw5sGNanZewWJAl99lmcDMNIgzGnfWvuZwMPzKaYOrU
+         V+XoXuY5lvxBfpQ6RgQ7R5mqiq6rgPWCouN3jxXbHML40l0k55k6PVFMaEWHgO+nORcw
+         3MIUW73hwc3+WLziVENtLsKNOcUICOWMxjPrjTK6iY3+gSgih5LGT5KkGbUYsk1yqy/c
+         jVZud9/1wDHDsJ5rtYgpwvB8ZlsGtfvqlh38PY1YEbt45nFEJAWParoJr4TVXEydmDCN
+         Cs0YQ1r6Wr/RuXbwFp92bSXW05bFol2xHNP4qPVcwUOKpALtSYNuQCKMvErsDu1oT/RE
+         YOug==
+X-Forwarded-Encrypted: i=1; AJvYcCXuYCWqdSJAopAa6Q8b+/nJgZv8IJ1dE+a0ZdWyx57U5IVhtZ80uQMfD4J5aeX6FLVmLrsE4hR3hEYOh9PP1vxG8jSCjw==@gmail.com
+X-Gm-Message-State: AOJu0YxeI0axzz6BVAR5hYA+RXYGJH54JkxMx+PJbHqmjlfA/wZiYQtE
+	QpevrZy0qin7nFrxQm1fwZs6IgjhNGrOG3i+R8rHWTLvDoaxS+iEDmplgteREaDjd/vxpqfYbyg
+	qWlzF6tkv5/P5fpt81lwTobX3ygI=
+X-Gm-Gg: ASbGncvz8shrTo6WUJ9kbfnfPc4EC29nloIWyOAGXoatea0vqeT1Svw2Pl5dc/ab0p7
+	q9JsUfpL/+lUdbGr7zMrLCWL/1AnPwc130zw5h2SSdKPceH/+bSoRWL4L1i8CDqvoKdue2O0xff
+	CvbYHCucGK1jSyaJXVYu9ubGm/ziM=
+X-Google-Smtp-Source: AGHT+IFiWp8/gUWiuCinOHf2MparSNnN+qCnP/692zYQ/92TeRf9OjHizSn6zuVOvbdUOOcNzJFWqRhpfzZGR3jZwAA=
+X-Received: by 2002:a17:907:1c1f:b0:ac1:e00c:a566 with SMTP id
+ a640c23a62f3a-ac252fa10ffmr3392732566b.45.1741864076311; Thu, 13 Mar 2025
+ 04:07:56 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Thu, 13 Mar 2025 12:07:45 +0100
+X-Gm-Features: AQ5f1JpminnIeOMkyyK3-6a7D44ZWf8KgOuWrLbLIRPYwLkC7vJlEqARR9rL8fI
+Message-ID: <[removed]>
+Subject: Attention Sir/Madam
+To:
+Content-Type: multipart/alternative; boundary="0000000000008403370630375559"
+Bcc:
+
+--0000000000008403370630375559
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Sir
+
+ I have been in search of a relative to our deceased customer. I was pushed
+to contact you and see how best we can assist each other. I am Idlew
+Spencer, I work in a bank as Accounts /Audit Manager. I have an important
+business discussion I wish to share with you which I believe will interest
+you, because it's in connection with your last name and you are going to
+benefit from it.
+
+A citizen of your country had a fixed deposit with my bank, valued at
+US$18.500.000 (Eighteen Million, Five Hundred Thousand US Dollars). The due
+date for this deposit has exceeded. Sadly my client was among the dead
+victims in the Covid-19 (CoronaVirus) that killed many people.
+
+Being his personal Account officer our bank has given me the authorization
+to contact his relative for the fund transfer.It's better for us to claim
+the money than to allow the Bank Directors to take it, they are rich
+already. I am not a greedy
+person, so I am suggesting we share the fund equally, 50/50 to both
+parties, my share will assist me to start my own business and then proceed
+for charity which has been my dream.
+
+Let me know your thoughts on my proposal. Please, do treat this information
+as confidential. I have more to write to you about the details once I
+receive your urgent response and contact phone number.
+
+Anticipating your urgent response
+Best regards,
+Mr.Idlew Spencer
+
+--0000000000008403370630375559
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr">Dear Sir <br><br>=C2=A0I have been in sea=
+rch of a relative to our deceased customer. I was pushed to contact you and=
+ see how best we can assist each other. I am Idlew Spencer, I work in a ban=
+k as Accounts /Audit Manager. I have an important business discussion I wis=
+h to share with you which I believe will interest you, because it&#39;s in =
+connection with your last name and you are going to benefit from it.<br>=C2=
+=A0<br>A citizen of your country had a fixed deposit with my bank, valued a=
+t US$18.500.000 (Eighteen Million, Five Hundred Thousand US Dollars). The d=
+ue date for this deposit has exceeded. Sadly my client was among the dead v=
+ictims in the Covid-19 (CoronaVirus) that killed many people.<br>=C2=A0<br>=
+Being his personal Account officer our bank has given me the authorization =
+to contact his relative for the fund transfer.It&#39;s better for us to cla=
+im the money than to allow the Bank Directors to take it, they are rich alr=
+eady. I am not a greedy<br>person, so I am suggesting we share the fund equ=
+ally, 50/50 to both parties, my share will assist me to start my own busine=
+ss and then proceed for charity which has been my dream.<br><br>Let me know=
+ your thoughts on my proposal. Please, do treat this information as confide=
+ntial. I have more to write to you about the details once I receive your ur=
+gent response and contact phone number.<br><br>Anticipating your urgent res=
+ponse<br>Best regards,<br>Mr.Idlew Spencer</div>
+</div>
+
+--0000000000008403370630375559--
+

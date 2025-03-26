@@ -1,0 +1,168 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp1322542vqr;
+        Thu, 6 Mar 2025 02:12:52 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCWJfk67m8p4Q6DFHEHKEFiP/c1CMGgW7fzB/tOq+dATMQDmq6vOln8w0kwp2puFa1ewi6tPgN8gnqAQzWBL8U1hW/dQnA==@gmail.com
+X-Received: by 2002:a05:6871:b0f:b0:2b8:f595:2374 with SMTP id 586e51a60fabf-2c21cda3e51mr3730168fac.36.1741255972505;
+        Thu, 06 Mar 2025 02:12:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741255972; cv=none;
+        d=google.com; s=arc-20240605;
+        b=P01mna+g3LSTB6E6xvX8N7Nx6fDbldNRIaZlL1jVWeq0rbM1tn2wXksga8a6gVfLUv
+         60U/MxdJ1cyMdlfNdTV0t4ZG15ksaR6nGKk3lsXEBbyoLEqd72HATMGedrODN1g1ziYj
+         2W5BjE4iCfeiqHBUwjS6k617Rg9UZxSiBUxQce1hm2c21aGByUKd9Yw9BogM/j86KUv5
+         W9G7O/hkL2Y4+IEncMkJ2Hf4km1kx1ZNJ4CIutmV27fkF6mrFKiEcVj4HeMaZz277t5d
+         faeOmKk8jN2/lzMTa1nf5xzkDCMwnxEoqCrBKYngoFbyaDmlHL9BesVdfcZorodp1oD0
+         VzCQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=X1SJb8wKPDf0M3rcmwVbTJ00BH8b2J9LskRCmLe2WWo=;
+        fh=aVx0E0XtFsUWLexKLa8Jbg5X6nRSsLlrKDQZVd2LaXM=;
+        b=H+KGv8gQhH4DhXayd4VcZpHa3LM8CY8ya69dUqbSyRxKw5SVoUIHzSqhhIRy2hRwzX
+         4imd3tw32o1X80J9T5Xv3BC8CQ8Dac/dUXHT/z1E6vzgJXgrNBJEwPNyF4x6tcZQvH1Y
+         rV2eLKSQceahrbVV7CwYE1k/q1YXuVd0muVcmX7T7RwwOK2xKpntBkdD8vNO7sYuYFNi
+         YpYlCAGgc5WUWJnP/a5+TXWHzsAeor1MTO72OGtK9MCEyGiKVEwHixmgs/j0QHpODY5E
+         c689y2T/cCmctXIIUmEgrFJTtUK5w+SXc9PjbKlTehWG8G1UioP2AavZyM/huI4dTMI9
+         lVVw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=QIa18n8K;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 586e51a60fabf-2c2488b1be7sor329579fac.4.2025.03.06.02.12.52
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 06 Mar 2025 02:12:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=QIa18n8K;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741255972; x=1741860772; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=X1SJb8wKPDf0M3rcmwVbTJ00BH8b2J9LskRCmLe2WWo=;
+        b=QIa18n8KRLnQ+2X0c451OTwY0S3Zkz6dvofMF08762Sc6h3KsnpmST2ed4HBsmE1T4
+         gMOymfGHP1F/s9ZvrO6K1r/sWeCj3jw+0Mc7vQw1uOf9bBWP5VUaFoMVaP94gSeE5Nj+
+         X/cvEz92nC+KGVpppNAgK2pGqkVl8Iasp0H1tUJdpf3rCz8oW5AzZCm6PiFiBn+PYhgi
+         Tom1OMrn4FSHGKSTlNk2yI071r9SyeD9wQpJGRYNTcW1ym8FmZZE0cs44jivA99rL/Dd
+         cgUi3nVm12x02+oPcSwQqGkDzcU3oFcR1/1oTCiqlXo4R3kckbaBUHNT8gl51oWWVjKx
+         JVEg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741255972; x=1741860772;
+        h=to:
+         :from:
+        bh=X1SJb8wKPDf0M3rcmwVbTJ00BH8b2J9LskRCmLe2WWo=;
+        b=Ck+N0zphhkJIJHRaBg6nVAZEERfz+aVcVHmhLCjkQCxWD1+9NA9mTd/g4k0ixr+NhK
+         lgONcQrcI+3Dgrfv8ue1ExWRayGlMjQMWEIgn35/UpWyTgk+A9Gg7qDqpugJTNdCAfoq
+         wdqdRYPVREXdPRQiUn6vp4Z3VI3/vevgEF6CIMvvRer+OuES861VloTpw2oBDd6+EhxW
+         DIBVQCvZiI/pK5dn3rQSh8uDrdnKs5J6AOlN2d366CHrDuRBpL3gVYdw/rajEKnh+s4E
+         KVt4OLn7qpNkE2jV6Mm1YkVQQbtzbsEBGJH0BbXIVuqebeHG5booOjCHX3uuGW4A3WbV
+         PDZA==
+X-Forwarded-Encrypted: i=1; AJvYcCV4gv0b4ia94fFiKcwnnGlNp13YHPRmi+Kwq8fO0ei27bmzymoFV1OY913KNH6WIYoA9qxoRqUSbKYx947fB8qCPzA1vA==@gmail.com
+X-Gm-Message-State: AOJu0YzBlJdAYdLIcUvWF3kP1pHR+UaKLRQabYlKrAkXNFPflqsN/dnL
+	ooZZS8qkXRFLO+NIl8XuzGpvGj0YhPk4V4VKVit5oGCF0B7SkPWUijEYebwsSg93fvG+kvIe3yz
+	6KusJhUHScmCT3h1qrLN/GsgEorY=
+X-Gm-Gg: ASbGncsLxtwMBeLrN5j2Dzqg1yxCi+2B1z7ZjPo/YYLm5D27t/gSbXPALI1Vr7rDOOv
+	RKz7aksQhCPwdmPVyG49wdeFVNv6hsQH0L19WFwHBxqWVbOtKf7MMyRuR0LBQeC5yVa2YkoD2Wx
+	9IVxjguHCQ8oLhZhOG32+pQFz2Phc=
+X-Google-Smtp-Source: AGHT+IHJsVzsDpYP2yny0KZXZzLssjzSIibztyStJ0R0owpqHKWFWeQVcUUdAEKteoSDmIcDs6jy83fi5Y//JehnP9U=
+X-Received: by 2002:a17:90a:ba91:b0:2ff:5c4e:5ac2 with SMTP id
+ 98e67ed59e1d1-2ff5c4e5c5emr5642424a91.6.1741255474839; Thu, 06 Mar 2025
+ 02:04:34 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Thu, 6 Mar 2025 11:04:21 +0100
+X-Gm-Features: AQ5f1Jo10WvaEHbRU0lv28P1zS_eVueqLGcBfDOF5Dafp9-Nks7-6s25ybFgxIU
+Message-ID: <CAB8GgEKZX0UTgcpSE0UK9URzU+NcPLD=[removed]>
+Subject: 1ST QUARTER PAYMENT NOTIFICATION..
+To:
+Content-Type: multipart/alternative; boundary="0000000000000a8b59062fa9a20e"
+Bcc:
+
+--0000000000000a8b59062fa9a20e
+Content-Type: text/plain; charset="UTF-8"
+
+Central Bank of Nigeria,
+Plot 33, Abubakar Tafawa Balewa Way
+Central Business District,
+Cadastral Zone,
+Abuja, Federal Capital Territory,
+P.M.B. 0187, Garki Abuja.
+Nigeria.
+
+Dear Sir/Ma,
+
+Hurry now and claim your funds with the Central Bank or your funds will be
+confiscated by the wicked officials of the bank. My name is Mrs. Imelda
+Johnson, I am 42 years old, and I just started working with the Central
+Bank. I came across your file marked X and your released disk painted RED.
+I took time to study it and tried to find out why your fund has not been
+released to you.
+
+The evil officials here can never tell you the truth that they won't
+release the funds to you; instead they allow you to spend your money
+unnecessarily. I should not be a justification for inequality hence this
+message. I do not intend to work here forever. I can help you claim your
+funds if you can certify me of my security and assure me that you would
+settle with me after you have received your payment.
+
+I must do this because you need to know the status of your inheritance
+funds and cause for the delay. This is like a Mafia setting and you may not
+understand because you are far away. The only document needed to release
+this fund to you is the Original Certificate of non-residual which will be
+tendered to any of your Internal Revenue Service IRS for clearance of the
+transferred amount in your account.
+
+The only authorized and sincere person who will issue you the Original
+Documents is Dr. Babatunde Victor Adeniran. I will give you his contact as
+soon as I get a response from you. While you will be writing or
+communicating with him through phone or email, you must indicate to him
+that your file has been marked X with color Red so he will be able to
+recognize your file.
+
+Do get back to me ASAP if you are still interested in claiming your funds,
+you will be guided accordingly on the process.
+
+Yours Sincerely,
+Mrs. Imelda Johnson
+(The Confidential Secretary To The Governor Central Bank Of Nigeria)
+
+--0000000000000a8b59062fa9a20e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Central Bank of Nigeria,<br>Plot 33, Abubakar Tafawa Balew=
+a Way<br>Central Business District,<br>Cadastral Zone,<br>Abuja, Federal Ca=
+pital Territory,<br>P.M.B. 0187, Garki Abuja.<br>Nigeria.<br><br>Dear Sir/M=
+a,<br><br>Hurry now and claim your funds with the Central Bank or your fund=
+s will be confiscated by the wicked officials of the bank. My name is Mrs. =
+Imelda Johnson, I am 42 years old, and I just started working with the Cent=
+ral Bank. I came across your file marked X and your released disk painted R=
+ED. I took time to study it and tried to find out why your fund has not bee=
+n released to you.<br><br>The evil officials here can never tell you the tr=
+uth that they won&#39;t release the funds to you; instead they allow you to=
+ spend your money unnecessarily. I should not be a justification for inequa=
+lity hence this message. I do not intend to work here forever. I can help y=
+ou claim your funds if you can certify me of my security and assure me that=
+ you would settle with me after you have received your payment.<br><br>I mu=
+st do this because you need to know the status of your inheritance funds an=
+d cause for the delay. This is like a Mafia setting and you may not underst=
+and because you are far away. The only document needed to release this fund=
+ to you is the Original Certificate of non-residual which will be tendered =
+to any of your Internal Revenue Service IRS for clearance of the transferre=
+d amount in your account.<br><br>The only authorized and sincere person who=
+ will issue you the Original Documents is Dr. Babatunde Victor Adeniran. I =
+will give you his contact as soon as I get a response from you. While you w=
+ill be writing or communicating with him through phone or email, you must i=
+ndicate to him that your file has been marked X with color Red so he will b=
+e able to recognize your file.<br><br>Do get back to me ASAP if you are sti=
+ll interested in claiming your funds, you will be guided accordingly on the=
+ process.<br><br>Yours Sincerely,<br>Mrs. Imelda Johnson<br>(The Confidenti=
+al Secretary To The Governor Central Bank Of Nigeria)<br></div>
+
+--0000000000000a8b59062fa9a20e--
+

@@ -1,0 +1,106 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp2760206vqh;
+        Mon, 17 Mar 2025 22:06:19 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCU7pAcXP+7hO+dUAsv0/JcsEjrARlCWbb38/WcGjCJnvm4eU6lkJIMTKi0RrvZg+ubIGi6EMIMm+R54ZqOgPDrV2wB5bA==@gmail.com
+X-Google-Smtp-Source: AGHT+IGnhanwffXqrsxX2lkBTxMDY6rNObdydOBP0dYOn+gQAlitN2PUXO8M4nj82GnYjzuRkUa2
+X-Received: by 2002:a05:6a20:431e:b0:1f5:6f61:a0c2 with SMTP id adf61e73a8af0-1f5c12ec629mr24165397637.34.1742274378684;
+        Mon, 17 Mar 2025 22:06:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742274378; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EegaBbEhuBKqn++QaWTsM0yeDJ/M4HE9xAp32zGhxtyrgqpgxi1AcQTFiE+UnbyvZm
+         ji3kLFi+vf/mz0MIvRlFMxMw8Wu3/wsquZvWOxq/zYxc7CSQKVjet4GmEMHhzq2HphCN
+         bvFnp6guuS1y87WRRfghpc6iAXm2IoW4H9ENd6dR/PYx/IjiWInUDaALbubcbAkkQ7sD
+         IyPQ61eIH8ROUHkVcARbYHhu3LstWpJVd2S5lVOOZUgmUET/124EzWuG/9cmrLy7ksfu
+         jGuZYXKqv+8a1A2mmDO02RuYYhF0q5N+5Z3zFjlCWzv0Gq+5wpNZ8csOnU10JB2Paads
+         XrZg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=subject:from:
+         :dkim-filter;
+        bh=aigryZ/FZ/PDqzB/1Vj8Mh6OFVgdtVnnsuahiiLov34=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=AODiTOyXMangsUgjmCPmRePN4JY3p7Sw1ZWyMnvDHaCzgGcbJbFRw4HEbch253XdaJ
+         PpKXHbxVb7t/afo8c2J6AAFWr1yr56gr60SpxyE3vt59B7Y4Z3azAYTCUs07cM3lKp4K
+         05kb3eqNrZdVAN7DuK9s28eCOnSysHn5uclzxp5O56SermB4ngoWFS8/9bmWzrNe4FWL
+         usPFD4/0nI3y5ySf7ytTTum29BVsH3afhDoEZt5lOGUEXWxxUSQhNb+XsCJZaY0YLPR0
+         NQRZBcG2iGM1nZR7JyvKnRiF7FtgNjm8Bo5/mF3RTZG1xoumNk9XILPuSK6TDJhtMAPp
+         jbWg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@jaispring.com header.s=default header.b=WY14y8ha;
+       spf=pass (google.com: domain of [removed] designates 202.162.241.67 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=jaispring.com
+Return-Path: <[removed]>
+Received: from smtp33-47.netcore.co.in (67smtpout.netcore.co.in. [202.162.241.67])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-73711521b85si12700169b3a.9.2025.03.17.22.06.09
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 17 Mar 2025 22:06:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 202.162.241.67 as permitted sender) client-ip=202.162.241.67;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jaispring.com header.s=default header.b=WY14y8ha;
+       spf=pass (google.com: domain of [removed] designates 202.162.241.67 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=jaispring.com
+Received: from cf1.netcore.co.in (cf1.netcore.co.in [202.162.242.11])
+	by smtp33-47.netcore.co.in (Postfix) with ESMTP id 469B4485E0E;
+	Tue, 18 Mar 2025 10:36:08 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp33-47.netcore.co.in 469B4485E0E
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jaispring.com;
+	s=default; t=1742274368;
+	bh=aigryZ/FZ/PDqzB/1Vj8Mh6OFVgdtVnnsuahiiLov34=;
+	h=Date:From:
+	b=WY14y8haoRCWPnIIAEAMa+meJJMro5hjjOT4ADTPOW+YfqMJ+CONWmvgQDAA4Be0a
+	 UDdji2EJnNshn7gYVPvhM5/adTzxKWsqYTQCwTn++bzofV5ykWzweEqN653uvf8XYi
+	 R+tuxuaqNOTe/tqwmr92LVJgxVbaWFgDwvVeFQic=
+Received: from smtpinr1.netcore.in (unknown [202.162.231.155])
+	by cf1.netcore.co.in (Postfix) with ESMTP id A37271966A8;
+	Tue, 18 Mar 2025 10:36:05 +0530 (IST)
+Received: from webmail.jaispring.com (unknown [202.162.231.69])
+	(using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by smtpinr1.netcore.in (Postfix) with ESMTPS id 5DB0B42A1BCC0;
+	Tue, 18 Mar 2025 10:36:04 +0530 (IST)
+Mime-Version: 1.0
+X-Intloopheader: 0
+Date: Tue, 18 Mar 2025 05:06:04 +0000
+Content-Type: multipart/alternative;
+ boundary="----=_Part_221_218686846.1742274364"
+Message-ID: <[removed]>
+X-Mailer: AfterLogic webmail client
+From:
+Subject: CONTRACT SUPPLY OFFER
+X-Priority: 3 (Normal)
+X-Originating-IP: 64.74.161.207
+X-SMTP36-MailScanner-Information: Please contact the ISP for more information
+X-SMTP36-MailScanner-ID: 5DB0B42A1BCC0.A5040
+X-SMTP36-MailScanner: Found to be clean
+X-SMTP36-MailScanner-From:
+X-Spam-Status: No
+X-Cloudmilter-Processed: 1
+
+
+------=_Part_221_218686846.1742274364
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Attn:=0ACompliments of the Season!=0AI have a great business proposal to =
+discuss with you that will benefit both of us, please if you are interest=
+ed, get back to me for more details.=0AReply to my private email: mrwqard=
+[removed]=0ABest Regards=0AMr. Perry.
+
+------=_Part_221_218686846.1742274364
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8" /></head><body><div data-crea=3D"font-wrapper"=
+ style=3D"font-family: Calibri; font-size: 16px; direction: ltr"><br><br>=
+<div><div data-crea=3D"font-wrapper" style=3D"font-family: Calibri; font-=
+size: 16px; direction: ltr"><div><div>Attn:</div><div><br></div><div>Comp=
+liments of the Season!</div><div><br></div><div>I have a great business p=
+roposal to discuss with you that will benefit both of us, please if you a=
+re interested, get back to me for more details.</div><div><br></div><div>=
+Reply to my private email: [removed]</div><div><br></div><di=
+v>Best Regards</div><div>Mr. Perry.</div></div></div></div><br></div></bo=
+dy></html>
+
+------=_Part_221_218686846.1742274364--
+

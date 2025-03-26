@@ -1,0 +1,188 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp2289711vqh;
+        Mon, 17 Mar 2025 05:56:20 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUM8X8SCOAbNl9PV7+JLu6zsG19dITvQMduCKNKfAMcOuLPdqRyzAi5lOTRO1JhIpXlvUYD8Z8uqC/NfeLqfaDqnhNwYQ==@gmail.com
+X-Received: by 2002:a17:907:970f:b0:ac3:45b8:968c with SMTP id a640c23a62f3a-ac345b8aef5mr885959766b.1.1742216179787;
+        Mon, 17 Mar 2025 05:56:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742216179; cv=none;
+        d=google.com; s=arc-20240605;
+        b=e7vTtt8QQhZa/UC3BLRvkSo20RV38HLBouQK/qZoxWRMcciiNCawy78Zeh1IFPC+Ks
+         OZqYCm8GCVT9EeeeEc/axkd6E7cgK0abA9HsMr883S1raiiERrWegJ6bRxS0AeWKsAsX
+         aGLd6VYb+SqiFjGvANUy2Ykd4FZsFE4YMfKheWJaesTnoFbtf3t1FSJyw3cKa7Bm9j0w
+         mS08luauUwzIRo8ajssA24vMmfhtY+ghnOg1ruP+0rwB6Ywvzaml1X83T3i4hZqlKG62
+         dnITaJ3pDAqMFTgpk6LTON1NOBEIx2crHR1nFQk9iSdryD2JhtmGKt95R0Xi6Zlk7UJn
+         j5JQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=R9vwhWHvEfaPC2fxiUWpvWc0Bvs+3s42PlZ5k+S+ym8=;
+        fh=LucMPLaO7qIfP7v0QSPYz1s73mKgo59tbHWV9OWqh3g=;
+        b=Dehtnm2XPQ5dKSl6Xr+ciBxTwvjfcyl58gPxFjjQG4vNMhfoEKhAomNCgv2+Rn8FaB
+         pI4WdATv9+XSd6FvQgi9l5h5updiKFvjqq71FnW59sYtyX4Bp5jSzQ1YnZ/dG+Z2Y7NG
+         SnTgAU/jy5CdYpTbz21+/KhpMiV9h+8QSOzXNniF6J+xQy+IfcQdfAXijv97D1V5LqzJ
+         DoeWuzaCIKCkg8MQ/lwsJaVMtocjcu8QM6Jwud9bUYkqxaZTPzjvmYFv2+taeS9uRCkS
+         MwXVHlvdyoVn9IHyQFEbyjrDg51q8zP1N59oN3/mkXt3kLUkDMV0kXrnEy3wjM4kHj0U
+         Ncag==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WFoYt9H2;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac3149ccbc4sor459444766b.14.2025.03.17.05.56.19
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 17 Mar 2025 05:56:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WFoYt9H2;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742216179; x=1742820979; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=R9vwhWHvEfaPC2fxiUWpvWc0Bvs+3s42PlZ5k+S+ym8=;
+        b=WFoYt9H26RB3FD4K26qdYY3zrwSBKw/P0Ha8pLPMy69o/Du4PJaR6iYr2W8pVSYGCK
+         eXozUkOp5OPBrTjwo69KdI17zFtG7qizMKdc5H9noG1i9uaJNx1TVrhyxnJBLhm1O0+n
+         BficufKrazmHBabYnGcByVvdRi0KgbIlhF7Xf0CrjW7RysfD/ySDw1EkRnc8arPZ0vYd
+         lpfVx29BG7XHTkYgFBzGCbx5cFc92Xbq87WtKW8xuesidBXt7k+qBn79nzKaN3qGsiUy
+         G3L9WuExlf5GwiMYKPBx7TUNyCUUpw3JudcEV7ysHsSkqIJyROs6SiFhQIx9FPb9Wssq
+         eNVA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742216179; x=1742820979;
+        h=to:
+         :x-gm-message-state:from:
+        bh=R9vwhWHvEfaPC2fxiUWpvWc0Bvs+3s42PlZ5k+S+ym8=;
+        b=mwC7MgXBCRinsXtomQz5eKe77jo75qj2VA1qR/i4LkwfYv5UgT9Q/gQXmVoU31ts7t
+         HhNhee3s6EFd+wddDMyUofpUxeTcimCT24U6EjgFiNezPkeq4E7eD+Jsm6thEO0KeknM
+         pjUcbf0Y9jxxWZkh7ri9Sy0SCV+1q6rqkCr0tmTbcXsEQNnzHmLgqkzYjYMKHBAoIKmz
+         t8Oss5Xq8gVrjquZo5OgIUyAwp1QWbUF4a+K5vk16fjCdCS0lmXYK6VGe0X+WY8Pml91
+         GY3qYgXxxnT6l7/bnpcqqB1q3P1CUa9ccFCGUNI3X4+uUY0ZQ2n0M34MWJrl2f0Uu9Ou
+         Hq2A==
+X-Forwarded-Encrypted: i=1; AJvYcCV6TkLuQsKpz6oIENcvoLTHc9JIX60bTv15q7/AQYCqeBE1ls7GHMiS8fDv0LfeTMCqRRNMsDhx/TZKOW7KlLHh7QaetA==@gmail.com
+X-Gm-Message-State: AOJu0YzSvEGGlvZw/P7WINYsIJsQws7gxyqFoB+1nIGVC2s9Qe4Nl6db
+	B8k3uRGgGiIEllz45MPhlfuSQ/pgmIY/GqcHiT/0VC0faWQeQ7MFRiN2MVvWwsqDEUXAa4dWSw6
+	6E0hScryDE9A1Zlwr4+xt2NS6k3w=
+X-Gm-Gg: ASbGncsLXki9ub1aZg7AvvvT8K9TNLHmu1A1E5XJ2DYZhbYjzXoiVpbhpIuqCFFI5rg
+	Z4qnMtU431V9WsLRMzKjq65tiIACLXFYJLbBsd0zfWYMXwZO98Su0bDk0zZMl37OhSLHg+MIXgN
+	JrMEVUm5rqW6bMcSGNYXtreBqrgg==
+X-Google-Smtp-Source: AGHT+IESJnXTLZA75lyRb3iHcShueuaFosIb7UfKhYoAWdvdBcr8XBbRZz6Mw0Bp2tgBviEmnT2ZpYKqEHUpHVsMnuk=
+X-Received: by 2002:a17:907:9487:b0:ac1:df32:ac27 with SMTP id
+ a640c23a62f3a-ac3305085dcmr1244524766b.53.1742216178685; Mon, 17 Mar 2025
+ 05:56:18 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 17 Mar 2025 13:56:04 +0100
+X-Gm-Features: AQ5f1JoALwDb3msiF9zmjZ9M7SUepOTe8uv_EWoFB04xzR6cu6--8aMrc5gQWyc
+Message-ID: <[removed]>
+Subject: Dear Respectful Customer,
+To:
+Content-Type: multipart/alternative; boundary="00000000000073e3d3063089502b"
+Bcc:
+
+--00000000000073e3d3063089502b
+Content-Type: text/plain; charset="UTF-8"
+
+ Dear Respectful Customer,
+
+Pleasant greetings to you as I hope this message meets you well, I am Mr.
+John Fawcett, Executive Vice President and Chief Financial Officer, CIT
+Bank United States of America.
+
+You have been contacted today by my humble self, because you are listed as
+one of those whose fund (US$15.5 Million) has been trapped due to
+bureaucratic bottlenecks and you are still struggling to receive your fund
+but all the efforts to NO success till date. Please STOP and be Guided for
+your own good.
+
+The entire Management of CIT Bank wishes to let you know that your
+inheritance fund is $15.5 Million United States Dollars, which will be
+released to you through CIT Banking Online .
+
+As the paying bank here in the United States of America,we will set up an
+Online Banking and furnish you with your online account balance, which you
+will be able to make a successful transfer from your online account
+directly into any of your local bank accounts .
+
+The management of this noble bank has agreed to open an Operational Online
+Banking  Account at which you will be able to make a maximum daily transfer
+to any of your nominated bank account of your choice daily from your online
+banking account with us.
+
+All processes for Account Opening on your behalf have been approved and we
+are currently awaiting your confirmation to enable us to proceed. Be advice
+to furnish us with the necessary requirement such as information below:
+
+1. Your Full Name.
+2. Current Address.
+3. Direct Phone.
+4. Occupations.
+5. Age.
+6. Drivers License or International passport.
+7. Next of Kin.
+8. Company Name if any.
+
+Upon the completion of the above requirements, the CIT Banking Online
+Crediting Section will set up an online account for you and furnish you
+with your account balance and instructions on how you will make transfers
+directly from your online account into any of your nominated bank accounts
+in your country.
+
+Thanks for banking with us !!!.
+
+Mr. John Fawcett
+Executive Vice President
+Chief Financial Officer of the CIT Bank USA.
+1310 South Gilbert Street Iowa.
+United States of America
+
+--00000000000073e3d3063089502b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+Dear Respectful Customer,<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0<br>Pleasant=20
+greetings to you as I hope this message meets you well, I am Mr. John=20
+Fawcett, Executive Vice President and Chief Financial Officer, CIT Bank=20
+United States of America.<br><br>You have been contacted today by my=20
+humble self, because you are listed as one of those whose fund (US$15.5=20
+Million) has been trapped due to bureaucratic bottlenecks and you are=20
+still struggling to receive your fund but all the efforts to NO success=20
+till date. Please STOP and be Guided for your own good.<br><br>The=20
+entire Management of CIT Bank wishes to let you know that your=20
+inheritance fund is $15.5 Million United States Dollars, which will be=20
+released to you through CIT Banking Online .<br><br>As the paying bank=20
+here in the United States of America,we will set up an Online Banking=20
+and furnish you with your online account balance, which you will be able
+ to make a successful transfer from your online account directly into=20
+any of your local bank accounts .<br><br>The management of this noble=20
+bank has agreed to open an Operational Online Banking =C2=A0Account at whic=
+h=20
+you will be able to make a maximum daily transfer to any of your=20
+nominated bank account of your choice daily from your online banking=20
+account with us.<br><br>All processes for Account Opening on your behalf
+ have been approved and we are currently awaiting your confirmation to=20
+enable us to proceed. Be advice to furnish us with the necessary=20
+requirement such as information below:<br><br>1. Your Full Name.<br>2. Curr=
+ent Address.<br>3. Direct Phone.<br>4. Occupations.<br>5. Age.<br>6. Driver=
+s License or International passport.<br>7. Next of Kin.<br>8. Company Name =
+if any.<br><br>Upon
+ the completion of the above requirements, the CIT Banking Online=20
+Crediting Section will set up an online account for you and furnish you=20
+with your account balance and instructions on how you will make=20
+transfers directly from your online account into any of your nominated=20
+bank accounts in your country.<br><br>Thanks for banking with us !!!.<br><b=
+r>Mr. John Fawcett<br>Executive Vice President <br>Chief Financial Officer =
+of the CIT Bank USA.<br>1310 South Gilbert Street Iowa.<br>United States of=
+ America<br>
+
+</div>
+
+--00000000000073e3d3063089502b--
+

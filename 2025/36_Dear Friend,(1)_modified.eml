@@ -1,0 +1,155 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp2655346vqh;
+        Mon, 17 Mar 2025 16:42:43 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVGibrpqWtsg56IPvuBCeyIDITBPYVORcvdDBaerO0pn+OlMdqrc9MRsGlLwebCqdY2BDlG3QJryxkRGZ9k7OZMqVTc6w==@gmail.com
+X-Received: by 2002:a05:6402:5243:b0:5db:7353:2b5c with SMTP id 4fb4d7f45d1cf-5eb1f02db08mr1274247a12.11.1742254963085;
+        Mon, 17 Mar 2025 16:42:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742254963; cv=none;
+        d=google.com; s=arc-20240605;
+        b=CnKXy6Bgg5QFwSZOVpXs7FrnCHP84XsHk7j7EtbbTaBgDji9gmpJTHBbeKhsn5GJ+n
+         BTzf+cwWkP0TbrlKwgfp+O47Vkcsi1z/KaVTt4Hn4HbNfjcc+/nJsMSZo9Dq2AXu4hb1
+         omYCqI4sK8FRqEHOrZ7RHSt33klCcvsWo6oYBtw4lCfYJ1Z5hjmkX4R3Zv7YjAxBoRvW
+         DFDndA5rrApX7xkWG8sBOoXLE+DPRRh7ZLPzfwQ9Xx4ZD6hPjWpr2X9v3G1kn2jvLX5H
+         ZrcHTjQbmqBEa0McyxyN813dZLhBpeJ1ksEheb+HfG+VFnz+2wBN7KhXzaB6JBHYc0Tx
+         XEMw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=6YHOT6Z9MliDmLA8yInfLPFNIv2j0sQOY6FuE2WZ33Q=;
+        fh=ZkDVYr+vgr5ulqpThxYzzgXLlCbKbZG50Z95unzbx3o=;
+        b=iQdMBswvUOZhquYBkHISAJaEC/2VU267cisFW6Yvyvn/7Ytt47DjgNOu/+BPvfDBkn
+         DZ4X9O51WlK4gvcIHmphW/TcJXmJJswuXthkbsjxDwMY1rVLDtugHLLKKMEGBwfZT5Xq
+         JteAOqqxy4rd4ZxkPKTnzwfidz7FZvzHz8csBCu+7kCBT/ojm2fiIUmpiOHWPLRMpQfW
+         bDtGTWik9KBiIgC+8pbsJegN3OrkvBma6YzZ/RDXmxSoi0ByyL6ZWgVZJS4h0c/x5Pnh
+         JNfcgh6oUHQhOpUhygBTUxNkJXO/lJ1KrJNbhsZxQAUHWEpSdv3i8uUw7wSqVYNTsjRp
+         HuJg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=K6xdQFTd;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5e816aff57asor4748376a12.5.2025.03.17.16.42.42
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 17 Mar 2025 16:42:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=K6xdQFTd;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742254962; x=1742859762; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=6YHOT6Z9MliDmLA8yInfLPFNIv2j0sQOY6FuE2WZ33Q=;
+        b=K6xdQFTdrGbr6dlfNuMD5I/qtXc7ssOQtcsHe2QoesvBR7rWC940aUSNQdaarHlugb
+         NpDdogzLhCAVIqd5LgKyuoKfmZ+xX7n22CBbMIoeBSfJRWUWrdX9XwG1htivrNtIFRnu
+         Ifwqzpwdtbb1q5dM7ExHaYdrdZzI2hDr4xrJAiEkkrjS+C4JsPh/Yu2oRXDFuwZvnX4q
+         Hv1v+E4/xDED32cTaD55Yg8ssEczylKBxzAiAEbh8AnwN0J8QjtiCThxjbCEFev9Cbp+
+         mvzml+TgVe6B0hJHNg/db/2CCqeVB5cZmtTqLf2I/GjwaO3fs6/B4evVvZz9AcoD5gF5
+         GJuA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742254962; x=1742859762;
+        h=to:
+         :from:
+        bh=6YHOT6Z9MliDmLA8yInfLPFNIv2j0sQOY6FuE2WZ33Q=;
+        b=DcZRZcDrAM9y9j2lJOV145QvyzfO5neb4twfMR71TpSYMW2i7UBAYOicImGcgH7Bcf
+         ZauzN8m5EStycfNCJAvIbOKi9lIPmeVLHjQKsB+58IpC+c0PC9pslkXTruzTMKNtSo+O
+         S9rmGm6JZKwUX5I1fF3u8H2izxbOz5RNpbkHEngnPZ5vKZJxihotOw8Vax07Naejlbem
+         F89n59pvg0SD95MxFl+8l25KAGvGlIhzy4AxNwLczR5Xht06oScp1OC4zEr8IxUHtwtm
+         aCxlmZU/NGbA+5E4NmEpI81saiC+WiwMYEdSSuKiFs8kKGLuGhlo7dJEbIJuQZGjkuxt
+         h2Yw==
+X-Forwarded-Encrypted: i=1; AJvYcCXJ+mqwJAGIcGkAN/pQ2W8cPQhGeUC7bhSMuDtckFzcOV5z0lMXH6fpjl/UNR5z1izG8nxT3UXUGL50NXh7xWFrcdznww==@gmail.com
+X-Gm-Message-State: AOJu0YwacFP7edynqdwCFEishRbMLGENmbPjCVX9cjtPzawhUFlBQC1P
+	OfrJJqqAdi4T8aHN8v987RLBQAnGwOTOWc9dwimh9FCv/TwgJToWrEaou4tWiKYTLCq2JZi8soo
+	VZETevPHK50L+ILPT9FkNiYU5kd8=
+X-Gm-Gg: ASbGncvLHgWa8BhTQVl14bSSQc7R9t5zJwiHR9dM500roM6hqYWPe5niRjqvS+VmjjW
+	dDRQIpywwriFVykhookfaR4FhKYHxX6l8IWnoWlOHr6QqeFWjEiijvNrOpdp8fWXn4zIE2pJgfJ
+	n993NPzNI11ATprMv3VZlkMHPe/G1YCTsufbcS
+X-Google-Smtp-Source: AGHT+IGWo4nAE473dA8mppC1bh8WvYp4hT8i0gvJHgMBNQKzq9H1grm9Jbn3mFMuDAKvIYM4omHqk64OI90M1dd0598=
+X-Received: by 2002:a05:6402:254e:b0:5e7:8e5e:4467 with SMTP id
+ 4fb4d7f45d1cf-5eb1efcbef6mr1097760a12.3.1742254962267; Mon, 17 Mar 2025
+ 16:42:42 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Mon, 17 Mar 2025 16:42:31 -0700
+X-Gm-Features: AQ5f1JoZC-BngeA3iwlJqz6gvy1rq3GJ4NVzq-MxekIQ8l97wWkSMU6kySfdxzo
+Message-ID: <CAL9h=GtE_U8dWmw5pYkCyPEHu-_Fj5r1Cm3_iFe=L6+yw_2=[removed]>
+Subject: Dear Friend,
+To:
+Content-Type: multipart/alternative; boundary="0000000000002260560630925807"
+Bcc:
+
+--0000000000002260560630925807
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Friend,
+
+I got your reliable contact from your country=E2=80=99s Chamber of Commerce
+Directory and further explicit investment information about your country. I
+am Joy Helen, A retired Financial Consultant.
+
+I had a client but because of his extended royal family history, which were
+disseminated by the international media after their trial for financial
+mismanagement and impropriety of US$14.8 Billion Dollars of which their
+private companies were later confiscated and dissolved by then sultanate of
+Brunei including many business documents that were destroyed and of which I
+was the company's International Financial Consultant.
+
+ Furthermore during this unfortunate period my office managed to dispatch
+the sum of Two Hundred and Fifty Million United States Dollars (US$250,
+000,000.00) in cash under special arrangement into the custody of an
+Investment Bank here in the United Kingdom with the company Name and the
+deposits are still valid till date.
+
+Hence I seek your good assistance to partner with me so that we can
+retrieve the funds and invest it into any profitable venture in your
+country for our mutual benefit because based on my present predicament; I
+do not have the capabilities to handle the transactions alone. All you need
+to do is to contact the Bank where my office deposited the Money as my
+Representative/Partner in business and request the firm to transfer the
+funds to your Nominated Bank Account for further investment in your country=
+.
+
+Please I count on your absolute Confidentiality, Transparency and Trust
+while looking forward to your prompt reply towards a swift conclusion of
+this business transaction.
+
+Sincerely,
+Joy Helen,
+
+--0000000000002260560630925807
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Friend,<br><br>I got your reliable contact from your =
+country=E2=80=99s Chamber of Commerce Directory and further explicit invest=
+ment information about your country. I am Joy Helen, A retired Financial Co=
+nsultant.<br>=C2=A0 <br>I had a client but because of his extended royal fa=
+mily history, which were disseminated by the international media after thei=
+r trial for financial mismanagement and impropriety of US$14.8 Billion Doll=
+ars of which their private companies were later confiscated and dissolved b=
+y then sultanate of Brunei including many business documents that were dest=
+royed and of which I was the company&#39;s International Financial Consulta=
+nt.<br><br>=C2=A0Furthermore during this unfortunate period my office manag=
+ed to dispatch the sum of Two Hundred and Fifty Million United States Dolla=
+rs (US$250, 000,000.00) in cash under special arrangement into the custody =
+of an Investment Bank here in the United Kingdom with the company Name and =
+the deposits are still valid till date. <br><br>Hence I seek your good assi=
+stance to partner with me so that we can retrieve the funds and invest it i=
+nto any profitable venture in your country for our mutual benefit because b=
+ased on my present predicament; I do not have the capabilities to handle th=
+e transactions alone. All you need to do is to contact the Bank where my of=
+fice deposited the Money as my Representative/Partner in business and reque=
+st the firm to transfer the funds to your Nominated Bank Account for furthe=
+r investment in your country.<br><br>Please I count on your absolute Confid=
+entiality, Transparency and Trust while looking forward to your prompt repl=
+y towards a swift conclusion of this business transaction.<br><br>Sincerely=
+,<br>Joy Helen,<br><br></div>
+
+--0000000000002260560630925807--
+

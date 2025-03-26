@@ -1,0 +1,295 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp2354278vqh;
+        Mon, 17 Mar 2025 07:26:22 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCWW+yONSPGnGdticXtwvbgrG+2ukpMGIEIf/GplTMeWRU14wjk+WPnbTdW1g80Q2fBL0LQoFVawjsHZn1Sc2ecskr7t9w==@gmail.com
+X-Received: by 2002:a05:6808:220f:b0:3f4:1b67:f074 with SMTP id 5614622812f47-3fdee181d71mr8114139b6e.7.1742221582014;
+        Mon, 17 Mar 2025 07:26:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742221582; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ltNxEYANWtwQZwm+FOgA+iiRM+qGE5nBeuKQywIpVKs3iGBTw/9k+4o6qL+OUCuvSl
+         ZYzcdYo/13UozrG/CkWEc0A9I+wsv0djwAXGXJBLbohUlJ91vUknyY/KD/ee3RBHI9+R
+         dBs3ehAu4QBtma9w0mTBDD3tfOxcMy1jCveYQnGtPNvQMjBL5khjQCEC4YKi01t9QfS4
+         mV0UVHYFj5sulSFDVh9CVauQZYp8kDJt3RpwE8te9IM6dNBNTvssfM0IeXYtJy6UqVAJ
+         Y05vzxeqd1RLXfwqtH1wJC6JYZgqqW/56ZS3rKpqDp2hm+VyvNNnh9GOf+MB4Fn7Ykle
+         yl7g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=NhQ8gd5EbVmFwxlHku755KibhOdPX1DGRYe/NkWaV34=;
+        fh=ZojH5D4r00pZtyjyx6ty6XN8dQaMkvxPEzvmU16yRvQ=;
+        b=Ja3WbAXcwL+Krvx57Cntu191aM+xmLzFDJ/0pxbUlLUYbOBLAgQLFh2expO0IwNvmF
+         RYqEhtUJRBdRf3aZ/hHfgNFA0kGrDulZMDwbtpHDOq+qgqcb0wZ9VYWUpZ7uBPsgvnBG
+         zkHHftoZ41SZlwWQZlqit8/NcCrWRWLS1S3AuGL6st2uknSWHpHgK3yzxUZU0Xl+CgKb
+         vQZWNK23bQw39AUPd3yrdajP94YHA1LiMc7H4z6QG1cqDczo1ohkflYdbnFuL7TDFZ4r
+         /9uXzNk9e91HHr/ZLUb83U6kdmQjClv1tXg0kFNQ9L6Wl2x+CekNzJxWGLIiLxRkf9na
+         6Atw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=PlWvz1At;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 5614622812f47-3fcd403cdddsor3346030b6e.2.2025.03.17.07.26.21
+        for <[removed]>
+        (Google Transport Security);
+        Mon, 17 Mar 2025 07:26:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=PlWvz1At;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742221581; x=1742826381; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=NhQ8gd5EbVmFwxlHku755KibhOdPX1DGRYe/NkWaV34=;
+        b=PlWvz1AtSV3R1ucvBYTI3zP651H7/KvcjrFwEaroOSCZc15il6h73K5oSvUKS8tIC9
+         VPgpVWRlJtJAtQtdMnFk2DkjiYSegXG6z50MycfWucdITany1qcxAa8lhV7gQ4IWBIJB
+         7SL90eXyYbSXX3/PCBy6g/MqQPyKZ8vU8O5g3gzeQfzjzQf69Hj9Lz87egvF3b8nR+j0
+         jMTWYcdWrnxL0tNr3CZ1hOZ8vK5hRAmD88gujPQMmgwb8/+B7C7TdWS051i/MY4ae/Ol
+         qcetA2RGSJtVq6gQJK86j9/unZiWj1gRC7OPAtGtWwq8fuN5B6t/psmAHS0pX1n008oE
+         zF9Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742221581; x=1742826381;
+        h=to:
+         :x-gm-message-state:from:
+        bh=NhQ8gd5EbVmFwxlHku755KibhOdPX1DGRYe/NkWaV34=;
+        b=SeKwn5w2ScHhDxpH53O2REnnSJOsR5bCfmuZeGhsMXacUwSD3JMGElmHxwXnuQNQnX
+         k2KgdcP1S1Y26Xe2bnP1LPORId1yMmmstw3hPQJEg+nxlQC7y07NsrHYCpSk3gDrl0Z+
+         l9/owAr3uYcbnsyWCSJdCPkz8nyM0r0feSs2W7uSQITAJ91QINX7K3scI2QX8H/w/fcb
+         W7qVfHwEH1eitVtCDV8mOtAxCIUkFSQc5l9+jg+WcXdJVAhs97O8gg2UOJxg5QWmQqjL
+         c41XTpXKtxKzigr8Crpff+5xw5EVbogHGQBmAHXJzGKurV3RvYpTTliLF19ILKsmUkte
+         mFVA==
+X-Forwarded-Encrypted: i=1; AJvYcCVog5rBH9Sgj99og9iRtklJ/9mchyz7175LWpDnJIJfoCLXk55D79J0/qp9VcZnztq8Fj2wliThSwzLz/MUWje9rv533Q==@gmail.com
+X-Gm-Message-State: AOJu0YxKG3ygZel8oZj34A9A90vQvQr+7qh0z6QNZX0dHquCYLywDB/x
+	X4JxtrJLAJTsw4sebj77q3QXzwj3/LMJTa5st1RbXFbNcHEElstgBs3zKGNIUbtwrXW5jr+E4te
+	gLrU3OpEQR4Z9RvA13jq/aoPMm+U=
+X-Gm-Gg: ASbGncs/YxKWOtdBumIqjBGL/djjN/FbdZ3J7t6Vkh8/l02jfl9yfndOwi1eTbCDfZn
+	7kZVfIyOmWKuWTBUhiHiKIgg7eUhGEWN7KTFTsduV9kwo+y2ehCuyo6wfvilOAmSLJWZNzVFwl2
+	wPHYA4mfmrVg8l6Gl+FS7iRnEg9OgO+Cx8sQWk/TrvXriJ5zOffKpom1qipKk=
+X-Google-Smtp-Source: AGHT+IGXCo5+ifPTHX+TAby/Jt5qBhdmKy0WCc6nvCi5s4I3OjYCr0qMeUtN9dJtX7v9SqlV+Es6Vs3ibBDs4FtprCg=
+X-Received: by 2002:a05:6808:1897:b0:3f8:acb4:8d7b with SMTP id
+ 5614622812f47-3fdeff89845mr7549706b6e.28.1742221581559; Mon, 17 Mar 2025
+ 07:26:21 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 17 Mar 2025 14:26:09 +0000
+X-Gm-Features: AQ5f1JpB9xYz16YQ7b9DiuuLV_ca8umgDnpM1nMb2kXRTlRvY_kpWeR0DxiPiEU
+Message-ID: <CAJf=[removed]>
+Subject: Dear Friend,
+To:
+Content-Type: multipart/alternative; boundary="0000000000007d2efc06308a92c2"
+Bcc:
+
+--0000000000007d2efc06308a92c2
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Friend,
+You might find it so surprising to hear this, though it is indeed a very
+long time, I am very delighted to contact you again after a long period of
+time since last year 2024, I remember you despite circumstances that made
+things not work out as we expected then. I want to inform you that the
+transaction we're doing together finally worked out and I decided to
+contact you and to let you know because of your tremendous effort to make
+things work out then.
+Meanwhile I must inform you that I'm presently in the UK, for numerous
+business negotiations with some partners. With my sincere heart I have
+decided to compensate you with $2.5 Million Dollars for your dedication.
+Then on our transaction, you tried so much that period and I appreciated
+your effort. I wrote a cheque/check on your name and deposited it with Togo
+Courier Delivery Service Company, as soon as you receive it, Kindly let me
+know.
+Right now, Go ahead and contact the Director of Courier Service Company and
+send them the below information of yours as to enable them to post your
+Cheque.
+
+Contact person Mr. Johnson William.
+
+Email, ([removed] )
+
+You are to forward to him as follows below.
+
+Your name........Your Address.......,Your Phone number......
+
+For shipment/dispatch of the cheque/Check to you.
+
+Thanks and let me know when you contact him for my perusal
+
+Regards,
+
+Robert
+
+--0000000000007d2efc06308a92c2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+<div id=3D"gmail-:1ix" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-=
+LW-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"textbox=
+" aria-multiline=3D"true" style=3D"direction:ltr;min-height:314px" tabindex=
+=3D"1" aria-controls=3D":32t" aria-expanded=3D"false">
+<div id=3D"gmail-:du" class=3D"gmail-Am gmail-aiL gmail-Al editable gmail-L=
+W-avf gmail-tS-tW gmail-tS-tY" aria-label=3D"Message Body" role=3D"textbox"=
+ aria-multiline=3D"true" style=3D"direction:ltr;min-height:314px" tabindex=
+=3D"1" aria-controls=3D":2zi" aria-expanded=3D"false">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">Dear Fr=
+iend,</span><span style=3D"font-size:14pt;line-height:115%;font-family:&quo=
+t;Arial&quot;,&quot;sans-serif&quot;;color:rgb(34,34,34)" lang=3D"EN-US"><b=
+r style=3D"font-variant-ligatures:normal;font-variant-caps:normal;text-alig=
+n:start;text-decoration-style:initial;text-decoration-color:initial;word-sp=
+acing:0px">
+<span style=3D"background:white"><span style=3D"font-variant-ligatures:norm=
+al;font-variant-caps:normal;text-align:start;text-decoration-style:initial;=
+text-decoration-color:initial;float:none;word-spacing:0px">You might find i=
+t so surprising to hear this,
+though it is indeed a very long time, I am very delighted to contact you ag=
+ain
+after a long period of time since last year 2024, I remember you despite
+circumstances that made things not work out as we expected then. I want to
+inform you that the transaction we&#39;re doing together finally worked out=
+ and I
+decided to contact you and to let you know because of your tremendous effor=
+t to
+make things work out then.</span></span><br style=3D"font-variant-ligatures=
+:normal;font-variant-caps:normal;text-align:start;text-decoration-style:ini=
+tial;text-decoration-color:initial;word-spacing:0px">
+<span style=3D"background:white"><span style=3D"font-variant-ligatures:norm=
+al;font-variant-caps:normal;text-align:start;text-decoration-style:initial;=
+text-decoration-color:initial;float:none;word-spacing:0px">Meanwhile I must=
+ inform you that I&#39;m presently in
+the UK, for numerous business negotiations with some partners. With my sinc=
+ere
+heart I have decided to compensate you with $2.5 Million Dollars for your
+dedication. Then on our transaction, you tried so much that period and I ap=
+preciated
+your effort. I wrote a cheque/check on your name and deposited it with Togo
+Courier Delivery Service Company, as soon as you receive it, Kindly let me =
+know.</span></span><br style=3D"font-variant-ligatures:normal;font-variant-=
+caps:normal;text-align:start;text-decoration-style:initial;text-decoration-=
+color:initial;word-spacing:0px">
+<span style=3D"background:white"><span style=3D"font-variant-ligatures:norm=
+al;font-variant-caps:normal;text-align:start;text-decoration-style:initial;=
+text-decoration-color:initial;float:none;word-spacing:0px">Right now, Go ah=
+ead and contact the Director of
+Courier Service Company and send them the below information of yours as to
+enable them to post your Cheque.</span></span><br style=3D"font-variant-lig=
+atures:normal;font-variant-caps:normal;text-align:start;text-decoration-sty=
+le:initial;text-decoration-color:initial;word-spacing:0px">
+<br>
+<span style=3D"background:white"><span></span></span></span></p>
+
+<span style=3D"font-variant-ligatures:normal;font-variant-caps:normal;text-=
+align:start;text-decoration-style:initial;text-decoration-color:initial;flo=
+at:none;word-spacing:0px">
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">Contact=
+ person Mr. Johnson William.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">Email, =
+(</span><span style=3D"font-size:14pt;line-height:115%;font-family:&quot;Ro=
+boto&quot;,&quot;serif&quot;;color:rgb(31,31,31);background:rgb(233,238,246=
+)" lang=3D"EN-US"><a href=3D"mailto:
+ont-variant-ligatures:normal;font-variant-caps:normal;text-align:start;word=
+-spacing:0px;color:blue;text-decoration:underline">couriercompanyltg@gmail.=
+com</a>
+)<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">You are=
+ to forward to him as follows below.</span><span style=3D"font-size:14pt;li=
+ne-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:r=
+gb(34,34,34)" lang=3D"EN-US"><br style=3D"font-variant-ligatures:normal;fon=
+t-variant-caps:normal;text-align:start;text-decoration-style:initial;text-d=
+ecoration-color:initial;word-spacing:0px">
+<br>
+<span style=3D"background:white"><span></span></span></span></p>
+
+<span style=3D"font-variant-ligatures:normal;font-variant-caps:normal;text-=
+align:start;text-decoration-style:initial;text-decoration-color:initial;flo=
+at:none;word-spacing:0px">
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">Your na=
+me........Your Address.......,Your Phone number......</span><span style=3D"=
+font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-se=
+rif&quot;;color:rgb(34,34,34)" lang=3D"EN-US"><br style=3D"font-variant-lig=
+atures:normal;font-variant-caps:normal;text-align:start;text-decoration-sty=
+le:initial;text-decoration-color:initial;word-spacing:0px">
+<br>
+<span style=3D"background:white"><span></span></span></span></p>
+
+<span style=3D"font-variant-ligatures:normal;font-variant-caps:normal;text-=
+align:start;text-decoration-style:initial;text-decoration-color:initial;flo=
+at:none;word-spacing:0px">
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">For shi=
+pment/dispatch of the cheque/Check to you.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">Thanks =
+and let me know when you contact him for my perusal<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">Regards=
+,<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><span styl=
+e=3D"font-size:14pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(34,34,34);background:white" lang=3D"EN-US">Robert<=
+span></span></span></p>
+
+
+
+
+
+</span></span></span></div>
+
+</div>
+
+</div>
+
+--0000000000007d2efc06308a92c2--
+

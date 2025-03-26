@@ -1,0 +1,128 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp2317771vqb;
+        Mon, 24 Mar 2025 17:35:15 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHuDu6uN0SZdUe5o9NVedCPEACDuwGWWLgpenv1pVzsgOF5amWNLakBeBajNxHQcMhajHZ1
+X-Received: by 2002:a5d:5f4b:0:b0:38f:2766:759f with SMTP id ffacd0b85a97d-3997f937629mr13714413f8f.41.1742862915409;
+        Mon, 24 Mar 2025 17:35:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742862915; cv=none;
+        d=google.com; s=arc-20240605;
+        b=AG2/DpH/3v+BD1PKdMcsEQkJnmMHRLPNdfSSBsIDDkqrX1/lwOGmyKvl/znNX19K8d
+         kfi+vplnyE6eqdQ8SXbBRbJTiIdrvYsZk9ol8IEgWWkRx7feefxnxqevYG3nUCRApWZS
+         T8cQSyBXoFZZxWVlVmzFc8l6L8Wi/qfJwBfv9W57kJSuJk1dtBPMUesqaipuTIG3nN3G
+         Zk7N37DvGrmJsWQg93qc3cICmu7ToMTs9iyPNyUTPoBxZvgMqmPb0HiLadhPryTPR20q
+         HecC4wxmEHzuNWfAF89JH0gJM1WKW3pAAjTa2vXk/WKMZFqjqSAu4eC2vbU4mxP1/9bZ
+         8wmw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=references:mime-version:subject:message-id:to:
+         :dkim-signature;
+        bh=gAsWVVCimn/bYgSqozjJGllPgQXVosNlK+rmtms7ioM=;
+        fh=CCyaa74qj7D7ZdNjnUHNPt9NlolrqMjOuj/AsYq+ZV4=;
+        b=huNyFY94bmn9FTzn8iYVJs29gVs0AXfWyO8dYOTsT0dalUvtGbdL9cUbF2iZq1TpT7
+         t+UisCZCsOHxtAoKz+IDHlgdqPh0cCyee+Ko9GbneD+JEWsaQoVMq+ng3gmTWTeomyja
+         LQtO7THZ0wZA5HdFlheaueDVGqUcpApGHNeAo8zTNyhlZzWL8vombP//23BCLrYPFH6w
+         Zlz9wRXSCyU/EO68ZJFKGd4q+/3D3gx8NM6eERDRjN0hXYzZSjcitId/KbSom70y5V8W
+         hr+prPvaxhlRqF4YS88JYwjryHpeLTtL4xYcRnVerxRoSKW5B0Oycuap5g7KuWNLGTYV
+         tf5A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=gf8BMKuH;
+       spf=pass (google.com: domain of [removed] designates 77.238.179.188 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <[removed]>
+Received: from sonic313-21.consmr.mail.ir2.yahoo.com (sonic313-21.consmr.mail.ir2.yahoo.com. [77.238.179.188])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3997f9e3646si6642177f8f.754.2025.03.24.17.35.15
+        for <[removed]>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 24 Mar 2025 17:35:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 77.238.179.188 as permitted sender) client-ip=77.238.179.188;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=gf8BMKuH;
+       spf=pass (google.com: domain of [removed] designates 77.238.179.188 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1742862915; bh=gAsWVVCimn/bYgSqozjJGllPgQXVosNlK+rmtms7ioM=; h=Date:From:
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1742862915; bh=tIL2/4BOUO4Aw0qtXJLDyOd6wN8QPZRV5f0HKB74HFk=; h=X-Sonic-MF:Date:From:
+X-YMail-OSG: XQoIGQYVM1ke54baI.SVYTzOgS0DDMqQE2bagtySJwDSLeJyAlFRPf7Mhkjvfc4
+ ddzvaAHhuvp4bl08GxbS.FgBvsOQwmea8Mc2bEzl4Qs.bldAStcnsYBXAJwE0nThTaejA1Yzrvef
+ th_OqWgmm8Obw6a91VDhU_c8PYL0osxZCiE1Buu0plW2b4PATGsQ7vIzn_8xVpoiL5xHMl6ZiciE
+ dhGp6V0yG3s.2YvnMQGv1kqfe6ow5xF_aA_qZU7HnibZ3uJxPxyZsjxtm6wuFsTmA1aASZ0Rv0zB
+ lZalM4MXeCgC86hvQ.2MmX6M38pj3tSOACiPv6gSNwnS2yrsUjyqGkTg8mBe7Ec0QdQDGh_hYOVQ
+ GSBrJwlVlgElAsxlzWgzQH.Omnk0ZBs3paMSZtJ2ijM5gqSswN_U2jpI8B_ccaHzTwPBnaERFVq3
+ 0HqF_ieDIXPFrjHV.2jcFLrOfQyGfyDCrsVH5Zb1GQcQ978.BqrXRNCf4ydJ6ulpVurlAYB5Vvlw
+ 7_cJOhYY4rwN_zWnFqT2ZNEZEEaDTmC2DRu4dUN94tfzVnFrtLexeg9Gz3RLb.oLha6IR6sU6rOf
+ GXBmVcctTzeDs6oUmW4spDvASosvVFtqGmIpKU_Zg4cRLJJB95zGL3FWMe8JA2xyaB94_dkTDaFk
+ 7WN9Mpy1kGFH6iZ21E3TxJy76_yhQ7XnOFWPXE0vqVvWFuB8WmrzpRCQWpJgyJF7JyPNA1XLL3ee
+ 0r8NRxVLRPGfdgwU0LF5ylIlcHnBgOsw930PX6epVZGSEVW6l_d9xzYKv4MREbZCe2u.9HCGlnjp
+ .BWqZ3.VNCo2MFJyz6bKDkB3eyEMW6iL_OocVM0ThdBwcKKrQVNf9Zui8yjWpWHW.jxHIAdXZYMc
+ T8F.r204ihr5FfK1fDRW5H5YSbxJDxDFGSJNXEYfIS2yBvSIVbKpWGE50hx4gTvSmgF86jsdd1hr
+ 56wlbRjYUU4VfkFTX2qHm2OuTEpKQ8.B3clcK7pmdVtWOvDVbhLa24Qgj.Kewhid8ZUc6dbnW6_Q
+ LyG6pNAoQqSCCDuUTOKlO9_5gT6NP.vtUfyfsAW_m2RFIuuOww4xV6GjMMmv5ETR1vKhh9KaYmfu
+ kcQ6huyMkX21P0Z_kJ0z4Jti7WNQnHFG89.LejWvjCEFZswTF3ZZwyV4v.N4EVpATCIxHs4dOOp0
+ yrBmIjYv5rLW6BSCfMpzKSY66k31CRydcIQkp88mrGJ853XKiZX8OWPNwTkWOrE72VE0Qq7mtMvR
+ Yh2JevQjZWt1IijQefcxayZomH7xkvoimERH9N2.VERatQ.JIU79P6mVgC0IPkL95m7aotM9srsZ
+ xZvnC16ZD1ePwrMxLZ.lYnPP9NA0Y1IqtBHCPofIQANq8Sv8Qk13I.UJmoOdrJblvdw1TEqE9DI9
+ ZJj7xQ5GRMSOf4.r_ntnD0Ie4MNnCyn1VgPxLbXEmc1jiNg68A3G_9DqzOArKm0D4WgvI3Jn2EI2
+ YnC5RNrjaMUEI85m0Nt7DQbIlcA.RfVPbc2L17yPdiTFuP8hY7Keeq.dTqejf6iMkfs4PFKtLues
+ 6_WkmEELiIWsiCrvqvcsmcURyjb8EFPsfwUYaQYGaqmBaylYrNPVH2XViVC8kSfdt1s25f2J1ksJ
+ 0dP9ewjPxzqT7fwfOieaeM0HsRRJCkKZ7xfim_GbtBiZy9cnqZ2B911qWvLbiZ6bzVtORE8pI1aF
+ aIcEEynG70JhBp6STWkGsRN8AJkJOW2cgTBBsUQeYrU2BtGY8Sb.__wdSYY5UGj4LY1enl4uUFn7
+ MPjeyRf.fzHKFOgDN15i1_DbU_2yVnntIRwOFUWE27B8RhRF9TPaItFeJlkI.NjT6ZUVMzwb43a0
+ cGZqX68ity6lYAyO0rk9GyVQEmp6P9HdAHmIv8Q9nQdtvdzQqySbjDIFQbQPxs_f7nQng91UZnJ7
+ qbL2ZQoOt_SCvAwZ3j3kLxqwpqo0BWiwPr3IvSrV.JIWTn_KTfUEKXDePFPZZkLcYDVr0dBx59VE
+ icJq2CTHx3HoR2mWESrCXxcfrzxxPZ8Mt4i9u9T8QQvTMZjHAREdZUzpHoEvoFQrw3.s5vAkBrda
+ mZKzd2d1OdY.aGe0f6bchLV2uXXTBP2jYkkTKbHtaSesOyFgpvUYxLOQUNiCQUZ6EkT6PPpECYiC
+ mq7VD7uAIKyyTDyJjbhEsgvGJZzY_a3FHQvbbQuZLuBpawnU-
+X-Sonic-MF: <[removed]>
+X-Sonic-ID: d14ed309-a20f-4b73-8348-44d7d7ec9f41
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic313.consmr.mail.ir2.yahoo.com with HTTP; Tue, 25 Mar 2025 00:35:15 +0000
+Date: Tue, 25 Mar 2025 00:35:12 +0000 (UTC)
+From:
+To:
+Message-ID: <[removed]>
+Subject: WAITING
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2293641_1700062245.1742862912631"
+References: <[removed]>
+X-Mailer: WebService/1.1.23533 YMailNorrin
+Content-Length: 2274
+
+------=_Part_2293641_1700062245.1742862912631
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Carrie J. Troy=C2=A0 =C2=A0 ,=C2=A0 =C2=A0 =C2=A0=C2=A0
+In quest for business partnership P M GLOBAL CONSORTIUM Company honorably i=
+ntend to invest into Clinic , hospital or real estate business in your coun=
+try which you are to advise and execute as its foreign facilitator.=C2=A0Yo=
+u shall create ideas on how the money will be invested and properly managed=
+. It will be your responsibility to manager this investment and make profit=
+ for both parties once the money is fully in your custody. As soon as you c=
+onfirm your willingness to go into this business relationship with the comp=
+any, I will send you the details.
+
+Truely Yours
+Mohamed=C2=A0 Usuman
+
+------=_Part_2293641_1700062245.1742862912631
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"yahoo-style-wrap" style=3D"font-fami=
+ly:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px;"><div dir=
+=3D"ltr" data-setdir=3D"false"><div><div style=3D"color: rgb(0, 0, 0); font=
+-size: 16px; font-family: Helvetica, Arial, sans-serif;"><div dir=3D"ltr" d=
+ata-setdir=3D"false">Dear <span>Carrie J. Troy</span>&nbsp; &nbsp; ,&nbsp; =
+&nbsp; &nbsp;&nbsp;</div><div dir=3D"ltr"><br></div><div>In quest for busin=
+ess partnership P M GLOBAL CONSORTIUM Company honorably intend to invest in=
+to Clinic , hospital or real estate business in your country which you are =
+to advise and execute as its foreign facilitator.</div><div>&nbsp;</div><di=
+v dir=3D"ltr">You shall create ideas on how the money will be invested and =
+properly managed. It will be your responsibility to manager this investment=
+ and make profit for both parties once the money is fully in your custody. =
+As soon as you confirm your willingness to go into this business relationsh=
+ip with the company, I will send you the details.</div><div><br></div><div>=
+<br></div><div>Truely Yours</div><div><br></div></div><span style=3D"color:=
+ rgb(0, 0, 0); font-size: 16px; font-family: Helvetica, Arial, sans-serif;"=
+>Mohamed&nbsp; Usuman</span></div><br></div></div></body></html>
+------=_Part_2293641_1700062245.1742862912631--
+

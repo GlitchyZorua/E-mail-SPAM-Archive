@@ -1,0 +1,89 @@
+Return-Path: <[removed]>
+X-Original-To:
+Delivered-To:
+Authentication-Results: mail.protonmail.ch; dkim=pass (Good 2048 bit
+    rsa-sha256 signature) header.d=gmail.com header.a=rsa-sha256
+Authentication-Results: mail.protonmail.ch; dmarc=pass (p=none dis=none)
+ header.from=gmail.com
+Authentication-Results: mail.protonmail.ch; spf=pass smtp.mailfrom=gmail.com
+Authentication-Results: mail.protonmail.ch; arc=none smtp.remote-ip=209.85.221.174
+Authentication-Results: mail.protonmail.ch; dkim=pass (2048-bit key) header.d=gmail.com
+ header.i=@gmail.com header.b="cf6ZrB3T"
+Received: from mail-vk1-f174.google.com (mail-vk1-f174.google.com [209.85.221.174])
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+  key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest SHA256) (No
+ client certificate requested) by mailin048.protonmail.ch (Postfix) with ESMTPS id
+ 4ZD9914JMjz3Q for <[removed]>; Thu, 13 Mar 2025 14:38:29 +0000 (UTC)
+Received: by mail-vk1-f174.google.com with SMTP id 71dfb90a1353d-51eb1823a8eso489286e0c.3
+        for <[removed]>; Thu, 13 Mar 2025 07:38:29 -0700 (PDT)
+Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741876708; x=1742481508; darn=protonmail.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=RVy7ted129fbIxIc9pznC9NAFgE8pJ2qEgSXskVhBJE=;
+        b=cf6ZrB3T8iwpwMQQkPn3okTn03XmE71nw2Uwq9TIl0u3VC4vgqANinO769i8w3nPLB
+         xRih3os6CABQVmDgIm0sa0kCtvxovfXv9Gg2QMQDD5p5uW5ANCZHZfeGjtehwVq9QvZb
+         2DfnK1tS4kWQTOPZX2MMrq+k87JIdjt/pQ6OUehNZjG9uooUBFkID/qCFr588FUMOG5M
+         Xhm9LpHk1rJvaInP9W4FTZM73N58yVfIWY5j8l5ihM0kjBG5RpP45fnPJaQNdubTf1Zj
+         6ekjHaoO1HjMNh7sTAp+afEUI5yFXTOjzhl2NvmMElqcVrQjkHQQVm3CLnKYWwnVCwJu
+         B9tw==
+X-Google-Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741876708; x=1742481508;
+        h=to:
+         :x-gm-message-state:from:
+        bh=RVy7ted129fbIxIc9pznC9NAFgE8pJ2qEgSXskVhBJE=;
+        b=V+uvgH/4BbOrwU10BfFobYACP1l2Q+lkVyILIsUuJg6uhmOZwsdu3nFIJGkf/5pWfm
+         lmyasuK3moW5Rg3RcyHi/JWL6YwOwqDzvW3zo2yUkVvd9pN0P03hNnBHY2DbJknTHM/0
+         afTvGw6BXDPSZrMYzvQysMp9C8jMHyNEHUL2e1A/8Of4dPpewYL2lJpdGwLWKbJ26wNg
+         WRBoYmM2A36JEDDEw4KpsBTgWmGBgxe2X77Fc3uNRwdvzeD3YKmiiE61a7A7dJVMWA0o
+         8NjpPurI53GMD7NQO3zisrk3IQ+XWzPORgS1z2oXl9NaAAtLILB5ffzQyzfM5xIxD4g6
+         iRNA==
+X-Forwarded-Encrypted: i=1;
+ AJvYcCXmsVQgJlWsRgFAWmHkHVg2tcFiTWjiR33AltVtbBlGc2nn/q1F0Jhzc0NcG5Dwf58t8/[removed]
+X-Gm-Message-State: AOJu0YwAVwMD7aaRXE/kV4AkXq9admHME6LtsmjtePfbFeeExl2Jmr22
+ X4YVUgO+6QSn0XWkEp7W9IzGQ836jyr6Cn4H51QsRAsuNXRGlNwqRllWGOqSRw6TT3qUbUGsl70
+ HsJ0JxbuEy8HVgwHWxMgm3VaJHGE=
+X-Gm-Gg: ASbGncs2dr1PTVEp2PXtm+NQsAi9UJIv2/ftq7LfvGAu09prGxTwFkcBxtqVZO+jEzv
+ vD96bhgmNO7kNrSUFvIodcsnAVyvK9Zh1AsSq4jT9iekjhEctZZku2k6JyYwL5A7E8qd9fGFPba
+ 0TZXI2YK5wS03QWQliEWSDNhQsVg==
+X-Google-Smtp-Source: AGHT+IFVlx9BM6+/DfO1yitude1WbafedLIZ8dgGa+txyMAKWqUZ8EHbXd4RKaro/Dtj6M8T2aR9DOhgOQaU5tD42m0=
+X-Received: by 2002:a05:6122:54b:b0:520:420a:a07a with SMTP id
+ 71dfb90a1353d-523e414404cmr19527474e0c.8.1741876707964; Thu, 13 Mar 2025 07:38:27 -0700
+ (PDT)
+Mime-Version: 1.0
+Reply-To:
+From:
+Date: Thu, 13 Mar 2025 14:38:56 +0000
+X-Gm-Features: AQ5f1JpZip5cjJjh810nXyzD_rIFbw5YP673Bge3Eh8GtHEW2IqfZjSzuPxwtHU
+Message-Id: <CAGoz4WP0rKn_K+=_RMridaAUjpe83BprvdLE4U=[removed]>
+Subject: I am a professional bank auditor. I am contacting you for a deal to transfer to
+ you the sum of $9.6 MILLION DOLLARS belonging to a late contractor, this deal is legit
+To:
+Content-Type: multipart/mixed;boundary=---------------------541764ae1d8c1ec42803936f67b6b39d
+X-Spam: Yes
+X-Pm-Spam: 0yezJI6cihyJeYR3pi42biOpJJvbmsCIeINmhnVGd3b5JoiIjGEVRQVVMsICVmIs1NjX
+ 3l3JbIpj7SBlI0TiQ0yOiiywMUJFPz8FRFUiIkuOj5TkOOkT50cTOzNyUI3ND3S0ZLJCQE9kU1XSBR
+ JRUJ1RQT40isAjOlITJo5Ij3jILLJCfiVGZWdfd5maW6yIbeJyQE9kUjI7pltImlWdYX52hiUWbiOo
+ JRhc3f2tYZlmu09VZWdl59wZFyV8dMID0xUDMyMsIlzImt2lXc9GyuFGdCd6IwiMCpWFbb8FzfJHcW
+ bk9wiZWtiJOYlWsnFGdmLvNJpbWkmVbXZ2p0VmbWdl54yZC0DIMMIDyj5SM3a0BwiIipWFbb8FzfJH
+ cHcvJI6Yi5S4OOkT55kTOzN3QI0NTljdMLcTsh1mIWafxF0Y2vWdZclnfk9WbWZiwJtOisWlYYF20v
+ NmLWbpJVkbmp2ZXbVm0l5WdCZy4I0MDyDIMM5Sj0B3aiIiwFpbWjF9bYRXly92ZVeu91lYWijoIRVE
+ GMVVQCVsI1hImfWxaYF20vdWZncflJvcH6iIYMwSiz9FcGctFowIj1jALMkT31UDMjN3MM2OD2DUNL
+ JCyf5WdmbtFI6ZSlm5Id1yzk5WZXZiI19fXzCJLclmkiojIjNkdVkMmjTZZYBTjjJDOGOxEVmZWhWN YI1n9
+X-Pm-Origin: external
+X-Pm-Transfer-Encryption: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+X-Pm-Content-Encryption: on-delivery
+X-Pm-Spamscore: 0
+X-Pm-Spam-Action: inbox
+
+-----------------------541764ae1d8c1ec42803936f67b6b39d
+Content-Type: multipart/related;boundary=---------------------2088b1821fbd0ee80db44822394a6af6
+
+-----------------------2088b1821fbd0ee80db44822394a6af6
+Content-Type: text/html;charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGRpdiBkaXI9Imx0ciI+SSB3YWl0IHRvIGhlYXIgZnJvbSB5b3U8L2Rpdj4K
+-----------------------2088b1821fbd0ee80db44822394a6af6--
+-----------------------541764ae1d8c1ec42803936f67b6b39d--
+

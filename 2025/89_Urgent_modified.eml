@@ -1,0 +1,161 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp1740818vqr;
+        Thu, 6 Mar 2025 14:31:46 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVuK8t49zWSicgzqSwxuHoXE60TaqUKcUPt3ztUA3K8513Ni4jemKyuVjE+HqSXwnw/Djaaiz5c7UmWanLgMWUaMC+ZOg==@gmail.com
+X-Received: by 2002:a17:907:9494:b0:abf:6f87:670e with SMTP id a640c23a62f3a-ac25262f1d5mr93252566b.22.1741300306425;
+        Thu, 06 Mar 2025 14:31:46 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741300306; cv=none;
+        d=google.com; s=arc-20240605;
+        b=dfrG/xkrXSUsZS+vjqHOj9boWuQpA9VeOjxH53bpIdt3A/zuSs51sdYi7/LQV8v6vw
+         NhwuuGTCXecEP8j8Cgc/DPBTUcKxpBn4Sz6+eiV8oUMEtithOV8HwZKs6JySJ6ukuAeW
+         TXe9dWob/eKZ9OvB+1t5uqf3z5T0pyVAhhsDAMZ4BYyXVfCf2J4iBSDTwb/kUS9rl/Xi
+         RfsaJ02ep7UowqAM2/cuotrd0MV+lbSzJaIIiZExhficS6AjVm5YN3fGLIdY2uDqYnSH
+         x3taJ14orB3w8iUFOfGcWyFLG4Dk9KTwBct1R+pXNe/RPS3Io83nv1C+hs4r/NC4FCJy
+         YcDg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=ALii3XbuRU9zLncKbjZ3bDCArdxmmwBtWR5JSSK4+kM=;
+        fh=OLsY/hNomva6H0pBAxmpUTpg1AkwNGk1Pri5N4Y+X+k=;
+        b=Sy+oc4L/srSpVMbJx9GOGnySGvQgYfUod9alF97FeA/2UFQEuwWwKqqbysN+4iNNzz
+         Ok0dmCHHLnL3QwsHNy17T/aQp4Qo6cQW9T2cBH4xl5SXy/Wnc84ay9FnCUtvoCbBo+1W
+         f0WnlHZr/DQaBbp3Dv1z/ySh4oEpSlMMWLIDV8FJAyxKaLn10/7xt29wUrwBFIKc6beV
+         jCLWiZ/n3J+MSm1t5OGvNFDB40l/RJcTuavnIRT1mMU8V9rqn85ja2nqtdB5c0TBzySc
+         sQeOw47XhIqu0KplWc527MYcopEtzeUn8Fstqad/H6BWlprEljVYiQwFE6ix+SHPGkS2
+         AUXw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ZBXaN2aK;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac23948096esor140569466b.7.2025.03.06.14.31.46
+        for <[removed]>
+        (Google Transport Security);
+        Thu, 06 Mar 2025 14:31:46 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ZBXaN2aK;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741300306; x=1741905106; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=ALii3XbuRU9zLncKbjZ3bDCArdxmmwBtWR5JSSK4+kM=;
+        b=ZBXaN2aKEEW7wdXdtuDTL9Xezt96gb11p2vKjvggKaIK3pkTcXol8sn3JEQeN0JMoF
+         rb8GFXlBKSdlTwmh8YQoI408EpfjdolJLd45T4MAXeUQnLLMNoiLbboBxNbmk0HWK37q
+         kP+zBdyLPelfFXeRKFaywQ+05FAr0QkffUm28lEjzrvbVlldryTcG/jyn1nf1FrTh/7Y
+         Dr8Crd3U0CtDyaUPTHZRQkeyx/+m7N8AZ69090j7x0ICTfAjx2+n63jIHkeMi9K1010v
+         DW2nJQoAzgX6XCvMhusu/iBeMh+ywy0I4rfxeJOJlToy4Ucg7u6laMuCGqzG5ulvv9kT
+         N3TA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741300306; x=1741905106;
+        h=to:
+         :from:
+        bh=ALii3XbuRU9zLncKbjZ3bDCArdxmmwBtWR5JSSK4+kM=;
+        b=rf1RpntB8/7R7h4d7wRxJwSA/bDlCM+iLiAu2haW7xacozR/Z20yeG5LpXXPahA0cb
+         nnEDoBjPqbPnqEgVdleflcUDsU2My9GmhMxzqGMMWrrJsZuc3UvU5yu9/xP87WfLqgl+
+         9ThmB6q2LXMRnj5nCgwP5WcL1jVrTfbs0MGoSPVIuiJQSPqX3pKDKYNUTyby6jfp8sfl
+         xtsLzws+/ZtYwVDVsrhmGRVBlYftlIbnjWfuerBVigpOBuU4c2mR9yojZg67c2tewFb7
+         G0gfyE7U/rmIFn+G2P0qZgo+R5FDj//+4yGCxirS4s5hzphvvgcTAjj6lILrZB8lre7a
+         AxpA==
+X-Forwarded-Encrypted: i=1; AJvYcCXF7QzYYDmYjvR3CsfKF8IHGfsKsm7q7lqMFPnNF18a3XEYq2oAMETjFkOLn8K90gNzBxe3/3Doy+jluTYCjWuOcMhbHQ==@gmail.com
+X-Gm-Message-State: AOJu0YxAWv2pnlu7ShmkuHhotvXwkVVsOgb3rJCqiRc26uLYRQg8tHNV
+	Y8bFNktB1p1qCDYehimesMjMT2vOwoqdfqIaBf2haY9enI0LbNiNVVzf2iib9OkfA5HtSTpgwMd
+	ijvU6+soI/XltFL337ODaYCHPng==
+X-Gm-Gg: ASbGnctcgn6IW1nvcRQCXmDifS2VFU7QFoUkEr/esIcF0P4isWMzwh4G55jyrsQkT98
+	HoNcPupl95H49fEahI+dQ97cJChDkeU3rsXWQFIw9Rxi4H5DHrP0dNeV168zllJVHlwH98fLaLR
+	UeCrI61DiEbcnOQEral04GDGOJ
+X-Google-Smtp-Source: AGHT+IEsGpvYuQR6OnH0UOJUTq9XEeD5ckwZkGcMk452sNgAoEh2zOrxpNcua6ZXCY6wn9oR7YgbUCq+iCCkQt2u+UQ=
+X-Received: by 2002:a17:907:86a8:b0:abf:514a:946a with SMTP id
+ a640c23a62f3a-ac2526db875mr80822766b.28.1741300305470; Thu, 06 Mar 2025
+ 14:31:45 -0800 (PST)
+MIME-Version: 1.0
+From:
+Date: Thu, 6 Mar 2025 23:31:34 +0100
+X-Gm-Features: AQ5f1JqrP76SAFxGKxsSPZMH4-ldi2zGVqIX6PhREO1TTiOOgaWnRg4z5Au0Zpw
+Message-ID: <CAJFERiiSV7i5pafgY+EB8-9fE=[removed]>
+Subject: Urgent
+To:
+Content-Type: multipart/alternative; boundary="00000000000027b131062fb412b3"
+Bcc:
+
+--00000000000027b131062fb412b3
+Content-Type: text/plain; charset="UTF-8"
+
+Greetings,
+
+I am writing to you based on a request by an investor who is in urgent need
+to relocate his assets overseas through your assistance, I am an
+attorney/investment adviser here in Kenya.
+
+I am representing the interests of very wealthy investors mainly from East
+and North Africa. Due to the sensitivity of their position they hold in
+their organization and the unstable investment environment of their
+countries, they prefer to channel/move the majority of their funds into
+more stable economies and developing nations where they can get good yield
+for their assets and its safety.
+
+This reserved group of individuals, whom our firm personally holding their
+assets instructed and approached us with a mandate to seek for a firm or an
+individual such as yourself who has the experience and capacity to receive
+their assets and re-invest it into a good lucrative investment. They will
+be interested to seeking means of expanding and relocating his business
+interest in the following sectors: Banking/Finance, Real estate, Stock,
+Resort/hospitality industry, Mining, Transportation, Health Sector and
+Farming, Airline, Shipping, Oil and Gas, Energy Projects and so on or any
+sector you may recommend will be considered.
+
+I have been given the full authority to negotiate with you on the working
+Terms, as long as you can demonstrate that you have the capacity to handle
+the project. I can be reached on the phone, but will like to keep the
+number discrete for now, until when I read from you. Please treat it as
+urgent.
+
+please reply to my private email with your contact details to enable me
+reach you with the full details, email:
+
+[removed]
+
+Best Regards,
+Frederick Benarld.
+T&D GROUP INVESTMENT
+BUSINESS/PERSONAL REPRESENTATIVE.
+EAST & WEST AFRICA/EU, ASIA
+
+--00000000000027b131062fb412b3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Greetings,<br><br>I am writing to you based on a request b=
+y an investor who is in urgent need to relocate his assets overseas through=
+ your assistance, I am an attorney/investment adviser here in Kenya.<br><br=
+>I am representing the interests of very wealthy investors mainly from East=
+ and North Africa. Due to the sensitivity of their position they hold in th=
+eir organization and the unstable investment environment of their countries=
+, they prefer to channel/move the majority of their funds into more stable =
+economies and developing nations where they can get good yield for their as=
+sets and its safety.<br><br>This reserved group of individuals, whom our fi=
+rm personally holding their assets instructed and approached us with a mand=
+ate to seek for a firm or an individual such as yourself who has the experi=
+ence and capacity to receive their assets and re-invest it into a good lucr=
+ative investment. They will be interested to seeking means of expanding and=
+ relocating his business interest in the following sectors: Banking/Finance=
+, Real estate, Stock, Resort/hospitality industry, Mining, Transportation, =
+Health Sector and Farming, Airline, Shipping, Oil and Gas, Energy Projects =
+and so on or any sector you may recommend will be considered.<br><br>I have=
+ been given the full authority to negotiate with you on the working Terms, =
+as long as you can demonstrate that you have the capacity to handle the pro=
+ject. I can be reached on the phone, but will like to keep the number discr=
+ete for now, until when I read from you. Please treat it as urgent.<br><br>=
+please reply to my private email with your contact details to enable me rea=
+ch you with the full details, email:<br><br><a href=3D"mailto:
+[removed]">[removed]</a><br><br>Best Regards,<br>Fre=
+derick Benarld.<br>T&amp;D GROUP INVESTMENT<br>BUSINESS/PERSONAL REPRESENTA=
+TIVE.<br>EAST &amp; WEST AFRICA/EU, ASIA</div>
+
+--00000000000027b131062fb412b3--
+

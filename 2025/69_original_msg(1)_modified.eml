@@ -1,0 +1,152 @@
+Delivered-To:
+Received: by 2002:a59:c167:0:b0:4bc:e395:821d with SMTP id e7csp2031985vqr;
+        Fri, 7 Mar 2025 03:25:28 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCXgZxAouX+6ZLS6EUNEQ3PzRPSRxEfRMALA7RxgyAb4Ofu11tRoR1ohjOMsI61lMHQlDSJ3yN8yN8Tvt6nnJP3CzyBFRA==@gmail.com
+X-Received: by 2002:a17:907:61a2:b0:ac1:e759:fbf2 with SMTP id a640c23a62f3a-ac2525ba5a6mr247724666b.7.1741346728435;
+        Fri, 07 Mar 2025 03:25:28 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741346728; cv=none;
+        d=google.com; s=arc-20240605;
+        b=jcolyv9jgMnxx48g4k3HNx29Tj+7uFq/xSYnz7CCUHIBIoLCG18EDwHkQZnpvHF8ib
+         AIM2HrkZP/FknuIb0q/6wkzx5ml6Ct7jvTzo7uS3Waiv3wR9RHlNU/Yd+Pwrc0uEShBt
+         uZAqpVXQaeL2Eb3RQrdF42QuAvPZrl1rz2DDHu8XV146orWFAAFCdIFMjV1ymGElYDF1
+         j0lHHgt+LUFnoFWQMVFqU0s305e2AKzWrNS8vgeaF58D1qlpXpVRAWVJJHVLaBCCgHKX
+         pf4qjNAKmxxLXpLfwL5BqEK7SkPXbshkSQpmd2MXXUZW3OHBo65BuOCDaKNoAgtvPePk
+         pbjA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=rYZ0GG7GkQbhSgHzLx7xWsfLqD2VA0KztDRAk+1EqPM=;
+        fh=nKJlZfApkAPEkCUCMeEGQGOCf4lqCcycsfXUPLTexSw=;
+        b=GEmdrdzqJxbV1pmb6YlE8+JWtkIR/D0hjFw8j7ICco5J/bliwKz1AKjLu+ACVUgMZ5
+         9L9XtOus1AsnNtcA5OAZOYjuvzx1Tka0jDYxOANqm9tbkLatzQAwO8sYG29WHhvjmYY7
+         trQLGxBOIPcJrl2qMZbbdyIJjoQg4JR1a6ToFPI161vFxrjQRehSkV47OqGlXzsSb1Mh
+         AnAe3g24EGjor+Gs1C5+82E9mo/cSSwJTSJq4UCxP/wfDxw3fbEuOUwcdehSHrPFWIR6
+         ZCPMiBjrLcDYbFlZR5O5BHHwnnul4H9ik+adjp5ZtajzpP9b+ws+ZKmmRJ1F8yRIJvwd
+         Fa6g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Uj0BPHws;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac23974fbcdsor209900566b.16.2025.03.07.03.25.28
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 07 Mar 2025 03:25:28 -0800 (PST)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Uj0BPHws;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741346728; x=1741951528; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=rYZ0GG7GkQbhSgHzLx7xWsfLqD2VA0KztDRAk+1EqPM=;
+        b=Uj0BPHwsEZwt/wpyZqPKTIvBdtil0bRyP8B5cCoqNua3KI11DSMwp5cZyUFeWVhSPa
+         pK4Ti2M/qnQv6QFyqFnzdy3ANEwx1/hWEcIjSnjeV3AAkiBRIDcAqC9dnZOed0OorfFQ
+         8MhBPoLDoX03BhgxYP0I504KBY1DLNCYpqjboF528t2ODQQRGhyo/ydA/+3Ux2Anah+V
+         /n6G+VWcxnVjInPYO7LJSFnCo7eO5/IbFGeRVo4q65bJtmiXJzc3xizekhVmhhFcfr6f
+         nXz5nGMYE/YVDKKWzTkf7s2zN60lur4zOwXrca5YJc9XsiHzEWjO9pSWw9DUbNbcx49d
+         ETmQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741346728; x=1741951528;
+        h=to:
+         :x-gm-message-state:from:
+        bh=rYZ0GG7GkQbhSgHzLx7xWsfLqD2VA0KztDRAk+1EqPM=;
+        b=CztXdXOkKIdrtOAZkcP/qawPqzp9KjzTOqFbT7FzLy6cadQF5tXnrapN7BvNQdx5J7
+         YNkMKabQqf5Z6spzvKcb8gwZBXXxbgD9M4l/f/JndlF9enHZw6jOmOUOpGromWYNPC3M
+         XqDiFpC8chqnPi8978jtL842Hl+7eep14cBup43SaG63RxVRtlYnaO0q2qRLbJ0oTjJ7
+         ZrhcB693TwQj8teZTsNDkhQGxGFhazw/wr34lDxUuWxunwW2Wg9PHg+KP5/d0MbLdwJW
+         xQ9yPCCU6awcUhTiQ7rNrt2wQtwTk7rkvJ3Ky1ujeW+38/Vf/0r/vk2uPsqFY2vXxVf8
+         uK3g==
+X-Forwarded-Encrypted: i=1; AJvYcCUJs11EyTGOVj+EMdC99aXj+hj6O62+qJhuNa+v3vCew2gQ5P86Hpp62+apeXELjuBVo6d+9bNGAO9rUT1Wg63AkcPjPQ==@gmail.com
+X-Gm-Message-State: AOJu0YximpSHDwIHrg7gSXjBCZ6NseXb0UBmjoxPonB/KFECgOA4cCbc
+	i2upuKpFrvLYX6BliHjTVUpOia+8QjVhz+pF8it3fsyyyotgnevU+feQiu5taXmcERqLVuAZZNs
+	lZZvXDsZJcUVyDciEi2VHQs+PdVM=
+X-Gm-Gg: ASbGncsX8N6tp5HSrNx02wq4VVlARMSZLx9tuVq6nTXkTbEmp0rDUnBuBJ7+n3Jk9Vr
+	62b7pQCCM7oo43m9WA4gNCedTOos6g+IVfMqn3T6oZ5Y0jZxKJOc1n3luUFOA1cDHs35fQHeHCA
+	hzaQbrTLqHjZbDYE+c0SRMOPBgfw==
+X-Google-Smtp-Source: AGHT+IEaHPhsPXaTyKV+uqrsHGpn7zKASun6Un9wfs5kHcDkl9EpeSPv+JvIZ3PLkfau8yxiy7tLATGEYK+070B3pj4=
+X-Received: by 2002:a17:906:794f:b0:ac2:51ac:35ee with SMTP id
+ a640c23a62f3a-ac2525b75d1mr307834666b.6.1741346727192; Fri, 07 Mar 2025
+ 03:25:27 -0800 (PST)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Fri, 7 Mar 2025 03:25:00 -0800
+X-Gm-Features: AQ5f1JoVjegtkk1-MLzRdzA7PP6ceRkpWqO_rkkBMQuaCBc4t-na6ZaFegJ90C0
+Message-ID: <CAN22OEF+nTvACxd=[removed]>
+Subject: 
+To:
+Content-Type: multipart/alternative; boundary="0000000000001aefde062fbee1a3"
+Bcc:
+
+--0000000000001aefde062fbee1a3
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+Dearest,
+
+It is with profound respect for your time, that I plead to state the
+following few lines for your kind consideration, and I hope you will
+spare some of your valuable minutes to read the following appeal with
+sympathetic mind and understanding.
+
+I am Mrs. Ashling Faris I am 58 years old, I am dropping this short
+message from my sick bed after been diagnosed from a long time cancer
+of the blood.
+
+I want to transfer US$4.6million US dollars to you on charity for you to
+help distribute to the orphans
+
+From all indication my condition is really deteriorating, and my
+doctor has courageously advised that I may not live beyond the next
+two months, this is because the Seriousness of the cancer has reached
+a critical stage.
+
+I am looking for a trust and Good someone to confide in.
+
+I have a fortune/Project I want to entrust into your care. Please
+respond to me if you will promise to see that my last wish is been
+accomplish to the Glory of God and humanity.
+
+As soon as I hear from you, I will give you more information on this.
+
+May God bless you real good as you write to through my private box.
+
+[removed]
+
+Mrs. Ashling Hamz
+
+--0000000000001aefde062fbee1a3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><br></div><span class=3D=
+"gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_sign=
+ature" data-smartmail=3D"gmail_signature">Dearest,<br><br>It is with profou=
+nd respect for your time, that I plead to state the<br>following few lines =
+for your kind consideration, and I hope you will<br>spare some of your valu=
+able minutes to read the following appeal with<br>sympathetic mind and unde=
+rstanding.<br><br>I am Mrs. Ashling Faris I am 58 years old, I am dropping =
+this short<br>message from my sick bed after been diagnosed from a long tim=
+e cancer<br>of the blood.<br><br>I want to transfer US$4.6million US dollar=
+s to you on charity for you to<br>help distribute to the orphans<br><br>Fro=
+m all indication my condition is really deteriorating, and my<br>doctor has=
+ courageously advised that I may not live beyond the next<br>two months, th=
+is is because the Seriousness of the cancer has reached<br>a critical stage=
+.<br><br>I am looking for a trust and Good someone to confide in.<br><br>I =
+have a fortune/Project I want to entrust into your care. Please<br>respond =
+to me if you will promise to see that my last wish is been<br>accomplish to=
+ the Glory of God and humanity.<br><br>As soon as I hear from you, I will g=
+ive you more information on this.<br><br>May God bless you real good as you=
+ write to through my private box.<br><br><a href=3D"mailto:
+x.com" target=3D"_blank">[removed]</a><br><br>Mrs. Ashling Hamz=
+</div></div>
+
+--0000000000001aefde062fbee1a3--
+

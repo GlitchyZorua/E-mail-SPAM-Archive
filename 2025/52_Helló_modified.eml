@@ -1,0 +1,205 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp2907035vqh;
+        Tue, 18 Mar 2025 04:14:14 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVrKsjuwmCIp7FSUupcSpxE7rI2HQ1u5c91J2mGXpjrrk5ltqp1e6twu7tH1MFY9q4k34ajDnvti33ilqQM/+Ay7Zgp7A==@gmail.com
+X-Received: by 2002:a05:690c:c96:b0:6ef:a53e:8e3e with SMTP id 00721157ae682-6ff45f67222mr199141167b3.9.1742296453893;
+        Tue, 18 Mar 2025 04:14:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742296453; cv=none;
+        d=google.com; s=arc-20240605;
+        b=a6uEfJSJqBAjF5x1cWjHELaKEj8RDz43TBAQs/MT1f5hmouJJzvhG5ti+W29AlZy9w
+         0J31BXZ03ucN4JbuiajLe0Zlg70e0Xud1JMcDeuvoanq+cmIvOyTeNyEJ6LK6EV+GwMf
+         bF2mjpIy9eu8yqZxLP2M3BmyKotYdv1NcXh44w9heSdb9beSIxjTkiLw2vc0jZnVgYa/
+         nZ4F8SoQy+r0RiV3M2EC1W5Sd8PhCGT8dB1sFXThJIuuM6fRri4xMTrKlDqvbL8z8FU9
+         +o+ue3VMnBGEF3jutd+vR3skKq3bqJFhVm3OHILlCXN9vFtBDvLyB4pbWjD5lmNSIugA
+         RtNA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :mime-version:dkim-signature;
+        bh=Qao5EbhFKrSagTluQ/ZlM5Be5uWbhkESlP1fwlBvQvo=;
+        fh=iW61BhKzIPN53We3qTcCmtuNvGqM07zcAk8ULYg0cv8=;
+        b=J5KTYzV2NnTB0bDtA+jRgUHK6+zFlVZsFk5rS1aGS4iVhiJ5Pea2aLAd801wOE6PvM
+         7qoafx8i4tSz3nUe5PMBbCm847rW8Q7AnKE8UzCiTzlNvLbljQ8M3Z2JKwSxzLX3ncoy
+         CyXG6RzDTWJ7QIEJnd4vLN/nvGGU3eC4cQyVZCIko/PKBpbaOlSMlF0MZXUDQc8zH99i
+         3r28HGNOmy/uEE8qGT7rmGJABW2AT3nzvH22BjDwPKfNEAXR/8EkTNq752HI+rILpGiQ
+         lT62qrYo6PrSFKGd1QT5fKrXS/Fg+6JJ7n3soamRvbNZuCen4Ziil5yXHBKJsJOIjRRt
+         XZQw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=D1rKQVwd;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 00721157ae682-6ff3283d960sor64947137b3.3.2025.03.18.04.14.13
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 18 Mar 2025 04:14:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=D1rKQVwd;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742296453; x=1742901253; dara=google.com;
+        h=to:
+         :mime-version:from:
+        bh=Qao5EbhFKrSagTluQ/ZlM5Be5uWbhkESlP1fwlBvQvo=;
+        b=D1rKQVwdgWQVyQChLPNBRN3VK0dTdLbR+nIhnM7NpO+DqfyXjt6Na0GoeqCZsiYLMV
+         pbaRVOxuTNyMHZhzGyiWNzjD02MqMaaLZaYzWBOQMjJesDryS1jd3mV27ruYSo6QZyIP
+         TiA/NvO0RSy5q7GmPzNjmVwcLoQzGaE25OELbzNS8TqXYdTzUKM94Ue2fivSUZ+QzOwu
+         p78sO3XlXDClmy7ZKYEXojddB13gFd1yhw7pJriLYKnAHWl9vsIhJltd519j0Z/ghOJb
+         VYHM8AZtSCzXdiUbV+99Px4ZziIa/9a4srMoNu3F/lWEbJM6sXq5o8DpuQRXl4gr+c8u
+         93uQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742296453; x=1742901253;
+        h=to:
+         :mime-version:x-gm-message-state:from:
+         :reply-to;
+        bh=Qao5EbhFKrSagTluQ/ZlM5Be5uWbhkESlP1fwlBvQvo=;
+        b=BDkOGUZnF8LOcm8ghHBL1c7uy/80cYBYofRU3hSRJx889B1bZqDMLxLTvVk1lYVH58
+         lvdtktxnCpHu5ojit1aiNJ8+O2mstpXLdiYSOO7SzFQLHMwfjCACemSoQrybI+Fns17o
+         Qw4ZWbG9ZLzZicZQv2ioK7FDu/ynG5GkPEDg+yGAUOZB6r6coIxA0ADjXHrSSmsgDnWl
+         DYOBKY5nHatVhyfG226PQIeXw80VBYb5WtJAHtbczu9+SQdkflIolhu+ZGDiZ20eJi4S
+         pSjSYulrkrC5HuBMNQqGjY7U6BflvyJhmduefR8K2CFdZM9XaS6n1nZ1l3oYW0Akm1U9
+         n3YQ==
+X-Forwarded-Encrypted: i=1; AJvYcCX8HZnM731NdkXj0PQVQj2RBcV/Wc2OGipj5tzrEEWmQ4yun/tECva+uOBPjyHjH4KgyWd3pp95l/W4chpeGDxQDTimnw==@gmail.com
+X-Gm-Message-State: AOJu0YxubJhtyjiz1wZX22ByaP84R+pjXWtzS6+aOHmqUr85LdPMgZ8L
+	PM4mrDzfUFSigj23/91lQ5rf8hduZVz33UjHGEkKnAbGrkhcpel4Ce4JSi7ALznL1q47EFhAKtt
+	zzyYeYlW3Nd175Uzgr+xDIcDkQFs=
+X-Gm-Gg: ASbGncs4XmwvPEm0Zdl4gZW9nYfpXZF+FnrVVZVW/BzIgOjxeNtIvlIZLhbbQuBmjYk
+	tIk6C56MuNGwe8r6DPr1mVJmxWKI8uE6EhQvVy8gYaNpC2foj68xVj1FbCxmdSk9GmUL0skkjI/
+	4KBIvMVoFsCVixjP3isZgGovkNDgRi
+X-Google-Smtp-Source: AGHT+IHuvJT1jxFYJoZLuZRUNVjBxUmJ5CpiWfNRmuaHKg3+KMtsqPiow6/dTclutbfYHD3utSA0Tq7lp0Cj5niZKsQ=
+X-Received: by 2002:a05:6902:2781:b0:e63:d36f:96c1 with SMTP id
+ 3f1490d57ef6-e63f64c196bmr21769132276.10.1742296452704; Tue, 18 Mar 2025
+ 04:14:12 -0700 (PDT)
+MIME-Version: 1.0
+References: <[removed]>
+In-Reply-To:
+Reply-To:
+From:
+Date: Mon, 17 Mar 2025 23:13:55 -1200
+X-Gm-Features: AQ5f1JrqYWKOvjoneo0K1kFq7OyU07FfZIOM7Iq5ZcrMmLjodOPpLKISOfxdD9k
+Message-ID: <CABmt4WyQa9_iYamPRe2oPR_0No-26NdRTcFzwb0pyNr4KVY=[removed]>
+Subject: =?UTF-8?B?SGVsbMOz?=
+To:
+Content-Type: multipart/alternative; boundary="0000000000002832a406309c01fc"
+Bcc:
+
+--0000000000002832a406309c01fc
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+KjQgaMOzbmFwamEga8O8bGR0ZW0gbmVrZWQgZXp0IGEgbGV2ZWxldCwgZGUgbmVtIGthcHTDoWwg
+dmlzc3phLCBuZW0gdmFneW9rDQpiZW5uZSBiaXp0b3MsIGhvZ3kgbWVna2FwdGFkLCBlesOpcnQg
+w7pqcmEga8O8bGTDtm0uIEVsxZFzesO2ciBpcyBLcmlzdGFsaW5hDQpHZW9yZ2lldmEgdmFneW9r
+LCBhIE5lbXpldGvDtnppIFZhbHV0YWFsYXAgw7xneXZlemV0xZEgaWdhemdhdMOzamEgw6lzIMO8
+Z3l2ZXpldMWRDQppZ2F6Z2F0w7NqYS4qDQoNCipWYWzDs2rDoWJhbiBtaSB2YWd5dW5rIGEgTmVt
+emV0a8O2emkgVmFsdXRhYWxhcCAoSU1GKSBpZ2F6Z2F0w7N0YW7DoWNzYQ0KV2FzaGluZ3RvbmJh
+biwgYXogRWd5ZXPDvGx0IMOBbGxhbW9rIFDDqW56w7xneW1pbmlzenTDqXJpdW3DoXZhbCDDqXMg
+bsOpaMOhbnkgbcOhcw0KcmVsZXbDoW5zIG55b21vesOzIMO8Z3luw7Zrc8OpZ2dlbCBlZ3nDvHR0
+IGF6IEFtZXJpa2FpIEVneWVzw7xsdCDDgWxsYW1va2JhbiwgYW1lbHkNCnDDqW56w7xneWkgc2Vn
+w610c8OpZ2V0IMOpcyBhZMOzc3PDoWdzem9sZ8OhbGF0aSBrw7ZubnnDrXTDqXN0IG55w7pqdCBh
+IENvdmlkLTE5DQp2aWzDoWdqw6FydsOhbnkgZ2F6ZGFzw6FnaSBoYXTDoXNhaXZhbCBzemVtYmVz
+w7xsxZEgZWd5w6luZWsgdMOhbW9nYXTDoXPDoXJhLiBFemVuIGF6DQpvbGRhbG9uIHTDoWrDqWtv
+esOzZGhhdCBzemVydmV6ZXTDvG5rcsWRbCwgw6lzIHNhasOhdCBtYWdhIGlzIGVsbGVuxZFyaXpo
+ZXRpOg0KaHR0cHM6Ly93d3cuaW1mLm9yZy9lbi9Ub3BpY3MvaW1mLWFuZC1jb3ZpZDE5L0NPVklE
+LUxlbmRpbmctVHJhY2tlcg0KPGh0dHBzOi8vd3d3LmltZi5vcmcvZW4vVG9waWNzL2ltZi1hbmQt
+Y292aWQxOS9DT1ZJRC1MZW5kaW5nLVRyYWNrZXI+LioNCg0KKk1hIHBlZGlnIGJlamVsZW50asO8
+aywgaG9neSBheiDDlm4gMSw1IG1pbGxpw7MgZG9sbMOhcm9zIHLDqXN6w6l0IGF6IFVCQSBCYW5r
+DQpqw7N2w6HDrXJ0YSBWSVNBIGvDoXJ0ecOhasOhbiwgw6lzIGvDqXN6ZW4gw6FsbCBhIHN6w6Fs
+bMOtdMOhc3JhLiBNb3N0IGzDqXBqZW4NCmthcGNzb2xhdGJhIGF6IFVCQSBCYW5rIFPDumfDs2rD
+oXZhbCBNcnMuIEtyaXN0YWxpbmEgR2VvcmdpZXZhLCBFLW1haWw6DQoodWJhbWFzdGVyY2FyZG9m
+ZmljZThAZ21haWwuY29tIDx1YmFtYXN0ZXJjYXJkb2ZmaWNlOEBnbWFpbC5jb20+KSAgS8O8bGRq
+ZQ0KZWwgbmVraSBhIGvDtnZldGtlesWRIGluZm9ybcOhY2nDs2thdCwgaG9neSBheiBha2tyZWRp
+dMOhbHQgVklTQSBBVE0ta8OhcnR5w6Fqw6F0DQpheiDDlm4gY8OtbcOpcmUga8OpemJlc8OtdHNl
+LioNCg0KKkF6IMOWbiBuZXZlPT09PT09PT09PT0qDQoNCipBeiDDlm4gb3JzesOhZ2E9PT09PT09
+PT09PT09Kg0KDQoqQXogw5ZuIHN6YWttw6FqYSA9PT09PT09PT09PT09Kg0KDQoqTGFrw7NoZWx5
+aSBjw61tID09PT09PT09PSoNCg0KKlRlbGVmb25zesOhbSA9PT09PT09PSoNCg0KKkUtbWFpbCBj
+w61tID09PT09PT09PSoNCg0KKsOcZHbDtnpsZXR0ZWwqDQoNCipLcmlzdGFsaW5hIEdlb3JnaWV2
+YSBhc3N6b255Kg0K
+--0000000000002832a406309c01fc
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_quote gmail_quote_container"><div dir=
+=3D"ltr" class=3D"gmail_attr"><b style=3D"font-family:Calibri,&quot;sans-se=
+rif&quot;;font-size:11pt">4 h=C3=B3napja k=C3=BCldtem
+neked ezt a levelet, de nem kapt=C3=A1l vissza, nem vagyok benne biztos, ho=
+gy
+megkaptad, ez=C3=A9rt =C3=BAjra k=C3=BCld=C3=B6m. El=C5=91sz=C3=B6r is Kris=
+talina Georgieva vagyok, a
+Nemzetk=C3=B6zi Valutaalap =C3=BCgyvezet=C5=91 igazgat=C3=B3ja =C3=A9s =C3=
+=BCgyvezet=C5=91 igazgat=C3=B3ja.</b></div><div dir=3D"ltr">
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>Val=C3=B3j=C3=A1ban=
+ mi vagyunk
+a Nemzetk=C3=B6zi Valutaalap (IMF) igazgat=C3=B3tan=C3=A1csa Washingtonban,=
+ az Egyes=C3=BClt
+=C3=81llamok P=C3=A9nz=C3=BCgyminiszt=C3=A9rium=C3=A1val =C3=A9s n=C3=A9h=
+=C3=A1ny m=C3=A1s relev=C3=A1ns nyomoz=C3=B3 =C3=BCgyn=C3=B6ks=C3=A9ggel
+egy=C3=BCtt az Amerikai Egyes=C3=BClt =C3=81llamokban, amely p=C3=A9nz=C3=
+=BCgyi seg=C3=ADts=C3=A9get =C3=A9s ad=C3=B3ss=C3=A1gszolg=C3=A1lati
+k=C3=B6nny=C3=ADt=C3=A9st ny=C3=BAjt a Covid-19 vil=C3=A1gj=C3=A1rv=C3=A1ny=
+ gazdas=C3=A1gi hat=C3=A1saival szembes=C3=BCl=C5=91
+egy=C3=A9nek t=C3=A1mogat=C3=A1s=C3=A1ra. Ezen az oldalon t=C3=A1j=C3=A9koz=
+=C3=B3dhat szervezet=C3=BCnkr=C5=91l, =C3=A9s saj=C3=A1t
+maga is ellen=C5=91rizheti:
+<a href=3D"https://www.imf.org/en/Topics/imf-and-covid19/COVID-Lending-Trac=
+ker" target=3D"_blank">https://www.imf.org/en/Topics/imf-and-covid19/COVID-=
+Lending-Tracker</a>.</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>Ma pedig bejelentj=
+=C3=BCk,
+hogy az =C3=96n 1,5 milli=C3=B3 doll=C3=A1ros r=C3=A9sz=C3=A9t az UBA Bank =
+j=C3=B3v=C3=A1=C3=ADrta VISA k=C3=A1rty=C3=A1j=C3=A1n, =C3=A9s
+k=C3=A9szen =C3=A1ll a sz=C3=A1ll=C3=ADt=C3=A1sra. Most l=C3=A9pjen kapcsol=
+atba az UBA Bank S=C3=BAg=C3=B3j=C3=A1val Mrs.
+Kristalina Georgieva, E-mail: (<a href=3D"mailto:
+.com" style=3D"color:blue" target=3D"_blank">[removed]=
+</a>)=C2=A0 K=C3=BCldje el neki a k=C3=B6vetkez=C5=91
+inform=C3=A1ci=C3=B3kat, hogy az akkredit=C3=A1lt VISA ATM-k=C3=A1rty=C3=A1=
+j=C3=A1t az =C3=96n c=C3=ADm=C3=A9re k=C3=A9zbes=C3=ADtse.</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>Az =C3=96n neve=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>Az =C3=96n
+orsz=C3=A1ga=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>Az =C3=96n szakm=C3=
+=A1ja
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>Lak=C3=B3helyi c=C3=
+=ADm
+=3D=3D=3D=3D=3D=3D=3D=3D=3D</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>Telefonsz=C3=A1m =
+=3D=3D=3D=3D=3D=3D=3D=3D</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>E-mail c=C3=ADm =3D=
+=3D=3D=3D=3D=3D=3D=3D=3D</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>=C3=9Cdv=C3=B6zlett=
+el</b></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 10pt;line-height:115%;font-s=
+ize:11pt;font-family:Calibri,&quot;sans-serif&quot;"><b>Kristalina Georgiev=
+a
+asszony</b></p></div>
+</div></div>
+
+--0000000000002832a406309c01fc--
+

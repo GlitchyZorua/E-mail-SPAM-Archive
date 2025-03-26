@@ -1,0 +1,178 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp2337699vqb;
+        Mon, 24 Mar 2025 18:31:47 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHp1oTLRrZag6ft1Ibz0Zp2awOZrm39+qlHBRz4M9aG+rmoqqn5GeYkUzeIqKQzDNlYr+jw
+X-Received: by 2002:a05:600c:3d93:b0:43d:300f:fa4a with SMTP id 5b1f17b1804b1-43d58db553amr84390465e9.12.1742866307338;
+        Mon, 24 Mar 2025 18:31:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742866307; cv=none;
+        d=google.com; s=arc-20240605;
+        b=N5/xQh/y7VfBNydMtAEAbcNQn1OmSmUYflC9Dude7cQuyIWOlXZL6Hv/Q6ztFO1jwd
+         OVIBxuBo7KlyOxU/PyvL4pmDePUoSvzOD6a4RUzn+I7h34ZAbykaZjwiKy23IhpiNeU8
+         fQ4KxsQXh+hq0rKO6kMu5eGsdLtXbDUIWCrkVpHB22p/sJLYP5IOUhlAVEB6F+h5v40F
+         7dbroVKfIPCBj1R0NpqUAGTtzyVBv54nzV4qKK5At/JHXWwpYyyFu5JwyuLTe8I74+UU
+         QJX+cOFUzllr86jEmClIgFjZ08hthAkP/V1DHQRf4xuQJOpZsnomoEVpHgn5Q6eA4a4z
+         66NQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=references:mime-version:subject:message-id:to:
+         :dkim-signature;
+        bh=UM8OVrxPkzvSDetk5quxM8u3qSUDj8/BJ3yXBdKppfI=;
+        fh=CCyaa74qj7D7ZdNjnUHNPt9NlolrqMjOuj/AsYq+ZV4=;
+        b=iYVN2g4i9wqXpCrL8sic2gsNHxP2B5cfqPfnu7DijM8vMxodSPRykDSkR24ZkU4X+L
+         mMSe36QmRdYgV22aCiUgopsNe74y2dmfN1kaMlvTnm97tmQ+th9NbO0LBTMqWghIYTsR
+         EQgKz1FzFzGB0buAMz81UhYAyIalDcpm2VuMhPdUuWy91SFHBgJz9TBu8rh6zWmzynSb
+         9ABN2iQREJcKThmCyOmKzq7XOcJ/dJBCszuDJejYPy4kUWBnGe/TjOEfoG9NgAtbCAGl
+         yE/zMmosAN4sKkSls635RTfZml9FyJZJlRuU8p+W4+7nm6ccKeN9Q1NFI9quYEqqm8H9
+         W5ng==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b="mX/zNaVN";
+       spf=pass (google.com: domain of [removed] designates 77.238.177.146 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <[removed]>
+Received: from sonic314-20.consmr.mail.ir2.yahoo.com (sonic314-20.consmr.mail.ir2.yahoo.com. [77.238.177.146])
+        by mx.google.com with ESMTPS id 5b1f17b1804b1-43d43f37792si100227255e9.25.2025.03.24.18.31.46
+        for <[removed]>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 24 Mar 2025 18:31:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 77.238.177.146 as permitted sender) client-ip=77.238.177.146;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b="mX/zNaVN";
+       spf=pass (google.com: domain of [removed] designates 77.238.177.146 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1742866306; bh=UM8OVrxPkzvSDetk5quxM8u3qSUDj8/BJ3yXBdKppfI=; h=Date:From:
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1742866306; bh=y42JzO2AfgF0E5mkO5EQoayU8C/+YbheaLVl2wQmPTH=; h=X-Sonic-MF:Date:From:
+X-YMail-OSG: qhdqoawVM1k92AoJ5TgPpMG4y751A04rxmheu1qLtiNVJ8VdE97f64UrTUWB.fB
+ AE3mxGOIOjYc_sMc7FFUfD8PI742Et6isUNBqnnp2WxKaDqaVTYUXDHM90FgJ9d6NwIJ8eLXFNGc
+ evmJxH5i0ZJSRKeHlg7ZSRt51owNq07M0RLyGBzpLFhf_aBeHoQ7VTmpzogKazeAQfvWWDOsbH4F
+ D2M3ukGo4VpDf5ioV0Hk7bPB5oAGxweHnP.VtPxzBcpA4T8h09U7eYkmaJB9Yog2h8.MJ3LUi2Kw
+ O95MeYOYSqI0umz.yk5CjA_3_ulwG.251UYPJJ62JAWQGOCAosidkRntXzzuij3RFan3BRMc51.E
+ h6VYOeQ6AbyAuY3MSe0VAcusCfConmwYHW8MRkryy7M9OYXgoO7nspO3rPnCjj0.zK.kgJN1zEkq
+ IsAjAmezwBNKCfmBd.3V.dsNBzO5WGVha.OVlPWFvvE7Xx2dtkhfrj_nyWFcmQnNT2Hfp4uR0ifi
+ cKr1OsqkaM.uadyyHnt5DogNDlAeFpUql0IEiVUlvRZeTreLtFxoPgdOD5KGfPx4DmDVAXrih5UZ
+ FkSeWC4Lpi78q0FnRFEQ50jCdCtrQYxlMd_2fCpYojxE2awjnCtknnoQiJMvRaSEO2nLuksW7KmB
+ 43YseimrjXRl9DEfnRC7X22llcgaMM7NgzL1nZjPZGvdfsWV_zuOHRWiZxUjx2ldv3wbxyO2soT3
+ gnruBnnj1KlsggIQAPIH6e2FVNkwYXMAmmI2pqy7ozI9EbnEDhREeas.bHoS.Olu1CRYYW6lZXSD
+ UaVfROFjHz9b8wth2WRTTfCA971IlQ4cG7wIc3ejZ7days0PVUZZ7ioHOKFt4ux_lo0D1_iI.GdR
+ OpXv9dpWQfvi48Z17ibZJKSKuXuHys3nV6XuZi3TV3_VanVI8LyJ9zgqAA3DaL5lHISsHnHFAeDr
+ diGiOs9FfzCz5QmnP_jzpDLglG_Qqo0E2gAmJaHEzYEjTYqk9N5daMr8Eyjg3jbeg7EMx20Legts
+ 9k6U72W.Vfa2EL4OFz_Pzhaz.ruN1Gk.rAqyqs6J_IehenI9r0vW8FU5EqXRBgHlBKfs3V70G710
+ VyO.yAn.w3IznPXl4YLeRPc6KGDurooY1K..PZlTE.8NZnPgcwE1bI6nRwDDr1GWeL0NLdWljziy
+ G1pf8aIkZV0eHB13b2blss7MJX0gj6MG.Uwj8lE7HBMWhBWgKMC2IJ1TZZm7DIymGVfAyFvLSItZ
+ wnqx64W28cplwxD7NmkMOs7wHokJ3SiFxV6zwsCNwcPi2Bbd6woqWPHQ51tfzlBm0qJxr5Wzv9pk
+ c0mEbEr.2KKvR14bDbwddokfzGh6PFFB3qPWWlzFWniHv.83XkBjD9Jf6eaVakkBqIuQGpXbrCZh
+ 4SFjT7POdw4LG27r61TuS3rqhTMmKL6nU.ma8Vb4Ba1OEaRcIr6HbwEihqNUoPSGr04w7Kxh2r0I
+ YmpH6BiHOhyGCUvtIlfRCOpOByoLWFOmFaDOFa.Cm93KSDM_oHW2xH_AGTxm1UrNOQ8Oq624VLNP
+ WcMV8eocBpUKTfVjlaqdcQ88UStbp8RDf5AXAg6I1Nzx0.w6d9jDeUBxblPIeCQQG.o_UyqVzDtz
+ zCqoN6GBTARpl7fa.BsPRNxfICEmEWQyaMnp9aFNUZE..vVhVMwkwMtY2zjvWc3kmiVD1v2yQFyO
+ Dmc6QyPdonJHZLBoTHkfEIsCZO7DkRa9HTOBt4pWA5TP7P0GHF_ZNrWn5o4IORuk7_DqC5vCkC6B
+ dWS7CrMSdqKWagyLHHH5CAnCNdHnL1pcsGCeQE2nlDxTWaQHXNJeLNmWiofvG6qCr98nRpUwZ5Zb
+ 1hkteDnPhagUWf4tQDPUvHU4MqVKH5kg6cr.gOEZipz_2enivRlVIyRcBBsGvchnUCMLYEih0klS
+ FfKDmi_V8lazwvNvTfkVbUh84gnZMvmH8kmaKzkiAYJ3gh6tMFeU8dqW9b68Q7ivVnYChkRdhAby
+ fP5ryCvuH4zIEwcBX9fqFqgTjnxwEbjs6_Rj3AoKFUL5rG.9Yc79uXywGH.s0Hzso1o.XKWIcb..
+ OZ5NLAQgEGjXlCGRffalBSZCt7cuTO3dPwmzwKXX4EnW1NARrD6LUW6YNPNpjiOe8DYw5dcATwJW
+ 5tk4vpJgZlYWXe8Nz1qUyrWxHCxeMwQoY4YppFNWTsw0s
+X-Sonic-MF: <[removed]>
+X-Sonic-ID: 333d857f-6a53-4261-a149-935ac56c5200
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic314.consmr.mail.ir2.yahoo.com with HTTP; Tue, 25 Mar 2025 01:31:46 +0000
+Date: Tue, 25 Mar 2025 01:31:41 +0000 (UTC)
+From:
+To:
+Message-ID: <[removed]>
+Subject: INVESTMENT
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_81066_2014146447.1742866301880"
+References: <[removed]>
+X-Mailer: WebService/1.1.23533 YMailNorrin
+Content-Length: 5519
+
+------=_Part_81066_2014146447.1742866301880
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Carrie J. Troy,
+It interests me as we went through your mail. I have discussed with the Inv=
+estor, and he is ready and willing to invest in any viable project. We ther=
+efore require that you send to us a detailed project/business plan(s) of th=
+e said investment for our review. His investment capacity is US$30 Million.=
+=C2=A0
+The Investor, CEO,P M GLOBAL CONSORTIUM Company is interested in JV partner=
+ship on any viable project with you acting as the manager and sole controll=
+er of the investment while he remains a silent investor for a period of ten=
+ years.
+He does not want his government to know that he is investing outside his co=
+untry as such he has requested that we maintain total confidentiality. As a=
+ silent investor he does not want his government to know that he is investi=
+ng outside the region.
+Again, there is urgent need to have this fund transferred out of his bank a=
+ccount to your safe bank account for immediate investment on any agreed pro=
+ject/investment which a CONFIDENTIAL WORKING AGREEMENT(CWA) must be signed =
+by both parties during a face-to-face meeting before any fund transfer to y=
+our nominated account.
+The Confidential Working CWA) will be sign between you and the company. I w=
+ill send you the contact information of the company to enable you open up c=
+ommunication with them and know when you come down to sign the agreement be=
+fore the release of the fund to your account. I will send you the draft cop=
+y of the agreement for you to study before coming down to sign the hard cop=
+y with the company.Send a copy of international passport or national ID for=
+ identification and your mobile number.
+
+CONDITIONS: Investor is ready to grant a grace period of 6 to 12 Months as =
+investment grace period for the investment to propagate prior to annual ret=
+urn of ROI. Exit plan by investor out of the Investment/JV is on or after 1=
+0 years depending on when you as the developer decide to return the core in=
+terest in the management stream of the investment, so you will manage the b=
+usiness. Investor has interest only on the income stream - to receive agree=
+d yearly returns from Investment, so management and control of any investme=
+nt will be left solely in your hands as the developer with expectation of r=
+eturn of the annual agreed percentage.=C2=A0
+Truely Yours,
+Mohamed Usman
+
+
+
+
+------=_Part_81066_2014146447.1742866301880
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"yahoo-style-wrap" style=3D"font-fami=
+ly:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px;"><div dir=
+=3D"ltr" data-setdir=3D"false"><div><div>Dear Carrie J. Troy,</div><div><br=
+></div><div>It interests me as we went through your mail. I have discussed =
+with the Investor, and he is ready and willing to invest in any viable proj=
+ect. We therefore require that you send to us a detailed project/business p=
+lan(s) of the said investment for our review. His investment capacity is US=
+$30 Million.&nbsp;</div><div><br></div><div>The Investor, CEO,P M GLOBAL CO=
+NSORTIUM Company is interested in JV partnership on any viable project with=
+ you acting as the manager and sole controller of the investment while he r=
+emains a silent investor for a period of ten years.</div><div><br></div><di=
+v>He does not want his government to know that he is investing outside his =
+country as such he has requested that we maintain total confidentiality. As=
+ a silent investor he does not want his government to know that he is inves=
+ting outside the region.</div><div><br></div><div>Again, there is urgent ne=
+ed to have this fund transferred out of his bank account to your safe bank =
+account for immediate investment on any agreed project/investment which a C=
+ONFIDENTIAL WORKING AGREEMENT(CWA) must be signed by both parties during a =
+face-to-face meeting before any fund transfer to your nominated account.</d=
+iv><div><br></div><div>The Confidential Working CWA) will be sign between y=
+ou and the company. I will send you the contact information of the company =
+to enable you open up communication with them and know when you come down t=
+o sign the agreement before the release of the fund to your account. I will=
+ send you the draft copy of the agreement for you to study before coming do=
+wn to sign the hard copy with the company.Send a copy of international pass=
+port or national ID for identification and your mobile number.</div><div><b=
+r></div><div><br></div><div>CONDITIONS: Investor is ready to grant a grace =
+period of 6 to 12 Months as investment grace period for the investment to p=
+ropagate prior to annual return of ROI. Exit plan by investor out of the In=
+vestment/JV is on or after 10 years depending on when you as the developer =
+decide to return the core interest in the management stream of the investme=
+nt, so you will manage the business. Investor has interest only on the inco=
+me stream - to receive agreed yearly returns from Investment, so management=
+ and control of any investment will be left solely in your hands as the dev=
+eloper with expectation of return of the annual agreed percentage.&nbsp;</d=
+iv><div><br></div><div>Truely Yours,</div><div><br></div><div>Mohamed Usman=
+</div><div><br></div><div><br></div><div><br></div></div><br></div></div></=
+body></html>
+------=_Part_81066_2014146447.1742866301880--
+

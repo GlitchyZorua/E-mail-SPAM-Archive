@@ -1,0 +1,294 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp1370275vqh;
+        Sat, 15 Mar 2025 08:47:36 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVbKLzeLxNYFD+af74BqY6LRD+Wxd8GWLRkdwWb7ID6Dih6fZhefnvj5ipP62lA+BYYHn6GhQvyUH99ZkqmCXusuqb2IA==@gmail.com
+X-Received: by 2002:ac8:5716:0:b0:476:9b34:fe82 with SMTP id d75a77b69052e-476c8161af4mr105061011cf.31.1742053655907;
+        Sat, 15 Mar 2025 08:47:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742053655; cv=none;
+        d=google.com; s=arc-20240605;
+        b=cNhQrdMlWB1fAJ3Jy5ADzUgQa5ZompghnAmusTh/3i8hxTzZFlDm7Pl+Q/8PnClljn
+         FQboUYzTIjKF8Qm01sZr/bTXJA5dSL4vO20yHpzVnKVyvaZ7pUj89B3cgOsufCf2q80g
+         eYw32LATme+5RWNKOl4wwgrvwbZTL29pVm+8uqMOUaOu+wTyYCsFt63wvlep5bupHTJY
+         0mtW/4rgjah3SzvJCWwELFrnzacUWmsuykp2cOVcSbNZq+M/N/sceePLrLHDca4RJ94r
+         t9OD/aH0UfIVyIydi0RSEjGk1Klm58mMAO/X8ICgZu1Gf6+wotqLu4FNX+1eG+YH0J39
+         n/tA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=IbbrPAeZSng4Xtau6+VLNm2/pCV232TOUBMyb2IfQrc=;
+        fh=j+Zli3pZgjiHZdC8HHp2EMtE9PGdd9IK11HmlxU23dY=;
+        b=fJdodVPa69scmL+/zi/6/SRyR0hAIcs9MX8smTXd6rbs5bGc5qZL1/dwP5h0lanK4B
+         EjDRE7N8vlmXlEkf2b1zqlUrAdf2GtNWrAeJ+eRzxJmhnRn3ZfXE2+ETcfpZ87yszRFw
+         unqVYOp5QcGSDvv21LftaG8rNOi4sQEW3m68+K4Bkz8pNRHDuG5KP4um/d328+qpWNa9
+         02qC4GdEiNHIHeWNqu/Oz4OyLP/bbulLebclb7FWkJeDyHCxjGoa9qUC6WcDcvRb2E8z
+         PlMdf4HDF5HhmwmsPiLMGlwJAsTW0diYIyDX2QWYkwXi18TXkkhE5orBFchIZHB73iCD
+         y7/g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=W2q9tYmi;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d75a77b69052e-476bb70cac0sor53443261cf.4.2025.03.15.08.47.35
+        for <[removed]>
+        (Google Transport Security);
+        Sat, 15 Mar 2025 08:47:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=W2q9tYmi;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742053655; x=1742658455; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=IbbrPAeZSng4Xtau6+VLNm2/pCV232TOUBMyb2IfQrc=;
+        b=W2q9tYmiAjzUh8ONLoBQIPonkVJVupUTO3jZ0ROGrjOEOYADR8s1g0pdNgZ7ZAo6yM
+         giybRwDIWszQ5bWAOOgP2Dz50iDTvYIUNIwRuzx+QvcJb2hXSSpbHIGKeEOuNThSa33D
+         oXM5uUwtODOSzylj6qDbzDmqigeeT243XX+YfgtpbjB6LNvP8lR4c2ZU+/hT1Y7d9hwL
+         bYQxnFDQZaYBblLbgsOAosQRFXHYMgTontWC2Pu5t2FQFnS34MYJgjlH7JlCbVk7ou8o
+         QQq0Yc/ouLmyH5yKxj3sn3mLk0Q1ta/yk88JHXjN1+MMiVME4M29WrcRJUWAfzc7lYHz
+         ZjEQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742053655; x=1742658455;
+        h=to:
+         :x-gm-message-state:from:
+        bh=IbbrPAeZSng4Xtau6+VLNm2/pCV232TOUBMyb2IfQrc=;
+        b=Tl3/jm7+g9ytSmlLB91xdCd0LvcxGV98mfvgBgvS3Qs5svmpOcT/SKZjaA3jiEyXLP
+         dXYWmW54sgdPCQvQkneL+skxPLXzdEDxEJUdTPuvQ6W6humjc6XTrLPLV325dh+y7snR
+         tstm9wgH/qkkElzUDOP5rYn8Paa6U27BPhvJoWZFiB/v4Qepvq46XLTSaI5iyHHRYz3a
+         BRrJVEBghtEDlpL9cd22shh6xVuFVYvy/l1L3NVGzWaETOSJbEK0lb2DQPBlM+wJPu/m
+         h6uQh+f48tBrfYWA5RmCHBrL6wnfxF3Ihn57s6uzGpzZFDV9ef5HT9sil45AM6vdC9Tk
+         ctJA==
+X-Forwarded-Encrypted: i=1; AJvYcCVrQaG9cejgTeiRWkM31rbrtCzGmOTKAUMEEzS7VAPYuhhw32UxJQVLaWB0CAJyJO+98XXQ3JTIlZkQXfO6Cz0JoES/AQ==@gmail.com
+X-Gm-Message-State: AOJu0YxdoZb1bPqVaSgs/j/9H2rEU8mk4h8+3/PciUgBzdzd5ObJaeAG
+	bxxsLvTuMvSpmPIBEEUeTQszishM6yNuJP+CZE14z/5nfcaLYbNHcTf9a9dxC2O7HeIEJXBD5Gu
+	+P2f/0XD9DLb+S6NaoEi79O0d9Bo=
+X-Gm-Gg: ASbGncudiIdDj0QG8tb582M19Rt/nU268FleAP42qbjjVHX6L4KN+UOTAk2Ub92/KGN
+	DKI2FgMe1RvAeFIFTddSCmVt04oLN/+UBB0povKk9mXa9++9MNk344ZQ6zt6OX6krrhqbkAM/X3
+	TP1m+tWZYq48RxJTYNbEgHfDM=
+X-Google-Smtp-Source: AGHT+IE0hxN/v7ttutv+E6UuPphM1v26cEIGCB+BO0kno3gZZBIOobux+pCivIBfFNI8e0teMr9C8ijYvqRoqo7AixE=
+X-Received: by 2002:a05:622a:5d0b:b0:476:9474:9b73 with SMTP id
+ d75a77b69052e-476c81c84d9mr79096041cf.42.1742053655439; Sat, 15 Mar 2025
+ 08:47:35 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Sat, 15 Mar 2025 23:47:22 +0800
+X-Gm-Features: AQ5f1JrM7xmW-j8qXaYJ093QuA4Ita8OhGH_N0mceVXp1VHT7QLLBgzTo5qm7zE
+Message-ID: <[removed]>
+Subject: Urgent Inquiry
+To:
+Content-Type: multipart/alternative; boundary="0000000000004fed5a0630637923"
+Bcc:
+
+--0000000000004fed5a0630637923
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Good morning
+
+Pardon me for writing to you at the time. I am Tim Wei Koh , Tim Koh & Co.
+(Advocates & Solicitor). I am requesting your partnership in re-profiling
+an unclaimed deposited fund of my late client Mr. Mohamad Kassim who is
+from your country in a dormant account with a commercial bank, so it can be
+paid out to you as the beneficiary.
+
+I stand to assure you that under section 2A to sub section 3 of the inherit=
+ance
+act of 1994 that beneficiary with legal documents from my chamber can legal=
+ly
+claim his inheritance. If willing, I will appreciate it if you can provide =
+me
+with these necessary details below to enable me to proceed further legally =
+to
+ensure his inheritance will be released to you.
+
+A) Your Name and contact address
+B) Marital Status
+C) Contact Telephone Number
+D) Date of Birth
+
+With these details, We will proceed further with all legal steps and
+documents in your favor. I hope to hear from you soon to enable me to
+register your name as the rightful beneficiary.
+
+Yours in service,
+
+
+*Tim Wei Koh      **LLM, MLS*
+______________________________
+
+Tim Koh & Co. (Advocates & Solicitor)
+Address: 7-1, Medan Hujan Rahmat,
+Taman Overseas Union, 58200 Kuala Lumpur,
+Wilayah Persekutuan Kuala Lumpur
+Mon-Fri Hours:  Open-Closes 6=E2=80=AFpm
+Phone: +601-0205 7241
+           +60 11-2392 2966
+
+--0000000000004fed5a0630637923
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><span style=3D"color:rgb(0,0,0);font-family:tahoma,sa=
+ns-serif;font-size:13px">Good morning</span></div><div dir=3D"ltr" class=3D=
+"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div =
+dir=3D"ltr" style=3D"line-height:1.5;color:rgb(29,29,29);font-family:&quot;=
+Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:13px"><div dir=3D=
+"ltr" style=3D"line-height:1.5"><div dir=3D"ltr" style=3D"line-height:1.5;f=
+ont-family:Helvetica,Arial,sans-serif"><div dir=3D"ltr" style=3D"line-heigh=
+t:1.5"><div style=3D"line-height:inherit;outline:none;color:rgb(0,0,0);marg=
+in:0px;padding:0px;border:0px;font-stretch:inherit;vertical-align:baseline"=
+><font size=3D"2"><span style=3D"font-family:tahoma,sans-serif"><br clear=
+=3D"none" style=3D"outline:none"></span></font></div><div style=3D"line-hei=
+ght:inherit;outline:none;color:rgb(0,0,0);margin:0px;padding:0px;border:0px=
+;font-stretch:inherit;vertical-align:baseline"><font size=3D"2"><span style=
+=3D"outline:none;margin:0px;padding:0px;border:0px;font-style:inherit;font-=
+weight:inherit;font-stretch:inherit;line-height:inherit;vertical-align:base=
+line;color:inherit;font-family:tahoma,sans-serif">Pardon me for writing to =
+you at the time. I am Tim Wei Koh ,=C2=A0</span></font>Tim Koh &amp; Co. (A=
+dvocates &amp; Solicitor)<font size=3D"2"><span style=3D"font-family:tahoma=
+,sans-serif">.<span style=3D"outline:none;margin:0px;padding:0px;border:0px=
+;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:in=
+herit;vertical-align:baseline;color:inherit">=C2=A0I am=C2=A0</span><span s=
+tyle=3D"outline:none;margin:0px;padding:0px;border:0px;font-style:inherit;f=
+ont-weight:inherit;font-stretch:inherit;line-height:inherit;vertical-align:=
+baseline;color:inherit">requesting your partnership in re-profiling an uncl=
+aimed deposited=C2=A0</span><span style=3D"outline:none;margin:0px;padding:=
+0px;border:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;=
+line-height:inherit;vertical-align:baseline;color:inherit">fund of my late =
+client Mr. Mohamad Kassim</span></span></font><span style=3D"font-family:ta=
+homa,sans-serif;font-size:small">=C2=A0</span>who is from your country=C2=
+=A0<font size=3D"2"><span style=3D"font-family:tahoma,sans-serif"><span sty=
+le=3D"outline:none;margin:0px;padding:0px;border:0px;font-style:inherit;fon=
+t-weight:inherit;font-stretch:inherit;line-height:inherit;vertical-align:ba=
+seline;color:inherit">in a dormant account with a commercial bank, so=C2=A0=
+</span><span style=3D"outline:none;margin:0px;padding:0px;border:0px;font-s=
+tyle:inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;v=
+ertical-align:baseline;color:inherit">it can be paid out to you as the bene=
+ficiary.</span><br clear=3D"none" style=3D"outline:none"></span></font></di=
+v><div style=3D"line-height:inherit;outline:none;color:rgb(0,0,0);margin:0p=
+x;padding:0px;border:0px;font-stretch:inherit;vertical-align:baseline"><fon=
+t size=3D"2"><span style=3D"font-family:tahoma,sans-serif"><br clear=3D"non=
+e" style=3D"outline:none"></span></font></div><div style=3D"line-height:inh=
+erit;outline:none;color:rgb(0,0,0);margin:0px;padding:0px;border:0px;font-s=
+tretch:inherit;vertical-align:baseline"><font size=3D"2"><span style=3D"out=
+line:none;margin:0px;padding:0px;border:0px;font-style:inherit;font-weight:=
+inherit;font-stretch:inherit;line-height:inherit;vertical-align:baseline;co=
+lor:inherit;font-family:tahoma,sans-serif">I stand to assure you that under=
+ section 2A to sub section 3 of the</span><span style=3D"font-family:tahoma=
+,sans-serif"></span><span style=3D"outline:none;margin:0px;padding:0px;bord=
+er:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-hei=
+ght:inherit;vertical-align:baseline;color:inherit;font-family:tahoma,sans-s=
+erif">=C2=A0inheritance act of 1994 that beneficiary with legal=C2=A0docume=
+nts from=C2=A0my chamber can</span><span style=3D"outline:none;margin:0px;p=
+adding:0px;border:0px;font-style:inherit;font-weight:inherit;font-stretch:i=
+nherit;line-height:inherit;vertical-align:baseline;color:inherit;font-famil=
+y:tahoma,sans-serif">=C2=A0legally claim his inheritance. If willing, I wil=
+l appreciate it if you can provide</span><span style=3D"outline:none;margin=
+:0px;padding:0px;border:0px;font-style:inherit;font-weight:inherit;font-str=
+etch:inherit;line-height:inherit;vertical-align:baseline;color:inherit;font=
+-family:tahoma,sans-serif">=C2=A0me with these necessary details below to e=
+nable me to proceed further legally</span><span style=3D"outline:none;margi=
+n:0px;padding:0px;border:0px;font-style:inherit;font-weight:inherit;font-st=
+retch:inherit;line-height:inherit;vertical-align:baseline;color:inherit;fon=
+t-family:tahoma,sans-serif">=C2=A0to ensure his inheritance will be release=
+d to you.</span><span style=3D"font-family:tahoma,sans-serif"><br clear=3D"=
+none" style=3D"outline:none"></span></font></div><div style=3D"line-height:=
+inherit;outline:none;color:rgb(0,0,0);margin:0px;padding:0px;border:0px;fon=
+t-stretch:inherit;vertical-align:baseline"><font size=3D"2"><span style=3D"=
+font-family:tahoma,sans-serif"><br clear=3D"none" style=3D"outline:none"></=
+span></font></div><div style=3D"line-height:inherit;outline:none;color:rgb(=
+0,0,0);margin:0px;padding:0px;border:0px;font-stretch:inherit;vertical-alig=
+n:baseline"><font size=3D"2"><span style=3D"outline:none;margin:0px;padding=
+:0px;border:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit=
+;line-height:inherit;vertical-align:baseline;color:inherit;font-family:taho=
+ma,sans-serif">A) Your Name and contact address</span><span style=3D"font-f=
+amily:tahoma,sans-serif"><br clear=3D"none" style=3D"outline:none"></span><=
+/font></div><div style=3D"line-height:inherit;outline:none;color:rgb(0,0,0)=
+;margin:0px;padding:0px;border:0px;font-stretch:inherit;vertical-align:base=
+line"><font size=3D"2"><span style=3D"outline:none;margin:0px;padding:0px;b=
+order:0px;font-style:inherit;font-weight:inherit;font-stretch:inherit;line-=
+height:inherit;vertical-align:baseline;color:inherit;font-family:tahoma,san=
+s-serif">B) Marital Status</span><span style=3D"font-family:tahoma,sans-ser=
+if"><br clear=3D"none" style=3D"outline:none"></span></font></div><div styl=
+e=3D"line-height:inherit;outline:none;color:rgb(0,0,0);margin:0px;padding:0=
+px;border:0px;font-stretch:inherit;vertical-align:baseline"><font size=3D"2=
+"><span style=3D"outline:none;margin:0px;padding:0px;border:0px;font-style:=
+inherit;font-weight:inherit;font-stretch:inherit;line-height:inherit;vertic=
+al-align:baseline;color:inherit;font-family:tahoma,sans-serif">C) Contact T=
+elephone Number</span><span style=3D"font-family:tahoma,sans-serif"><br cle=
+ar=3D"none" style=3D"outline:none"></span></font></div><div style=3D"line-h=
+eight:inherit;outline:none;color:rgb(0,0,0);margin:0px;padding:0px;border:0=
+px;font-stretch:inherit;vertical-align:baseline"><font size=3D"2"><span sty=
+le=3D"outline:none;margin:0px;padding:0px;border:0px;font-style:inherit;fon=
+t-weight:inherit;font-stretch:inherit;line-height:inherit;vertical-align:ba=
+seline;color:inherit;font-family:tahoma,sans-serif">D) Date of Birth</span>=
+<span style=3D"font-family:tahoma,sans-serif"><br clear=3D"none" style=3D"o=
+utline:none"></span></font></div><div style=3D"line-height:inherit;outline:=
+none;color:rgb(0,0,0);margin:0px;padding:0px;border:0px;font-stretch:inheri=
+t;vertical-align:baseline"><font size=3D"2"><span style=3D"font-family:taho=
+ma,sans-serif"><br clear=3D"none" style=3D"outline:none"></span></font></di=
+v><div style=3D"line-height:inherit;outline:none;color:rgb(0,0,0);margin:0p=
+x;padding:0px;border:0px;font-stretch:inherit;vertical-align:baseline"><fon=
+t size=3D"2"><span style=3D"outline:none;margin:0px;padding:0px;border:0px;=
+font-style:inherit;font-weight:inherit;font-stretch:inherit;line-height:inh=
+erit;vertical-align:baseline;color:inherit;font-family:tahoma,sans-serif">W=
+ith these details, We will proceed further with all legal steps and documen=
+ts in your favor. I hope to hear from you soon to enable me to register you=
+r name as the rightful beneficiary.</span><span style=3D"font-family:tahoma=
+,sans-serif"><br clear=3D"none" style=3D"outline:none"></span></font></div>=
+<div style=3D"line-height:inherit;outline:none;color:rgb(0,0,0);margin:0px;=
+padding:0px;border:0px;font-stretch:inherit;vertical-align:baseline"><font =
+size=3D"2"><span style=3D"font-family:tahoma,sans-serif"><br clear=3D"none"=
+ style=3D"outline:none"></span></font></div><div style=3D"line-height:inher=
+it;outline:none;color:rgb(0,0,0);margin:0px;padding:0px;border:0px;font-str=
+etch:inherit;vertical-align:baseline"><font size=3D"2"><span style=3D"outli=
+ne:none;margin:0px;padding:0px;border:0px;font-style:inherit;font-weight:in=
+herit;font-stretch:inherit;line-height:inherit;vertical-align:baseline;colo=
+r:inherit;font-family:tahoma,sans-serif">Yours in service,</span><span styl=
+e=3D"font-family:tahoma,sans-serif"><br clear=3D"none" style=3D"outline:non=
+e"></span></font></div><div style=3D"line-height:inherit;outline:none;color=
+:rgb(0,0,0);margin:0px;padding:0px;border:0px;font-stretch:inherit;vertical=
+-align:baseline"><font size=3D"2"><span style=3D"outline:none;margin:0px;pa=
+dding:0px;border:0px;font-style:inherit;font-weight:inherit;font-stretch:in=
+herit;line-height:inherit;vertical-align:baseline;color:inherit;font-family=
+:tahoma,sans-serif"><br></span></font></div><div style=3D"line-height:inher=
+it;outline:none;color:rgb(0,0,0);margin:0px;padding:0px;border:0px;font-str=
+etch:inherit;vertical-align:baseline"><font size=3D"2"><span style=3D"outli=
+ne:none;margin:0px;padding:0px;border:0px;font-style:inherit;font-weight:in=
+herit;font-stretch:inherit;line-height:inherit;vertical-align:baseline;colo=
+r:inherit;font-family:tahoma,sans-serif"><br></span></font></div><div style=
+=3D"line-height:inherit;outline:none;color:rgb(0,0,0);margin:0px;padding:0p=
+x;border:0px;font-stretch:inherit;vertical-align:baseline"><b><font face=3D=
+"trebuchet ms, sans-serif">Tim Wei Koh=C2=A0 =C2=A0 =C2=A0=C2=A0</font></b>=
+<font size=3D"2"><b><font face=3D"trebuchet ms, sans-serif">LLM, MLS</font>=
+</b><br></font></div><div style=3D"line-height:inherit;outline:none;color:r=
+gb(0,0,0);margin:0px;padding:0px;border:0px;font-stretch:inherit;vertical-a=
+lign:baseline"><font face=3D"tahoma, sans-serif">__________________________=
+____</font></div><font color=3D"#888888"><div style=3D"line-height:inherit;=
+outline:none;color:rgb(0,0,0);margin:0px;padding:0px;border:0px;font-stretc=
+h:inherit;vertical-align:baseline"><br></div><div style=3D"line-height:inhe=
+rit;color:rgb(34,34,34);outline:none;margin:0px;padding:0px;border:0px;font=
+-stretch:inherit;vertical-align:baseline"><div style=3D"line-height:1.5"><f=
+ont face=3D"arial narrow, sans-serif" color=3D"#666666">Tim Koh &amp; Co. (=
+Advocates &amp; Solicitor)</font></div><div style=3D"line-height:1.5"><font=
+ face=3D"arial narrow, sans-serif" color=3D"#666666">Address: 7-1, Medan Hu=
+jan Rahmat,=C2=A0</font></div><div style=3D"line-height:1.5"><font face=3D"=
+arial narrow, sans-serif" color=3D"#666666">Taman Overseas Union, 58200 Kua=
+la Lumpur,=C2=A0</font></div><div style=3D"line-height:1.5"><font face=3D"a=
+rial narrow, sans-serif" color=3D"#666666">Wilayah Persekutuan Kuala Lumpur=
+</font></div><div style=3D"line-height:1.5"><font face=3D"arial narrow, san=
+s-serif" color=3D"#666666">Mon-Fri Hours:=C2=A0 Open-Closes 6=E2=80=AFpm</f=
+ont></div><div style=3D"line-height:1.5"><span style=3D"color:rgb(102,102,1=
+02);font-family:sans-serif">Phone: +601-0205 7241</span></div><div style=3D=
+"line-height:1.5"><font face=3D"arial narrow, sans-serif" color=3D"#666666"=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0+60 11-2392 2966</font></div></di=
+v></font></div></div></div></div></div></div></div>
+
+--0000000000004fed5a0630637923--
+

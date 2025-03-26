@@ -1,0 +1,127 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp3129328vqb;
+        Wed, 26 Mar 2025 00:13:54 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXs47IcUW21wINB0dlC/XmEFQxooWL4SANu53Mn7wisOSDUqnwxzdacogwIpCtLnzzuXdDaReOfmL+6/cADg5LSV3Di7g==@gmail.com
+X-Received: by 2002:a17:902:f20c:b0:224:10a2:cae1 with SMTP id d9443c01a7336-22780e122bbmr237286275ad.37.1742973233751;
+        Wed, 26 Mar 2025 00:13:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742973233; cv=none;
+        d=google.com; s=arc-20240605;
+        b=QT4PyeexLV/M1hZ8RO+pkvVAtKtHdE9zhxSQYv/qeA5ulQfb2dKUykSZlcFSPExoZW
+         prXttn36W8riASX6iE8KDP3mpzEb4sCcA2F9hqodyEDfRw6P6A27dxwesw17irWL/LKh
+         f7hYVhqBOMsMNKMjSR/A2MJwa3kuaYSZrV8Hd3yHCXI3Aeu8zGk0zEx394Sy7ta3STEF
+         4X+Xe33YLKn/XpDn6npMIyxMBAo/i3271EQuiCu4FbOfp9YjO7a7+uRXbF/iTLV/thwv
+         g9sR3Ek1R/tulQ0ciLR/1LKsexeD/KQuJ9Xw6Gmdm4wS250tnsQHErZwthXIhsio2Jen
+         RAWw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=ZRe2gsspnrX2+8CcUmW3EoxMWcPuDkJqsFdUVXmHtPo=;
+        fh=+hZOkG6q3flpqMJIXZrOL5vG+qCB0GhMAuLAHjGc0pc=;
+        b=JgdrmC0YKYy0x692dSlvgZa5eN+Yll0f3eNU8F5iA4EJIs5qyt+c4pEqwspLmZ4uy3
+         a8MlJPzzKMhjsKNpgKx6I5WMLlw5IYmqmJ1JPQ/MydobSqY2ScgNHcrM/1KG4vCS4+xB
+         udPp6arfqyz88P79V+s2hXapodPOb2/yQhi2Yhr5pmxj5+stutppaWj4f6+QcZteSF+b
+         8CAOQYz667Sgm7ljTuKajtYmqGUDTOtXiePZhCWKolWtCsVlbdNgRIPM3K9kqjJycbCK
+         dXsmA76+p6QAPwskkAqcoI5QTVdSCbPUoj7OmFiGsoAyad6rMJnI/K9/Y7+plhXQZUZg
+         sLqw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hmeFOsJu;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 98e67ed59e1d1-3030f400418sor9179460a91.0.2025.03.26.00.13.53
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 26 Mar 2025 00:13:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hmeFOsJu;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742973233; x=1743578033; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=ZRe2gsspnrX2+8CcUmW3EoxMWcPuDkJqsFdUVXmHtPo=;
+        b=hmeFOsJuoqJt0JCgsms7GnrZg3O1eTT8S1BXTX78kMfoMxhe4ra8vvtYrJaUKkSM5H
+         2gmg5ylnURf5VdNSsQIba0TnnMMJJYJ7sRFAPLe5PwQrsBAbjwBlPOgtfWNWCbjAg/jN
+         up4iEZVc9zM2mk4182r/GAtDYOfjs2NIujWrzVYRmx1M0RnZYmr8JXrXiQXV1/FySbPR
+         pWk/X8QbMeGR8ta83+86H3oba8fMOTTxTtaol7TPtZO51Igo0lfXGBoiGnhEfCUd//83
+         WUfAA617htIcB5opvZ6JAufQBtiJBb9eeqDI9a4tjdIj96PER4JQMs7G1hMQpZdofvHo
+         3w3A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742973233; x=1743578033;
+        h=to:
+         :x-gm-message-state:from:
+        bh=ZRe2gsspnrX2+8CcUmW3EoxMWcPuDkJqsFdUVXmHtPo=;
+        b=sPUFBdGhr/7WuIgb3Nu7jkxzo5CJevQzO3Lys4DGPkd9G1ji4NKkya3ssV+qf48sMe
+         MGCnv2JolCeLN+Rf0kJiziLZs4CugDVlQSbQ8pkf6C4ChC+JNGGJdzAUurw3ADTJKGMM
+         xfb9828/2ocz/HiCYOC/HNqGPI4xjKKYgBmyPouq86G4t+fBYSGKhR1Ai2uESEREhceD
+         v3aiMLksu6VIFljjkFJMrDp1Ehh/m709kN4IxLw6mHNkYZw4rwAmDkTNBNiIAiakNI/Q
+         lIAKbcBIMAAvANBFVileg0ckKOnj/YKXVQVw+v2LPjJvQUglFDdvKgi69bDIpz6T0ti7
+         owyw==
+X-Forwarded-Encrypted: i=1; AJvYcCWC/uIFoZo6UGbHTYX3Er/ZJOUgBZNtIxVqKengyMMIh7wFQ7e788wD6j/weR7QH6xumR0RT+PI+coF06mWq3j+dysFgA==@gmail.com
+X-Gm-Message-State: AOJu0YwRMEbfU/oZ9Ffaw9HOf540W73jq9Z2cTn4jBtjMerEndIRnGyF
+	siFZSJjtRpgWLCFKT93Yd1AGz0jV4p1KdwFSYPrmBe7faIygvNUYJipKlOPFzEA3GMiUeWMOfad
+	ynkIXAw7vn3nZqwbeDbFmdF0PkXc=
+X-Gm-Gg: ASbGnct7WYMPrVXOJXxfvep42fCUJPrcpnns2JGBFhLqfC0MYNEsP3lcarQ7QS/7g8W
+	rGHHIvdCFYENAvCsu4eJTm2f00jhYWzvn+dBRl5u7bThi0n0o6acCH5PTQmrW7yjLDNhXAB4tWG
+	9pd3m1hpudAHEP86/XX0nlG6Fe
+X-Google-Smtp-Source: AGHT+IGHPPIDUWB6fiw8jnIGF52aVYg40WOsUq3zdZz2W+W22k6e8LPnkkz1daLCQNGB81PhkObhZK3rfwjVuMFoc6I=
+X-Received: by 2002:a17:90b:1b46:b0:2ee:ee5e:42fb with SMTP id
+ 98e67ed59e1d1-3030fe7f1a6mr24729694a91.13.1742973232908; Wed, 26 Mar 2025
+ 00:13:52 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Wed, 26 Mar 2025 00:16:25 +0300
+X-Gm-Features: AQ5f1JpzS_7RpQpjcHAusekusycNGYKpxilRSXJDZM-Gz1_A43gTxMbVXg04oH4
+Message-ID: <CAAyZUCaqv1mbrt0eWZgSekT=[removed]>
+Subject: GRATULACJE
+To:
+Content-Type: multipart/alternative; boundary="00000000000066921e0631399445"
+Bcc:
+
+--00000000000066921e0631399445
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Szanowny Potwierdzony E-mail
+
+By=C5=82a =C5=BCona MacKenzie Scott, za=C5=82o=C5=BCycielki Amazon Foundati=
+on International,
+przekaza=C5=82a Ci darowizn=C4=99 charytatywn=C4=85 w wysoko=C5=9Bci 800 00=
+0 =E2=82=AC, prosimy o
+podanie kodu darowizny i danych kontaktowych. Aby uzyska=C4=87 wi=C4=99cej =
+informacji
+na temat tej darowizny, prosimy o odpowied=C5=BA z kodem darowizny:
+[MKSC2025/03] w celu uzyskania dalszych wyja=C5=9Bnie=C5=84.
+
+Skontaktuj si=C4=99 z nami pod adresem: [removed], a=
+by
+wyrazi=C4=87 zainteresowanie i zgod=C4=99 na otrzymanie tej darowizny.
+
+Gratulacje.
+Pozdrawiam,
+Scott Foundation
+
+--00000000000066921e0631399445
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Szanowny Potwierdzony E-mail<br><br>By=C5=82a =C5=BCona Ma=
+cKenzie Scott, za=C5=82o=C5=BCycielki Amazon Foundation International, prze=
+kaza=C5=82a Ci darowizn=C4=99 charytatywn=C4=85 w wysoko=C5=9Bci 800 000 =
+=E2=82=AC, prosimy o podanie kodu darowizny i danych kontaktowych. Aby uzys=
+ka=C4=87 wi=C4=99cej informacji na temat tej darowizny, prosimy o odpowied=
+=C5=BA z kodem darowizny: [MKSC2025/03] w celu uzyskania dalszych wyja=C5=
+=9Bnie=C5=84.<br><br>Skontaktuj si=C4=99 z nami pod adresem: <a href=3D"mai=
+lto:
+ aby wyrazi=C4=87 zainteresowanie i zgod=C4=99 na otrzymanie tej darowizny.=
+<br><br>Gratulacje.<br>Pozdrawiam,<br>Scott Foundation</div>
+
+--00000000000066921e0631399445--
+

@@ -1,0 +1,162 @@
+Delivered-To:
+Received: by 2002:a05:612c:4d06:20b0:4bf:a213:be56 with SMTP id ms6-n2csp685105vqb;
+        Mon, 10 Mar 2025 12:48:04 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXfM/QyaCG/21k8SQUStKxXtR0g+ewNSwA+C6MnQrwJfM2+VNAOiecoQVq6zHhc6hstMbQN4GEfyGcRh81ByQRYkQ63Vw==@gmail.com
+X-Google-Smtp-Source: AGHT+IHH1LMInRCwmJVk/HLiTXRxqvT7nL7mOVQwzD/HxhBL6LUAhmnzrYb7dTVsaZEkDlxc06qr
+X-Received: by 2002:a5d:5848:0:b0:391:49f6:dad4 with SMTP id ffacd0b85a97d-39149f6dc65mr4275638f8f.41.1741636084590;
+        Mon, 10 Mar 2025 12:48:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741636084; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NSkRMilK4Vk9DumvDavy7Qfo4MrG0dzkqKr5bqPWVPEWTJexcIvuA8GhazVlphTWok
+         wenh1uLToLrJEC4ePGV5s9UydJ0c3016oIAdGpNaW5UyA+rFMv2c9ZRJu3x1hsoZCAHr
+         DnzkWEhWcF/zRrB7Wx/VEbrKhlb4EF2HbeWazNKg7kHwCNgu95uER/mPaao5B7MsJYd7
+         qzCw2IJfXZcWojTPVHRgY7Qhvl3v7ILgpIuHYVvBAaNfsbbKSZdymxFLx2HhIkRc3HqT
+         55P1lwQEOBL9MytIr8StdBwlo8f2pIfL65EhAT2PxVN6XqvqZbJwUvuR69zCuaYfWDfH
+         cl9g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=ui-outboundreport:importance:mime-version:subject:message-id:from
+         :date:dkim-signature;
+        bh=bGIUv7e4cyM0uz0WMhbPIelTLFeg1yWri1/X7AxZ5qs=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=DFwgPPGcbosrlhk7iHrGs1fv/h5VlREBb1YmYcIXQCh0Ly5/mYHFkhtQZ/ZT+vohCg
+         wBr1qKK1gWrfuArrG/nCvf14jVVizdQBhkqpdBeX5pFE18GWXvwVigKoOZn2K8jvNqEq
+         qZ1EZriNlxbaBrD45WepnY/7FY8fTjVt37zqOVrjP8WqY707TR9UD/wDYZhojSdPRTyo
+         G6e6ehZ+iXtsUear7XDa5U8gzNaq7H7WkvQtAZTEdS9s64FzY5KY1jSSPM266sHEsaCj
+         13LMgdgxRBYcQM93ixxfqsMUq9stQxW2LsVpB4Z/0zsj3y0f5dKtjWEs+MR65uc/P399
+         FfJw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@eurecole.com header.s=s1-ionos header.b="x/VW/xRo";
+       spf=pass (google.com: domain of [removed] designates 212.227.126.131 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=eurecole.com
+Return-Path: <[removed]>
+Received: from mout.kundenserver.de (mout.kundenserver.de. [212.227.126.131])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3912c11f18fsi6780934f8f.660.2025.03.10.12.48.04
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 10 Mar 2025 12:48:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 212.227.126.131 as permitted sender) client-ip=212.227.126.131;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@eurecole.com header.s=s1-ionos header.b="x/VW/xRo";
+       spf=pass (google.com: domain of [removed] designates 212.227.126.131 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=eurecole.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=eurecole.com;
+	s=s1-ionos; t=1741636060; x=1742240860;
+	i=[removed];
+	bh=bGIUv7e4cyM0uz0WMhbPIelTLFeg1yWri1/X7AxZ5qs=;
+	h=X-UI-Sender-Class:Date:From:
+	 Content-Type:cc:
+	 message-id:mime-version:reply-to:
+	b=x/VW/xRoueN571ijvL7ufzgtjaz5mlaOZlqCDCKFWSmPOOw8WY8UTJMj7Aq6dvQG
+	 TQe/juQ1dYIAwhzeVRXrJCDY1h/XtIswilfX8Nhu9f+eNs6QPuvDFWxPH8pbL7v7j
+	 B6/6JQNsJRSZVSh1YZN7yxt6QEmh22QoigBjSfU+KEcBSE6i2NvvKOA0Y3CjwdkPh
+	 6Iub02lPpF64fiCCrRyd5QJk7CyEw6yRqfhqobjr5kMqdt8kBnSLru0mbNKaZqvco
+	 R9hZJDq5xLWBYLBGepwafiImUX5Y/iMfdE4/Ze15bSvMOFohZU2PbJzkRakPNe0jg
+	 NlC1lEDkxX7geYuX/w==
+X-UI-Sender-Class: 55c96926-9e95-11ee-ae09-1f7a4046a0f6
+Received: from
+ open-xchange-core-mw-default-15.open-xchange-core-mw-hazelcast-headless.open-xchange.svc.cluster.local
+ ([10.73.147.184]) by mrelayeu.kundenserver.de (mreue011 [172.19.35.3]) with
+ ESMTPSA (Nemesis) id 1N7iT4-1tDhVO0Tpa-00yUTi; Mon, 10 Mar 2025 20:47:40
+ +0100
+Date: Mon, 10 Mar 2025 20:47:31 +0100 (CET)
+From:
+Message-ID: <[removed]>
+Subject: Let's Fund Your Project
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_314276_1683791545.1741636051928"
+X-Priority: 3
+Importance: Normal
+X-Mailer: Open-Xchange Mailer v8.33.58
+X-Originating-Client: open-xchange-appsuite
+X-Provags-ID: V03:K1:TJc/fIbsrt8qizEd9hAF2XkITRzbZMfEqhl17xqOx/6tC0T0HuQ
+ mpD4JwLI+Yw/eri9vUFwPbi9gT6Ng7ZfhQRoo3kgI1EIw7/1KeMV/b2KWgm8KRsukJB/sBY
+ 8Ax2Vg46DWdBIxRdsrBTYbFwl0EU3f3BIGyqWw7YkLzIzZR7mY5rIZ4qZ1Rvn/1B3G88oTP
+ mWAb6Sr2DdMSZPb5sRdZw==
+X-Spam-Flag: NO
+UI-OutboundReport: notjunk:1;M01:P0:AJZYZFz/Yqk=;yVU9urPFPstPWEl4SYrhdTFNyPl
+ SsGuTJyA1jzrzDfYfPfMX8q0ZC+nbiWG9cSPB7xEswmaURXmM2dSe2SQapHH0T3rO2pO9Yd1N
+ +RtnZdvecN0CznH00owQUZTKvhcEu/7wAlx8wN9cAU3JL4uOftamqVFya9SYCBlPgQMTEQD5k
+ wHAh03hRH8c8LmEvfXwCnY3VFiuxtUCOKB2BJlYm3/sc2Os4oKgUtWDVIdLnAvOdXuOtdE3CL
+ aflOO5Tlzm4UF58lxrnM1elZ4wcd1Ys6BGp9YR1IT4Kudm8zSki/8hKfQoohgsk2fiEGCo7yq
+ mEyoraWu5R8Y8SgvPedrt4kFn5H4M4pmUAKuyAlBnS9Qz+0iY3j0bdN2qkSJL/1BHmYiHnl+R
+ kvTBqizt8Zi5CkwkrH01InvOjPP3RKkUBPWYwbyfxp+8NYt9lw3j0M3OawQ07u/qK7HtJmmTj
+ S5Ln1SG3FjiwptpGYilG5qfZY4wco5RjuutCPyjXwkLXik6O8+Ks+5tDCLYs08GONqjOynkij
+ opcs5RB04YIcn2cTbOSQZewu/IpINF6RTdMlfYINRiazR30zfUtoyRMUc1Y+3K2EqCCWepwtn
+ jlFtYOwBIEKCPcoJ4cEbzbOo9YmR3Vip46aKdmNRYTGXB8N93lHioguiRmV5el01NCFioK0OK
+ Lhcz+psEEKpcoIZSe6FVuTgBg02p3rqWBx2tJUErQdrkftuQltuzb2c4ZSBBk9hhOUAnM3B7d
+ 8z2I1gYt0IYzSwWp4QkbVHL2zVsPHQETLyeVEXkr+IOWxtrP22LuHdEel9Uu8eTumbNsWNXWn
+ cTpnEP+6OIpoDfqC0YJ1EKq76cgLH55GVVQiiaO0wlsQulYCkm/sqEvCnEiH+YQEmaTb0uSKS
+ FzywBTZXVl2C+A7e1zfBbZspmmfImGJiekzZy6XdPbF1OZK7YWr2nAgYwd6Slo8KiZ5opUBmZ
+ NrHo+Epuc2U89CI+rqiJyzhrNeP3MHmIOMwB2ezXwens/sG0M4RU9m3J+pc8pig3q1i9HMQfr
+ B3FYFDpnuNWiQ3eG2YbnhOe86I+UPm54iHIVexR/dO1KQWFButj6ii5gAen3N+B6PWC0/2U8l
+ c8wj5fkhkF0gh8vuPFiWPCWHzOTaaMg/iizNIEIrdpERNE3Z4OEpbBep3f97RdGiai52cr1Na
+ UQO07dGNphBetcVn1Fbv+s+otCpKtx3p4IbPuH1SoOK+t/dHTcsowFDS+x4T+TM9MKr88fcts
+ roac12YJbxbh2lkhu2trH49nf9nZwhfbg7VtAgyMRKPTxXbeVl9xdhnxZ2KoZQaY/i4qoirB7
+ UTVxZCr3QiUiMwYY2Z4qS7UH2rp51jR4oWh1I0nNz5aH/Q=
+
+------=_Part_314276_1683791545.1741636051928
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Attention:(Managing Director/CEO)
+
+I Am a broker linked with a high profile investor from the Arabian Gulf  a=
+nd China Who are interested and willing to fund You in any current project=
+ you Are in to.
+
+Are you seeking for Working capital, Acquisition financing, Hard Money Bri=
+dge Loans, Rental Investment Property loans, Commercial property mortgage =
+loans, Ground Up construction loans, Business start-up & Acquisition loans=
+, Equipment financing, and more? We are here to deliver financing solution=
+s that meet our borrowers' individual needs and circumstances. I will be w=
+aiting for your response {[removed] mailto:
+[removed]}
+
+Regards,
+Machura Krzysztof Wlodzimierz
+
+------=_Part_314276_1683791545.1741636051928
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html>
+ <head>
+  <meta charset=3D"UTF-8">
+ </head>
+ <body>
+  <div class=3D"default-style">
+   <div>
+    Attention:(Managing Director/CEO)
+   </div>
+   <div>
+    &nbsp;
+   </div>
+   <div>
+    I Am a broker linked with a high profile investor from the Arabian Gul=
+f &nbsp;and China Who are interested and willing to fund You in any curren=
+t project you Are in to.
+   </div>
+   <div>
+    &nbsp;
+   </div> Are you seeking for Working capital, Acquisition financing, Hard=
+ Money Bridge Loans, Rental Investment Property loans, Commercial property=
+ mortgage loans, Ground Up construction loans, Business start-up &amp; Acq=
+uisition loans, Equipment financing, and more? We are here to deliver fina=
+ncing solutions that meet our borrowers' individual needs and circumstance=
+s. I will be waiting for your response {<a href=3D"mailto:
+[removed]">[removed]</a>}
+   <div>
+    &nbsp;
+   </div> Regards,
+   <br>
+   Machura Krzysztof Wlodzimierz
+  </div>
+ </body>
+</html>
+
+------=_Part_314276_1683791545.1741636051928--
+

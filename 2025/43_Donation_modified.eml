@@ -1,0 +1,105 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp1706664vqb;
+        Sun, 23 Mar 2025 19:27:22 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXG4FjhXUwgY37qlyOOD4aLXKioc/uJSm08OJsjfkfVN93S72zMiDtUrQd3+voFyatur/jc6DIGukQi7DKjvBeWKz5k7g==@gmail.com
+X-Received: by 2002:a05:690c:f86:b0:6fe:af14:57f6 with SMTP id 00721157ae682-700babfd3bfmr148216207b3.5.1742783242561;
+        Sun, 23 Mar 2025 19:27:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742783242; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Tzprdb9Tp03iG5eAOqhix2YjEMPO9xopfeKCcn8XzGjkpKVLnsvBJcL9JRDGYbCAcv
+         pI9rI0qWbajaunfir89oU6trU27pNnvIMpGn95Xq5p69r1RIAg2hTx8n3Nyl57TZBGpX
+         sag9hzj217tgBbNhy1t8lCUrEeTXO3uj0gHvZaYf8cFSuC7RF9SfOcSrzxVHT8nR3OeT
+         O70oArw59hmDULbJIfFdAm+siyThIsIVzW7I91MMJNhDz/qkKielX5i6qJPyfg53kotV
+         Wlgt5HUQHitGUZ5EjiJXbllzSQKeu5X6ei88KEAaE8VTX2/unI1uXEgvUiZDX2T0THeA
+         2NPw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=cdbydQBjGHcxbLNbFChkSi7aYT+IE5cwaLKEbP97nKQ=;
+        fh=PRnAFin0NafUFksu8wplVIlGec4863hlBKel9Pohis0=;
+        b=COHgXIFhpoZxdynkJG62O9rT+tn9KVgEbl9HCdR4ftEQB2v9IHSKHgcqnQbx/h2+a4
+         eOCFSJeAxjJbFyRTib5aD34UCOwZpvEHxHA+leK5NEbqOxhHuifBMeO2vMi+Gif0Rp65
+         2sMEZva5ZnC9lTdG6aD1W43Gfeob/bvK03Wid5x633dfXp9S6jFRNa6lZUO9vcw99Hk8
+         VOzOYoOq0/yHXYhKdX1BLBRpEAtNw+8q92WEKZXn+3lmbKcVzf8Jx4icqxjACwKtyYsU
+         QE0D9p9pf0qLYKk8yS72GSyyv6nDDi5AQQL1iPivKhTcbQBqAtmQEGwR0X3cjxZ5JmUu
+         qUKg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="YvS/2CJf";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-700ba73c965sor39244787b3.2.2025.03.23.19.27.22
+        for <[removed]>
+        (Google Transport Security);
+        Sun, 23 Mar 2025 19:27:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="YvS/2CJf";
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742783242; x=1743388042; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=cdbydQBjGHcxbLNbFChkSi7aYT+IE5cwaLKEbP97nKQ=;
+        b=YvS/2CJfi4EMC9DDpDuvn4BzmArREXNyWjCEO262VWlKJH6FuDiwa7klnsvhZy2vOp
+         2/Skj3pFt0o26vGILTVx6wYr28idIae5zGkML43UmDtk1XtBo5Fj5kRJo9wiQeNm8vlS
+         94Vw/xCUKlaX4bQPbKagZAvPIDY4uNcZ+oCKddVnLmZ5rPA3CqWf3axLA9RaYUXn8T1O
+         whp50SKxmFPiM2PqolEyZH/d81/HwUA7GSfGKs0NpVx0MTAh/tq/lZy+9LiknCG4X2RB
+         3SOYslOaAjGiGOAFEi5c5ZqrR2CGi9gPQB/LVi7iykBrK3eIPRtpDpGfveLXsXbqXV4P
+         sCiA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742783242; x=1743388042;
+        h=to:
+         :x-gm-message-state:from:
+        bh=cdbydQBjGHcxbLNbFChkSi7aYT+IE5cwaLKEbP97nKQ=;
+        b=KRcRl3qnW+39FxpMYXHAKgv20Depv4g4XHKeC+acyaObdnNBAymYPKJCIKJWU8fMEs
+         N8zk2ydNV45C5B3LQ9aldCc3Xn9CHl6O8XRmwNSi/IRQ2hkVOkkLhkhcFHnuhien3qG0
+         nmVTj0NmCyWQ4WLYCfbMKbsLCFbaRm4Ym+6/XUVM0aOfDw2q9GsuZ5nrJa6oycHegoht
+         57qZ4+f/bgmr2MEefyMx4/TtFs89vyOzgCCwwpXljcwz/6B28PfTe3KgQp8srG95hq4J
+         7AgQGAnC4fkbVbWFQ3bib0PTMTuffLb30qBUltoIP+2YCHVan+87Gw7Sp0XGoQ5J1rd2
+         obSg==
+X-Forwarded-Encrypted: i=1; AJvYcCVlC3yOZVA2fYEaDqQkwGIYUP0ro0BEHV8LE4HoqL8c3fUfWLj3f/qjEpZWC+eW+DGHH8IH8PQSnFxSYHEm8TnfWSH5zA==@gmail.com
+X-Gm-Message-State: AOJu0Yy7cUkJ5CSdSBVDzL3UI+jexsa2dqYepplMg2/4TI3uN3xITuGl
+	0HRr7NmTg4kPx/kHlr0lw078kvyZ0040D+cOCZ17ZPjVQhxctKry6/cMCcYe4aOymZCkIT6MTwM
+	VtTpJ9ovRc8Ave+1OkG0DZZ+997s=
+X-Gm-Gg: ASbGncvwer9YleD2H5mv3/G886IlVkKudIkZxL9dwIPvYZIkOyH+LaJj0opTZs/uj9Z
+	IXqYdQoVuYXY/IrIrOTGKPX4wsNKYQuubt7CAEG6p+3P66oqZBxTEI3d0Kwq06G20TufAi06UIa
+	mXpSO0VlDGWDYWItmYhAyMTvZIZGKU
+X-Google-Smtp-Source: AGHT+IELWjALd3StO+r+UBFSfO+hX57+QkYJQdsTipwXeANalddLh8/8MFVgrkh0f28b6SITxcla3zPQdC+ppM7vuEw=
+X-Received: by 2002:a05:6902:4891:b0:e5d:c2c9:c11e with SMTP id
+ 3f1490d57ef6-e66a4d92fc6mr13771601276.15.1742783241877; Sun, 23 Mar 2025
+ 19:27:21 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Mon, 24 Mar 2025 07:57:08 +0530
+X-Gm-Features: AQ5f1JqpcCPQuH4iCJAlwEWKhHvw2o6qYRwp3ozkX7C6wlGPFzkEqrwOL-BUmB4
+Message-ID: <CACRx11xM0k4_L5uoyQXYfP2w88byGm=[removed]>
+Subject: Donation
+To:
+Content-Type: multipart/alternative; boundary="0000000000000d836606310d58b1"
+Bcc:
+
+--0000000000000d836606310d58b1
+Content-Type: text/plain; charset="UTF-8"
+
+The amount of 3.8million USD was Donated to you by Elizabeth Johnson from
+London  for charity work. Please contact ([removed]
+)for more information
+
+--0000000000000d836606310d58b1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><br>The amount of 3.8million USD was Donated to yo=
+u by Elizabeth Johnson from London =C2=A0for charity work. Please contact (=
+<a href=3D"mailto:
+ant.com</a> )for more information<br><br><br></div>
+
+--0000000000000d836606310d58b1--
+

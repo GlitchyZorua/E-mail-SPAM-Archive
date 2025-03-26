@@ -1,0 +1,132 @@
+Delivered-To:
+Received: by 2002:a59:b951:0:b0:4bf:d2e8:882f with SMTP id v17csp3229228vqh;
+        Tue, 18 Mar 2025 12:41:30 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVKsfOhD8aGxN1Ei/cAp44kjcenZNzCJlkG9G3TUQuNOKr5/CmX6vGHS72YwWwyQC/jmdTaLN+jeFKmd0HZm5CNOwQcBg==@gmail.com
+X-Received: by 2002:a05:6122:6612:b0:51f:3e67:75df with SMTP id 71dfb90a1353d-525892ace71mr165032e0c.10.1742326890357;
+        Tue, 18 Mar 2025 12:41:30 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742326890; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NGjw23qoZ6D7hlGmyzzTwbtcpSDPc4w+AXRzNnS8vzTRnH7Ys5lgagOXvJce8CyHCu
+         RKjGD4lDYwsWDPai06Oi1p3RR1NdV7hrqJVQbc26Sxf5A8BNPZhO3/ApZUreE0mX2Iqq
+         9Vkw5gADNKrqiNsFoKscPrdXKL+Ww71aiJbWNUCfW5BaJxpY5AEvXqJDa7jwifuoB/A4
+         B8oJLNuVzATl/UXtYWGp4ksIFvIBuwCG1eWrxSKftJTEqq1MtElx0md+hx6K27ZCgOGE
+         /IHHdG6LRpbFYWPw3eh9DkdEVJywlIBjOkOxYro6Pqq2lgGrb8Ebz763tChFl5xtZEo9
+         pD0g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=cPOrXsbjW0mZWsg8E8O828de4EZ0zGEEJ8qiYeM/cOQ=;
+        fh=XhZ+E1WXG+0Cxr7DiUnZo1AIBuUC1oPM/e695Bvu7y4=;
+        b=T94FfUC1SViBAJByC4kLH+Cd71s2721JS+o4dDhEOW1VTpy6VGZ9+u10R3wt2H6wBM
+         jyChhHb9zjlE9Gqw6+L+amJx76s4sTCD5bu0JyycE5YsgeitM4XrOEVXgb2ndefgEiAl
+         7XUi7f2+bLH/kNo+dtPlCSzhmZvk1yQ/TmstvlIAE7F4C4B2IiB3uGLNxA++W3cDF1eK
+         VETU5N+oMhFVGupOYZtZkX7wXGqxEgXUWaToc3YrKbcCmz00Vn6hNMBQufkX1l8Ojcnw
+         dC4rop0qqET/cpsD5Iyb9GdXGR11s59iqPjgib5sOdKXV4vY41ASswpY7CQXpxPZjZF0
+         K23Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=bl0EerQV;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 71dfb90a1353d-5243a70dde2sor843442e0c.5.2025.03.18.12.41.30
+        for <[removed]>
+        (Google Transport Security);
+        Tue, 18 Mar 2025 12:41:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=bl0EerQV;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742326890; x=1742931690; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=cPOrXsbjW0mZWsg8E8O828de4EZ0zGEEJ8qiYeM/cOQ=;
+        b=bl0EerQVETmYZKkDR0flLlAutNmScl4uPOGXOZ0KOO53Kbqdsxb0paTwQ3uESOLCvX
+         CCpLqSdu9Pf8y8iBvAwQmaQCeSJo3LAdljxJEcsXoIrUyYygpcODi67mcmEz3mAZzMDy
+         kA+xDPd4l/IJDg4IJwWCEKXaYqKTtoMtZPO3y6PRNt3W0LZDwGS/Pa2XCvG8JK/hXYlg
+         yS0dPPoSVMRujqQrDxEbH6Zkyl7lYnuFOjJp7RrKTTMl/AbvfXIgksnDy5Np5fRwrPXW
+         pgYmEOzKwKTRGlNuY+K7Dy3kb5D4LGgV/lhC1EhsS8VkjqGcQF2zHpbmL5OqHz+SXmUo
+         HrQw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742326890; x=1742931690;
+        h=to:
+         :from:
+        bh=cPOrXsbjW0mZWsg8E8O828de4EZ0zGEEJ8qiYeM/cOQ=;
+        b=MTF2pOs+T7aTf/7R1xnsBX4UO1+9XoH0cALzYrZGoc/J45R/AZAUGfS+MWR0/Eevkt
+         E0QvUw0AIwNGAI3nhQGBX3GWriWr4QJbR5MZHT2+EF21xLjoO33mbaMijAv0MsHhv1wU
+         SsTyFb4TtXecfIen5Shzb3Kfnt4mB7z/lXCsmeCYxOPrJZ3T3nIp3vfyrhqRj46Yvff+
+         +qYCvW3XQSwFVJqV+oQIQKaiL9qgRxXMbEDhknmxR4AzaEL+AQyK8y8rFOIfZbKBJtyX
+         gqpN1VdugiRknZXpbPM2uAIZ0HN3znG2jss4Fm7W4vqh7Lu+F5QSDJCBo/XHNP0iNOJE
+         lyGA==
+X-Forwarded-Encrypted: i=1; AJvYcCX1FqN07dGEaF6OL+i/XoglHSRZi3dDphoBHnORZPSRiX+WolM5sa31GDb4/W5u/8Fju5ErQ2ODxHW75sCD0IZhezOgwA==@gmail.com
+X-Gm-Message-State: AOJu0Yy5IAYZk8mYczODDGteew0Y/UiaS2uhWbDUsazI2dyi+tKPuzAA
+	yOjcFWpFBVkSBK0CFj47vfs0cj006jN5YybdHYZ3oPvOKojDOgEkMyU+dthBDDy5zBENu2gWzge
+	mDVGwJmrQWzBTSax+8vBnCNwlNrQ=
+X-Gm-Gg: ASbGncsnWbQXI9iP2mWcilR+YzMScoDDGVNOoR+h68WfgT76nXXI0JcY5pyccYzeN6/
+	E+LLpxUcFCnhCzn+iGDlY2miMkydqmFbfMGWQXhxt5xQv1BXcSkcv7lOROeJ5vMBlxFN2F/o5Ul
+	7dd8lwPYWOM0XmI8kqFOP6e9Kg
+X-Google-Smtp-Source: AGHT+IGQo5bOCpOo2YRoqUChk2k1KO96+ao6fD+slbrwQK+vyewiw78Hf8kS/74yNtmHi0SSS6lFxXtNjpPvYT3W+To=
+X-Received: by 2002:a05:6122:886:b0:516:18cd:c1fc with SMTP id
+ 71dfb90a1353d-5258928ffbdmr111192e0c.8.1742326889976; Tue, 18 Mar 2025
+ 12:41:29 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Tue, 18 Mar 2025 12:41:19 -0700
+X-Gm-Features: AQ5f1JoKBaurD536IqSxULDWAxzt89l9Z45BBhyS4iSua3rAykRlmaKl0wB402s
+Message-ID: <CABqpOKgNyCMh7t-WzvWnnVWm9xeSeDeMoDDQroe97=[removed]>
+Subject: Investment Loan
+To:
+Content-Type: multipart/alternative; boundary="0000000000005c1de30630a31744"
+Bcc:
+
+--0000000000005c1de30630a31744
+Content-Type: text/plain; charset="UTF-8"
+
+Sheikh Tamim Bin Hamad Finance House
+Prime Tower. 1,158 sqft. AED2,621,640  Bahrain.
+
+Dear Friend,
+
+My name is Mr. Abdul Ibrahim   the director, Sheikh Tamim Bin Hamad Finance
+House. We are independent financial advisors offering high quality and
+independent financial services for gulf region residents and expatriates
+living abroad.
+
+We offer corporate and personal loans at 3% interest rate for the duration
+of (fifteen 15 years) available for both gulf residents and expatriates or
+business owners worldwide.
+
+We also have 1% commission for all our brokers worldwide who introduce
+business and project owners for finance or other opportunities.
+
+Kindly keep contact me if you are interested for more details.
+
+Regards,
+
+Mr. Abdul Ibrahim
+
+Director .
+
+--0000000000005c1de30630a31744
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Sheikh Tamim Bin Hamad Finance House<br>Prime Tower. 1,158=
+ sqft. AED2,621,640 =C2=A0Bahrain.<br><br>Dear Friend,<br>=C2=A0<br>My name=
+ is Mr. Abdul Ibrahim =C2=A0 the director, Sheikh Tamim Bin Hamad Finance H=
+ouse. We are independent financial advisors offering high quality and indep=
+endent financial services for gulf region residents and expatriates living =
+abroad.<br><br>We offer corporate and personal loans at 3% interest rate fo=
+r the duration of (fifteen 15 years) available for both gulf residents and =
+expatriates or business owners worldwide.<br><br>We also have 1% commission=
+ for all our brokers worldwide who introduce business and project owners fo=
+r finance or other opportunities.<br><br>Kindly keep contact me if you are =
+interested for more details.<br><br>Regards,<br><br>Mr. Abdul Ibrahim<br><b=
+r>Director .<br><br></div>
+
+--0000000000005c1de30630a31744--
+

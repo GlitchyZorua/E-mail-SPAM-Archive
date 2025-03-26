@@ -1,0 +1,117 @@
+Delivered-To:
+Received: by 2002:a05:612c:1d15:b0:4bf:c851:4495 with SMTP id ix21csp41408vqb;
+        Wed, 12 Mar 2025 00:59:53 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXC2/KFpG09LMPQ9mC1ksPURBvLQ4XB6vuJRBKs0Rgl9D9vQfKz04AC4cVaPX2Mxc1zb/LyduCPafqHOF3wYQM8hxqXIA==@gmail.com
+X-Received: by 2002:a17:907:1b0a:b0:ac2:4bf1:44bc with SMTP id a640c23a62f3a-ac252fa0593mr3144607066b.41.1741766393560;
+        Wed, 12 Mar 2025 00:59:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741766393; cv=none;
+        d=google.com; s=arc-20240605;
+        b=V8pJo88hhv8+vpLXYhFXrXnQXrojoV98x3nTjnlCbewuy0WlM8pOa8fHs1LFDsbJ3X
+         DUkgqraMl1vYByIjBiOEPJfxrw3y3I47M1E2Ieilmi7WWBoJ6ZCKwYrK9s8hRMt/ZRjp
+         pYD+XcNUQT8l6Wbp6UEkuhWcoCGRX5O565FAGgDHeKaXM6jfnliyh2hPolbNHGEqUUJh
+         SIRrpvcVePS0b2O+C3UdR9qmmZU+IU4s/En6kXywgAMT68kdoSvkxXam1llf3hCZNEEP
+         vVabb0xK4eJFZGVmO/vHJnmM6TlV7BguyiiNudzVgbG7E22IpMpObEGjUUWFbt0n5yRS
+         iGrw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=FmhpHP3T+zLII0rn8eYtGEWsF/7fbMYNAscpFOGYJqg=;
+        fh=wuI9jkJyCAWvvmkN0U+BjbXa7rqGMVN2V2BoA8PcoRE=;
+        b=e+/IRru89RFtKWTQp/JyFGkgBJavxkXqCFZvEJ1YO5rNi46U+GKD6t9bpmSIvJ94Ix
+         b5eAnqFbWWhVRJpUv+qhEA3eAEqkMFg57KIRgjDB92HmEeSrwdltBm+M1Uh0vz4+k5Nv
+         G9GlqQynJkH+sBVHLpjdsYxooqWd/itstXNDAkc1WKsQgt+R/rPubkZ6Mte2+cRp578O
+         K79WZdq615Yp41bKhG6oWAosxdQYNbryvi9EiW2JVErC5gb3oKtpGsoa2rx4Bfe4o4oj
+         SeWVV2RHoAQWzQBP75YS5nSG4ZSUKuUKE/5zL7guiZUBSZnDeN+ytQ01i2NRlQadu6L8
+         V0dA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=XwKv2hbo;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5e5c767f1d0sor4955539a12.6.2025.03.12.00.59.53
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 12 Mar 2025 00:59:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=XwKv2hbo;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741766393; x=1742371193; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=FmhpHP3T+zLII0rn8eYtGEWsF/7fbMYNAscpFOGYJqg=;
+        b=XwKv2hboY95gRwViWXYdRt9Y9NMn2e4onQ48cpbZBDBXeeDrjsEiJ2DIxvMVDJS5G2
+         MIy+3+5fpwJKlAKBInbWc6OhvscJX96735fIBINoLUCHG2rOlU0oV4A7qw1Fz+6e1Cfq
+         rGe8kqanwn2G3F+Adh3u+2sPx4UQ/7BHag+oL8blBorkNg42TiW+3weStIQ2u6qKl8zf
+         VkhMEM1xRFP5lLO/PdqGPRweR1pX7i5TI6oHRBz1HL2k836KjfaGMSqt4GLzEMUJrsu1
+         sib+0rOxc3BpSozocB71KqQxd5FmahmLNB+9WtusZfChxYpbvZP9B9vcUDlRDItRBBdA
+         l8Lg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741766393; x=1742371193;
+        h=to:
+         :x-gm-message-state:from:
+        bh=FmhpHP3T+zLII0rn8eYtGEWsF/7fbMYNAscpFOGYJqg=;
+        b=FOIUucF0dSz4CGrydVdubVE7DqVpuwctI466bkm784935BrK/SPd9BswiAP/97oQYA
+         9mVORwZcdhef0kpiTWVgAXs5rDR279wu+7pxUx5mso8Ay5t1fMKWQqi+4EpaeNHdpp4D
+         EWcSGUmcTvq7krfRFBgu/c2R7p06R2+KumyTu6ZFJsYe05BDW6JuvXa7RGA/K0vyadeJ
+         saN/0J+qrhHbtgb/6g1xQ4RmBkYgQmOpmibfTcbkLtn0CJm3xIFH8EG1tvFiJZjSZ3d2
+         NKAwL+aV6jkNsYjh0NCGhFjj7oKz5fvCTpMcLZOchjXS3D+MT9PLwPQqbBTZB63y2x17
+         VW9w==
+X-Forwarded-Encrypted: i=1; AJvYcCX9qAzj+TWZVyaHG5QoqrNXF2GtT1qdPXoI7SpP/ziX6nyg7Zc9FJuefy7lVn2TvyGBAAcVHidruhTc9ihH3TOoqBYagg==@gmail.com
+X-Gm-Message-State: AOJu0YxYMPc9ZA3LMXnrRIHM6DC5HUgqQNFHffoNKMjFOn247pcijaHE
+	SM9tpSF/sjTFxwuuTQCuYbR71A+qwQXrqSG3hKyKMb5genMUwjF/7Dn2icde2jTuVDTyo7+2/9b
+	Aik1AqmKj+NRb/7YaC7E6KBHfsYs=
+X-Gm-Gg: ASbGncv/kKV5kS4qn/18DVqp4coCNard0K4Y84QavLLRY6BYbtyFRDN1KsD6OOUFuiO
+	lHytWB3Otoe0Fm8R9dMZ6jv5rXsUX3oYiStZgk3kbL+kOvg/0rvEup1eRmq6RYsPsZIYovjuyul
+	MTA4gFlFGrZxgO6yyrSM1QbiBD
+X-Google-Smtp-Source: AGHT+IGwQ2IwRvFuDafLyymjDf/3nzNsdmc80A4NViqIATebOqbFjhkWYhWI+/PTDljxkvQiPk5k9K9Y3kyWOhn19RY=
+X-Received: by 2002:a05:6402:2793:b0:5e7:73ad:60a2 with SMTP id
+ 4fb4d7f45d1cf-5e773ad622fmr7805002a12.30.1741766392705; Wed, 12 Mar 2025
+ 00:59:52 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Wed, 12 Mar 2025 08:59:40 +0100
+X-Gm-Features: AQ5f1Jr1JMwfW8gGzY9Vm-BeSK-DYbu-Ivl4kmheVJf_rDFmveVBip9oPsPb6wU
+Message-ID: <[removed]>
+Subject: DELIVERY OF YOUR FUNDS....FROM MR. DEAN GRAHAM.!!
+To:
+Content-Type: multipart/alternative; boundary="0000000000001e79d406302097d3"
+Bcc:
+
+--0000000000001e79d406302097d3
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+Good day,
+
+I am Dean Graham by name. A diplomat and I have a delivery of the sum of
+($7.5 Million) USD to be made to you which is to be effected within 72
+hours. You can reach me on this email address below for further details:
+[removed]
+
+Regards,
+Gerald Morgan.
+
+--0000000000001e79d406302097d3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><br></div><span class=3D=
+"gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_sign=
+ature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div>Good day,<b=
+r></div><div><br></div><div>I am Dean Graham by name. A diplomat and I have=
+ a delivery of the sum of ($7.5 Million) USD to be made to you which is to =
+be effected within 72 hours. You can reach me on this email address below f=
+or further details: <a href=3D"mailto:
+t=3D"_blank">[removed]</a></div><div><br></div><div>Re=
+gards,</div><div>Gerald Morgan.</div></div></div></div>
+
+--0000000000001e79d406302097d3--
+

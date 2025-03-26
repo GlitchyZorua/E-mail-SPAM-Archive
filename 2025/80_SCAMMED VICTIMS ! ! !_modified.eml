@@ -1,0 +1,102 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp2082993vqb;
+        Mon, 24 Mar 2025 09:20:59 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVjfBV7pZ6szavPp07vEEg089G2ApuVKf4X27HcCKSMpD8ggX3+zu+MYWGEOsoYlrQWcnA5v94CkQ2ASbpOpXko7+FYGQ==@gmail.com
+X-Google-Smtp-Source: AGHT+IGrsVjdIKT4a9fIqPRoiSKJpag9605YiowpalXNMGO4JWx2DS4GRz0oD6KhOujKH8yzkgJO
+X-Received: by 2002:a17:902:d549:b0:223:5a6e:b20 with SMTP id d9443c01a7336-22780c55215mr233848405ad.7.1742833259104;
+        Mon, 24 Mar 2025 09:20:59 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742833259; cv=none;
+        d=google.com; s=arc-20240605;
+        b=f5gLvr+lGrkQiKxmqmRAXTbPu3Ctzuifr/ZLW5OFPVizlKu5vyNXpf3T70xZisDTvw
+         6BkOTDWK+hMT5mmNKXRLefMif0AD0RePIwfjV+thG8JcJBz5OfjqdN8HMuGcM0TaiONm
+         Z0Rf5N+wlb0toQPU1q/ejZpvxbbeUe8AEoZxqbpfofSnnD5HphV1IV0yc76vadvzWh9Y
+         rLr9cN8XIx/L+0uZBw1VBv4ko+MsZKtLD+1w8fiWp6t+/WjqPILLT8BukquKPQZByFqX
+         QDtx9KTdLFlDonTeqFlEi8Q/XVv7zsArlHh70DJ44/+DNldnWdM7khg0yZRYTGwREmwS
+         0APQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:date:subject:from:
+         :message-id;
+        bh=RWQW6P22IRnTBzUK4i10NLkdZAj0HSF1Y5Nhrzpj6+c=;
+        fh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=YG21z4IslfonTI2DkplePgdnL742sNIQZr2tl70BSNnPNLFsB0MEcjNh50UFzuvIMZ
+         Y+7V0JImUL3or1ay3EniPcF/P9dPDXGBktHjNM6cj7MmkzQ9VzKfF4QdXjlMuJft2tqA
+         SODiWnqSwhFonRCIcBin4VV2e3UBHrKD/kZ2LUHp2tls0tO0RYJtQfEW4sXvvRPLvZ4G
+         cQS8jq1dYoJa0uv9sqHPGG54zICF3C4eaplomz27nuMx8JZ3RFLcaF6FU35HgbWZdsCb
+         Z7XWuPKjTEIhO+Aeb+xuf516emV66vkrVshjhR8vQIqg2/T2DLyrBCZ5Mx/UZ2QQ0NGu
+         N+Vw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of [removed] designates 58.222.245.82 as permitted sender) smtp.mailfrom=[removed]
+Return-Path: <[removed]>
+Received: from mail.jsxihu.com ([58.222.245.82])
+        by mx.google.com with SMTP id 41be03b00d2f7-af8a27de8f1si13185654a12.81.2025.03.24.09.20.56;
+        Mon, 24 Mar 2025 09:20:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 58.222.245.82 as permitted sender) client-ip=58.222.245.82;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of [removed] designates 58.222.245.82 as permitted sender) smtp.mailfrom=[removed]
+Message-ID: <[removed]>
+Received: from User ([192.168.1.1])
+	(envelope-sender <[removed]>)
+	by 192.168.1.242 with ESMTP
+	for <[removed]>; Tue, 25 Mar 2025 00:14:07 +0800
+X-WM-Sender: [removed]
+X-Originating-IP: 192.168.1.1
+X-WM-AuthFlag: YES
+X-WM-AuthUser: [removed]
+Reply-To:
+From:
+Subject: SCAMMED VICTIMS ! ! !   
+Date: Mon, 24 Mar 2025 09:14:06 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="Windows-1251"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2600.0000
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2600.0000
+
+GOOD DAY SIR/MA
+
+ HOW ARE YOU TODAY AND YOUR ENTIRE FAMILY?
+
+THE INTERNATIONAL MONETARY FUNDS ORGANISATION (IMF) IS HERE TO INFORM YOU REGARDING YOUR FUNDS THAT WAS AWESOMELY RETRIEVED BACK FROM THE IMPOSTORS WHO HAVE BEEN EXTORTING MONEY FROM YOU THAT THEY HAVE YOUR FUNDS WITH THEM WHICH IS A FALSE ALARM.
+
+  YOU ARE ADVISED AT THE MOMENT NOT TO SEND ANY MONEY TO THEM AGAIN BECAUSE THEY WILL KEEP ASKING FOR MORE AND GIVING YOU UN-GENUINE EXCUSES ON THE ONES YOU HAVE PREVIOUSLY GIVEN THEM AND ASKING FOR MORE. YOUR TOTAL FUNDS WORTH OF $5,000,000,00USD IS NOW IN OUR CUSTODY AND IT HAS BEEN SAVED IN THE BANK OF AMERICA (BOA) IN WHICH THE FUND IS READY TO BE GIVEN OUT BACK TO YOU AS THE FUNDS RIGHTFUL BENEFICIARY AND YOU ARE TO GET BACK TO US ON HOW YOU WANT TO GET IT RECEIVED NEITHER BY ATM CARD DELIVERY,WIRE TRANSFER TO YOUR PERSONAL ACCOUNT OR BY CASHIER CHEQUE DELIVERY TO YOU.
+
+
+ BELOW ARE YOUR DETAILS REQUESTED AS PROOF AND FOR CONFIRMATION ON OUR DATA SYSTEM.
+
+FULL NAME:
+
+HOME ADDRESS:
+
+OCCUPATION:
+
+MARITAL STATUS:
+
+GENDER:
+
+AGE:
+
+PHONE NUMBER:
+
+SSN:
+
+SCAN COPY OF YOUR DRIVER'S LICENSE OR ANY ID CARD:
+
+NAME AND ADDRESS OF YOUR NEXT OF KIN:
+
+BELOW IS THE AGENT YOU ARE TO CONTACT REGARDING YOUR FUNDS RELEASE:
+
+
+CONTACT AGENT. Mr. ROBERT .E. ROBBINS
+E-MAIL: [removed]
+
+
+ YOU ARE TO TAKE NOTE THAT NO DELIVERY FEE IS REQUESTED AND ANY ONE ASKING YOU OF THIS ARE SCAMMERS AND ONCE AGAIN STOP EVERY MEANS OF COMMUNICATING WITH WHO SO EVER YOU ARE DEALING WITH ON ANY FORM OF FUNDS TRANSACTION.
+
+REGARDS
+MRS.LAUREN PARKERS
+
+

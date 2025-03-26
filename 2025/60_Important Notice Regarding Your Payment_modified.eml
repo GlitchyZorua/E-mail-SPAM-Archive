@@ -1,0 +1,129 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp3180514vqb;
+        Wed, 26 Mar 2025 02:21:02 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCXvTSUoHun7TNd/JbjWMJhignlMxNLxp0P9KFsbFBG5f4ypsPaFg5Gt+VVWQynP4ykcrbXfpNlxEPrXhRuFfpygC2oQhg==@gmail.com
+X-Received: by 2002:a05:690c:680d:b0:6fd:63e9:a441 with SMTP id 00721157ae682-700bad18ad4mr268806397b3.28.1742980862210;
+        Wed, 26 Mar 2025 02:21:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742980862; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Hv9uXUwGNMmEZ/h76UqcT53iL1srM0LhjDyUSeUvLYnF/nsmEUrUBQU9PVmaEpxbpR
+         0hWlyU0gtFtRnd32X9Pd6dQHJdiUeEbFuoongaG+QY6vessRs6Yvp2ZLpIG5yjJQGMlb
+         zz3dORKES3jy8mzTZ2BCLDhmtjArsXmumRXta50Lh8+euLcJ69Xn49fnNWQ7p++Mvfji
+         Gvl55pVNVcRyzyPQsF/33+3QmCp84TD8OOIKVePCDf6mdz1G4XQZ11B2C4xB+xJfPx+u
+         qp4z8WHYLjO8qfQWyGzcpL6TiaPYrXt1JLJK76E1teDh/BvdC/KAhab695bzfh6tfvJZ
+         XaQw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+         :dkim-signature;
+        bh=fGdSuenvJSTodjTbV7TQQ6EKWDC6RfI1UIxJYuwW5eU=;
+        fh=Ug4fYobJIiPjoUCPuFcYm8nlRi8cd0m2i2ftlybW+Vs=;
+        b=guyz2LaZPy8D09BwzUr+FzwwSgzbgTPSJ6rkW20rdfZz3E9Wygg07FWti9qYDOB0Vi
+         6ZxkB8BGVcQ6OS28jv9sAUA3dcNids0wTGTKqiecqcjVBoFqDhH04/Z9nD0o0K4g99Nb
+         8+0rdXyXsszcYpvDPWRYviJmUBkuEtV2NBA/DOUTmoET8Y1Wg6HEI8xI1ZNo1MEz952J
+         0V+SOHmuVIGIFauy3j7VQS6zaE/3ta0mMopTtrq7pUuT0gfmR61nzoMDzd2LHfkC2FZ4
+         5xRbqisc+Bgp5khMtQfjGfLpZ9J59mmqYxHvdyP8QdWp5PIiCdQ9yggTdYejqkDQVG4y
+         qlag==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=lVzqtlt7;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-700ba7761f8sor73175197b3.4.2025.03.26.02.21.02
+        for <[removed]>
+        (Google Transport Security);
+        Wed, 26 Mar 2025 02:21:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=lVzqtlt7;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.41 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742980862; x=1743585662; dara=google.com;
+        h=to:
+         :subject:date:message-id:reply-to;
+        bh=fGdSuenvJSTodjTbV7TQQ6EKWDC6RfI1UIxJYuwW5eU=;
+        b=lVzqtlt7rzFH1xNxxZn3yzK37hPcknx5rB9sk4xSfE0Z/FL9Qt2mJFjt9lpnO0bUon
+         Y9ZNUfPNKwpukgmunoyruOx44oaVjAAyz05gdv467gmhjhLxTdObh7LwebyqAy3yaMUV
+         kPo4Rbn7C62iwxWapBH4FHfJUVocfdbaVSK3oU7g/vHNGHfldh1sbAdEJWf9EXY6qeXu
+         0Ff2uLMtsCJj7IwDMm2Ztu4/FWlgg0uYe2ajvXhtLrcUZ6lzcia8kMtWN7sTsG4xxEk1
+         w6fzWmZz4PubkqAVE5KlqRW43LbE/h/F1kSZHRuRe9YvjT1VG3J3eBliAvuEqsrlt9/s
+         3FgA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742980862; x=1743585662;
+        h=to:
+         :x-gm-message-state:from:
+        bh=fGdSuenvJSTodjTbV7TQQ6EKWDC6RfI1UIxJYuwW5eU=;
+        b=mxmTl5+979Vn3zvVQnK6ai8a4NYWbK8COAbjlJ+tWknQWC+JOqOghk69lQbeb1Sr1X
+         HQyJDM6Kxv9VuDO7dWlW2vXoGCZOSv7kuhx+V0rav7hSmTiueyT+ZIlxu6C1AyUNjl7n
+         /jeLiUhCRWFTMyOwHmAh3uCQ7VzlWL2yq9G1SNloLjIeYjqsKyr4/iLHlj7+nIdKDbGy
+         BhSiOXtb0dvEVKPKdBPiRML/AbZzfLtV2q7NpIKnAPVqtIGGXX2ErRtpfC+w//vHi6F+
+         2cUYR4f4E8fCIEJMt9ebpztyl0SHlPVnBS9hyCHqnQivOaeDAggzUxfvCdqQ1K53IWq6
+         mFwA==
+X-Forwarded-Encrypted: i=1; AJvYcCV2lMfTbEmE/i6p5Un6Fij9aTz9dLwKpTAb8qrXUCljvpRR+DcwIo95O/cjBbcrWm97d1KFTSjCivGNk6n91eRwPXHvWQ==@gmail.com
+X-Gm-Message-State: AOJu0YwKUYQAWrHcT7sSA5O/zFyhEGW6V9nO//XxtqSKsdkBIxi60liQ
+	dSFdCEmYut6kvYltZkvYMKFrOmOqns4gzCcf6l55rEnJU8OwaOxyYjbmxPvVMStzupzy+CsKSxp
+	l1xTRY7Ej/ZyC+R/nBFssxej1Kts=
+X-Gm-Gg: ASbGncvixIpyPD1K6QUdCRwrBzljtIOb2xELpq6El2UB4LHnXcvTXLwKpi20MBa+n5b
+	uWP9UVu6aDWvY9Rclu71feDdf03Sa8pEYEnRn6Udi+63/ylSpYfDD7SUeFKjwi11b0s21R4hLZP
+	PkTt+IyTozfbdsTdS8Xox7n5H+TO8g4N4/fn9m
+X-Google-Smtp-Source: AGHT+IEx0+isjPQDpwcFIT5w9KuNkgUOUMX0iZo4HFHqBEisvMHDLD5eN/SSgjciVKSAOUUlVZnXp2KA/G3t9p3DI/k=
+X-Received: by 2002:a05:6902:e0f:b0:e63:d10e:edc4 with SMTP id
+ 3f1490d57ef6-e66a4d42ffamr24918091276.10.1742980861415; Wed, 26 Mar 2025
+ 02:21:01 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To:
+From:
+Date: Wed, 26 Mar 2025 05:20:47 -0400
+X-Gm-Features: AQ5f1JqOz_HhXJjJp9rlrKEQUQAaFiQXgNSZZFAtchf_PaDBGKEnWxx-34OOOOA
+Message-ID: <CAEj+my0nUnFWZx7GQzYniqHZEXc7E=[removed]>
+Subject: Important Notice Regarding Your Payment
+To:
+Content-Type: multipart/alternative; boundary="0000000000001856f706313b5b5f"
+Bcc:
+
+--0000000000001856f706313b5b5f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Fund Beneficiary,
+
+We are writing to inform you about the release of your outstanding payment
+totaling =C2=A310,700,000.00 (Ten Million, Seven Hundred Thousand Great Bri=
+tish
+Pounds).
+The International Monetary Fund (IMF), in collaboration with the United
+Nations, is set to settle all foreign debts. For further details, please
+contact Mr. Michael Lawson, United Nations Dispatching Officer, at
+[removed] with your information as soon as possible.
+
+Best regards,
+Amb. Kenji Okamura
+IMF Deputy Managing Director
+
+--0000000000001856f706313b5b5f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><div dir=3D"ltr" class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv style=3D"color:rgb(34,34,34)">Dear Fund Beneficiary,=C2=A0</div><div sty=
+le=3D"color:rgb(34,34,34)"><br></div><div style=3D"color:rgb(34,34,34)">We =
+are writing to inform you about the release of your outstanding payment tot=
+aling =C2=A310,700,000.00 (Ten Million, Seven Hundred Thousand Great Britis=
+h Pounds).=C2=A0</div><div style=3D"color:rgb(34,34,34)">The International =
+Monetary Fund (IMF), in collaboration with the United Nations, is set to se=
+ttle all foreign debts. For further details, please contact Mr. Michael Law=
+son, United Nations Dispatching Officer, at=C2=A0<a href=3D"mailto:
+[removed]" style=3D"color:rgb(17,85,204)" target=3D"_blank">micha=
+[removed]</a>=C2=A0with your information as soon as possible.=
+=C2=A0</div><div style=3D"color:rgb(34,34,34)"><br></div><div style=3D"colo=
+r:rgb(34,34,34)">Best regards,=C2=A0</div><font color=3D"#888888"><div>Amb.=
+ Kenji Okamura=C2=A0</div><div>IMF Deputy Managing Director</div></font></d=
+iv></div></div></div>
+
+--0000000000001856f706313b5b5f--
+

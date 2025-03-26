@@ -1,0 +1,80 @@
+Delivered-To:
+Received: by 2002:a05:612c:4d06:20b0:4bf:a213:be56 with SMTP id ms6-n2csp850496vqb;
+        Mon, 10 Mar 2025 19:41:09 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCW8UlTn+N0nHPeMLGe944v76DW4HAB+MdeY93nTVz+f9+swnNXkafFu+1ggCuRnkqInHAsKN7Pf2Hkb4wFR7pzPAio59w==@gmail.com
+X-Google-Smtp-Source: AGHT+IEBc20la7KszxIPWfwh+oUe/CUbj6LQmrJYhzklxK7jqJmrrRoi9/nFNwqXIntDzbHjmnbd
+X-Received: by 2002:a05:6000:188c:b0:38f:2413:2622 with SMTP id ffacd0b85a97d-39132db9064mr11132765f8f.47.1741660869367;
+        Mon, 10 Mar 2025 19:41:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1741660869; cv=none;
+        d=google.com; s=arc-20240605;
+        b=c9xzT12+yKcyD26jFBRiQxov66cHcrBgxqHOCEp8885lm8oxgzQJpGiELx44Lr48xo
+         c1GFrzk20ZeRW21CMfqBM3nxll6snSQHNMOs/pbzFaXxhEujOuaP+OOdLLnE9sE8Jpur
+         Ruzq1t2LtolVmm8QtJbKzqC+idNSRq2rxcM8NzYam6/gwR8Y4XxuXVE44V763OjeZg6r
+         Vz5WLmpo0JgwmMm2EFDxAPI4D15UdsFjPgNIPChLWbW1A2rgGSevjmNbK/f9lQtyCA6V
+         kGjNDsFRESjXZRsELj90T8AfYDTepvFk2Y15AUSyCv0q7lB5U+wa/J5+E9hBnFvBfTuB
+         bMBw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=reply-to:
+         :content-transfer-encoding:mime-version:dkim-signature
+         :dkim-signature:message-id;
+        bh=e2JXw8OjZKN0jdJdFAoXn5VUkDrbVKxsaAEcaIBQW4A=;
+        fh=KOo/6ORk/+5trVbuIstllgy5jdiKe7rku97EHOu++PM=;
+        b=EP6qgugM890BqMKjJjULm7R5gWs1kRPwDblgirYnKtGQ9upiDe82F/1Nrz/H13Loc9
+         dPEeMeIyUpZieGfJlgVkeIsvaMIehHfgIGhJcgieOku+ur1cdfh1NOgwtKoCLSXh7+CF
+         BEEFN0DfhUYzXXwYwFd/+YZpyOkJ1YIDrHThyZyfXp4zJoClHTOP2LhnY8CyPLUsCi7w
+         aCq06p5PHOkw9wf4l9M4q3tBxqKX8FVrXIlIVY6zfvuzh2b4xc5SPeDm4VwHu1hOF5PL
+         sk9a1mQq9mBvEfwtzqfGkO7D3g8G/GfTOLJZbQ+ydrjlVXWbGMW8zj76sXh+YXO+EQIR
+         +/5A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@itqb.unl.pt header.s=default header.b=xNfGBVWc;
+       dkim=pass header.i=@itqb.unl.pt header.s=default header.b=xNfGBVWc;
+       spf=pass (google.com: domain of [removed] designates 193.136.177.40 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=itqb.unl.pt
+Return-Path: <[removed]>
+Received: from mail1.itqb.unl.pt (mail1.itqb.unl.pt. [193.136.177.40])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3912bfda93fsi7572212f8f.22.2025.03.10.19.41.08
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 10 Mar 2025 19:41:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 193.136.177.40 as permitted sender) client-ip=193.136.177.40;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@itqb.unl.pt header.s=default header.b=xNfGBVWc;
+       dkim=pass header.i=@itqb.unl.pt header.s=default header.b=xNfGBVWc;
+       spf=pass (google.com: domain of [removed] designates 193.136.177.40 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=itqb.unl.pt
+Message-ID: <[removed]>
+Received: from mail1.itqb.unl.pt (localhost [127.0.0.1])
+	by mail1.itqb.unl.pt (Postfix) with ESMTP id B0D0724EA3;
+	Tue, 11 Mar 2025 02:41:07 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=itqb.unl.pt;
+	s=default; t=1741660867;
+	bh=gPcGXYHymunELqcTi8MIe9AzaeVih/MIpvUsoi+x4J8=;
+	h=Subject:To:
+	b=xNfGBVWcn0mT9okgPvWE6onF+QmDGmDPUvjYLEIJDiROI9okLAPkPKqEVSoOzAvhs
+	 7ql9RoGuyY+szo41lfIKH0K9PdGvQEq6HZA7IiRv7JhRSoyf6M+9fjkQZr95j0sLYT
+	 CyYqqg/X/CFgaUhQnUfCej8I229m/o/RrkJWANrw=
+Received: from [192.168.25.213] (unknown [197.211.59.237])
+	by mail1.itqb.unl.pt (Postfix) with ESMTPSA id 1177024E81;
+	Tue, 11 Mar 2025 02:40:43 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=itqb.unl.pt;
+	s=default; t=1741660867;
+	bh=gPcGXYHymunELqcTi8MIe9AzaeVih/MIpvUsoi+x4J8=;
+	h=Subject:To:
+	b=xNfGBVWcn0mT9okgPvWE6onF+QmDGmDPUvjYLEIJDiROI9okLAPkPKqEVSoOzAvhs
+	 7ql9RoGuyY+szo41lfIKH0K9PdGvQEq6HZA7IiRv7JhRSoyf6M+9fjkQZr95j0sLYT
+	 CyYqqg/X/CFgaUhQnUfCej8I229m/o/RrkJWANrw=
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+Subject: Representative Needed
+To:
+From:
+Date: Mon, 10 Mar 2025 19:40:19 -0700
+Reply-To:
+X-Virus-Scanned: ClamAV using ClamSMTP
+
+We need a Company Representative in your city location, you can work online=
+ or at home and get good payment, contact us if interested  on  this Email:=
+ [removed]
+

@@ -1,0 +1,208 @@
+Delivered-To:
+Received: by 2002:a05:612c:2c95:b0:4bf:d2e8:882f with SMTP id iu21csp288881vqb;
+        Fri, 21 Mar 2025 03:51:53 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCV9egbaf/aJ8wfr2NA6FST+oMNGFIRo0k2Z/DS/xzGFnAqqDzM5PFjRXj+UgY0ZSXgSOXnhVcjlXTH9LRQwUzrjyzMuGA==@gmail.com
+X-Received: by 2002:a05:6602:4013:b0:85d:115b:bb3f with SMTP id ca18e2360f4ac-85e2ca64287mr344461639f.6.1742554313085;
+        Fri, 21 Mar 2025 03:51:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742554313; cv=none;
+        d=google.com; s=arc-20240605;
+        b=DAuNpsezNE4vFQnzbiKXFL5peSeR7eFbHGZT3I5rIgQMiYDV6QzERdZEmRl/GbmDOm
+         hamUwqPaNLOllOxRMttMVVMdTKENXuU2QP336Xv5JqAYnzrj9Ky2t+HsA7azD7ro4ihR
+         QeDgdV7J4yNwjOyB0jszv+wo2BwMnn0H3nXW24yWNp7wbIhgsytO2rbx0EkPCtTYkiMA
+         IyIgz/2jnN4RtndSTss8DzIiuBOIV4LxLaAR+SjvnE8ZSJGYVp9TkCUw3KNu21wUoDZS
+         wgGArnNYnI+DDGSu2kWZ5X9J3Qn1FV/MgmWPIRcijWvoD5xQ3v5oNCbXSIts+BLFcX/9
+         DbIQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:
+        bh=3w5q5qCaQgT+IHABoWJ5HLnJWNc4aJSmmrT2+qIp+TI=;
+        fh=6ZrH1A3InFCmGggAspRXMu1zWb1ASk1r4+iY1qcN1uc=;
+        b=fBYLp/J51A7zUruvV17xiciyE3ks/F/7vI8GHwHx2EYuvgugGmQLsRMHsrL1g/g2xX
+         MIoRV38VpN95aaQAQpasxrngq8JPgOCzKKqLFi1pASHUtBknLjnk0S/5/wyxPAT8Hnaf
+         VTON8nbADU8gwwlAk2yAyxrALAfd8D3f8lax28iyrVDrh5NGDXEpYEJlXKRosP/i1FJ2
+         pGljGaADbeZeHoIM4QiGk9uXZK9m3ipVHerZTrMYGYoWBf5a1shSDoQooW9UlEV1Elfb
+         UGzEz1XUGlOcYMd4KJieqfrs9x+g0bWXL6t0HeissenAegl64pzj1lGmmxQO458KmdJ5
+         tN9g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=M58ZCvC7;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <[removed]>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 8926c6da1cb9f-4f2cbec44bbsor1046649173.8.2025.03.21.03.51.52
+        for <[removed]>
+        (Google Transport Security);
+        Fri, 21 Mar 2025 03:51:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=M58ZCvC7;
+       spf=pass (google.com: domain of [removed] designates 209.85.220.65 as permitted sender) smtp.mailfrom=[removed];
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742554312; x=1743159112; dara=google.com;
+        h=to:
+         :date:message-id:reply-to;
+        bh=3w5q5qCaQgT+IHABoWJ5HLnJWNc4aJSmmrT2+qIp+TI=;
+        b=M58ZCvC7J0sHNP+0iVKdsmS2eXAyaO4X4G5qyLfMlOH8Atd3B6wRs21AG1sa3BrkEj
+         KnSyZtb8WwJlcr0gIMUb/hdxboNWKs2AjcxIUc3cbmpRGOKmA7BaVuGVm2MyhOBd1QJ1
+         /EQcKVRMyDwtAU0JnC5+g4kBKsMAgO45Gl6i+FDqa+S2M8uAk2pOH83Wc51YsIXnWevO
+         RZNjCuJ8Pzrnyygf9TXwh8iaLSOmYYuc/FRAAo6Wzm7rfUjvz8GsiHV3TrFds6ybZVV9
+         0ZX5YWvGlL0uHu54u0rHmrAbEZuzAfMG89W82sya7HZVjUVevIqwCOryu1JJHIEhKONx
+         iHhg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742554312; x=1743159112;
+        h=to:
+         :from:
+        bh=3w5q5qCaQgT+IHABoWJ5HLnJWNc4aJSmmrT2+qIp+TI=;
+        b=mWIxRN+483MBp4vBEwXwG3dJcgzDt9qzhuucp9yF1Okci32dbuKgVnHA3abMzDEYLq
+         uTOHY2bxNBUD/8cTcTjF2d1y4EZxNWa/VWwVmr/ZbAHfzSg6vctaC9QWgTlP1MMk4u4a
+         R5tsT7hS+TNd86hm9zCeKczwPvTNL4Ca0XoR0Ljq4qDehZZ3Yr9mr3LJ4Vt61I5p88Zx
+         OABYolNh+QfJ3RzqcTTdYafygzLrmJjAT6BGEaULS7zle4JyEueRT1lcr1aWc+TjkMK2
+         B9b08T2O/Y/Ar/7K0PBmvS2aYb9g2ZabHZ5FKeVNVVecaRk4d3+c6olrXXEYTl7Gd4Ax
+         eQCw==
+X-Forwarded-Encrypted: i=1; AJvYcCWxJMQSZP7R9vpyXRUhcXdZshBi5zoHdofTm4eC6QHb2WEp6oW9x9NqIY2l2rsYqu0e5GNDhXkU3R/GXvNvYUWzYY5hUA==@gmail.com
+X-Gm-Message-State: AOJu0Yx5BMruPzTDvqNYOQfAGUT3rwJM05cfCkI1ix60v825HYcY5uf8
+	HGND5WJcKOcIsq34OKBKiILCHkqYA21TOBatV0ECDXQ9H+dJ6PonoXoiUKgm67Xj2KOxmZz1zf8
+	1led+1qZLwBZqqQjgEa1AqnOM0f4=
+X-Gm-Gg: ASbGncvaY/y/epYN/7bDtBGAd/Ids3/Zy6zGEK1YwEkfJyas8wQOu1q0CBxDy0bGUrL
+	Ztitx3KvVkoL+YGal/IajjPkvskJ1VqwKBJ0BlrhDT4ImZCb4g+6Cm0GRBroGbMXQqTTJlvxvf/
+	NFuZlYM0XbtkrsiC8mz5sMMY++eLcxdQeD5ZZFLG2APWuZQui14vNT7WHTVt7Iu0GYvu83euo=
+X-Google-Smtp-Source: AGHT+IGWXNtuc9pmTA+w9UFNZWCW81GTyWYkEkCajEgwIofj2CxXGPHnlDSzlw+ewP/XRPKK0xgyKZnYKzNL3PDoh40=
+X-Received: by 2002:a05:6602:4c85:b0:85b:35b1:53b4 with SMTP id
+ ca18e2360f4ac-85e2cc82ba8mr276002139f.12.1742554312023; Fri, 21 Mar 2025
+ 03:51:52 -0700 (PDT)
+MIME-Version: 1.0
+From:
+Date: Fri, 21 Mar 2025 10:51:39 +0000
+X-Gm-Features: AQ5f1Jr-0c9dU2Q659pHgYKeYqAYZBjbUl8J3PR9KU98fzrckNj5U87PCegOVvc
+Message-ID: <[removed]>
+Subject: I WANT TO INVEST IN ORPHANAGE x
+To:
+Content-Type: multipart/alternative; boundary="000000000000c528b50630d80ad7"
+Bcc:
+
+--000000000000c528b50630d80ad7
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Friend (Assalamu Alaikum),
+
+
+I came across your e-mail contact prior to a private search while in need
+of your assistance
+
+I hope you=E2=80=99re having a nice day, and please receive this message in=
+ good
+faith because I'm delighted to reach out to you via this medium after a
+Google search suggested your email address to me. and that moment I knew I
+had to reach out to you and propose a friendly business partnership that
+I'm confident will be mutually beneficial to you and the less-privileged. I
+hope you don=E2=80=99t find this embarrassing because my intentions are pur=
+ely
+genuine.
+
+I am Mrs. Maya Oliver, from the United Kingdom. Firstly, I am married to
+Mr. Patrick Oliver, A diamond and gold merchant who owns a small gold Mine
+in Thailand Bangkok; He died of Cardiovascular Disease in mid-March 2011.
+During his lifetime he deposited the sum of =E2=82=AC 12.7 Euros in a bank =
+in
+Bangkok with 120 kilos of Gold, the capital city of Thailand. The deposited
+money was from the sale of the shares, death benefits payment and
+entitlements of my deceased husband by his company. Since his death I
+decided not to remarry, when my late husband was Alive he deposited the sum
+of =E2=82=AC 12.7 Million Euro) Twelve million, Seven hundred Thousand Euro=
+) in a
+bank in Thailand, Presently this money is Still in the bank. And My Doctor
+told me that
+I don't have much time to Leave because of the cancer problem, having known
+my condition, I decided to hand you over this fund to take Care of the
+less-privileged people, you will utilize this money while I am going to
+instruct herein. I want you to take 20% Percent of The total money for your
+personal use While 80% of the money will go to charity" people and
+helping the orphanage.
+
+Meanwhile i have concluded with the bank to transfer the funds to you,
+through the listed options below you can choose your preferably methods to
+received the funds
+1, WESTERN UNION, ATM card, 4, Online Transfer
+You can contact the bank for the transaction with the below:
+
+BANK CONTACT BELOW
+
+Bank Names: SIAM COMMERCIAL BANK PLC
+
+Email: *[removed]*
+
+Contact Person: Mr Arthid Nanthawithaya
+Direct WhatsApp Number : +66981953578
+
+Regards,
+Mrs. Maya Oliver
+
+--000000000000c528b50630d80ad7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr" style=3D"font-size:13px;color:rgb(38,40,4=
+2);font-family:&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif"><br c=
+lear=3D"none"><span style=3D"color:rgb(34,34,34);font-family:Arial,Helvetic=
+a,sans-serif;font-size:small">Dear Friend (Assalamu Alaikum),</span><br sty=
+le=3D"color:rgb(34,34,34);font-family:Arial,Helvetica,sans-serif;font-size:=
+small"><br style=3D"color:rgb(34,34,34);font-family:Arial,Helvetica,sans-se=
+rif;font-size:small"><br style=3D"color:rgb(34,34,34);font-family:Arial,Hel=
+vetica,sans-serif;font-size:small"><span style=3D"color:rgb(34,34,34);font-=
+family:Arial,Helvetica,sans-serif;font-size:small">I came across your e-mai=
+l contact prior to a private search while in need of your assistance</span>=
+</div><div dir=3D"ltr" style=3D"font-size:13px;color:rgb(38,40,42);font-fam=
+ily:&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif"><br></div><div d=
+ir=3D"ltr" style=3D"font-size:13px;color:rgb(38,40,42);font-family:&quot;He=
+lvetica Neue&quot;,Helvetica,Arial,sans-serif">I hope you=E2=80=99re having=
+ a nice day, and please receive this message in good faith because I&#39;m =
+delighted to reach out to you via this medium after a Google search suggest=
+ed your email address to me. and that moment I knew I had to reach out to y=
+ou and propose a friendly business partnership that I&#39;m confident will =
+be mutually beneficial to you and the less-privileged. I hope you don=E2=80=
+=99t find this embarrassing because my intentions are purely genuine.<br cl=
+ear=3D"none"><br clear=3D"none">I am Mrs. Maya Oliver, from the United King=
+dom. Firstly, I am married to Mr. Patrick Oliver, A diamond and gold mercha=
+nt who owns a small gold Mine in Thailand Bangkok; He died of Cardiovascula=
+r Disease in mid-March 2011. During his lifetime he deposited the sum of =
+=E2=82=AC 12.7 Euros in a bank in Bangkok with 120 kilos of Gold, the capit=
+al city of Thailand. The deposited money was from the sale of the shares, d=
+eath benefits payment and entitlements of my deceased husband by his compan=
+y. Since his death I decided not to remarry, when my late husband was Alive=
+ he deposited the sum of =E2=82=AC 12.7 Million Euro) Twelve million, Seven=
+ hundred Thousand Euro) in a bank in Thailand, Presently this money is Stil=
+l in the bank. And My Doctor told me that<br clear=3D"none">I don&#39;t hav=
+e much time to Leave because of the cancer problem, having known my conditi=
+on, I decided to hand you over this fund to take Care of the less-privilege=
+d people, you will utilize this money while I am going to instruct herein. =
+I want you to take 20% Percent of The total money for your personal use Whi=
+le 80% of the money will go to charity&quot; people and<br clear=3D"none">h=
+elping the orphanage.<br clear=3D"none"><br clear=3D"none">Meanwhile i have=
+ concluded with the bank to transfer the funds to you, through the listed o=
+ptions below you can choose your preferably methods to received the funds<b=
+r clear=3D"none">1, WESTERN UNION, ATM card, 4, Online Transfer<br clear=3D=
+"none">You can contact the bank for the transaction with the below:<br clea=
+r=3D"none"><br clear=3D"none">BANK CONTACT BELOW<br clear=3D"none"><br clea=
+r=3D"none">Bank Names: SIAM COMMERCIAL BANK PLC</div><div dir=3D"ltr" style=
+=3D"font-size:13px;font-family:&quot;Helvetica Neue&quot;,Helvetica,Arial,s=
+ans-serif"><br clear=3D"none"><font color=3D"#26282a">Email:=C2=A0</font><f=
+ont color=3D"#0000ff"><a shape=3D"rect" rel=3D"nofollow noreferrer"><b>info=
+[removed]</b></a></font></div><div dir=3D"ltr" style=3D"font-siz=
+e:13px;color:rgb(38,40,42);font-family:&quot;Helvetica Neue&quot;,Helvetica=
+,Arial,sans-serif"><font color=3D"#0000ff"><b><br clear=3D"none"></b></font=
+><font color=3D"#26282a">Contact Person: Mr Arthid Nanthawithaya</font><br =
+clear=3D"none"><font color=3D"#26282a">Direct WhatsApp Number : +6698195357=
+8</font><br clear=3D"none"><br clear=3D"none"><font color=3D"#26282a">Regar=
+ds,</font><br clear=3D"none"><font color=3D"#26282a">Mrs. Maya Oliver</font=
+></div><div dir=3D"ltr" style=3D"font-size:13px;color:rgb(38,40,42);font-fa=
+mily:&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif"><font color=3D"=
+#26282a"><br></font></div><div dir=3D"ltr" style=3D"font-size:13px;color:rg=
+b(38,40,42);font-family:&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-ser=
+if"><div><br></div><div></div></div></div>
+
+--000000000000c528b50630d80ad7--
+
